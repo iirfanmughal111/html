@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html id="XF" lang="{$xf.language.language_code}" dir="{$xf.language.text_direction}"
+	data-app="public"
+	data-template="{$template}"
+	data-container-key="{$containerKey}"
+	data-content-key="{$contentKey}"
+	data-logged-in="{{ $xf.visitor.user_id ? 'true' : 'false' }}"
+	data-cookie-prefix="{$xf.cookie.prefix}"
+	class="has-no-js{{ $template ? ' template-' . $template : '' }}"
+	{{ $xf.runJobs ? ' data-run-jobs=""' : '' }}>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<xf:set var="$siteName" value="{$xf.options.boardTitle}" />
+	<xf:set var="$h1"><xf:h1 fallback="{$siteName}" /></xf:set>
+	<xf:set var="$description"><xf:description /></xf:set>
+
+	<title><xf:title formatter="%s | %s" fallback="{$xf.options.boardTitle}" page="{$pageNumber}" /></title>
+
+	<xf:foreach loop="$head" value="$headTag">
+		{$headTag}
+	</xf:foreach>
+
+	<xf:if is="!$head.meta_site_name && $siteName is not empty">
+		<xf:macro template="metadata_macros" name="site_name" arg-siteName="{$siteName}" arg-output="{{ true }}" />
+	</xf:if>
+	<xf:if is="!$head.meta_title">
+		<xf:macro template="metadata_macros" name="title" arg-title="{{ page_title() ?: $siteName }}" arg-output="{{ true }}" />
+	</xf:if>
+	<xf:if is="!$head.meta_description && $description is not empty && $pageDescriptionMeta">
+		<xf:macro template="metadata_macros" name="description" arg-description="{$description}" arg-output="{{ true }}" />
+	</xf:if>
+	<xf:if is="!$head.meta_image_url && property('publicMetadataLogoUrl')">
+		<xf:macro template="metadata_macros" name="image_url"
+			arg-imageUrl="{{ base_url(property('publicMetadataLogoUrl'), true) }}"
+			arg-output="{{ true }}" />
+	</xf:if>
+
+	<xf:if is="property('metaThemeColor')">
+		<meta name="theme-color" content="{{ property('metaThemeColor') }}" />
+	</xf:if>
+
+	<xf:macro template="helper_js_global" name="head" arg-app="public" />
+
+	<xf:if is="property('publicFaviconUrl')">
+		<link rel="icon" type="image/png" href="{{ base_url(property('publicFaviconUrl')) }}" sizes="32x32" />
+	</xf:if>
+	<xf:if is="property('publicMetadataLogoUrl')">
+		<link rel="apple-touch-icon" href="{{ base_url(property('publicMetadataLogoUrl'), true) }}" />
+	</xf:if>
+	<xf:include template="google_analytics" />
+</head>
+<body data-template="{$template}">
+
+<div class="p-pageWrapper" id="top">
+
+
+
+<div class="p-body">
+	<div class="p-body-inner">
+		<!--XF:EXTRA_OUTPUT-->
+
+		<xf:macro template="browser_warning_macros" name="javascript" />
+		<xf:macro template="browser_warning_macros" name="browser" />
+
+		<div class="p-body-main {{ $sidebar ? 'p-body-main--withSidebar' : '' }} {{ $sideNav ? 'p-body-main--withSideNav' : '' }}">
+			<div class="p-body-content">
+				<xf:ad position="container_content_above" />
+				<div class="p-body-pageContent">{$content|raw}</div>
+				<xf:ad position="container_content_below" />
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+</div> <!-- closing p-pageWrapper -->
+
+<xf:macro template="helper_js_global" name="body" arg-app="public" arg-jsState="{$jsState}" />
+
+{$ldJsonHtml|raw}
+
+</body>
+</html>

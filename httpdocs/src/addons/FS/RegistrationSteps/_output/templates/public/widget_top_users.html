@@ -1,0 +1,13 @@
+<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<xf:foreach loop="$users" value="$user">
+				<dl class="pairs pairs--justified count--threads">
+					<dt>{{ $user.username }}</dt>
+					<dd>{{ $user.total }}</dd>
+				</dl>
+			</xf:foreach>
+		</div>
+	</div>
+</div>

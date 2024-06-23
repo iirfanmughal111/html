@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_positions>
+  <widget_position position_id="xa_sc_category_above_items" active="1"/>
+  <widget_position position_id="xa_sc_category_below_items" active="1"/>
+  <widget_position position_id="xa_sc_category_sidebar" active="1"/>
+  <widget_position position_id="xa_sc_category_sidenav" active="1"/>
+  <widget_position position_id="xa_sc_index_above_items" active="1"/>
+  <widget_position position_id="xa_sc_index_below_items" active="1"/>
+  <widget_position position_id="xa_sc_index_sidebar" active="1"/>
+  <widget_position position_id="xa_sc_index_sidenav" active="1"/>
+  <widget_position position_id="xa_sc_item_view_above_item" active="1"/>
+  <widget_position position_id="xa_sc_item_view_below_item" active="1"/>
+  <widget_position position_id="xa_sc_modular_index_main" active="1"/>
+  <widget_position position_id="xa_sc_modular_index_sidebar" active="1"/>
+  <widget_position position_id="xa_sc_series_list_above_series_list" active="1"/>
+  <widget_position position_id="xa_sc_series_list_below_series_list" active="1"/>
+  <widget_position position_id="xa_sc_series_list_sidebar" active="1"/>
+</widget_positions>

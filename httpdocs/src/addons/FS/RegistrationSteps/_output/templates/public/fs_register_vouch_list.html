@@ -1,0 +1,37 @@
+<xf:title>{{ phrase('fs_register_vouch_list') }}</xf:title>
+
+		<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+			<div class="">
+				<xf:if is="count($lists)">
+					<div class="block-container block-body">
+						<xf:datalist data-xf-init="responsive-data-list">
+							<xf:macro
+									  name="fs_register_vouch_table_list"
+									  arg-lists="{$lists}"
+									  />
+						</xf:datalist>
+					</div>
+
+					<xf:else />
+						{{ phrase('no_items_have_been_created_yet') }}
+				</xf:if>
+			</div>
+		</xf:form>
+
+<xf:macro name="fs_register_vouch_table_list" arg-lists="{$lists}">
+	<xf:datarow rowtype="header">
+		<xf:cell> {{ phrase('avatar') }} </xf:cell>
+		
+		<xf:cell> {{ phrase('username') }} </xf:cell>
+		<xf:cell> {{ phrase('vouch_date') }} </xf:cell>
+	</xf:datarow>
+	<xf:foreach loop="$lists" value="$list">
+		<xf:datarow>
+			<xf:cell><xf:avatar user="{$list.UserTo}" size="s" defaultname="{$listing.UserTo.username}" /></xf:cell>
+			
+			<xf:cell>  {{$list.UserTo.username}} </xf:cell>
+			<xf:cell> <xf:date time="$list.created_at" /> </xf:cell>
+
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>

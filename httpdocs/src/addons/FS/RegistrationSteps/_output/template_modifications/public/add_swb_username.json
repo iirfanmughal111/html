@@ -1,0 +1,9 @@
+{
+    "template": "post_macros",
+    "description": "add_swb_username",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<div class=\"message-userContent lbContainer js-lbContainer {{ \\$post\\.isIgnored\\(\\) \\? 'is-ignored' : '' }}\".*?>/is",
+    "replace": "$0\n<xf:if is=\"$post.isFirstPost() And ($thread.getReviewsThreadIds() OR $thread.getAlertThreadIds())\">\n\t<dl  class=\"pairs pairs--columns pairs--fixedSmall pairs--customField\">\n\t\t<dt>\n\t\t\t{{ phrase('fs_register_review_for_username') }}\n\t\t</dt>\n\t\t<dd>\n\t\t\t<strong>{{$thread.ReviewFor.username}}</strong>\n\t\t</dd>\n\t</dl>\n\t<xf:if is=\"$thread.getReviewsThreadIds()\">\n\t\t<dl  class=\"pairs pairs--columns pairs--fixedSmall pairs--customField\">\n\t\t<dt>\n\t\t\t{{ phrase('fs_register_review_for_user_id') }}\n\t\t</dt>\n\t\t<dd>\n\t\t\t<strong>{{$thread.review_for}}</strong>\n\t\t</dd>\n\t</dl>\n\t\t</xf:if>\n</xf:if>"
+}

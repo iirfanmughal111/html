@@ -1,0 +1,9 @@
+{
+    "template": "register_form",
+    "description": "fs_add_fields_according_to_account_type",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:passwordboxrow name=\"{{ \\$regForm\\.getFieldName\\('password'\\) }}\" .*?}}\" \\/>/is",
+    "replace": "$0\n<xf:radiorow name=\"account_type\" value=\"\" hint=\"{{ phrase('fs_register_required') }}\" id=\"account_type\"label=\"{{ phrase('fs_register_account_type') }}\">\n\t<xf:option value=\"1\"\n\t\t\t   label=\"{{ phrase('fs_register_hobbyist') }}\"\n\t\t\t   data-hide=\"true\"\n\t\t\t   selected=\"true\"\n\t\t\t   data-xf-init=\"disabler\"\n\t\t\t   data-container=\".js-hobbyist\" />\n\t<xf:option value=\"2\"\n\t\t\t   label=\"{{ phrase('fs_register_provider') }}\"\n\t\t\t   data-hide=\"true\"\n\t\t\t   data-xf-init=\"disabler\"\n\t\t\t   data-container=\".js-provider\" />\t\t\t\t\t\n\t\t\t</xf:radiorow>\n\t\t\t<div class=\"js-hobbyist\">\n\t\t\t\t<xf:formrow><span>{{ phrase('fs_register_page_hobbyist_rules_list') }}</span></xf:formrow>\n\t\t\t\t<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"{{ null }}\"\n\t\targ-set=\"{$xf.visitor.Profile.getGroupTypeFields('hobbyist_fields')}\"\n\t\targ-additionalFilters=\"{{ ['registration'] }}\" />\n\t\t\t\t\n\t\t\t</div>\n\t\t\t\n\t\t\t<div class=\"js-provider\">\n\t\t\t\t<xf:formrow><span>{{ phrase('fs_register_page_provider_rules') }}</span></xf:formrow>\n\t\t\t\t\n\t\t\t\t<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"{{ null }}\"\n\t\targ-set=\"{$xf.visitor.Profile.getGroupTypeFields('provider_fields')}\"\n\t\targ-additionalFilters=\"{{ ['registration'] }}\" />\t\t\n\t\t\t</div>\t\t\n"
+}

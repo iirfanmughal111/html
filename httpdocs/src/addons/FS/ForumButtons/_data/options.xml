@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_register_Reviews_ids" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fs_forum_buttons" display_order="1"/>
+  </option>
+  <option option_id="fs_register_alert_ids" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fs_forum_buttons" display_order="1"/>
+  </option>
+  <option option_id="fs_register_compainion_ids" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fs_forum_buttons" display_order="1"/>
+  </option>
+  <option option_id="fs_register_discussion_ids" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fs_forum_buttons" display_order="1"/>
+  </option>
+</options>

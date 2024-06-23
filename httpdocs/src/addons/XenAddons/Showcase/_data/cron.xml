@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="xaScAutoFeatureItems" cron_class="XenAddons\Showcase\Cron\AutoFeature" cron_method="runAutoFeatureItems" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[55]}]]></entry>
+  <entry entry_id="xaScCleanUpDaily" cron_class="XenAddons\Showcase\Cron\CleanUp" cron_method="runDailyCleanUp" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[3],"minutes":[0]}]]></entry>
+  <entry entry_id="xaScCleanUpHourly" cron_class="XenAddons\Showcase\Cron\CleanUp" cron_method="runHourlyCleanUp" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[5]}]]></entry>
+  <entry entry_id="xaScFeeder" cron_class="XenAddons\Showcase\Cron\Feeder" cron_method="importFeeds" active="0"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[2,12,22,32,42,52]}]]></entry>
+  <entry entry_id="xaScPublisher" cron_class="XenAddons\Showcase\Cron\Publisher" cron_method="runPublishScheduledItems" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[0,10,20,30,40,50]}]]></entry>
+  <entry entry_id="xaScViews" cron_class="XenAddons\Showcase\Cron\Views" cron_method="runViewUpdate" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[30]}]]></entry>
+  <entry entry_id="xa_scCacheStats" cron_class="XenAddons\Showcase\Cron\Statistics" cron_method="cacheShowcaseStatistics" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[10,40]}]]></entry>
+</cron>

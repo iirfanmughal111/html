@@ -1,0 +1,9 @@
+{
+    "template": "forum_post_thread",
+    "description": "hide_message_and_add_user_field",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:editorrow name=\"message\"\n\t\t\t\t\tvalue=\"{{ \\$post\\.message \\?: \\$forum\\.draft_thread\\.message }}\".*?data-preview-url=\"{{ link\\('forums\\/thread-preview', \\$forum\\) }}\" \\/>/is",
+    "replace": "<xf:if is=\"$thread.getReviewsThreadIds()\">\n\t<div class=\"menu-row\">\n\t\t{{ phrase('fs_regiter_review_for:') }}\n\t\t<div class=\"u-inputSpacer\">\n\t\t\t<xf:textbox name=\"review_for\" required=\"true\" value=\"{{$review_for ? $review_for : ''}}\" ac=\"single\" />\n\t\t</div>\n\t</div>\n<xf:else/>\n$0\n</xf:if>"
+}

@@ -3,8 +3,8 @@
 $config['db']['host'] = 'localhost';
 $config['db']['port'] = '3306';
 $config['db']['username'] = 'root';
-$config['db']['password'] = '';
-$config['db']['dbname'] = 'xf';
+$config['db']['password'] = 'admin123';
+$config['db']['dbname'] = 'xenforo';
 
 $config['fullUnicode'] = true;
 

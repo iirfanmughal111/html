@@ -1,0 +1,9 @@
+{
+    "template": "member_view",
+    "description": "pass_vouch_variable",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<hr class=\"memberHeader-separator\" \\/>\n\n\t\t\t\t\t\t<div class=\"memberHeader-buttons\">\n\t\t\t\t\t\t\t<xf:contentcheck>.*?arg-context=\"profile\" \\/>\n\t\t\t\t\t\t\t<\\/xf:contentcheck>/is",
+    "replace": "<hr class=\"memberHeader-separator\" />\n\n\t\t\t\t\t\t<div class=\"memberHeader-buttons\">\n\t\t\t\t\t\t\t<xf:contentcheck>\n\t\t\t\t\t\t\t\t<xf:macro template=\"member_macros\" name=\"member_action_buttons\"\n\t\t\t\t\t\t\t\t\targ-user=\"{$user}\"\n\t\t\t\t\t\t\t\t\targ-context=\"profile\"\n\t\t\t\t\t\t\t\t\targ-vouch=\"{$vouch}\"/>\n\t\t\t\t\t\t\t</xf:contentcheck>"
+}

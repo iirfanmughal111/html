@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="_page_node.7" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:css src="fs_rule_landing_page.less" />
+<div class="container">
+	<div class="header-landing">
+		<div class="p-header-logo p-header-logo--image image-logo">
+			<a href="{{ ($xf.options.logoLink && $xf.homePageUrl) ? $xf.homePageUrl : link('index') }}"> <img src="{{ base_url(property('publicLogoUrl')) }}" alt="{$xf.options.boardTitle}" {{ property( 'publicLogoUrl2x') ? 'srcset="' . base_url(property( 'publicLogoUrl2x')) . ' 2x"' : '' }} /> </a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<h3>{{phrase('fs_header_title')}}</h3>
+	<div class="swb-rules"> {{phrase('fs_landing_page_rules')}}
+		<br>
+		
+			<xf:button  href="forums" class="button-agree">{{ phrase('fs_landing_agree') }}</xf:button>
+			<xf:button  href="google.com" class="button-disagree">{{ phrase('fs_landing_disagree') }}</xf:button>
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	<footer>
+		<!-- Footer content --><a  href="{$xf.contactUrl}">{{phrase('fs_customer_support')}}</a> | <a href="{$xf.tosUrl}">{{phrase('fs_terms')}}</a>| <a href="{$xf.privacyPolicyUrl}">{{phrase('fs_privacy')}}</a>| <a href="help/complaince">{{phrase('fs_exemption')}}</a>| <a href="{$xf.homePageUrl}">{{phrase('fs_home')}}</a> </footer>]]></template>
+  <template type="public" title="fs_rule_landing_page" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:css src="fs_rule_landing_page.less"/>
+
+
+ 	
+	<div class="container">
+		
+		
+		<div class="header-landing">
+			
+				
+					   <div class="p-header-logo p-header-logo--image image-logo">
+							<a href="{{ ($xf.options.logoLink && $xf.homePageUrl) ? $xf.homePageUrl : link('index') }}">
+								<img src="{{ base_url(property('publicLogoUrl')) }}"
+									 alt="{$xf.options.boardTitle}"
+									 {{ property('publicLogoUrl2x') ? 'srcset="' . base_url(property('publicLogoUrl2x')) . ' 2x"' : '' }} />
+							</a>
+
+					  </div>
+			
+			<div class="image-header-flower">
+				<img src="https://i.imgur.com/CN7Hy2T.png"/>
+			</div>
+					
+
+		
+		</div>
+		<br><br>
+<h3>Profiles, Reviews, References, Listings and Discussion Forums</h3>
+		<div class="swb-rules">
+			<h4>
+				YOU MUST BE 21 YEARS OF AGE OR OVER TO ENTER THIS SITE!
+			</h4>
+			<br>
+			<p>
+				This website includes mature content, explicit sexual material, and adult language.
+Access is restricted to individuals who are at least 21 years old and are physically
+situated in the location from where they are accessing the site. By entering this site, you
+affirm that you are at least 21 years old and consent to our Terms & Conditions.
+Unauthorized utilization of this website may be a violation of local, federal, or
+international laws.
+			</p>
+			<p>
+				SouthWestBoard neither generates nor oversees any content featured in our Listings or
+Reviews. However, all listings must adhere to our age restrictions and abide by our
+terms and conditions.
+				
+			</p>
+			
+			<p>
+				SouthWestBoard strictly prohibits any engagement with child pornography or any
+involvement of minors on our platform. By using our site, you commit to promptly report
+any unlawful services or activities that breach our Terms of Use.
+				
+			</p>
+			<p>
+				Furthermore, you consent to report any suspected instances of minor exploitation
+and/or human trafficking to the relevant authorities.
+			</p>
+		
+			<br>
+			 <div class="left_button">
+			  <xf:button class="button-discord">Agree</xf:button>
+			  <xf:button class="button-telegram">Disagree and leave</xf:button>
+		   </div>
+		</div>
+		
+    <footer>
+        <!-- Footer content -->
+        <a href="#">Customer Support</a> |
+        <a href="#">Terms</a>|
+        <a href="#">Privacy</a>|
+		<a href="#">2257 Exemption</a>|
+		<a href="#">Home</a>
+    </footer>]]></template>
+  <template type="public" title="fs_rule_landing_page.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[.header-landing{
+	
+	display:flex;
+}
+.p-body{
+	
+	 background: linear-gradient(to bottom, #185886 0%, #ffffff 59%);
+
+}
+.text-rules{
+	text-align: justify;
+}
+.swb-rules{
+	width:70%;
+}
+
+.p-body-inner{
+	
+	  background-image: url("https://i.imgur.com/CN7Hy2T.png");
+  	  background-repeat: no-repeat;
+	  background-position: right top;
+
+}
+.button-disagree:hover{
+	
+	color: @xf-linkColor !important;
+    background: white !important;
+}
+.button-disagree{
+	
+	color: @xf-linkColor !important;
+    background: white !important;
+	
+}
+.swb-rules{
+	position:relative;
+}
+  footer {
+            color: @xf-linkColor;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+        	color: @xf-linkColor;
+            text-decoration: none;
+            margin: 0 15px; 
+        }]]></template>
+</templates>

@@ -1,0 +1,58 @@
+<xf:css src="regsitration_steps.less"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<div class="owl-carousel">
+				<xf:foreach loop="$users" value="$user">
+					<div class="text-center">
+						<xf:avatar user="{$user}" size="l"
+									href="{{ link('members',$user) }}" class="square-border"/>
+						<p>
+							<a href="{{ link('members',$user)}}">  {{$user.username }}</a>
+						</p>
+						
+					</div>
+				</xf:foreach>
+			</div>
+		</div>
+	</div>
+</div>
+
+<xf:js>
+	$(document).ready(function(){
+	  $('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:1,
+		autoplay:true,
+		autoplaySpeed:2000,
+		autoplayTimeout:3000,
+		responsiveClass:true,
+		nav:true,
+	    navRewind:true,
+		center:true,
+		responsive:{
+			0:{
+				items:1,
+			
+			},
+			400:{
+				items:2,
+			
+			},
+			600:{
+				items:3,
+			
+			},
+			1000:{
+				items:4,
+				
+				loop:true
+			}
+		}
+
+	})
+});
+</xf:js>

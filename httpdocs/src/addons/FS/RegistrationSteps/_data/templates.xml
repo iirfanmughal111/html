@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="email" title="fs_register_send_newAccount_mail" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_register_mail_subject') }}
+</mail:subject>
+
+	{{ phrase('fs_register_mail_body',{
+	'username': $user.username
+}
+
+) }}]]></template>
+  <template type="email" title="fs_verify_account" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_account_verify_mail_subject') }}
+</mail:subject>
+
+{{ phrase('fs_note_user', {
+	'username': $user.username,
+     'verify_link': $link,
+     'direct_link' :$direct_link,
+     'activation_id' :$activation_id,
+     'contact_email':{$xf.options.contactEmailAddress}
+}) }}]]></template>
+  <template type="public" title="fs_direct_verify_account" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title>{{ phrase('fs_activation_account') }}</xf:title>
+
+
+<xf:form action="{{ link('register/direct-verify') }}" ajax="true" class="block">
+
+		<div class="block-container">
+		<div class="block-body">
+			
+				<xf:textboxrow name="username" label="{{ phrase('username') }}"
+								placeholder="{{ phrase('username') }}" />
+
+				<xf:textboxrow name="activation_id" label="{{ phrase('activation_id') }}"
+					placeholder="{{ phrase('activation_id') }}" />
+	
+</div>
+		<xf:submitrow submit="{{ phrase('fs_activate') }}" />
+	</div>
+	
+</xf:form>]]></template>
+  <template type="public" title="fs_register_compliance" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title>{{ phrase('fs_register_compliance_title') }}</xf:title>
+	
+	<div class="block">
+		<div class="block-container">
+			<div class="block-row">
+
+			{{ phrase('fs_register_compliance_body') }}
+		</div>
+		</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_premiuem" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[<xf:title>{{phrase('fs_register_premiuem_title')}}</xf:title>
+		  
+ 	<div class="block">
+		<div class="block-container">
+			<div class="block-row">
+	{{ phrase('fs_register_premiuem_body') }}
+	
+		</div>
+			</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_thread_overview_box" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[<div class="block" style="margin-top:5px;">
+
+		  <xf:button
+    href="{{ link('conversations/add',null,{'to':$thread.User.username}) }}"
+    class="button"
+    >{{ phrase('fs_register_pm_me') }}</xf:button
+  >
+	  <xf:button
+    href="{{ link('members',$thread.User) }}"
+    class="button"
+    >{{ phrase('fs_register_my_profile') }}</xf:button
+  >
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{ phrase('fs_register_hair_color') }}
+					</dt>
+				<dd>
+					
+			{{$thread.User.Profile.custom_fields.haircolor}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_eyes')}}
+					</dt>
+				<dd>
+					{{$thread.User.Profile.custom_fields.eyes}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_age')}}
+					</dt>
+				<dd>
+					{{phrase('fs_register_age_view',{'age':{$thread.User.Profile.custom_fields.age}})}}
+					
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_height')}}
+					</dt>
+				<dd>
+					{$thread.User.Profile.custom_fields.height}
+				</dd>
+			</dl>
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+			<dt>
+				{{phrase('fs_register_ethincity')}}
+			</dt>
+			<dd>
+				{$thread.User.Profile.custom_fields.ethnicity}
+			</dd>
+		</dl>
+	
+		
+
+	
+</div>]]></template>
+  <template type="public" title="fs_verify_account" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_account_verify_mail_subject') }}
+</mail:subject>
+
+{{ phrase('fs_note_user', {
+	'username': $user.username,
+     'verify_link': $link,
+     'direct_link' :$direct_link,
+     'activation_id' :$activation_id,
+     'contact_email':{$xf.options.contactEmailAddress}
+}) }}]]></template>
+  <template type="public" title="fs_verify_account_compulsory" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[<div class="blockMessage blockMessage--important blockMessage--iconic">
+	
+	{{ phrase('fs_verify_account_compulsory', {
+	'link': '<a href="' . link('canonical:register/verify-reagain') . '">' . "Click here". '</a>'}
+) }}
+	
+	
+
+</div>]]></template>
+  <template type="public" title="register_custom_fields" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[<xf:macro name="general_custom_fields_edit"
+	arg-type="!"
+	arg-group="{{ null }}"
+	arg-set="!"
+	arg-editMode="user"
+	arg-onlyInclude="{{ null }}"
+	arg-additionalFilters="{{ [] }}"
+	arg-rowType=""
+	arg-rowClass=""
+	arg-namePrefix="custom_fields"
+	arg-requiredOnly="{{ false }}">
+	<xf:foreach loop="$xf.app.getCustomFieldsForEdit({$type}, {$set}, {$editMode}, {$group}, {$onlyInclude}, {$additionalFilters})" key="$fieldId" value="$fieldDefinition">
+
+		<xf:if is="$fieldDefinition.getExsitedField() && $fieldDefinition.getAccountTypeField()">
+		
+		
+		<xf:if is="!$requiredOnly OR ($requiredOnly AND $fieldDefinition.required)">
+			<xf:set var="$controlId" value="{{
+				in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'select', 'multiselect', 'date', 'stars', 'color'])
+				? unique_id()
+				: '' }}" />
+			<xf:set var="$labelId" value="{{
+				in_array($fieldDefinition.field_type, ['radio', 'checkbox'])
+				? unique_id()
+				: '' }}" />
+
+			<xf:formrow label="{$fieldDefinition.title}"
+				explain="{$fieldDefinition.description}"
+				hint="{{ $fieldDefinition.isRequired($editMode) ? phrase('required') : '' }}"
+				rowtype="{$rowType} customField {{ in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'bbcode', 'select']) ? 'input' : '' }}"
+				rowclass="{$rowClass}"
+				labelid="{$labelId}"
+				controlid="{$controlId}"
+				data-field="{$fieldDefinition.field_id}">
+
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit_{$fieldDefinition.field_type}"
+					arg-set="{$set}"
+					arg-definition="{$fieldDefinition}"
+					arg-editMode="{$editMode}"
+					arg-refId="{{ $controlId ?: $labelId }}"
+					arg-namePrefix="{$namePrefix}" />
+			</xf:formrow>
+		</xf:if>
+		</xf:if>
+	
+			
+			
+	</xf:foreach>
+</xf:macro>
+
+
+<xf:macro name="custom_account_type_fields"
+	arg-type="!"
+	arg-group="{{ null }}"
+	
+	arg-editMode="user"
+	arg-custom_fields=""
+	arg-onlyInclude="{{ null }}"
+	arg-additionalFilters="{{ [] }}"
+	arg-rowType=""
+	arg-rowClass=""
+	arg-namePrefix="custom_fields"
+	arg-requiredOnly="{{ false }}">
+	<xf:foreach loop="$custom_fields" key="$fieldId" value="$fieldDefinition">
+		<xf:if is="!$requiredOnly OR ($requiredOnly AND $fieldDefinition.required)">
+			<xf:set var="$controlId" value="{{
+				in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'select', 'multiselect', 'date', 'stars', 'color'])
+				? unique_id()
+				: '' }}" />
+			<xf:set var="$labelId" value="{{
+				in_array($fieldDefinition.field_type, ['radio', 'checkbox'])
+				? unique_id()
+				: '' }}" />
+
+			<xf:formrow label="{$fieldDefinition.title}"
+				explain="{$fieldDefinition.description}"
+				hint="{{ $fieldDefinition.required ? phrase('required') : '' }}"
+				rowtype="{$rowType} customField {{ in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'bbcode', 'select']) ? 'input' : '' }}"
+				rowclass="{$rowClass}"
+				labelid="{$labelId}"
+				controlid="{$controlId}"
+				data-field="{$fieldDefinition.field_id}">
+	
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit_{$fieldDefinition.field_type}"
+					arg-set="{$set}"
+					arg-definition="{$fieldDefinition}"
+					arg-editMode="{$editMode}"
+					arg-refId="{{ $controlId ?: $labelId }}"
+					arg-namePrefix="{$namePrefix}" />
+			</xf:formrow>
+		</xf:if>
+	</xf:foreach>
+</xf:macro>]]></template>
+</templates>

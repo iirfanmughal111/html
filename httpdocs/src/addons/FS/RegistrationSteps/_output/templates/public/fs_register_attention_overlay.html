@@ -1,0 +1,26 @@
+<xf:title> {{ phrase('fs_register_attentaion') }} </xf:title>
+  <xf:css src="regsitration_steps.less"/>
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				<div class="block-row">
+						<p>
+							{{phrase('overlay_attention_body')}}
+						</p>
+					<p class="text-center">
+							<a href="{{link('threads/read-companion-ad-guidelines.4/')}}" target="_blank">{{phrase('rules_overlay_link')}}</a>
+						</p>
+					<div style="display: flex;justify-content: center;">
+						<xf:button href="{{ link('forums/post-thread', $forum) }}" style="margin-right:5px"  rel="nofollow">
+							{{ phrase('fs_register_i_aggree') }}
+						</xf:button>
+
+						<xf:button class=" button--cta js-overlayClose"  >
+							{{ phrase('fs_register_cancel_ad') }}
+						</xf:button>
+					</div>
+				
+				</div>	
+			</div>
+		</div>
+	</div>

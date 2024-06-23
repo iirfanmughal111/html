@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="Advertiser_manaul_approval" edit_format="select" data_type="integer" advanced="0">
+    <default_value>1</default_value>
+    <edit_format_params>1=Yes
+0=No</edit_format_params>
+    <relation group_id="fs_register_steps" display_order="4"/>
+  </option>
+  <option option_id="fs_register_hobbyiest_fields" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>rows=2</edit_format_params>
+    <relation group_id="fs_register_steps" display_order="1"/>
+  </option>
+  <option option_id="fs_register_provider_fields" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>rows=2</edit_format_params>
+    <relation group_id="fs_register_steps" display_order="1"/>
+  </option>
+</options>
