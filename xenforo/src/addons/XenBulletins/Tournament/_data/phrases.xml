@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="add_tournament" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Tournament]]></phrase>
+  <phrase title="admin_navigation.tournament" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Tournament]]></phrase>
+  <phrase title="admin_navigation.tournament_nav" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Tournament]]></phrase>
+  <phrase title="already_register" version_id="1010001" version_string="1.1"><![CDATA[You have been registered]]></phrase>
+  <phrase title="cron_entry.userconvseration" version_id="1010001" version_string="1.1"><![CDATA[check register user convesation message Tournament]]></phrase>
+  <phrase title="domain" version_id="1010000" version_string="1.1"><![CDATA[Domain]]></phrase>
+  <phrase title="end_time" version_id="1010000" version_string="1.1"><![CDATA[End Time]]></phrase>
+  <phrase title="guest_tournament" version_id="1010001" version_string="1.1"><![CDATA[You need an account to do that !Click  <a href="{register_link}">here</a> to create an account.]]></phrase>
+  <phrase title="header" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Header]]></phrase>
+  <phrase title="kindly_add_main_price" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Kindly add main price]]></phrase>
+  <phrase title="kindly_describe_in_details" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Kindly describe in details]]></phrase>
+  <phrase title="main_price" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Main Price]]></phrase>
+  <phrase title="nav.tournament_pub" version_id="1010000" version_string="1.1"><![CDATA[Tournaments]]></phrase>
+  <phrase title="no_tournament_created" version_id="1010001" version_string="1.1"><![CDATA[No tournament is created yet]]></phrase>
+  <phrase title="option.tourn_user_conversation_id" version_id="1010001" version_string="1.1"><![CDATA[admin side conversation starter]]></phrase>
+  <phrase title="option_explain.tourn_user_conversation_id" version_id="1010001" version_string="1.1"><![CDATA[the person who start the conversation from the admin side should not be register in user side]]></phrase>
+  <phrase title="option_group.tournament" version_id="1010001" version_string="1.1"><![CDATA[Tournament]]></phrase>
+  <phrase title="option_group_description.tournament" version_id="1010001" version_string="1.1"><![CDATA[Tournament options]]></phrase>
+  <phrase title="prizes" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Prizes]]></phrase>
+  <phrase title="register_tournament" version_id="1010000" version_string="1.1"><![CDATA[Are you sure you want to register tournament ?]]></phrase>
+  <phrase title="start_time" version_id="1010000" version_string="1.1"><![CDATA[Start Time]]></phrase>
+  <phrase title="tou_User" version_id="1010000" version_string="1.1"><![CDATA[User]]></phrase>
+  <phrase title="tournament" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Tournament]]></phrase>
+  <phrase title="tournament_message_body" version_id="1010001" version_string="1.1"><![CDATA[tournametn test]]></phrase>
+  <phrase title="tournament_start" version_id="1010001" version_string="1.1"><![CDATA[Tournament detail]]></phrase>
+  <phrase title="tournament_title" version_id="1010000" version_string="1.1"><![CDATA[Tournament Title]]></phrase>
+  <phrase title="tout_date" version_id="1010000" version_string="1.1"><![CDATA[Date]]></phrase>
+  <phrase title="upload_header_image" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload Header Image]]></phrase>
+  <phrase title="upload_icon_image" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload Icon Image]]></phrase>
+  <phrase title="you_are_not_register" version_id="1010001" version_string="1.1"><![CDATA[You have not register on this tournament ]]></phrase>
+</phrases>

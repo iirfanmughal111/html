@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<api_scopes>
+  <api_scope api_scope_id="tl_groups:delete"/>
+  <api_scope api_scope_id="tl_groups:read"/>
+  <api_scope api_scope_id="tl_groups:write"/>
+</api_scopes>

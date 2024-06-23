@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="admin_navigation.fsEscrowList" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrows]]></phrase>
+  <phrase title="admin_navigation.fsEscrowListNav" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrows]]></phrase>
+  <phrase title="admin_navigation.fs_escrow_live_log" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Live Log]]></phrase>
+  <phrase title="admin_navigation.xc_escrew_trans_logs" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Transaction  Logs]]></phrase>
+  <phrase title="crypto_address" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Crypto Address]]></phrase>
+  <phrase title="escrow_admin_logs" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Logs]]></phrase>
+  <phrase title="escrow_admin_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrows]]></phrase>
+  <phrase title="escrow_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Amount]]></phrase>
+  <phrase title="escrow_current_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Current Balance:]]></phrase>
+  <phrase title="escrow_current_fee_percentage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Current fee percentage]]></phrase>
+  <phrase title="escrow_live_data" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Live Logs]]></phrase>
+  <phrase title="escrow_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Title]]></phrase>
+  <phrase title="escrow_total_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Total Amount:]]></phrase>
+  <phrase title="escrow_user" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[User]]></phrase>
+  <phrase title="fs_add_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Start Escrow]]></phrase>
+  <phrase title="fs_amount_received" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Received]]></phrase>
+  <phrase title="fs_conversation" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Conversation]]></phrase>
+  <phrase title="fs_decrypt_message" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Decrypt Message]]></phrase>
+  <phrase title="fs_encrypt_message" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Encrypt Message
+
+]]></phrase>
+  <phrase title="fs_escrew_report" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Escrow Report]]></phrase>
+  <phrase title="fs_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow]]></phrase>
+  <phrase title="fs_escrow_0_date" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Created Date]]></phrase>
+  <phrase title="fs_escrow_1_date" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Approving Date]]></phrase>
+  <phrase title="fs_escrow_2_date" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Cancelled Date]]></phrase>
+  <phrase title="fs_escrow_3_date" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Canceled Date]]></phrase>
+  <phrase title="fs_escrow_4_date" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Completed Date]]></phrase>
+  <phrase title="fs_escrow_add" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Start Escrow]]></phrase>
+  <phrase title="fs_escrow_address" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Address]]></phrase>
+  <phrase title="fs_escrow_address_error" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[receiver address error]]></phrase>
+  <phrase title="fs_escrow_address_from" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[User Address]]></phrase>
+  <phrase title="fs_escrow_address_to" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Destination Address]]></phrase>
+  <phrase title="fs_escrow_admin_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Amount]]></phrase>
+  <phrase title="fs_escrow_admin_date" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Created at]]></phrase>
+  <phrase title="fs_escrow_admin_from" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Starter]]></phrase>
+  <phrase title="fs_escrow_admin_status" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Status]]></phrase>
+  <phrase title="fs_escrow_admin_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Title]]></phrase>
+  <phrase title="fs_escrow_admin_to" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Mentioned]]></phrase>
+  <phrase title="fs_escrow_admins_lastUpdate" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Approve/Cancel/Complete Date]]></phrase>
+  <phrase title="fs_escrow_all" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[All Escrows]]></phrase>
+  <phrase title="fs_escrow_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Amount]]></phrase>
+  <phrase title="fs_escrow_amount_deposit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Deposit]]></phrase>
+  <phrase title="fs_escrow_amount_error" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Amount should be greater than ZERO and less than {amount}.]]></phrase>
+  <phrase title="fs_escrow_amount_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter amount...!]]></phrase>
+  <phrase title="fs_escrow_amount_symbol" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[$]]></phrase>
+  <phrase title="fs_escrow_amount_withdraw" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Withdraw]]></phrase>
+  <phrase title="fs_escrow_approve" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Approve]]></phrase>
+  <phrase title="fs_escrow_cancel" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Cancel]]></phrase>
+  <phrase title="fs_escrow_cant_mention_own_name" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[You can't mention own name...!]]></phrase>
+  <phrase title="fs_escrow_confirm_action" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Confirm action]]></phrase>
+  <phrase title="fs_escrow_container_amount" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[${amount}]]></phrase>
+  <phrase title="fs_escrow_deposit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Deposit amount]]></phrase>
+  <phrase title="fs_escrow_deposit_confiremed" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[{name} your deposit amount  of ${amount}  is confirmed.]]></phrase>
+  <phrase title="fs_escrow_deposit_error" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[{name} your deposit amount  of ${amount} is failed.]]></phrase>
+  <phrase title="fs_escrow_deposit_error_2" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Deposit issue of payment {amount}$]]></phrase>
+  <phrase title="fs_escrow_deposit_title_error" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Deposit issue]]></phrase>
+  <phrase title="fs_escrow_enter_valid_data" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter valid values...!]]></phrase>
+  <phrase title="fs_escrow_form_status" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Status]]></phrase>
+  <phrase title="fs_escrow_include_fee" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Include fee]]></phrase>
+  <phrase title="fs_escrow_logs" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Transcation Logs]]></phrase>
+  <phrase title="fs_escrow_mentioned_by" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Mentioned By]]></phrase>
+  <phrase title="fs_escrow_mentioned_username" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Mentioned User]]></phrase>
+  <phrase title="fs_escrow_message_does_not_matched" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Message does not matched]]></phrase>
+  <phrase title="fs_escrow_not_allowed" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Action not allowed]]></phrase>
+  <phrase title="fs_escrow_not_enough_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Insufficient Balance...!]]></phrase>
+  <phrase title="fs_escrow_otp_alert_mail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<br> 
+Hello <strong>{user}</strong>,
+Please use the following OTP to submit withdrawal request, 
+<br><br>
+{otp}
+<br><br>
+Thank you...!
+<br><br>]]></phrase>
+  <phrase title="fs_escrow_otp_does_not_matched_or_expired" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[OTP is incorrect or expired]]></phrase>
+  <phrase title="fs_escrow_otp_verfication_enter" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[Please enter OTP to verify and submit the request.]]></phrase>
+  <phrase title="fs_escrow_page_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow]]></phrase>
+  <phrase title="fs_escrow_payment" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Release Payment]]></phrase>
+  <phrase title="fs_escrow_place_holder" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow title]]></phrase>
+  <phrase title="fs_escrow_please_confirm_that_you_want_to_approve_following" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please confirm that you want to approve the following]]></phrase>
+  <phrase title="fs_escrow_please_confirm_that_you_want_to_cancel_following" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please confirm that you want to cancel the following]]></phrase>
+  <phrase title="fs_escrow_please_confirm_that_you_want_to_payment_following" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please confirm that you want to payment the following]]></phrase>
+  <phrase title="fs_escrow_post_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post Escrow]]></phrase>
+  <phrase title="fs_escrow_relaase_error" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Release Payment Issue]]></phrase>
+  <phrase title="fs_escrow_release_error_2" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Release Payment issue of payment {amount}$]]></phrase>
+  <phrase title="fs_escrow_request_from" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Withdrawal Request from {user}.]]></phrase>
+  <phrase title="fs_escrow_request_subject" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Withdraw Request OTP]]></phrase>
+  <phrase title="fs_escrow_rules" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<ol>
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+	<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+</ol>]]></phrase>
+  <phrase title="fs_escrow_rules_heading" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Rules]]></phrase>
+  <phrase title="fs_escrow_start_username" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Starter Username]]></phrase>
+  <phrase title="fs_escrow_statistics" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Stats]]></phrase>
+  <phrase title="fs_escrow_status_0" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Waiting for approvel]]></phrase>
+  <phrase title="fs_escrow_status_1" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Aproved. Processing]]></phrase>
+  <phrase title="fs_escrow_status_2" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Cancelled by mentioned User]]></phrase>
+  <phrase title="fs_escrow_status_3" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Cancelled by Creator]]></phrase>
+  <phrase title="fs_escrow_status_4" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Completed]]></phrase>
+  <phrase title="fs_escrow_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Start]]></phrase>
+  <phrase title="fs_escrow_trans_action" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Action]]></phrase>
+  <phrase title="fs_escrow_trans_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Amount]]></phrase>
+  <phrase title="fs_escrow_trans_amountUSD" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[USD]]></phrase>
+  <phrase title="fs_escrow_trans_amount_deposit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Not linked to Escorw]]></phrase>
+  <phrase title="fs_escrow_trans_current" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Balance]]></phrase>
+  <phrase title="fs_escrow_trans_date" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Date Time]]></phrase>
+  <phrase title="fs_escrow_trans_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Name]]></phrase>
+  <phrase title="fs_escrow_trans_externalId" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[User]]></phrase>
+  <phrase title="fs_escrow_trans_sender_addreses" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[sender]]></phrase>
+  <phrase title="fs_escrow_trans_status" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Status]]></phrase>
+  <phrase title="fs_escrow_trans_txId" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Tx ID]]></phrase>
+  <phrase title="fs_escrow_trans_type" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Type]]></phrase>
+  <phrase title="fs_escrow_user_not_found" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[User not found...!]]></phrase>
+  <phrase title="fs_escrow_visit_request_page" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Visit]]></phrase>
+  <phrase title="fs_escrow_wirthraw_error" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Withdraw Issue]]></phrase>
+  <phrase title="fs_escrow_withdraw" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Withdraw Money]]></phrase>
+  <phrase title="fs_escrow_withdrawRequest" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Withdraw Amount Request]]></phrase>
+  <phrase title="fs_escrow_withdraw_confiremed" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[{name} your withdraw amount  of ${amount}  is confirmed.]]></phrase>
+  <phrase title="fs_escrow_withdraw_error" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[{name} your withdraw amount  of ${amount} is failed.]]></phrase>
+  <phrase title="fs_escrow_withdraw_error_2" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Withdraw issue of payment {amount}$]]></phrase>
+  <phrase title="fs_escrow_you_must_login" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Sorry, you need to login First...!]]></phrase>
+  <phrase title="fs_escrows_details" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Overview]]></phrase>
+  <phrase title="fs_hi" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Hi]]></phrase>
+  <phrase title="fs_mentioned_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Mentioned Escrow]]></phrase>
+  <phrase title="fs_my_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[My Escrows]]></phrase>
+  <phrase title="fs_otp_verfication_email" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[An OTP has been sent to {email}.]]></phrase>
+  <phrase title="fs_public_key" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Public Key]]></phrase>
+  <phrase title="fs_report" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Report]]></phrase>
+  <phrase title="fs_require_encrypt_message" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Require Encrypt Message]]></phrase>
+  <phrase title="fs_require_public_key" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Public Key required]]></phrase>
+  <phrase title="fs_title_otp_verfication" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[OTP VERIFICATION]]></phrase>
+  <phrase title="nav.fs_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow]]></phrase>
+  <phrase title="nav.fs_escrow_add" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Start Escrow]]></phrase>
+  <phrase title="no_any_data_found" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[No Data Found...!]]></phrase>
+  <phrase title="no_any_transaction_found" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[No any transaction found]]></phrase>
+  <phrase title="option.fs_escrow_admin_Id" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Escrow Percentage Holder Id]]></phrase>
+  <phrase title="option.fs_escrow_admin_percentage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Admin Percentage]]></phrase>
+  <phrase title="option.fs_escrow_api" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Bithide API]]></phrase>
+  <phrase title="option.fs_escrow_applicable_forum" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Forum Id]]></phrase>
+  <phrase title="option.fs_escrow_approval_que_option" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Allow without admin Approvel]]></phrase>
+  <phrase title="option.fs_escrow_bit_base_url" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[API Base URL]]></phrase>
+  <phrase title="option.fs_escrow_callback_link" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Site Base URL (For Callback URL)]]></phrase>
+  <phrase title="option.fs_escrow_conversion_api" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[USD to BTC conversion API]]></phrase>
+  <phrase title="option.fs_escrow_currency" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Currency Type]]></phrase>
+  <phrase title="option.fs_escrow_otp_expire_time" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[OTP Expire Time]]></phrase>
+  <phrase title="option.fs_escrow_pgp_option" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Request without PGP encryption.]]></phrase>
+  <phrase title="option_explain.fs_escrow_admin_Id" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[transfer percentage]]></phrase>
+  <phrase title="option_explain.fs_escrow_admin_percentage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Admin Percentage]]></phrase>
+  <phrase title="option_explain.fs_escrow_api" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Central Account api key]]></phrase>
+  <phrase title="option_explain.fs_escrow_applicable_forum" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[This forum is used for managing Escrow. DO NOT DELETE THIS FORUM.]]></phrase>
+  <phrase title="option_explain.fs_escrow_approval_que_option" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Allow withdrawal without admin apprvel.]]></phrase>
+  <phrase title="option_explain.fs_escrow_bit_base_url" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_escrow_callback_link" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Site base URL is required to generate a callback URL.<br> Example: https//:www.abc.com OR https//:www.abc.com:2526]]></phrase>
+  <phrase title="option_explain.fs_escrow_conversion_api" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[This API is used for the conversion of USD to BTC to perform transactions in BTC']]></phrase>
+  <phrase title="option_explain.fs_escrow_currency" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_escrow_otp_expire_time" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[In minutes]]></phrase>
+  <phrase title="option_explain.fs_escrow_pgp_option" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[Submit a request without PGP encryption.]]></phrase>
+  <phrase title="option_group.fsEscrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Escrow]]></phrase>
+  <phrase title="option_group_description.fsEscrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Escrow]]></phrase>
+  <phrase title="permission.fs_esrow_allow_use_escrow" version_id="1000500" version_string="1.0.5 Alpha"><![CDATA[Allow to Use Escrow]]></phrase>
+  <phrase title="permission_interface.fs_escrow" version_id="1000500" version_string="1.0.5 Alpha"><![CDATA[Escrow  Permissions]]></phrase>
+  <phrase title="please_enter_amount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please enter an amount greater than {amount}.]]></phrase>
+  <phrase title="user_x_request_withdraw" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{user} requested to withdraw <strong>${amount}</strong> from <strong>{address_from}</strong>.]]></phrase>
+  <phrase title="x_approve_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} approve a escrow named {title}.]]></phrase>
+  <phrase title="x_cancel_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} cancel a escrow named {title}.]]></phrase>
+  <phrase title="x_mentioned_you_in_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} mentioned you in an escrow {title}.]]></phrase>
+  <phrase title="x_payment_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} payment a escrow named {title}.]]></phrase>
+  <phrase title="x_percentge_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} received percentge a escrow named {title}.]]></phrase>
+  <phrase title="x_quoted_your_post_in_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} quoted your post in the escrow {title}.]]></phrase>
+  <phrase title="x_replied_to_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} replied to the escrow {title}.]]></phrase>
+  <phrase title="x_started_escrow_y" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{name} started a escrow named {title}.]]></phrase>
+</phrases>

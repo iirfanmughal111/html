@@ -1,0 +1,9 @@
+{
+    "template": "member_ip_list",
+    "description": "remove_ip_filter_from_fromEntrires",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:foreach loop=\"\\$ips\" value=\"\\$ip\">.*?<\\/xf:foreach>/is",
+    "replace": "<xf:include template=\"member_user_ip_list_replace\"/>"
+}

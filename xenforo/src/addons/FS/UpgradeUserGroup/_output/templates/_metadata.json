@@ -1,0 +1,12 @@
+{
+    "admin/fs_downgrade_usergroup_add_edit.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6eb615e3f5398488e1f403dd92d05918"
+    },
+    "admin/fs_downgrade_usergroup_index.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "b3306ede72ea692791784102c8615854"
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option.fs_includeLanguages" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Include Languages]]></phrase>
+  <phrase title="option.fs_t_FlagStyle" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Flag style]]></phrase>
+  <phrase title="option.fs_t_NativeLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Native language names]]></phrase>
+  <phrase title="option.fs_t_alternativeFlags" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Alternative flags]]></phrase>
+  <phrase title="option.fs_t_autoSwitch" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Auto switch to browser language]]></phrase>
+  <phrase title="option.fs_t_defaultLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Default Language]]></phrase>
+  <phrase title="option.fs_t_openDirection" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Open direction]]></phrase>
+  <phrase title="option.fs_t_showLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Show language selector]]></phrase>
+  <phrase title="option.fs_t_widgetLook" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Widget look]]></phrase>
+  <phrase title="option_explain.fs_includeLanguages" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[select the languages which you want to show in translate language list]]></phrase>
+  <phrase title="option_explain.fs_t_FlagStyle" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Language Switcher Flag style SVG or PNG select which you want.]]></phrase>
+  <phrase title="option_explain.fs_t_NativeLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[If checked then Language names will be display in Native language names]]></phrase>
+  <phrase title="option_explain.fs_t_alternativeFlags" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[If you want Alternative flags of English and Spanish Language]]></phrase>
+  <phrase title="option_explain.fs_t_autoSwitch" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[If checked then Detect browser language and switch to that language automatically.]]></phrase>
+  <phrase title="option_explain.fs_t_defaultLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Default Language of the Site.]]></phrase>
+  <phrase title="option_explain.fs_t_openDirection" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Language Switcher open direction]]></phrase>
+  <phrase title="option_explain.fs_t_showLanguage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Select the position of language selector]]></phrase>
+  <phrase title="option_explain.fs_t_widgetLook" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Different Widget look options available (Language Switcher Look)]]></phrase>
+  <phrase title="option_group.fs_translator" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Translator]]></phrase>
+  <phrase title="option_group_description.fs_translator" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Translator]]></phrase>
+  <phrase title="style_prop.gtf_float" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Float]]></phrase>
+  <phrase title="style_prop.gtf_options" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Set style for FS Translator]]></phrase>
+  <phrase title="style_prop.gtf_positions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Predefined positions for FS Translator]]></phrase>
+  <phrase title="style_prop.gtf_style" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Styling]]></phrase>
+  <phrase title="style_prop_desc.gtf_float" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.gtf_options" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.gtf_positions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[*use Custom position to add the template for instance in a widget, advertising positons or any other location. Just include <code>cxf_google_translate_forum</code> template anywhere you want to show the Google Translate.]]></phrase>
+  <phrase title="style_prop_desc.gtf_style" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+</phrases>

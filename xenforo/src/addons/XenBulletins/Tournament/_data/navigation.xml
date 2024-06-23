@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+  <navigation_entry navigation_id="tournament_pub" display_order="701" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('uptourn') }}","display_condition":"","extra_attributes":[]}]]></navigation_entry>
+</navigation>

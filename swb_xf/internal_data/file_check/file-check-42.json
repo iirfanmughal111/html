@@ -1,0 +1,28 @@
+{
+    "missing": [],
+    "inconsistent": {
+        "FS/RegistrationSteps": [
+            "src/addons/FS/RegistrationSteps/Listener.php",
+            "src/addons/FS/RegistrationSteps/Setup.php",
+            "src/addons/FS/RegistrationSteps/XF/Entity/Thread.php",
+            "src/addons/FS/RegistrationSteps/XF/Entity/User.php",
+            "src/addons/FS/RegistrationSteps/XF/Entity/UserProfile.php",
+            "src/addons/FS/RegistrationSteps/XF/Pub/Controller/Account.php",
+            "src/addons/FS/RegistrationSteps/_data/class_extensions.xml",
+            "src/addons/FS/RegistrationSteps/_data/phrases.xml",
+            "src/addons/FS/RegistrationSteps/_data/templates.xml",
+            "src/addons/FS/RegistrationSteps/_data/template_modifications.xml",
+            "src/addons/FS/RegistrationSteps/_data/widget_definitions.xml"
+        ],
+        "XF": [
+            "src/XF/Entity/UserField.php",
+            "src/XF/Pub/Controller/Account.php",
+            "src/XF/Repository/Node.php",
+            "src/XF/Repository/UserField.php",
+            "src/XF/Tree.php"
+        ]
+    },
+    "total_missing": 0,
+    "total_inconsistent": 16,
+    "total_checked": 5932
+}

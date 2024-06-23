@@ -1,0 +1,9 @@
+{
+    "template": "account_visitor_menu",
+    "description": "add_deposit_withdraw_button",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<li><a href=\"{{ link('account/ignored') }}\" class=\"menu-linkRow\">{{ phrase('ignoring') }}</a></li>",
+    "replace": "$0\n<li><a href=\"{{ link('escrow/deposit') }}\" class=\"menu-linkRow\">{{ phrase('fs_escrow_amount_deposit') }}</a></li>\n<li><a href=\"{{ link('escrow/withdraw') }}\" class=\"menu-linkRow\">{{ phrase('fs_escrow_amount_withdraw') }}</a></li>"
+}

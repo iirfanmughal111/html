@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="search_forum_view" modification_key="addFiltersToNavParam" description="addFiltersToNavParam" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:pagenav.*?"block-outer-main" \/>/si]]></find>
+    <replace><![CDATA[<xf:if is="$filters">
+<xf:pagenav page="{$page}" perpage="{$perPage}" total="{$total}"
+			link="search-forums/search" data="{$searchForum}" params="{$filters}" 
+			wrapperclass="block-outer-main" />
+		
+<xf:else />
+
+<xf:pagenav page="{$page}" perpage="{$perPage}" total="{$total}"
+			link="search-forums" data="{$searchForum}"
+			wrapperclass="block-outer-main" />
+</xf:if>
+]]></replace>
+  </modification>
+  <modification type="public" template="search_forum_view" modification_key="addSearchNodeFilter" description="addSearchNodeFilter" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if contentcheck="true">.*?	<\/xf:trim><\/div>
+
+	<div class="block-container">/is]]></find>
+    <replace><![CDATA[$0
+<xf:extension name="thread_list_header">
+			<div class="block-filterBar">
+				<div class="filterBar">
+					<xf:if contentcheck="true">
+						<ul class="filterBar-filters">
+						<xf:contentcheck>
+							<xf:extension name="filters">
+								<xf:macro template="fs_node_search_filter_macro" name="filters"
+									arg-forum="{$searchForum}"
+									arg-filters="{$filters}"
+									arg-starterFilter="{$starterFilter}"
+									arg-threadTypeFilter="{$threadTypeFilter}" />
+							</xf:extension>
+						</xf:contentcheck>
+						</ul>
+					</xf:if>
+
+					<a class="filterBar-menuTrigger" data-xf-click="menu" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">{{ phrase('filters') }}</a>
+					<div class="menu menu--wide" data-menu="menu" aria-hidden="true"
+						data-href="{{ link('search-forums/filters', $searchForum, {$filters}) }}"
+						data-load-target=".js-filterMenuBody">
+						<div class="menu-content">
+							<h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+							<div class="js-filterMenuBody">
+								<div class="menu-row">{{ phrase('loading...') }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xf:extension>]]></replace>
+  </modification>
+  <modification type="public" template="search_results" modification_key="addFiltersToNavParamInAdvanceSearch" description="addFiltersToNavParamInAdvanceSearch" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:pagenav.*?"block-outer-main" \/>/si]]></find>
+    <replace><![CDATA[<xf:if is="$filters AND count($filters) > 0">
+<xf:pagenav
+			page="{$page}" perpage="{$perPage}" total="{$total}"
+			link="search/explore" data="{$search}" params="{{ {'':$filters, 'mod': $activeModType } }}"
+			wrapperclass="block-outer-main" />
+		
+<xf:else />
+
+$0
+</xf:if>
+]]></replace>
+  </modification>
+  <modification type="public" template="search_results" modification_key="add_filter_in_advance_search" description="add_filter_in_advance_search" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$modTypes">
+		<div class="block-outer">
+			<div class="block-outer-opposite">
+				<div class="buttonGroup">
+					<xf:if is="\$activeModType">.*?								<\/xf:if>
+							<\/div>
+						<\/div>
+					<\/div>
+				<\/div>
+			<\/div>
+		<\/div>
+	<\/xf:if>/is]]></find>
+    <replace><![CDATA[$0
+
+
+
+<xf:extension name="thread_list_header">
+			<div class="block-filterBar">
+				<div class="filterBar">
+					<xf:if contentcheck="true">
+						<ul class="filterBar-filters">
+						<xf:contentcheck>
+							<xf:extension name="filters">
+								<xf:macro template="fs_advance_search_filter_macro" name="filters"
+									arg-forum="{$search}"
+									arg-filters="{$filters}"
+									arg-starterFilter="{$starterFilter}"
+									arg-threadTypeFilter="{$threadTypeFilter}" />
+							</xf:extension>
+						</xf:contentcheck>
+						</ul>
+					</xf:if>
+
+					<a class="filterBar-menuTrigger" data-xf-click="menu" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">{{ phrase('filters') }}</a>
+					<div class="menu menu--wide" data-menu="menu" aria-hidden="true"
+						data-href="{{ link('search/filters', $search, {$filters}) }}"
+						data-load-target=".js-filterMenuBody">
+						<div class="menu-content">
+							<h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+							<div class="js-filterMenuBody">
+								<div class="menu-row">{{ phrase('loading...') }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xf:extension>]]></replace>
+  </modification>
+</template_modifications>

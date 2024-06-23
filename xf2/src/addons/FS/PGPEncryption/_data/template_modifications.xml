@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="fs_passhrase_overloay" description="Passphrase overlay" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="property('publicNavSticky') == 'primary'">]]></find>
+    <replace><![CDATA[<xf:if is="$passphraseOverlay">
+	<xf:include template="passphrase_overlay"/>
+</xf:if>
+<xf:if is="$passphraseOverlay_3">
+	<xf:include template="passphrase_overlay_3"/>
+</xf:if>
+
+$0]]></replace>
+  </modification>
+  <modification type="public" template="account_preferences" modification_key="fs_pgp_online_options" description="PGP online options" execution_order="10" enabled="0" action="str_replace">
+    <find><![CDATA[<xf:macro template="helper_account" name="email_options_row" arg-showConversationOption="{{ true }}" />
+]]></find>
+    <replace><![CDATA[$0
+<xf:include template="pgp_options"/>
+]]></replace>
+  </modification>
+  <modification type="public" template="account_security" modification_key="fs_change_public_key" description="Change public key" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:submitrow icon="save" />]]></find>
+    <replace><![CDATA[<xf:include template="pgp_options"/>
+<xf:formrow rowtype="button"
+						label="{{ $xf.visitor.public_key ? phrase('fs_change_public_key') : phrase('fs_add_public_key') }}">
+
+						{{$xf.visitor.public_key}}
+
+						<xf:button href="{{ link('account/old-public-key') }}" class="button--link" overlay="true">{{ $xf.visitor.public_key ? phrase('change') : phrase('Add') }}</xf:button>
+	</xf:formrow>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="login" modification_key="fs_change_login" description="Change login" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:form action="{{ link('login/login') }}" class="block">]]></find>
+    <replace><![CDATA[<xf:form action="{{ link('login/pgp') }}" class="block">]]></replace>
+  </modification>
+  <modification type="public" template="login" modification_key="fs_login" description="username,message,code" execution_order="10" enabled="0" action="preg_replace">
+    <find><![CDATA[/<xf:textboxrow name="login".*?<\/xf:passwordboxrow>/is]]></find>
+    <replace><![CDATA[<xf:js src="PGPEncryption/inputtoken.js"  />
+<xf:tokeninputrow name="username" value="{$to}" href="{{ link('members/find') }}"
+				label="{{ ($maxRecipients == -1 OR $maxRecipients > 1) ? phrase('username') : phrase('username') }}"
+				max-tokens="{{ ($maxRecipients > -1) ? $maxRecipients : null }}"
+				explain="{{ ($maxRecipients == -1 OR $maxRecipients > 1) ? phrase('separate_names_with_comma') : null }}" required="true"/>
+<span id="message" style="font-size:10px;display:flex;justify-content:center;"></span>
+<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="fs_pan_profile" description="show tab pan profile" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tab_panes:after_recent_content]-->]]></find>
+    <replace><![CDATA[$0
+
+
+<li data-href="{{ link('members/public-key', $user) }}" role="tabpanel" aria-labelledby="fs_public_key">
+		<div class="blockMessage">{{ phrase('loading...') }}</div>
+	</li>
+]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="fs_show_public_key" description="Show Public key user profile" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tabs:after_recent_content]-->]]></find>
+    <replace><![CDATA[$0
+
+<a href="{{ link('members/public-key',$user) }}"
+	   class="tabs-tab"
+	   id="fs_public_key"
+	   role="tab">{{ phrase('fs_public_key') }}</a>
+]]></replace>
+  </modification>
+  <modification type="public" template="register_form" modification_key="fs_remove_password" description="Public key,passphrase1,passphrase2" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:passwordboxrow name="{{ $regForm.getFieldName('password') }}" autocomplete="new-password"
+				label="{{ phrase('password') }}"
+				hint="{{ phrase('required') }}"
+				required="required" checkstrength="true" />]]></find>
+    <replace><![CDATA[$0
+<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" explain="{{ phrase('fs_public_key_expl') }}" />
+<xf:textarearow name="passphrase_1"  autosize="true"
+				label="{{ phrase('fs_passphrase1') }}" explain="{{ phrase('fs_passphrase_1_key_expl') }}" />
+<xf:textarearow name="passphrase_2"  autosize="true"
+				label="{{ phrase('fs_passphrase2') }}" explain="{{ phrase('fs_passphrase_2_key_expl') }}"/>
+<xf:textarearow name="passphrase_3"  autosize="true"
+				label="{{ phrase('fs_passphrase3') }}" explain="{{ phrase('fs_passphrase_3_key_expl') }}"/>]]></replace>
+  </modification>
+</template_modifications>

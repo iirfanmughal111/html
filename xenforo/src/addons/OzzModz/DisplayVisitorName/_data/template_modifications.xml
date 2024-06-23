@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="email" template="activity_summary_latest_posts" modification_key="ozzmodz_dvn_activity_summary_latest_posts" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$post.Thread.title]]></find>
+    <replace><![CDATA[$post.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="email" template="activity_summary_latest_threads" modification_key="ozzmodz_dvn_activity_summary_latest_threads" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="public" template="alert_post_insert" modification_key="ozzmodz_dvn_alert_post_insert" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="alert_post_mention" modification_key="ozzmodz_dvn_alert_post_mention" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="alert_post_pre_reg" modification_key="ozzmodz_dvn_alert_post_pre_reg" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="alert_post_question_solution" modification_key="ozzmodz_dvn_alert_post_question_solution" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="alert_post_quote" modification_key="ozzmodz_dvn_alert_post_quote" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="news_feed_item_post_insert" modification_key="ozzmodz_dvn_news_feed_item_post_insert" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.Thread.title]]></find>
+    <replace><![CDATA[$content.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="news_feed_item_thread_insert" modification_key="ozzmodz_dvn_news_feed_item_thread_insert" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$content.title]]></find>
+    <replace><![CDATA[$content.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="node_list_category" modification_key="ozzmodz_dvn_node_list_category" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$extras.LastThread.title]]></find>
+    <replace><![CDATA[$extras.LastThread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="node_list_forum" modification_key="ozzmodz_dvn_node_list_forum" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$extras.LastThread.title]]></find>
+    <replace><![CDATA[$extras.LastThread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="post_article_macros" modification_key="ozzmodz_dvn_post_article_macros" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="public" template="reaction_item_post" modification_key="ozzmodz_dvn_news_reaction_item_post" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$post.Thread.title]]></find>
+    <replace><![CDATA[$post.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="search_result_post" modification_key="ozzmodz_dvn_search_result_post" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[$post.Thread.title]]></find>
+    <replace><![CDATA[$post.Thread.title|replace_visitor_name]]></replace>
+  </modification>
+  <modification type="public" template="thread_list_macros" modification_key="ozzmodz_dvn_thread_list_macros" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="ozzmodz_dvn_thread_view" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="email" template="watched_forum_reply" modification_key="ozzmodz_dvn_watched_forum_reply" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="email" template="watched_forum_thread" modification_key="ozzmodz_dvn_watched_forum_thread" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="email" template="watched_thread_reply" modification_key="ozzmodz_dvn_watched_thread_reply" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="public" template="widget_new_threads" modification_key="ozzmodz_dvn_widget_new_threads" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+  <modification type="public" template="widget_search_forum" modification_key="ozzmodz_dvn_widget_search_forum" description="Replace visitor name" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{$thread.title}]]></find>
+    <replace><![CDATA[{$thread.title|replace_visitor_name}]]></replace>
+  </modification>
+</template_modifications>

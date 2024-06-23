@@ -1,0 +1,9 @@
+{
+    "template": "xfmg_gallery_wrapper",
+    "description": "remove_your_media",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<a href=\"{{ link('media/users', $xf.visitor) }}\" class=\"blockLink{{ $selected == 'yourMedia' ? ' is-selected' : '' }}\">{{ phrase('xfmg_your_media') }}</a>",
+    "replace": ""
+}

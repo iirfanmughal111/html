@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<api_scopes>
+  <api_scope api_scope_id="dbtech_ecommerce_category:delete"/>
+  <api_scope api_scope_id="dbtech_ecommerce_category:read"/>
+  <api_scope api_scope_id="dbtech_ecommerce_category:write"/>
+  <api_scope api_scope_id="dbtech_ecommerce_download:delete_hard"/>
+  <api_scope api_scope_id="dbtech_ecommerce_download:read"/>
+  <api_scope api_scope_id="dbtech_ecommerce_download:write"/>
+  <api_scope api_scope_id="dbtech_ecommerce_license:read"/>
+  <api_scope api_scope_id="dbtech_ecommerce_product:delete_hard"/>
+  <api_scope api_scope_id="dbtech_ecommerce_product:read"/>
+  <api_scope api_scope_id="dbtech_ecommerce_product:write"/>
+  <api_scope api_scope_id="dbtech_ecommerce_rating:delete_hard"/>
+  <api_scope api_scope_id="dbtech_ecommerce_rating:read"/>
+  <api_scope api_scope_id="dbtech_ecommerce_rating:write"/>
+</api_scopes>

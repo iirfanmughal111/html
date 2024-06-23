@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="DropdownOptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter Dropdown Options]]></phrase>
+  <phrase title="DropdwonOptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Options]]></phrase>
+  <phrase title="activeStatus" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Status]]></phrase>
+  <phrase title="addNewdropdownReply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Dropdown Reply]]></phrase>
+  <phrase title="dropdownReply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Select Reply]]></phrase>
+  <phrase title="dropdownTitle" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread Title]]></phrase>
+  <phrase title="editNewdropdownReply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Edit:]]></phrase>
+  <phrase title="enter_new_replay" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter dropdown Reply]]></phrase>
+  <phrase title="fs_are_you_sure_to_delete" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Are you sure to delete this dropdown]]></phrase>
+  <phrase title="fs_are_you_sure_to_delete_option" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Are you sure to delete this dropdown Option]]></phrase>
+  <phrase title="fs_dropdown_reply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Dropdown Reply]]></phrase>
+  <phrase title="fs_dropdown_reply_delete" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Delete Dropdown]]></phrase>
+  <phrase title="fs_dropdown_reply_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Dropdown List]]></phrase>
+  <phrase title="message_not_allowed" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Message not allowed]]></phrase>
+  <phrase title="optionList" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Option List]]></phrase>
+</phrases>

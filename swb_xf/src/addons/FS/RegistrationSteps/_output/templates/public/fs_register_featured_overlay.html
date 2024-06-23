@@ -1,0 +1,21 @@
+<xf:title> {{ $thread.title }} </xf:title>
+	  
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				
+				   <xf:form
+					  action="{{ link('threads/featured-save',$thread) }}"
+					  ajax="true"
+					
+						data-force-flash-message="true"
+					>
+						  <xf:checkboxrow label="{{phrase('is_featured_thread_title')}}">
+							<xf:option name="is_featured" selected="{{$thread->is_featured}}">{{phrase('is_featured_thread')}}</xf:option>
+						  </xf:checkboxrow>
+					   <xf:submitrow icon="save" sticky="true" />
+					</xf:form>
+				
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,263 @@
+<xf:title page="{$page}">{{ phrase('fs_auction') }}</xf:title>
+<script>
+  // For All Auctions
+  function DateTimeConverter(unixdatetime) {
+    var wStart_time = new Date(unixdatetime * 1000).toLocaleString("en-US", {
+      hour12: false,
+      //  timeZone: 'America/New_York',
+      // timeZone:'Europe/London',
+      timeStyle: "long",
+    });
+    var tempHumanDate = new Date(unixdatetime * 1000).toLocaleDateString(
+      "en-US",
+      {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+      }
+    );
+
+    var humanDate = new Date(tempHumanDate);
+    var year = humanDate.getFullYear();
+    var month = (humanDate.getMonth() + 1).toString().padStart(2, "0");
+    var date = humanDate.getDate();
+
+    var fulldate = year + "-" + month + "-" + date + " " + wStart_time + ":00";
+
+    // FormatingDateEspecialyForIOS
+    var tempCountTimmer = fulldate.split(/[- :]/);
+    // Apply each element to the Date function
+    var tempDateObject = new Date(
+      tempCountTimmer[0],
+      tempCountTimmer[1] - 1,
+      tempCountTimmer[2],
+      tempCountTimmer[3],
+      tempCountTimmer[4],
+      tempCountTimmer[5]
+    );
+    var CountDownDateTime = new Date(tempDateObject).getTime();
+
+    return CountDownDateTime;
+  }
+
+  function timmerCounter(auction_id, start_datetime) {
+    let auc_id = auction_id;
+
+    let humanDateTime = DateTimeConverter(start_datetime);
+
+    var countDownDate = new Date(humanDateTime).getTime();
+    var counter = setInterval(function () {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var timeDistance = countDownDate - now;
+      document.getElementById("days-auction-" + auc_id).innerHTML =
+        Math.floor(timeDistance / (1000 * 60 * 60 * 24)) + " D";
+      document.getElementById("hours-auction-" + auc_id).innerHTML =
+        Math.floor((timeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) +
+        " H";
+      document.getElementById("minutes-auction-" + auc_id).innerHTML =
+        Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60)) + " M";
+      document.getElementById("seconds-auction-" + auc_id).innerHTML =
+        Math.floor((timeDistance % (1000 * 60)) / 1000) + " S";
+
+      // If the count down is over, write some text
+      if (timeDistance < 0) {
+        clearInterval(counter);
+        document.getElementById("auction-counter-" + auc_id).style.display =
+          "none";
+      }
+    }, 1000);
+  }
+</script>
+
+<xf:page
+  option="searchConstraints"
+  value="{{ {
+	phrase('fs_auction_auctions'): {'search_type': 'fs_auction_auctions'}
+} }}"
+/>
+
+<xf:pageaction if="$xf.visitor.canAddAuctions() && $categories is not empty">
+  <xf:button
+    href="{{ link('auction/add') }}"
+    class="button--cta"
+    icon="write"
+    overlay="true"
+    >{{ phrase('fs_auction_categories_add_listing...') }}</xf:button
+  >
+</xf:pageaction>
+
+<xf:if is="$canInlineMod">
+  <xf:js src="xf/inline_mod.js" min="1" />
+</xf:if>
+
+<div
+  class="block"
+  data-xf-init="{{ $canInlineMod ? 'inline-mod' : '' }}"
+  data-type="fs_auction_auctions"
+  data-href="{{ link('inline-mod') }}"
+>
+  <div class="block-outer">
+    <xf:trim>
+      <xf:pagenav
+        page="{$page}"
+        perpage="{$perPage}"
+        total="{$total}"
+        link="auction"
+        params="{$filters}"
+        wrapperclass="block-outer-main"
+      />
+
+      <xf:if contentcheck="true">
+        <div class="block-outer-opposite">
+          <div class="buttonGroup">
+            <xf:contentcheck>
+              <xf:macro
+                template="fs_auction_inline_mod_macros"
+                name="button"
+                arg-tooltip="List View"
+                arg-linkParam="0"
+                arg-iconClass="list"
+              />
+              <xf:macro
+                template="fs_auction_inline_mod_macros"
+                name="button"
+                arg-tooltip="Grid View"
+                arg-linkParam="1"
+                arg-iconClass="th"
+              />
+            </xf:contentcheck>
+          </div>
+        </div>
+      </xf:if>
+    </xf:trim>
+  </div>
+  <div class="block-container">
+    <xf:macro name="search_menu" arg-conditions="{$conditions}" />
+
+    <!--Listing View--->
+    <div class="block-body">
+      <xf:if is="$xf.visitor.layout_type == '0'">
+        <xf:if is="$listings is not empty">
+          <div class="structItemContainer">
+            <xf:foreach loop="$listings" value="$listing">
+              <xf:macro
+                template="fs_auction_listing_list_macros"
+                name="listing"
+                arg-listing="{$listing}"
+              />
+            </xf:foreach>
+          </div>
+          <xf:elseif is="$filters" />
+          <div class="block-row">
+            {{ phrase('fs_auction_there_no_auction_matching_your_filters') }}
+          </div>
+          <xf:else />
+          <div class="block-row">
+            {{ phrase('fs_auction_no_auctions_have_been_created_yet') }}
+          </div>
+        </xf:if>
+        <xf:elseif is="$xf.visitor.layout_type == '1'" />
+        <xf:if is="$featuredListings is not empty">
+          <div class="structItemContainer">
+            <xf:foreach loop="$featuredListings" value="$listing">
+              <xf:macro
+                template="fs_auction_listing_list_macros"
+                name="listing_grid"
+                arg-listing="{$listing}"
+              />
+            </xf:foreach>
+          </div>
+        </xf:if>
+
+        <!--Grid View-->
+        <xf:if is="$listings is not empty">
+          <div class="structItemContainer">
+            <xf:foreach loop="$listings" value="$listing">
+              <xf:macro
+                template="fs_auction_listing_list_macros"
+                name="listing_grid"
+                arg-listing="{$listing}"
+              />
+            </xf:foreach>
+          </div>
+          <xf:elseif is="$filters" />
+          <div class="block-row">
+            {{ phrase('fs_auction_there_no_auction_matching_your_filters') }}
+          </div>
+          <xf:else />
+          <div class="block-row">
+            {{ phrase('fs_auction_no_auctions_have_been_created_yet') }}
+          </div>
+        </xf:if>
+      </xf:if>
+      <div class="block-footer">
+        <span class="block-footer-counter"
+          >{{ display_totals($totalReturn, $total) }}</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="block-outer block-outer--after">
+    <xf:pagenav
+      page="{$page}"
+      perpage="{$perPage}"
+      total="{$total}"
+      link="auction"
+      params="{$filters}"
+      wrapperclass="block-outer-main"
+    />
+    <xf:showignored wrapperclass="block-outer-opposite" />
+  </div>
+</div>
+
+<xf:page option="sideNavTitle">{{ phrase('categories') }}</xf:page>
+
+<xf:sidenav>
+  <xf:macro
+    template="fs_auction_category_list_macros"
+    name="simple_list_block"
+    arg-categoryTree="{$categoryTree}"
+  />
+
+  <xf:macro
+    template="fs_auction_list_statistics_macros"
+    name="fs_auction_stats"
+    arg-stats="{$stats}"
+  />
+</xf:sidenav>
+
+<!-- Filter Bar Macro Start -->
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('auction/refine-search', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>

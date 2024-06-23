@@ -1,0 +1,11 @@
+{
+    "route_type": "public",
+    "route_prefix": "opt-reply",
+    "sub_name": "",
+    "format": ":int<thread_id>/:page",
+    "build_class": "",
+    "build_method": "",
+    "controller": "FS\\DropdownReply:dropdownReply",
+    "context": "",
+    "action_prefix": ""
+}

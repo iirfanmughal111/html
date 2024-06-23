@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_unhide_user_ids" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="fs_hide_usernames" display_order="1"/>
+  </option>
+</options>

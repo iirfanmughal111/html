@@ -1,0 +1,2068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="display_order_macros" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro name="row"
+	arg-name="display_order"
+	arg-value=""
+	arg-step="1"
+	arg-label="{{ phrase('display_order') }}"
+	arg-hint=""
+	arg-readOnly=""
+	arg-explain="">
+
+	<xf:numberboxrow name="{$name}" value="{$value}" min="0" step="{$step}"
+		label="{$label}"
+		hint="{$hint}"
+		explain="{$explain}"
+		readonly="{{ $readOnly ? 'readonly' : '' }}" />
+</xf:macro>
+
+<xf:macro name="input"
+	arg-name="display_order"
+	arg-value=""
+	arg-step="1"
+	arg-readOnly="">
+
+	<xf:numberbox name="{$name}" value="{$value}" min="0" step="{$step}" readonly="{{ $readOnly ? 'readonly' : '' }}" />
+</xf:macro>]]></template>
+  <template type="public" title="fs_forum_gorups_css_helper.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[.m-groupFlexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+// helper display flex.
+.h-dFlex {
+  .groups-displayFlex();
+}
+
+.h-dFlex--wrap {
+  flex-wrap: wrap;
+}
+
+.groups-displayFlex() {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+}
+
+// loaders
+/**
+ * Lines
+ */
+@-webkit-keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1); }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4); }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1); } }
+@keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1); }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4); }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1); } }
+
+.loader--line-scale {
+  > div {
+    background-color: #fff;
+    width: 4px;
+    height: 35px;
+    border-radius: 2px;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+
+    &:nth-child(1) {
+      -webkit-animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+      animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    }
+
+    &:nth-child(2) {
+      -webkit-animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+      animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    }
+
+    &:nth-child(3) {
+      -webkit-animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+      animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+    &:nth-child(4) {
+      -webkit-animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+      animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+
+    &:nth-child(5) {
+      -webkit-animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+      animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08); }
+  }
+}]]></template>
+  <template type="public" title="fs_forum_gorups_grid_card.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ include('fs_forum_gorups_css_helper.less') }}
+
+.gridCard {
+  flex: 0 0 33.33%;
+  padding: @xf-paddingMedium;
+  min-width: 33.33%;
+  align-self: stretch;
+  position: relative;
+  .m-transition();
+
+  .fa {
+    margin-right: 4px;
+  }
+
+  &.is-mod-selected {
+    opacity: 0.5;
+  }
+
+  .groupCover--wrapper {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+      .m-dropShadow();
+    }
+  }
+}
+
+// header
+.gridCard--header {
+  display: flex;
+  background-color: @xf-contentHighlightBg;
+  border-bottom: 1px solid @xf-borderColorLight;
+
+  .gridCard--header--avatar {
+    >* {
+      .m-avatarSize(60px);
+    }
+  }
+
+  .gridCard--header--main {
+    flex: 1;
+    margin-left: @xf-paddingMedium;
+    margin-right: @xf-paddingMedium;
+  }
+
+  .gridCard--header--actions {
+    min-width: 50px;
+  }
+}
+
+.gridCard--container {
+  height: 100%;
+  background: @xf-contentBg;
+  border-radius: @xf-borderRadiusSmall;
+  display: flex;
+  flex-direction: column;
+
+  .m-dropShadow();
+
+  .gridCard--cover {
+    height: 100px;
+    overflow: hidden;
+
+    .m-borderTopRadius(@xf-borderRadiusSmall);
+
+    >* {
+      height: 100px;
+      font-size: 30px;
+    }
+  }
+
+  .groupAvatar--img {
+    width: 100%;
+    height: 100%;
+  }
+
+  > * {
+    &:not(.gridCard--cover) {
+      padding: @xf-paddingMedium;
+    }
+  }
+}
+
+.gridCard--body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.gridCard--footer {
+  border-top: 1px solid @xf-borderColorLight;
+  display: flex;
+  flex-direction: row;
+
+  .groupItem--members {
+    flex: 1;
+    margin: 0 !important;
+    overflow-x: hidden;
+    .groups-displayFlex();
+
+    li {
+      + li {
+        margin-left: -10px;
+      }
+
+      .avatar {
+        border:2px solid #fff;
+      }
+    }
+  }
+
+  .button--groupJoin {
+    align-self: flex-start;
+  }
+}
+
+.gridCard--header--title {
+  font-weight: normal;
+  font-size: @xf-fontSizeLarge;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  .badge {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: @xf-paddingMedium;
+  }
+}
+
+.groupItem--meta {
+  font-size: @xf-fontSizeSmaller;
+}
+
+.gridCardFlexColLoop(5);
+
+// 900px
+@media(max-width: @xf-responsiveWide) {
+  .gridCardList--flex--3-col {
+    .gridCard {
+      flex-basis: 50%;
+      min-width: 50%;
+    }
+  }
+}
+
+// 650px
+@media(max-width: @xf-responsiveMedium) {
+  .gridCardList--flex--3-col,
+  .gridCardList--flex--2-col {
+    .gridCard {
+      flex-basis: 100%;
+      min-width: 100%;
+    }
+  }
+}
+// 480px
+@media(max-width: @xf-responsiveNarrow) {
+  .gridCardList--flex{
+    .gridCard {
+      flex-basis: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+// Auto generate grid card columns class
+.gridCardFlexColLoop(@n) when (@n > 0) {
+  .gridCardList--flex--@{n}-col {
+    .gridCard {
+      flex-basis: (100% / @n);
+      min-width: (100% / @n);
+    }
+  }
+
+  .gridCardFlexColLoop((@n - 1));
+}]]></template>
+  <template type="public" title="fs_forum_gorups_group_list.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ include('fs_forum_gorups_css_helper.less') }}
+
+.group--counterList {
+  
+  .groups-displayFlex();
+}
+
+.groupListBlock {
+  .groupList {
+    margin-right: -@xf-paddingMedium + 1;
+    margin-left: -@xf-paddingMedium + 1;
+    flex-wrap: wrap;
+	  padding:0px 5px;
+  }
+
+  &.groupListBlock--empty {
+    .block-container {
+        margin-bottom: @xf-paddingMedium;
+      }
+  }
+
+  .block-filterBar {
+    border-bottom-width: 0;
+  }
+}
+
+.groupCover--wrapper {
+  position: relative;
+
+  .groupCoverFrame {
+    height: 100%;
+    font-size: 30px;
+  }
+
+  .groupCover--inlineMod {
+    .m-dropShadow();
+    background: rgba(0,0,0,.6);
+    color: #ecf0ff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: @xf-paddingMedium;
+    left: @xf-paddingMedium;
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+    padding-top: 2px;
+    padding-left: 2px;
+    text-align: center;
+  }
+
+  .iconic--noLabel {
+    &:hover {
+      cursor: pointer;
+      input {
+        + i:before {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+.widget-groups {
+  .contentRow-figure {
+    .groupAvatar {
+      .m-avatarSize(24px);
+    }
+  }
+}
+
+// 650px
+@media(max-width: @xf-responsiveMedium) {
+  .groupListBlock {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+
+    .groupList {
+      margin-right: -@xf-paddingLarge;
+      margin-left: -@xf-paddingLarge;
+
+      .gridCard {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .gridCard--container {
+      border-radius: 0;
+      .gridCard--cover {
+        .m-borderTopRadius(0);
+      }
+    }
+  }
+}
+// 480px
+@media(max-width: @xf-responsiveNarrow) {
+}]]></template>
+  <template type="public" title="fs_forum_gorups_style.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ include('fs_forum_gorups_css_helper.less') }}
+
+// declare variables.
+@groupNavItemHeight: 42px;
+
+.groupViewNav--item {
+  &:hover, &.is-active {
+    background-color: @xf-paletteColor1;
+    a {
+      text-decoration: none;
+      .xf-link();
+    }
+  }
+}
+
+.groupViewNav {
+  .groupViewNav--item {
+    a {
+      padding: @xf-paddingLarge;
+      display: flex;
+
+      .groupViewNav--itemText {
+        flex: 1;
+      }
+    }
+
+    &:last-child {
+      a {
+        .m-borderBottomRadius(@xf-borderRadiusMedium - 1);
+      }
+    }
+
+    &.is-active {
+      a {
+        border-left: 2px solid @xf-borderColorFeature;
+      }
+    }
+
+    .badge {
+      align-self: center;
+    }
+  }
+}
+
+.groupCover-header {
+  .groupCover {
+    .m-borderTopRadius(@xf-borderRadiusSmall + 1);
+  }
+}
+
+.groupCoverFrame {
+  width: 100%;
+  height: 205px;
+  overflow: hidden;
+  position: relative;
+
+  .m-transition(height, 200ms, ease-in);
+
+  &.groupCoverFrame--setup {
+    background-color: @xf-contentAccentBg;
+    .loader--line-scale {
+      > div {
+        background-color: @xf-textColorAccentContent;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .groupCover--img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .m-transition(top);
+  }
+
+  &.groupCoverFrame--setup {
+    .groupCover--img {
+      .m-transition(none);
+    }
+  }
+
+  .groupCover--guide {
+    position: absolute;
+    font-size: @xf-fontSizeSmall;
+    padding: @xf-paddingMedium @xf-paddingLarge;
+    background-color: rgba(0,0,0,.4);
+    border-radius: @xf-borderRadiusMedium;
+    color: @xf-paletteNeutral1;
+
+    .m-dropShadow();
+
+    &:before {
+      .m-faBase();
+      .m-faContent("\f047");
+      margin-right: @xf-paddingSmall;
+    }
+  }
+
+  // fixed flash text while cover editor
+  .cropControls {
+    display: none;
+  }
+}
+
+.timePicker--wrap {
+  display: block;
+  padding: @xf-paddingLarge;
+  box-sizing: border-box;
+
+  .timePicker--wrap--text {
+    font-size: @xf-fontSizeNormal;
+  }
+}
+
+.flex--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex--grow {
+  flex-grow: 1;
+}
+
+// Group Prevew Customized
+.tooltip--preview {
+  .tooltip-content {
+    .tooltip-expanded {
+      max-height: 255px;
+      margin: -@xf-paddingMedium;
+
+      .memberTooltip-avatar {
+        padding-right: 10px;
+      }
+
+      .groupCoverFrame {
+        height: 90px;
+        font-size: 25px;
+      }
+
+      .memberTooltip-actions {
+        display: flex;
+      }
+    }
+
+    .memberTooltip-name {
+      font-size: @xf-fontSizeLarge;
+    }
+
+    .groupAvatar {
+      .m-avatarSize(50px);
+    }
+  }
+}
+
+.groupCoverFrame,
+.groupAvatar--default {
+  .m-groupFlexCenter();
+
+  font-size: 50px;
+}
+
+// Group avatar default (text dynamic)
+.groupAvatar {
+  display: flex;
+  border-radius: @xf-fs_avatarBorderRadius;
+  overflow: hidden;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// SIDEBAR GROUP AVATAR
+.contentRow-figure {
+  .groupAvatar {
+    .m-avatarSize(24px);
+    border-radius: @xf-fs_avatarBorderRadius;
+  }
+}
+
+.groupAvatar--default {
+  text-decoration: none;
+}
+
+.p-body-sideNav {
+  .groupAvatar {
+    .m-avatarSize(@xf-sidebarWidth);
+  }
+}
+
+.p-body-sideNavInner {
+  &.is-active,
+  &.is-transitioning {
+    .groupAvatar-block {
+      .groupAvatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.groupHeader-navList {
+  .groupViewNav--item, .groupHeader-navList--user {
+    padding: @xf-paddingMedium;
+  }
+
+  .hScroller-action {
+    .m-hScrollerActionColorVariation(@xf-contentHighlightBg, @xf-textColorFeature, @xf-textColorEmphasized);
+  }
+
+  .groupViewNav--item {
+    height: @groupNavItemHeight;
+    box-sizing: border-box;
+    line-height: (@groupNavItemHeight + @xf-paddingMedium * 2)/2;
+    padding-left: @xf-paddingLargest;
+    padding-right: @xf-paddingLargest;
+
+    &.is-active {
+      border-bottom: 2px solid @xf-borderColorFeature;
+      background-color: @xf-paletteColor1;
+
+      a {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .groupHeader-navList--user {
+    min-width: 200px;
+    justify-content: flex-end;
+  }
+}
+
+// template: tl_groups_bb_code_group.html
+.groupBbCode--wrapper {
+  max-width: 320px;
+
+  .listInline {
+    margin: 0 !important;
+  }
+}
+
+.groupMembers {
+  .contentRow {
+    .avatar {
+      .m-avatarSize(66px);
+    }
+  }
+}
+
+// 900px
+@media (min-width: @xf-responsiveWide) {
+  .groupHeader-navList {
+    .hScroller {
+      display: none !important;
+    }
+
+    .groupHeader-navList--user {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// 900px
+@media (max-width: @xf-responsiveWide) {
+  .groupHeader-navList {
+    .hScroller {
+      display: block !important;
+    }
+  }
+
+  .groupCover-header {
+    position: relative;
+    .groupCover {
+      .m-borderTopRadius(0);
+    }
+
+    .groupHeader-navList--user {
+      position: absolute;
+      bottom: @groupNavItemHeight;
+      right: 0;
+
+      .button--groupJoin,
+      .button--groupAlerts {
+        display: none;
+      }
+
+      .button {
+        &.menuTrigger {
+          border: 1px solid @xf-borderColor;
+          border-top-left-radius: @xf-borderRadiusMedium !important;
+          border-bottom-left-radius: @xf-borderRadiusMedium !important;
+        }
+      }
+    }
+  }
+}
+
+.tooltip-group--inner {
+  .memberTooltip-avatar {
+    width: 60px;
+  }
+}
+
+.groupBadge {
+  display: flex;
+  align-items: center;
+  padding: @xf-paddingMedium;
+  background-color: @xf-inlineModHighlightColor;
+  border-radius: @xf-borderRadiusMedium;
+
+  &.has-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .groupBadge-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    border-radius: @xf-borderRadiusMedium;
+  }
+
+  .groupAvatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    z-index: 1;
+  }
+
+  .groupBadge-name {
+    margin-left: @xf-paddingMedium;
+    z-index: 1;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: ~"calc(100% - 28px)";
+    white-space: nowrap;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// fs-forum-groups_media_album_add_chooser.html
+.linkAlbums-fields {
+  .input {
+    + .input {
+      margin-top: @xf-paddingLarge;
+    }
+  }
+}]]></template>
+  <template type="public" title="fs_forum_groups_form_upload" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{$fieldLabel}</xf:title>
+
+<xf:form action="{$formAction}" ajax="true" upload="true" class="block">
+    <div class="block-container">
+        <div class="block-body">
+            <xf:uploadrow name="file"
+                          label="{$fieldLabel}"
+                          explain="{{ phrase('it_is_recommended_that_you_use_image_that_is_at_least_x_pixels', {
+                                'width': $baseWidth,
+                                'height': $baseHeight
+                          }) }}" />
+
+            <xf:if is="$canDelete">
+                <xf:checkboxrow>
+                    <xf:option name="delete">{{ phrase('fs_forum_gorups_delete_existing_image') }}</xf:option>
+                </xf:checkboxrow>
+            </xf:if>
+        </div>
+
+        <xf:submitrow submit="{{ phrase('upload') }}" rowtype="simple" icon="upload" />
+    </div>
+</xf:form>]]></template>
+  <template type="public" title="fs_forum_groups_forum_view_list" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro
+  name="fs_forum_groups_forum_view_list_macro"
+  arg-subForum="!"
+>	  			
+	  <div class="gridCard js-inlineModContainer visible public" id="{{ unique_id() }}">
+		  
+        <div class="gridCard--container">
+			
+			<!-- Cover -->
+			
+			<div class="gridCard--cover">
+			
+				<div class="groupCover--wrapper">
+                
+        <div class="groupCover groupCoverFrame groupCover--default" style="background-color:#{{$subForum.getRandomColor()}};color:#70dbb8">
+            <a href="{{ link('forums', $subForum) }}" style="color:#fff">
+                <xf:if is="$subForum.CoverAttachment">
+                <img data-crop="{$subForum->getCoverCropData()|json}"
+                     class="groupCover--img groupCover--lazy" data-xf-init="fs-forum-groups-cover-setup" data-force-height="100"
+                     {{ ($subForum.getImageAttributes()) ? (' ' . $subForum.getImageAttributes()) : '' }}/>
+            <xf:else />
+                <span class="groupCover--text">{{ snippet($subForum.title, 25) }}</span>
+            </xf:if>
+            </a>
+        </div>
+                   
+                
+
+            </div>
+			
+			</div>
+			
+			<!-- Cover -->
+			
+			
+			<!-- Header -->
+			
+	  
+	   <div class="gridCard--header">
+		   
+			<!-- Avatar -->
+		   
+		   <div class="gridCard--header--avatar">
+			   
+           <xf:if is="$subForum.AvatarAttachment">
+			   <a href="{{ link('forums', $subForum) }}"
+       class="groupAvatar groupAvatar--link groupAvatar--default" style="background-color:#e08585;color:#8f2424">
+			<img src="{{ $subForum.AvatarAttachment.thumbnail_url }}"
+                 class="groupAvatar--img bbImage" width="100" height="100"
+                 data-width="{$subForum.AvatarAttachment.width}"
+                 data-height="{$subForum.AvatarAttachment.height}"
+                 alt="{$subForum.title}"/>
+    </a>		   
+			   
+			<xf:else />
+			   <xf:comment>
+            <span class="groupAvatar--text groupAvatar--dynamic">{$xf.visitor.username}</span>
+				   </xf:comment>
+			   			  <xf:avatar user="$xf.visitor" size="l" />
+			</xf:if>
+		   </div>
+		   
+			<!-- Avatar -->
+		   
+			<!-- Header Main -->
+              
+                <div class="gridCard--header--main">
+                    
+		<xf:trim>
+        <a href="{{ link('forums', $subForum) }}" class="gridCard--header--title"
+           data-tp-primary="on">
+            <span>{$subForum.title}</span>
+        </a>
+    </xf:trim>					
+					
+					
+		<xf:trim>
+        <ul class="listInline group--counterList u-muted">
+            <li class="groupItem-stat groupItem-stat--viewCount" style="margin-right:10px;">
+                <xf:fa icon="fa-eye" />
+                {$subForum.getViewCounts()}
+            </li>
+  
+            <xf:if is="$xf.options.tl_groups_enableForums">
+                <li class="groupItem-stat groupItem-stat--discussionCount">
+                    <xf:fa icon="fa-comment" />
+                    {$subForum.Forum.message_count}
+                </li>
+            </xf:if>
+        </ul>
+    </xf:trim>
+						
+                </div>
+		   
+			<!-- Header Main -->
+		   
+		
+		   
+            </div>
+			
+			<!-- Header -->
+			
+	  <xf:if contentcheck="true">
+                <div class="gridCard--body">
+                    <xf:contentcheck>
+					
+						<div class="groupList--description u-muted">{$subForum.description}</div>
+						
+					</xf:contentcheck>
+                </div>
+            </xf:if>
+			
+		  </div>
+		  
+	  </div>
+
+</xf:macro>
+
+    <!--Sub Forums List View--->]]></template>
+  <template type="public" title="fs_forum_groups_forum_view_single" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro
+  name="fs_forum_groups_forum_view_single_macro"
+  arg-subForums="!"
+>
+
+<xf:css src="fs_forum_gorups_style.less" />
+	
+<xf:sidenav>
+	
+	<!-- Avatar -->
+	
+	<div class="block groupAvatar-block">
+           <xf:if is="$subForums.AvatarAttachment">
+        <a href="{{ link('forumGroups', $subForums) }}"
+       class="groupAvatar groupAvatar--link groupAvatar--default" style="background-color:#e08585;color:#8f2424">
+			<img src="{{ $subForums.AvatarAttachment.thumbnail_url }}"
+                 class="groupAvatar--img bbImage" width="250" height="250"
+                 data-width="{$subForums.AvatarAttachment.width}"
+                 data-height="{$subForums.AvatarAttachment.height}"
+                 alt="{$subForums.title}"/>
+    </a>
+			   
+			<xf:else />
+			   <xf:comment>
+            <span class="groupAvatar--text groupAvatar--dynamic">{$xf.visitor.username}</span>
+			   </xf:comment>
+			  <xf:avatar user="$xf.visitor" size="l" />
+			</xf:if>
+    </div>
+	
+	<!-- Avatar -->
+
+</xf:sidenav>
+
+<div class="groupWrapper groupWrapper-{$subForums.node_id}">
+
+
+	<!-- Cover Header -->
+
+	<div class="block">
+        <div class="block-container groupCover-header">
+            <div class="block-body">
+               <div class="groupCover groupCoverFrame groupCover--default" style="background-color:#{{$subForums.getRandomColor()}};color:#fff">
+        <a href="{{ link('forumGroups', $subForums) }}" style="color:#fff">
+                <xf:if is="$subForums.CoverAttachment">
+                <img data-crop="{$subForums->getCoverCropData()|json}"
+                     class="groupCover--img groupCover--lazy" data-xf-init="fs-forum-groups-cover-setup"
+                     {{ ($subForums.getImageAttributes()) ? (' ' . $subForums.getImageAttributes()) : '' }}/>
+            <xf:else />
+                <span class="groupCover--text">{{ snippet($subForums.title, 25) }}</span>
+            </xf:if>
+        </a>
+    </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- Cover Header -->
+	
+</div>
+</xf:macro>]]></template>
+  <template type="public" title="fs_forum_groups_index" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title page="{$page}">{{ phrase('fs_forum_groups') }}</xf:title>
+
+<xf:page
+  option="searchConstraints"
+  value="{{ {
+	phrase('fs_auction_auctions'): {'search_type': 'fs_auction_auctions'}
+} }}"
+/>
+
+<xf:pageaction if="$xf.visitor.user_id">
+    <xf:button
+    href="{{ link('forumGroups/add') }}"
+    class="button--cta"
+    icon="write"
+    >{{ phrase('fs_forum_groups_add_sub_forum') }}</xf:button
+  >
+</xf:pageaction>
+  
+
+<div
+  class="block"
+  data-xf-init="{{ $canInlineMod ? 'inline-mod' : '' }}"
+  data-type="fs_forum_groups"
+  data-href="{{ link('inline-mod') }}"
+>
+  <div class="block-outer">
+
+  </div>
+  <div class="block-container">
+
+    <!--Listing View--->
+    <div class="block-body">
+		
+    <!--Sub Forums List View--->
+		<xf:if is="count($subForums) != 0">
+            
+			    <xf:set var="$dummyArray" value="{{range(0,3)}}" />
+		
+		
+			 	<div class="block groupListBlock" data-xf-init="inline-mod"
+         data-type="tl_group"
+         data-href="{{ link('inline-mod') }}">
+		
+		<div class="groupList h-dFlex h-dFlex--wrap gridCardList--flex--{$xf.options.fs_forum_gorups_per_row}-col" data-xf-init="tl_groups_list">
+		
+		 <xf:foreach loop="{$subForums}" value="$value">
+
+    				<xf:macro
+					name="forum_groups_sub_forum_list"
+					arg-subForum="{$value}"
+				  />
+			 
+			 
+  </xf:foreach>
+					</div>
+		</div>
+			</xf:if>
+		
+	<xf:css src="fs_forum_gorups_group_list.less" />
+    <xf:css src="fs_forum_gorups_style.less" />
+	<xf:css src="fs_forum_gorups_grid_card.less" />
+		
+    <!--Sub Forums List View--->
+
+      <div class="block-footer">
+        <span class="block-footer-counter"
+          >{{ display_totals($totalReturn, $total) }}</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="block-outer block-outer--after">
+
+    <xf:showignored wrapperclass="block-outer-opposite" />
+  </div>
+</div>
+
+<xf:page option="sideNavTitle">{{ phrase('fs_forum_groups_side_community') }}</xf:page>
+
+<!-- Filter Bar Macro Start -->
+
+    <!--Sub Forums List View--->
+
+<xf:macro
+  name="forum_groups_sub_forum_list"
+  arg-subForum="!"
+>	  			
+	  <div class="gridCard js-inlineModContainer visible public" id="{{ unique_id() }}">
+		  
+        <div class="gridCard--container">
+			
+			<!-- Cover -->
+			
+			<div class="gridCard--cover">
+			
+				<div class="groupCover--wrapper">
+                
+        <div class="groupCover groupCoverFrame groupCover--default" style="background-color:#{{$subForum.getRandomColor()}};color:#70dbb8">
+            <a href="{{ link('forumGroups', $subForum) }}" style="color:#fff">
+                <xf:if is="$subForum.CoverAttachment">
+                <img data-crop="{$subForum->getCoverCropData()|json}"
+                     class="groupCover--img groupCover--lazy" data-xf-init="fs-forum-groups-cover-setup" data-force-height="100"
+                     {{ ($subForum.getImageAttributes()) ? (' ' . $subForum.getImageAttributes()) : '' }}/>
+            <xf:else />
+                <span class="groupCover--text">{{ snippet($subForum.title, 25) }}</span>
+            </xf:if>
+            </a>
+        </div>
+                   
+                
+
+            </div>
+			
+			</div>
+			
+			<!-- Cover -->
+			
+			
+			<!-- Header -->
+			
+	  
+	   <div class="gridCard--header">
+		   
+			<!-- Avatar -->
+		   
+		   <div class="gridCard--header--avatar">
+           <xf:if is="$subForum.AvatarAttachment">
+			   <a href="{{ link('forumGroups', $subForum) }}"
+       class="groupAvatar groupAvatar--link groupAvatar--default" style="background-color:#e08585;color:#8f2424">
+			<img src="{{ $subForum.AvatarAttachment.thumbnail_url }}"
+                 class="groupAvatar--img bbImage" width="100" height="100"
+                 data-width="{$subForum.AvatarAttachment.width}"
+                 data-height="{$subForum.AvatarAttachment.height}"
+                 alt="{$subForum.title}"/>
+    </a>		   
+			   
+			<xf:else />
+			   <xf:comment>
+            <span class="groupAvatar--text groupAvatar--dynamic">{$xf.visitor.username}</span>
+				   </xf:comment>
+			   			  <xf:avatar user="$subForum.User" size="l" />
+			</xf:if>
+		   </div>
+		   
+			<!-- Avatar -->
+		   
+			<!-- Header Main -->
+              
+                <div class="gridCard--header--main">
+                    
+		<xf:trim>
+        <a href="{{ link('forumGroups', $subForum) }}" class="gridCard--header--title"
+           data-tp-primary="on">
+            <span>{$subForum.title}</span>
+        </a>
+    </xf:trim>					
+					
+					
+		<xf:trim>
+        <ul class="listInline group--counterList u-muted">
+            <li class="groupItem-stat groupItem-stat--viewCount" style="margin-right:10px;">
+                <xf:fa icon="fa-eye" />
+                {$subForum.getViewCounts()}
+            </li>
+      
+            <xf:if is="$xf.options.tl_groups_enableForums">
+                <li class="groupItem-stat groupItem-stat--discussionCount">
+                    <xf:fa icon="fa-comment" />
+                    {$subForum.Forum.message_count}
+                </li>
+            </xf:if>
+        </ul>
+    </xf:trim>
+						
+                </div>
+		   
+			<!-- Header Main -->
+		   
+			<!-- Action -->
+		   
+		   <div class="gridCard--header--actions">
+		   
+			<div class="buttonGroup-buttonWrapper">
+                <xf:button class="button--link menuTrigger"
+                       data-xf-click="menu"
+                       aria-expanded="false"
+                       aria-haspopup="true" title="{{ phrase('more_options')|for_attr }}"><xf:fa icon="fa-cog" /></xf:button>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+                    <div class="menu-content">
+                                <a href="{{ link('forumGroups/add-moderator', $subForum) }}"
+                                       class="menu-linkRow"
+                                       data-xf-click="overlay">
+                                {{  phrase('fs_forum_groups_moderator')  }}
+                            </a>
+                           
+                            <hr class="menu-separator" />
+                    </div>
+                </div>
+            </div>   
+			   
+		   </div>
+		   
+			<!-- Action -->
+		   
+            </div>
+			
+			<!-- Header -->
+			
+	  <xf:if contentcheck="true">
+                <div class="gridCard--body">
+                    <xf:contentcheck>
+					
+						<div class="groupList--description u-muted">{$subForum.description}</div>
+						
+					</xf:contentcheck>
+                </div>
+            </xf:if>
+			
+		  </div>
+		  
+	  </div>
+
+</xf:macro>
+
+    <!--Sub Forums List View--->]]></template>
+  <template type="public" title="fs_forum_groups_moderator_list" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('moderators') }}</xf:title>
+
+<xf:pageaction>
+	<xf:button href="{{ link('forumGroups/add-moderator', $forumGroup) }}" icon="add">{{ phrase('add_moderator') }}</xf:button>
+</xf:pageaction>
+
+<xf:if contentcheck="true">
+	<xf:contentcheck>
+
+	<xf:comment>		
+	<xf:if is="$superModerators is not empty">
+		<div class="block">
+			<div class="block-container">
+				<h2 class="block-header">{{ phrase('super_moderators') }}</h2>
+				<div class="block-body">
+					<xf:datalist>
+						<xf:foreach loop="$superModerators" value="$superMod">
+							<xf:datarow>
+								<xf:cell class="dataList-cell--min dataList-cell--image dataList-cell--imageSmall"
+									href="{{ link('forumGroups/super/edit', $superMod) }}">
+									<xf:avatar user="$superMod.User" size="s" href="" />
+								</xf:cell>
+								<xf:main href="{{ link('forumGroups/super/edit', $superMod) }}"
+									label="{$superMod.User.username}" />
+								<xf:action href="{{ link('users/edit', $superMod.User) }}">{{ phrase('user_info') }}</xf:action>
+								<xf:delete href="{{ link('forumGroups/super/delete', $superMod) }}" overlay="true" />
+							</xf:datarow>
+						</xf:foreach>
+					</xf:datalist>
+				</div>
+			</div>
+		</div>
+	</xf:if>
+	</xf:comment>
+
+	<xf:if is="$contentModerators is not empty">
+		<div class="block">
+			<div class="block-outer">
+				<div class="block-outer-main">
+					
+					<xf:comment>
+					<a class="button button--link menuTrigger"
+						data-xf-click="menu"
+						role="button"
+						tabindex="0"
+						aria-expanded="false"
+						aria-haspopup="true">{{ phrase('filter:') }} {{ $userIdFilter ? {$users.{$userIdFilter}.username} : phrase('(all)') }}</a>
+					</xf:comment>
+					
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h3 class="menu-header">{{ phrase('content_moderators') }}</h3>
+							<a href="{{ link('forumGroups') }}" class="menu-linkRow {{ !$userIdFilter ? 'is-selected' : '' }}">{{ phrase('(all)') }}</a>
+							<xf:foreach loop="$users" value="$user">
+								<a href="{{ link('forumGroups', null, {'user_id': $user.user_id}) }}"
+									class="menu-linkRow {{ ($userIdFilter && $userIdFilter == $user.user_id) ? 'is-selected' : '' }}">
+									<span>{$user.username}</span>
+								</a>
+							</xf:foreach>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-container">
+				<h2 class="block-header">{{ phrase('content_moderators') }}</h2>
+				<div class="block-body">
+					<xf:datalist>
+						<xf:foreach loop="$users" key="$userId" value="$user">
+							<xf:if is="{$contentModerators.{$userId}}">
+								<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+									<xf:cell colspan="2">{$user.username}</xf:cell>
+								</xf:datarow>
+								<tbody class="js-moderatorInsert-{$userId}">
+									<xf:foreach loop="{$contentModerators.{$userId}}" value="$contentMod">
+										<xf:datarow>
+											<xf:main href="{{ link('forumGroups/content/edit', $contentMod) }}"
+												label="{$contentMod.getContentTitle()}" />
+											<xf:delete href="{{ link('forumGroups/content/delete', $contentMod) }}" overlay="true" />
+										</xf:datarow>
+									</xf:foreach>
+									<xf:if is="$displayLimit AND {$contentModeratorTotals.{$userId}} > $displayLimit">
+										<xf:datarow>
+											<xf:cell colspan="2" class="dataList-cell--link">
+												<a href="{{ link('forumGroups', null, {'user_id': $userId}) }}" data-xf-click="inserter" data-replace=".js-moderatorInsert-{$userId}" data-animate-replace="false">{{ phrase('ellipsis_and_x_more', {'count': ({$contentModeratorTotals.{$userId}} - $displayLimit)|number}) }}</a>
+											</xf:cell>
+										</xf:datarow>
+									</xf:if>
+								</tbody>
+							</xf:if>
+						</xf:foreach>
+					</xf:datalist>
+				</div>
+			</div>
+		</div>
+	</xf:if>
+
+	</xf:contentcheck>
+<xf:else />
+	<div class="blockMessage">{{ phrase('there_currently_no_moderators_use_link_create') }}</div>
+</xf:if>]]></template>
+  <template type="public" title="fs_forum_groups_sub_forum_add_edit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:if is="$forum.isInsert()">
+	<xf:title>{{ phrase('add_forum') }}</xf:title>
+<xf:else />
+	<xf:title>{{ phrase('edit_forum:') }} {$node.title}</xf:title>
+</xf:if>
+
+<xf:pageaction if="$forum.isUpdate()">
+	<div class="buttonGroup">
+		<xf:if is="$canChangeForumType">
+			<xf:button href="{{ link('forumGroups/change-type', $node) }}" overlay="true">{{ phrase('change_type') }}</xf:button>
+		</xf:if>
+		<xf:button href="{{ link('forumGroups/delete', $node) }}" icon="delete" overlay="true" />
+	</div>
+</xf:pageaction>
+
+<xf:form action="{{ link('forumGroups/save', $node) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:macro template="node_edit_macros" name="title" arg-node="{$node}" />
+			<xf:macro template="node_edit_macros" name="description" arg-node="{$node}" />
+			
+			<xf:textboxrow name="replace_route" value="{$routeFilter.replace_route_readable}"
+				maxlength="{{ max_length($routeFilter, 'replace_route') }}"
+				label="{{ phrase('replace_with') }}"
+				explain="{{ phrase('route_filter_find_replace_fields_support_wildcards') }}"
+				dir="ltr" 
+				required="required" hint="{{ phrase('required') }}"/>
+			
+			
+			 <xf:uploadrow name="avatarFile"
+                          label="{{ phrase('fs_forum_group_avatar') }}"
+                          explain="{{ phrase('it_is_recommended_that_you_use_image_that_is_at_least_x_pixels', {
+                                'width': $avatarWidth,
+                                'height': $avatarHeight
+                          }) }}" />
+			
+			<xf:uploadrow name="coverFile"
+                          label="{{ phrase('fs_forum_group_cover') }}"
+                          explain="{{ phrase('it_is_recommended_that_you_use_image_that_is_at_least_x_pixels', {
+                                'width': $coverWidth,
+                                'height': $coverHeight
+                          }) }}" />
+				
+			
+			<xf:textboxrow name="room_name"
+						   value="{$room.room_name}"
+						   label="{{ phrase('siropu_chat_room_name') }}"
+						   maxlength="{{ max_length($room, 'room_name') }}" />
+
+			<xf:textarearow name="room_description"
+							value="{$room.room_description}"
+							label="{{ phrase('siropu_chat_room_description') }}"
+							maxlength="{{ max_length($room, 'room_description') }}"
+							rows="3" />
+			
+			<xf:if is="$xf.visitor.canSetSiropuChatRoomUsers()">
+				<xf:tokeninputrow name="room_users"
+						   value="{{ array_values($room.room_users)|join(',') }}"
+						   label="{{ phrase('siropu_chat_room_users') }}"
+						   explain="{{ phrase('siropu_chat_room_users_explain') }}"
+							hint="{{ phrase('optional') }}"
+						   href="{{ link('members/find') }}" />
+			</xf:if>
+
+			<xf:if is="$xf.visitor.canPasswordProtectSiropuChatRooms()">
+				<xf:textboxrow name="room_password"
+							   value="{$room.room_password}"
+							   label="{{ phrase('siropu_chat_room_password') }}"
+							   explain="{{ phrase('siropu_chat_room_password_explain') }}"
+							   hint="{{ phrase('optional') }}"
+							   maxlength="{{ max_length($room, 'room_password') }}" />
+			</xf:if>
+
+			<xf:hiddenval name="forum_type_id">{$forumTypeId}</xf:hiddenval>
+
+			<hr class="formRowSep" />
+		</div>
+
+		<xf:submitrow icon="save" sticky="true" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_forum_groups_thread_list_macros" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro name="item"
+	arg-thread="!"
+	arg-forum=""
+	arg-forceRead="{{ false }}"
+	arg-showWatched="{{ true }}"
+	arg-allowInlineMod="{{ true }}"
+	arg-chooseName=""
+	arg-extraInfo=""
+	arg-allowEdit="{{ true }}">
+
+	<xf:css src="structured_list.less" />
+
+	<div class="structItem structItem--thread{{ $thread.prefix_id ? ' is-prefix' . $thread.prefix_id : '' }}{{ $thread.isIgnored() ? ' is-ignored' : '' }}{{ ($thread.isUnread() AND !$forceRead) ? ' is-unread' : '' }}{{ $thread.discussion_state == 'moderated' ? ' is-moderated' : '' }}{{ $thread.discussion_state == 'deleted' ? ' is-deleted' : '' }} js-inlineModContainer js-threadListItem-{$thread.thread_id}" data-author="{{ $thread.User.username ?: $thread.username }}">
+
+	<xf:extension name="icon_cell">
+		<div class="structItem-cell structItem-cell--icon">
+			<div class="structItem-iconContainer">
+				<xf:avatar user="$thread.User" size="s" defaultname="{$thread.username}" />
+				<xf:if is="$thread.getUserPostCount()">
+					<xf:avatar user="$xf.visitor" size="s"
+						href=""
+						class="avatar--separated structItem-secondaryIcon"
+						tabindex="0"
+						data-xf-init="tooltip"
+						data-trigger="auto"
+						title="{{ phrase('you_have_posted_x_messages_in_this_thread', {'count': $thread.getUserPostCount() }) }}" />
+				</xf:if>
+			</div>
+		</div>
+	</xf:extension>
+
+	<xf:extension name="main_cell">
+		<div class="structItem-cell structItem-cell--main" data-xf-init="touch-proxy">
+			<xf:if contentcheck="true">
+				<ul class="structItem-statuses">
+				<xf:contentcheck>
+				<xf:extension name="statuses">
+					<xf:if is="property('reactionSummaryOnLists') == 'status' && $thread.first_post_reactions">
+						<li><xf:reactions summary="true" reactions="{$thread.first_post_reactions}" /></li>
+					</xf:if>
+					<xf:extension name="before_status_state"></xf:extension>
+					<xf:if is="$thread.discussion_state == 'moderated'">
+						<li>
+							<xf:set var="$moderatedStatus">
+								<i class="structItem-status structItem-status--moderated" aria-hidden="true" title="{{ phrase('awaiting_approval')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('awaiting_approval') }}</span>
+							</xf:set>
+							<xf:if is="$thread.canCleanSpam()">
+								<a href="{{ link('spam-cleaner', $thread) }}" data-xf-click="overlay">{$moderatedStatus}</a>
+							<xf:else />
+								{$moderatedStatus}
+							</xf:if>
+						</li>
+					</xf:if>
+					<xf:if is="$thread.discussion_state == 'deleted'">
+						<li>
+							<i class="structItem-status structItem-status--deleted" aria-hidden="true" title="{{ phrase('deleted')|for_attr }}"></i>
+							<span class="u-srOnly">{{ phrase('deleted') }}</span>
+						</li>
+					</xf:if>
+					<xf:if is="!$thread.discussion_open">
+						<li>
+							<i class="structItem-status structItem-status--locked" aria-hidden="true" title="{{ phrase('locked')|for_attr }}"></i>
+							<span class="u-srOnly">{{ phrase('locked') }}</span>
+						</li>
+					</xf:if>
+
+					<xf:extension name="status_sticky">
+						<xf:if is="$thread.sticky">
+							<li>
+								<i class="structItem-status structItem-status--sticky" aria-hidden="true" title="{{ phrase('sticky')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('sticky') }}</span>
+							</li>
+						</xf:if>
+					</xf:extension>
+
+					<xf:extension name="before_status_watch"></xf:extension>
+					<xf:if is="{$showWatched} AND {$xf.visitor.user_id}">
+						<xf:if is="{$thread.Watch.{$xf.visitor.user_id}}">
+							<li>
+								<i class="structItem-status structItem-status--watched" aria-hidden="true" title="{{ phrase('thread_watched')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('thread_watched') }}</span>
+							</li>
+							<xf:elseif is="!$forum AND {$thread.Forum.Watch.{$xf.visitor.user_id}}" />
+							<li>
+								<i class="structItem-status structItem-status--watched" aria-hidden="true" title="{{ phrase('forum_watched')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('forum_watched') }}</span>
+							</li>
+						</xf:if>
+					</xf:if>
+
+					<xf:extension name="before_status_type"></xf:extension>
+					<xf:if is="$thread.discussion_type == 'redirect'">
+						<xf:extension name="thread_type_redirect">
+							<li>
+								<i class="structItem-status structItem-status--redirect" aria-hidden="true" title="{{ phrase('redirect')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('redirect') }}</span>
+							</li>
+						</xf:extension>
+					<xf:elseif is="$thread.discussion_type == 'question' && $thread.type_data.solution_post_id" />
+						<xf:extension name="thread_type_question_solved">
+							<li>
+								<i class="structItem-status structItem-status--solved" aria-hidden="true" title="{{ phrase('solved')|for_attr }}"></i>
+								<span class="u-srOnly">{{ phrase('solved') }}</span>
+							</li>
+						</xf:extension>
+					<xf:elseif is="!$forum || $forum.forum_type_id == 'discussion'" />
+						<xf:extension name="thread_type_icon">
+							<xf:if is="$thread.discussion_type != 'discussion'">
+								<xf:set var="$threadTypeHandler" value="{{ $thread.getTypeHandler() }}" />
+								<xf:if is="$threadTypeHandler.getTypeIconClass()">
+									<li>
+										<xf:set var="$threadTypePhrase" value="{{ $threadTypeHandler.getTypeTitle() }}" />
+										<xf:fa class="structItem-status" icon="{{ $threadTypeHandler.getTypeIconClass() }}" title="{$threadTypePhrase|for_attr}" />
+										<span class="u-srOnly">{$threadTypePhrase}</span>
+									</li>
+								</xf:if>
+							</xf:if>
+						</xf:extension>
+					</xf:if>
+				</xf:extension>
+				</xf:contentcheck>
+				</ul>
+			</xf:if>
+
+			<div class="structItem-title">
+				<xf:set var="$canPreview" value="{{ $thread.canPreview() }}" />
+				<xf:if is="$thread.prefix_id">
+					<xf:if is="$forum">
+						<a href="{{ link('forums', $forum, {'prefix_id': $thread.prefix_id}) }}" class="labelLink" rel="nofollow">{{ prefix('thread', $thread, 'html', '') }}</a>
+					<xf:else />
+						{{ prefix('thread', $thread, 'html', '') }}
+					</xf:if>
+				</xf:if>
+				<a href="{{ link('threads' . (($thread.isUnread() AND !$forceRead) ? '/unread' : ''), $thread) }}" class="" data-tp-primary="on" data-xf-init="{{ $canPreview ? 'preview-tooltip' : '' }}" data-preview-url="{{ $canPreview ? link('threads/preview', $thread) : '' }}">{$thread.title}</a>
+			</div>
+
+			<div class="structItem-minor">
+				<xf:if contentcheck="true">
+					<ul class="structItem-extraInfo">
+					<xf:contentcheck>
+						<xf:if is="property('reactionSummaryOnLists') == 'minor_opposite' && $thread.first_post_reactions">
+							<li><xf:reactions summary="true" reactions="{$thread.first_post_reactions}" /></li>
+						</xf:if>
+						<xf:if is="{$extraInfo}">
+							<li>{$extraInfo}</li>
+						<xf:elseif is="$allowEdit AND $thread.canEdit() AND $thread.canUseInlineModeration()" />
+							<xf:if is="!$allowInlineMod OR !$forum">
+								<xf:set var="$editParams" value="{{ {
+									'_xfNoInlineMod': !$allowInlineMod ? 1 : null,
+									 '_xfForumName': !$forum ? 1 : 0
+								} }}" />
+							<xf:else />
+								<xf:set var="$editParams" value="{{ [] }}" />
+							</xf:if>
+							<xf:if is="$thread.discussion_type != 'redirect'">
+								<li class="structItem-extraInfoMinor">
+									<a href="{{ link('threads/edit', $thread) }}" data-xf-click="overlay" data-cache="false" data-href="{{ link('threads/edit', $thread, $editParams) }}">
+										{{ phrase('edit') }}
+									</a>
+								</li>
+							</xf:if>
+						</xf:if>
+						<xf:if is="$chooseName">
+							<li><xf:checkbox standalone="true">
+								<xf:option name="{$chooseName}[]" value="{$thread.thread_id}" class="js-chooseItem" />
+							</xf:checkbox></li>
+						<xf:elseif is="$allowInlineMod AND $thread.canUseInlineModeration()" />
+							<li><xf:checkbox standalone="true">
+								<xf:option value="{$thread.thread_id}" class="js-inlineModToggle"
+									data-xf-init="tooltip"
+									title="{{ phrase('select_for_moderation') }}"
+									label="{{ phrase('select_for_moderation') }}"
+									hiddenlabel="true"
+								/>
+							</xf:checkbox></li>
+						</xf:if>
+					</xf:contentcheck>
+					</ul>
+				</xf:if>
+
+				<xf:if is="$thread.discussion_state == 'deleted'">
+					<xf:if is="{$extraInfo}"><span class="structItem-extraInfo">{$extraInfo}</span></xf:if>
+
+					<xf:macro template="deletion_macros" name="notice" arg-log="{$thread.DeletionLog}" />
+				<xf:else />
+					<ul class="structItem-parts">
+						<li><xf:username user="$thread.User" defaultname="{$thread.username}" /></li>
+						<li class="structItem-startDate"><a href="{{ link('threads', $thread) }}" rel="nofollow"><xf:date time="{$thread.post_date}" /></a></li>
+						<xf:if is="!$forum">
+							<li><a href="{{ link('forums', $thread.Forum) }}">{$thread.Forum.title}</a></li>
+						</xf:if>
+					</ul>
+
+					<xf:if is="$thread.discussion_type != 'redirect' && $thread.reply_count >= $xf.options.messagesPerPage && $xf.options.lastPageLinks">
+						<span class="structItem-pageJump">
+						<xf:foreach loop="{{ last_pages($thread.reply_count + 1, $xf.options.messagesPerPage, $xf.options.lastPageLinks) }}" value="$p">
+							<a href="{{ link('threads', $thread, {'page': $p}) }}">{$p}</a>
+						</xf:foreach>
+						</span>
+					</xf:if>
+				</xf:if>
+			</div>
+		</div>
+	</xf:extension>
+
+	<xf:extension name="meta_cell">
+		<div class="structItem-cell structItem-cell--meta" title="{{ phrase('first_message_reaction_score:')|for_attr }} {$thread.first_post_reaction_score|number}">
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('replies') }}</dt>
+				<dd>{{ $thread.discussion_type == 'redirect' ? '&ndash;' : $thread.reply_count|number_short }}</dd>
+			</dl>
+			<dl class="pairs pairs--justified structItem-minor">
+				<dt>{{ phrase('views') }}</dt>
+				<dd>{{ $thread.discussion_type == 'redirect' ? '&ndash;' : ($thread.view_count > $thread.reply_count ? $thread.view_count|number_short : number_short($thread.reply_count+1)) }}</dd>
+			</dl>
+		</div>
+	</xf:extension>
+
+	<xf:extension name="latest_cell">
+		<div class="structItem-cell structItem-cell--latest">
+			<xf:if is="$thread.discussion_type == 'redirect'">
+				{{ phrase('n_a') }}
+			<xf:else />
+				<a href="{{ link('threads/latest', $thread) }}" rel="nofollow"><xf:date time="{$thread.last_post_date}" class="structItem-latestDate" /></a>
+				<div class="structItem-minor">
+					<xf:if is="$xf.visitor.isIgnoring($thread.last_post_user_id)">
+						{{ phrase('ignored_member') }}
+					<xf:else />
+						<xf:username user="{$thread.LastPoster}" defaultname="{$thread.last_post_username}" />
+					</xf:if>
+				</div>
+			</xf:if>
+		</div>
+	</xf:extension>
+
+	<xf:extension name="icon_end_cell">
+		<div class="structItem-cell structItem-cell--icon structItem-cell--iconEnd">
+			<div class="structItem-iconContainer">
+				<xf:if is="$xf.visitor.isIgnoring($thread.last_post_user_id) OR $thread.discussion_type == 'redirect'">
+					<xf:avatar user="{{ null }}" size="xxs" />
+				<xf:else />
+					<xf:avatar user="{$thread.LastPoster}" defaultname="{$thread.last_post_username}" size="xxs" />
+				</xf:if>
+			</div>
+		</div>
+	</xf:extension>
+
+	</div>
+</xf:macro>
+
+<xf:macro name="item_new_posts" arg-thread="!">
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<xf:avatar user="$thread.LastPoster" size="xxs" defaultname="{$thread.last_post_username}" />
+		</div>
+		<div class="contentRow-main contentRow-main--close">
+			<xf:if is="$thread.isUnread()">
+				<a href="{{ link('threads/unread', $thread) }}">{{ prefix('thread', $thread) }}{$thread.title}</a>
+			<xf:else />
+				<a href="{{ link('threads/post', $thread, {'post_id': $thread.last_post_id}) }}">{{ prefix('thread', $thread) }}{$thread.title}</a>
+			</xf:if>
+
+			<div class="contentRow-minor contentRow-minor--hideLinks">
+				<ul class="listInline listInline--bullet">
+					<li>{{ phrase('latest_x', {'name': $thread.last_post_cache.username}) }}</li>
+					<li><xf:date time="{$thread.last_post_date}" /></li>
+				</ul>
+			</div>
+			<div class="contentRow-minor contentRow-minor--hideLinks">
+				<a href="{{ link('forums', $thread.Forum) }}">{$thread.Forum.title}</a>
+			</div>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="item_new_threads" arg-thread="!">
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<xf:avatar user="$thread.User" size="xxs" defaultname="{$thread.username}" />
+		</div>
+		<div class="contentRow-main contentRow-main--close">
+			<a href="{{ link('threads', $thread) }}">{{ prefix('thread', $thread) }}{$thread.title}</a>
+
+			<div class="contentRow-minor contentRow-minor--hideLinks">
+				<ul class="listInline listInline--bullet">
+					<li>{{ phrase('started_by_x', {'name': $thread.username}) }}</li>
+					<li><xf:date time="{$thread.post_date}" /></li>
+					<li>{{ phrase('replies:') }} {$thread.reply_count|number_short}</li>
+				</ul>
+			</div>
+			<div class="contentRow-minor contentRow-minor--hideLinks">
+				<a href="{{ link('forums', $thread.Forum) }}">{$thread.Forum.title}</a>
+			</div>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="quick_thread"
+	arg-forum="!"
+	arg-page="1"
+	arg-order="last_post_date"
+	arg-direction="desc"
+	arg-prefixes="{{ [] }}">
+
+	<xf:css src="structured_list.less" />
+
+	<xf:if is="$forum.canCreateThread() OR $forum.canCreateThreadPreReg()">
+
+		<xf:js src="xf/thread.js" min="1" />
+
+		<xf:set var="$inlineMode" value="{{ ($page == 1 && $order == 'last_post_date' && $direction == 'desc') ? true : false }}" />
+
+		<xf:form action="{{ link('forums/post-thread', $forum, {'inline-mode': $inlineMode}) }}" ajax="true"
+			class="structItem structItem--quickCreate"
+			draft="{{ link('forums/draft', $forum) }}"
+			data-xf-init="quick-thread"
+			data-focus-activate=".js-titleInput"
+			data-focus-activate-href="{{ link('forums/post-thread', $forum, {'inline-mode': true}) }}"
+			data-focus-activate-target=".js-quickThreadFields"
+			data-insert-target=".js-threadList"
+			data-replace-target=".js-emptyThreadList">
+
+		<xf:extension name="icon_cell">
+			<div class="structItem-cell structItem-cell--icon">
+				<div class="structItem-iconContainer">
+					<xf:avatar user="$xf.visitor" size="s" />
+				</div>
+			</div>
+		</xf:extension>
+
+		<xf:extension name="main_cell">
+			<div class="structItem-cell structItem-cell--newThread js-prefixListenContainer">
+
+				<xf:formrow rowtype="noGutter noLabel fullWidth noPadding mergeNext"
+					label="{{ phrase('title') }}">
+
+					<xf:prefixinput maxlength="{{ max_length('XF:Thread', 'title') }}"
+						placeholder="{$forum.thread_prompt}"
+						title="{{ phrase('post_new_thread_in_this_forum') }}"
+						prefix-value="{$forum.default_prefix_id}"
+						type="thread"
+						prefixes="{$prefixes}"
+						data-xf-init="tooltip"
+						rows="1"
+						help-href="{{ link('forums/prefix-help', $forum) }}"
+						help-skip-initial="{{ true }}" />
+
+					<!--[XF:qt_title_after]-->
+				</xf:formrow>
+
+				<div class="js-quickThreadFields inserter-container is-hidden"><!--{{ phrase('loading...') }}--></div>
+			</div>
+		</xf:extension>
+
+		</xf:form>
+	</xf:if>
+
+</xf:macro>]]></template>
+  <template type="public" title="fs_forum_groups_view" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{$group.name}</xf:title>
+
+<xf:css src="fs_forum_gorups_style.less" />
+
+<xf:sidenav>
+	
+	<!-- Avatar -->
+	
+	<div class="block groupAvatar-block">
+           <xf:if is="$subForums.AvatarAttachment">
+        <a href="{{ link('forumGroups', $subForums) }}"
+       class="groupAvatar groupAvatar--link groupAvatar--default" style="background-color:#e08585;color:#8f2424">
+			<img src="{{ $subForums.AvatarAttachment.thumbnail_url }}"
+                 class="groupAvatar--img bbImage" width="250" height="250"
+                 data-width="{$subForums.AvatarAttachment.width}"
+                 data-height="{$subForums.AvatarAttachment.height}"
+                 alt="{$subForums.title}"/>
+    </a>
+			   
+			<xf:else />
+			   <xf:comment>
+            <span class="groupAvatar--text groupAvatar--dynamic">{$xf.visitor.username}</span>
+			   </xf:comment>
+			  <xf:avatar user="$subForums.User" size="l" />
+			</xf:if>
+    </div>
+	
+	<!-- Avatar -->
+
+</xf:sidenav>
+
+<div class="groupWrapper groupWrapper-{$subForums.node_id}">
+
+	<!-- Header -->
+
+	<xf:page option="headerHtml">
+        <div class="contentRow contentRow--hideFigureNarrow">
+            <div class="contentRow-main">
+                <div class="p-title">
+                    <h1 class="p-title-value">
+                        {$subForums.title}
+                    </h1>
+                
+					<div class="p-title-pageAction">
+						<a href="{{ link('forums/post-thread', $subForums) }}" class="button--cta button button--icon button--icon--write"><span class="button-text">
+							{{ phrase('post_thread') }}
+						</span></a>
+
+						<xf:if is="$xf.visitor.user_id && $subForums.room_path && $xf.visitor.user_id == $subForums.user_id">
+							<a href="{{ link($subForums.room_path) }}" class="button--cta button button--icon"><span class="button-text">
+							<i class="fas fa-comment-dots"></i> {{ phrase('fs_forum_groups_room_chat') }}
+						</span></a>
+						</xf:if>
+
+						<xf:if is="$xf.visitor.user_id && $xf.visitor.user_id == $subForums.user_id">
+							<a href="{{ link('forumGroups/moderator-list', $subForums) }}" class="button--cta button button--icon button--icon--list"><span class="button-text">
+							{{ phrase('fs_forum_group_moderator_list') }}
+						</span></a>
+						</xf:if>
+						
+					</div>
+					
+					</div>
+				<div class="p-description">
+                        {$subForums.description}
+                    </div>
+            </div>
+        </div>
+    </xf:page>
+
+	<!-- Header -->
+
+	<!-- Cover Header -->
+
+	<div class="block">
+        <div class="block-container groupCover-header">
+            <div class="block-body">
+               <div class="groupCover groupCoverFrame groupCover--default" style="background-color:#{{$subForums.getRandomColor()}};color:#fff">
+        <a href="{{ link('forumGroups', $subForums) }}" style="color:#fff">
+                <xf:if is="$subForums.CoverAttachment">
+                <img data-crop="{$subForums->getCoverCropData()|json}"
+                     class="groupCover--img groupCover--lazy" data-xf-init="fs-forum-groups-cover-setup"
+                     {{ ($subForums.getImageAttributes()) ? (' ' . $subForums.getImageAttributes()) : '' }}/>
+            <xf:else />
+                <span class="groupCover--text">{{ snippet($subForums.title, 25) }}</span>
+            </xf:if>
+        </a>
+    </div>
+            </div>
+
+            <xf:if is="$isEditing is not empty">
+                <xf:macro name="cover_editor_setup" arg-group="{$group}"
+                          arg-width="{$baseWidth}"
+                          arg-height="{$baseHeight}" />
+            <xf:else />
+               
+				 <div class="gridCard--header--actions">
+		   
+			<div class="buttonGroup-buttonWrapper">
+                <xf:button class="button--link menuTrigger"
+                       data-xf-click="menu"
+                       aria-expanded="false"
+                       aria-haspopup="true" title="{{ phrase('more_options')|for_attr }}"><xf:fa icon="fa-cog" /></xf:button>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+                    <div class="menu-content">
+                                <a href="{{ link('forumGroups/add-moderator', $subForums) }}"
+                                       class="menu-linkRow"
+                                       data-xf-click="overlay">
+                                {{  phrase('fs_forum_groups_moderator')  }}
+                            </a>
+						
+						<a href="{{ link('forumGroups/avatar', $subForums) }}"
+                                       class="menu-linkRow"
+                                       data-xf-click="overlay">
+                                {{  phrase('fs_forum_groups_upload_avatar')  }}
+                            </a>
+						
+						<a href="{{ link('forumGroups/cover', $subForums) }}"
+                                       class="menu-linkRow"
+                                       data-xf-click="overlay">
+                                {{  phrase('fs_forum_groups_upload_cover')  }}
+                            </a>
+                           
+                            <hr class="menu-separator" />
+                    </div>
+                </div>
+            </div>   
+			   
+		   </div>
+				
+            </xf:if>
+
+        </div>
+    </div>
+
+	<!-- Cover Header -->
+		
+	<!-- Thread Lists -->
+	<xf:if is="$threads is not empty">
+		<div class="block-container">
+		<div class="block-body">
+				<div class="structItemContainer">
+					
+						<div class="structItemContainer-group js-threadList">
+							<xf:if is="$threads is not empty">
+								<xf:foreach loop="$threads" value="$thread">
+									<xf:macro name="fs_forum_groups_thread_list_macros::item"
+										arg-thread="{$thread}"
+										arg-forum="{$forum}"
+										args="null"  />
+								</xf:foreach>
+							</xf:if>
+						</div>		
+			</div>
+			</div>
+		</div>
+					<xf:else />
+						<div class="blockMessage  ">
+							<div class="structItem-cell">{{ phrase('there_no_threads_in_this_forum') }}</div>
+						</div>
+					</xf:if>
+					
+
+	
+	<!-- Thread Lists -->
+	
+</div>]]></template>
+  <template type="public" title="moderator_add_choice" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('add_moderator') }}</xf:title>
+
+<xf:form action="{{ link('forumGroups/add-moderator', $subForum) }}" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:textboxrow name="username" value="{$username}" type="search" ac="single"
+				placeholder="{{ phrase('user_name...') }}"
+				label="{{ phrase('moderator_user_name') }}" />
+
+			<xf:radiorow name="type" value="{$type}"
+				label="{{ phrase('type_of_moderator') }}">
+
+				<xf:comment>
+				<xf:option value="_super"
+					label="{{ phrase('super_moderator') }}"
+					hint="{{ phrase('super_moderator_can_moderate_entire_board') }}" />
+				</xf:comment>
+					<xf:option value="node" label="Forum moderator" selected="true"/>
+			</xf:radiorow>
+		</div>
+		<xf:submitrow submit="{{ phrase('add_moderator...') }}" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="moderator_edit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('edit_moderator:') }} {$user.username}</xf:title>
+
+<xf:pageaction if="$contentModerator ? $contentModerator.isUpdate() : $generalModerator.isUpdate()">
+	<xf:if is="$contentModerator">
+		<xf:button href="{{ link('forumGroups/content/delete', $contentModerator) }}" icon="delete" overlay="true" />
+	<xf:else />
+		<xf:button href="{{ link('forumGroups/super/delete', $generalModerator) }}" icon="delete" overlay="true" />
+	</xf:if>
+</xf:pageaction>
+
+<xf:form action="{{ link('forumGroups/moderator-save') }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:formrow label="{{ phrase('type_of_moderator') }}">
+				<xf:if is="$contentTitle">
+					{$contentTitle}
+					<xf:else />
+					{{ phrase('super_moderator') }}
+				</xf:if>
+			</xf:formrow>
+
+			<hr class="formRowSep" />
+
+			<xf:checkboxrow>
+				<xf:option name="is_staff" selected="$isStaff"
+					label="{{ phrase('display_user_as_staff') }}"
+					hint="{{ phrase('if_selected_this_user_will_be_listed_publicly_as_staff_member') }}" />
+			</xf:checkboxrow>			
+
+			<div id="piGroups">
+				
+				<xf:foreach loop="$interfaceGroups" key="$interfaceGroupId" value="$interfaceGroup">
+					<xf:if is="{$globalPermissions.{$interfaceGroupId}}">
+						<xf:checkboxrow listclass="listColumns">
+						
+							<xf:foreach loop="{$globalPermissions.{$interfaceGroupId}}" value="$permission">
+								<xf:option name="globalPermissions[{$permission.permission_group_id}][{$permission.permission_id}]"
+									value="allow"
+									selected="{{ {$existingValues.{$permission.permission_group_id}.{$permission.permission_id}} == 'allow' }}"
+									label="{$permission.title}" />
+							</xf:foreach>
+						</xf:checkboxrow>
+					</xf:if>
+				</xf:foreach>
+
+				<xf:foreach loop="$interfaceGroups" key="$interfaceGroupId" value="$interfaceGroup">
+					<xf:if is="{$contentPermissions.{$interfaceGroupId}}">
+						<xf:checkboxrow listclass="listColumns">
+							<xf:foreach loop="{$contentPermissions.{$interfaceGroupId}}" value="$permission">
+								<xf:option name="contentPermissions[{$permission.permission_group_id}][{$permission.permission_id}]"
+									value="content_allow"
+									selected="{{ {$existingValues.{$permission.permission_group_id}.{$permission.permission_id}} == 'content_allow' }}"
+									label="{$permission.title}" />
+							</xf:foreach>
+						</xf:checkboxrow>
+					</xf:if>
+				</xf:foreach>
+
+			</div>
+		</div>
+		<xf:submitrow icon="save" />
+	</div>
+
+	<xf:hiddenval name="user_id">{$generalModerator.user_id}</xf:hiddenval>
+	<xf:hiddenval name="content_type">{$contentModerator.content_type}</xf:hiddenval>
+	<xf:hiddenval name="content_id">{$contentModerator.content_id}</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="public" title="node_edit_macros" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro name="title" arg-node="!">
+	<xf:textboxrow name="node[title]" value="{$node.title}" label="{{ phrase('title') }}" />
+</xf:macro>
+
+<xf:macro name="description" arg-node="!">
+	<xf:textarearow name="node[description]" value="{$node.description}" autosize="true"
+		label="{{ phrase('description') }}"
+		hint="{{ phrase('you_may_use_html') }}"
+		explain="{{ phrase('node_description_explain') }}" />
+</xf:macro>
+
+<xf:macro name="node_name" arg-node="!" arg-optional="{{ true }}">
+	<xf:textboxrow name="node[node_name]" value="{$node.node_name}"
+		label="{{ phrase('url_portion') }}"
+		hint="{{ $optional ? phrase('optional') : '' }}"
+		explain="{{ $optional ? phrase('if_entered_url_to_forum_not_contain_id_change_breaks_urls') : '' }}"
+		dir="ltr" />
+</xf:macro>
+
+<xf:macro name="position" arg-node="!" arg-nodeTree="!">
+	<xf:selectrow name="node[parent_node_id]" value="{$node.parent_node_id}"
+		label="{{ phrase('parent_node') }}">
+
+		<xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+		<xf:foreach loop="$nodeTree.getFlattened(0)" value="$treeEntry">
+			<xf:option value="{$treeEntry.record.node_id}">{{ repeat('--', $treeEntry.depth) }} {$treeEntry.record.title}</xf:option>
+		</xf:foreach>
+	</xf:selectrow>
+
+	<xf:macro template="display_order_macros" name="row"
+		arg-name="node[display_order]"
+		arg-value="{$node.display_order}"
+		arg-explain="{{ phrase('position_of_this_item_relative_to_other_nodes_with_same_parent') }}" />
+
+	<xf:checkboxrow>
+		<xf:option name="node[display_in_list]" selected="$node.display_in_list"
+			label="{{ phrase('display_in_node_list') }}"
+			hint="{{ phrase('if_unselected_users_will_not_see_this_node_in_list') }}" />
+	</xf:checkboxrow>
+</xf:macro>
+
+<xf:macro name="style" arg-node="!" arg-styleTree="!">
+	<xf:checkboxrow>
+		<xf:option name="style_override" selected="$node.style_id"
+			label="{{ phrase('override_user_style_choice') }}"
+			explain="{{ phrase('if_specified_all_visitors_view_using_selected_style') }}">
+
+			<xf:select name="node[style_id]" value="{$node.style_id}">
+				<xf:foreach loop="$styleTree.getFlattened(0)" value="$treeEntry">
+					<xf:option value="{$treeEntry.record.style_id}">{{ repeat('--', $treeEntry.depth) }} {$treeEntry.record.title}</xf:option>
+				</xf:foreach>
+			</xf:select>
+
+		</xf:option>
+	</xf:checkboxrow>
+</xf:macro>
+
+<xf:macro name="navigation" arg-node="!" arg-navChoices="!">
+	<xf:set var="$defaultValue" value="{{ $node.Parent.effective_navigation_id ?: 'forums' }}" />
+	<xf:set var="$defaultNav" value="{$navChoices.{$defaultValue}}" />
+	<xf:selectrow name="node[navigation_id]" value="{$node.navigation_id}"
+		label="{{ phrase('navigation_section') }}"
+		explain="{{ phrase('navigation_section_explain') }}">
+
+		<xf:option value="">{{ phrase('default') . ($defaultNav ? ' (' . $defaultNav.title . ')' : '') }}</xf:option>
+
+		<xf:foreach loop="$navChoices" value="$nav">
+			<xf:if is="$nav.navigation_id != '_default'">
+				<xf:option value="{$nav.navigation_id}">{$nav.title}</xf:option>
+			</xf:if>
+		</xf:foreach>
+	</xf:selectrow>
+</xf:macro>]]></template>
+</templates>

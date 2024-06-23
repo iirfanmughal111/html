@@ -1,0 +1,23 @@
+<xf:title>{{ phrase('fs_register_vouch_message') }}</xf:title>
+
+<xf:form action="{{ link('members/savevouch',$user) }}" ajax="true" class="block"   data-force-flash-message="true">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_register_r_u_sure') }}
+			</xf:inforow>
+				<xf:hiddenval value="{$user_id}" name="user_id"/>
+			<xf:hiddenval value="{$vouch}" name="vouch"/>
+
+		</div>
+		<xf:submitrow rowtype="simple" icon="save" />
+		<xf:comment>
+				  <xf:button
+    href="#"
+    class="formrow js-overlayClose"
+    >{{ phrase('fs_register_cancel') }}</xf:button
+  >
+		</xf:comment>
+		
+	</div>
+</xf:form>

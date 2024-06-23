@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="quick_reply_macros" modification_key="dropdownHideAttachment" description="dropdownHideAttachment" execution_order="21" enabled="1" action="str_replace">
+    <find><![CDATA[					<xf:if is="$attachmentData">
+						<xf:macro template="helper_attach_upload" name="upload_link_from_data"
+							arg-attachmentData="{$attachmentData}"
+							arg-forceHash="{$forceHash}" />
+					</xf:if>]]></find>
+    <replace><![CDATA[<xf:if is="$thread">
+<xf:if is="$thread.getPostCount() < 1">
+ 
+		<xf:else />
+		$0
+		
+		
+</xf:if>
+			<xf:else />
+		$0
+		
+		
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="dropdownReplaySelector" description="dropdownReplaySelector" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:editor name="message".*?\/>/si]]></find>
+    <replace><![CDATA[
+<xf:if is="$thread">	
+<xf:if is="$thread.getPostCount() < 1">
+		<xf:selectrow
+        name="message"
+        label="{{ phrase('dropdownReply') }}"
+
+      >
+       
+        <xf:foreach loop="$thread.dropdwon_options" value="$val">
+			        <xf:if is="$val">
+
+          <xf:option
+            value="{$val}"
+           
+            >{{$val}}</xf:option
+          >
+						      </xf:if>
+
+        </xf:foreach>
+      </xf:selectrow>
+	
+		<xf:else />
+		$0
+		
+</xf:if>
+	
+<xf:else />
+		$0
+	</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="receiveThread" description="receiveThread" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[arg-showGuestControls="{{ true }}"]]></find>
+    <replace><![CDATA[$0
+arg-thread=""]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="receiveThreadInEditor" description="receiveThreadInEditorMacro" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[arg-showGuestControls="{$showGuestControls}"]]></find>
+    <replace><![CDATA[$0
+arg-thread="{$thread}"]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="fs_add_newDropdown" description="fs_add_UpdateDropdown" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:thread_tools_menu:top]-->]]></find>
+    <replace><![CDATA[$0 
+
+
+<xf:if is="$xf.visitor.is_moderator || $xf.visitor.is_admin">	
+		<a href="{{ link('opt-reply', $thread) }}"  class="menu-linkRow">{{ phrase('addNewdropdownReply') }}</a>
+</xf:if>
+
+]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="passThead" description="passThead" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[arg-showGuestControls="{{ !$isPreRegReply }}"]]></find>
+    <replace><![CDATA[$0
+arg-thread="{{$thread}}"]]></replace>
+  </modification>
+</template_modifications>

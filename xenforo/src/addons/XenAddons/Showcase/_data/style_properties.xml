@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="xaScFeaturedCarouselElements" group_name="xaScAppearance" title="Featured items carousel elements" description="The elements selected here will be displayed on the Featured Carousel on SC Index, SC Category pages and SC Featured Carousel Widgets." property_type="value" value_type="template" value_group="FeaturedItemsCarousel" display_order="100">
+    <value_parameters>template=style_property_template_xaScCarouselElements
+type=array</value_parameters>
+    <value>{
+    "category": "1",
+    "share_this_item": "1",
+    "preview_snippet": "1",
+    "custom_fields": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScFeaturedCarouselShowType" group_name="xaScAppearance" title="Featured items carousel show type" description="This setting allows you to choose whether to show 1 item at a time or 2 items at a time." property_type="value" value_type="radio" value_group="FeaturedItemsCarousel" display_order="110">
+    <value_parameters>show1={{ phrase('xa_sc_show_1_item_at_a_time') }}
+show2={{ phrase('xa_sc_show_2_items_at_a_time') }}</value_parameters>
+    <value>"show1"</value>
+  </style_property>
+  <style_property property_name="xaScFeaturedItemsGridBlockElements" group_name="xaScAppearance" title="Featured items grid block elements" description="The elements selected here will be displayed on the Featured Grid Block." property_type="value" value_type="template" value_group="FeaturedItemsGridBlock" display_order="130">
+    <value_parameters>template=style_property_template_xaScGridBlockElements
+type=array</value_parameters>
+    <value>{
+    "author_rating": "1",
+    "rating_avg": "1",
+    "username": "1",
+    "create_date": "1",
+    "category": "1",
+    "share_this_item": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScGridViewLayoutElements" group_name="xaScAppearance" title="Grid view layout elements" description="The elements selected here will be displayed on the Grid View Layout." property_type="value" value_type="template" value_group="GridViewLayout" display_order="20">
+    <value_parameters>template=style_property_template_xaScLayoutElements
+type=array</value_parameters>
+    <value>{
+    "category": "1",
+    "share_this_item": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1",
+    "preview_snippet": "1",
+    "custom_fields": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScItemViewLayoutElements" group_name="xaScAppearance" title="Item view layout elements" description="The elements selected here will be displayed on the Item View Layout." property_type="value" value_type="template" value_group="ItemViewLayout" display_order="40">
+    <value_parameters>template=style_property_template_xaScItemViewLayoutElements
+type=array</value_parameters>
+    <value>{
+    "category": "1",
+    "share_this_item": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1",
+    "cover_image": "1",
+    "preview_snippet": "1",
+    "custom_fields": "1",
+    "tags": "1",
+    "view_item_button": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScItemsCarouselElements" group_name="xaScAppearance" title="Latest items carousel elements" description="The elements selected here will be displayed on widgets created with the SC: Latest items widget definition and display style &quot;Full - Carousel&quot;" property_type="value" value_type="template" value_group="LatestItemsCarousel" display_order="400">
+    <value_parameters>template=style_property_template_xaScCarouselElements
+type=array</value_parameters>
+    <value>{
+    "category": "1",
+    "share_this_item": "1",
+    "preview_snippet": "1",
+    "custom_fields": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScItemsCarouselShowType" group_name="xaScAppearance" title="Latest items carousel show type" description="This setting allows you to choose whether to show 1 item at a time or 2 items at a time." property_type="value" value_type="radio" value_group="LatestItemsCarousel" display_order="410">
+    <value_parameters>show1={{ phrase('xa_sc_show_1_item_at_a_time') }}
+show2={{ phrase('xa_sc_show_2_items_at_a_time') }}</value_parameters>
+    <value>"show1"</value>
+  </style_property>
+  <style_property property_name="xaScItemsCarouselSimpleElements" group_name="xaScAppearance" title="Items carousel simple elements" description="The elements selected here will be displayed on widgets created with the SC: Featured or Latest items widget definition and display style &quot;Simple - Carousel&quot;" property_type="value" value_type="template" value_group="ItemsCarouselSimple" display_order="5000">
+    <value_parameters>template=style_property_template_xaScCarouselSimpleElements
+type=array</value_parameters>
+    <value>{
+    "cover_image": "1",
+    "category": "1",
+    "title": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "preview_snippet": "1",
+    "author": "1",
+    "create_date": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScItemsGridBlockElements" group_name="xaScAppearance" title="Latest items grid block elements" description="The elements selected here will be displayed on the Latest items Grid Block." property_type="value" value_type="template" value_group="LatestItemsGridBlock" display_order="430">
+    <value_parameters>template=style_property_template_xaScGridBlockElements
+type=array</value_parameters>
+    <value>{
+    "author_rating": "1",
+    "rating_avg": "1",
+    "username": "1",
+    "create_date": "1",
+    "category": "1",
+    "share_this_item": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScListViewLayoutElements" group_name="xaScAppearance" title="List view layout elements" description="The elements selected here will be displayed on the List View Layout." property_type="value" value_type="template" value_group="ListViewLayout" display_order="10">
+    <value_parameters>template=style_property_template_xaScLayoutElements
+type=array</value_parameters>
+    <value>{
+    "category": "1",
+    "share_this_item": "1",
+    "author_rating": "1",
+    "rating_avg": "1",
+    "view_count": "1",
+    "reaction_score": "1",
+    "update_count": "1",
+    "review_count": "1",
+    "comment_count": "1",
+    "preview_snippet": "1",
+    "custom_fields": "1"
+}</value>
+  </style_property>
+  <style_property property_name="xaScTileViewLayoutElements" group_name="xaScAppearance" title="Tile view layout elements" description="The elements selected here will be displayed on the Tile View Layout." property_type="value" value_type="template" value_group="TileViewLayout" display_order="30">
+    <value_parameters>template=style_property_template_xaScTileViewLayoutElements
+type=array</value_parameters>
+    <value>{
+    "author_rating": "1",
+    "rating_avg": "1",
+    "username": "1",
+    "create_date": "1",
+    "category": "1",
+    "share_this_item": "1"
+}</value>
+  </style_property>
+</style_properties>

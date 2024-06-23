@@ -1,0 +1,10 @@
+{
+    "parent_navigation_id": "attendance",
+    "display_order": 1,
+    "link": "attendance",
+    "icon": "",
+    "admin_permission_id": "",
+    "debug_only": false,
+    "development_only": false,
+    "hide_no_children": false
+}

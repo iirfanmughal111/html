@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="chat" format="chat" controller="Siropu\Chat:Chat" context="siropuChat"/>
+  <route route_type="admin" route_prefix="chat" sub_name="bot-messages" format="bot-messages/:int&lt;message_id&gt;/" controller="Siropu\Chat:BotMessage" context="siropuChat"/>
+  <route route_type="admin" route_prefix="chat" sub_name="bot-responses" format="bot-responses/:int&lt;response_id&gt;/" controller="Siropu\Chat:BotResponse" context="siropuChat"/>
+  <route route_type="admin" route_prefix="chat" sub_name="commands" format="commands/:str&lt;command_name&gt;/" controller="Siropu\Chat:Command" context="siropuChat"/>
+  <route route_type="public" route_prefix="chat" controller="Siropu\Chat:Chat" context="siropuChat"/>
+  <route route_type="public" route_prefix="chat" sub_name="archive" format="archive/:page" controller="Siropu\Chat:Archive" context="siropuChat" action_prefix="index"/>
+  <route route_type="public" route_prefix="chat" sub_name="archive/message" format="archive/message/:int&lt;message_id&gt;" controller="Siropu\Chat:Archive" context="siropuChat" action_prefix="index"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/delete" format="conversation/:int&lt;message_id&gt;/delete" controller="Siropu\Chat:Conversation" action_prefix="delete"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/edit" format="conversation/:int&lt;message_id&gt;/edit" controller="Siropu\Chat:Conversation" action_prefix="edit"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/form" format="conversation/:int&lt;user_id&gt;/form" controller="Siropu\Chat:Conversation" action_prefix="form"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/leave" format="conversation/:int&lt;conversation_id&gt;/leave" controller="Siropu\Chat:Conversation" action_prefix="leave"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/like" format="conversation/:int&lt;message_id&gt;/like" controller="Siropu\Chat:Conversation" action_prefix="like"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/link" format="conversation/:int&lt;message_id&gt;/link" controller="Siropu\Chat:Conversation" action_prefix="link"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/load-messages" format="conversation/:int&lt;conversation_id&gt;/load-messages" controller="Siropu\Chat:Conversation" action_prefix="loadMessages"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/load-more-messages" format="conversation/:int&lt;conversation_id&gt;/load-more-messages" controller="Siropu\Chat:Conversation" action_prefix="loadMoreMessages"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/mark-as-read" format="conversation/:int&lt;conversation_id&gt;/mark-as-read" controller="Siropu\Chat:Conversation" action_prefix="markAsRead"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/message" format="conversation/:int&lt;message_id&gt;/message" controller="Siropu\Chat:Conversation" action_prefix="message"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/quote" format="conversation/:int&lt;message_id&gt;/quote" controller="Siropu\Chat:Conversation" action_prefix="quote"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/react" format="conversation/:int&lt;message_id&gt;/react" controller="Siropu\Chat:Conversation" action_prefix="react"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/reactions" format="conversation/:int&lt;message_id&gt;/reactions" controller="Siropu\Chat:Conversation" action_prefix="reactions"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/report" format="conversation/:int&lt;message_id&gt;/report" controller="Siropu\Chat:Conversation" action_prefix="report"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/start" format="conversation/:int&lt;user_id&gt;/start" controller="Siropu\Chat:Conversation" action_prefix="start"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/typing" format="conversation/:int&lt;conversation_id&gt;/typing" controller="Siropu\Chat:Conversation" action_prefix="typing"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/unlike" format="conversation/:int&lt;message_id&gt;/unlike" controller="Siropu\Chat:Conversation" action_prefix="unlike"/>
+  <route route_type="public" route_prefix="chat" sub_name="conversation/view" format="conversation/:int&lt;conversation_id&gt;/view" controller="Siropu\Chat:Conversation" action_prefix="view"/>
+  <route route_type="public" route_prefix="chat" sub_name="delete-attachments" format="delete-attachments" controller="Siropu\Chat:Chat" action_prefix="deleteAttachments"/>
+  <route route_type="public" route_prefix="chat" sub_name="fullpage" format="fullpage" controller="Siropu\Chat:Chat" context="siropuChat" action_prefix="fullpage"/>
+  <route route_type="public" route_prefix="chat" sub_name="guest" format="guest/" controller="Siropu\Chat:Chat" action_prefix="guest"/>
+  <route route_type="public" route_prefix="chat" sub_name="message" format="message/:int&lt;message_id&gt;/" controller="Siropu\Chat:Message"/>
+  <route route_type="public" route_prefix="chat" sub_name="room" format="room/:int&lt;room_id,room_name&gt;/" controller="Siropu\Chat:Room" action_prefix="index"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/create" format="room/create" controller="Siropu\Chat:Room" action_prefix="create"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/delete" format="room/:int&lt;room_id&gt;/delete" controller="Siropu\Chat:Room" action_prefix="delete"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/edit" format="room/:int&lt;room_id&gt;/edit" controller="Siropu\Chat:Room" action_prefix="edit"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/find" format="room/find" controller="Siropu\Chat:Room" action_prefix="find"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/join" format="room/:int&lt;room_id&gt;/join" controller="Siropu\Chat:Room" action_prefix="join"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/leave" format="room/:int&lt;room_id&gt;/leave" controller="Siropu\Chat:Room" action_prefix="leave"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/link" format="room/:int&lt;room_id&gt;/link" controller="Siropu\Chat:Room" action_prefix="link"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/list" format="room/:int&lt;room_id&gt;/list" controller="Siropu\Chat:Room" action_prefix="list"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/load-more-messages" format="room/:int&lt;room_id&gt;/load-more-messages" controller="Siropu\Chat:Room" action_prefix="loadMoreMessages"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/rss" format="room/:int&lt;room_id&gt;/rss" controller="Siropu\Chat:Room" action_prefix="rss"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/sanction" format="room/:int&lt;room_id&gt;/sanction/:int&lt;user_id,username&gt;" controller="Siropu\Chat:Room" action_prefix="sanction"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/sanctions" format="room/:int&lt;room_id&gt;/sanctions/:page" controller="Siropu\Chat:Room" action_prefix="sanctions"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/save" format="room/:int&lt;room_id&gt;/save" controller="Siropu\Chat:Room" action_prefix="save"/>
+  <route route_type="public" route_prefix="chat" sub_name="room/typing" format="room/:int&lt;room_id&gt;/typing" controller="Siropu\Chat:Room" action_prefix="typing"/>
+  <route route_type="public" route_prefix="chat" sub_name="sanction" format="sanction/:int&lt;room_id&gt;/:int&lt;user_id,username&gt;" controller="Siropu\Chat:Sanction" action_prefix="index"/>
+  <route route_type="public" route_prefix="chat" sub_name="sanction/apply" format="sanction/:int&lt;sanction_id&gt;/apply" controller="Siropu\Chat:Sanction" action_prefix="apply"/>
+  <route route_type="public" route_prefix="chat" sub_name="sanction/edit" format="sanction/:int&lt;sanction_id&gt;/edit" controller="Siropu\Chat:Sanction" action_prefix="edit"/>
+  <route route_type="public" route_prefix="chat" sub_name="sanction/lift" format="sanction/:int&lt;sanction_id&gt;/lift" controller="Siropu\Chat:Sanction" action_prefix="lift"/>
+  <route route_type="public" route_prefix="chat" sub_name="sanctions" format="sanctions" controller="Siropu\Chat:Sanction" context="siropuChat" action_prefix="sanctions"/>
+  <route route_type="public" route_prefix="chat" sub_name="top-chatters" format="top-chatters" controller="Siropu\Chat:Top" context="siropuChat" action_prefix="index"/>
+  <route route_type="public" route_prefix="chat" sub_name="user" format="user/:int&lt;user_id,username&gt;" controller="Siropu\Chat:User"/>
+</routes>

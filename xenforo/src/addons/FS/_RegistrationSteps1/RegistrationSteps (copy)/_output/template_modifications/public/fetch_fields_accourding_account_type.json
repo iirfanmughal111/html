@@ -1,0 +1,9 @@
+{
+    "template": "account_details",
+    "description": "fetch_fields_accourding_account_type",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\" arg-type=\"users\" arg-group=\"contact\" arg-set=\"{$xf.visitor.Profile.custom_fields}\" />\n",
+    "replace": "<xf:if is=\"$xf.visitor.account_type==1\">\n<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"{{null}}\"\n\t\targ-set=\"{$xf.visitor.Profile.getGroupTypeFields('hobbyist_fields')}\"\n\t\t arg-additionalFilters=\"{{ ['registration'] }}\"/>\n<xf:elseif is=\"$xf.visitor.account_type==2\" />\n\t<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"{{null}}\"\n\t\targ-set=\"{$xf.visitor.Profile.getGroupTypeFields('provider_fields')}\"\n\t\t arg-additionalFilters=\"{{ ['registration'] }}\"/>\n\t</xf:if>\n<xf:if is=\"$xf.visitor.account_type==2\">\n<xf:macro template=\"register_custom_fields\" name=\"general_custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"contact\"\n\t\targ-set=\"{$xf.visitor.Profile.custom_fields}\"\n\t\t />\n</xf:if>"
+}

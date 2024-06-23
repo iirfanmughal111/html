@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_event_listeners>
+  <listener event_id="controller_post_dispatch" execute_order="10" callback_class="FS\RegistrationSteps\Listener" callback_method="controllerPostDispatch" active="1"/>
+</code_event_listeners>

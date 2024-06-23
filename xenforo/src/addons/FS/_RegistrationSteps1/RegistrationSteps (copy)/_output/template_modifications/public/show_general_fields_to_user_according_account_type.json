@@ -1,0 +1,9 @@
+{
+    "template": "account_details",
+    "description": "show_general_fields_to_user_according_account_type",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro template=\"custom_fields_macros\" name=\"custom_fields_edit\" arg-type=\"users\" arg-group=\"personal\" arg-set=\"{$xf.visitor.Profile.custom_fields}\" />\n",
+    "replace": "<xf:macro template=\"public:register_custom_fields\" name=\"general_custom_fields_edit\"\n\t\targ-type=\"users\" arg-group=\"personal\"\n\t\targ-set=\"{$xf.visitor.Profile.custom_fields}\"\n\t\t />"
+}

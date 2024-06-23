@@ -1,0 +1,18 @@
+<xf:form action="{{ link('escrow/log') }}">
+	<div class="menu-row">
+    	{{ phrase('username:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="fs_transaction_user" value="{$conditions.fs_transaction_users}" ac="single" />
+		</div>
+  	</div>
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>

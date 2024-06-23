@@ -1,0 +1,1 @@
+Buy <a href="{link}" role="button" target="_blank">  Premium  </a>to view message

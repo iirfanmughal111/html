@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Repository\\Banning",
+    "to_class": "FS\\EncryptIp\\XF\\Repository\\Banning",
+    "execute_order": 10,
+    "active": true
+}

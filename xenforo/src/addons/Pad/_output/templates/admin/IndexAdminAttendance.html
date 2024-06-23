@@ -1,0 +1,139 @@
+<xf:title>{{ phrase('UserAttendance') }}</xf:title>
+
+<div class="block-outer">
+
+  <xf:form
+  action="{{ link('attendance') }}"
+
+  novalidate="novalidate"
+>
+
+    <xf:selectrow
+    name="employee_user_id"
+    label="{{ phrase('att_username') }}"
+    hint="{{ phrase('required') }}"
+    required="required"
+  >
+    <xf:foreach loop="$users" value="$user">
+      <xf:option
+        value="{$user.user_id}"
+  
+        >{{ $user.username}}</xf:option
+      >
+    </xf:foreach>
+  </xf:selectrow>
+  
+
+  <xf:submitrow icon="search" sticky="true" />
+</xf:form>
+  
+</div>
+
+</div>
+
+<div class="block-container">
+  <div class="block-body">
+    <div class="block-footer">
+      <div class="block-body block-row">
+        <dl class="pairs pairs--justified">
+          <dt>
+            <span class="block-footer-counter"
+              >{{ display_totals($attendance, $total) }}</span
+            >
+          </dt>
+          <dd>
+            <xf:pagenav
+              page="{$page}"
+              perpage="{$perPage}"
+              total="{$total}"
+              link="attendance"
+              data="{$attendance}"
+              params="{$attendance}"
+              wrapperclass="block-outer-main"
+            />
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+    <xf:form action="{{ link($prefix . '/toggle') }}" class=" " ajax="true">
+      <div class="block-container">
+        <xf:if is="$attendance != null">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="attendance_table_list"
+                arg-attendance="{$attendance}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_items_have_been_created_yet') }}
+          </div>
+        </xf:if>
+      </div>
+    </xf:form>
+  </div>
+  <!-- params="76" -->
+
+  <div class="block-footer">
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt>
+          <span class="block-footer-counter"
+            >{{ display_totals($attendance, $total) }}</span
+          >
+        </dt>
+        <dd>
+          <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="attendance"
+            data="{$attendance}"
+            params="{$attendance}"
+            wrapperclass="block-outer-main"
+          />
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- placingProperTableCellTemplate -->
+
+<xf:macro name="attendance_table_list" arg-attendance="{$attendance}">
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('att_username') }} </xf:cell>
+
+    <xf:cell> {{ phrase('att_Date') }} </xf:cell>
+    <xf:cell> {{ phrase('inTime') }} </xf:cell>
+    <xf:cell> {{ phrase('outTime') }} </xf:cell>
+    <xf:cell> {{ phrase('att_comments') }} </xf:cell>
+
+    <xf:cell class="dataList-cell--min">{{ phrase('att_view') }}</xf:cell>
+  </xf:datarow>
+  <xf:foreach loop="$attendance" value="$attend">
+    <xf:datarow>
+      <xf:cell> {{$attend.User.username}} </xf:cell>
+
+      <xf:cell> {{date($attend.date)}} </xf:cell>
+
+      <xf:cell> {{time($attend.in_time )}} </xf:cell>
+      <xf:cell> {{time($attend.out_time )}} </xf:cell>
+      <xf:cell>
+        {{$attend.comment != '' ? snippet($attend.comment, 30, {'stripBbCode':
+        true}) : phrase('noComments') }}
+      </xf:cell>
+
+      <xf:action
+        overlay="true"
+        ajax="true"
+        href="{{link('attendance/view', $attend) }}"
+        >{{ phrase('att_view') }}</xf:action
+      >
+    </xf:datarow>
+  </xf:foreach>
+</xf:macro>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="bb_code_tag_url_unfurl" modification_key="DC_LinkProxy_InsertUrlEncoded" description="Insert Encoded Url" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<a href="{$result.url}"]]></find>
+    <replace><![CDATA[<a href="{$urlEncoded}"]]></replace>
+  </modification>
+</template_modifications>

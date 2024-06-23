@@ -1,0 +1,40 @@
+<xf:selectrow 
+			  multiple="true" size="8"
+			  label="{$option.title}"
+			  hint="{$hintHtml}"
+			  explain="{$explainHtml}"
+			  html="{$listedHtml}"
+			  rowclass="{$rowClass}"
+			  name="{$inputName}"
+			  value="{$option.option_value}"
+			   style="width: 200px"
+			  >
+
+				<xf:option value="-1">{{ phrase('any') }}</xf:option>
+				<xf:option value="0">0 {{ phrase('(midnight)') }}</xf:option>
+				<xf:option value="1">1</xf:option>
+				<xf:option value="2">2</xf:option>
+				<xf:option value="3">3</xf:option>
+				<xf:option value="4">4</xf:option>
+				<xf:option value="5">5</xf:option>
+				<xf:option value="6">6</xf:option>
+				<xf:option value="7">7</xf:option>
+				<xf:option value="8">8</xf:option>
+				<xf:option value="9">9</xf:option>
+				<xf:option value="10">10</xf:option>
+				<xf:option value="11">11</xf:option>
+				<xf:option value="12">12 {{ phrase('(noon)') }}</xf:option>
+				<xf:option value="13">13</xf:option>
+				<xf:option value="14">14</xf:option>
+				<xf:option value="15">15</xf:option>
+				<xf:option value="16">16</xf:option>
+				<xf:option value="17">17</xf:option>
+				<xf:option value="18">18</xf:option>
+				<xf:option value="19">19</xf:option>
+				<xf:option value="20">20</xf:option>
+				<xf:option value="21">21</xf:option>
+				<xf:option value="22">22</xf:option>
+				<xf:option value="23">23</xf:option>
+
+				<xf:explain>{{ phrase('run_times_based_on_utc_time_zone') }}</xf:explain>
+			</xf:selectrow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="auction" controller="FS\AuctionPlugin:Auction"/>
+  <route route_type="admin" route_prefix="auction" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/" controller="FS\AuctionPlugin:Category" context="fsAuctionCategory"/>
+  <route route_type="public" route_prefix="auction" format=":int&lt;category_id,title&gt;/:int&lt;auction_id&gt;/:page" controller="FS\AuctionPlugin:AuctionListing" context="fs_auction_category"/>
+  <route route_type="public" route_prefix="auction" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/:int&lt;auction_id&gt;/" controller="FS\AuctionPlugin:Auction" context="fs_auction_category"/>
+</routes>

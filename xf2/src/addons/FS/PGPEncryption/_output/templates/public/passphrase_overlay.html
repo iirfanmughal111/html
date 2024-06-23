@@ -1,0 +1,24 @@
+<div class="overlay-container is-active" id="overlayer" style="overflow-y: scroll !important;">
+   <div class="overlay" tabindex="-1" role="dialog" aria-hidden="false">
+<div class="overlay-title">
+	{{ phrase('fs_passphrase_require_overlay') }}
+ </div>
+<xf:form action="{{ link('register/login-pass') }}"  ajax="true" class="block">
+    <div class="block-container">
+		<div class="block-body">
+			
+			<xf:formrow 
+				label="{{ phrase('fs_message') }}">{{ phrase('fs_passphrase_require_overlay_msg') }}</xf:formrow>
+			 	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" style="font-size:10px;"/>
+		      	<xf:textboxrow name="passphrase_1"  autosize="true"
+				label="{{ phrase('fs_passphrase1') }}" explain="{{ phrase('fs_passphrase_1_key_expl') }}" />
+					<xf:textboxrow name="passphrase_2"  autosize="true"
+				label="{{ phrase('fs_passphrase2') }}" explain="{{ phrase('fs_passphrase_2_key_expl') }}"/>
+				<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+						</div>
+			</div>		
+</xf:form>
+           </div>
+</div>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="downgradeGroup" format=":int&lt;usg_id&gt;/:page" controller="FS\UpgradeUserGroup:DowngradeUserGroup" context="fsDownGrade"/>
+  <route route_type="admin" route_prefix="upgradeGroup" format=":int&lt;usg_id&gt;/:page" controller="FS\UpgradeUserGroup:UpgradeUserGroup" context="fsUpgradeGroup"/>
+</routes>

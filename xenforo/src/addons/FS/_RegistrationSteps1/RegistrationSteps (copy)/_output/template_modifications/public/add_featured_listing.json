@@ -1,0 +1,9 @@
+{
+    "template": "forum_view",
+    "description": "add_featured_listing",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<div class=\"block-outer\"><xf:trim>.*?<\\/xf:trim><\\/div>/is",
+    "replace": "<xf:if is=\"$forum.getCompaninionThreadIds()\">\n<xf:include template=\"fs_register_featured_ads\" />\n</xf:if>\n\n$0"
+}

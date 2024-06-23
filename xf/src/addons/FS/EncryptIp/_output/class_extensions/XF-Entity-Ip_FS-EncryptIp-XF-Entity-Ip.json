@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Entity\\Ip",
+    "to_class": "FS\\EncryptIp\\XF\\Entity\\Ip",
+    "execute_order": 10,
+    "active": false
+}

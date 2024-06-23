@@ -1,0 +1,12 @@
+{
+    "parent_navigation_id": "",
+    "display_order": 1100,
+    "navigation_type_id": "node",
+    "type_config": {
+        "node_id": 9,
+        "with_children": false,
+        "node_title": true,
+        "extra_attributes": []
+    },
+    "enabled": true
+}

@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "fs_thread_add_thumbnail_btn",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:if is=\"$thread.canLockUnlock()\">",
+    "replace": "<xf:if is=\"$xf.visitor.canChangeThreadThumbnail()\">\n\t<a href=\"{{ link('threads/thumbnail', $thread) }}\" data-xf-click=\"overlay\" class=\"menu-linkRow\">{{ phrase('fs_add_thumbnail') }}</a>\n</xf:if>\n$0"
+}

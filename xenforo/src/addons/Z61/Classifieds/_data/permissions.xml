@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="classifieds" permission_id="add" permission_type="flag" interface_group_id="classifieds" display_order="16"/>
+  <permission permission_group_id="classifieds" permission_id="approveUnapprove" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="10"/>
+  <permission permission_group_id="classifieds" permission_id="ask_question" permission_type="flag" depend_permission_id="view" interface_group_id="classifieds" display_order="150"/>
+  <permission permission_group_id="classifieds" permission_id="clearSold" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="160"/>
+  <permission permission_group_id="classifieds" permission_id="closeAny" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="170"/>
+  <permission permission_group_id="classifieds" permission_id="closeOwnListing" permission_type="flag" interface_group_id="classifieds" display_order="40"/>
+  <permission permission_group_id="classifieds" permission_id="contactOwner" permission_type="flag" interface_group_id="classifieds" display_order="50"/>
+  <permission permission_group_id="classifieds" permission_id="deleteAny" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="40"/>
+  <permission permission_group_id="classifieds" permission_id="deleteAnyFeedback" permission_type="flag" depend_permission_id="viewFeedback" interface_group_id="classifiedsModeratorPermissions" display_order="140"/>
+  <permission permission_group_id="classifieds" permission_id="deleteOwn" permission_type="flag" interface_group_id="classifieds" display_order="20"/>
+  <permission permission_group_id="classifieds" permission_id="deleteOwnFeedback" permission_type="flag" depend_permission_id="viewFeedback" interface_group_id="classifieds" display_order="140"/>
+  <permission permission_group_id="classifieds" permission_id="editAny" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="50"/>
+  <permission permission_group_id="classifieds" permission_id="editAnyFeedback" permission_type="flag" depend_permission_id="viewFeedback" interface_group_id="classifiedsModeratorPermissions" display_order="130"/>
+  <permission permission_group_id="classifieds" permission_id="featureUnfeature" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="50"/>
+  <permission permission_group_id="classifieds" permission_id="hardDeleteAny" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="60"/>
+  <permission permission_group_id="classifieds" permission_id="inlineMod" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="70"/>
+  <permission permission_group_id="classifieds" permission_id="lockUnlock" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="50"/>
+  <permission permission_group_id="classifieds" permission_id="manageAnyTag" permission_type="flag" interface_group_id="classifieds" display_order="70"/>
+  <permission permission_group_id="classifieds" permission_id="manageOtherTagsOwnListing" permission_type="flag" interface_group_id="classifieds" display_order="90"/>
+  <permission permission_group_id="classifieds" permission_id="markSold" permission_type="flag" interface_group_id="classifieds" display_order="120"/>
+  <permission permission_group_id="classifieds" permission_id="purchaseFeature" permission_type="flag" interface_group_id="classifieds" display_order="20"/>
+  <permission permission_group_id="classifieds" permission_id="react" permission_type="flag" interface_group_id="classifieds" display_order="14"/>
+  <permission permission_group_id="classifieds" permission_id="reassign" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="40"/>
+  <permission permission_group_id="classifieds" permission_id="stickUnstick" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="50"/>
+  <permission permission_group_id="classifieds" permission_id="submitWithoutApproval" permission_type="flag" interface_group_id="classifieds" display_order="30"/>
+  <permission permission_group_id="classifieds" permission_id="tagAnyListing" permission_type="flag" interface_group_id="classifieds" display_order="70"/>
+  <permission permission_group_id="classifieds" permission_id="tagOwnListing" permission_type="flag" interface_group_id="classifieds" display_order="60"/>
+  <permission permission_group_id="classifieds" permission_id="undelete" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="110"/>
+  <permission permission_group_id="classifieds" permission_id="updateOwn" permission_type="flag" interface_group_id="classifieds" display_order="18"/>
+  <permission permission_group_id="classifieds" permission_id="updateOwnFeedback" permission_type="flag" depend_permission_id="viewFeedback" interface_group_id="classifieds" display_order="130"/>
+  <permission permission_group_id="classifieds" permission_id="uploadAttachment" permission_type="flag" interface_group_id="classifieds" display_order="110"/>
+  <permission permission_group_id="classifieds" permission_id="view" permission_type="flag" interface_group_id="classifieds" display_order="10"/>
+  <permission permission_group_id="classifieds" permission_id="viewAttachment" permission_type="flag" interface_group_id="classifieds" display_order="12"/>
+  <permission permission_group_id="classifieds" permission_id="viewAwaitingPayment" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="150"/>
+  <permission permission_group_id="classifieds" permission_id="viewDeleted" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="10"/>
+  <permission permission_group_id="classifieds" permission_id="viewFeedback" permission_type="flag" interface_group_id="classifieds" display_order="120"/>
+  <permission permission_group_id="classifieds" permission_id="viewModerated" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="40"/>
+  <permission permission_group_id="classifieds" permission_id="viewPurchaseInfo" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="120"/>
+  <permission permission_group_id="classifieds" permission_id="warn" permission_type="flag" interface_group_id="classifiedsModeratorPermissions" display_order="100"/>
+</permissions>

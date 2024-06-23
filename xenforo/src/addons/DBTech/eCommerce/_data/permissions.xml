@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="dbtechEcommerce" permission_id="add" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="60"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="addWithoutApproval" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="65"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="addressWithoutApproval" permission_type="flag" depend_permission_id="view" interface_group_id="dbtechEcommerce" display_order="28"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="approveUnapprove" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="70"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="contentVote" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="55"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="deleteAny" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="10"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="deleteAnyReview" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="30"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="deleteOwn" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="100"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="download" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="30"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="editAny" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="40"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="hardDeleteAny" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="20"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="inlineMod" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="1"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="manageAnyTag" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="50"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="manageOthersTagsOwnProd" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="87"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="purchase" permission_type="flag" depend_permission_id="view" interface_group_id="dbtechEcommerce" display_order="25"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="rate" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="50"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="react" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="40"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="reassign" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="45"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="tagAnyProduct" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="86"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="tagOwnProduct" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="85"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="undelete" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="15"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="updateAny" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="42"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="updateOwn" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="80"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="uploadProductAttach" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="70"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="useCoupons" permission_type="flag" depend_permission_id="view" interface_group_id="dbtechEcommerce" display_order="27"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="view" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="10"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="viewDeleted" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="5"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="viewIncomeStats" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="150"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="viewModerated" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="60"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="viewProductAttach" permission_type="flag" interface_group_id="dbtechEcommerce" display_order="20"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="viewScheduled" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="3"/>
+  <permission permission_group_id="dbtechEcommerce" permission_id="warn" permission_type="flag" interface_group_id="dbtechEcommerceModerator" display_order="90"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="addLicenses" permission_type="flag" depend_permission_id="viewLicenses" interface_group_id="dbtechEcommerceAdmin" display_order="200"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="addStoreCredit" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="500"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="assignCart" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="400"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="deleteLicenses" permission_type="flag" depend_permission_id="viewLicenses" interface_group_id="dbtechEcommerceAdmin" display_order="300"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="downloadAnyLicenses" permission_type="flag" depend_permission_id="viewLicenses" interface_group_id="dbtechEcommerceAdmin" display_order="325"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="editAnyLicenses" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="150"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="viewAnyIncomeStats" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="600"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="viewDownloadLog" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="350"/>
+  <permission permission_group_id="dbtechEcommerceAdmin" permission_id="viewLicenses" permission_type="flag" interface_group_id="dbtechEcommerceAdmin" display_order="100"/>
+</permissions>

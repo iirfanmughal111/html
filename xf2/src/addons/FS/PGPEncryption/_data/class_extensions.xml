@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XF\Admin\Controller\Login" to_class="FS\PGPEncryption\XF\Admin\Controller\Login" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\User" to_class="FS\PGPEncryption\Entity\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Account" to_class="FS\PGPEncryption\XF\Pub\Controller\Account" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Login" to_class="FS\PGPEncryption\XF\Pub\Controller\Login" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\LostPassword" to_class="FS\PGPEncryption\XF\Pub\Controller\LostPassword" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Member" to_class="FS\PGPEncryption\XF\Pub\Controller\Member" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Register" to_class="FS\PGPEncryption\XF\Pub\Controller\Register" execute_order="10" active="1"/>
+  <extension from_class="XF\Service\User\Registration" to_class="FS\PGPEncryption\XF\Service\User\Registration" execute_order="10" active="1"/>
+</class_extensions>

@@ -1,0 +1,9 @@
+{
+    "template": "account_wrapper",
+    "description": "add_deposit_withdraw_button_profile_section",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<a class=\"blockLink {{ \\$pageSelected == 'privacy' \\? 'is-selected' : '' }}\" href=\"{{ link\\('account\\/privacy'\\) }}\">.*?<\\/a>/is",
+    "replace": "$0\n<a class=\"blockLink {{ \\$pageSelected == 'escrow/deposit' ? 'is-selected' : '' }}\" href=\"{{ link('escrow/deposit') }}\">\n\t\t\t\t\t{{ phrase('fs_escrow_amount_deposit') }}\n</a>\n<a class=\"blockLink {{ \\$pageSelected == 'escrow/withdraw' ? 'is-selected' : '' }}\" href=\"{{ link('escrow/withdraw') }}\">\n\t\t\t\t\t{{ phrase('fs_escrow_amount_withdraw') }}\n</a>"
+}

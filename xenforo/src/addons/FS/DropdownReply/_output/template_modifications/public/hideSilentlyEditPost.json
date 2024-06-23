@@ -1,0 +1,9 @@
+{
+    "template": "post_edit",
+    "description": "hideSilentlyEditPost",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t<xf:if is=\"$post.canEditSilently()\">\n\t\t\t\t<xf:formrow rowtype=\"{{ $quickEdit ? 'fullWidth noLabel' : '' }}\">\n\t\t\t\t\t<xf:macro template=\"helper_action\" name=\"edit_type\" arg-canEditSilently=\"{$post.canEditSilently()}\" />\n\t\t\t\t</xf:formrow>\n\t\t\t</xf:if>",
+    "replace": "<xf:if is=\"$thread\">\t\n<xf:if is=\"$thread.is_dropdown_active\">\n\t\t \n\t\t<xf:else />\n\t\t$0\n\t\t\n</xf:if>\n\t\n<xf:else />\n\t\t$0\n\t</xf:if>"
+}

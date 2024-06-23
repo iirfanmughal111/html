@@ -1,0 +1,6 @@
+{
+    "permission_type": "flag",
+    "interface_group_id": "fs_move_Thread_perms_group",
+    "display_order": 1,
+    "depend_permission_id": ""
+}

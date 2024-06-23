@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="public" route_prefix="forumGroups" format=":int&lt;node_id,title&gt;/:int&lt;moderator_id&gt;/:page" controller="FS\ForumGroups:ForumGroups" context="fs_forumGroups_index"/>
+</routes>

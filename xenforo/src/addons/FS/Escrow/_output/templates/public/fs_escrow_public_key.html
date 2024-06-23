@@ -1,0 +1,14 @@
+<xf:title>{{phrase('fs_require_public_key')}}</xf:title>
+
+<xf:form action="{{ link('escrow/withdraw-verify') }}"  ajax="true" class="block">
+    <div class="block-container">
+		<div class="block-body">
+				<input type="hidden" name="withdraw_amount" value="{$data.withdraw_amount}" />
+				<input type="hidden" name="destination_address" value="{$data.destination_address}" />
+			 	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" style="font-size:10px;"/>
+				<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>		
+</xf:form>

@@ -1,0 +1,1 @@
+Enter default auto redirection time in seconds.

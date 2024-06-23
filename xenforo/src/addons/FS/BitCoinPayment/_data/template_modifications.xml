@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="add_js_libray_of_blockonomics" description="add_js_libray_of_blockonomics" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="crumb" arg-href="!" arg-value="!" arg-position="{{ 0 }}">.*?<\/xf:macro>/is]]></find>
+    <replace><![CDATA[$0
+<script src="https://www.blockonomics.co/js/pay_button.js"></script>]]></replace>
+  </modification>
+  <modification type="public" template="account_visitor_menu" modification_key="add_ugrade_btn" description="add_ugrade_btn" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<li><a href="{{ link('account/ignored') }}" class="menu-linkRow">{{ phrase('ignoring') }}</a></li>]]></find>
+    <replace><![CDATA[
+$0
+<li><a href="{{ link('upgrade') }}" class="menu-linkRow">{{ phrase('fs_bitcoin_btn_txt') }}</a></li>]]></replace>
+  </modification>
+</template_modifications>

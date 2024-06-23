@@ -1,0 +1,6 @@
+{
+    "permission_type": "flag",
+    "interface_group_id": "fs_Thread_Thumbnail_perms",
+    "display_order": 1,
+    "depend_permission_id": ""
+}

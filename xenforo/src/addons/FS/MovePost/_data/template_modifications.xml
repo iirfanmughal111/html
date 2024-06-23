@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="post_macros" modification_key="fs_move_post_btn" description="fs_move_post_btn" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$thread\.canReply\(\) OR \$thread.canReplyPreReg\(\)">.*?<\/xf:if>/is]]></find>
+    <replace><![CDATA[			<xf:if is="{{ $xf.visitor.hasPermission('fs_move_post_perm_group', 'fs_move_post_as_thread') && ($xf.visitor.user_id==$post.user_id OR $xf.visitor.is_admin OR $xf.visitor.is_moderator) }}">
+			<a href="{{ link('posts/move-post', $post) }}"
+					class="actionBar-action"
+					title="{{ phrase('fs_post_as_thread')|for_attr }}"
+					data-xf-click="overlay"
+					><i class="far fa-share"></i> {{ phrase('fs_post_as_thread') }} </a>
+			
+			
+			</xf:if>
+$0
+]]></replace>
+  </modification>
+</template_modifications>

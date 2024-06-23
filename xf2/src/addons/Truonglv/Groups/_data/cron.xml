@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="tl_groups_everyTwoHours" cron_class="Truonglv\Groups\Cron\CleanUp" cron_method="everyTwoHours" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0,2,4,6,8,10,12,14,16,18,20,22],"minutes":[0]}]]></entry>
+  <entry entry_id="tlg_autoHourly" cron_class="Truonglv\Groups\Cron\Auto" cron_method="runHourly" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[0]}]]></entry>
+  <entry entry_id="tlg_runMinutely" cron_class="Truonglv\Groups\Cron\CleanUp" cron_method="runEveryFiveMinutes" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[0,5,10,15,20,25,30,35,40,45,50,55]}]]></entry>
+</cron>

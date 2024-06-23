@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="EMU_mediaurl" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Media Url]]></phrase>
+  <phrase title="emw_upload_video" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload Video]]></phrase>
+  <phrase title="option.Domainbunnynet" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[bunny net domain]]></phrase>
+  <phrase title="option.apikey" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[api key bunny]]></phrase>
+  <phrase title="option.collectionid" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Collection id]]></phrase>
+  <phrase title="option.thumbnailcdnhost" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[cdn host name of thumbnail]]></phrase>
+  <phrase title="option.videolibraryid" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[ID of Video library]]></phrase>
+  <phrase title="option_explain.Domainbunnynet" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[domain name for get the video]]></phrase>
+  <phrase title="option_explain.apikey" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[api key of video library]]></phrase>
+  <phrase title="option_explain.collectionid" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[collection id where the video is saved]]></phrase>
+  <phrase title="option_explain.thumbnailcdnhost" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[put the cdn host name of thumbnail]]></phrase>
+  <phrase title="option_explain.videolibraryid" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[put the video id library]]></phrase>
+  <phrase title="option_group.EMU" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[bunnynet]]></phrase>
+  <phrase title="option_group_description.EMU" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[bunny net api credentials]]></phrase>
+</phrases>

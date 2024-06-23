@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="z61ClassifiedsAuthorOtherListingsCount" edit_format="spinbox" data_type="unsigned_integer">
+    <default_value>5</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="20"/>
+  </option>
+  <option option_id="z61ClassifiedsCloseExpiredListings" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="z61Classifieds" display_order="12"/>
+  </option>
+  <option option_id="z61ClassifiedsFeedbackPairs" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="z61Classifieds" display_order="60"/>
+  </option>
+  <option option_id="z61ClassifiedsFeedbackPerPage" edit_format="spinbox" data_type="integer">
+    <default_value>5</default_value>
+    <edit_format_params>min=5</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="25"/>
+  </option>
+  <option option_id="z61ClassifiedsGoogleApi" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="z61Classifieds" display_order="211"/>
+  </option>
+  <option option_id="z61ClassifiedsListDefaultOrder" edit_format="select" data_type="string">
+    <default_value>expiration_date</default_value>
+    <edit_format_params>last_edit_date={{ phrase('last_updated') }}
+listing_date={{ phrase('z61_classifieds_submission_date') }}
+expiration_date={{ phrase('z61_classifieds_expiration_date') }}
+title={{ phrase('title') }}</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="30"/>
+  </option>
+  <option option_id="z61ClassifiedsListLayout" edit_format="radio" data_type="string">
+    <default_value>list_view</default_value>
+    <edit_format_params>list_view={{ phrase('z61_classifieds_list_view_layout') }}
+grid_view={{ phrase('z61_classifieds_grid_view_layout') }}</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="30"/>
+  </option>
+  <option option_id="z61ClassifiedsListingCurrencies" edit_format="textbox" data_type="string">
+    <default_value>usd
+cad
+aud
+gbp
+eur</default_value>
+    <edit_format_params>rows=2</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="50"/>
+  </option>
+  <option option_id="z61ClassifiedsListingDeleteThreadAction" edit_format="template" data_type="array">
+    <default_value>{"action":"close","update_title":"1","title_template":"{title} [Deleted]","add_post":"1"}</default_value>
+    <edit_format_params>option_template_z61ClassifiedsListingDeleteThreadAction</edit_format_params>
+    <sub_options>action
+update_title
+title_template
+add_post</sub_options>
+    <relation group_id="z61Classifieds" display_order="40"/>
+  </option>
+  <option option_id="z61ClassifiedsListingsPerPageGrid" edit_format="spinbox" data_type="positive_integer">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="31"/>
+  </option>
+  <option option_id="z61ClassifiedsListingsPerPageList" edit_format="spinbox" data_type="positive_integer">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="z61Classifieds" display_order="32"/>
+  </option>
+  <option option_id="z61ClassifiedsShowAvatarIfNoCover" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="z61Classifieds" display_order="61"/>
+  </option>
+</options>

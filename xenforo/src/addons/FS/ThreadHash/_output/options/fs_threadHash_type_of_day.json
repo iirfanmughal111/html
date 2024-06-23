@@ -1,0 +1,16 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "option_template_fs_threadHash_type_of_day",
+    "data_type": "array",
+    "sub_options": [
+        "type",
+        "day_type"
+    ],
+    "validation_class": "FS\\ThreadHash\\XF\\Option\\ThreadHashOption",
+    "validation_method": "CronDayType",
+    "advanced": false,
+    "default_value": "{\"type\":\"dom\",\"day_type\":\"-1\"}",
+    "relations": {
+        "fs_threadHash": 1
+    }
+}

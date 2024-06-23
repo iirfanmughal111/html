@@ -1,0 +1,48 @@
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<mail:subject>
+	{{ phrase('fs_register_male_sub') }}
+</mail:subject>
+<p>
+	{{ phrase('prefered_contact_method') }} : {$contact}
+</p>
+<table>
+  <tr>
+    <td>{{ phrase('email_request_type') }} </td>
+    <td>{{ phrase('email_appointment') }}</td>
+  </tr>
+  <tr>
+    <td> {{ phrase('email_desired_date') }}</td>
+    <td>{$date}</td>
+
+  </tr>
+  <tr>
+    <td> {{ phrase('email_desired_time') }}</td>
+    <td>{$time}</td>
+  </tr>
+  <tr>
+    <td> {{ phrase('email_appointment_duration') }}</td>
+    <td>{$duration}</td>
+  </tr>
+	  <tr>
+    <td> {{ phrase('email_appointment_type') }}</td>
+    <td>{$type}</td>
+  </tr>
+  <tr>
+    <td>{{ phrase('email_desired_city') }}</td>
+    <td>{$city}</td>
+  </tr>
+</table>

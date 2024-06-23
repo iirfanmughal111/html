@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[FS] Search Node Forum",
+    "description": "",
+    "version_id": 1020500,
+    "version_string": "1.2.5 Alpha",
+    "dev": "",
+    "dev_url": "",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fas fa-search"
+}

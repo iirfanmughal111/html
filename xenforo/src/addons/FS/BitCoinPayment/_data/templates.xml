@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="fs_BitCoinPayment_deposit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:css>
+	.paymnet_btc_img{
+	margin-left:3px;
+	display:inline-block;
+	width:25px;
+	height:25px;
+	}
+	
+
+</xf:css>
+
+<xf:title>{{phrase('fs_bitcoin_title')}}</xf:title>
+<xf:css src="notices.less"></xf:css>
+<div class="block-container">
+	<div class="block-body block-row">
+		<h3>{{phrase('fs_bitcoin_title')}}</h3>
+		{{phrase('fs_bitcoin_upgrade_body')}}
+		<div class="block-warning">
+			<ul class="notices notices--block js-notices" data-xf-init="notices" data-type="block" data-scroll-interval="6">
+				<li class="notice js-notice notice--primary notice--hasImage notice--hidewide is-vis-processed" data-notice-id="1" data-delay-duration="0" data-display-duration="0" data-auto-dismiss="" data-visibility="wide">
+					<div class="notice-content">
+						{{phrase('fs_bitcoin_warning_msg')}}
+					</div>
+				</li>
+			</ul>
+		</div>
+		<xf:if is="$xf.visitor.account_type==1">
+		<a href="" class="blockoPayBtn button button--icon " data-toggle="modal" data-uid=7d7e97f3cf4d403c>
+			{{ phrase('fs_bitcoin_btn_text') }}  
+			<img class="paymnet_btc_img " src="{{ base_url('styles/FS/BitCoinPayment/btc.png') }}">
+		</a>
+		<xf:elseif is="$xf.visitor.account_type==2" />
+		<a href="" class="blockoPayBtn  button button--icon " data-toggle="modal" data-uid=a4757403ff494844>
+			{{ phrase('fs_bitcoin_btn_text') }}  
+			<img class="paymnet_btc_img " src="{{ base_url('styles/FS/BitCoinPayment/btc.png') }}">
+		</a>
+		</xf:if>
+
+	</div>
+</div>]]></template>
+</templates>

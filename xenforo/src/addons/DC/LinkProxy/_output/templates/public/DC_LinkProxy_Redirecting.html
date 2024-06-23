@@ -1,0 +1,63 @@
+<xf:css src="DC_LinkProxy.less" />
+<xf:css>
+	.count {
+		-webkit-animation: fadeout .5s calc({$redirect_time} + 1) 1 linear;
+    	-webkit-animation-fill-mode: forwards;	
+	}
+	
+	.l-half:before, .r-half:before
+	{
+		-webkit-animation-duration: {$redirect_time}s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+	}
+</xf:css>
+<xf:title>{{ phrase('DC_LinkProxy_Redirecting') }}</xf:title>
+
+<xf:h1 hidden="true" />
+<xf:head option="metaNoindex"><meta name="robots" content="noindex" /></xf:head>
+
+<div class="DC_LinkProxy">
+	<div class="DC_LinkProxy__wrapper">
+		<xf:if is="{$xf.options.fs_link_html_position}">
+			<div class="custom_html">
+			{{$html|raw}}
+				
+			</div>
+		</xf:if>
+		<h3 class="DC_LinkProxy__title">{{ phrase('DC_LinkProxy_title') }}</h3>
+		<div class="DC_LinkProxy__content">
+			<div class="message">
+				{{ phrase('DC_LinkProxy_you_are_going_to') }}: <b>{$url}</b>
+				<br/><br/>
+				{{ phrase('DC_LinkProxy_message') }}
+			</div>
+			
+			<xf:if is="{$xf.options.DC_LinkProxy_AutoRedirection}">
+				<xf:include template="DC_LinkProxy.js" />
+				<div class="message redirecting">
+					{{ phrase('DC_LinkProxy_you_will_be_redirected_in') }}
+					
+					<div class="circle">
+						<div class="count"><span id="DC_LinkProxy_AutoRedirection__timer">{$redirect_time}</span></div>
+						<div class="l-half"></div>
+						<div class="r-half"></div>
+					</div>
+				
+				</div>
+			</xf:if>
+				
+			<xf:button href="{$url}" rel="nofollow" id="continue_btn" class="DC_LinkProxy_Continune d-none">{{ phrase('DC_LinkProxy_continune') }}</xf:button>
+			
+		</div>
+		<xf:if is="!{$xf.options.fs_link_html_position}">
+			<div class="custom_html">
+			{{$html|raw}}
+				
+			</div>
+		</xf:if>
+		
+		
+	</div>
+</div>

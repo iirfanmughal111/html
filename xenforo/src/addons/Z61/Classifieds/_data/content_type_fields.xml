@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="classifieds_category" field_name="entity">Z61\Classifieds:Category</field>
+  <field content_type="classifieds_category" field_name="permission_handler_class">Z61\Classifieds\Permission\CategoryPermissions</field>
+  <field content_type="classifieds_category" field_name="phrase">z61_classifieds_classifieds_category</field>
+  <field content_type="classifieds_category" field_name="sitemap_handler_class">Z61\Classifieds\Sitemap\Category</field>
+  <field content_type="classifieds_listing" field_name="alert_handler_class">Z61\Classifieds\Alert\Listing</field>
+  <field content_type="classifieds_listing" field_name="approval_queue_handler_class">Z61\Classifieds\ApprovalQueue\Listing</field>
+  <field content_type="classifieds_listing" field_name="attachment_handler_class">Z61\Classifieds\Attachment\Listing</field>
+  <field content_type="classifieds_listing" field_name="bookmark_handler_class">Z61\Classifieds\Bookmark\Listing</field>
+  <field content_type="classifieds_listing" field_name="entity">Z61\Classifieds:Listing</field>
+  <field content_type="classifieds_listing" field_name="find_new_handler_class">Z61\Classifieds\FindNew\Listing</field>
+  <field content_type="classifieds_listing" field_name="inline_mod_handler_class">Z61\Classifieds\InlineMod\Listing</field>
+  <field content_type="classifieds_listing" field_name="moderator_log_handler_class">Z61\Classifieds\ModeratorLog\Listing</field>
+  <field content_type="classifieds_listing" field_name="news_feed_handler_class">Z61\Classifieds\NewsFeed\Listing</field>
+  <field content_type="classifieds_listing" field_name="phrase">z61_classifieds_classifieds_listing</field>
+  <field content_type="classifieds_listing" field_name="reaction_handler_class">Z61\Classifieds\Reaction\Listing</field>
+  <field content_type="classifieds_listing" field_name="report_handler_class">Z61\Classifieds\Report\Listing</field>
+  <field content_type="classifieds_listing" field_name="search_handler_class">Z61\Classifieds\Search\Data\Listing</field>
+  <field content_type="classifieds_listing" field_name="sitemap_handler_class">Z61\Classifieds\Sitemap\Listing</field>
+  <field content_type="classifieds_listing" field_name="spam_handler_class">Z61\Classifieds\Spam\Cleaner\Listing</field>
+  <field content_type="classifieds_listing" field_name="tag_handler_class">Z61\Classifieds\Tag\Listing</field>
+  <field content_type="classifieds_question" field_name="alert_handler_class">Z61\Classifieds\Alert\Question</field>
+  <field content_type="classifieds_question" field_name="reaction_handler_class">Z61\Classifieds\Reaction\Question</field>
+</content_type_fields>

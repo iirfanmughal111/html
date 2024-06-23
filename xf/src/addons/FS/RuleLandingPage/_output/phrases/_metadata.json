@@ -1,0 +1,20 @@
+{
+    "fs_album.txt": {
+        "global_cache": false,
+        "version_id": 1010010,
+        "version_string": "1.1.0 Alpha",
+        "hash": "c4f8393e0c007b946261398d0314a257"
+    },
+    "fs_header_title.txt": {
+        "global_cache": false,
+        "version_id": 1010010,
+        "version_string": "1.1.0 Alpha",
+        "hash": "da0b1f4b65a2a814ff7fbf768ae51f32"
+    },
+    "fs_landing_page_rules.txt": {
+        "global_cache": false,
+        "version_id": 1010010,
+        "version_string": "1.1.0 Alpha",
+        "hash": "bf9222a49a2a3500b3b236873c69f808"
+    }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="option_template_fs_alt_flags" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:formrow
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}"
+	rowclass="{$rowClass}">
+	
+<xf:radio name="{$inputName}[en]" value="{$option.option_value.en}">
+	<xf:option value="">Default flag (English)</xf:option>
+	<xf:option value="usa">USA flag (English)</xf:option>
+	<xf:option value="canada">Canada flag (English)</xf:option>
+</xf:radio>
+		
+
+	
+	
+<xf:radio name="{$inputName}[es]" value="{$option.option_value.es}">
+	<xf:option value="">Default flag (Spanish)</xf:option>
+	<xf:option value="mexico">Mexico flag (Spanish)</xf:option>
+	<xf:option value="argentina">Argentina flag (Spanish)</xf:option>
+	<xf:option value="colombia">Colombia flag (Spanish)</xf:option>
+</xf:radio>
+	
+</xf:formrow>
+
+	<hr class="formRowSep" />]]></template>
+  <template type="admin" title="option_template_fs_languages" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:checkboxrow
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}"
+	rowclass="{$rowClass}"
+	listclass="listColumns">
+	
+
+<xf:set var="$languages" value="{{ {"af":"Afrikaans","sq":"Albanian","am":"Amharic","ar":"Arabic","hy":"Armenian","az":"Azerbaijani","eu":"Basque","be":"Belarusian","bn":"Bengali","bs":"Bosnian","bg":"Bulgarian","ca":"Catalan","ceb":"Cebuano","ny":"Chichewa","zh-CN":"Chinese (Simplified)","zh-TW":"Chinese (Traditional)","co":"Corsican","hr":"Croatian","cs":"Czech","da":"Danish","nl":"Dutch","en":"English","eo":"Esperanto","et":"Estonian","tl":"Filipino","fi":"Finnish","fr":"French","fy":"Frisian","gl":"Galician","ka":"Georgian","de":"German","el":"Greek","gu":"Gujarati","ht":"Haitian Creole","ha":"Hausa","haw":"Hawaiian","iw":"Hebrew","hi":"Hindi","hmn":"Hmong","hu":"Hungarian","is":"Icelandic","ig":"Igbo","id":"Indonesian","ga":"Irish","it":"Italian","ja":"Japanese","jw":"Javanese","kn":"Kannada","kk":"Kazakh","km":"Khmer","ko":"Korean","ku":"Kurdish (Kurmanji)","ky":"Kyrgyz","lo":"Lao","la":"Latin","lv":"Latvian","lt":"Lithuanian","lb":"Luxembourgish","mk":"Macedonian","mg":"Malagasy","ms":"Malay","ml":"Malayalam","mt":"Maltese","mi":"Maori","mr":"Marathi","mn":"Mongolian","my":"Myanmar (Burmese)","ne":"Nepali","no":"Norwegian","ps":"Pashto","fa":"Persian","pl":"Polish","pt":"Portuguese","pa":"Punjabi","ro":"Romanian","ru":"Russian","sm":"Samoan","gd":"Scottish Gaelic","sr":"Serbian","st":"Sesotho","sn":"Shona","sd":"Sindhi","si":"Sinhala","sk":"Slovak","sl":"Slovenian","so":"Somali","es":"Spanish","su":"Sundanese","sw":"Swahili","sv":"Swedish","tg":"Tajik","ta":"Tamil","te":"Telugu","th":"Thai","tr":"Turkish","uk":"Ukrainian","ur":"Urdu","uz":"Uzbek","vi":"Vietnamese","cy":"Welsh","xh":"Xhosa","yi":"Yiddish","yo":"Yoruba","zu":"Zulu"} }}" />
+	
+	
+	<xf:foreach loop="$languages" key="$langCode" value="$langTitle">
+		<xf:option value="{{$langCode}}"  name="{$inputName}[include_languages][]" selected="{{ in_array($langCode,$option.option_value.include_languages) }}">
+			{$langTitle}
+		</xf:option>
+	</xf:foreach>
+</xf:checkboxrow>]]></template>
+  <template type="public" title="fs_t_google_translate" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:css src="fs_t_google_translate.less" />
+
+
+<script type="text/javascript">
+	
+	let includeLanguages = {$xf.options.fs_includeLanguages.include_languages|json|raw};
+	
+	let alternativeFlags = {$xf.options.fs_t_alternativeFlags|json|raw};
+	
+	let fs_lang_positions = "{{ $xf.options.fs_t_showLanguage }}".split('_');
+	
+	let	widget_look ="{{ $xf.options.fs_t_widgetLook }}";	
+	if(widget_look == 'globe')
+		flags_location = "{{ base_url('styles/FS/Translator/flags/svg/') }}";
+	else
+		flags_location = "{{ base_url('styles/FS/Translator/flags/') }}";
+	
+	
+	var fs_gtranslateSettings = {
+	
+       	default_language: "{{ $xf.options.fs_t_defaultLanguage }}",
+      	switcher_horizontal_position: fs_lang_positions[1],
+		switcher_vertical_position: fs_lang_positions[0],
+        horizontal_position: fs_lang_positions[1],
+		vertical_position: fs_lang_positions[0],
+        float_switcher_open_direction: "{{ $xf.options.fs_t_openDirection }}",
+        switcher_open_direction: "{{ $xf.options.fs_t_openDirection }}",
+		detect_browser_language: {{ $xf.options.fs_t_autoSwitch }},
+		flags_location : flags_location,
+      	native_language_names: {{ $xf.options.fs_t_NativeLanguage }},
+        select_language_label: 'Select Language',
+        flag_style:  "{{ $xf.options.fs_t_FlagStyle }}",
+       	languages: includeLanguages,
+       	dropdown_languages: includeLanguages,
+   	  	alt_flags: alternativeFlags,
+		
+    };
+	
+</script>
+
+
+<div id="google_translate_element2"></div>
+<div class="fs_translate_wrapper"></div>
+
+
+<xf:if is="$xf.options.fs_t_widgetLook">
+	<xf:js src="FS/Translator/{$xf.options.fs_t_widgetLook}.js" />
+</xf:if>
+
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+		new google.translate.TranslateElement({pageLanguage: '{{ $xf.options.fs_t_defaultLanguage }}'}, 'google_translate_element2');
+	}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>]]></template>
+  <template type="public" title="fs_t_google_translate.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[.goog-te-gadget,.gglobe {
+float: right;
+}
+
+.goog-te-banner-frame {
+	z-index: 0 !important;
+}]]></template>
+</templates>

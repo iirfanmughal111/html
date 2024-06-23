@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "attendance",
+    "sub_name": "",
+    "format": ":int<attendance_id>/:page",
+    "build_class": "",
+    "build_method": "",
+    "controller": "Pad:Attendance",
+    "context": "attendance",
+    "action_prefix": ""
+}

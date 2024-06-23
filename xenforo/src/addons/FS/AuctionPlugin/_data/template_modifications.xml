@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="admin" template="category_tree_macros" modification_key="fsAuctionCategoryRemovePermissions" description="fsAuctionCategoryRemovePermissions" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$permissionContentType">.*?<\/xf:if>/si]]></find>
+    <replace><![CDATA[ ]]></replace>
+  </modification>
+  <modification type="public" template="custom_fields_macros" modification_key="fs_auction_post_thread" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<dl class="{\$valueClass}" data-field="{\$fieldId}">.*?<\/dl>/is]]></find>
+    <replace><![CDATA[<xf:if is="$fieldDefinition.field_id!='bumping_rules'">
+<xf:if is="$fieldDefinition.field_id =='auction_guidelines'">
+	<dl class="{$valueClass}" data-field="{$fieldId}">
+		<dt>{$fieldDefinition.title}</dt>
+		<dd>{{ phrase('auction_guidlines_explain') }}</dd>
+	</dl>
+<xf:else />
+$0
+</xf:if>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="forum_post_thread" modification_key="fs_auction_post_thread_add_date" description="add Date and time" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="type_fields".*?arg-subContext="full" \/>/is]]></find>
+    <replace><![CDATA[<xf:if is="$forum.node_id == $xf.options.fs_auction_applicable_forum">
+	<xf:formrow label="{{ phrase('auction_endDate') }}" rowtype="input" hint="{{ phrase('auction_required') }}" explain="{{ phrase('auction_endDate_explain') }}"> 
+	         <div class="inputGroup">         
+			 <xf:dateinput name="ends_on" value="{{ $data.ends_on ? date($data.ends_on, 'Y-m-d') : date($xf.time, 'Y-m-d')}}"   required="true" />            
+			 <span class="inputGroup-splitter"></span> 
+			 <span class="inputGroup" dir="ltr">  
+			 <xf:textbox name="ends_on_time" class="input--date time start" required="true" type="time" value="{{$data.ends_on ? $data.getFormatedTime() : ''}}"data-xf-init="time-picker" data-moment="{$timeFormat}" /></span>          
+			 </div>        
+			 </xf:formrow>
+			 <xf:hiddenval name="category_id" value="{$category_id}" />
+			 </xf:if>
+			 
+			 $0]]></replace>
+  </modification>
+  <modification type="public" template="forum_post_thread" modification_key="fs_auction_post_thread_add_default_prefix_id" description="fs_auction_post_thread_add_default_prefix_id" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[prefix-value="{{ $forum.draft_thread.prefix_id ?: ($thread.prefix_id ?: $forum.default_prefix_id) }}"]]></find>
+    <replace><![CDATA[prefix-value="{{ $forum.node_id == $xf.options.fs_auction_applicable_forum ? $xf.options.auction_thread_prefix_id : ($forum.draft_thread.prefix_id ?: ($thread.prefix_id ?: $forum.default_prefix_id)) }}"]]></replace>
+  </modification>
+  <modification type="public" template="post_edit" modification_key="fs_auction_post_thread_edit_date" description="fs_auction_post_thread_edit_date" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:formrow rowtype="{{ \$quickEdit \? 'fullWidth noLabel mergePrev' : '' }}">.*?<\/xf:formrow>/is]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="$forum.node_id == $xf.options.fs_auction_applicable_forum">
+			 <xf:formrow label="{{ phrase('auction_endDate') }}" rowtype="input" hint="{{ phrase('auction_required') }}" explain="{{ phrase('auction_endDate_explain') }}"> 
+	         <div class="inputGroup">         
+			 <xf:dateinput name="ends_on" value="{{ $thread.auction_end_date ? $thread.getFormatedDate() : date($xf.time, 'Y-m-d')}}"   required="true" />            
+			 <span class="inputGroup-splitter"></span> 
+			 <span class="inputGroup" dir="ltr">  
+			 <xf:textbox name="ends_on_time" class="input--date time start" required="true" type="time" value="{{$thread.auction_end_date ? $thread.getFormatedTime() : ''}}"data-xf-init="time-picker" data-moment="{$timeFormat}" /></span>          
+			 </div>        
+			 </xf:formrow>
+			 </xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="fs_auction_post_thread_view_date" description="fs_auction_post_thread_view_date" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$post\.isFirstPost\(\)">.*?<\/xf:if>/is]]></find>
+    <replace><![CDATA[<xf:if is="$thread.Forum.node_id == $xf.options.fs_auction_applicable_forum">
+		<div class="message-fields message-fields--after">
+				<dl class="pairs pairs--columns pairs--fixedSmall pairs--customField" data-field="threadCustomField">
+					<dt>{{ phrase('auction_endDate') }}</dt>
+					<dd>
+						{{$thread.getFormatedTime12()}}
+				
+					</dd>
+				</dl>
+			
+			</div>
+		</xf:if>
+
+$0]]></replace>
+  </modification>
+</template_modifications>

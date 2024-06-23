@@ -1,0 +1,27 @@
+{
+    "admin/IndexAdminAttendance.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "fc8a1c172aaa87040f4206ad6c51132e"
+    },
+    "admin/viewAttendance.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a25cb8ba96d2262a4c5890b6a1a790a5"
+    },
+    "public/addNote.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "88d53471430b8c4921cf86588c24d9ea"
+    },
+    "public/indexBackup.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "693995825b6ef605899b0174272bf7dd"
+    },
+    "public/indexTemplate.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "fcd7d516e299027a74225fcd845fa6b4"
+    }
+}

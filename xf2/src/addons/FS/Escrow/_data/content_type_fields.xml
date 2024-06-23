@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="fs_escrow" field_name="alert_handler_class">FS\Escrow\Alert\EscrowListing</field>
+  <field content_type="fs_escrow" field_name="entity">FS\Escrow:Escrow</field>
+  <field content_type="fs_escrow_transaction" field_name="alert_handler_class">FS\Escrow\Alert\EscrowTransaction</field>
+  <field content_type="fs_escrow_transaction" field_name="entity">FS\Escrow:Transaction</field>
+  <field content_type="fs_escrow_withdrawRequest" field_name="approval_queue_handler_class">FS\Escrow\ApprovalQueue\Withdraw</field>
+  <field content_type="fs_escrow_withdrawRequest" field_name="entity">FS\Escrow:WithdrawRequest</field>
+</content_type_fields>

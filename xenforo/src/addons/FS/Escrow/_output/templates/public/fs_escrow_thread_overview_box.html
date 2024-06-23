@@ -1,0 +1,60 @@
+<div class="block-body block-row">
+
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{ phrase('fs_escrow_form_status') }}
+					</dt>
+				<dd>
+					<xf:macro template="fs_escrow_list_macro" name="status"
+			arg-status="{$thread.Escrow.escrow_status}"/>
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_amount')}}
+					</dt>
+				<dd>
+					{{phrase('fs_escrow_amount_symbol')}}{$thread.Escrow.getOrignolAmount()}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_admin_from')}}
+					</dt>
+				<dd>
+					{$thread.User.username}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_admin_to')}}
+					</dt>
+				<dd>
+					{$thread.Escrow.User.username}
+				</dd>
+			</dl>
+		<dl  class="pairs pairs--justified ">
+			<dt>
+				<xf:if is="$thread.Escrow.escrow_status==0">
+				{{phrase('fs_escrow_0_date')}}
+					
+				<xf:elseif is="$thread.Escrow.escrow_status==1"/>
+				{{phrase('fs_escrow_1_date')}}
+					<xf:elseif is="$thread.Escrow.escrow_status==2"/>
+				{{phrase('fs_escrow_2_date')}}
+						<xf:elseif is="$thread.Escrow.escrow_status==3"/>
+				{{phrase('fs_escrow_3_date')}}
+							<xf:elseif is="$thread.Escrow.escrow_status==4"/>
+				{{phrase('fs_escrow_4_date')}}
+					
+				</xf:if>
+			</dt>
+			<dd>
+				<xf:date time="$thread.Escrow.last_update" />
+			</dd>
+		</dl>
+		
+	</div>

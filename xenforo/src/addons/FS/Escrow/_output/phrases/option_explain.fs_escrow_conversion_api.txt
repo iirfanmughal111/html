@@ -1,0 +1,1 @@
+This API is used for the conversion of USD to BTC to perform transactions in BTC'

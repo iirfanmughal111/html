@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="siropu_chat" definition_class="Siropu\Chat\Widget\Chat"/>
+  <widget_definition definition_id="siropu_chat_rooms" definition_class="Siropu\Chat\Widget\Rooms"/>
+  <widget_definition definition_id="siropu_chat_top_chatters" definition_class="Siropu\Chat\Widget\TopChatters"/>
+  <widget_definition definition_id="siropu_chat_users" definition_class="Siropu\Chat\Widget\Users"/>
+</widget_definitions>

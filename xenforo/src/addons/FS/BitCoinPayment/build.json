@@ -1,0 +1,8 @@
+{
+"additional_files": [
+  "styles/FS/BitCoinPayment"
+],
+"exec": [
+  "echo '{title} version {version_string} ({version_id}) has been built successfully!' > 'src/addons/FS/BitCoinPayment/_build/built.txt'"
+]
+}

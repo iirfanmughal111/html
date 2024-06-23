@@ -1,0 +1,28 @@
+<xf:title>{{ phrase('editNewdropdownReply') }}</xf:title>
+
+<div class="block">
+  <xf:form
+    action="{{ link('opt-reply/'.{$thread_id}.'/update-single',[$thread_id],{'id':$index}) }}"
+    ajax="true"
+    class="block-container"
+    novalidate="novalidate"
+  >
+    <div class="block-body">
+      <input type="hidden" name="thread_id" value="{{$thread_id}}" />
+      <input type="hidden" name="arrayIndex" value="{{$array_index}}" />
+
+      <xf:formrow label="{{ phrase('DropdownOptions') }}" rowtype="input">
+        <xf:textboxrow
+          name="option"
+          placeholder="{{ phrase('enter_new_replay') }}"
+          data-i="0"
+          dir="ltr"
+          value="{{$array_value}}"
+          rowtype="fullWidth"
+        />
+      </xf:formrow>
+    </div>
+
+    <xf:submitrow icon="save" sticky="true" />
+  </xf:form>
+</div>

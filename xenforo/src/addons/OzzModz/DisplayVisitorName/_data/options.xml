@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="ozzmodz_dvn_token" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>[YOU]</default_value>
+    <relation group_id="ozzmodz_dvn" display_order="1"/>
+  </option>
+</options>

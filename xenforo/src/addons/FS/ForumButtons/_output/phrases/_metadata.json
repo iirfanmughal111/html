@@ -1,0 +1,86 @@
+{
+    "option.fs_register_Reviews_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "92dfc71eeaf74dc8547ab5445a523346"
+    },
+    "option.fs_register_alert_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "9bd5ef1dac538b94012222f192a021c4"
+    },
+    "option.fs_register_compainion_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "ac116b5498d344e3793381eb4e558cc7"
+    },
+    "option.fs_register_discussion_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c69400b8d02453dac3242a25cb0e16ca"
+    },
+    "option_explain.fs_register_Reviews_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "868f294b74bfc2ce506ef20b4f79c519"
+    },
+    "option_explain.fs_register_alert_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "868f294b74bfc2ce506ef20b4f79c519"
+    },
+    "option_explain.fs_register_compainion_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "868f294b74bfc2ce506ef20b4f79c519"
+    },
+    "option_explain.fs_register_discussion_ids.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "868f294b74bfc2ce506ef20b4f79c519"
+    },
+    "option_group.fs_forum_buttons.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "05144e930164703a5218d0fa3410fe60"
+    },
+    "option_group_description.fs_forum_buttons.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "post_alert.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "343c2b3fdf815074eeb1b3d7e90cdb35"
+    },
+    "post_compainion.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "38ddad900e970058b338af1af04e2da4"
+    },
+    "post_discussion.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "4b6339f0d51c72afe3a36d225d4b5818"
+    },
+    "post_review.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "b4402b0e866e7cfbc7d9f91fa653690e"
+    }
+}

@@ -1,0 +1,127 @@
+<xf:if is="$attendance">
+  <xf:title>{{ phrase('att_edit') }}</xf:title>
+  <xf:else />
+  <xf:title>{{ phrase('addNewAttendance') }}</xf:title>
+</xf:if>
+
+<div class="block">
+
+  <!-- {{date_time($xf.time)}} -->
+  <!-- {{dump(($xf.time))}} -->
+  <!-- {{dump(date($attendance.date, 'Y-m-d'))}} -->
+
+  <xf:if is="$attendance">
+    <!-- {{dump($attendance.user_id)}}
+    {{dump($attendance)}} -->
+
+    <xf:form
+      action="{{ link('attendance/update') }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+        <xf:textboxrow
+          name="username"
+          value="{$attendance.User.username}"
+          readonly="true"
+          label="{{ phrase('currentUserAttendance') }}"
+        >
+        </xf:textboxrow>
+
+        <xf:formrow label="{{ phrase('inTime') }}" rowtype="input">
+          <div class="inputGroup">
+            <xf:dateinput
+              name="date"
+              class="date end"
+              readonly="true"
+              value="{{ date($attendance.date, 'Y-m-d') }}"
+              required="true"
+            />
+            <span class="inputGroup-splitter"></span>
+            <xf:textbox
+              type="time"
+              name="in-time"
+              class="input--date time end"
+              value="{{ time($attendance.in_time, 'h:i') }}"
+              required="true"
+            />
+            <xf:textbox
+              type="time"
+              name="out-time"
+              class="input--date time end"
+              value="{{ time($attendance.out_time, 'h:i') }}"
+              required="true"
+            />
+          </div>
+        </xf:formrow>
+
+        <xf:textarearow
+          name="comment"
+          value="{{$attendance.comment}}"
+          label="{{ phrase('attendance_comments') }}"
+        />
+        <xf:textboxrow
+          type="hidden"
+          name="attendance_id"
+          value="{{$attendance.attendance_id}}"
+        />
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+    <xf:else />
+
+    <xf:form
+      action="{{ link('attendance/save') }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+        <xf:textboxrow
+          name="username"
+          value="{$xf.visitor.username}"
+          readonly="true"
+          label="{{ phrase('currentUserAttendance') }}"
+        >
+        </xf:textboxrow>
+
+        <xf:formrow label="{{ phrase('inTime') }}" rowtype="input">
+          <div class="inputGroup">
+            <xf:dateinput
+              name="date"
+              class="date end"
+              readonly="true"
+              value="{{ date($xf.time, 'Y-m-d') }}"
+              required="true"
+            />
+            <span class="inputGroup-splitter"></span>
+            <xf:textbox
+              type="time"
+              name="in-time"
+              class="input--date time end"
+              value="{{ date($xf.time, 'h:i') }}"
+              required="true"
+            />
+            <xf:textbox
+              type="time"
+              name="out-time"
+              class="input--date time end"
+              value="{{ date($xf.time, 'h:i') }}"
+              required="true"
+            />
+          </div>
+        </xf:formrow>
+
+        <xf:textarearow
+          name="comment"
+          autocomplete="off"
+          label="{{ phrase('attendance_comments') }}"
+        />
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+  </xf:if>
+</div>

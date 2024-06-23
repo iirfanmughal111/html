@@ -1,0 +1,23 @@
+{
+    "legacy_addon_id": "",
+    "title": "[OzzModz/Banxix] Bump Thread",
+    "description": "Make thread to appear in latest posts without replying",
+    "version_id": 2010200,
+    "version_string": "2.1.2",
+    "dev": "Ozzy47/Banxix",
+    "dev_url": "https://snogssite.com",
+    "faq_url": "",
+    "support_url": "https://snogssite.com/threads/ozzmodz-banxix-bump-thread.3610/",
+    "extra_urls": [],
+    "require": {
+        "XF": [
+            2010031,
+            "XenForo 2.1.0 Beta 1+"
+        ],
+        "SV/StandardLib": [
+            1080000,
+            "Standard Library by Xon v1.8.0+"
+        ]
+    },
+    "icon": ""
+}

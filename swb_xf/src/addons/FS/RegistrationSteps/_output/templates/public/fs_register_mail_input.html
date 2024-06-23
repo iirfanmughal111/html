@@ -1,0 +1,43 @@
+<xf:title> {{ phrase('fs_register_male_email') }} </xf:title>
+<xf:form
+  action="{{ link('members/sendmail',$xf.visitor) }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+	  <xf:formrow label="{{ phrase('fs_register_contact_method') }}" hint="{{phrase('fs_register_required')}}">
+	  <div class="inputChoices"  >
+	  <xf:radio name="contact"  required="true" checked="true">
+		  <xf:option label="{{ phrase('fs_register_contact_email') }}" name="contact_detail">
+			  <xf:dependent>
+	 		<xf:textbox name="contact_email" required="true" />
+			  </xf:dependent>
+		  </xf:option>
+		  <xf:option label="{{ phrase('contact_mobile') }}" name="contact_detail">
+			  <xf:dependent>
+					 <xf:textbox name="contact_mobile" required="true" />
+			  </xf:dependent>
+
+		  </xf:option>
+	  </xf:radio>
+	  </div>
+	  </xf:formrow>
+	<input type="hidden" name="user_id" value="{{ $user_id }}">
+	  <xf:dateinputrow name="date" hint="{{phrase('fs_register_required')}}" required="true" label="{{phrase('fs_register_date')}}"
+				 />
+	  <xf:textboxrow label="{{phrase('fs_register_time')}}" hint="{{phrase('fs_register_required')}}" name="time" class="input--date time start" required="true" type="time"
+
+					 />	  
+	    <xf:textboxrow name="duration" hint="{{phrase('fs_register_required')}}" label="{{ phrase('fs_register_duration') }}"  required="true" />
+	    <xf:textboxrow name="type" hint="{{phrase('fs_register_required')}}" label="{{ phrase('fs_register_type') }}"  required="true" />
+	    <xf:textboxrow name="city" hint="{{phrase('fs_register_required')}}" label="{{ phrase('fs_register_city') }}"   required="true"/>
+
+	 
+	  
+	  
+	  
+
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>

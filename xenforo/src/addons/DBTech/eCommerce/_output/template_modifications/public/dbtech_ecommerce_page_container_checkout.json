@@ -1,0 +1,9 @@
+{
+    "template": "PAGE_CONTAINER",
+    "description": "Add \"Checkout\" link",
+    "execution_order": 1,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "#(<a href=\"{{ link\\('account/alerts'\\) }}\"\\s+class=\"[\\w\\-\\s]+p-navgroup-link--alerts.*</div>.+)(</xf:if>)#siU",
+    "replace": "$1\t<xf:include template=\"dbtech_ecommerce_navbar_checkout\" />\n\t\t\t\t\t\t$2"
+}

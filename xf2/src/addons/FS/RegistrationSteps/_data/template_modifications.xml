@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="add_fotter_compliance_link" description="add_fotter_compliance_link" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<li><a href="{{ link('forums/index.rss', '-') }}" target="_blank" class="p-footer-rssLink" title="{{ phrase('rss')|for_attr }}"><span aria-hidden="true"><xf:fa icon="fa-rss" /><span class="u-srOnly">{{ phrase('rss') }}</span></span></a></li>]]></find>
+    <replace><![CDATA[<li><a href="{{ link('help/compliance') }}">{{ phrase('fs_register_btn_compliance') }}</a></li>
+$0
+]]></replace>
+  </modification>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="add_owl_carousel_pligin" description="add_owl_carousel_pligin" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="crumb" arg-href="!" arg-value="!" arg-position="{{ 0 }}">.*?<\/xf:macro>/is]]></find>
+    <replace><![CDATA[$0
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+]]></replace>
+  </modification>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="fs_register_add_logos" description="fs_register_add_logos" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<div class="p-footer-row-opposite">
+				<ul class="p-footer-linkList">.*?				<\/ul>
+			<\/div>
+		<\/div>/is]]></find>
+    <replace><![CDATA[$0
+<div class="footer_logos">
+			<xf:css>
+			.footer_logo_item{
+				width:45px;
+				height:45px;
+				border-radius:3px;
+				
+				}
+				
+			
+			</xf:css>
+			<ul class="p-footer-linkList">
+				<li><a href="https://swopusa.org/" target="_blank" class="p-footer-rssLink"><img src="{{ base_url('styles/FS/RegistrationSteps/SWOPUSAMenuLogo.jpg') }}" class="footer_logo_item"></a></li>
+				<li><a href="https://www.stopthetraffik.org/" target="_blank" class="p-footer-rssLink"><img src="{{ base_url('styles/FS/RegistrationSteps/humanTraffic.png') }}" class="footer_logo_item"></a></li>
+				<li><a href="https://www.rtalabel.org" target="_blank" class="p-footer-rssLink"><img src="{{ base_url('styles/FS/RegistrationSteps/rtaLogo.png') }}" class="footer_logo_item"></a></li>
+			</ul>
+	<div class="main_content">
+		<div class="sub_content">
+			<p>{{ phrase('fs_register_fotter_rules') }}</p>
+		</div>
+	
+	</div>
+	
+	
+		</div>]]></replace>
+  </modification>
+  <modification type="public" template="account_details" modification_key="fetch_fields_accourding_account_type" description="fetch_fields_accourding_account_type" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="custom_fields_macros" name="custom_fields_edit" arg-type="users" arg-group="contact" arg-set="{$xf.visitor.Profile.custom_fields}" />
+]]></find>
+    <replace><![CDATA[<xf:if is="$xf.visitor.account_type==1">
+<xf:macro template="custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{null}}"
+		arg-set="{$xf.visitor.Profile.getGroupTypeFields('hobbyist_fields')}"
+		 arg-additionalFilters="{{ ['registration'] }}"/>
+<xf:elseif is="$xf.visitor.account_type==2" />
+	<xf:macro template="custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{null}}"
+		arg-set="{$xf.visitor.Profile.getGroupTypeFields('provider_fields')}"
+		 arg-additionalFilters="{{ ['registration'] }}"/>
+	</xf:if>
+<xf:macro template="register_custom_fields" name="general_custom_fields_edit"
+		arg-type="users" arg-group="contact"
+		arg-set="{$xf.visitor.Profile.custom_fields}"
+		 />]]></replace>
+  </modification>
+  <modification type="public" template="account_details" modification_key="show_general_fields_to_user_according_account_type" description="show_general_fields_to_user_according_account_type" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="custom_fields_macros" name="custom_fields_edit" arg-type="users" arg-group="personal" arg-set="{$xf.visitor.Profile.custom_fields}" />
+]]></find>
+    <replace><![CDATA[<xf:macro template="public:register_custom_fields" name="general_custom_fields_edit"
+		arg-type="users" arg-group="personal"
+		arg-set="{$xf.visitor.Profile.custom_fields}"
+		 />]]></replace>
+  </modification>
+  <modification type="public" template="forum_post_thread" modification_key="hide_message_and_add_user_field" description="hide_message_and_add_user_field" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:editorrow name="message".*?		<\/xf:formrow>/is]]></find>
+    <replace><![CDATA[<xf:if is="$thread.getReviewsThreadIds()">
+	<div class="menu-row">
+		{{ phrase('fs_regiter_review_for:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="review_for" value="{{$review_for ? $review_for : ''}}" ac="single" />
+		</div>
+	</div>
+<xf:else/>
+$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="forum_view" modification_key="add_featured_ads" description="add_featured_ads" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<div class="block-outer"><xf:trim>.*?<\/xf:trim><\/div>/is]]></find>
+    <replace><![CDATA[<xf:if is="$forum.getCompaninionThreadIds()">
+<xf:include template="fs_register_featured_ads" />
+</xf:if>
+
+$0]]></replace>
+  </modification>
+  <modification type="public" template="forum_view" modification_key="fs_register_add_pop_for_listing_forums" description="fs_register_add_pop_for_listing_forums" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:pageaction if="\$forum\.canCreateThread\(\) OR \$forum\.canCreateThreadPreReg\(\)">.*?<\/xf:pageaction>/is]]></find>
+    <replace><![CDATA[<xf:if is="$forum.getCompaninionThreadIds()">
+	<xf:pageaction if="$forum.canCreateThread() OR $forum.canCreateThreadPreReg()">
+	<xf:button href="{{ link('forums/post-listing', $forum) }}" class="button--cta" overlay="true" icon="write" rel="nofollow">
+		{{ phrase('post_thread') }}
+	</xf:button>
+	</xf:pageaction>
+		<xf:else />
+		$0
+	</xf:if>
+	
+]]></replace>
+  </modification>
+  <modification type="public" template="member_macros" modification_key="add_vouch_btn" description="add_vouch_btn" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:action_group_2:end]-->]]></find>
+    <replace><![CDATA[$0
+	<xf:if is="$xf.visitor.user_id && $xf.visitor.user_id!=$user.user_id">
+			<xf:button
+			href="{{ link('members/addvouch', $user,{'vouch':$vouch})  }}"
+			class="button--link button"
+			overlay="true"
+			> {{$vouch==2 ? '<i class="fas fa-thumbs-down"></i> - ' : '<i class="fas fa-thumbs-up"></i> + ' }} {{ phrase('fs_register_my_vouch') }}</xf:button>
+		
+			<xf:button
+			   href="{{ link('members/addreview', $user) }}"
+			   class="button--link button"
+			   overlay="true"
+			   >{{ phrase('fs_register_review_me') }}</xf:button>
+		</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="member_macros" modification_key="receive_vouch_variable" description="receive_vouch_variable" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro name="member_action_buttons" arg-user="!" arg-context="!">]]></find>
+    <replace><![CDATA[
+	<xf:macro name="member_action_buttons" arg-user="!" arg-context="!" arg-vouch="">]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="adding_review_member_view_tab" description="adding_review_member_view_tab" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tabs:end]-->]]></find>
+    <replace><![CDATA[$0
+
+	<a href="{{ link('members/my-reviews', $user) }}"
+	   class="tabs-tab" id="my-reviews" role="tab">
+		{{ phrase('fs_my_reviews') }}
+	</a>
+]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="adding_review_member_view_tab_content" description="adding_review_member_view_tab_content" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tab_panes:end]-->]]></find>
+    <replace><![CDATA[$0
+<li data-href="{{ link('members/my-reviews', $user) }}" role="tabpanel" aria-labelledby="my-reviews">
+		<div class="blockMessage">{{ phrase('loading...') }}</div>
+</li>
+]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="pass_vouch_variable" description="pass_vouch_variable" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<hr class="memberHeader-separator" \/>
+
+						<div class="memberHeader-buttons">
+							<xf:contentcheck>.*?arg-context="profile" \/>
+							<\/xf:contentcheck>/is]]></find>
+    <replace><![CDATA[<hr class="memberHeader-separator" />
+
+						<div class="memberHeader-buttons">
+							<xf:contentcheck>
+								<xf:macro template="member_macros" name="member_action_buttons"
+									arg-user="{$user}"
+									arg-context="profile"
+									arg-vouch="{$vouch}"/>
+							</xf:contentcheck>]]></replace>
+  </modification>
+  <modification type="public" template="notice_moderated" modification_key="fs_register_check_your_email_to_approve_your_accou" description="fs_register_check_your_email_to_approve_your_account" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{{ phrase('your_account_is_currently_awaiting_approval_by_administrator') }}]]></find>
+    <replace><![CDATA[<xf:if is="$xf.visitor.account_type==2">
+	{{ phrase('fs_register_check_your_email_to_approve_your_account') }}
+	<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="fs_register_add_overview_to_thread_template" description="fs_register_add_overview_to_thread_template" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro template="custom_fields_macros" name="custom_fields_view"
+				arg-type="threads"
+				arg-group="before".*?\/>/is]]></find>
+    <replace><![CDATA[<xf:if is="$thread.getCompaninionThreadIds()">
+	<xf:include template="fs_register_thread_overview_box" />
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="hide_message_from_front_side" description="hide_message_from_front_side" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$snippet">.*?<\/xf:if>/is]]></find>
+    <replace><![CDATA[<xf:if is="$thread.getReviewsThreadIds()">
+	<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+		<dt>
+			{{ phrase('fs_register_review_for_username') }}
+		</dt>
+		<dd>
+			{{$thread.ReviewFor.username}}
+		</dd>
+	</dl>
+
+<xf:else />
+$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="register_form" modification_key="add_general_custom_fields" description="add_general_custom_fields" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="register_macros" name="custom_fields" />]]></find>
+    <replace><![CDATA[<xf:macro template="register_custom_fields" name="general_custom_fields_edit"
+		arg-type="users" arg-group="{{ null }}"
+		arg-set="{$xf.visitor.Profile.custom_fields}"
+		arg-additionalFilters="{{ ['registration'] }}" />]]></replace>
+  </modification>
+  <modification type="public" template="register_form" modification_key="fs_add_fields_according_to_account_type" description="fs_add_fields_according_to_account_type" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:passwordboxrow name="{{ \$regForm\.getFieldName\('password'\) }}" .*?}}" \/>/is]]></find>
+    <replace><![CDATA[$0
+<xf:radiorow name="account_type" value="" hint="{{ phrase('fs_register_required') }}" id="account_type"label="{{ phrase('fs_register_account_type') }}">
+	<xf:option value="1"
+			   label="{{ phrase('fs_register_hobbyist') }}"
+			   data-hide="true"
+			   selected="true"
+			   data-xf-init="disabler"
+			   data-container=".js-hobbyist" />
+	<xf:option value="2"
+			   label="{{ phrase('fs_register_provider') }}"
+			   data-hide="true"
+			   data-xf-init="disabler"
+			   data-container=".js-provider" />					
+			</xf:radiorow>
+			<div class="js-hobbyist">
+				<xf:formrow><span>{{ phrase('fs_register_page_hobbyist_rules') }}</span></xf:formrow>
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{ null }}"
+		arg-set="{$xf.visitor.Profile.getGroupTypeFields('hobbyist_fields')}"
+		arg-additionalFilters="{{ ['registration'] }}" />
+				
+			</div>
+			
+			<div class="js-provider">
+				<xf:formrow><span>{{ phrase('fs_register_page_provider_rules') }}</span></xf:formrow>
+				
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{ null }}"
+		arg-set="{$xf.visitor.Profile.getGroupTypeFields('provider_fields')}"
+		arg-additionalFilters="{{ ['registration'] }}" />		
+			</div>		
+]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="add_featured_btn_in_thread" description="add_featured_btn_in_thread" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:thread_tools_menu:top]-->]]></find>
+    <replace><![CDATA[$0 
+
+<xf:if is="($xf.visitor.is_moderator || $xf.visitor.is_admin) AND $thread.getCompaninionThreadIds()">	
+		<a href="{{ link('threads/featured', $thread) }}"  class="menu-linkRow" data-xf-click="overlay">{{ phrase('fs_reagister_featured') }}</a>
+</xf:if>
+
+]]></replace>
+  </modification>
+  <modification type="admin" template="user_edit" modification_key="add_is_featured_field" description="add_is_featured_field" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:textboxrow name="user\[email]" .*?>/is]]></find>
+    <replace><![CDATA[$0
+<xf:checkboxrow label=""   >
+	<xf:option selected="{$user.is_featured}" name="user[is_featured]">{{ phrase('fs_user_is_featured') }}</xf:option>
+</xf:checkboxrow>
+
+]]></replace>
+  </modification>
+  <modification type="admin" template="user_edit" modification_key="show_fields_to_admin_accourding_account_type" description="show_fields_to_admin_accourding_account_type" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<div class="block-body block-body--collapsible">
+					<xf:macro template="public:custom_fields_macros" name="custom_fields_edit".*?				<\/div>/is]]></find>
+    <replace><![CDATA[<div class="block-body block-body--collapsible">
+	<xf:if is="$user.account_type==1">
+<xf:macro template="public:custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{null}}"
+		arg-set="{$user.Profile.getGroupTypeFields('hobbyist_fields')}"
+		 arg-additionalFilters="{{ ['registration'] }}"/>
+<xf:elseif is="$user.account_type==2" />
+	<xf:macro template="public:custom_fields_macros" name="custom_fields_edit"
+		arg-type="users" arg-group="{{null}}"
+		arg-set="{$user.Profile.getGroupTypeFields('provider_fields')}"
+		 arg-additionalFilters="{{ ['registration'] }}"/>
+	</xf:if>
+<xf:macro template="public:register_custom_fields" name="general_custom_fields_edit"
+		arg-type="users" arg-group="contact"
+		arg-set="{$user.Profile.custom_fields}"
+		  arg-editMode="admin"
+		 />
+</div>]]></replace>
+  </modification>
+  <modification type="admin" template="user_edit" modification_key="show_general_fields_to_admin_according_account_typ" description="show_general_fields_to_admin_according_account_typ" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro template="public:custom_fields_macros" name="custom_fields_edit"
+						arg-type="users" arg-group="personal" .*?\/>/is]]></find>
+    <replace><![CDATA[<xf:macro template="public:register_custom_fields" name="general_custom_fields_edit"
+		arg-type="users" arg-group="personal"
+		arg-set="{$user.Profile.custom_fields}"
+		  arg-editMode="admin"
+		 />]]></replace>
+  </modification>
+</template_modifications>

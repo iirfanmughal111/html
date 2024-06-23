@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="cron_entry.fsHideUsernames" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Hide Usernames]]></phrase>
+  <phrase title="option.fs_unhide_user_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[User ids]]></phrase>
+  <phrase title="option_explain.fs_unhide_user_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[List the user ids that are allowed to be display username to all. Use , (comma) between ids.
+Example: 1,2,3,4,..]]></phrase>
+  <phrase title="option_group.fs_hide_usernames" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Hide Usernames]]></phrase>
+  <phrase title="option_group_description.fs_hide_usernames" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="permission.fs_user_names_hide" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Hide Usernames]]></phrase>
+  <phrase title="permission_interface.fs_hide_usernames" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Hide Usernames]]></phrase>
+</phrases>

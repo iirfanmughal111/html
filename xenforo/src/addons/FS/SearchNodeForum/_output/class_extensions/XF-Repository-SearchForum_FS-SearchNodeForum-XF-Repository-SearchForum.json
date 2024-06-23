@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Repository\\SearchForum",
+    "to_class": "FS\\SearchNodeForum\\XF\\Repository\\SearchForum",
+    "execute_order": 10,
+    "active": true
+}

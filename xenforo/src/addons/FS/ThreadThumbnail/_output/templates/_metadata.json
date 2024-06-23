@@ -1,0 +1,12 @@
+{
+    "admin/option_template_ThumbnailimageDimensions.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "efc97b7e025c60018c7f3a4db9148785"
+    },
+    "public/fs_thread_thumbnail.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "19b33a3a8d5d12bf5c2420e2793f1fe8"
+    }
+}

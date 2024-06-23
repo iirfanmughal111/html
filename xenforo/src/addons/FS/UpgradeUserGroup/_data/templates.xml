@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="fs_downgrade_usergroup_add_edit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>
+  <xf:if is="$downgradeUserGroup.usg_id"> {{ phrase('fs_edit_userGroup') }}
+  <xf:else /> {{ phrase('fs_downgrade_usergroup') }} </xf:if>
+</xf:title>
+<xf:form
+  action="{{ link('downgradeGroup/save', $downgradeUserGroup) }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+    <div class="block-body">
+      <xf:selectrow
+        name="sl_ug_id"
+        label="{{ phrase('fs_select_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$downgradeUserGroup.exist_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_user') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:textbox
+          name="username"
+          ac="single"
+          placeholder="{{ phrase('fs_enter_user') }}"
+          data-i="0"
+          value="{$downgradeUserGroup.User.username}"
+        />
+      </xf:formrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_last_login') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:numberboxrow
+          name="last_login"
+          placeholder="{{ phrase('fs_enter_message') }}"
+          data-i="0"
+          rowtype="fullWidth"
+          value="{$downgradeUserGroup.last_login}"
+        />
+      </xf:formrow>
+
+      <xf:selectrow
+        name="up_ug_id"
+        label="{{ phrase('fs_downgrade_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$downgradeUserGroup.downgrade_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+    </div>
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>
+]]></template>
+  <template type="admin" title="fs_downgrade_usergroup_index" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_downgrade_usergroup_title') }}</xf:title>
+
+<xf:pageaction>
+  <xf:button href="{{ link('downgradeGroup/add') }}" icon="add"
+    >{{ phrase('fs_downgrade_usergroup') }}</xf:button
+  >
+</xf:pageaction>
+<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+  <div class="block-outer">
+    <xf:macro
+      template="filter_macros"
+      name="quick_filter"
+      arg-key="downgradeGroup"
+      arg-class="block-outer-opposite"
+    />
+  </div>
+
+  <div class="block-container">
+    <xf:if is="$downgradeUserGroup is not empty">
+      <div class="block-body">
+        <xf:datalist data-xf-init="responsive-data-list">
+          <xf:macro
+            name="usergroup_table_list"
+            arg-usergroupData="{$downgradeUserGroup}"
+          />
+        </xf:datalist>
+        <div class="block-footer">
+          <span class="block-footer-counter"
+            >{{ display_totals($totalReturn, $total) }}</span
+          >
+        </div>
+      </div>
+      <xf:else />
+      <div class="block-body block-row">
+        {{ phrase('no_items_have_been_created_yet') }}
+      </div>
+    </xf:if>
+  </div>
+
+  <xf:pagenav
+    page="{$page}"
+    perpage="{$perPage}"
+    total="{$total}"
+    link="downgradeGroup"
+    wrapperclass="block"
+  />
+</xf:form>
+<xf:macro name="usergroup_table_list" arg-usergroupData="{$downgradeUserGroup}">
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('fs_cell_username') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_usergroup') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_downgrade_usergroup') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_Messages') }} </xf:cell>
+    <xf:cell class="dataList-cell--min"></xf:cell>
+    <xf:cell class="dataList-cell--min"></xf:cell>
+  </xf:datarow>
+  <xf:foreach loop="{$usergroupData}" value="$value">
+    <xf:datarow>
+      <xf:cell> {$value.User.username} </xf:cell>
+      <xf:cell> {$value.UserGroup.title} </xf:cell>
+      <xf:cell> {$value.UserGroups.title} </xf:cell>
+      <xf:cell> {$value.last_login} </xf:cell>
+
+      <xf:action href="{{ link('downgradeGroup/edit', $value) }}"
+        >{{ phrase('edit') }}</xf:action
+      >
+      <xf:delete
+        href="{{ link('downgradeGroup/delete', $value) }}"
+        overlay="true"
+      />
+    </xf:datarow>
+  </xf:foreach>
+</xf:macro>
+]]></template>
+  <template type="admin" title="fs_upgrade_usergroup_add_edit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>
+  <xf:if is="$upgradeUserGroup.usg_id"> {{ phrase('fs_edit_userGroup') }}
+  <xf:else /> {{ phrase('fs_upgrade_usergroup') }} </xf:if>
+</xf:title>
+<xf:form
+  action="{{ link('upgradeGroup/save', $upgradeUserGroup) }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+    <div class="block-body">
+      <xf:selectrow
+        name="sl_ug_id"
+        label="{{ phrase('fs_select_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$upgradeUserGroup.exist_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_user') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:textbox
+          name="username"
+          ac="single"
+          placeholder="{{ phrase('fs_enter_user') }}"
+          data-i="0"
+          value="{$upgradeUserGroup.User.username}"
+        />
+      </xf:formrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_total_messages') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:numberboxrow
+          name="total_message"
+          placeholder="{{ phrase('fs_enter_message') }}"
+          data-i="0"
+          rowtype="fullWidth"
+          value="{$upgradeUserGroup.total_messages}"
+        />
+      </xf:formrow>
+
+      <xf:selectrow
+        name="up_ug_id"
+        label="{{ phrase('fs_upgrade_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$upgradeUserGroup.upgrade_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+    </div>
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>
+]]></template>
+  <template type="admin" title="fs_upgrade_usergroup_index" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_upgrade_usergroup_title') }}</xf:title>
+
+<xf:pageaction>
+  <xf:button href="{{ link('upgradeGroup/add') }}" icon="add">{{ phrase('fs_upgrade_usergroup') }}</xf:button>
+</xf:pageaction>
+<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+  <div class="block-outer">
+		<xf:macro
+		  template="filter_macros"
+		  name="quick_filter"
+		  arg-key="upgradeGroup"
+		  arg-class="block-outer-opposite"
+		/>
+  </div>
+
+  <div class="block-container">
+
+  <xf:if is="$upgradeUserGroup is not empty">
+	<div class="block-body">
+			<xf:datalist data-xf-init="responsive-data-list">
+					
+				<xf:macro
+					name="usergroup_table_list"
+					arg-usergroupData="{$upgradeUserGroup}"
+				  />
+
+
+				   </xf:datalist>
+				<div class="block-footer">
+					  <span class="block-footer-counter"
+						>{{ display_totals($totalReturn, $total) }}</span
+					  >
+				</div>
+		    
+		</div>
+       <xf:else />
+			<div class="block-body block-row">{{ phrase('no_items_have_been_created_yet') }}</div>
+		
+       </xf:if>
+    
+ </div>
+
+
+   <xf:pagenav
+			page="{$page}"
+			perpage="{$perPage}"
+			total="{$total}"
+			link="upgradeGroup"
+			wrapperclass="block"
+		  />
+</xf:form>
+<xf:macro
+  name="usergroup_table_list"
+  arg-usergroupData="{$upgradeUserGroup}"
+>
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('fs_cell_username') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_usergroup') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_upgrade_usergroup') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_cell_Messages') }} </xf:cell>
+    <xf:cell class="dataList-cell--min"></xf:cell>
+	 <xf:cell class="dataList-cell--min"></xf:cell>
+  </xf:datarow>
+  <xf:foreach loop="{$usergroupData}" value="$value">
+    <xf:datarow>
+		
+          <xf:cell> {$value.User.username} </xf:cell>
+          <xf:cell> {$value.UserGroup.title} </xf:cell>
+          <xf:cell> {$value.UserGroups.title} </xf:cell>
+          <xf:cell> {$value.total_messages} </xf:cell>
+		
+	<xf:action href="{{ link('upgradeGroup/edit', $value) }}" >{{ phrase('edit') }}</xf:action>
+      <xf:delete
+        href="{{ link('upgradeGroup/delete', $value) }}"
+        overlay="true"
+      />
+    </xf:datarow>
+  </xf:foreach>
+</xf:macro>]]></template>
+</templates>

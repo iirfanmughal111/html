@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="fs_answer" field_name="find_new_handler_class">FS\QuestionAnswers\FindNew\Answer</field>
+  <field content_type="fs_answer" field_name="search_handler_class">FS\QuestionAnswers\Search\Data\Answer</field>
+  <field content_type="fs_question" field_name="find_new_handler_class">FS\QuestionAnswers\FindNew\Question</field>
+  <field content_type="questionAnswer" field_name="search_handler_class">FS\QuestionAnswers\Search\Data\QuestionAnswer</field>
+</content_type_fields>

@@ -1,0 +1,1 @@
+Displays the total count of questions and answers.

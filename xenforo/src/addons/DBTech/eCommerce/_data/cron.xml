@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="dbtEcomCleanUpDaily" cron_class="DBTech\eCommerce\Cron\CleanUp" cron_method="runDailyCleanUp" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[3],"minutes":[0]}]]></entry>
+  <entry entry_id="dbtEcomCleanUpHourly" cron_class="DBTech\eCommerce\Cron\CleanUp" cron_method="runHourlyCleanUp" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[20]}]]></entry>
+  <entry entry_id="dbtEcomCountryUpdate" cron_class="DBTech\eCommerce\Cron\UpdateCountries" cron_method="runUpdate" active="1"><![CDATA[{"day_type":"dom","dom":[1],"hours":[3],"minutes":[0]}]]></entry>
+  <entry entry_id="dbtEcomVatUpdate" cron_class="DBTech\eCommerce\Cron\UpdateVat" cron_method="runUpdate" active="1"><![CDATA[{"day_type":"dom","dom":[1],"hours":[5],"minutes":[0]}]]></entry>
+  <entry entry_id="dbtechEcommerceIncome" cron_class="DBTech\eCommerce\Cron\Counters" cron_method="recordDailyIncomeStats" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[30]}]]></entry>
+  <entry entry_id="dbtecheCommerceGeoIp" cron_class="DBTech\eCommerce\Cron\GeoIp" cron_method="geoIpUpdate" active="1"><![CDATA[{"day_type":"dom","dom":[15],"hours":[0],"minutes":[0]}]]></entry>
+</cron>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permission_interface_groups>
+  <interface_group interface_group_id="xa_scComment" display_order="5162" is_moderator="0"/>
+  <interface_group interface_group_id="xa_scCommentModerator" display_order="5163" is_moderator="1"/>
+  <interface_group interface_group_id="xa_scItem" display_order="5160" is_moderator="0"/>
+  <interface_group interface_group_id="xa_scItemModerator" display_order="5161" is_moderator="1"/>
+  <interface_group interface_group_id="xa_scRating" display_order="5164" is_moderator="0"/>
+  <interface_group interface_group_id="xa_scRatingModerator" display_order="5165" is_moderator="1"/>
+  <interface_group interface_group_id="xa_scSeries" display_order="5166" is_moderator="0"/>
+  <interface_group interface_group_id="xa_scSeriesModerator" display_order="5167" is_moderator="1"/>
+</permission_interface_groups>

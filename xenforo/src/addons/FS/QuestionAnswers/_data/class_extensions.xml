@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XF\Admin\Controller\Option" to_class="FS\QuestionAnswers\XF\Admin\Controller\Option" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Forum" to_class="FS\QuestionAnswers\XF\Entity\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Thread" to_class="FS\QuestionAnswers\XF\Entity\Thread" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\User" to_class="FS\QuestionAnswers\XF\Entity\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Forum" to_class="FS\QuestionAnswers\XF\Pub\Controller\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Search" to_class="FS\QuestionAnswers\XF\Pub\Controller\Search" execute_order="10" active="1"/>
+</class_extensions>

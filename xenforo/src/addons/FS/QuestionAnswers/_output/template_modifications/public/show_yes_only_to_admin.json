@@ -1,0 +1,9 @@
+{
+    "template": "thread_type_fields_question",
+    "description": "show_yes_only_to_admin",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:option value=\"yes\" label=\"{{ phrase\\('yes'\\) }}\" \\/>.*?hint=\"{{ phrase\\('voting_not_allowed_no_solution_existing_displayed_question'\\) }}\" \\/>/si",
+    "replace": "<xf:if is=\"$xf.visitor.is_admin\" >\n\t$0\t\t   \n<xf:else />\n\n\t<xf:option value=\"yes\" label=\"{{ phrase('yes') }}\" />\n\t\n</xf:if>\n\n\n"
+}

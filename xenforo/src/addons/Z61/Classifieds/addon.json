@@ -1,0 +1,23 @@
+{
+    "legacy_addon_id": "",
+    "title": "Classifieds",
+    "description": "Add a feature-rich classifieds system to your board.",
+    "version_id": 1001470,
+    "version_string": "1.0.14",
+    "dev": "NixFifty",
+    "dev_url": "https://nixfifty.com/",
+    "faq_url": "",
+    "support_url": "https://nixfifty.com/tickets/",
+    "extra_urls": [],
+    "require": {
+        "php": [
+            "5.6.0",
+            "PHP 5.6.0+"
+        ],
+        "XF": [
+            2010000,
+            "XenForo 2.1.0+"
+        ]
+    },
+    "icon": "icon.png"
+}

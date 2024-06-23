@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="activation_id" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Activation Id]]></phrase>
+  <phrase title="activation_key_not_found" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Activation key not Found]]></phrase>
+  <phrase title="fs_account_verify_mail_subject" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Action Required to Activate Membership for SouthWestBoard]]></phrase>
+  <phrase title="fs_activate" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Activate]]></phrase>
+  <phrase title="fs_activation_account" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Activation Account]]></phrase>
+  <phrase title="fs_note_user" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Dear {username}<br><br>
+
+Thank you for registering at the SouthWestBoard. Before we can activate your account one last stepmust be taken to complete your registration <br>
+
+Please note-you must complete this last step to become a registered member.You will only need to visit this URL once to activate your account
+<br><br>
+To complete your registration, please visit this URL:<br><br>
+{verify_link}
+
+<br><br>
+***** Does The Above URL Not Work? *****
+<br><br>
+
+{direct_link}
+<br><br>
+
+please be sure not to add extra spaces. You will need to type in your username and activation number on the page that appears when you visit the URL
+<br><br>
+You Username : {username} <br>
+Your Activation Id : {activation_id}
+<br><br>
+If you are are still having problems signing up  please contact a member of our support statt at 
+
+<br><br>
+
+{contact_email}
+
+
+]]></phrase>
+  <phrase title="fs_register_account_type" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Account Type]]></phrase>
+  <phrase title="fs_register_age" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Age]]></phrase>
+  <phrase title="fs_register_age_view" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[{age} years]]></phrase>
+  <phrase title="fs_register_btn_compliance" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[2257 Exemption ]]></phrase>
+  <phrase title="fs_register_check_your_email_to_approve_your_account" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[Check your email for the documents
+needed for verification. Until we get these documents, your account won't be approved
+and is waiting for admin review.]]></phrase>
+  <phrase title="fs_register_compliance_body" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<p>Given the location of this website's operators, U.S. jurisdiction doesn't directly apply.
+However, the operators have chosen to proactively align with U.S. regulations detailed
+under 18 U.S.C. §2257 and 28 C.F.R. 75. This ensures adherence to U.S. standards,
+clarifying that all visuals on this site are exempt from 18 U.S.C. §2257 and 28 C.R.F. 75
+due to the following:</p>
+
+<ul>
+<li>The content doesn’t depict sexually explicit acts as outlined in 18 U.S.C. §2257
+(2)(A)(i)-(iv).</li>
+<li>No representations of the genital or pubic region were made post-July 27, 2006.</li>
+<li>Simulated sexual activities presented were established before Title 18 U.S.C.</li>
+<li>§2257 came into effect.</li>
+<li>All content was crafted before July 3, 1995.</li>
+</ul>
+<p>All individuals showcased on this website were at least 21 at the time of content
+creation.</p>
+<h6>Third-Party Content</h6>
+<p>This website's operators are not responsible for producing any actual or simulated
+sexually explicit content. When such content is found, the operator's role is solely that of
+transmission, storage, retrieval, hosting, and presentation. These depictions are posted
+by third-party users and are managed in user-controlled areas of the site. Under Title 18
+U.S.C. §2257 (h)(2)(B)(v) and 47 U.S.C. §230 (c), the operators retain the right to remove
+content deemed inappropriate or inconsistent with the site's policies and terms.
+For inquiries or feedback regarding this Compliance Exemption, please contact:
+<a href="mailto:administrator@soutwestboard.com">administrator@soutwestboard.com</a></p>]]></phrase>
+  <phrase title="fs_register_compliance_title" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[Section 2257 Compliance Exemption]]></phrase>
+  <phrase title="fs_register_ethincity" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Ethinicity]]></phrase>
+  <phrase title="fs_register_eyes" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Eyes]]></phrase>
+  <phrase title="fs_register_fotter_privacy_ploicy" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<h3>Understanding Our Policies</h3>SWB is dedicated to maintaining user trust and safety. Familiarize yourself with our
+<a href="{termLink}">Terms</a>  of Service and <a href="{privacyLink}">Privacy Policy</a> to ensure a comprehensive understanding of our
+practices.]]></phrase>
+  <phrase title="fs_register_fotter_rules" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[SWB upholds a strict ZERO tolerance policy against human trafficking and underage
+involvement. If you suspect any such activities, report immediately to the Human
+Trafficking Hotline: 1-888-373-7888.]]></phrase>
+  <phrase title="fs_register_gender" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Gender]]></phrase>
+  <phrase title="fs_register_hair_color" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Hair Color]]></phrase>
+  <phrase title="fs_register_height" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Height]]></phrase>
+  <phrase title="fs_register_hobbyist" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Hobbyist]]></phrase>
+  <phrase title="fs_register_mail_body" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[<p>Thank you for registering, <strong>{username}</strong>. Your account has been submitted for moderation. New
+registrations will not clear moderation until this information is provided.</p>
+<p>Please know that as a provider your account will not be approved until the following information is emailed to debbie@southwestboard.com.</p>
+<p>Please provide your P411 ID and the associated email you used for your P411 account,
+if applicable</p>
+<ol>
+<li>Your SWB username: </li>
+<li>Your professional alias</li>
+<li>Your real age (you may advertise any age over 21): </li>
+<li>Your professional email (Public email. May be different from your registration email.): </li>
+<li>Your professional phone number (Public number. May be different from your private.): </li>
+<li>Your professional website (If it exists)</li>
+<li>Your Preferred411.com info (If any)</li>
+<li>Links to reviews or ads on other websites (If they exist)</li>
+<li>Your market (State - City): {state} - {city}</li>
+<li>Photos (photos will not be shared, sold, or posted in any way, even upon request.)
+<ol>
+<li>Required Photos - Any photos that are stored by us are done so on an offline encrypted hard drive.</li>
+<li> At least 3 photos you intend to use for advertising.<l/i>
+<li>A photo of you holding an “SWB (current date)” sign including your face. This is essential for age verification, account recovery, and authenticity confirmation. <l/i>
+<li>A photo of your ID, clearly showcasing the PHOTO and DOB.<l/i>
+*Your information is heavily encrypted, stored offline and offsite, ensuring maximum security.
+Feel free to cover up any personal info except the photo and DOB for added security.
+<li>For those over 35: There's a possibility of approval without submitting an ID, but it's not
+guaranteed and might delay your approval process.<l/i>
+</ol>
+</li>
+</ol>
+<p>*While your information is heavily encrypted, stored offline and offsite, and therefore cannot be hacked or confiscated, feel free to cover up any personal information other than the photo and DOB if you feel the need.</p>
+
+<p>SWB Verified: This status confirms that we’ve verified your ID and ensures other users of your authenticity. It also grants access to the 'Ladies Lounge', a dedicated forum for advertisers</p>
+
+<p>Please note that new applications typically process on Fridays. If not responded to by Saturday,
+consider resubmission or sending a private message on our site.</p>
+
+<p>Warning: Ensuring user age is paramount. Any account associated with underage activities will
+face immediate bans and necessary legal actions. We prioritize the safety and integrity of
+independent adults.</p>
+
+<p>For any questions, you can reach out to debbie@southwestboard.com.</p>]]></phrase>
+  <phrase title="fs_register_mail_subject" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[SouthWestBoard]]></phrase>
+  <phrase title="fs_register_my_profile" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[My Profile]]></phrase>
+  <phrase title="fs_register_page_hobbyist_rules" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[<h3>Sign up hobbyist / premium account</h3>
+Joining our community offers a unique experience tailored to your needs. As a Premium
+member, you unlock unparalleled benefits:<br>
+<ul>
+<li>Exclusive Content: Enjoy special access to "The Rest of the Story" (ROS) reviews,
+which remain hidden from guests, regular, and female members.</li>
+<li>Engage in Private Discussions: Create and browse through "Private" posts in
+public forums, and immerse yourself in exclusive spaces like the Men's Lounge.</li>
+<li>Enhanced Messaging: Say goodbye to the basic 50-message limit. With
+Premium, store up to 1,000 messages, neatly organizing them in custom folders.</li>
+
+</ul>
+Moreover, as a testament to your authenticity:<br>
+<ul>
+<li>Verified SWB Badge: Your profile will feature an SWB badge, signifying our
+verification in our community, reinforcing trust among members.<l/i>
+<li>P411 Affiliation: If you're linked with the P411 site, we'll highlight this on your
+profile, making your membership evident to others.</li>
+</ul>
+<ul>
+<li>1 year: $100<l/i>
+<li>6 months: $70</li>
+<li>1 months: $30</li>
+</ul>
+<br>
+Lastly, joining requires a straightforward verification process:<br><br>
+Please provide copies of both your work and personal IDs. Alternatively, you can email
+Kathy from your work email, ensuring the ID matches your email address. If you prefer,
+you can simply give us your active P411 ID along with the email you registered with onP411. Another option is to submit 5 references from well-respected companions, and
+we'll handle the reference checks. However, if you choose the reference method, please
+be patient as it might take 5 to 7 days; the response time is out of our control. After
+submitting any of the above, we aim to verify within 24 hours.<br><br>
+Kathy@southwestboard.com<br>
+While sharing IDs, redact any private details. We only need your name and date of birth.
+Prioritizing your privacy, our registration system is offshore, ensuring optimal data
+encryption. Once your payment is processed, your verification begins. Welcome aboard!]]></phrase>
+  <phrase title="fs_register_page_provider_rules" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<strong>All independent and reputable Companions can sign up for a free SWB account under these conditions: </strong>
+<ul>
+<li>No agencies at this time. 
+</li>
+<li>Companions are paid without offering or implying sexual services; SWB opposes any illegal activities.</li>
+<li>Sexual content, direct or coded, is banned in SWB ads.</li>
+<li>Companions must be 21+, with age verification required.</li>
+<li>Any signs of minor exploitation, human trafficking, or undue control will be reported for investigation.</li>
+<li>SWB aims to provide a safe environment.</li>
+</ul>
+
+]]></phrase>
+  <phrase title="fs_register_pm_me" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[PM me]]></phrase>
+  <phrase title="fs_register_premiuem_body" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[Joining our community offers a unique experience tailored to your needs. As a Premium
+member, you unlock unparalleled benefits:<br>
+<ul>
+<li>Exclusive Content: Enjoy special access to "The Rest of the Story" (ROS) reviews,
+which remain hidden from guests, regular, and female members.</li>
+<li>Engage in Private Discussions: Create and browse through "Private" posts in
+public forums, and immerse yourself in exclusive spaces like the Men's Lounge.</li>
+<li>Enhanced Messaging: Say goodbye to the basic 50-message limit. With
+Premium, store up to 1,000 messages, neatly organizing them in custom folders.</li>
+
+</ul>
+Moreover, as a testament to your authenticity:<br>
+<ul>
+<li>Verified SWB Badge: Your profile will feature an SWB badge, signifying our
+verification in our community, reinforcing trust among members.<l/i>
+<li>P411 Affiliation: If you're linked with the P411 site, we'll highlight this on your
+profile, making your membership evident to others.</li>
+</ul>
+<ul>
+<li>1 year: $100<l/i>
+<li>6 months: $70</li>
+<li>1 months: $30</li>
+</ul>
+<br>
+Lastly, joining requires a straightforward verification process:<br>
+Please provide copies of both your work and personal IDs. Alternatively, you can email
+Kathy from your work email, ensuring the ID matches your email address. If you prefer,
+you can simply give us your active P411 ID along with the email you registered with onP411. Another option is to submit 5 references from well-respected companions, and
+we'll handle the reference checks. However, if you choose the reference method, please
+be patient as it might take 5 to 7 days; the response time is out of our control. After
+submitting any of the above, we aim to verify within 24 hours.<br><br>
+While sharing IDs, redact any private details. We only need your name and date of birth.
+Prioritizing your privacy, our registration system is offshore, ensuring optimal data
+encryption. Once your payment is processed, your verification begins. Welcome aboard!]]></phrase>
+  <phrase title="fs_register_premiuem_title" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[Sign up hobbyist / premium account]]></phrase>
+  <phrase title="fs_register_provider" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[Companion]]></phrase>
+  <phrase title="fs_register_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Required]]></phrase>
+  <phrase title="fs_register_service_type" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[Service Age]]></phrase>
+  <phrase title="fs_register_visit_home_page" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Visit Home Page]]></phrase>
+  <phrase title="fs_verify_account_compulsory" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Attention! You still need to verify your email address. If you do not receive your activation email in the next few minutes {link} to reset it.
+<br>
+ ]]></phrase>
+  <phrase title="invalid_activation_key" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Invalid Activation key]]></phrase>
+  <phrase title="invalid_username" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Invalid username]]></phrase>
+  <phrase title="option.Advertiser_manaul_approval" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Advertiser/Companion Manual Approval]]></phrase>
+  <phrase title="option.fs_register_hobbyiest_fields" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Hobbyist Fields]]></phrase>
+  <phrase title="option.fs_register_provider_fields" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Companion/Advertiser]]></phrase>
+  <phrase title="option_explain.Advertiser_manaul_approval" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_register_hobbyiest_fields" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the custom user FIELD_ID  <b>Comma separated like: filed1,field2.</b>]]></phrase>
+  <phrase title="option_explain.fs_register_provider_fields" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the custom user FIELD_ID  <b>Comma separated like: filed1,field2.</b>]]></phrase>
+  <phrase title="option_group.fs_register_steps" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Register Steps]]></phrase>
+  <phrase title="option_group_description.fs_register_steps" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="required_activation_key" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[required Activation key]]></phrase>
+  <phrase title="widget_def.FeaturedProvider" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[Featured Provider]]></phrase>
+  <phrase title="widget_def.TopUsers" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[Top Users]]></phrase>
+  <phrase title="widget_def.UserStates" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[User States]]></phrase>
+  <phrase title="widget_def_desc.FeaturedProvider" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="widget_def_desc.TopUsers" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="widget_def_desc.UserStates" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="you_have_already_verified" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[You have already verified]]></phrase>
+</phrases>

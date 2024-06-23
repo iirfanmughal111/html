@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="permissions" sub_name="xa-sc-categories" format="xa-sc-categories/:int&lt;category_id,title&gt;/" controller="XenAddons\Showcase:Permission" context="xaScCategoryPermissions" action_prefix="category"/>
+  <route route_type="admin" route_prefix="xa-sc" controller="XenAddons\Showcase:Item" context="xa_sc"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/" controller="XenAddons\Showcase:Category" context="xa_scCategories"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="feeds" format="feeds/:int&lt;feed_id,title&gt;/" controller="XenAddons\Showcase:Feed" context="xa_scFeeds"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="item-fields" format="item-fields/:str&lt;field_id&gt;/" controller="XenAddons\Showcase:ItemField" context="xa_scItemFields"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="prefixes" format="prefixes/:int&lt;prefix_id,title&gt;/" controller="XenAddons\Showcase:ItemPrefix" context="xa_scPrefixes"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="prefixes/group" format="prefixes/group/:int&lt;prefix_group_id,title&gt;/" controller="XenAddons\Showcase:ItemPrefix" context="xa_scPrefixes" action_prefix="group"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="reply-bans" format="reply-bans/:int&lt;item_reply_ban_id&gt;/" controller="XenAddons\Showcase:Item" context="xa_scReplyBans" action_prefix="replyBans"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="review-fields" format="review-fields/:str&lt;field_id&gt;/" controller="XenAddons\Showcase:ReviewField" context="xa_scReviewFields"/>
+  <route route_type="admin" route_prefix="xa-sc" sub_name="update-fields" format="update-fields/:str&lt;field_id&gt;/" controller="XenAddons\Showcase:UpdateField" context="xa_scUpdateFields"/>
+  <route route_type="admin" route_prefix="xa-sc-item-replace" controller="XenAddons\Showcase:ItemReplace" context="xaScItemReplace"/>
+  <route route_type="public" route_prefix="showcase" format=":int&lt;item_id,title&gt;/" controller="XenAddons\Showcase:Item" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="authors" format="authors/:int&lt;user_id,username&gt;/" controller="XenAddons\Showcase:Author" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/" controller="XenAddons\Showcase:Category" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="comments" format="comments/:int&lt;comment_id&gt;/" controller="XenAddons\Showcase:Comment" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="dialog" format="dialog/" controller="XenAddons\Showcase:Item" context="xa_showcase" action_prefix="dialog"/>
+  <route route_type="public" route_prefix="showcase" sub_name="item-comments" format="item-comments/:int&lt;item_id,title&gt;/" controller="XenAddons\Showcase:ItemComment" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="page" format=":+int&lt;item_id,item_title&gt;/page/:+int&lt;page_id,title&gt;/" controller="XenAddons\Showcase:ItemPage" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="review" format=":+int&lt;item_id,item_title&gt;/review/:+int&lt;rating_id&gt;/" controller="XenAddons\Showcase:ItemReview" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="review-reply" format="review-reply/:int&lt;reply_id&gt;/" controller="XenAddons\Showcase:ItemReviewReply" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="series" format="series/:int&lt;series_id,title&gt;/" controller="XenAddons\Showcase:Series" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="series-part" format="series-part/:int&lt;series_part_id,title&gt;/" controller="XenAddons\Showcase:SeriesPart" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="update" format=":+int&lt;item_id,item_title&gt;/update/:+int&lt;item_update_id,title&gt;/" controller="XenAddons\Showcase:ItemUpdate" context="xa_showcase"/>
+  <route route_type="public" route_prefix="showcase" sub_name="update-reply" format="update-reply/:int&lt;reply_id&gt;/" controller="XenAddons\Showcase:ItemUpdateReply" context="xa_showcase"/>
+  <route route_type="public" route_prefix="whats-new" sub_name="showcase-comments" format="showcase-comments/:int&lt;find_new_id&gt;/:page" controller="XenAddons\Showcase:WhatsNewComment" context="xa_showcase"/>
+  <route route_type="public" route_prefix="whats-new" sub_name="showcase-items" format="showcase-items/:int&lt;find_new_id&gt;/:page" controller="XenAddons\Showcase:WhatsNewItem" context="xa_showcase"/>
+</routes>

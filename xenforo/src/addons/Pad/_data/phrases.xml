@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="UserAttendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Attendance Management System]]></phrase>
+  <phrase title="addNewAttendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Attendance]]></phrase>
+  <phrase title="admin_navigation.attendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Employee Attendance]]></phrase>
+  <phrase title="admin_navigation.viewAttendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[View Attendance]]></phrase>
+  <phrase title="att_Date" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Date]]></phrase>
+  <phrase title="att_comments" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Comments]]></phrase>
+  <phrase title="att_delete" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Delete]]></phrase>
+  <phrase title="att_edit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Edit]]></phrase>
+  <phrase title="att_notAllowed" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Action not allowed]]></phrase>
+  <phrase title="att_username" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Usernmae]]></phrase>
+  <phrase title="att_view" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[View ]]></phrase>
+  <phrase title="attendance_comments" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Any comments]]></phrase>
+  <phrase title="currentUserAttendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Current User]]></phrase>
+  <phrase title="inTime" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Office Time]]></phrase>
+  <phrase title="nav.attendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Attendance]]></phrase>
+  <phrase title="noAnyAttendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[No Attendance data added yet.]]></phrase>
+  <phrase title="noComments" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[No special Comment]]></phrase>
+  <phrase title="option.attendanceEmployeeGroup" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Employee Group]]></phrase>
+  <phrase title="option_explain.attendanceEmployeeGroup" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_group.attendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Attendance]]></phrase>
+  <phrase title="option_group_description.attendance" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="todayDate" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Today Date]]></phrase>
+  <phrase title="totalCount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Total Count]]></phrase>
+</phrases>

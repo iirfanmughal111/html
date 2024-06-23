@@ -1,0 +1,26 @@
+{
+    "XF-Admin-Controller-Banning_FS-EncryptIp-XF-Admin-Controller-Banning.json": {
+        "hash": "6e7549de348ad47c4da90ebdbec89d37"
+    },
+    "XF-Entity-IpMatch_FS-EncryptIp-XF-Entity-IpMatch.json": {
+        "hash": "68ce2f8f6207c9aed809cc5abf26e75b"
+    },
+    "XF-Entity-Ip_FS-EncryptIp-XF-Entity-Ip.json": {
+        "hash": "3217d7f078267280e8912ce31d4be50a"
+    },
+    "XF-Http-Request_FS-EncryptIp-XF-Http-Request.json": {
+        "hash": "e89c6514329c558f3b143fda9e958c8b"
+    },
+    "XF-Pub-Controller-Member_FS-EncryptIp-XF-Pub-Controller-Member.json": {
+        "hash": "f3ec14eb4e8e4887532e2cebc89aa4e4"
+    },
+    "XF-Pub-Controller-Misc_FS-EncryptIp-XF-Pub-Controller-Misc.json": {
+        "hash": "62947eea2ce306e1a3b13f791431a908"
+    },
+    "XF-Repository-Banning_FS-EncryptIp-XF-Repository-Banning.json": {
+        "hash": "833daa32535b1f128524302f3951a9f7"
+    },
+    "XF-Repository-Ip_FS-EncryptIp-XF-Repository-Ip.json": {
+        "hash": "b1323008711802ac24b506d9bb1c5ec6"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "fs_moveThread_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "5d1daa50ea24552be62de83af5b6ffe8"
+    },
+    "fs_post_as_thread.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c6688e26a4187c316d84887c73285207"
+    },
+    "permission.fs_move_post_perm_group_fs_move_post_as_thread.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "b098ff1f5458ec01b8854beec8e87c1c"
+    },
+    "permission_interface.fs_move_Thread_perms_group.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "3d94ec9935224b0d56946f9ba1c3cce3"
+    },
+    "you_sure_you_want_to_move_this_posts_to_new_thread.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "86498391aeedd9a100b5ddaf979279ed"
+    }
+}

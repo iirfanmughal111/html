@@ -1,0 +1,17 @@
+<xf:set var="$requestLink">{{ link('escrow/withdraw') }}</xf:set>
+
+<mail:subject>
+	{{ phrase('fs_escrow_request_subject') }}
+</mail:subject>
+
+	{{ phrase('fs_escrow_otp_alert_mail', {
+	'user': $visitor.username,
+	'otp':$visitor.escrow_otp
+}) }}
+<table cellpadding="10" cellspacing="0" border="0" width="100%" class="linkBar" >
+	<tr>
+		<td >
+			<a href="{{$requestLink}}" class="button">{{ phrase('fs_escrow_visit_request_page') }}</a>
+		</td>
+	</tr>
+</table>

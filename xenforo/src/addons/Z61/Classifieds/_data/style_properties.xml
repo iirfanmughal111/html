@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="z61ClassifiedsFeedbackNegative" group_name="z61ClassifiedsFeedback" title="Negative feedback color" property_type="value" value_type="color" display_order="200">
+    <value>"rgb(255, 0, 0)"</value>
+  </style_property>
+  <style_property property_name="z61ClassifiedsFeedbackNegativeIcon" group_name="z61ClassifiedsFeedback" title="Negative feedback icon" description="The css classes to use for negative feedback. Ex: &lt;b&gt;fa fa-thumbs-down&lt;/b&gt;" property_type="value" value_type="string" display_order="210">
+    <value>"fa-thumbs-down"</value>
+  </style_property>
+  <style_property property_name="z61ClassifiedsFeedbackNeutral" group_name="z61ClassifiedsFeedback" title="Neutral feedback color" property_type="value" value_type="color" display_order="300">
+    <value>"rgb(128, 128, 128)"</value>
+  </style_property>
+  <style_property property_name="z61ClassifiedsFeedbackNeutralIcon" group_name="z61ClassifiedsFeedback" title="Neutral feedback icon" description="The css classes to use for positive feedback. Ex: &lt;b&gt;fa fa-meh&lt;/b&gt;" property_type="value" value_type="string" display_order="310">
+    <value>"fa-meh"</value>
+  </style_property>
+  <style_property property_name="z61ClassifiedsFeedbackPositive" group_name="z61ClassifiedsFeedback" title="Positive feedback color" property_type="value" value_type="color" display_order="100">
+    <value>"rgb(0, 100, 0)"</value>
+  </style_property>
+  <style_property property_name="z61ClassifiedsFeedbackPositiveIcon" group_name="z61ClassifiedsFeedback" title="Positive feedback icon" description="The css classes to use for positive feedback. Ex: &lt;b&gt;fa fa-thumbs-up&lt;/b&gt;" property_type="value" value_type="string" display_order="110">
+    <value>"fa-thumbs-up"</value>
+  </style_property>
+</style_properties>

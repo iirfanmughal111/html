@@ -1,0 +1,112 @@
+<xf:title page="{$page}">{{ phrase('escrow_admin_logs') }}</xf:title>
+<div class="block-container">
+	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+        <xf:if is="count($logs) > 0 ">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="logs_table_list"
+                arg-logs="{$logs}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	<div class="block-footer">
+  
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt><span class="block-footer-counter">{{ display_totals($logs, $total) }}</span></dt>
+        <dd>
+       <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="escrow/log"
+            data="{$logs}"
+            params="{$logs}"
+            wrapperclass="block-outer-main"
+          />
+      </dd>
+      </dl>
+      </div>
+  </div>
+      </div>
+
+<xf:macro name="logs_table_list" arg-logs="!">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_type') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('username') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			
+		</xf:datarow>
+	
+<set var="$sum" value="0"></set>
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			<xf:cell> {{$log.transaction_type}} </xf:cell>
+			<xf:cell><xf:date time="$log.created_at" /></xf:cell>
+			<xf:cell><a  href="{{link_type('public','members/',$log.User)}}" >{{$log.User.username}}</a></xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolAmount() }} </xf:cell>
+		</xf:datarow>
+		
+	</xf:foreach>
+</xf:macro>
+
+
+
+<xf:macro name="status"
+	arg-status="!"
+	>
+		<xf:if is="$status==0">
+			{{ phrase('fs_escrow_status_0') }}
+		<xf:elseif is="$status == 1" />
+			{{ phrase('fs_escrow_status_1') }}
+		<xf:elseif is="$status == 2" />
+			{{ phrase('fs_escrow_status_2') }}
+		<xf:elseif is="$status == 3" />
+			{{ phrase('fs_escrow_status_3') }}
+		<xf:elseif is="$status == 4" />
+			{{ phrase('fs_escrow_status_4') }}
+		<xf:else/>
+			{{ phrase('fs_escrow_status_undefined') }}
+		</xf:if>
+	</xf:macro>
+
+<!-- Filter Bar Macro Start -->
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-transaction', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>

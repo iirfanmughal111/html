@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="dbt_ecom_latest_reviews" definition_class="DBTech\eCommerce\Widget\LatestReviews"/>
+  <widget_definition definition_id="dbt_ecom_new_products" definition_class="DBTech\eCommerce\Widget\NewProducts"/>
+  <widget_definition definition_id="dbt_ecom_rnd_products" definition_class="DBTech\eCommerce\Widget\RandomProducts"/>
+  <widget_definition definition_id="dbt_ecom_top_products" definition_class="DBTech\eCommerce\Widget\TopProducts"/>
+</widget_definitions>

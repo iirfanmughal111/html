@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XF\Admin\Controller\Forum" to_class="Z61\Classifieds\XF\Admin\Controller\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Admin\Controller\User" to_class="Z61\Classifieds\XF\Admin\Controller\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Forum" to_class="Z61\Classifieds\XF\Entity\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\User" to_class="Z61\Classifieds\XF\Entity\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Member" to_class="Z61\Classifieds\XF\Pub\Controller\Member" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Watched" to_class="Z61\Classifieds\XF\Pub\Controller\Watched" execute_order="10" active="1"/>
+</class_extensions>

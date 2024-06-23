@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="bump_thread_above_post" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="bump_thread_options" display_order="9"/>
+  </option>
+  <option option_id="bump_thread_button_positions" edit_format="radio" data_type="string" advanced="0">
+    <default_value>top</default_value>
+    <edit_format_params>top=Disabled
+quickreply_left=In the left of "Post reply" button
+quickreply_right=In the right of "Post reply" button</edit_format_params>
+    <relation group_id="bump_thread_options" display_order="10"/>
+  </option>
+  <option option_id="bump_thread_default_sort_forums" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>XF\Option\Forum::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="bump_thread_options" display_order="100"/>
+  </option>
+  <option option_id="bump_thread_enabled" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="bump_thread_options" display_order="1"/>
+  </option>
+  <option option_id="bump_thread_menu" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="bump_thread_options" display_order="9"/>
+  </option>
+  <option option_id="bump_thread_reverse_time_limit" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="bump_thread_options" display_order="1"/>
+  </option>
+  <option option_id="bump_thread_thread_list" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="bump_thread_options" display_order="9"/>
+  </option>
+  <option option_id="bump_thread_timer_from_thread_post_date" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="bump_thread_options" display_order="20"/>
+  </option>
+</options>

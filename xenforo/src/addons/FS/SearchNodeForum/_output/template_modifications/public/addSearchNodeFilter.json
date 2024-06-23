@@ -1,0 +1,9 @@
+{
+    "template": "search_forum_view",
+    "description": "addSearchNodeFilter",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if contentcheck=\"true\">.*?\t<\\/xf:trim><\\/div>\n\n\t<div class=\"block-container\">/is",
+    "replace": "$0\n<xf:extension name=\"thread_list_header\">\n\t\t\t<div class=\"block-filterBar\">\n\t\t\t\t<div class=\"filterBar\">\n\t\t\t\t\t<xf:if contentcheck=\"true\">\n\t\t\t\t\t\t<ul class=\"filterBar-filters\">\n\t\t\t\t\t\t<xf:contentcheck>\n\t\t\t\t\t\t\t<xf:extension name=\"filters\">\n\t\t\t\t\t\t\t\t<xf:macro template=\"fs_node_search_filter_macro\" name=\"filters\"\n\t\t\t\t\t\t\t\t\targ-forum=\"{$searchForum}\"\n\t\t\t\t\t\t\t\t\targ-filters=\"{$filters}\"\n\t\t\t\t\t\t\t\t\targ-starterFilter=\"{$starterFilter}\"\n\t\t\t\t\t\t\t\t\targ-threadTypeFilter=\"{$threadTypeFilter}\" />\n\t\t\t\t\t\t\t</xf:extension>\n\t\t\t\t\t\t</xf:contentcheck>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</xf:if>\n\n\t\t\t\t\t<a class=\"filterBar-menuTrigger\" data-xf-click=\"menu\" role=\"button\" tabindex=\"0\" aria-expanded=\"false\" aria-haspopup=\"true\">{{ phrase('filters') }}</a>\n\t\t\t\t\t<div class=\"menu menu--wide\" data-menu=\"menu\" aria-hidden=\"true\"\n\t\t\t\t\t\tdata-href=\"{{ link('search-forums/filters', $searchForum, {$filters}) }}\"\n\t\t\t\t\t\tdata-load-target=\".js-filterMenuBody\">\n\t\t\t\t\t\t<div class=\"menu-content\">\n\t\t\t\t\t\t\t<h4 class=\"menu-header\">{{ phrase('show_only:') }}</h4>\n\t\t\t\t\t\t\t<div class=\"js-filterMenuBody\">\n\t\t\t\t\t\t\t\t<div class=\"menu-row\">{{ phrase('loading...') }}</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</xf:extension>"
+}

@@ -1,0 +1,9 @@
+{
+    "template": "member_macros",
+    "description": "Add the QeA count to member stats.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--[XF:stat_pairs:below_trophies]-->",
+    "replace": "$0\n\t<dl class=\"pairs pairs--rows pairs--rows--centered menu-fauxLinkRow\">\n\t\t<dt>{{ phrase('fs_question_count') }}</dt>\n\t\t<dd>\n\t\t\t{{$user.question_count|number }}\n\t\t</dd>\n\t</dl>\n\t<dl class=\"pairs pairs--rows pairs--rows--centered menu-fauxLinkRow\">\n\t\t<dt>{{ phrase('fs_answer_count1s') }}</dt>\n\t\t<dd>\n\t\t\t{{$user.answer_count|number}}\n\t\t</dd>\n\t</dl>"
+}

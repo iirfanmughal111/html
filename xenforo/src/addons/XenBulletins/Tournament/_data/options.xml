@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="tourn_user_conversation_id" edit_format="username" data_type="string">
+    <default_value></default_value>
+    <relation group_id="tournament" display_order="1"/>
+  </option>
+</options>

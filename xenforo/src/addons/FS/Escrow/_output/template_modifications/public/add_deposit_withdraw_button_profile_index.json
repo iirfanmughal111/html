@@ -1,0 +1,9 @@
+{
+    "template": "member_view",
+    "description": "add_deposit_withdraw_button_profile_index",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if is=\"\\$user\\.user_id == \\$xf\\.visitor\\.user_id && \\$xf\\.visitor\\.canUploadProfileBanner\\(\\)\">\n\t\t\t\t\t\t\t\t\t\t\t\t<xf:button href=\"{{ link\\('account\\/banner'\\) }}\".*?<\\/xf:button>\n\t\t\t\t\t\t\t\t\t\t\t<\\/xf:if>/is",
+    "replace": "<xf:if is=\"$user.user_id == $xf.visitor.user_id \">\n\t<xf:button href=\"{{ link('escrow/deposit') }}\"\n\t\t\t   class=\"button--link\" >\n\t\t{{ phrase('fs_escrow_amount_deposit') }}\n\t</xf:button>\n\t\t<xf:button href=\"{{ link('escrow/withdraw') }}\"\n\t\t\t   class=\"button--link\">\n\t\t{{ phrase('fs_escrow_amount_withdraw') }}\n\t</xf:button>\n</xf:if>\n$0"
+}

@@ -1,0 +1,41 @@
+<xf:css src="regsitration_steps.less" />
+<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('members_online') }}</dt>
+				<dd>{$counts.members|number}</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('guests_online') }}</dt>
+				<dd>{$counts.guests|number}</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('total_visitors') }}</dt>
+				<dd>{$counts.total|number}</dd>
+			</dl>
+		<div class="user-lists">
+		<h3 class="block-minorHeader widget-heading">{{ phrase('fs_register_latest_provider') }}</h3>
+		
+		<xf:foreach loop="$ProviderUsers" value="$user">
+			<dl class="pairs pairs--justified">
+				<dt><a href="{{ link('members',$user)}}">  {{$user.username }}</a></dt>
+				<dd><xf:date time="$user.register_date" /></dd>
+			</dl>
+		</xf:foreach>
+			
+			<h3 class="block-minorHeader widget-heading">{{ phrase('fs_register_latest_male') }}</h3>
+		
+				<xf:foreach loop="$MaleUsers" value="$user">
+					<dl class="pairs pairs--justified">
+						<dt><a href="{{ link('members',$user)}}">  {{$user.username }}</a></dt>
+						<dd><xf:date time="$user.register_date" /></dd>
+					</dl>
+				</xf:foreach>
+			</div>
+		</div>
+	</div>
+</div>

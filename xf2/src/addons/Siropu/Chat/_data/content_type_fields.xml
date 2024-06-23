@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="siropu_chat" field_name="alert_handler_class">Siropu\Chat\Alert\User</field>
+  <field content_type="siropu_chat" field_name="attachment_handler_class">Siropu\Chat\Attachment\User</field>
+  <field content_type="siropu_chat" field_name="entity">XF:User</field>
+  <field content_type="siropu_chat" field_name="phrase">siropu_chat</field>
+  <field content_type="siropu_chat_conv" field_name="alert_handler_class">Siropu\Chat\Alert\Conversation</field>
+  <field content_type="siropu_chat_conv" field_name="entity">Siropu\Chat:Conversation</field>
+  <field content_type="siropu_chat_conv_message" field_name="alert_handler_class">Siropu\Chat\Alert\ConversationMessage</field>
+  <field content_type="siropu_chat_conv_message" field_name="entity">Siropu\Chat:ConversationMessage</field>
+  <field content_type="siropu_chat_conv_message" field_name="reaction_handler_class">Siropu\Chat\Reaction\ConversationMessage</field>
+  <field content_type="siropu_chat_conv_message" field_name="report_handler_class">Siropu\Chat\Report\ConversationMessage</field>
+  <field content_type="siropu_chat_room" field_name="alert_handler_class">Siropu\Chat\Alert\Room</field>
+  <field content_type="siropu_chat_room" field_name="entity">Siropu\Chat:Room</field>
+  <field content_type="siropu_chat_room_message" field_name="alert_handler_class">Siropu\Chat\Alert\RoomMessage</field>
+  <field content_type="siropu_chat_room_message" field_name="edit_history_handler_class">Siropu\Chat\EditHistory\Message</field>
+  <field content_type="siropu_chat_room_message" field_name="entity">Siropu\Chat:Message</field>
+  <field content_type="siropu_chat_room_message" field_name="reaction_handler_class">Siropu\Chat\Reaction\RoomMessage</field>
+  <field content_type="siropu_chat_room_message" field_name="report_handler_class">Siropu\Chat\Report\Message</field>
+  <field content_type="siropu_chat_sanction" field_name="alert_handler_class">Siropu\Chat\Alert\Sanction</field>
+  <field content_type="siropu_chat_sanction" field_name="entity">Siropu\Chat:Sanction</field>
+</content_type_fields>

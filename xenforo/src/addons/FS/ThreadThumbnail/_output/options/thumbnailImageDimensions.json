@@ -1,0 +1,16 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "option_template_ThumbnailimageDimensions",
+    "data_type": "array",
+    "sub_options": [
+        "height",
+        "width"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "{\"height\":100,\"width\":100}",
+    "relations": {
+        "fs_thread_thumbnail": 1
+    }
+}

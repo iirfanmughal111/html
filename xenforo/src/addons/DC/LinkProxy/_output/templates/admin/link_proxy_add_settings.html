@@ -1,0 +1,46 @@
+<xf:title>{{ phrase('link_proxy_title') }}</xf:title>
+
+
+<div class="block">
+
+    <xf:form
+      action="{{ link('link-proxy/save') }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+		  <xf:formrow  label="{{ phrase('link_user_group') }}" 	hint="{{ phrase('link_redirect_required') }}" required="true">
+			  <xf:select name="user_group_id" value="{{$list.user_group_id ? $list.user_group_id : ''}}">
+				  <xf:options source="$userGroup" />
+			  </xf:select>
+		  </xf:formrow>
+		  
+
+            <xf:numberboxrow
+            label="{{ phrase('link_redirect_time') }}"
+			explain="{{ phrase('link_redirect_in_secs') }}"
+			hint="{{ phrase('link_redirect_required') }}" 
+            name="redirect_time"
+            value="{{$list.redirect_time ? $list.redirect_time : ''}}"
+			min="0"			 
+            required="true"
+            />        
+		  
+		  <xf:codeeditorrow name="link_redirect_html" value="{{$list.link_redirect_html ? $list.link_redirect_html : ''}}"
+				mode="css" data-line-wrapping="true"
+				class="codeEditor--autoSize"
+				label="{{ phrase('link_redirect_html') }}" />
+
+		
+        <xf:textboxrow
+          type="hidden"
+          name="link_id"
+          value="{{$list.list_id ? $list.list_id : ''}}"
+        />
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+  
+</div>

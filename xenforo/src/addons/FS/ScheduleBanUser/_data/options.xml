@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_scheduled_ban_user_timezone" edit_format="callback" data_type="string">
+    <default_value>America/New_York</default_value>
+    <edit_format_params>XF\Option\GuestTimeZone::renderOption</edit_format_params>
+    <relation group_id="scheduled" display_order="1"/>
+  </option>
+</options>

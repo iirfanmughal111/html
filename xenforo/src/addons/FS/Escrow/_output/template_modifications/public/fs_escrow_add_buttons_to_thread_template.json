@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "fs_escrow_add_buttons_to_thread_template",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:h1>{{ prefix('thread', $thread) }}{$thread.title}</xf:h1>",
+    "replace": "$0\n<xf:if is=\"$xf.visitor.user_id!=0 AND $thread.escrow_id!=0 AND $thread.node_id==$xf.options.fs_escrow_applicable_forum\">\n\n\t<xf:pageaction>\n\t\t<xf:if is=\"($thread.Escrow.to_user==$xf.visitor.user_id OR $thread.Escrow.user_id==$xf.visitor.user_id) AND ($thread.Escrow.escrow_status==0)\">\n\t\t\t<xf:button\n\t\t\thref=\"{{ link('escrow/cancel',$thread.Escrow) }}\"\n\t\t\tclass=\"button--cta\"\n\t\t\ticon=\"cancel\"\n\t\t\toverlay=\"true\"\n\t\t\t>{{ phrase('fs_escrow_cancel') }}</xf:button>\n\t\t</xf:if>\n\t\t\n\t\t<xf:if is=\"($xf.visitor.is_admin OR $thread.Escrow.user_id==$xf.visitor.user_id) And $thread.Escrow.escrow_status==1\">\n\t\t\t<xf:button\n\t\t\thref=\"{{ link('escrow/payments', $thread.Escrow) }}\"\n\t\t\tclass=\"\"\n\t\t\ticon=\"payment\"\n\t\t\toverlay=\"true\"\n\t\t\t>{{ phrase('fs_escrow_payment') }}</xf:button>\n\t\t</xf:if>\n\t\t\n\t\t<xf:if is=\"$thread.Escrow.to_user==$xf.visitor.user_id And $thread.Escrow.escrow_status==0\">\n\t\t\t<xf:button\n\t\t\thref=\"{{ link('escrow/approve', $thread.Escrow) }}\"\n\t\t\tclass=\"\"\n\t\t\ticon=\"approve\"\n\t\t\toverlay=\"true\"\n\t\t\t>{{ phrase('fs_escrow_approve') }}</xf:button>\n\t\t</xf:if>\n\n\t\t\t\n\t\t\t\n\t\t</xf:pageaction>\n</xf:if>\n\t"
+}

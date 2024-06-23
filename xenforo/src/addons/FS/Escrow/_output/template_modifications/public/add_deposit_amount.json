@@ -1,0 +1,9 @@
+{
+    "template": "account_visitor_menu",
+    "description": "add_deposit_amount",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--[XF:stats_pairs:above_points]-->",
+    "replace": "$0\n<xf:if is=\"true\">\n\t\t\t\t\t\t<dl class=\"pairs pairs--justified fauxBlockLink\">\n\t\t\t\t\t\t\t<dt>{{ phrase('fs_escrow_amount') }}</dt>\n\t\t\t\t\t\t\t<dd>\n\t\t\t\t\t\t\t\t<a href=\"{{ link('escrow/deposit') }}\" class=\"fauxBlockLink-linkRow u-concealed\">\n\t\t\t\t\t\t\t\t\t{{phrase('fs_escrow_amount_symbol')}}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0}}\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</dd>\n\t\t\t\t\t\t</dl>\n\t\t\t\t\t</xf:if>"
+}

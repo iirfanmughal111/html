@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="fs_thread_thumbnail_group" permission_id="fs_thread_thumbnail" permission_type="flag" interface_group_id="fs_Thread_Thumbnail_perms" display_order="1"/>
+</permissions>

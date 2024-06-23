@@ -1,0 +1,9 @@
+{
+    "template": "post_macros",
+    "description": "manage_message_from_front_side",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if is=\"\\$snippet\">.*?<\\/xf:if>/is",
+    "replace": "<xf:if is=\"!$post.isFirstPost() OR !$thread.getReviewsThreadIds()\">\n$0\n\t<xf:else />\n\t<xf:css>\n\t.message-fields{\n\t\tmargin-top:0px !important;\n\t\t}</xf:css>\n</xf:if>\n\n\n\n<xf:if is=\"$post.isFirstPost() AND $thread.getReviewsThreadIds() AND $xf.visitor.isMemberOf([7,8])\">\n\t$0\n\t<xf:elseif is=\"$post.isFirstPost() AND $thread.getReviewsThreadIds() AND !$xf.visitor.isMemberOf([7,8])\" />\n\t<p> {{phrase('buy_premium_to_view_message', {'link':link('register/premuim')} ) }} </p>\n</xf:if>\n\n\n\n"
+}

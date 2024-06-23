@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_add_public_key" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Add Public key]]></phrase>
+  <phrase title="fs_change_public_key" version_id="1010010" version_string="1.1.0 Alpha"><![CDATA[Change Public key]]></phrase>
+  <phrase title="fs_copy_to_clipboard" version_id="2070010" version_string="2.7.0 Alpha"><![CDATA[Copy to Clipboard]]></phrase>
+  <phrase title="fs_enable_for_admin" version_id="2030010" version_string="2.3.0 Alpha"><![CDATA[Enable for Admin]]></phrase>
+  <phrase title="fs_enable_passphrase" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enable Passphrase]]></phrase>
+  <phrase title="fs_enable_pgp" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enable PGP]]></phrase>
+  <phrase title="fs_encrypt_message" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Encrypt Message]]></phrase>
+  <phrase title="fs_for_enable_public_key" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[For Enable PGP First Add Public key!  <a href="{link}">click Here</a>]]></phrase>
+  <phrase title="fs_forget_password" version_id="2000010" version_string="2.0.0 Alpha"><![CDATA[Forget Password]]></phrase>
+  <phrase title="fs_hi" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Hi]]></phrase>
+  <phrase title="fs_invalid_encrypt_message" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Invalid Encrypt Message]]></phrase>
+  <phrase title="fs_invalid_passphrase" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Invalid PassPhrase]]></phrase>
+  <phrase title="fs_invalid_public_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Invalid Public Key]]></phrase>
+  <phrase title="fs_login_options" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Login Options]]></phrase>
+  <phrase title="fs_message" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Message]]></phrase>
+  <phrase title="fs_minimum_passphrase_should_be" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Minimum Passphrase character Should be {length}]]></phrase>
+  <phrase title="fs_not_allowed" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[Not Allowed]]></phrase>
+  <phrase title="fs_not_found" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[Not Found]]></phrase>
+  <phrase title="fs_passphrase" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[PassPhrase]]></phrase>
+  <phrase title="fs_passphrase1" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[PassPhrase1]]></phrase>
+  <phrase title="fs_passphrase2" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[PassPhrase2]]></phrase>
+  <phrase title="fs_passphrase3" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[PassPhrase3]]></phrase>
+  <phrase title="fs_passphrase_1_key_expl" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Passphrase is a like a password to protect Account.]]></phrase>
+  <phrase title="fs_passphrase_2_key_expl" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Passphrase2 is a like a password to protect Account.
+]]></phrase>
+  <phrase title="fs_passphrase_3_key_expl" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[Passphrase3 is a like a password to protect Account.]]></phrase>
+  <phrase title="fs_passphrase_require" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Required Passphrase]]></phrase>
+  <phrase title="fs_passphrase_require_overlay" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Required Passphrase]]></phrase>
+  <phrase title="fs_passphrase_require_overlay_msg" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Passphrase is a like a password to protect Account.
+]]></phrase>
+  <phrase title="fs_passphrase_require_overlay_msg3" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[Passphrase3 is a like a password to protect Account.]]></phrase>
+  <phrase title="fs_passphrase_should_not_be_similar" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[PassPhrase Should not be Similarl !]]></phrase>
+  <phrase title="fs_pgp" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[PGP]]></phrase>
+  <phrase title="fs_pgp_public_key" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[PGP Public key]]></phrase>
+  <phrase title="fs_please_set_first_passphrase" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Please First Set Passphrase]]></phrase>
+  <phrase title="fs_public_key" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Public Key]]></phrase>
+  <phrase title="fs_public_key_copy_to_clipboard" version_id="2070010" version_string="2.7.0 Alpha"><![CDATA[Public key Copy to Clipboard]]></phrase>
+  <phrase title="fs_public_key_expl" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Public key is like third layer for used to protect your Account]]></phrase>
+  <phrase title="fs_require_encrypt_message" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Require Encrypt Message]]></phrase>
+  <phrase title="fs_require_encrypt_message_new_public_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Require Encrypt Message for New Public key ]]></phrase>
+  <phrase title="fs_require_encrypt_message_old_public_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[Encrypt Message Require With Old Public Key]]></phrase>
+  <phrase title="fs_require_passphrase" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Require Passphrase]]></phrase>
+  <phrase title="fs_username" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[Username]]></phrase>
+  <phrase title="option.fs_admin_public_key" version_id="2030010" version_string="2.3.0 Alpha"><![CDATA[Admin Public Key]]></phrase>
+  <phrase title="option.fs_passphrase_length" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Passphrase Length]]></phrase>
+  <phrase title="option_explain.fs_admin_public_key" version_id="2030010" version_string="2.3.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_passphrase_length" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_group.fs_pgp_encryption" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[Fs-PGPEncryption]]></phrase>
+  <phrase title="option_group_description.fs_pgp_encryption" version_id="1030010" version_string="1.3.0 Alpha"><![CDATA[]]></phrase>
+</phrases>

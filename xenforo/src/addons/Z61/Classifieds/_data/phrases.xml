@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="admin_navigation.classifiedCategories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds categories]]></phrase>
+  <phrase title="admin_navigation.classifiedConditions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing conditions]]></phrase>
+  <phrase title="admin_navigation.classifiedFields" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds fields]]></phrase>
+  <phrase title="admin_navigation.classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds]]></phrase>
+  <phrase title="admin_navigation.classifiedsBatch" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Batch update]]></phrase>
+  <phrase title="admin_navigation.classifiedsBatchListings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings]]></phrase>
+  <phrase title="admin_navigation.classifiedsPackages" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds packages]]></phrase>
+  <phrase title="admin_navigation.classifiedsPrefixes" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds prefixes]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedCategories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified categories]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedConditions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified conditions]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedFields" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified fields]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedListingType" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified types]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedPrefixes" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified prefixes]]></phrase>
+  <phrase title="admin_navigation.z61Classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedsCatPerms" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category permissions]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedsListingType" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing types]]></phrase>
+  <phrase title="admin_navigation.z61ClassifiedsPackages" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classified packages]]></phrase>
+  <phrase title="admin_permission.classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Manage classifieds]]></phrase>
+  <phrase title="alert_opt_out.classifieds_listing_insert" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Posts a new listing]]></phrase>
+  <phrase title="alert_opt_out.classifieds_listing_mention" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mentioned you in a listing]]></phrase>
+  <phrase title="alert_opt_out.classifieds_listing_reaction" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Reacts to your listing]]></phrase>
+  <phrase title="classifieds_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing]]></phrase>
+  <phrase title="cron_entry.z61ClassifiedsExpire" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds: Close expired listings]]></phrase>
+  <phrase title="cron_entry.z61ClassifiedsViews" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds: Update view counters]]></phrase>
+  <phrase title="member_stat.classifieds_most_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Most classifieds listings]]></phrase>
+  <phrase title="nav.classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds]]></phrase>
+  <phrase title="nav.classifiedsAddListing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add listing]]></phrase>
+  <phrase title="nav.classifiedsNew" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[New listings]]></phrase>
+  <phrase title="nav.classifiedsWatched" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watched]]></phrase>
+  <phrase title="nav.classifiedsWatchedCategories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watched categories]]></phrase>
+  <phrase title="nav.classifiedsWatchedListings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watched listings]]></phrase>
+  <phrase title="nav.classifiedsWhatsNew" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[New listings]]></phrase>
+  <phrase title="nav.classifiedsYourListings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your listings]]></phrase>
+  <phrase title="nav.z61ClassifiedsMarkRead" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mark read]]></phrase>
+  <phrase title="option.z61ClassifiedsAuthorOtherListingsCount" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Author's other listing count]]></phrase>
+  <phrase title="option.z61ClassifiedsCloseExpiredListings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Close expired listings]]></phrase>
+  <phrase title="option.z61ClassifiedsFeedbackPairs" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Show feedback in member stat pairs]]></phrase>
+  <phrase title="option.z61ClassifiedsFeedbackPerPage" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feedback items per page]]></phrase>
+  <phrase title="option.z61ClassifiedsGoogleApi" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Google API Key]]></phrase>
+  <phrase title="option.z61ClassifiedsListDefaultOrder" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Default listing list order]]></phrase>
+  <phrase title="option.z61ClassifiedsListLayout" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[List layout type]]></phrase>
+  <phrase title="option.z61ClassifiedsListingCurrencies" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Available listing currencies]]></phrase>
+  <phrase title="option.z61ClassifiedsListingDeleteThreadAction" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing deletion thread action]]></phrase>
+  <phrase title="option.z61ClassifiedsListingsPerPageGrid" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings per page (Grid layout)]]></phrase>
+  <phrase title="option.z61ClassifiedsListingsPerPageList" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings per page (List layout)]]></phrase>
+  <phrase title="option.z61ClassifiedsShowAvatarIfNoCover" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Show user avatars instead of default image on listings with no cover]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsAuthorOtherListingsCount" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The maximum number of other listings to display from a resource's author. Use 0 to disable this block.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsCloseExpiredListings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, listings that expire will be closed]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsFeedbackPairs" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, user feedback will be added to the member quick stats on profile and card.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsFeedbackPerPage" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The amount of feedback to show per page on a user's feedback area]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsGoogleApi" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Instructions on generating and retrieving your API key can be found <a href="https://developers.google.com/maps/documentation/embed/guide#api_key" target="_blank">here</a>. The Geocoding API, Places API, Google Maps JavaScript API and Google Maps Embed API should all be enabled for full integration.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListDefaultOrder" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When viewing the listing index or category overview pages, this will be the default order for listings.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListLayout" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The layout type you want used on the classifieds index. <b>Note:</b> Can be overridden by categories.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListingCurrencies" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Controls the currencies that users can select to apply to their listings. Add one currency per line. Each currency can only be 3 characters (USD, GBP, etc). A symbol will be used to display the currency if possible.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListingDeleteThreadAction" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When a listing is deleted, take this action with any automatically created thread.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListingsPerPageGrid" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The number of listings that will be listed per page, when using the grid layout type.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsListingsPerPageList" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The number of listings that will be listed per page, when using the list layout type.]]></phrase>
+  <phrase title="option_explain.z61ClassifiedsShowAvatarIfNoCover" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When a listing has no cover image, show the creator's avatar in the list of listings.]]></phrase>
+  <phrase title="option_group.z61Classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds]]></phrase>
+  <phrase title="option_group_description.z61Classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Options that control the classifieds add-on.]]></phrase>
+  <phrase title="permission.classifieds_add" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add classified listing]]></phrase>
+  <phrase title="permission.classifieds_approveUnapprove" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Approve / unapprove listings]]></phrase>
+  <phrase title="permission.classifieds_ask_question" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Ask question on listing]]></phrase>
+  <phrase title="permission.classifieds_clearSold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Clear sold status on listings]]></phrase>
+  <phrase title="permission.classifieds_closeAny" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Close any listing]]></phrase>
+  <phrase title="permission.classifieds_closeOwnListing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Close own listing]]></phrase>
+  <phrase title="permission.classifieds_contactOwner" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Contact listing owner]]></phrase>
+  <phrase title="permission.classifieds_deleteAny" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete any listing]]></phrase>
+  <phrase title="permission.classifieds_deleteAnyFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete any feedback]]></phrase>
+  <phrase title="permission.classifieds_deleteOwn" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete own listings]]></phrase>
+  <phrase title="permission.classifieds_deleteOwnFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete own feedback]]></phrase>
+  <phrase title="permission.classifieds_editAny" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit any listing]]></phrase>
+  <phrase title="permission.classifieds_editAnyFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit any feedback]]></phrase>
+  <phrase title="permission.classifieds_featureUnfeature" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature / unfeature listings]]></phrase>
+  <phrase title="permission.classifieds_hardDeleteAny" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Hard-delete any listing]]></phrase>
+  <phrase title="permission.classifieds_inlineMod" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Use inline moderation on listings]]></phrase>
+  <phrase title="permission.classifieds_lockUnlock" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Lock / unlock listings]]></phrase>
+  <phrase title="permission.classifieds_manageAnyTag" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Manage any tags]]></phrase>
+  <phrase title="permission.classifieds_manageOtherTagsOwnListing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Manage tags by others in own listing]]></phrase>
+  <phrase title="permission.classifieds_markSold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mark own listing as sold]]></phrase>
+  <phrase title="permission.classifieds_purchaseFeature" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Purchase featured listing]]></phrase>
+  <phrase title="permission.classifieds_react" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[React to classifieds listings]]></phrase>
+  <phrase title="permission.classifieds_reassign" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Reassign listings]]></phrase>
+  <phrase title="permission.classifieds_stickUnstick" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Stick / unstick listings]]></phrase>
+  <phrase title="permission.classifieds_submitWithoutApproval" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Submit listings without approval]]></phrase>
+  <phrase title="permission.classifieds_tagAnyListing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Tag any listing]]></phrase>
+  <phrase title="permission.classifieds_tagOwnListing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Tag own listing]]></phrase>
+  <phrase title="permission.classifieds_undelete" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Undelete listings]]></phrase>
+  <phrase title="permission.classifieds_updateOwn" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Update / edit own listings]]></phrase>
+  <phrase title="permission.classifieds_updateOwnFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Update / edit own feedback]]></phrase>
+  <phrase title="permission.classifieds_uploadAttachment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Upload attachments to listings]]></phrase>
+  <phrase title="permission.classifieds_view" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View classifieds]]></phrase>
+  <phrase title="permission.classifieds_viewAttachment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View attachments to listings]]></phrase>
+  <phrase title="permission.classifieds_viewAwaitingPayment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View listings awaiting payment]]></phrase>
+  <phrase title="permission.classifieds_viewDeleted" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View deleted listings]]></phrase>
+  <phrase title="permission.classifieds_viewFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View feedback]]></phrase>
+  <phrase title="permission.classifieds_viewModerated" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View unapproved listings]]></phrase>
+  <phrase title="permission.classifieds_viewPurchaseInfo" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View purchaser name]]></phrase>
+  <phrase title="permission.classifieds_warn" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Give warnings on listings]]></phrase>
+  <phrase title="permission_interface.classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds permissions]]></phrase>
+  <phrase title="permission_interface.classifiedsModeratorPermissions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds moderator permissions]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackNegative" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Negative feedback color]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackNegativeIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Negative feedback icon]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackNeutral" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Neutral feedback color]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackNeutralIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Neutral feedback icon]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackPositive" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Positive feedback color]]></phrase>
+  <phrase title="style_prop.z61ClassifiedsFeedbackPositiveIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Positive feedback icon]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackNegative" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackNegativeIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The css classes to use for negative feedback. Ex: <b>fa fa-thumbs-down</b>]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackNeutral" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackNeutralIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The css classes to use for positive feedback. Ex: <b>fa fa-meh</b>]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackPositive" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[]]></phrase>
+  <phrase title="style_prop_desc.z61ClassifiedsFeedbackPositiveIcon" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The css classes to use for positive feedback. Ex: <b>fa fa-thumbs-up</b>]]></phrase>
+  <phrase title="style_prop_group.z61ClassifiedsFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds feedback]]></phrase>
+  <phrase title="style_prop_group_desc.z61ClassifiedsFeedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[This defines the set of colors and icons used for coloring the classifieds feedback system. It is recommended to respect the XenForo icon weight.]]></phrase>
+  <phrase title="widget_def.classifieds_near_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds: Nearby listings]]></phrase>
+  <phrase title="widget_def.classifieds_new_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds: Latest listings]]></phrase>
+  <phrase title="widget_def.classifieds_user_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds: User feedback]]></phrase>
+  <phrase title="widget_def_desc.classifieds_near_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings near the currently viewed listing]]></phrase>
+  <phrase title="widget_def_desc.classifieds_new_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Displays the most recently added listings.]]></phrase>
+  <phrase title="widget_def_desc.classifieds_user_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Displays the user the page is for's feedback. Recommended to be only used with listing view.]]></phrase>
+  <phrase title="widget_pos.classifieds_category_sidenav" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category: Sidenav]]></phrase>
+  <phrase title="widget_pos.classifieds_listing_view_sidebar" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing view: Sidebar]]></phrase>
+  <phrase title="widget_pos.classifieds_overview_sidenav" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds overview: Sidenav]]></phrase>
+  <phrase title="widget_pos_desc.classifieds_category_sidenav" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Displays inside the side navigation on the classifieds category pages. Widget templates rendered in this position can use the current category entity in the <code>{$context.category}</code> param.]]></phrase>
+  <phrase title="widget_pos_desc.classifieds_listing_view_sidebar" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Displays inside the side navigation on the classifieds listing view page.]]></phrase>
+  <phrase title="widget_pos_desc.classifieds_overview_sidenav" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Displays inside the side navigation on the classifieds overview page.]]></phrase>
+  <phrase title="z61_classified_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds categories]]></phrase>
+  <phrase title="z61_classifieds" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds]]></phrase>
+  <phrase title="z61_classifieds_above_listing_content" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Above listing content]]></phrase>
+  <phrase title="z61_classifieds_add_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add condition]]></phrase>
+  <phrase title="z61_classifieds_add_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add listing]]></phrase>
+  <phrase title="z61_classifieds_add_listing_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add listing condition]]></phrase>
+  <phrase title="z61_classifieds_add_listing_to" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add listing to]]></phrase>
+  <phrase title="z61_classifieds_add_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add listing type]]></phrase>
+  <phrase title="z61_classifieds_add_package" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add package]]></phrase>
+  <phrase title="z61_classifieds_add_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Add type]]></phrase>
+  <phrase title="z61_classifieds_additional_information" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Additional information]]></phrase>
+  <phrase title="z61_classifieds_address" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Address]]></phrase>
+  <phrase title="z61_classifieds_all_listings_marked_as_read" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[All listings marked as read.]]></phrase>
+  <phrase title="z61_classifieds_all_selected_listings_already_in_destination_category_select_another" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[All selected listings are already in destination category. Please select another.]]></phrase>
+  <phrase title="z61_classifieds_allow_location" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow location to be set for listed items]]></phrase>
+  <phrase title="z61_classifieds_allow_location_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, a location field will be available on the listing create/edit form. This location field will be used to display a Google Map on the listing and to support filtering by location.]]></phrase>
+  <phrase title="z61_classifieds_allow_users_to_contact_by_conversation" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow users to contact you by conversation]]></phrase>
+  <phrase title="z61_classifieds_allow_users_to_contact_by_email" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow users to contact you by email]]></phrase>
+  <phrase title="z61_classifieds_allowed_conditions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allowed conditions]]></phrase>
+  <phrase title="z61_classifieds_allowed_conditions_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Conditions allow users to specify and inform others about what condition the item is currently in. If no conditions are selected here, the option is disabled and will not appear for this category.]]></phrase>
+  <phrase title="z61_classifieds_allowed_listing_conditions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allowed listing conditions]]></phrase>
+  <phrase title="z61_classifieds_allowed_listing_conditions_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow only certain conditions. If none are selected the option is disabled.]]></phrase>
+  <phrase title="z61_classifieds_allowed_listing_types" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allowed listing types]]></phrase>
+  <phrase title="z61_classifieds_allowed_packages" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allowed packages]]></phrase>
+  <phrase title="z61_classifieds_allowed_types" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allowed types]]></phrase>
+  <phrase title="z61_classifieds_allowed_types_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Types are a way of identifying what kind of listing a user has created. By default, these are used to differentiate by "Want to buy" listings vs "Want to sell" listings.]]></phrase>
+  <phrase title="z61_classifieds_applicable_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Applicable categories]]></phrase>
+  <phrase title="z61_classifieds_apply_listing_prefix_to_multiple_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The listings you have selected are located in more than one category. Each listing will only be updated if the chosen prefix is valid in its category.]]></phrase>
+  <phrase title="z61_classifieds_apply_prefix_to_selected_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Apply prefix to selected  classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_approve_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Approve listing]]></phrase>
+  <phrase title="z61_classifieds_approve_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Approve classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_ask" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Ask]]></phrase>
+  <phrase title="z61_classifieds_ask_a_question" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Ask a question]]></phrase>
+  <phrase title="z61_classifieds_assign_listings_to_first_viewable_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Assign listings to first viewable category.]]></phrase>
+  <phrase title="z61_classifieds_automatically_create_thread_in_forum" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Automatically create thread in forum]]></phrase>
+  <phrase title="z61_classifieds_automatically_created_thread_prefix" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Automatically created thread prefix]]></phrase>
+  <phrase title="z61_classifieds_automatically_post_in_listing_thread_on_listing_deletion" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Automatically post in the listing thread on listing deletion]]></phrase>
+  <phrase title="z61_classifieds_available_packages" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Available packages]]></phrase>
+  <phrase title="z61_classifieds_available_packages_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Packages allow you to setup constraints for how long a listing should last and how much that should cost the end user, if anything.]]></phrase>
+  <phrase title="z61_classifieds_awaiting_payment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Awaiting payment]]></phrase>
+  <phrase title="z61_classifieds_below_listing_content" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Below listing content]]></phrase>
+  <phrase title="z61_classifieds_buy_for_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Buy for {price}]]></phrase>
+  <phrase title="z61_classifieds_buyer" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Buyer]]></phrase>
+  <phrase title="z61_classifieds_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds categories]]></phrase>
+  <phrase title="z61_classifieds_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category]]></phrase>
+  <phrase title="z61_classifieds_category_limit" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Category limit]]></phrase>
+  <phrase title="z61_classifieds_category_permissions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category permissions]]></phrase>
+  <phrase title="z61_classifieds_classifieds_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category]]></phrase>
+  <phrase title="z61_classifieds_classifieds_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds feedback]]></phrase>
+  <phrase title="z61_classifieds_classifieds_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing]]></phrase>
+  <phrase title="z61_classifieds_classifieds_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_clear_sold_status" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Clear sold status]]></phrase>
+  <phrase title="z61_classifieds_close_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Close listing]]></phrase>
+  <phrase title="z61_classifieds_close_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Close classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Condition]]></phrase>
+  <phrase title="z61_classifieds_confirm_feature" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Confirm feature]]></phrase>
+  <phrase title="z61_classifieds_confirm_purchase" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Confirm purchase]]></phrase>
+  <phrase title="z61_classifieds_confirm_you_want_to_remove_this_listing_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm that you want to remove this listing condition]]></phrase>
+  <phrase title="z61_classifieds_confirm_you_want_to_remove_this_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm that you want to remove this listing type]]></phrase>
+  <phrase title="z61_classifieds_confirm_you_want_to_remove_this_package" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm that you want to remove this package]]></phrase>
+  <phrase title="z61_classifieds_contact_email" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Contact email]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_custom_field" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow users to list custom contact information]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_custom_field_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, an additional text field will be displayed when creating a listing allowing advertisers to add custom contact information.]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_owner_by_conversation" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow users to contact listing owner by conversation]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_owner_by_conversation_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, this will allow users to contact advertisers directly from the listing. Advertisers can also disable this behaviour on a per-listing basis.]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_owner_by_email" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow users to contact listing owner by the user's email]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_owner_by_email_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If  enabled, this will allow users to contact advertisers directly from the listing. A preferred email address can be set for each listing and advertisers can also disable this behaviour on a per-listing basis.]]></phrase>
+  <phrase title="z61_classifieds_contact_listing_owner_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Contact listing owner: {user}]]></phrase>
+  <phrase title="z61_classifieds_contact_options" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Contact options]]></phrase>
+  <phrase title="z61_classifieds_contact_options_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[At <b>least</b> one of these must be enabled.]]></phrase>
+  <phrase title="z61_classifieds_contact_user" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Contact user]]></phrase>
+  <phrase title="z61_classifieds_copy_url_bb_code" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Copy URL BB code]]></phrase>
+  <phrase title="z61_classifieds_creation_date" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Creation date]]></phrase>
+  <phrase title="z61_classifieds_css_class_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Use this field to specify CSS classes for this listing type.]]></phrase>
+  <phrase title="z61_classifieds_custom_contact_details" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Other]]></phrase>
+  <phrase title="z61_classifieds_custom_contact_details_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You may use this field to provide alternative forms of contact.]]></phrase>
+  <phrase title="z61_classifieds_delete_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete listing]]></phrase>
+  <phrase title="z61_classifieds_delete_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Delete classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_destination_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Destination category]]></phrase>
+  <phrase title="z61_classifieds_discussion" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Discussion]]></phrase>
+  <phrase title="z61_classifieds_distance" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Distance]]></phrase>
+  <phrase title="z61_classifieds_distance_unit" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Distance unit]]></phrase>
+  <phrase title="z61_classifieds_edit_feedback_for" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit feedback for]]></phrase>
+  <phrase title="z61_classifieds_edit_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit listing]]></phrase>
+  <phrase title="z61_classifieds_edit_listing_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit listing condition]]></phrase>
+  <phrase title="z61_classifieds_edit_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit listing type]]></phrase>
+  <phrase title="z61_classifieds_edit_package" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Edit package]]></phrase>
+  <phrase title="z61_classifieds_enable_listing_expiration" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enable listing expiration]]></phrase>
+  <phrase title="z61_classifieds_enable_listing_expiration_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, the amount of days for a listing to be live]]></phrase>
+  <phrase title="z61_classifieds_enable_listing_prices" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enable listing prices]]></phrase>
+  <phrase title="z61_classifieds_enable_listing_prices_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, users will be allowed to set prices for the listings that they create in this category.]]></phrase>
+  <phrase title="z61_classifieds_enable_location" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enable listing location field]]></phrase>
+  <phrase title="z61_classifieds_enable_paid_features" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enable paid feature status]]></phrase>
+  <phrase title="z61_classifieds_enable_paid_features_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, users will be able to pay to upgrade their listing to featured. Set the amount of days a listing is featured below.]]></phrase>
+  <phrase title="z61_classifieds_enable_prices" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Allow prices to be set for listed items]]></phrase>
+  <phrase title="z61_classifieds_enter_a_location" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enter a location]]></phrase>
+  <phrase title="z61_classifieds_exclude_expired_listings_in_listing_count" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Exclude expired listings from listing count]]></phrase>
+  <phrase title="z61_classifieds_exclude_expired_listings_in_listing_count_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When enabled, listings that expire will reduce the listing count.]]></phrase>
+  <phrase title="z61_classifieds_expiration_date" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Expiration date]]></phrase>
+  <phrase title="z61_classifieds_expired" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Expired]]></phrase>
+  <phrase title="z61_classifieds_extra_info" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Extra info]]></phrase>
+  <phrase title="z61_classifieds_extra_information_tab" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Extra information tab]]></phrase>
+  <phrase title="z61_classifieds_feature" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature]]></phrase>
+  <phrase title="z61_classifieds_feature_for_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature for {price}]]></phrase>
+  <phrase title="z61_classifieds_feature_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature listing]]></phrase>
+  <phrase title="z61_classifieds_feature_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_feature_price" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature price]]></phrase>
+  <phrase title="z61_classifieds_feature_price_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The price to charge a user to feature their listing]]></phrase>
+  <phrase title="z61_classifieds_feature_your_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature your listing]]></phrase>
+  <phrase title="z61_classifieds_featured" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Featured]]></phrase>
+  <phrase title="z61_classifieds_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feedback]]></phrase>
+  <phrase title="z61_classifieds_feedback_negative_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The amount of negative feedback the user has received. This will be subtracted from positive for calculating the total.]]></phrase>
+  <phrase title="z61_classifieds_feedback_on_listing_x_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feedback by {fromUser} about transaction with {toUser}.]]></phrase>
+  <phrase title="z61_classifieds_feedback_positive_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The amount of positive feedback the user has received.]]></phrase>
+  <phrase title="z61_classifieds_feedback_score" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feedback score]]></phrase>
+  <phrase title="z61_classifieds_feedback_total_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The amount of total feedback received (positive - negative) feedback. Will be overridden when changing positive or negative. Also is changed when feedback for towards user is given.]]></phrase>
+  <phrase title="z61_classifieds_forum_is_already_assigned_to_a_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The selected forum is already assigned to a category.]]></phrase>
+  <phrase title="z61_classifieds_free" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Free]]></phrase>
+  <phrase title="z61_classifieds_full_size_view_displaying_as_standard_classifieds_list" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[A full size view, displaying as a standard classifieds list.]]></phrase>
+  <phrase title="z61_classifieds_give_feedback_for_transaction" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Give feedback for transaction]]></phrase>
+  <phrase title="z61_classifieds_grid_view_layout" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Grid view layout]]></phrase>
+  <phrase title="z61_classifieds_how_would_you_rate_experience" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[How would you rate your experience with this transaction?]]></phrase>
+  <phrase title="z61_classifieds_if_enabled_moderator_manually_approve_listings_posted_in_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If enabled, a moderator will have to manually approve listings posted in this category.]]></phrase>
+  <phrase title="z61_classifieds_if_selected_post_made_automatically_explaining_listing_unavailable" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[If selected, a post will be made automatically on the creator's behalf explaining that the listing is no longer available.]]></phrase>
+  <phrase title="z61_classifieds_include_sold_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Include sold listings]]></phrase>
+  <phrase title="z61_classifieds_join_discussion" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Join discussion]]></phrase>
+  <phrase title="z61_classifieds_latest_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Latest classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_list_view_layout" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[List view layout]]></phrase>
+  <phrase title="z61_classifieds_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing]]></phrase>
+  <phrase title="z61_classifieds_listing_category_permissions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds category permissions]]></phrase>
+  <phrase title="z61_classifieds_listing_closed" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[This listing is closed.]]></phrase>
+  <phrase title="z61_classifieds_listing_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing condition]]></phrase>
+  <phrase title="z61_classifieds_listing_condition_phrase" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing condition phrase]]></phrase>
+  <phrase title="z61_classifieds_listing_conditions" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing conditions]]></phrase>
+  <phrase title="z61_classifieds_listing_count" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing count]]></phrase>
+  <phrase title="z61_classifieds_listing_counts" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing counts]]></phrase>
+  <phrase title="z61_classifieds_listing_fields" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing fields]]></phrase>
+  <phrase title="z61_classifieds_listing_options" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing options]]></phrase>
+  <phrase title="z61_classifieds_listing_prefixes" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing prefixes]]></phrase>
+  <phrase title="z61_classifieds_listing_price_phrase" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing price phrase]]></phrase>
+  <phrase title="z61_classifieds_listing_sold_status_cleared" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing sold status cleared successfully]]></phrase>
+  <phrase title="z61_classifieds_listing_template" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing template]]></phrase>
+  <phrase title="z61_classifieds_listing_template_help" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The default body of new listings in this category.]]></phrase>
+  <phrase title="z61_classifieds_listing_thread_create" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{username} submitted a new listing:
+
+[url={listing_link}][plain]{title}[/plain][/url] - [plain]{title}[/plain]
+
+[quote]{snippet}[/quote]
+
+[url={listing_link}]Learn more about this listing...[/url]]]></phrase>
+  <phrase title="z61_classifieds_listing_thread_delete" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[This listing has been removed and is no longer available for viewing.]]></phrase>
+  <phrase title="z61_classifieds_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing type]]></phrase>
+  <phrase title="z61_classifieds_listing_type_css" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing type CSS]]></phrase>
+  <phrase title="z61_classifieds_listing_type_phrase" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listing type phrase]]></phrase>
+  <phrase title="z61_classifieds_listing_types" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing types]]></phrase>
+  <phrase title="z61_classifieds_listing_watched" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing watched]]></phrase>
+  <phrase title="z61_classifieds_listing_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Classifieds listing '{title}']]></phrase>
+  <phrase title="z61_classifieds_listing_x_feature_y_days" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Feature listing {title} for {days} days.]]></phrase>
+  <phrase title="z61_classifieds_listing_x_new_watched_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{listing} - New classifieds listing in watched category]]></phrase>
+  <phrase title="z61_classifieds_listing_x_updated" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{listing} has been updated]]></phrase>
+  <phrase title="z61_classifieds_listing_x_was_reassigned_to_you" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The classifieds listing {title} was reassigned to you.]]></phrase>
+  <phrase title="z61_classifieds_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings]]></phrase>
+  <phrase title="z61_classifieds_listings_by_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings by {name}]]></phrase>
+  <phrase title="z61_classifieds_listings_of_x_type_will_be_reassigned_to_the_selected_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Listings of '{title}' type will be reassigned to the selected type.]]></phrase>
+  <phrase title="z61_classifieds_location" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Location]]></phrase>
+  <phrase title="z61_classifieds_manage_watched_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Manage watched classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_mark_listing_sold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mark listing sold]]></phrase>
+  <phrase title="z61_classifieds_mark_listings_read" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mark listings read]]></phrase>
+  <phrase title="z61_classifieds_mark_sold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Mark sold]]></phrase>
+  <phrase title="z61_classifieds_members_who_reacted_to_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Members who reacted to {title}]]></phrase>
+  <phrase title="z61_classifieds_moderate_new_listings_posted_in_this_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Moderate new listings posted in this category]]></phrase>
+  <phrase title="z61_classifieds_more_listings_by_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[More listings by {name}]]></phrase>
+  <phrase title="z61_classifieds_move_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Move listing]]></phrase>
+  <phrase title="z61_classifieds_move_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Move classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_must_specify_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You must specify a listing type]]></phrase>
+  <phrase title="z61_classifieds_negative" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Negative]]></phrase>
+  <phrase title="z61_classifieds_neutral" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Neutral]]></phrase>
+  <phrase title="z61_classifieds_new_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[New classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_new_listings_only" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[New listings only]]></phrase>
+  <phrase title="z61_classifieds_new_owner" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[New owner]]></phrase>
+  <phrase title="z61_classifieds_no_categories_exist_at_this_time" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No classifieds categories exist at this time.]]></phrase>
+  <phrase title="z61_classifieds_no_change" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No change]]></phrase>
+  <phrase title="z61_classifieds_no_conditions_currently_exist_create_one" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No conditions have been created. <a href="{link}">Create one now</a>]]></phrase>
+  <phrase title="z61_classifieds_no_listing_types_currently_exist_create_one" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No listing types have been created. <a href="{link}">Create one now</a>]]></phrase>
+  <phrase title="z61_classifieds_no_listings_have_been_created_yet" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No listings have been created yet.]]></phrase>
+  <phrase title="z61_classifieds_no_packages_currently_exist_create_one" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No packages have been created. <a href="{link}">Create one now</a>]]></phrase>
+  <phrase title="z61_classifieds_no_prefixes_available_for_selected_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[No prefixes are available for the specified categories.]]></phrase>
+  <phrase title="z61_classifieds_notify_current_and_new_owners_of_this_action" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Notify the current and new owners of this action.]]></phrase>
+  <phrase title="z61_classifieds_notify_members_watching_destination_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Notify members watching the destination category]]></phrase>
+  <phrase title="z61_classifieds_one_listing_feature_expired_renew_now" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[One of your featured classifieds listings has expired. <a href="{link}" data-tp-primary="on">Renew now!</a>]]></phrase>
+  <phrase title="z61_classifieds_open_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Open listing]]></phrase>
+  <phrase title="z61_classifieds_open_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Open classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_package" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Package]]></phrase>
+  <phrase title="z61_classifieds_packages" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Packages]]></phrase>
+  <phrase title="z61_classifieds_paid_packages_must_provide_at_least_one_payment_profile" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Paid packages must provide at least one payment profile.]]></phrase>
+  <phrase title="z61_classifieds_pay" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Pay]]></phrase>
+  <phrase title="z61_classifieds_pay_using" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Pay using]]></phrase>
+  <phrase title="z61_classifieds_please_confirm_that_you_want_to_delete_following_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm that you want to delete the following feedback]]></phrase>
+  <phrase title="z61_classifieds_please_confirm_you_wish_to_feature_item_for_displayed_fee" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm you wish to feature this item for the displayed fee]]></phrase>
+  <phrase title="z61_classifieds_please_confirm_you_wish_to_list_item_for_displayed_fee" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please confirm you wish to list this item for the displayed fee]]></phrase>
+  <phrase title="z61_classifieds_please_enter_valid_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please select a valid category.]]></phrase>
+  <phrase title="z61_classifieds_please_enter_valid_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please enter a valid condition.]]></phrase>
+  <phrase title="z61_classifieds_please_enter_valid_package" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please select a valid package.]]></phrase>
+  <phrase title="z61_classifieds_please_enter_valid_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please select a valid listing type.]]></phrase>
+  <phrase title="z61_classifieds_please_select_at_least_one_listing_condition" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please select at least one listing condition]]></phrase>
+  <phrase title="z61_classifieds_please_select_at_least_one_listing_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Please select at least one listing type]]></phrase>
+  <phrase title="z61_classifieds_positive" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Positive]]></phrase>
+  <phrase title="z61_classifieds_purchased_by" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Purchased by]]></phrase>
+  <phrase title="z61_classifieds_purchasing_user" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Purchasing user]]></phrase>
+  <phrase title="z61_classifieds_question" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Question]]></phrase>
+  <phrase title="z61_classifieds_quick_info_phrases" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Quick info phrases]]></phrase>
+  <phrase title="z61_classifieds_quick_info_phrases_explain" version_id="1001470" version_string="1.0.14"><![CDATA[You may use these fields to configure the header text shown in the quick info area of a listing. You'll need to navigate to Appearance -> Phrases first and create new phrases or customise the existing ones.]]></phrase>
+  <phrase title="z61_classifieds_re_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Re: {listingTitle}]]></phrase>
+  <phrase title="z61_classifieds_reassign_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Reassign listing]]></phrase>
+  <phrase title="z61_classifieds_reassign_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Reassign classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_rebuild_listing_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Rebuild listing categories]]></phrase>
+  <phrase title="z61_classifieds_rebuild_user_listing_count" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Rebuild user listing count]]></phrase>
+  <phrase title="z61_classifieds_replace_forum_action_button" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Replace 'Post thread' with post listing]]></phrase>
+  <phrase title="z61_classifieds_replace_forum_action_button_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When enabled will replace the "Post threads" button in this forum's thread list with a button for posting new listings.]]></phrase>
+  <phrase title="z61_classifieds_requested_category_not_found" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Requested category could not be found.]]></phrase>
+  <phrase title="z61_classifieds_requested_listing_not_found" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[The requested listing could not be found.]]></phrase>
+  <phrase title="z61_classifieds_require_listing_image" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Require listings to have an image attachment]]></phrase>
+  <phrase title="z61_classifieds_require_listing_image_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Enabling will require all new listings to have at least one image attachment.]]></phrase>
+  <phrase title="z61_classifieds_require_sold_user" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Require listing purchaser name to mark listing as sold]]></phrase>
+  <phrase title="z61_classifieds_require_sold_user_explain" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[When enabled, will require the owner of a listing to add the username of the user who received their item in order to mark it as sold.]]></phrase>
+  <phrase title="z61_classifieds_search_child_categories_as_well" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Search child categories as well]]></phrase>
+  <phrase title="z61_classifieds_search_in_categories" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Search in categories]]></phrase>
+  <phrase title="z61_classifieds_search_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Search classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_seller" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Seller]]></phrase>
+  <phrase title="z61_classifieds_set_cover_image" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Set cover image]]></phrase>
+  <phrase title="z61_classifieds_share_this_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Share this listing]]></phrase>
+  <phrase title="z61_classifieds_sold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Sold]]></phrase>
+  <phrase title="z61_classifieds_stop_watching_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Stop watching classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_submission_date" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Submission date]]></phrase>
+  <phrase title="z61_classifieds_submit_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Submit feedback]]></phrase>
+  <phrase title="z61_classifieds_thank_you_for_purchasing_this_upgrade" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Thank you for purchasing this upgrade.<br />
+<br />
+When the payment has been approved, your listing will be upgraded.]]></phrase>
+  <phrase title="z61_classifieds_there_no_listings_matching_your_filters" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[There are currently no listings that match your filters.]]></phrase>
+  <phrase title="z61_classifieds_there_no_listings_to_display" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[There are no listings to display.]]></phrase>
+  <phrase title="z61_classifieds_this_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[This category]]></phrase>
+  <phrase title="z61_classifieds_this_will_fully_wipe_sold_status_from_listing_including_who_is_marked_as_sold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[This will fully wipe sold status from listing including whoever is marked as sold.]]></phrase>
+  <phrase title="z61_classifieds_time_left" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Time left]]></phrase>
+  <phrase title="z61_classifieds_trader" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Trader]]></phrase>
+  <phrase title="z61_classifieds_transaction_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Transaction feedback]]></phrase>
+  <phrase title="z61_classifieds_type" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Type]]></phrase>
+  <phrase title="z61_classifieds_unapprove_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Unapprove classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_undelete_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Undelete classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_unfeature" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Unfeature]]></phrase>
+  <phrase title="z61_classifieds_unfeature_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Unfeature listing]]></phrase>
+  <phrase title="z61_classifieds_unfeature_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Unfeature classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_unwatch_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Unwatch listing]]></phrase>
+  <phrase title="z61_classifieds_update_thread_title_on_listing_deletion" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Update thread title on listing deletion]]></phrase>
+  <phrase title="z61_classifieds_upgradeable_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Upgradable listings]]></phrase>
+  <phrase title="z61_classifieds_user_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[User feedback]]></phrase>
+  <phrase title="z61_classifieds_user_has_at_least_x_feedback" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[User has at least X classifieds feedback]]></phrase>
+  <phrase title="z61_classifieds_user_has_submitted_at_least_x_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[User has submitted at least X classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_view_listings_awaiting_payment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View listings awaiting payment]]></phrase>
+  <phrase title="z61_classifieds_view_this_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[View this listing]]></phrase>
+  <phrase title="z61_classifieds_viewing_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Viewing classifieds listing]]></phrase>
+  <phrase title="z61_classifieds_viewing_listing_category" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Viewing classifieds listing category]]></phrase>
+  <phrase title="z61_classifieds_viewing_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Viewing classifieds listings]]></phrase>
+  <phrase title="z61_classifieds_watch_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watch listing]]></phrase>
+  <phrase title="z61_classifieds_watch_this_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watch this listing]]></phrase>
+  <phrase title="z61_classifieds_watched_category_email_html_footer" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[<p class="minorText">Please do not reply to this message. You must visit the forum to reply.</p>
+
+<p class="minorText">This message was sent to you because you opted to watch the category "{category}" at {board} with email notification of new classifieds listings.</p>
+
+<p class="minorText">If you no longer wish to receive these emails, you may <a href="{disable_this_link}">disable emails from this category</a> or <a href="{disable_all_link}">disable all emails</a>.</p>]]></phrase>
+  <phrase title="z61_classifieds_watched_category_listing_email_html" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[<p>{author} created a classifieds listing within a category you are watching at {board}.</p>]]></phrase>
+  <phrase title="z61_classifieds_watched_listing_update_email_html" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[<p>{author} updated a listing you are watching at {board}.</p>]]></phrase>
+  <phrase title="z61_classifieds_watched_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Watched listings]]></phrase>
+  <phrase title="z61_classifieds_what_was_your_role_in_transaction" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[What was your role in this transaction?]]></phrase>
+  <phrase title="z61_classifieds_within" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Within]]></phrase>
+  <phrase title="z61_classifieds_x_created_listing_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} created the classifieds listing {title}.]]></phrase>
+  <phrase title="z61_classifieds_x_created_listing_y_in_category_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{username} created the listing {title} in {category}.]]></phrase>
+  <phrase title="z61_classifieds_x_days" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{days} days]]></phrase>
+  <phrase title="z61_classifieds_x_expired_listing_y_in_category_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{username}'s listing {title} in {category} expired.]]></phrase>
+  <phrase title="z61_classifieds_x_has_left_feedback_on_listing_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{fromUser} has left feedback on your listing {title}. Click <a href="{feedbackLink}">here</a> to view it.]]></phrase>
+  <phrase title="z61_classifieds_x_has_not_posted_any_listings_yet" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} has not posted any listings yet.]]></phrase>
+  <phrase title="z61_classifieds_x_has_not_received_any_feedback_yet" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} has not received any feedback yet.]]></phrase>
+  <phrase title="z61_classifieds_x_liked_your_listing_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} liked your classifieds listing {title}.]]></phrase>
+  <phrase title="z61_classifieds_x_mentioned_you_in_listing_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} mentioned you in the classifieds listing {title}.]]></phrase>
+  <phrase title="z61_classifieds_x_rated_their_transaction_with_y_negatively" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{fromUser} rated their transaction with {toUser} negatively.]]></phrase>
+  <phrase title="z61_classifieds_x_rated_their_transaction_with_y_neutrally" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{fromUser} rated their transaction with {toUser} neutrally.]]></phrase>
+  <phrase title="z61_classifieds_x_rated_their_transaction_with_y_positively" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{fromUser} rated their transaction with {toUser} positively.]]></phrase>
+  <phrase title="z61_classifieds_x_reacted_to_your_listing_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} reacted to your classifieds listing {title} with {reaction}.]]></phrase>
+  <phrase title="z61_classifieds_x_reacted_to_your_listing_y_with_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} reacted to your classified listing {title} with {reaction}.]]></phrase>
+  <phrase title="z61_classifieds_x_reacted_to_ys_listing_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{name} reacted to {poster}'s classifieds listing {title} with {reaction}.]]></phrase>
+  <phrase title="z61_classifieds_x_sold_listing_y_in_category_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{username}'s listing {title} in {category} was sold.]]></phrase>
+  <phrase title="z61_classifieds_x_y_of_z" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[{distance} {unit} of {address}]]></phrase>
+  <phrase title="z61_classifieds_you_are_rating_user_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You are rating user: {user}]]></phrase>
+  <phrase title="z61_classifieds_you_cannot_delete_all_listing_types" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You cannot delete all listing types.]]></phrase>
+  <phrase title="z61_classifieds_you_cannot_sell_an_item_to_yourself" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You cannot mark a listing as sold to yourself.]]></phrase>
+  <phrase title="z61_classifieds_you_have_been_listed_as_acquirer_of_item_x_being_sold_by_user_x" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You have been listed as the aquirer of an item listed by user {user}. You can now leave <a href="{feedbackLink}"> feedback</a> about the transaction.]]></phrase>
+  <phrase title="z61_classifieds_you_have_not_posted_any_listings_yet" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You have not posted any listings yet.]]></phrase>
+  <phrase title="z61_classifieds_you_may_not_perform_this_action_because_listing_is_closed" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You may not perform this action because the listing has been closed.]]></phrase>
+  <phrase title="z61_classifieds_you_may_not_start_a_conversation_with_this_user" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You may not start a conversation with this user.]]></phrase>
+  <phrase title="z61_classifieds_you_must_upload_at_least_one_image_attachment" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You must upload at least one image attachment.]]></phrase>
+  <phrase title="z61_classifieds_you_not_watching_any_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[You are not watching any listings.]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_apply_prefix_to_x_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to apply a prefix to {total} listing(s)?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_delete_x_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to delete {total} listing(s)?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_mark_all_listings_read" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to mark all listings read? ]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_mark_x_listing_y_as_sold" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to mark <a href="{link}" target="_blank">{listing}</a> as sold?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_move_x_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to move {total} classifieds listings(s)?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_reassign_x_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to reassign {total} listing(s)?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_stop_watching_all_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to stop watching <b>all</b> listings?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_unwatch_this_listing" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to unwatch this listing?]]></phrase>
+  <phrase title="z61_classifieds_you_sure_you_want_to_update_notification_settings_for_all_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Are you sure you want to update your email notification settings for <b>all</b> listings?]]></phrase>
+  <phrase title="z61_classifieds_your_featured_listings" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your featured listings]]></phrase>
+  <phrase title="z61_classifieds_your_listing_x_was_deleted" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your classifieds listing {title} was deleted.]]></phrase>
+  <phrase title="z61_classifieds_your_listing_x_was_edited" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your classifieds listing {title} was edited.]]></phrase>
+  <phrase title="z61_classifieds_your_listing_x_was_moved" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your classifieds listing {title} was moved to a different category.]]></phrase>
+  <phrase title="z61_classifieds_your_listing_x_was_reassigned_to_y" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your listing {title} was reassigned to {to}.]]></phrase>
+  <phrase title="z61_classifieds_your_role" version_id="1001230" version_string="1.0.12 Beta"><![CDATA[Your role]]></phrase>
+</phrases>

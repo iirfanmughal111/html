@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="classifieds_near_listings" definition_class="Z61\Classifieds\Widget\NearbyListings"/>
+  <widget_definition definition_id="classifieds_new_listings" definition_class="Z61\Classifieds\Widget\LatestListings"/>
+  <widget_definition definition_id="classifieds_user_feedback" definition_class="Z61\Classifieds\Widget\UserFeedback"/>
+</widget_definitions>

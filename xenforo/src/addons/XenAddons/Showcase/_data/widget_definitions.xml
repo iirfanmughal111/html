@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="xa_sc_category_nav" definition_class="XenAddons\Showcase\Widget\CategoryNav"/>
+  <widget_definition definition_id="xa_sc_featured_items" definition_class="XenAddons\Showcase\Widget\FeaturedItems"/>
+  <widget_definition definition_id="xa_sc_featured_series" definition_class="XenAddons\Showcase\Widget\FeaturedSeries"/>
+  <widget_definition definition_id="xa_sc_item_page_poll" definition_class="XenAddons\Showcase\Widget\ItemPagePoll"/>
+  <widget_definition definition_id="xa_sc_item_poll" definition_class="XenAddons\Showcase\Widget\ItemPoll"/>
+  <widget_definition definition_id="xa_sc_items_map" definition_class="XenAddons\Showcase\Widget\ItemsMap"/>
+  <widget_definition definition_id="xa_sc_latest_comments" definition_class="XenAddons\Showcase\Widget\LatestComments"/>
+  <widget_definition definition_id="xa_sc_latest_items" definition_class="XenAddons\Showcase\Widget\LatestItems"/>
+  <widget_definition definition_id="xa_sc_latest_reviews" definition_class="XenAddons\Showcase\Widget\LatestReviews"/>
+  <widget_definition definition_id="xa_sc_latest_series" definition_class="XenAddons\Showcase\Widget\LatestSeries"/>
+  <widget_definition definition_id="xa_sc_latest_updates" definition_class="XenAddons\Showcase\Widget\LatestUpdates"/>
+  <widget_definition definition_id="xa_sc_series_poll" definition_class="XenAddons\Showcase\Widget\SeriesPoll"/>
+  <widget_definition definition_id="xa_sc_showcase_statistics" definition_class="XenAddons\Showcase\Widget\ShowcaseStatistics"/>
+</widget_definitions>

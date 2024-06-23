@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="tlg_avatarBorderRadius" group_name="tl_Groups" title="Group avatar border radius" property_type="value" value_type="unit" display_order="120">
+    <value>"50%"</value>
+  </style_property>
+</style_properties>

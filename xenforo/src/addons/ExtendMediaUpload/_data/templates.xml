@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="EMU_orsperator" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<div class="block block--treeEntryChooser">
+			<div class="block-container">
+				<div class="block-body">
+							<div class="block-row block-row--clickable block-row--separated fauxBlockLink">
+								<div class="contentRow contentRow--alignMiddle">
+									<div class="contentRow-main">
+										<h2 class="contentRow-title">
+											<a href="{{ link('ewr-medio/submit') }}" class="fauxBlockLink-blockLink">
+												{{ phrase('EMU_mediaurl') }}
+											</a>
+											<input type="hidden" name='value' value='hello'>
+										</h2>
+									</div>
+								</div>
+							</div>
+					<div class="blocks-textJoiner"><span></span><em>{{ phrase('or_separator') }}</em><span></span></div>
+							<div class="block-row block-row--clickable block-row--separated fauxBlockLink">
+								<div class="contentRow contentRow--alignMiddle">
+									<div class="contentRow-main">
+										<h2 class="contentRow-title">
+											<a href="{{ link('ewr-medio/Categorydata') }}" class="fauxBlockLink-blockLink">
+												{{ phrase('emw_upload_video') }}
+											</a>
+										</h2>
+									</div>
+								</div>
+							</div>
+				</div>
+			</div>
+		</div>]]></template>
+  <template type="public" title="EMU_uploadedit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:js src="ExtendMediaUpload/progress.js"  />
+<xf:css src="infinite.css"/>
+<xf:inforow>
+	<div id="obacity" style="display:none;">
+	</div>
+<div id="loader" align="center">
+  <div id="loading">
+  </div>
+</div> </xf:inforow>
+
+<xf:uploadrow  name="upload" id="upload"  onchange="uploadFile()"  label="{{ phrase('emw_upload_video') }}"  />
+
+<div align="center";>
+<progress id="progressBar"  value="0" max="100" style="width:300px;display:none;  align-item:center;"></progress>
+<h3 id="status"></h3>
+<p id="loaded_n_total" style="display:none;"></p>
+</div>
+
+<xf:form action="{{ link('ewr-medio/SaveData') }}" class="block" ajax="true" data-force-flash-message="true">	
+
+<xf:selectrow name="category_id" value="{$media.category_id}"
+			label="{{ phrase('category') }}" id="category">
+				<xf:option value="">{{ phrase('(none)') }}</xf:option>
+				<xf:foreach loop="$categories" value="$category">
+					<xf:option value="{$category.category_id}" disabled="{$category.category_disabled}">
+							{{ repeat('--', $category.category_depth) }} {$category.category_name}
+					</xf:option>
+				</xf:foreach>
+		</xf:selectrow>
+		
+		<xf:textboxrow name="media_title" 
+			label="{{ phrase('title') }}" id="title" />
+		
+		
+			<xf:editorrow  name="media_description"
+				label="{{ phrase('description') }}" rowtype="fullWidth noLabel mergePrev"  id="des"/>
+	
+			
+	<xf:submitrow submit="{{ phrase('send') }}" onclick="spinner()" />
+
+</xf:form>]]></template>
+  <template type="public" title="infinite.css" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[#obacity {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+  z-index: 999;
+  background-color: gray;
+
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#loader {
+  display: none;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+#loading {
+  border: 5px solid #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top-color: #103957;
+  border-left-color: #103957;
+  animation: spin 1s infinite ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}]]></template>
+</templates>

@@ -1,0 +1,38 @@
+{
+    "fs_bitcoin_btn_text.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "b4d656f3a9414888c320fb81f28f4fac"
+    },
+    "fs_bitcoin_btn_txt.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f683581d3e75f05f9d9215f9b4696cef"
+    },
+    "fs_bitcoin_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f6ea37dd7a58cc08fb2129808efbca22"
+    },
+    "fs_bitcoin_upgrade_body.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "4af03a850cdd2caf0534a8a0571e1aae"
+    },
+    "fs_bitcoin_warning_msg.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cf4107b428fb3d748fcc900bdde859e3"
+    },
+    "nav.upgradeAccount.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f683581d3e75f05f9d9215f9b4696cef"
+    }
+}

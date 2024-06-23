@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activity_summary_definitions>
+  <activity_summary_definition definition_id="xa_sc_latest_comments" definition_class="XenAddons\Showcase\ActivitySummary\LatestComments"/>
+  <activity_summary_definition definition_id="xa_sc_latest_items" definition_class="XenAddons\Showcase\ActivitySummary\LatestItems"/>
+  <activity_summary_definition definition_id="xa_sc_latest_reviews" definition_class="XenAddons\Showcase\ActivitySummary\LatestReviews"/>
+  <activity_summary_definition definition_id="xa_sc_latest_updates" definition_class="XenAddons\Showcase\ActivitySummary\LatestUpdates"/>
+</activity_summary_definitions>

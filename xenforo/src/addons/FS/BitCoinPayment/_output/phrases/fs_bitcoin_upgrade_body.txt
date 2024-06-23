@@ -1,0 +1,6 @@
+<ul>
+<li>These credits has a one-month validity and will stay in your account until you use it or decide to gift it. </li>
+<li>You can purchase these credits with Bitcoin by following the 'Buying Crypto Tutorials' link. </li>
+<li>For additional help, feel free to send a private message to admin. </li>
+<li>In case of payment failures, provide us with the 'Transaction ID' (TxID) or details such as the crypto amount, date, and address to which you sent the payment.</li>
+</ul>

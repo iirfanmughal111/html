@@ -1,0 +1,9 @@
+{
+    "template": "quick_reply_macros",
+    "description": "dropdownHideAttachment",
+    "execution_order": 21,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t\t\t\t\t<xf:if is=\"$attachmentData\">\n\t\t\t\t\t\t<xf:macro template=\"helper_attach_upload\" name=\"upload_link_from_data\"\n\t\t\t\t\t\t\targ-attachmentData=\"{$attachmentData}\"\n\t\t\t\t\t\t\targ-forceHash=\"{$forceHash}\" />\n\t\t\t\t\t</xf:if>",
+    "replace": "<xf:if is=\"$thread\">\n<xf:if is=\"$thread.getPostCount() < 1\">\n \n\t\t<xf:else />\n\t\t$0\n\t\t\n\t\t\n</xf:if>\n\t\t\t<xf:else />\n\t\t$0\n\t\t\n\t\t\n</xf:if>"
+}

@@ -1,0 +1,1 @@
+Minimum image required dimension {width} * {height}  px

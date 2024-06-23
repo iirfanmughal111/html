@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="fs_escrow_admin_list" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:title page="{$page}">{{ phrase('escrow_admin_title') }}</xf:title>
+<div class="block-container">
+	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+        <xf:if is="count($escrows) > 0 ">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="escrows_table_list"
+                arg-escrows="{$escrows}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	<div class="block-footer">
+  
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt><span class="block-footer-counter">{{ display_totals($escrows, $total) }}</span></dt>
+        <dd>
+       <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="escrow"
+            data="{$escrows}"
+            params="{$escrows}"
+            wrapperclass="block-outer-main"
+          />
+      </dd>
+      </dl>
+      </div>
+  </div>
+      </div>
+
+<xf:macro name="escrows_table_list" arg-escrows="!">
+
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('fs_escrow_admin_title') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admin_from') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admin_to') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admin_amount') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admin_status') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admin_date') }} </xf:cell>
+    <xf:cell> {{ phrase('fs_escrow_admins_lastUpdate') }} </xf:cell>
+	  
+	  
+  </xf:datarow>
+  <xf:foreach loop="$escrows" value="$escrow">
+    <xf:datarow>
+		<xf:if is="{{$escrow.Thread}}">
+      <xf:cell> <a  href="{{link_type('public','threads/',$escrow.Thread)}}" >{{ snippet($escrow.Thread.title, 35, {'stripBbCode': true}) }}</a>  </xf:cell>
+      <xf:cell> <a  href="{{link_type('public','members/',$escrow.Thread.User)}}" >{{$escrow.Thread.User.username }} </a></xf:cell>
+      <xf:cell> <a  href="{{link_type('public','members/',$escrow.User)}}" > {{$escrow.User.username}} </a></xf:cell>
+      <xf:cell>{{phrase('fs_escrow_amount_symbol')}}{{$escrow.getOrignolAmount()}}</xf:cell>
+      <xf:cell>
+		  <xf:macro name="status"
+			arg-status="{$escrow.escrow_status}"/>
+		</xf:cell>
+		
+      <xf:cell><xf:date time="$escrow.Thread.post_date" /></xf:cell>
+      <xf:cell><xf:date time="$escrow.last_update" /></xf:cell>
+		</xf:if>
+			
+    </xf:datarow>
+  </xf:foreach>
+</xf:macro>
+
+<xf:macro name="status"
+	arg-status="!"
+	>
+		<xf:if is="$status==0">
+			{{ phrase('fs_escrow_status_0') }}
+		<xf:elseif is="$status == 1" />
+			{{ phrase('fs_escrow_status_1') }}
+		<xf:elseif is="$status == 2" />
+			{{ phrase('fs_escrow_status_2') }}
+		<xf:elseif is="$status == 3" />
+			{{ phrase('fs_escrow_status_3') }}
+		<xf:elseif is="$status == 4" />
+			{{ phrase('fs_escrow_status_4') }}
+		<xf:else/>
+			{{ phrase('fs_escrow_status_undefined') }}
+		</xf:if>
+	</xf:macro>
+
+<!-- Filter Bar Macro Start -->
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-search', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>]]></template>
+  <template type="admin" title="fs_escrow_admin_liveData_list" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:title page="{$page}">{{ phrase('escrow_live_data') }}</xf:title>
+<div class="block-container">
+	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+        <xf:if is="count($logs) > 0 ">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="logs_table_list"
+                arg-logs="{$logs}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	<div class="block-footer">
+  
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt><span class="block-footer-counter">{{ display_totals($logs, $total) }}</span></dt>
+        <dd>
+       <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="escrow/live"
+            data="{$logs}"
+            params="{$logs}"
+            wrapperclass="block-outer-main"
+          />
+      </dd>
+      </dl>
+      </div>
+  </div>
+      </div>
+
+<xf:macro name="logs_table_list" arg-logs="!">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_txId') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_sender_addreses') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_externalId') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_status') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amountUSD') }} </xf:cell>
+			
+			
+		</xf:datarow>
+	
+<set var="$sum" value="0"></set>
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			<xf:cell> {{ snippet($log.TxId, 30, {'stripBbCode': true}) }} </xf:cell>
+			
+			<xf:cell> 
+				<xf:macro
+                name="sender_address"
+                arg-addresses="{$log.SenderAddresses}"
+              />
+			</xf:cell>
+			
+			<xf:cell>{{$log.ExternalId}}</xf:cell>
+			<xf:cell>{{$log.Date}}</xf:cell>
+			
+			<xf:cell>
+				<xf:if is="$log.Status!=2">
+					{{$log.FailReason}}
+					<xf:else />
+					{{phrase('fs_amount_received')}}
+				</xf:if>
+			</xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.Amount }} </xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.AmountUSD }} </xf:cell>
+			
+		</xf:datarow>
+		
+	</xf:foreach>
+</xf:macro>
+
+
+<xf:macro name="sender_address" arg-addresses="!">
+	
+	<xf:foreach loop="$addresses" value="$address">
+		<p>
+			{{$address}}
+		</p>
+		
+		
+	</xf:foreach>
+</xf:macro>
+
+
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-live', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>]]></template>
+  <template type="admin" title="fs_escrow_admin_log_list" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:title page="{$page}">{{ phrase('escrow_admin_logs') }}</xf:title>
+<div class="block-container">
+	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+        <xf:if is="count($logs) > 0 ">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="logs_table_list"
+                arg-logs="{$logs}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	<div class="block-footer">
+  
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt><span class="block-footer-counter">{{ display_totals($logs, $total) }}</span></dt>
+        <dd>
+       <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="escrow/log"
+            data="{$logs}"
+            params="{$logs}"
+            wrapperclass="block-outer-main"
+          />
+      </dd>
+      </dl>
+      </div>
+  </div>
+      </div>
+
+<xf:macro name="logs_table_list" arg-logs="!">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_type') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('username') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			
+		</xf:datarow>
+	
+<set var="$sum" value="0"></set>
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			<xf:cell> {{$log.transaction_type}} </xf:cell>
+			<xf:cell><xf:date time="$log.created_at" /></xf:cell>
+			<xf:cell><a  href="{{link_type('public','members/',$log.User)}}" >{{$log.User.username}}</a></xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolAmount() }} </xf:cell>
+		</xf:datarow>
+		
+	</xf:foreach>
+</xf:macro>
+
+
+
+<xf:macro name="status"
+	arg-status="!"
+	>
+		<xf:if is="$status==0">
+			{{ phrase('fs_escrow_status_0') }}
+		<xf:elseif is="$status == 1" />
+			{{ phrase('fs_escrow_status_1') }}
+		<xf:elseif is="$status == 2" />
+			{{ phrase('fs_escrow_status_2') }}
+		<xf:elseif is="$status == 3" />
+			{{ phrase('fs_escrow_status_3') }}
+		<xf:elseif is="$status == 4" />
+			{{ phrase('fs_escrow_status_4') }}
+		<xf:else/>
+			{{ phrase('fs_escrow_status_undefined') }}
+		</xf:if>
+	</xf:macro>
+
+<!-- Filter Bar Macro Start -->
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-transaction', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>]]></template>
+  <template type="admin" title="fs_escrow_live_filter" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:form action="{{ link('escrow/live') }}">
+			<xf:textboxrow name="tx_id" value="{$conditions.tx_id}" />
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="admin" title="fs_escrow_logs_filter" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[<xf:form action="{{ link('escrow/log') }}">
+	<div class="menu-row">
+    	{{ phrase('username:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="fs_transaction_user" value="{$conditions.fs_transaction_users}" ac="single" />
+		</div>
+  	</div>
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="admin" title="fs_escrow_search_filter" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:form action="{{ link('escrow') }}">
+	<div class="menu-row">
+    	{{ phrase('fs_escrow_start_username:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="fs_escrow_start_username" value="{$conditions.fs_escrow_start_username}" ac="single" />
+		</div>
+  	</div>
+	
+	<div class="menu-row">
+    	{{ phrase('fs_escrow_mentioned_username:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="fs_escrow_mentioned_username" value="{$conditions.fs_escrow_mentioned_username}" ac="single" />
+		</div>
+  	</div>
+	
+	<div class="menu-row menu-row--separated">
+			{{ phrase('fs_escrow_form_status:') }}
+			<div class="u-inputSpacer">
+				<xf:select name="fs_escrow_status" value="{$conditions.fs_escrow_status}">
+					<xf:option value="all" selected="true" label="{{ phrase('all') }}" />
+					<xf:option value="0" label="{{ phrase('fs_escrow_status_0') }}" />
+					<xf:option value="1" label="{{ phrase('fs_escrow_status_1') }}" />
+					<xf:option value="2" label="{{ phrase('fs_escrow_status_2') }}" />
+					<xf:option value="3" label="{{ phrase('fs_escrow_status_3') }}" />
+					<xf:option value="4" label="{{ phrase('fs_escrow_status_4') }}" />
+				</xf:select>
+			</div>
+		</div>
+	
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="email" title="fs_escrow_send_otp_mail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:set var="$requestLink">{{ link('escrow/withdraw') }}</xf:set>
+
+<mail:subject>
+	{{ phrase('fs_escrow_request_subject') }}
+</mail:subject>
+
+	{{ phrase('fs_escrow_otp_alert_mail', {
+	'user': $visitor.username,
+	'otp':$visitor.escrow_otp
+}) }}
+<table cellpadding="10" cellspacing="0" border="0" width="100%" class="linkBar" >
+	<tr>
+		<td >
+			<a href="{{$requestLink}}" class="button">{{ phrase('fs_escrow_visit_request_page') }}</a>
+		</td>
+	</tr>
+</table>]]></template>
+  <template type="public" title="alert_fs_escrow_escrow_approve" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ phrase('x_approve_escrow_y', {
+		'name': username_link($user, false, {'defaultname': $username}),
+		'title': '<a href="' . link('threads/'. {$extra.thread_id}) . '" class="fauxBlockLink-blockLink">' . $extra.thread_title . '</a>'
+}) }}]]></template>
+  <template type="public" title="alert_fs_escrow_escrow_cancel" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ phrase('x_cancel_escrow_y', {
+		'name': username_link($user, false, {'defaultname': $username}),
+		'title': '<a href="' . link('threads/'. {$extra.thread_id}) . '" class="fauxBlockLink-blockLink">' . $extra.thread_title . '</a>'
+}) }}]]></template>
+  <template type="public" title="alert_fs_escrow_escrow_payment" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ phrase('x_payment_escrow_y', {
+		'name': username_link($user, false, {'defaultname': $username}),
+		'title': '<a href="' . link('threads/'. {$extra.thread_id}) . '" class="fauxBlockLink-blockLink">' . $extra.thread_title . '</a>'
+}) }}]]></template>
+  <template type="public" title="alert_fs_escrow_escrow_percentage" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{{ phrase('x_percentge_escrow_y', {
+		'name': username_link($user, false, {'defaultname': $username}),
+		'title': '<a href="' . link('threads/'. {$extra.thread_id}) . '" class="fauxBlockLink-blockLink">' . $extra.thread_title . '</a>'
+}) }}]]></template>
+  <template type="public" title="alert_fs_escrow_transaction_deposit_confirm" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[<xf:if is="$extra.status==1">
+{{ phrase('fs_escrow_deposit_confiremed', {
+		'name':$extra.username,
+		'amount': $extra.amount
+
+}) }}
+	<xf:elseif is="$extra.status==0"/>
+	{{ phrase('fs_escrow_deposit_error', {
+		'name':$extra.username,
+		'amount': $extra.amount
+}) }}
+</xf:if>]]></template>
+  <template type="public" title="alert_fs_escrow_transaction_withdraw_confirm" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[<xf:if is="$extra.status==1">
+{{ phrase('fs_escrow_withdraw_confiremed', {
+		'name':$extra.username,
+		'amount': $extra.amount
+
+}) }}
+	<xf:elseif is="$extra.status==0"/>
+	{{ phrase('fs_escrow_withdraw_error', {
+		'name':$extra.username,
+		'amount': $extra.amount
+}) }}
+</xf:if>]]></template>
+  <template type="public" title="approval_item_fs_escrow_withdrawRequest" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:set var="$messageHtml">
+	<h4 class="message-title"><a href="{{ link('members', $content.User) }}">{{phrase('fs_escrow_request_from', {'user': $content.User.username})}}</a></h4>
+</xf:set>
+<xf:macro template="approval_queue_macros" name="item_message_type"
+	arg-content="{$content}"
+	arg-contentDate="{$content.created_at}"	  
+	arg-user="{$content.User}"
+	arg-messageHtml="{$messageHtml}"
+	arg-typePhraseHtml="{{ phrase('fs_escrow_withdrawRequest') }}"
+	arg-spamDetails="{$spamDetails}"
+	arg-unapprovedItem="{$unapprovedItem}"
+	arg-handler="{$handler}"
+	arg-headerPhraseHtml="{{ phrase('user_x_request_withdraw', {
+		'user': $content.User.username,
+		'amount': $content.amount,
+		'address_from': $content.address_from
+	}) }}"/>]]></template>
+  <template type="public" title="fs_escrow_addEdit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_add_escrow') }}</xf:title>
+<xf:form action="{{ link('auction/categories/bidding', $auction) }}" ajax="true" class="block" data-xf-init="attachment-manager">
+	
+	<div class="block-container">
+		<div class="block-body">
+	<!--		<xf:formrow label="{{ phrase('escrow_currency_type') }}">
+				<div class="inputChoices">
+					<xf:radio name="currency_type">
+						<xf:option label="{{ phrase('currency_type_xmr') }}" value="xmr">
+						</xf:option>
+						<xf:option label="{{ phrase('currency_type_btc') }}" value="btc">
+						</xf:option>
+					</xf:radio>
+				</div>
+		</xf:formrow> -->
+			<xf:textboxrow name="escrow_amount" value=""   label="{{ phrase('escrow_title') }}" />
+				
+			
+			<xf:macro name="description"
+					  arg-description="{$category.draft_resource.message}"
+					  arg-attachmentData="{$attachmentData}"
+					  arg-previewUrl="{{ link('resources/categories/preview', $category) }}" />
+			<xf:formrow>
+					<xf:macro template="helper_attach_upload" name="upload_block" arg-attachmentData="{$attachmentData}" />
+				
+			</xf:formrow>
+			
+			<xf:numberboxrow name="escrow_amount" value="" explain="{{ phrase('escrow_total_amount') }}" min="0" label="{{ phrase('escrow_amount') }}" />
+			
+			<xf:textboxrow name="starter" value="{{ $starterFilter ? $starterFilter.username : '' }}" label="{{ phrase('escrow_user') }}" ac="single"
+				maxlength="{{ max_length($xf.visitor, 'username') }}" id="ctrl_started_by" />
+			
+	
+	<xf:submitrow icon="save" sticky="true" />
+		</div>
+	</div>
+</xf:form>
+
+
+<xf:macro name="description" arg-description="" arg-attachmentData="{{ [] }}" arg-previewUrl="">
+	<div data-xf-init="attachment-manager">
+		<xf:editorrow name="description" value="{$description}" data-min-height="200"
+					  attachments="{$attachmentData.attachments}"
+					  label="{{ phrase('description') }}"
+					  data-preview-url="{$previewUrl}" />
+
+		<xf:formrow>
+			<xf:if is="$attachmentData">
+				<xf:macro template="helper_attach_upload" name="upload_block" arg-attachmentData="{$attachmentData}" />
+			</xf:if>
+		</xf:formrow>
+	</div>
+</xf:macro>]]></template>
+  <template type="public" title="fs_escrow_approve" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_escrow_confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('escrow/approve',$escrow) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_escrow_please_confirm_that_you_want_to_approve_following:') }}
+					<strong>{$escrow.Thread.title}</strong>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="approve" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_cancel" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_escrow_confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('escrow/cancel',$escrow) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_escrow_please_confirm_that_you_want_to_cancel_following:') }}
+					<strong>{$escrow.Thread.title}</strong>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="cancel" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_deposit" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:title> {{ phrase('fs_escrow_deposit') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+
+<xf:form
+  action="{{ link('escrow/deposit-save') }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+		<xf:css src="share_controls.less" />
+
+  <div class="block-container">
+    <div class="block-body">
+		<xf:formrow label="{{ phrase('fs_escrow_address') }}" rowtype="input">
+			<div class="shareInput" data-xf-init="share-input" data-success-text="{$successText}">
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="{{ phrase('copy_to_clipboard')|for_attr }}">
+
+				<i aria-hidden="true"></i>
+			</div>
+			<xf:textbox class="shareInput-input js-shareInput"
+				value="{$address}" readonly="true" />
+		</div>
+	</div>
+			<xf:set var="$user" value="{$xf.visitor->user_id}"/>
+			<img src="{{ base_url('data/qrcode/'.{$user}.'.png') }}"/>
+		</xf:formrow>
+			
+	  </div>
+	 
+	      <xf:numberboxrow name="deposit_amount" explain="{{ phrase('escrow_current_amount') }} {{phrase('fs_escrow_amount_symbol')}}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0}}" min="0" label="{{ phrase('fs_escrow_amount') }}" />
+ <xf:comment>
+	  <xf:checkboxrow label="">
+				<xf:option name="fee" hint="{{ phrase('escrow_current_fee_percentage') }} : {$xf.options.fs_escrow_fee_percentage}%">{{ phrase('fs_escrow_include_fee') }}</xf:option>
+			</xf:checkboxrow>
+	  </xf:comment>
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_escrow_list" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<div class="block-container">
+		
+		<xf:if is="$escrows is not empty">
+			<xf:if is="$type=='my'">
+				<ul class="block-body js-escrowMyTarget">
+						<xf:foreach loop="$escrows" value="$escrow">
+							<xf:macro template="fs_escrow_list_macro" name="listing"
+							arg-listing="{$escrow}"
+							 />
+						</xf:foreach>	
+				</ul>
+				<div class="block-footer js-myLoadMore">
+				
+					<span class="block-footer-controls"><xf:button href="{{ link('members/my-escrow', $user, {'before_id': $oldestItemId}) }}"
+							rel="nofollow"
+							data-xf-click="inserter"
+							data-append=".js-escrowMyTarget"
+							data-replace=".js-myLoadMore">
+							{{ phrase('show_older_items') }}
+						</xf:button></span>
+				</div>
+				<xf:elseif is="$type=='mentioned'" />
+				<ul class="block-body js-escrowMentionedTarget">
+						<xf:foreach loop="$escrows" value="$escrow">
+							<xf:macro template="fs_escrow_list_macro" name="listing"
+							arg-listing="{$escrow}"
+							 />
+						</xf:foreach>	
+				</ul>
+				<div class="block-footer js-mentionedLoadMore">
+					<span class="block-footer-controls"><xf:button href="{{ link('members/mentioned-escrow', $user, {'before_id': $oldestItemId}) }}"
+							rel="nofollow"
+							data-xf-click="inserter"
+							data-append=".js-escrowMentionedTarget"
+							data-replace=".js-mentionedLoadMore">
+							{{ phrase('show_older_items') }}
+						</xf:button></span>
+					</div>
+				</xf:if>
+			<xf:elseif is="$beforeId" />
+				<div class="block-body {$type}=='my' ? 'js-myLoadMore' : 'js-mentionedLoadMore'">
+					<div class="block-row block-row--separated">{{ phrase('there_no_more_items_to_show') }}</div>
+				</div>
+			<xf:else />
+				<div class="block-body {$type}=='my' ? 'js-myLoadMore' : 'js-mentionedLoadMore' ">
+					<div class="block-row">{{ phrase('no_any_data_found') }}</div>
+				</div>
+			</xf:if>
+		
+</div>]]></template>
+  <template type="public" title="fs_escrow_landing" version_id="1000300" version_string="1.0.3 Alpha"><![CDATA[<xf:title page="{$page}">{{ phrase('fs_escrow_page_title') }}</xf:title>
+		<xf:macro template="notice_macros" name="notice_list" arg-type="block" arg-notices="{$rules}" />
+
+<div class="block-container">
+    <div class="block-body">
+		<xf:pageaction>
+			<xf:if is="$xf.visitor.user_id!=0">
+				 <xf:button
+					href="{{ link('escrow/add') }}"
+					class="button--cta"
+					icon="write"
+					>{{ phrase('fs_escrow_add') }}</xf:button>
+			</xf:if>
+		</xf:pageaction>
+		
+		<!--start --->
+	
+		<xf:if is="$xf.visitor.user_id!=0">
+    	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+				<div class="structItemContainer">
+					<xf:if is="$escrows is not empty">
+						<xf:foreach loop="$escrows" value="$escrow">
+							<xf:if is="$escrow.Thread">
+								  <xf:macro
+									template="fs_escrow_list_macro"
+									name="listing"
+									arg-listing="{$escrow}"
+									arg-type=""
+								  />
+							</xf:if>
+						</xf:foreach>
+					<xf:else />
+					  <div class="block-row">
+						{{ phrase('no_any_data_found') }}
+					  </div>
+					</xf:if>
+			  </div>
+				<div class="block-footer">
+					<div class="block-body block-row">
+					  <dl class="pairs pairs--justified">
+						<dt><span class="block-footer-counter">{{ display_totals($escrows, $total) }}</span></dt>
+							<dd>
+								<xf:pagenav
+											page="{$page}"
+											perpage="{$perPage}"
+											total="{$total}"
+											link="escrow"
+											data="{$escrows}"
+											params="{$conditions}"
+											wrapperclass="block-outer-main"
+											/>
+						  </dd>
+					  </dl>
+					</div>
+			  </div>
+		
+			<xf:else />
+				<div class="blockMessage">{{ phrase('fs_escrow_you_must_login') }}</div>
+				
+			</xf:if>
+		<xf:sidenav>
+			<xf:macro
+					  template="fs_escrow_list_macro"
+					  name="fs_escrow_Count"
+					  arg-escrowsCount="{$escrowsCount}"
+					  arg-isSelected="{$isSelected.type}"
+					  />
+
+			<xf:macro
+					  template="fs_escrow_list_macro"
+					  name="fs_escrow_stats"
+					  arg-stats="{$stats}"
+					  />
+		</xf:sidenav>
+	
+				
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<!-- Filter Bar Macro Start -->
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-search', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>
+		
+
+		<!---end --->
+    
+    </div>
+ </div>]]></template>
+  <template type="public" title="fs_escrow_list_macro" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<xf:macro name="listing"
+	arg-listing="!"
+	arg-type="{{ null }}"
+>
+	<xf:css src="structured_list.less" />
+	<xf:css src="fs_escrow_list_view.less" />
+	<div class="structItem structItem--listing js-inlineModContainer " id="escrow-{{$listing.escrow_id}}" data-author="{{ $listing.Thread.username ?: '' }}">
+		<div class="structItem-cell structItem-cell--icon structItem-cell--iconExpanded structItem-cell--iconListingCoverImage">
+			<div class="structItem-iconContainer">
+				<xf:if is="count($listing.Thread.FirstPost.Attachments)">
+						<a href="{{ link('threads', $listing.Thread) }}" class="" data-tp-primary="on">
+							<img src ="{{ link('full:attachments', $listing.Thread.FirstPost.Attachments.first())}}" style="min-height: 92px; max-height: 92px;"></a>
+				<xf:else />
+						<a href="{{ link('threads', $listing.Thread) }}" class="" data-tp-primary="on">
+							<xf:avatar user="{$listing.Thread.User}" size="o" style="width: 92px; height: 92px;"  defaultname="{$listing.Thread.User.username}" /></a>
+				</xf:if>		
+			</div>
+		</div>
+		<div class="structItem-cell structItem-cell--main" data-xf-init="touch-proxy">
+			<div class="structItem-title">
+				<a href="{{ link('threads/', $listing.Thread) }}" class="" data-tp-primary="on">{$listing.Thread.title}</a>
+					<xf:comment><span class="structItem-listingDescription">  {{ phrase('AuctionStarting_bid') }}: {{ phrase('dollorSymbol') }}{{ $listing.Thread.custom_fields.starting_bid}}</span>
+			</xf:comment>
+						</div>
+			<div class="structItem-minor">
+
+					<ul class="structItem-parts">
+						<li><xf:username user="$listing.Thread.User" defaultname="{$listing.Thread.User}" /></li>
+						<li class="structItem-startDate">
+							<xf:date time="{$listing.Thread.post_date}" /> 
+						</li>
+				</ul>
+			</div>
+			
+		<div class="auction-category">{{ snippet($listing.Thread.FirstPost.message, 100, {'stripBbCode': true}) }}</div>
+		
+		</div>
+		<div class="structItem-cell structItem-cell--listingMeta">
+
+			<dl class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--type">
+				<dt ><b>{{ phrase('fs_escrow_form_status') }}</b></dt>
+				<dd>
+					<xf:macro
+						name="status"
+						arg-status="{$listing.escrow_status}"
+					  />
+				</dd>
+			</dl>
+					
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_amount')}}</b>
+					</dt>
+				<dd>
+					{{phrase('fs_escrow_amount_symbol')}}{{$listing.getOrignolAmount()}}
+				</dd>
+			</dl>
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_admin_from')}}</b>
+					</dt>
+				<dd>
+					{{$listing.Thread.User.username}}
+				</dd>
+			</dl>
+			
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_admin_to')}}</b>
+					</dt>
+				<dd>
+					{{$listing.User.username}}
+				</dd>
+			</dl>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="escrow"
+	arg-escrow="!"
+	arg-type="!"
+	>
+	
+	<xf:if is="$escrow And $escrow.Thread.escrow_id!=0">
+		<div class="block-row block-row--separated  js-inlineModContainer" >
+			<div class="contentRow ">
+				<span class="contentRow-figure">
+					<xf:avatar user="{$escrow.Thread.User}" size="s" defaultname="{$escrow.Thread.User.username}" />
+				</span>
+				<div class="contentRow-main">
+					<h3 class="contentRow-title">
+						<a href="{{ link('threads', $escrow.Thread) }}">{{$escrow.Thread.title}}</a>
+					</h3>
+					<div class="contentRow-minor contentRow-minor--hideLinks">
+						<ul class="listInline listInline--bullet">
+							<li>
+								<xf:if is="$type=='my'">
+									<xf:username user="{$escrow.User}" defaultname="{$escrow.User.username}" />
+									<xf:elseif is="$type == 'mentioned'" />
+									<xf:username user="{$escrow.Thread.User}" defaultname="{$escrow.Thread.User.username}" />
+									
+								</xf:if>
+							</li>
+							<li><xf:date time="{$escrow.Thread.post_date}" /></li>
+							<li>{{ phrase('fs_escrow_amount:') }} {{phrase('fs_escrow_amount_symbol')}}{$escrow.escrow_amount|number}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</xf:if>		
+	
+</xf:macro>	
+
+
+
+<!-- placingProperTableCellTemplate -->
+
+<xf:macro name="logs_table_list" arg-logs="!" arg-beforeId="">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_type') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_current') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_action') }} </xf:cell>
+			
+		</xf:datarow>
+	
+
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			
+			<xf:cell> {{$log.transaction_type}} </xf:cell>
+			<xf:cell><xf:date time="$log.created_at" /></xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolAmount() }} </xf:cell>
+			<xf:cell>{{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolBalance()}}</xf:cell>
+			<xf:if is="$log.conversation_id">
+				<xf:cell><a href="{{ link('conversations', $log.Conversation) }}">{{ phrase('fs_conversation') }}</a></xf:cell>
+			<xf:else/>
+				<xf:cell><a href="{{ link('members/trans-report', $null,{'id':$log.transaction_id}) }}">{{phrase('fs_report')}} </a></xf:cell>
+			</xf:if>
+			
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>
+
+<xf:macro name="fs_escrow_Count" arg-escrowsCount="!" arg-isSelected="all">
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">{{ phrase('fs_escrows_details') }}</h3>
+			<div class="block-body">
+				<xf:if is="$escrowsCount">
+							
+					<ol class="categoryList toggleTarget is-active">
+		<xf:set var="$isSelected" value="{$isSelected}" />
+		<xf:foreach loop="$escrowsCount" key="$id" value="$escrow">
+
+			<li class="categoryList-item">
+		<div class="categoryList-itemRow">
+			<div class="categoryList-link" style="color:#2577b1;">
+				<a href="{{ link('escrow&type='.{$escrow.type}) }}" class="categoryList-link{{ $isSelected==$escrow.type ? ' is-selected' : '' }}">
+				{$escrow.title}
+			</a>
+				
+			</div>
+			<span class="categoryList-label">
+				<span class="label label--subtle label--smallest">{$escrow.count}</span>
+			</span>
+		</div>
+	</li>
+		
+		</xf:foreach>
+	</ol>
+				<xf:else />
+					<div class="block-row">{{ phrase('n_a') }}</div>
+				</xf:if>
+				
+			</div>
+		</div>
+	</div>
+</xf:macro>
+<xf:macro name="fs_escrow_stats" arg-stats="!">
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">{{ phrase('fs_escrow_statistics') }}</h3>
+			<div class="block-body">
+				<xf:if is="$stats">
+							
+					<ol class="categoryList toggleTarget is-active">
+
+		<xf:foreach loop="$stats" key="$id" value="$category">
+			
+			<li class="categoryList-item">
+		<div class="categoryList-itemRow">
+			<div class="categoryList-link" style="color:#2577b1;">
+				{$category.title}
+			</div>
+			<span class="categoryList-label">
+				<span class="label label--subtle label--smallest">{$category.count}</span>
+			</span>
+		</div>
+	</li>
+		
+		</xf:foreach>
+	</ol>
+				<xf:else />
+					<div class="block-row">{{ phrase('n_a') }}</div>
+				</xf:if>
+				
+			</div>
+		</div>
+	</div>
+</xf:macro>
+
+
+
+<xf:macro name="status"
+	arg-status="!"
+	>
+		<xf:if is="$status==0">
+			{{ phrase('fs_escrow_status_0') }}
+		<xf:elseif is="$status == 1" />
+			{{ phrase('fs_escrow_status_1') }}
+		<xf:elseif is="$status == 2" />
+			{{ phrase('fs_escrow_status_2') }}
+		<xf:elseif is="$status == 3" />
+			{{ phrase('fs_escrow_status_3') }}
+		<xf:elseif is="$status == 4" />
+			{{ phrase('fs_escrow_status_4') }}
+		<xf:else/>
+			{{ phrase('fs_escrow_status_undefined') }}
+		</xf:if>
+	
+	</xf:macro>]]></template>
+  <template type="public" title="fs_escrow_list_view.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[// ############################ Escrow List View ######################
+
+.structItem-cell.structItem-cell--listingMeta
+{
+	width: 250px;
+}
+.label--counter{
+	font-size:13px;
+}
+.auction-category{
+	font-size: 12px;
+    color: #8c8c8c;
+}
+#counter-before:after{
+	content:none;
+}
+.structItem-metaItem--ratingf
+{
+	font-size: @xf-fontSizeSmall;
+}
+.label--counter-single{
+	font-size:25px;
+}
+@media (max-width: @xf-responsiveWide)
+{
+	.structItem-cell.structItem-cell--listingMeta
+	{
+		width: 190px;
+		font-size: @xf-fontSizeSmaller;
+	}
+}
+
+@media (max-width: @xf-responsiveMedium)
+{
+	.structItem-cell.structItem-cell--listingMeta
+	{
+		display: block;
+		width: auto;
+		float: left;
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		color: @xf-textColorMuted;
+
+		.pairs
+		{
+			display: inline;
+
+			&:before,
+			&:after
+			{
+				display: none;
+			}
+
+			> dt,
+			> dd
+			{
+				display: inline;
+				float: none;
+				margin: 0;
+			}
+		}
+
+		.structItem-metaItem
+		{
+			display: inline;
+		}
+
+		.ratingStarsRow
+		{
+			display: inline;
+
+			.ratingStarsRow-text
+			{
+				display: none;
+			}
+		}
+
+		.structItem-metaItem--lastUpdate > dt
+		{
+			display: none;
+		}
+
+		.structItem-metaItem + .structItem-metaItem:before
+		{
+			display: inline;
+			content: "\20\00B7\20";
+			color: @xf-textColorMuted;
+		}
+	}
+}
+
+// #################################### Escrow LISTING BODY / VIEW ########################
+
+.listingBody
+{
+	display: flex;
+}
+
+.listingBody-main
+{
+	flex: 1;
+	min-width: 0;
+	padding: @xf-blockPaddingV @xf-blockPaddingH;
+}
+
+.listingBody-sidebar
+{
+	flex: 0 0 auto;
+	width: 250px;
+	.xf-contentAltBase();
+	border-left: @xf-borderSize solid @xf-borderColor;
+	padding: @xf-blockPaddingV @xf-blockPaddingH;
+	font-size: @xf-fontSizeSmall;
+
+	> :first-child
+	{
+		margin-top: 0;
+	}
+
+	> :last-child
+	{
+		margin-bottom: 0;
+	}
+}
+
+.listingBody-fields
+{
+	&.listingBody-fields--before
+	{
+		margin-bottom: @xf-paddingLarge;
+		padding-bottom: @xf-paddingMedium;
+		border-bottom: @xf-borderSize solid @xf-borderColorLight;
+	}
+
+	&.listingBody-fields--after
+	{
+		margin-top: @xf-paddingLarge;
+		padding-top: @xf-paddingMedium;
+		border-top: @xf-borderSize solid @xf-borderColorLight;
+	}
+}
+
+.listingBody-attachments
+{
+	margin: .5em 0;
+}
+
+.listingBody .actionBar-set
+{
+	margin-top: @xf-messagePadding;
+	font-size: @xf-fontSizeSmall;
+}
+
+.listingSidebarGroup
+{
+	margin-bottom: @xf-elementSpacer;
+
+	&.listingSidebarGroup--buttons
+	{
+		> .button
+		{
+			display: block;
+			margin: 5px 0;
+
+			&:first-child
+			{
+				margin-top: 0;
+			}
+
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.listingSidebarGroup-title
+{
+	margin: 0;
+	padding: 0;
+
+	font-size: @xf-fontSizeLarge;
+	font-weight: @xf-fontWeightNormal;
+	color: @xf-textColorFeature;
+	padding-bottom: @xf-paddingMedium;
+
+	.m-hiddenLinks();
+}
+
+.listingSidebarList
+{
+	.m-listPlain();
+
+	> li
+	{
+		padding: @xf-paddingSmall 0;
+
+		&:first-child
+		{
+			padding-top: 0;
+		}
+
+		&:last-child
+		{
+			padding-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: @xf-responsiveWide)
+{
+	.listingBody
+	{
+		display: block;
+	}
+
+	.listingBody-sidebar
+	{
+		width: auto;
+		border-left: none;
+		border-top: @xf-borderSize solid @xf-borderColor;
+	}
+
+	.listingSidebarGroup
+	{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+.structItem-cell.structItem-cell--icon.structItem-cell--iconExpanded.structItem-cell--iconListingCoverImage
+{
+	width: 110px;
+}
+
+.structItem-cell.structItem-cell--icon.structItem-cell--iconExpanded.structItem-cell--iconListingCoverImageGrid
+{
+	min-width: 300px !important;
+}
+
+.structItem-cell--iconListingCoverImage .structItem-iconContainer .avatar
+{
+	width: 96px;
+	height: 96px;
+	font-size: 57.6px;
+	border-radius:0;
+}]]></template>
+  <template type="public" title="fs_escrow_logs" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<div class="block-container">
+  <div class="block-body">
+    <xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+		
+      <div class="block-container">
+        <!--start-->
+		<xf:if is="$logs is not empty">
+			<div class="block-body js-escrowLogTarget">
+            <xf:datalist data-xf-init="responsive-data-list">
+		
+              <xf:macro
+				template="fs_escrow_list_macro"
+                name="logs_table_list"
+                arg-logs="{$logs}"
+                arg-beforeId="{$beforeId}"
+              />
+            </xf:datalist>
+				</div>
+				<div class="block-footer js-logLoadMore">
+					<span class="block-footer-controls"><xf:button href="{{ link('members/logs', $user, {'before_id': $oldestItemId}) }}"
+							rel="nofollow"
+							data-xf-click="inserter"
+							data-append=".js-escrowLogTarget"
+							data-replace=".js-logLoadMore">
+							{{ phrase('show_older_items') }}
+						</xf:button></span>
+				</div>
+				
+			<xf:elseif is="$beforeId" />
+				<div class="block-body js-logLoadMore">
+					<div class="block-row block-row--separated">{{ phrase('there_no_more_items_to_show') }}</div>
+				</div>
+			<xf:else />
+				<div class="block-body js-logLoadMore ">
+					<div class="block-row">{{ phrase('no_any_data_found') }}</div>
+				</div>
+			</xf:if>
+		<!--end-->
+      </div>
+    </xf:form>
+  </div>]]></template>
+  <template type="public" title="fs_escrow_mentioned_escrow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<div class="block-container">
+	<div class="block-body">
+		<xf:if is="count($escrows) > 0 ">
+			  <xf:foreach loop="$escrows" value="$escrow">
+			<xf:macro template="fs_escrow_list_macro" name="escrow"
+			arg-escrow="{$escrow}"
+			arg-containerClass="contentRow-minor" />
+			</xf:foreach>
+		<xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	</div>
+</div>]]></template>
+  <template type="public" title="fs_escrow_otp" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title> {{ phrase('fs_escrow_withdraw') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+<xf:css src="fs_escrow_otp.less" />
+
+<xf:form
+  action="{{ link('escrow/withdraw-save') }}"
+  
+		 ajax="false"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+    <div class="block-body">
+    <input type="hidden" name="full_otp" id="full_otp">
+    <input type="hidden" value="{$data.destination_address}" name="destination_address">
+    <input type="hidden" value="{$data.withdraw_amount}"name="withdraw_amount" >
+		<div class="title">
+    <h3>{{phrase('fs_title_otp_verfication')}}</h3>
+    <p class="info">{{phrase('fs_otp_verfication_email',{'email':{$xf.visitor.email}})}} </p>
+    <p class="msg">{{phrase('fs_escrow_otp_verfication_enter')}} </p>
+  </div>
+  <div class="otp-input-fields">
+    <input type="number" class="otp__digit otp__field__1">
+    <input type="number" class="otp__digit otp__field__2">
+    <input type="number" class="otp__digit otp__field__3">
+    <input type="number" class="otp__digit otp__field__4">
+    <input type="number" class="otp__digit otp__field__5">
+    <input type="number" class="otp__digit otp__field__6">
+	  
+	<button type="submit" class="button--primary button">Request</button>
+  </div>
+  
+  <div class="result"><p id="_otp" class="_notok">000000</p></div>
+  </div>
+	  </div>
+	  
+</xf:form>
+
+<script>
+	var otp_inputs = document.querySelectorAll(".otp__digit")
+var mykey = "0123456789".split("")
+otp_inputs.forEach((_)=>{
+  _.addEventListener("keyup", handle_next_input)
+})
+function handle_next_input(event){
+  let current = event.target
+  let index = parseInt(current.classList[1].split("__")[2])
+  current.value = event.key
+  
+  if(event.keyCode == 8 && index > 1){
+    current.previousElementSibling.focus()
+  }
+  if(index < 6 && mykey.indexOf(""+event.key+"") != -1){
+    var next = current.nextElementSibling;
+    next.focus()
+  }
+  var _finalKey = ""
+  for(let {value} of otp_inputs){
+      _finalKey += value
+  }
+  if(_finalKey.length == 6){
+    document.querySelector("#_otp").classList.replace("_notok", "_ok")
+    document.querySelector("#_otp").innerText = _finalKey
+    document.querySelector("#full_otp").value = _finalKey
+	  
+  }else{
+    document.querySelector("#_otp").classList.replace("_ok", "_notok")
+    document.querySelector("#_otp").innerText = _finalKey
+    document.querySelector("#full_otp").value = _finalKey
+	  
+  }
+}
+</script>]]></template>
+  <template type="public" title="fs_escrow_otp.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[.title{
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  h3{
+    font-weight: bold;
+  }
+  p{
+    font-size: 12px;
+    color: #118a44;
+    &.msg{
+      color: initial;
+      text-align: initial;
+      font-weight: bold;
+    }
+  }
+}
+  
+.otp-input-fields{
+  margin: auto;
+  background-color: white;
+ /* box-shadow: 0px 0px 8px 0px #02025044;*/
+  max-width: 400px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+  
+  input{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #2f8f1f;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+    &:focus{
+      border-width: 2px;
+      border-color: darken(#2f8f1f, 5%);
+      font-size: 20px;
+    }
+  }
+}
+
+.result{
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+  p{
+    font-size: 24px;
+    font-family: 'Antonio', sans-serif;
+    opacity: 1;
+    transition: color 0.5s ease;
+    &._ok{
+      color: green;
+    }
+    &._notok{
+      color: red;
+      border-radius: 3px;
+    }
+  }
+}]]></template>
+  <template type="public" title="fs_escrow_payment" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_escrow_confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('escrow/payments',$escrow) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_escrow_please_confirm_that_you_want_to_payment_following:') }}
+					<strong>{$escrow.Thread.title}</strong>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="payment" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_pgp_message" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('escrow/withdraw-save') }}"  class="block" ajax="false">
+		  
+    <div class="block-container">
+		<div class="block-body">
+		<input type="hidden" name="withdraw_amount" value="{$data.withdraw_amount}" />
+		<input type="hidden" name="destination_address" value="{$data.destination_address}" />
+		<input type="hidden" name="public_key" value="{$public_key}" />
+			
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$xf.visitor.encrypt_message }}</pre></xf:formrow>
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_decrypt_message') }}" required="true" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_public_key" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_public_key')}}</xf:title>
+
+<xf:form action="{{ link('escrow/withdraw-verify') }}"  ajax="true" class="block">
+    <div class="block-container">
+		<div class="block-body">
+				<input type="hidden" name="withdraw_amount" value="{$data.withdraw_amount}" />
+				<input type="hidden" name="destination_address" value="{$data.destination_address}" />
+			 	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" style="font-size:10px;"/>
+				<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>		
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_public_search_filter" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:form action="{{ link('escrow') }}">
+	
+	<div class="menu-row">
+    	{{ phrase('fs_escrow_mentioned_by:') }}
+		<div class="u-inputSpacer">
+			<xf:textbox name="fs_escrow_mentioned_username" value="{$conditions.fs_escrow_mentioned_username}" ac="single" />
+		</div>
+  	</div>
+	
+	<div class="menu-row menu-row--separated">
+			{{ phrase('fs_escrow_form_status:') }}
+			<div class="u-inputSpacer">
+				<xf:select name="fs_escrow_status" value="{$conditions.fs_escrow_status}">
+					<xf:option value="all" selected="true" label="{{ phrase('all') }}" />
+					<xf:option value="1" label="{{ phrase('fs_escrow_status_0') }}" />
+					<xf:option value="2" label="{{ phrase('fs_escrow_status_1') }}" />
+					<xf:option value="3" label="{{ phrase('fs_escrow_status_2') }}" />
+					<xf:option value="4" label="{{ phrase('fs_escrow_status_3') }}" />
+					<xf:option value="5" label="{{ phrase('fs_escrow_status_4') }}" />
+				</xf:select>
+			</div>
+		</div>
+	
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="public" title="fs_escrow_thread_overview_box" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<div class="block-body block-row">
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{ phrase('fs_escrow_form_status') }}
+					</dt>
+				<dd>
+					<xf:macro template="fs_escrow_list_macro" name="status"
+			arg-status="{$thread.Escrow.escrow_status}"/>
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_amount')}}
+					</dt>
+				<dd>
+					{{phrase('fs_escrow_amount_symbol')}}{$thread.Escrow.getOrignolAmount()}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_admin_from')}}
+					</dt>
+				<dd>
+					{$thread.User.username}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--justified ">
+				<dt>
+				{{phrase('fs_escrow_admin_to')}}
+					</dt>
+				<dd>
+					{$thread.Escrow.User.username}
+				</dd>
+			</dl>
+		<dl  class="pairs pairs--justified ">
+			<dt>
+				<xf:if is="$thread.Escrow.escrow_status==0">
+				{{phrase('fs_escrow_0_date')}}
+					
+				<xf:elseif is="$thread.Escrow.escrow_status==1"/>
+				{{phrase('fs_escrow_1_date')}}
+					<xf:elseif is="$thread.Escrow.escrow_status==2"/>
+				{{phrase('fs_escrow_2_date')}}
+						<xf:elseif is="$thread.Escrow.escrow_status==3"/>
+				{{phrase('fs_escrow_3_date')}}
+							<xf:elseif is="$thread.Escrow.escrow_status==4"/>
+				{{phrase('fs_escrow_4_date')}}
+					
+				</xf:if>
+			</dt>
+			<dd>
+				<xf:date time="$thread.Escrow.last_update" />
+			</dd>
+		</dl>
+		
+	</div>]]></template>
+  <template type="public" title="fs_escrow_wihdraw" version_id="1010000" version_string="1.1.0 Alpha"><![CDATA[<xf:title> {{ phrase('fs_escrow_withdraw') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+
+<xf:form
+  action="{{ link('escrow/withdraw-request') }}"
+  class="block"
+	ajax="false"
+>
+  <div class="block-container">
+    <div class="block-body">
+		<xf:textboxrow label="{{ phrase('fs_escrow_address_from') }}" value="{$source_address}" readonly="true" />
+	    <xf:textboxrow name="destination_address" label="{{ phrase('fs_escrow_address_to') }}" />
+		<xf:numberboxrow min="0" name="withdraw_amount" explain="{{ phrase('escrow_current_amount') }} {{phrase('fs_escrow_amount_symbol')}}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0}}" label="{{ phrase('fs_escrow_amount') }}" />
+    <xf:submitrow submit="" icon="save" />
+  </div>
+	  </div>
+	  
+</xf:form>]]></template>
+</templates>

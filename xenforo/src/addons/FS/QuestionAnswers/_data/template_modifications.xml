@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="fs_question_answers_nav_selected" description="QuestionsAnswers nav is Selected" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<ul class="p-nav-list js-offCanvasNavSource">]]></find>
+    <replace><![CDATA[$0
+<xf:if is="{{$xf.reply.containerKey == 'node-'.$xf.options.fs_questionAnswerForum || $xf.app.request.getRoutePath() == 'esperto/'}}">
+	<xf:set var="$pageSection" value="fs_questionAnswer_nav" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="xf_q_and_a_option_in_search" description="Add QuestionAnswers option in dropdown on search form" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:option value="">{{ phrase('everywhere') }}</xf:option>]]></find>
+    <replace><![CDATA[$0
+<xf:if is="$xf.options.fs_questionAnswerForum">
+<xf:set var="$questionForumIds" value="{{$xf.options.fs_questionAnswerForum}}" />
+<xf:set var="$qusetionAnswer">{"search_type":"questionAnswer","c":{"nodes":[{$questionForumIds}]}}</xf:set>
+<xf:option value="{$qusetionAnswer}">{{ phrase('fs_question_answers') }}</xf:option>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="forum_list" modification_key="fs_remove_qa_forum" description="Remove QuestionsAnswers forum form list" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="node_list_entry" arg-node="!" arg-extras="!" arg-children="!" arg-childExtras="!" arg-depth="1">.*?<\/xf:macro>/si]]></find>
+    <replace><![CDATA[<xf:macro name="node_list_entry" arg-node="!" arg-extras="!" arg-children="!" arg-childExtras="!" arg-depth="1">
+	<xf:if is="$node.node_id  != $xf.options.fs_questionAnswerForum">
+		<xf:css src="node_list.less" />
+		<xf:set var="$nodeTemplate" value="{{ $node.getNodeTemplateRenderer($depth) }}" />
+		<xf:if is="$nodeTemplate.macro">
+			<xf:macro template="{$nodeTemplate.template}" name="{$nodeTemplate.macro}"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" />
+		<xf:elseif is="{$nodeTemplate.template}" />
+			<xf:include template="{$nodeTemplate.template}" />
+		</xf:if>
+	</xf:if>
+</xf:macro>]]></replace>
+  </modification>
+  <modification type="public" template="forum_post_thread" modification_key="fs_replace_phrase" description="Replace Phrase 'Post Thread' with 'Submit your question' just on Question Forum" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:title>{{ phrase('post_thread') }}</xf:title>]]></find>
+    <replace><![CDATA[<xf:if is="{{$xf.reply.containerKey == 'node-'.$xf.options.fs_questionAnswerForum || $xf.app.request.getRoutePath() == 'esperto/'}}">
+	<xf:title>{{ phrase('fs_submit_your_question') }}</xf:title>
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="forum_view" modification_key="fs_replace_phrase_in_btn" description="Replace Phrase 'Post Thread' with 'Submit your question' ( in Button ) just on Question Forum" execution_order="7" enabled="1" action="str_replace">
+    <find><![CDATA[{{ phrase('post_thread') }}]]></find>
+    <replace><![CDATA[<xf:if is="{{$xf.reply.containerKey == 'node-'.$xf.options.fs_questionAnswerForum || $xf.app.request.getRoutePath() == 'esperto/'}}">
+	{{ phrase('fs_submit_your_question') }}
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="member_macros" modification_key="fs_add_QeA_count" description="Add the QeA count to member stats." execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:stat_pairs:below_trophies]-->]]></find>
+    <replace><![CDATA[$0
+	<dl class="pairs pairs--rows pairs--rows--centered menu-fauxLinkRow">
+		<dt>{{ phrase('fs_question_and_answer_count') }}</dt>
+		<dd>
+			{{$user.question_count|number + $user.answer_count|number}}
+		</dd>
+	</dl>]]></replace>
+  </modification>
+  <modification type="public" template="member_macros" modification_key="fs_find_all_QeA" description="Add two new options (find all questions and find all answers by x user) in find on user profile" execution_order="5" enabled="1" action="str_replace">
+    <find><![CDATA[	<!--[XF:find_menu:bottom]-->]]></find>
+    <replace><![CDATA[<xf:set var="$questionForumIds" value="{{$xf.options.fs_questionAnswerForum}}" />
+<a href="{{ link('search/member', null, {'user_id': $user.user_id, 'content': 'thread','thread_type': 'question', 'qa_nodes': [{$questionForumIds}]}) }}" rel="nofollow" class="menu-linkRow">{{ phrase('find_all_questions_by_x', {'name': $user.username}) }}</a>
+<a href="{{ link('search/member', null, {'user_id': $user.user_id, 'content': 'fs_answer'}) }}" rel="nofollow" class="menu-linkRow">{{ phrase('find_all_answers_by_x', {'name': $user.username}) }}</a>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="whats_new_wrapper" modification_key="fs_answer_tab" description="Add New Answers Tab" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:links:after_thread]-->]]></find>
+    <replace><![CDATA[$0
+<a class="{$baseClass} {{ $pageSelected == 'fs_answers' ? {$selectedClass} : '' }}" href="{{ link('whats-new/answers') }}" rel="nofollow">{{ phrase('fs_new_answers') }}</a>]]></replace>
+  </modification>
+  <modification type="public" template="whats_new_wrapper" modification_key="fs_question_tab" description="Add New Question Tab" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:links:after_thread]-->]]></find>
+    <replace><![CDATA[$0
+<a class="{$baseClass} {{ $pageSelected == 'fs_questions' ? {$selectedClass} : '' }}" href="{{ link('whats-new/questions') }}" rel="nofollow">{{ phrase('fs_new_questions') }}</a>]]></replace>
+  </modification>
+</template_modifications>

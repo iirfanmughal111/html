@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="option_template_fs_threadHash_run_rules_hours" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:selectrow 
+			  multiple="true" size="8"
+			  label="{$option.title}"
+			  hint="{$hintHtml}"
+			  explain="{$explainHtml}"
+			  html="{$listedHtml}"
+			  rowclass="{$rowClass}"
+			  name="{$inputName}"
+			  value="{$option.option_value}"
+			   style="width: 200px"
+			  >
+
+				<xf:option value="-1">{{ phrase('any') }}</xf:option>
+				<xf:option value="0">0 {{ phrase('(midnight)') }}</xf:option>
+				<xf:option value="1">1</xf:option>
+				<xf:option value="2">2</xf:option>
+				<xf:option value="3">3</xf:option>
+				<xf:option value="4">4</xf:option>
+				<xf:option value="5">5</xf:option>
+				<xf:option value="6">6</xf:option>
+				<xf:option value="7">7</xf:option>
+				<xf:option value="8">8</xf:option>
+				<xf:option value="9">9</xf:option>
+				<xf:option value="10">10</xf:option>
+				<xf:option value="11">11</xf:option>
+				<xf:option value="12">12 {{ phrase('(noon)') }}</xf:option>
+				<xf:option value="13">13</xf:option>
+				<xf:option value="14">14</xf:option>
+				<xf:option value="15">15</xf:option>
+				<xf:option value="16">16</xf:option>
+				<xf:option value="17">17</xf:option>
+				<xf:option value="18">18</xf:option>
+				<xf:option value="19">19</xf:option>
+				<xf:option value="20">20</xf:option>
+				<xf:option value="21">21</xf:option>
+				<xf:option value="22">22</xf:option>
+				<xf:option value="23">23</xf:option>
+
+				<xf:explain>{{ phrase('run_times_based_on_utc_time_zone') }}</xf:explain>
+			</xf:selectrow>]]></template>
+  <template type="admin" title="option_template_fs_threadHash_run_rules_mins" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:selectrow
+			  multiple="true" size="8"
+			  label="{$option.title}"
+			  hint="{$hintHtml}"
+			  explain="{$explainHtml}"
+			  html="{$listedHtml}"
+			  rowclass="{$rowClass}"
+			  name="{$inputName}"
+			  value="{$option.option_value}"
+			   style="width: 200px"
+			  >
+
+	<xf:option value="-1">{{ phrase('any') }}</xf:option>
+	<xf:option value="0">0</xf:option>
+	<xf:option value="1">1</xf:option>
+	<xf:option value="2">2</xf:option>
+	<xf:option value="3">3</xf:option>
+	<xf:option value="4">4</xf:option>
+	<xf:option value="5">5</xf:option>
+	<xf:option value="6">6</xf:option>
+	<xf:option value="7">7</xf:option>
+	<xf:option value="8">8</xf:option>
+	<xf:option value="9">9</xf:option>
+	<xf:option value="10">10</xf:option>
+	<xf:option value="11">11</xf:option>
+	<xf:option value="12">12</xf:option>
+	<xf:option value="13">13</xf:option>
+	<xf:option value="14">14</xf:option>
+	<xf:option value="15">15</xf:option>
+	<xf:option value="16">16</xf:option>
+	<xf:option value="17">17</xf:option>
+	<xf:option value="18">18</xf:option>
+	<xf:option value="19">19</xf:option>
+	<xf:option value="20">20</xf:option>
+	<xf:option value="21">21</xf:option>
+	<xf:option value="22">22</xf:option>
+	<xf:option value="23">23</xf:option>
+	<xf:option value="24">24</xf:option>
+	<xf:option value="25">25</xf:option>
+	<xf:option value="26">26</xf:option>
+	<xf:option value="27">27</xf:option>
+	<xf:option value="28">28</xf:option>
+	<xf:option value="29">29</xf:option>
+	<xf:option value="30">30</xf:option>
+	<xf:option value="31">31</xf:option>
+	<xf:option value="32">32</xf:option>
+	<xf:option value="33">33</xf:option>
+	<xf:option value="34">34</xf:option>
+	<xf:option value="35">35</xf:option>
+	<xf:option value="36">36</xf:option>
+	<xf:option value="37">37</xf:option>
+	<xf:option value="38">38</xf:option>
+	<xf:option value="39">39</xf:option>
+	<xf:option value="40">40</xf:option>
+	<xf:option value="41">41</xf:option>
+	<xf:option value="42">42</xf:option>
+	<xf:option value="43">43</xf:option>
+	<xf:option value="44">44</xf:option>
+	<xf:option value="45">45</xf:option>
+	<xf:option value="46">46</xf:option>
+	<xf:option value="47">47</xf:option>
+	<xf:option value="48">48</xf:option>
+	<xf:option value="49">49</xf:option>
+	<xf:option value="50">50</xf:option>
+	<xf:option value="51">51</xf:option>
+	<xf:option value="52">52</xf:option>
+	<xf:option value="53">53</xf:option>
+	<xf:option value="54">54</xf:option>
+	<xf:option value="55">55</xf:option>
+	<xf:option value="56">56</xf:option>
+	<xf:option value="57">57</xf:option>
+	<xf:option value="58">58</xf:option>
+	<xf:option value="59">59</xf:option>
+</xf:selectrow>]]></template>
+  <template type="admin" title="option_template_fs_threadHash_type_of_day" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:radiorow
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}"
+	rowclass="{$rowClass}"
+	listclass="listColumns"
+	name="{$inputName}[type]"
+	value="{$option.option_value.type}">
+
+	<xf:option value="dom" label="{{ phrase('day_of_month:') }}"  name="{$inputName}[type]" >
+		<xf:select name="{$inputName}[day_type]" 
+		    value="{$option.option_value.day_type}"
+			multiple="true" size="8"  style="width: 200px">
+			<xf:option value="-1">{{ phrase('any') }}</xf:option>
+			<xf:option value="1">1</xf:option>
+			<xf:option value="2">2</xf:option>
+			<xf:option value="3">3</xf:option>
+			<xf:option value="4">4</xf:option>
+			<xf:option value="5">5</xf:option>
+			<xf:option value="6">6</xf:option>
+			<xf:option value="7">7</xf:option>
+			<xf:option value="8">8</xf:option>
+			<xf:option value="9">9</xf:option>
+			<xf:option value="10">10</xf:option>
+			<xf:option value="11">11</xf:option>
+			<xf:option value="12">12</xf:option>
+			<xf:option value="13">13</xf:option>
+			<xf:option value="14">14</xf:option>
+			<xf:option value="15">15</xf:option>
+			<xf:option value="16">16</xf:option>
+			<xf:option value="17">17</xf:option>
+			<xf:option value="18">18</xf:option>
+			<xf:option value="19">19</xf:option>
+			<xf:option value="20">20</xf:option>
+			<xf:option value="21">21</xf:option>
+			<xf:option value="22">22</xf:option>
+			<xf:option value="23">23</xf:option>
+			<xf:option value="24">24</xf:option>
+			<xf:option value="25">25</xf:option>
+			<xf:option value="26">26</xf:option>
+			<xf:option value="27">27</xf:option>
+			<xf:option value="28">28</xf:option>
+			<xf:option value="29">29</xf:option>
+			<xf:option value="30">30</xf:option>
+			<xf:option value="31">31</xf:option>
+		</xf:select>
+	</xf:option>
+	<xf:option value="dow" label="{{ phrase('day_of_week:') }}"  name="{$inputName}[type]" >
+		<xf:select
+				value="{$option.option_value.day_type}"
+				name="{$inputName}[day_type]" 
+				multiple="true" size="8"  style="width: 200px">
+
+			<xf:option value="-1">{{ phrase('any') }}</xf:option>
+			<xf:option value="0">{{ phrase('day_sunday') }}</xf:option>
+			<xf:option value="1">{{ phrase('day_monday') }}</xf:option>
+			<xf:option value="2">{{ phrase('day_tuesday') }}</xf:option>
+			<xf:option value="3">{{ phrase('day_wednesday') }}</xf:option>
+			<xf:option value="4">{{ phrase('day_thursday') }}</xf:option>
+			<xf:option value="5">{{ phrase('day_friday') }}</xf:option>
+			<xf:option value="6">{{ phrase('day_saturday') }}</xf:option>
+		</xf:select>
+	</xf:option>
+</xf:radiorow>]]></template>
+</templates>

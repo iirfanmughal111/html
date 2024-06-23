@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="admin_navigation.siropuChat" version_id="1" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="admin_navigation.siropuChatBotMessages" version_id="1" version_string="2.0.0"><![CDATA[Bot messages]]></phrase>
+  <phrase title="admin_navigation.siropuChatBotResponses" version_id="1" version_string="2.0.0"><![CDATA[Bot responses]]></phrase>
+  <phrase title="admin_navigation.siropuChatCommands" version_id="200010" version_string="2.0.0"><![CDATA[Commands]]></phrase>
+  <phrase title="admin_navigation.siropuChatOptions" version_id="2000270" version_string="2.0.2"><![CDATA[Options]]></phrase>
+  <phrase title="admin_permission.siropuChat" version_id="2000370" version_string="2.0.3"><![CDATA[Manage Chat]]></phrase>
+  <phrase title="alert_opt_out.siropu_chat_conv_message_reaction" version_id="2010270" version_string="2.1.2"><![CDATA[Reacts to your chat conversation message]]></phrase>
+  <phrase title="alert_opt_out.siropu_chat_room_message_reaction" version_id="2010270" version_string="2.1.2"><![CDATA[Reacts to your chat room message]]></phrase>
+  <phrase title="cron_entry.siropuChatBotMessages" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Post bot messages]]></phrase>
+  <phrase title="cron_entry.siropuChatIgnoredMessages" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Delete ignored messages]]></phrase>
+  <phrase title="cron_entry.siropuChatInactiveRooms" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Delete inactive rooms]]></phrase>
+  <phrase title="cron_entry.siropuChatOlderMessages" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Delete older messages]]></phrase>
+  <phrase title="cron_entry.siropuChatRoomAutoPrune" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Room auto-prune]]></phrase>
+  <phrase title="cron_entry.siropuChatRoomUsers" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Update room user count]]></phrase>
+  <phrase title="cron_entry.siropuChatSanctions" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Delete expired sanctions]]></phrase>
+  <phrase title="nav.siropuChat" version_id="1" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="nav.siropuChatArchive" version_id="1" version_string="2.0.0"><![CDATA[Archive]]></phrase>
+  <phrase title="nav.siropuChatSanctions" version_id="200010" version_string="2.0.0"><![CDATA[Sanctions]]></phrase>
+  <phrase title="nav.siropuChatTopChatters" version_id="1" version_string="2.0.0"><![CDATA[Top chatters]]></phrase>
+  <phrase title="option.siropuChatActionJsonFileCache" version_id="2020870" version_string="2.2.8"><![CDATA[Use JSON file for message actions]]></phrase>
+  <phrase title="option.siropuChatActiveBotMessageCount" version_id="2020870" version_string="2.2.8"><![CDATA[Active bot message count]]></phrase>
+  <phrase title="option.siropuChatActiveBotResponseCount" version_id="2020870" version_string="2.2.8"><![CDATA[Active bot response count]]></phrase>
+  <phrase title="option.siropuChatActiveStatusTimeout" version_id="200010" version_string="2.0.0"><![CDATA[Active status timeout]]></phrase>
+  <phrase title="option.siropuChatActivityNotificationsBot" version_id="2000170" version_string="2.0.1"><![CDATA[Display activity notifications by the bot]]></phrase>
+  <phrase title="option.siropuChatAdsAboveEditor" version_id="1" version_string="2.0.0"><![CDATA[Ads above editor]]></phrase>
+  <phrase title="option.siropuChatAdsBelowEditor" version_id="1" version_string="2.0.0"><![CDATA[Ads below editor]]></phrase>
+  <phrase title="option.siropuChatAllowedPages" version_id="2012070" version_string="2.1.20"><![CDATA[Allowed pages]]></phrase>
+  <phrase title="option.siropuChatArchiveMessageTypes" version_id="2011270" version_string="2.1.12"><![CDATA[Archive message types]]></phrase>
+  <phrase title="option.siropuChatArchiveMessagesPerPage" version_id="200010" version_string="2.0.0"><![CDATA[Archive messages per page]]></phrase>
+  <phrase title="option.siropuChatAutoLoginUsers" version_id="200010" version_string="2.0.0"><![CDATA[Auto login users]]></phrase>
+  <phrase title="option.siropuChatAvatarInMessageList" version_id="1" version_string="2.0.0"><![CDATA[Display avatar in message list]]></phrase>
+  <phrase title="option.siropuChatAvatarInUserList" version_id="1" version_string="2.0.0"><![CDATA[Display avatar in user list]]></phrase>
+  <phrase title="option.siropuChatBotAvatar" version_id="2001170" version_string="2.0.11"><![CDATA[Bot avatar]]></phrase>
+  <phrase title="option.siropuChatBotName" version_id="200010" version_string="2.0.0"><![CDATA[Bot name]]></phrase>
+  <phrase title="option.siropuChatCompactMobileMode" version_id="2001370" version_string="2.0.13"><![CDATA[Compact mobile mode]]></phrase>
+  <phrase title="option.siropuChatComplyWithUserPrivacy" version_id="2001970" version_string="2.0.19"><![CDATA[Comply with user privacy settings]]></phrase>
+  <phrase title="option.siropuChatConvLoadMoreButton" version_id="2000870" version_string="2.0.8"><![CDATA[Enable "Load more messages" button for conversations]]></phrase>
+  <phrase title="option.siropuChatConvTabCount" version_id="2010170" version_string="2.1.1"><![CDATA[Conversations tab info]]></phrase>
+  <phrase title="option.siropuChatConversationMessageAlert" version_id="2000870" version_string="2.0.8"><![CDATA[Enable conversation message alert]]></phrase>
+  <phrase title="option.siropuChatCountConversationReactions" version_id="2020470" version_string="2.2.4"><![CDATA[Count private conversation reactions]]></phrase>
+  <phrase title="option.siropuChatCountRoomReactions" version_id="2020470" version_string="2.2.4"><![CDATA[Count room reactions]]></phrase>
+  <phrase title="option.siropuChatDefaultJoinedRooms" version_id="200010" version_string="2.0.0"><![CDATA[Default joined rooms]]></phrase>
+  <phrase title="option.siropuChatDefaultMiscSettings" version_id="1" version_string="2.0.0"><![CDATA[Default miscellaneous settings]]></phrase>
+  <phrase title="option.siropuChatDefaultNotificationSettings" version_id="1" version_string="2.0.0"><![CDATA[Default desktop notification settings]]></phrase>
+  <phrase title="option.siropuChatDefaultSoundSettings" version_id="1" version_string="2.0.0"><![CDATA[Default sound settings]]></phrase>
+  <phrase title="option.siropuChatDeleteMessagesOlderThan" version_id="200010" version_string="2.0.0"><![CDATA[Delete messages older than]]></phrase>
+  <phrase title="option.siropuChatDeleteUserConversationIfDeleted" version_id="2002570" version_string="2.0.25"><![CDATA[Delete private conversations if user account is deleted]]></phrase>
+  <phrase title="option.siropuChatDisableCustomEditorButtons" version_id="2000670" version_string="2.0.6"><![CDATA[Disable custom editor buttons]]></phrase>
+  <phrase title="option.siropuChatDisableSmilieButton" version_id="200010" version_string="2.0.0"><![CDATA[Disable editor smilie button]]></phrase>
+  <phrase title="option.siropuChatDisallowedCustomBbCodes" version_id="200010" version_string="2.0.0"><![CDATA[Disallowed custom BB codes]]></phrase>
+  <phrase title="option.siropuChatDisallowedPages" version_id="2011070" version_string="2.1.10"><![CDATA[Disallowed pages]]></phrase>
+  <phrase title="option.siropuChatDisplayMode" version_id="1" version_string="2.0.0"><![CDATA[Display mode]]></phrase>
+  <phrase title="option.siropuChatDynamicTitle" version_id="2000035" version_string="2.0.0 Beta 5"><![CDATA[Dynamic chat title]]></phrase>
+  <phrase title="option.siropuChatEditorSubmitButton" version_id="200010" version_string="2.0.0"><![CDATA[Enable editor submit button]]></phrase>
+  <phrase title="option.siropuChatEditorToggleBbcode" version_id="200010" version_string="2.0.0"><![CDATA[Enable editor BB code toggle button]]></phrase>
+  <phrase title="option.siropuChatEnableRightNavLinkMobile" version_id="2011170" version_string="2.1.11"><![CDATA[Enable chat link icon on right navigation for mobile users]]></phrase>
+  <phrase title="option.siropuChatEnableWhosTyping" version_id="2020070" version_string="2.2.0"><![CDATA[Enable who's typing]]></phrase>
+  <phrase title="option.siropuChatEnabled" version_id="1" version_string="2.0.0"><![CDATA[Enable chat]]></phrase>
+  <phrase title="option.siropuChatEnabledBBCodes" version_id="200010" version_string="2.0.0"><![CDATA[Enabled BB codes]]></phrase>
+  <phrase title="option.siropuChatFloodCheckLength" version_id="200010" version_string="2.0.0"><![CDATA[Minimum time between messages]]></phrase>
+  <phrase title="option.siropuChatForumActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[Bot name]]></phrase>
+  <phrase title="option.siropuChatForumActivityForums" version_id="200010" version_string="2.0.0"><![CDATA[Display notifications from selected forums only]]></phrase>
+  <phrase title="option.siropuChatForumActivityPosts" version_id="200010" version_string="2.0.0"><![CDATA[Enable new posts notifications]]></phrase>
+  <phrase title="option.siropuChatForumActivityPostsExcept" version_id="200010" version_string="2.0.0"><![CDATA[Display post excerpt]]></phrase>
+  <phrase title="option.siropuChatForumActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[Forum activity notification room]]></phrase>
+  <phrase title="option.siropuChatForumActivityThreads" version_id="200010" version_string="2.0.0"><![CDATA[Enable new threads notifications]]></phrase>
+  <phrase title="option.siropuChatForumActivityUsers" version_id="200010" version_string="2.0.0"><![CDATA[Enable new users notifications]]></phrase>
+  <phrase title="option.siropuChatGuestRoom" version_id="200010" version_string="2.0.0"><![CDATA[Guest room]]></phrase>
+  <phrase title="option.siropuChatHideMessageContentFromUserGroups" version_id="200010" version_string="2.0.0"><![CDATA[Hide message content from selected user groups]]></phrase>
+  <phrase title="option.siropuChatIdleStatusTimeout" version_id="200010" version_string="2.0.0"><![CDATA[Idle status timeout]]></phrase>
+  <phrase title="option.siropuChatKeepUsersLoggedIn" version_id="200010" version_string="2.0.0"><![CDATA[Keep users logged in]]></phrase>
+  <phrase title="option.siropuChatLoadRoomsIfNoneJoined" version_id="2002570" version_string="2.0.25"><![CDATA[Display room list if no rooms joined]]></phrase>
+  <phrase title="option.siropuChatLogoutUserOnSiteLogout" version_id="2010870" version_string="2.1.8"><![CDATA[Logout user from all joined rooms on site logout]]></phrase>
+  <phrase title="option.siropuChatMaxImageSize" version_id="2002370" version_string="2.0.23"><![CDATA[Maximum image upload file size]]></phrase>
+  <phrase title="option.siropuChatMaxMessageLength" version_id="1" version_string="2.0.0"><![CDATA[Maximum message length]]></phrase>
+  <phrase title="option.siropuChatMessageContentReplacementCharacter" version_id="200010" version_string="2.0.0"><![CDATA[Message content replacement character]]></phrase>
+  <phrase title="option.siropuChatMessageDisplayLimit" version_id="200010" version_string="2.0.0"><![CDATA[Message display limit]]></phrase>
+  <phrase title="option.siropuChatMultiLineMessages" version_id="200010" version_string="2.0.0"><![CDATA[Allow multi-line messages]]></phrase>
+  <phrase title="option.siropuChatNavIcon" version_id="200010" version_string="2.0.0"><![CDATA[Navigation tab icon]]></phrase>
+  <phrase title="option.siropuChatNavUserCount" version_id="200010" version_string="2.0.0"><![CDATA[Display user count in navigation tab]]></phrase>
+  <phrase title="option.siropuChatNavigationPopup" version_id="2000770" version_string="2.0.7"><![CDATA[Open chat navigation link in a popup]]></phrase>
+  <phrase title="option.siropuChatNotice" version_id="1" version_string="2.0.0"><![CDATA[Notice]]></phrase>
+  <phrase title="option.siropuChatNotificationTimeout" version_id="200010" version_string="2.0.0"><![CDATA[Desktop notification timeout]]></phrase>
+  <phrase title="option.siropuChatOpenInternalLinksInNewTab" version_id="2002770" version_string="2.0.27"><![CDATA[Open internal links in a new tab]]></phrase>
+  <phrase title="option.siropuChatPage" version_id="200010" version_string="2.0.0"><![CDATA[Enable page]]></phrase>
+  <phrase title="option.siropuChatPrimaryRoom" version_id="2001770" version_string="2.0.17"><![CDATA[Primary room]]></phrase>
+  <phrase title="option.siropuChatPrivateConversations" version_id="1" version_string="2.0.0"><![CDATA[Enable private conversations]]></phrase>
+  <phrase title="option.siropuChatReactions" version_id="2002770" version_string="2.0.27"><![CDATA[Enable reactions]]></phrase>
+  <phrase title="option.siropuChatRefreshIntervalActive" version_id="200010" version_string="2.0.0"><![CDATA[Refresh interval for active users (Visible)]]></phrase>
+  <phrase title="option.siropuChatRefreshIntervalActiveHidden" version_id="2000170" version_string="2.0.1"><![CDATA[Refresh interval for active users (Hidden)]]></phrase>
+  <phrase title="option.siropuChatRefreshIntervalInactive" version_id="200010" version_string="2.0.0"><![CDATA[Refresh interval for inactive users (Visible)]]></phrase>
+  <phrase title="option.siropuChatRefreshIntervalInactiveHidden" version_id="200010" version_string="2.0.0"><![CDATA[Refresh interval for inactive users (Hidden)]]></phrase>
+  <phrase title="option.siropuChatRoomJoinLimitAction" version_id="2002570" version_string="2.0.25"><![CDATA[If room join limit is reached]]></phrase>
+  <phrase title="option.siropuChatRoomLoadMoreButton" version_id="2000870" version_string="2.0.8"><![CDATA[Enable "Load more messages" button for rooms]]></phrase>
+  <phrase title="option.siropuChatRoomNotifications" version_id="200010" version_string="2.0.0"><![CDATA[Room notifications]]></phrase>
+  <phrase title="option.siropuChatRoomTabUserCount" version_id="2010170" version_string="2.1.1"><![CDATA[Display user count in room tabs]]></phrase>
+  <phrase title="option.siropuChatRooms" version_id="1" version_string="2.0.0"><![CDATA[Enable rooms]]></phrase>
+  <phrase title="option.siropuChatRoomsOrder" version_id="1" version_string="2.0.0"><![CDATA[Order rooms by]]></phrase>
+  <phrase title="option.siropuChatRoomsPerPage" version_id="2020770" version_string="2.2.7"><![CDATA[Rooms per page]]></phrase>
+  <phrase title="option.siropuChatRules" version_id="1" version_string="2.0.0"><![CDATA[Rules]]></phrase>
+  <phrase title="option.siropuChatStatus" version_id="1" version_string="2.0.0"><![CDATA[Enable user status]]></phrase>
+  <phrase title="option.siropuChatStatusMaxLength" version_id="1" version_string="2.0.0"><![CDATA[Maximum status length]]></phrase>
+  <phrase title="option.siropuChatStripPostBbCode" version_id="2011170" version_string="2.1.11"><![CDATA[Strip BB code from thread posts]]></phrase>
+  <phrase title="option.siropuChatTabNotification" version_id="200010" version_string="2.0.0"><![CDATA[Enable browser tab notifications]]></phrase>
+  <phrase title="option.siropuChatThreadMessageMinLength" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Thread message minimum length]]></phrase>
+  <phrase title="option.siropuChatTopChatters" version_id="200010" version_string="2.0.0"><![CDATA[Top chatters maximum users]]></phrase>
+  <phrase title="option.siropuChatUserMentionAlert" version_id="200010" version_string="2.0.0"><![CDATA[Enable user mention alert]]></phrase>
+  <phrase title="option.siropuChatUserSanctionAlert" version_id="2002670" version_string="2.0.26"><![CDATA[User sanction alert]]></phrase>
+  <phrase title="option.siropuChatUserTagging" version_id="2001370" version_string="2.0.13"><![CDATA[Quick user tagging]]></phrase>
+  <phrase title="option.siropuChatUsersOrder" version_id="200010" version_string="2.0.0"><![CDATA[Order users by]]></phrase>
+  <phrase title="option.siropuChatXFMGActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[Bot name]]></phrase>
+  <phrase title="option.siropuChatXFMGActivityComment" version_id="200010" version_string="2.0.0"><![CDATA[Enable new media comments notifications]]></phrase>
+  <phrase title="option.siropuChatXFMGActivityMediaAlbum" version_id="200010" version_string="2.0.0"><![CDATA[Enable new media albums notifications]]></phrase>
+  <phrase title="option.siropuChatXFMGActivityMediaItem" version_id="200010" version_string="2.0.0"><![CDATA[Enable new media items notifications]]></phrase>
+  <phrase title="option.siropuChatXFMGActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[XFMG activity notification room]]></phrase>
+  <phrase title="option.siropuChatXFRMActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[Bot name]]></phrase>
+  <phrase title="option.siropuChatXFRMActivityRating" version_id="2001170" version_string="2.0.11"><![CDATA[Enable new resource ratings notifications]]></phrase>
+  <phrase title="option.siropuChatXFRMActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[XFRM activity notification room]]></phrase>
+  <phrase title="option_explain.siropuChatActionJsonFileCache" version_id="2020870" version_string="2.2.8"><![CDATA[Actions like edit/delete/reaction for messages are stored by default in XF's simple cache to be used in "real-time" changes for chat participants. If you have issues with simple cache, you can enable the file based cache using a JSON file instead.]]></phrase>
+  <phrase title="option_explain.siropuChatActiveBotMessageCount" version_id="2020870" version_string="2.2.8"><![CDATA[This option is used for cache, do not edit manually.]]></phrase>
+  <phrase title="option_explain.siropuChatActiveBotResponseCount" version_id="2020870" version_string="2.2.8"><![CDATA[This option is used for cache, do not edit manually.]]></phrase>
+  <phrase title="option_explain.siropuChatActiveStatusTimeout" version_id="200010" version_string="2.0.0"><![CDATA[After the last post in a room, user will be considered active in that room for the specified time, before becoming idle.]]></phrase>
+  <phrase title="option_explain.siropuChatActivityNotificationsBot" version_id="2000170" version_string="2.0.1"><![CDATA[If enabled, activity notification messages will be displayed by the bot. Else, the rich username of the user who triggered the notification will be used instead.]]></phrase>
+  <phrase title="option_explain.siropuChatAdsAboveEditor" version_id="1" version_string="2.0.0"><![CDATA[Display an ad above the chat editor. If you add multiple ads, they will rotate randomly with each page load.]]></phrase>
+  <phrase title="option_explain.siropuChatAdsBelowEditor" version_id="1" version_string="2.0.0"><![CDATA[Display an ad below the chat editor. If you add multiple ads, they will rotate randomly with each page load.]]></phrase>
+  <phrase title="option_explain.siropuChatAllowedPages" version_id="2012070" version_string="2.1.20"><![CDATA[If you want to display the chat only on certain pages when on global positions such as "All pages", "Above/Below content" display mode, specify the URLs of those pages, each on a separate line. You can use the * wildcard if you want to include certain routes.]]></phrase>
+  <phrase title="option_explain.siropuChatArchiveMessageTypes" version_id="2011270" version_string="2.1.12"><![CDATA[This option allows you to display only certain message types in the archive.]]></phrase>
+  <phrase title="option_explain.siropuChatArchiveMessagesPerPage" version_id="200010" version_string="2.0.0"><![CDATA[The maximum number of messages to display per page.]]></phrase>
+  <phrase title="option_explain.siropuChatAutoLoginUsers" version_id="2010370" version_string="2.1.3"><![CDATA[If enabled, users will be automatically logged in the rooms they joined if they are inactive when the chat loads.]]></phrase>
+  <phrase title="option_explain.siropuChatAvatarInMessageList" version_id="1" version_string="2.0.0"><![CDATA[If enabled, user avatar will be displayed in message list before the username.]]></phrase>
+  <phrase title="option_explain.siropuChatAvatarInUserList" version_id="1" version_string="2.0.0"><![CDATA[If enabled, user avatar will be displayed in user list before the username.]]></phrase>
+  <phrase title="option_explain.siropuChatBotAvatar" version_id="2001170" version_string="2.0.11"><![CDATA[This option allows you to set a custom avatar for the bot. Add here the path to your avatar.]]></phrase>
+  <phrase title="option_explain.siropuChatBotName" version_id="200010" version_string="2.0.0"><![CDATA[The name of the bot that will be used to post system notifications in the chat. You can use HTML to style the name.]]></phrase>
+  <phrase title="option_explain.siropuChatCompactMobileMode" version_id="2001370" version_string="2.0.13"><![CDATA[If enabled, chat in mobile mode will be more compact.]]></phrase>
+  <phrase title="option_explain.siropuChatComplyWithUserPrivacy" version_id="2001970" version_string="2.0.19"><![CDATA[If checked, user online status privacy settings will apply to Chat as well.]]></phrase>
+  <phrase title="option_explain.siropuChatConvLoadMoreButton" version_id="2000870" version_string="2.0.8"><![CDATA[If enabled, a button to load older conversation messages will show up when scrolling to the end of the messages.]]></phrase>
+  <phrase title="option_explain.siropuChatConvTabCount" version_id="2010170" version_string="2.1.1"><![CDATA[]]></phrase>
+  <phrase title="option_explain.siropuChatConversationMessageAlert" version_id="2000870" version_string="2.0.8"><![CDATA[If enabled, users will receive alerts when there are unread messages in private conversations. Please note that this feature requires additional database queries and can impact performance.]]></phrase>
+  <phrase title="option_explain.siropuChatCountConversationReactions" version_id="2020470" version_string="2.2.4"><![CDATA[Enable this option if you want private conversation reactions to count to user's reactions score.]]></phrase>
+  <phrase title="option_explain.siropuChatCountRoomReactions" version_id="2020470" version_string="2.2.4"><![CDATA[Enable this option if you want room reactions to count to user's reactions score.]]></phrase>
+  <phrase title="option_explain.siropuChatDefaultJoinedRooms" version_id="200010" version_string="2.0.0"><![CDATA[Select the rooms joined by default for first time chat users.]]></phrase>
+  <phrase title="option_explain.siropuChatDefaultMiscSettings" version_id="1" version_string="2.0.0"><![CDATA[Default miscellaneous settings for first time chat users.]]></phrase>
+  <phrase title="option_explain.siropuChatDefaultNotificationSettings" version_id="1" version_string="2.0.0"><![CDATA[Default desktop notification settings for first time chat users.]]></phrase>
+  <phrase title="option_explain.siropuChatDefaultSoundSettings" version_id="1" version_string="2.0.0"><![CDATA[Default sound settings for first time chat users.]]></phrase>
+  <phrase title="option_explain.siropuChatDeleteMessagesOlderThan" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to automatically delete messages that are older than x days. Set to 0 to disable it.]]></phrase>
+  <phrase title="option_explain.siropuChatDeleteUserConversationIfDeleted" version_id="2002570" version_string="2.0.25"><![CDATA[This option allows you to delete all the user's private chat conversations upon account deletion.]]></phrase>
+  <phrase title="option_explain.siropuChatDisableCustomEditorButtons" version_id="2000670" version_string="2.0.6"><![CDATA[If there are custom editor buttons that do not use BB codes and want to disable them, specify each one separated by comma.]]></phrase>
+  <phrase title="option_explain.siropuChatDisableSmilieButton" version_id="200010" version_string="2.0.0"><![CDATA[If checked, this will remove the smilie button from the editor.]]></phrase>
+  <phrase title="option_explain.siropuChatDisallowedCustomBbCodes" version_id="2000032" version_string="2.0.0 Beta 2"><![CDATA[Select which custom BB codes you want to disable in the chat. Hold down CTRL key to select multiple options or to deselect certain options.]]></phrase>
+  <phrase title="option_explain.siropuChatDisallowedPages" version_id="2011970" version_string="2.1.19"><![CDATA[If you want to hide the chat on certain pages when on global positions such as "All pages", "Above/Below content" display mode, specify the URLs of those pages, each on a separate line. You can use the * wildcard if you want to exclude certain routes.]]></phrase>
+  <phrase title="option_explain.siropuChatDisplayMode" version_id="1" version_string="2.0.0"><![CDATA[Select how the chat will be displayed to users.]]></phrase>
+  <phrase title="option_explain.siropuChatDynamicTitle" version_id="2000035" version_string="2.0.0 Beta 5"><![CDATA[If enabled, chat title will change based on the current active tab.]]></phrase>
+  <phrase title="option_explain.siropuChatEditorSubmitButton" version_id="200010" version_string="2.0.0"><![CDATA[If checked, a submit button will be added in the editor text box.]]></phrase>
+  <phrase title="option_explain.siropuChatEditorToggleBbcode" version_id="200010" version_string="2.0.0"><![CDATA[If checked, this will enable the BB code toggle editor button.]]></phrase>
+  <phrase title="option_explain.siropuChatEnableRightNavLinkMobile" version_id="2011170" version_string="2.1.11"><![CDATA[This option allows you to add a link icon to the right navigation for mobile users, when Chat page is enabled.]]></phrase>
+  <phrase title="option_explain.siropuChatEnableWhosTyping" version_id="2020070" version_string="2.2.0"><![CDATA[Display who is typing in the chat.]]></phrase>
+  <phrase title="option_explain.siropuChatEnabled" version_id="1" version_string="2.0.0"><![CDATA[This option allows you to globally switch on/off the chat.]]></phrase>
+  <phrase title="option_explain.siropuChatEnabledBBCodes" version_id="200010" version_string="2.0.0"><![CDATA[Select which BB codes can be used in the chat.]]></phrase>
+  <phrase title="option_explain.siropuChatFloodCheckLength" version_id="200010" version_string="2.0.0"><![CDATA[Users will have to wait this many seconds between posting messages. Users with the permission "Can bypass flood check" will be exempt from this option.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[(Optional) Set the name of the bot that will display the notifications. You can use HTML to style the name.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityForums" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to display notifications from certain forums only.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityPosts" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new posts will be posted in the forum activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityPostsExcept" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, an excerpt will be posted below the post notification. The second value represents the excerpt length. Set to 0 to display the full post.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[If a room is selected, forum activity notifications will be posted in that room.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityThreads" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new threads will be posted in the forum activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatForumActivityUsers" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new users will be posted in the forum activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatGuestRoom" version_id="200010" version_string="2.0.0"><![CDATA[If you set a guest room, guests will be able to post in this room without having to register.]]></phrase>
+  <phrase title="option_explain.siropuChatHideMessageContentFromUserGroups" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to hide the message content from certain user groups.]]></phrase>
+  <phrase title="option_explain.siropuChatIdleStatusTimeout" version_id="200010" version_string="2.0.0"><![CDATA[After the active status, user will be considered idle for the set time, before being removed from the chatters list.]]></phrase>
+  <phrase title="option_explain.siropuChatKeepUsersLoggedIn" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, users will be kept logged in in the rooms they joined if they stop posting but still viewing the chat.]]></phrase>
+  <phrase title="option_explain.siropuChatLoadRoomsIfNoneJoined" version_id="2002570" version_string="2.0.25"><![CDATA[This option allows you to display the room list by default if the user hasn't joined any rooms. Else, the user will see a message.]]></phrase>
+  <phrase title="option_explain.siropuChatLogoutUserOnSiteLogout" version_id="2010870" version_string="2.1.8"><![CDATA[This option allows you to logout the user from all the joined rooms when the user logs out from the site.]]></phrase>
+  <phrase title="option_explain.siropuChatMaxImageSize" version_id="2002370" version_string="2.0.23"><![CDATA[Set the maximum upload image size in kilobytes (KB).]]></phrase>
+  <phrase title="option_explain.siropuChatMaxMessageLength" version_id="1" version_string="2.0.0"><![CDATA[The maximum number of characters that can be in a message. This includes BB code. Use 0 to disable the limit.]]></phrase>
+  <phrase title="option_explain.siropuChatMessageContentReplacementCharacter" version_id="200010" version_string="2.0.0"><![CDATA[Replace message content characters with anything you want.]]></phrase>
+  <phrase title="option_explain.siropuChatMessageDisplayLimit" version_id="200010" version_string="2.0.0"><![CDATA[Set the number of messages to display in the chat when the chat loads.]]></phrase>
+  <phrase title="option_explain.siropuChatMultiLineMessages" version_id="200010" version_string="2.0.0"><![CDATA[If checked, users can add multi-line messages using the Shift + Enter key.]]></phrase>
+  <phrase title="option_explain.siropuChatNavIcon" version_id="200010" version_string="2.0.0"><![CDATA[Set a Font Awesome icon for the chat navigation tab.]]></phrase>
+  <phrase title="option_explain.siropuChatNavUserCount" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to display in the chat navigation tab the number of users.]]></phrase>
+  <phrase title="option_explain.siropuChatNavigationPopup" version_id="2000770" version_string="2.0.7"><![CDATA[If enabled, the chat navigation link will be opened in a popup.]]></phrase>
+  <phrase title="option_explain.siropuChatNotice" version_id="1" version_string="2.0.0"><![CDATA[Display a notice above the chat messages. If you add multiple notices, they will rotate randomly.]]></phrase>
+  <phrase title="option_explain.siropuChatNotificationTimeout" version_id="200010" version_string="2.0.0"><![CDATA[Notification will hide automatically after the set time.]]></phrase>
+  <phrase title="option_explain.siropuChatOpenInternalLinksInNewTab" version_id="2002770" version_string="2.0.27"><![CDATA[This option allows you to open internal links in a new tab instead of in the same window.]]></phrase>
+  <phrase title="option_explain.siropuChatPage" version_id="1" version_string="2.0.0"><![CDATA[If enabled, users can chat in a dedicated page.]]></phrase>
+  <phrase title="option_explain.siropuChatPrimaryRoom" version_id="2001770" version_string="2.0.17"><![CDATA[If you have selected more than one default joined room, this option allows you to set the primary room.]]></phrase>
+  <phrase title="option_explain.siropuChatPrivateConversations" version_id="1" version_string="2.0.0"><![CDATA[If enabled, users can chat in private.]]></phrase>
+  <phrase title="option_explain.siropuChatReactions" version_id="2002770" version_string="2.0.27"><![CDATA[This option allows you to use XF's native reactions system instead of the simple chat like system.]]></phrase>
+  <phrase title="option_explain.siropuChatRefreshIntervalActive" version_id="200010" version_string="2.0.0"><![CDATA[The number of seconds between chat refreshes for active users when chat is visible.]]></phrase>
+  <phrase title="option_explain.siropuChatRefreshIntervalActiveHidden" version_id="200010" version_string="2.0.0"><![CDATA[The number of seconds between chat refreshes for active users when chat is hidden.]]></phrase>
+  <phrase title="option_explain.siropuChatRefreshIntervalInactive" version_id="200010" version_string="2.0.0"><![CDATA[The number of seconds between chat refreshes for inactive users when chat is visible.]]></phrase>
+  <phrase title="option_explain.siropuChatRefreshIntervalInactiveHidden" version_id="200010" version_string="2.0.0"><![CDATA[The number of seconds between chat refreshes for inactive users when chat is hidden.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomJoinLimitAction" version_id="2002570" version_string="2.0.25"><![CDATA[Choose what to do if the user has reached the maximum number of rooms allowed to be joined at the same time.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomLoadMoreButton" version_id="2000870" version_string="2.0.8"><![CDATA[If enabled, a button to load older room messages will show up when scrolling to the end of the messages.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomNotifications" version_id="200010" version_string="2.0.0"><![CDATA[Notifications that will be posted in the chat by the bot.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomTabUserCount" version_id="2010170" version_string="2.1.1"><![CDATA[This option allows you to display the number of users after the room name in the room tabs.]]></phrase>
+  <phrase title="option_explain.siropuChatRooms" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, users can chat in rooms.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomsOrder" version_id="200010" version_string="2.0.0"><![CDATA[Set the ordering for room list.]]></phrase>
+  <phrase title="option_explain.siropuChatRoomsPerPage" version_id="2020770" version_string="2.2.7"><![CDATA[The maximum number of rooms to display under "Browse rooms" tab.]]></phrase>
+  <phrase title="option_explain.siropuChatRules" version_id="200010" version_string="2.0.0"><![CDATA[Display a set of rules and guidelines for chat users.]]></phrase>
+  <phrase title="option_explain.siropuChatStatus" version_id="1" version_string="2.0.0"><![CDATA[If enabled, users can set a status that will be displayed under their username in chatters list.]]></phrase>
+  <phrase title="option_explain.siropuChatStatusMaxLength" version_id="1" version_string="2.0.0"><![CDATA[The maximum length a status can have.]]></phrase>
+  <phrase title="option_explain.siropuChatStripPostBbCode" version_id="2011170" version_string="2.1.11"><![CDATA[This option allows you to remove any text formatting from the thread posts before being posted in the Chat (when "Enable thread reply" room setting is enabled).]]></phrase>
+  <phrase title="option_explain.siropuChatTabNotification" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, new messages will display a notification in the browser tab of the chat page if the tab is inactive.]]></phrase>
+  <phrase title="option_explain.siropuChatThreadMessageMinLength" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[If you have set a thread ID for a chat room, this option allows you to set the minimum length required for a chat message in order to be posted in the thread. Set to 0 to post any message.]]></phrase>
+  <phrase title="option_explain.siropuChatTopChatters" version_id="200010" version_string="2.0.0"><![CDATA[The maximum number of users to display in the top.]]></phrase>
+  <phrase title="option_explain.siropuChatUserMentionAlert" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, users can receive alert notifications when they are mentioned in room messages. Users will have to opt in via their chat settings in order to receive alert notifications.]]></phrase>
+  <phrase title="option_explain.siropuChatUserSanctionAlert" version_id="2002670" version_string="2.0.26"><![CDATA[This option allows you to alert users when they get sanctioned.]]></phrase>
+  <phrase title="option_explain.siropuChatUserTagging" version_id="2001370" version_string="2.0.13"><![CDATA[This option allows you to tag users more easily in chat messages.]]></phrase>
+  <phrase title="option_explain.siropuChatUsersOrder" version_id="200010" version_string="2.0.0"><![CDATA[Set the ordering for user list.]]></phrase>
+  <phrase title="option_explain.siropuChatXFMGActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[(Optional) Set the name of the bot that will display the notifications. You can use HTML to style the name.]]></phrase>
+  <phrase title="option_explain.siropuChatXFMGActivityComment" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new media comments will be posted in the XFMG activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatXFMGActivityMediaAlbum" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new media albums will be posted in the XFMG activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatXFMGActivityMediaItem" version_id="200010" version_string="2.0.0"><![CDATA[If enabled, notifications of new media items will be posted in the XFMG activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatXFMGActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[If a room is selected, XenForo Media Gallery activity notifications will be posted in that room.]]></phrase>
+  <phrase title="option_explain.siropuChatXFRMActivityBotName" version_id="200010" version_string="2.0.0"><![CDATA[(Optional) Set the name of the bot that will display the notifications. You can use HTML to style the name.]]></phrase>
+  <phrase title="option_explain.siropuChatXFRMActivityRating" version_id="2001170" version_string="2.0.11"><![CDATA[If enabled, notifications of new resource ratings will be posted in the XFRM activity notification room.]]></phrase>
+  <phrase title="option_explain.siropuChatXFRMActivityRoom" version_id="200010" version_string="2.0.0"><![CDATA[If a room is selected, XenForo Resource Manager activity notifications will be posted in that room.]]></phrase>
+  <phrase title="option_group.siropuChat" version_id="1" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="option_group_description.siropuChat" version_id="1" version_string="2.0.0"><![CDATA[Options for Chat by Siropu.]]></phrase>
+  <phrase title="permission.siropuChatAdmin_editAds" version_id="1" version_string="2.0.0"><![CDATA[Edit ads]]></phrase>
+  <phrase title="permission.siropuChatAdmin_editNotice" version_id="1" version_string="2.0.0"><![CDATA[Edit notice]]></phrase>
+  <phrase title="permission.siropuChatAdmin_editRoomSettings" version_id="2011270" version_string="2.1.12"><![CDATA[Edit room settings]]></phrase>
+  <phrase title="permission.siropuChatAdmin_editRules" version_id="1" version_string="2.0.0"><![CDATA[Edit rules]]></phrase>
+  <phrase title="permission.siropuChatAdmin_postAnnouncements" version_id="2002570" version_string="2.0.25"><![CDATA[Post announcements]]></phrase>
+  <phrase title="permission.siropuChatAdmin_resetUserData" version_id="2001370" version_string="2.0.13"><![CDATA[Reset user data]]></phrase>
+  <phrase title="permission.siropuChatModerator_changeAuthor" version_id="2010970" version_string="2.1.9"><![CDATA[Can change author]]></phrase>
+  <phrase title="permission.siropuChatModerator_deleteAnyMessage" version_id="200010" version_string="2.0.0"><![CDATA[Delete any message]]></phrase>
+  <phrase title="permission.siropuChatModerator_deleteAnyRoom" version_id="200010" version_string="2.0.0"><![CDATA[Delete any room]]></phrase>
+  <phrase title="permission.siropuChatModerator_editAnyMessage" version_id="200010" version_string="2.0.0"><![CDATA[Edit any message]]></phrase>
+  <phrase title="permission.siropuChatModerator_editAnyRoom" version_id="200010" version_string="2.0.0"><![CDATA[Edit any room]]></phrase>
+  <phrase title="permission.siropuChatModerator_joinAnyRoom" version_id="200010" version_string="2.0.0"><![CDATA[Join any room]]></phrase>
+  <phrase title="permission.siropuChatModerator_prune" version_id="200010" version_string="2.0.0"><![CDATA[Prune messages]]></phrase>
+  <phrase title="permission.siropuChatModerator_sanction" version_id="200010" version_string="2.0.0"><![CDATA[Sanction users]]></phrase>
+  <phrase title="permission.siropuChatModerator_viewHiddenUsers" version_id="2002670" version_string="2.0.26"><![CDATA[View hidden users]]></phrase>
+  <phrase title="permission.siropuChatModerator_viewWhispers" version_id="2001470" version_string="2.0.14"><![CDATA[View whispers]]></phrase>
+  <phrase title="permission.siropuChat_browseRooms" version_id="2010470" version_string="2.1.4"><![CDATA[Browse rooms]]></phrase>
+  <phrase title="permission.siropuChat_bypassFloodCheck" version_id="200010" version_string="2.0.0"><![CDATA[Bypass flood check]]></phrase>
+  <phrase title="permission.siropuChat_bypassRoomPassword" version_id="200010" version_string="2.0.0"><![CDATA[Bypass room password]]></phrase>
+  <phrase title="permission.siropuChat_changeDisplayMode" version_id="200010" version_string="2.0.0"><![CDATA[Change display mode]]></phrase>
+  <phrase title="permission.siropuChat_changeSettings" version_id="2000370" version_string="2.0.3"><![CDATA[Change settings]]></phrase>
+  <phrase title="permission.siropuChat_chatInPrivate" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Can chat in private]]></phrase>
+  <phrase title="permission.siropuChat_createRooms" version_id="200010" version_string="2.0.0"><![CDATA[Create rooms]]></phrase>
+  <phrase title="permission.siropuChat_createThreadRoom" version_id="2002770" version_string="2.0.27"><![CDATA[Create room when starting a thread]]></phrase>
+  <phrase title="permission.siropuChat_deleteOwnMessages" version_id="200010" version_string="2.0.0"><![CDATA[Delete own messages]]></phrase>
+  <phrase title="permission.siropuChat_editOwnMessages" version_id="200010" version_string="2.0.0"><![CDATA[Edit own messages]]></phrase>
+  <phrase title="permission.siropuChat_editOwnMessagesTimeLimit" version_id="200010" version_string="2.0.0"><![CDATA[Time limit on editing/deleting own messages (minutes)]]></phrase>
+  <phrase title="permission.siropuChat_joinRooms" version_id="200010" version_string="2.0.0"><![CDATA[Join rooms]]></phrase>
+  <phrase title="permission.siropuChat_likeMessages" version_id="200010" version_string="2.0.0"><![CDATA[Like messages]]></phrase>
+  <phrase title="permission.siropuChat_passwordProtectRooms" version_id="200010" version_string="2.0.0"><![CDATA[Password protect rooms]]></phrase>
+  <phrase title="permission.siropuChat_reportMessages" version_id="200010" version_string="2.0.0"><![CDATA[Report messages]]></phrase>
+  <phrase title="permission.siropuChat_roomAuthorSanction" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Room author can mute and kick users]]></phrase>
+  <phrase title="permission.siropuChat_searchArchive" version_id="1" version_string="2.0.0"><![CDATA[Search archive]]></phrase>
+  <phrase title="permission.siropuChat_setColor" version_id="200010" version_string="2.0.0"><![CDATA[Set message color]]></phrase>
+  <phrase title="permission.siropuChat_setRoomUsers" version_id="2002770" version_string="2.0.27"><![CDATA[Set room users]]></phrase>
+  <phrase title="permission.siropuChat_setStatus" version_id="200010" version_string="2.0.0"><![CDATA[Set status]]></phrase>
+  <phrase title="permission.siropuChat_silentJoinLeaveRooms" version_id="2011170" version_string="2.1.11"><![CDATA[Silent join/leave rooms]]></phrase>
+  <phrase title="permission.siropuChat_uploadImages" version_id="200010" version_string="2.0.0"><![CDATA[Upload images]]></phrase>
+  <phrase title="permission.siropuChat_useChat" version_id="1" version_string="2.0.0"><![CDATA[Use chat]]></phrase>
+  <phrase title="permission.siropuChat_viewAds" version_id="200010" version_string="2.0.0"><![CDATA[View ads]]></phrase>
+  <phrase title="permission.siropuChat_viewArchive" version_id="1" version_string="2.0.0"><![CDATA[View archive]]></phrase>
+  <phrase title="permission.siropuChat_viewChat" version_id="1" version_string="2.0.0"><![CDATA[View chat]]></phrase>
+  <phrase title="permission.siropuChat_viewEditHistory" version_id="200010" version_string="2.0.0"><![CDATA[View message edit history]]></phrase>
+  <phrase title="permission.siropuChat_viewPrivateRooms" version_id="2000970" version_string="2.0.9"><![CDATA[View private rooms]]></phrase>
+  <phrase title="permission.siropuChat_viewRoomArchiveUponJoin" version_id="2002770" version_string="2.0.27"><![CDATA[View current room messages after joining it]]></phrase>
+  <phrase title="permission.siropuChat_viewSanctioned" version_id="200010" version_string="2.0.0"><![CDATA[View sanctioned users]]></phrase>
+  <phrase title="permission.siropuChat_viewTopChatters" version_id="200010" version_string="2.0.0"><![CDATA[View top chatters]]></phrase>
+  <phrase title="permission.siropuChat_whisper" version_id="200010" version_string="2.0.0"><![CDATA[Can whisper]]></phrase>
+  <phrase title="permission_interface.siropuChatAdmin" version_id="1" version_string="2.0.0"><![CDATA[Chat admin permissions]]></phrase>
+  <phrase title="permission_interface.siropuChatModerator" version_id="1" version_string="2.0.0"><![CDATA[Chat moderator permissions]]></phrase>
+  <phrase title="permission_interface.siropuChatUser" version_id="1" version_string="2.0.0"><![CDATA[Chat user permissions]]></phrase>
+  <phrase title="siropu_ads_manager_bot_message_info_block" version_id="2000051" version_string="2.0.0 RC 1"><![CDATA[Please make sure that <a href="{url}" target="_blank">guests' time zone</a> corresponds to your time zone.]]></phrase>
+  <phrase title="siropu_chat" version_id="200010" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="siropu_chat_add_bot_message" version_id="200010" version_string="2.0.0"><![CDATA[Add bot message]]></phrase>
+  <phrase title="siropu_chat_add_bot_response" version_id="200010" version_string="2.0.0"><![CDATA[Add bot response]]></phrase>
+  <phrase title="siropu_chat_add_command" version_id="200010" version_string="2.0.0"><![CDATA[Add command]]></phrase>
+  <phrase title="siropu_chat_admin_options" version_id="200010" version_string="2.0.0"><![CDATA[Admin options]]></phrase>
+  <phrase title="siropu_chat_admin_welcome" version_id="2000170" version_string="2.0.1"><![CDATA[Welcome to Chat by Siropu!]]></phrase>
+  <phrase title="siropu_chat_ads_above_editor" version_id="1" version_string="2.0.0"><![CDATA[Ads Above Editor]]></phrase>
+  <phrase title="siropu_chat_ads_below_editor" version_id="1" version_string="2.0.0"><![CDATA[Ads Below Editor]]></phrase>
+  <phrase title="siropu_chat_ads_saved" version_id="1" version_string="2.0.0"><![CDATA[Chat ads have been saved.]]></phrase>
+  <phrase title="siropu_chat_all_messages_have_been_loaded" version_id="200010" version_string="2.0.0"><![CDATA[All messages have been loaded.]]></phrase>
+  <phrase title="siropu_chat_all_rooms" version_id="200010" version_string="2.0.0"><![CDATA[All rooms]]></phrase>
+  <phrase title="siropu_chat_all_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[All sanctions]]></phrase>
+  <phrase title="siropu_chat_all_time" version_id="200010" version_string="2.0.0"><![CDATA[All time]]></phrase>
+  <phrase title="siropu_chat_announcement_has_been_posted" version_id="2002570" version_string="2.0.25"><![CDATA[The announcement has been successfully posted.]]></phrase>
+  <phrase title="siropu_chat_any_page" version_id="200010" version_string="2.0.0"><![CDATA[Any page]]></phrase>
+  <phrase title="siropu_chat_any_room" version_id="200010" version_string="2.0.0"><![CDATA[Any room]]></phrase>
+  <phrase title="siropu_chat_apply_sanction" version_id="200010" version_string="2.0.0"><![CDATA[Apply sanction]]></phrase>
+  <phrase title="siropu_chat_apply_sanction_for" version_id="200010" version_string="2.0.0"><![CDATA[Apply sanction for]]></phrase>
+  <phrase title="siropu_chat_archive" version_id="200010" version_string="2.0.0"><![CDATA[Archive]]></phrase>
+  <phrase title="siropu_chat_are_you_sure_you_want_to_logout" version_id="200010" version_string="2.0.0"><![CDATA[Are you sure you want to logout from the chat? This action will log you out from all joined rooms.]]></phrase>
+  <phrase title="siropu_chat_attachment" version_id="1" version_string="2.0.0"><![CDATA[Chat attachment]]></phrase>
+  <phrase title="siropu_chat_attachments" version_id="1" version_string="2.0.0"><![CDATA[Chat attachments]]></phrase>
+  <phrase title="siropu_chat_ban" version_id="200010" version_string="2.0.0"><![CDATA[Ban]]></phrase>
+  <phrase title="siropu_chat_ban_ip" version_id="200010" version_string="2.0.0"><![CDATA[Ban IP]]></phrase>
+  <phrase title="siropu_chat_ban_length" version_id="200010" version_string="2.0.0"><![CDATA[Ban length]]></phrase>
+  <phrase title="siropu_chat_ban_reason" version_id="200010" version_string="2.0.0"><![CDATA[Ban reason]]></phrase>
+  <phrase title="siropu_chat_ban_type" version_id="200010" version_string="2.0.0"><![CDATA[Ban type]]></phrase>
+  <phrase title="siropu_chat_ban_type_chat" version_id="200010" version_string="2.0.0"><![CDATA[Chat ban]]></phrase>
+  <phrase title="siropu_chat_ban_type_room" version_id="200010" version_string="2.0.0"><![CDATA[Room ban]]></phrase>
+  <phrase title="siropu_chat_ban_user" version_id="200010" version_string="2.0.0"><![CDATA[Ban user]]></phrase>
+  <phrase title="siropu_chat_banned" version_id="200010" version_string="2.0.0"><![CDATA[Banned]]></phrase>
+  <phrase title="siropu_chat_bar_title" version_id="1" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="siropu_chat_bot_hidden_error" version_id="2000035" version_string="2.0.0"><![CDATA[You must enable bot messages in your chat user settings.]]></phrase>
+  <phrase title="siropu_chat_bot_messages" version_id="200010" version_string="2.0.0"><![CDATA[Bot messages]]></phrase>
+  <phrase title="siropu_chat_bot_name" version_id="200010" version_string="2.0.0"><![CDATA[Bot name]]></phrase>
+  <phrase title="siropu_chat_bot_name_explain" version_id="200010" version_string="2.0.0"><![CDATA[The name of the bot that will return the response.]]></phrase>
+  <phrase title="siropu_chat_bot_response_exact_match" version_id="200010" version_string="2.0.0"><![CDATA[Exact keyword match]]></phrase>
+  <phrase title="siropu_chat_bot_response_explain" version_id="200010" version_string="2.0.0"><![CDATA[The response that will be returned. You can add multiple responses by placing each one on a new line.]]></phrase>
+  <phrase title="siropu_chat_bot_response_interval" version_id="200010" version_string="2.0.0"><![CDATA[Minimum interval between responses]]></phrase>
+  <phrase title="siropu_chat_bot_response_interval_explain" version_id="200010" version_string="2.0.0"><![CDATA[The minimum interval in minutes between responses.]]></phrase>
+  <phrase title="siropu_chat_bot_response_keyword" version_id="200010" version_string="2.0.0"><![CDATA[Response keyword]]></phrase>
+  <phrase title="siropu_chat_bot_response_keyword_explain" version_id="200010" version_string="2.0.0"><![CDATA[The keyword that will trigger the response. You can add multiple keywords by placing each one on a new line.]]></phrase>
+  <phrase title="siropu_chat_bot_response_mention_user" version_id="200010" version_string="2.0.0"><![CDATA[Mention user]]></phrase>
+  <phrase title="siropu_chat_bot_responses" version_id="200010" version_string="2.0.0"><![CDATA[Bot responses]]></phrase>
+  <phrase title="siropu_chat_browse_rooms" version_id="1" version_string="2.0.0"><![CDATA[Browse rooms]]></phrase>
+  <phrase title="siropu_chat_can_leave_room" version_id="2001970" version_string="2.0.19"><![CDATA[Can leave room]]></phrase>
+  <phrase title="siropu_chat_can_leave_room_explain" version_id="2001970" version_string="2.0.19"><![CDATA[This option allows you to control if the user can leave or not the room once joined.]]></phrase>
+  <phrase title="siropu_chat_cannot_hug_yourself" version_id="2012270" version_string="2.1.22"><![CDATA[You cannot hug yourself!]]></phrase>
+  <phrase title="siropu_chat_cannot_invite_yourself" version_id="200010" version_string="2.0.0"><![CDATA[You cannot invite yourself.]]></phrase>
+  <phrase title="siropu_chat_cannot_leave_room" version_id="2001970" version_string="2.0.19"><![CDATA[You cannot leave this room.]]></phrase>
+  <phrase title="siropu_chat_cannot_slap_yourself" version_id="2012270" version_string="2.1.22"><![CDATA[You cannot slap yourself!]]></phrase>
+  <phrase title="siropu_chat_cannot_start_conversation_with_user_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[You cannot start a private conversation with {user}.]]></phrase>
+  <phrase title="siropu_chat_cannot_submit_empty_message" version_id="1" version_string="2.0.0" global_cache="1"><![CDATA[Cannot submit an empty message.]]></phrase>
+  <phrase title="siropu_chat_cannot_whisper_to_self" version_id="2000070" version_string="2.0.0"><![CDATA[You cannot whisper to yourself.]]></phrase>
+  <phrase title="siropu_chat_chat_page" version_id="200010" version_string="2.0.0"><![CDATA[Chat page]]></phrase>
+  <phrase title="siropu_chat_clear_input" version_id="1" version_string="2.0.0"><![CDATA[Clear input]]></phrase>
+  <phrase title="siropu_chat_code_copied_to_clipboard" version_id="2012170" version_string="2.1.21"><![CDATA[Code copied to clipboard.]]></phrase>
+  <phrase title="siropu_chat_command_ban_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, length (hours|days|weeks|months|years|permanent) and a reason (optional), to ban a user from the current room.]]></phrase>
+  <phrase title="siropu_chat_command_cannot_be_used_in_private_conversations" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[This command cannot be used in private conversations.]]></phrase>
+  <phrase title="siropu_chat_command_description" version_id="200010" version_string="2.0.0"><![CDATA[Command description]]></phrase>
+  <phrase title="siropu_chat_command_description_explain" version_id="200010" version_string="2.0.0"><![CDATA[Information on how to use the command. This can be simple text, HTML or a phrase - <b>phrase:my_phrase_title</b>]]></phrase>
+  <phrase title="siropu_chat_command_export_explain" version_id="2012070" version_string="2.1.20"><![CDATA[Use this command followed by a thread ID a user ID for post author and a per post limit to export messages from the current room to a thread. ]]></phrase>
+  <phrase title="siropu_chat_command_find_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by some keywords to find messages in the current room or in the current private conversation. To go back to the current messages, use the command with no keywords.]]></phrase>
+  <phrase title="siropu_chat_command_gif_explain" version_id="2020570" version_string="2.2.5"><![CDATA[Use this command followed by a keyword (optional) to post a random animated GIF image from giphy.com or tenor.com]]></phrase>
+  <phrase title="siropu_chat_command_giphy_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by a keyword (optional) to post a random animated GIF image from giphy.com]]></phrase>
+  <phrase title="siropu_chat_command_help_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command to display help.]]></phrase>
+  <phrase title="siropu_chat_command_hug_explain" version_id="2012270" version_string="2.1.22"><![CDATA[Use this command followed by the username of the user you want to hug.]]></phrase>
+  <phrase title="siropu_chat_command_idle_explain" version_id="2001570" version_string="2.0.15"><![CDATA[Use this command to change your activity status to idle in the current room.]]></phrase>
+  <phrase title="siropu_chat_command_invite_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of the user you want to invite to join the current room.]]></phrase>
+  <phrase title="siropu_chat_command_is_enabled" version_id="200010" version_string="2.0.0"><![CDATA[Command is enabled]]></phrase>
+  <phrase title="siropu_chat_command_join_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the name of the room, to join it.]]></phrase>
+  <phrase title="siropu_chat_command_kick_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, length (hours|days|weeks|months|years|permanent) and a reason (optional), to kick a user from the current room. If no length is provided, the kick will last 1 hour.]]></phrase>
+  <phrase title="siropu_chat_command_leave_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by a message (optional) to leave the current room.]]></phrase>
+  <phrase title="siropu_chat_command_logout_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by a message (optional) to leave all joined rooms.]]></phrase>
+  <phrase title="siropu_chat_command_me_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by a short message, to display that message in third person.]]></phrase>
+  <phrase title="siropu_chat_command_msg_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user and a message separated by comma to start a private conversation with someone.
+]]></phrase>
+  <phrase title="siropu_chat_command_mute_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, length (hours|days|weeks|months|years|permanent) and a reason (optional), to mute a user in the current room. If no length is provided, the mute will last 1 hour.]]></phrase>
+  <phrase title="siropu_chat_command_my_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command to display your custom created user commands. To create or update a custom command, type the command name with double slashes followed by your desired message. To delete a custom command, type the command name with double slashes followed by the keyword <b>delete</b>. To use a custom command, simply type the command name with double slashes.]]></phrase>
+  <phrase title="siropu_chat_command_name" version_id="200010" version_string="2.0.0"><![CDATA[Command name]]></phrase>
+  <phrase title="siropu_chat_command_name_explain" version_id="200010" version_string="2.0.0"><![CDATA[The name of the command that will be used after the /]]></phrase>
+  <phrase title="siropu_chat_command_nick_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command to set a guest nickname.]]></phrase>
+  <phrase title="siropu_chat_command_not_available_for_room" version_id="200010" version_string="2.0.0"><![CDATA[This command is not available for this room.]]></phrase>
+  <phrase title="siropu_chat_command_not_set_up" version_id="2020570" version_string="2.2.5"><![CDATA[Command has not been set up yet.]]></phrase>
+  <phrase title="siropu_chat_command_options" version_id="200010" version_string="2.0.0"><![CDATA[Command options]]></phrase>
+  <phrase title="siropu_chat_command_options_template" version_id="200010" version_string="2.0.0"><![CDATA[Command options template]]></phrase>
+  <phrase title="siropu_chat_command_options_template_explain" version_id="200010" version_string="2.0.0"><![CDATA[Allows you to include a template that contains your custom command options that you can use in the callback.]]></phrase>
+  <phrase title="siropu_chat_command_prune_explain" version_id="2010170" version_string="2.1.1"><![CDATA[Use this command to delete all the messages from the curent room. If a number from 1 to 99 is provided, the last x messages will be deleted. If keyword <b>all</b> is used, all the chat messages from any room will be deleted. If a username is specified, all the messages posted by that user in the current room will be deleted.]]></phrase>
+  <phrase title="siropu_chat_command_roll_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command to roll a dice. You can choose how many dices to roll and how many sides a dice will have by adding (n)d(n) where the first n is the number of dices and the second one is the number of sides. You can also specify modifiers: +n -y]]></phrase>
+  <phrase title="siropu_chat_command_slap_explain" version_id="2012270" version_string="2.1.22"><![CDATA[Use this command followed by the username of the user you want to slap.]]></phrase>
+  <phrase title="siropu_chat_command_status_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by a text to set your chat status. Your status will be displayed under your username is user list.]]></phrase>
+  <phrase title="siropu_chat_command_unban_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, to unban that user from the current room.]]></phrase>
+  <phrase title="siropu_chat_command_unkick_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, to unkick that user from the current room.]]></phrase>
+  <phrase title="siropu_chat_command_unmute_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by the username of a user, to unmute that user in the current room.]]></phrase>
+  <phrase title="siropu_chat_command_whisper_explain" version_id="200010" version_string="2.0.0"><![CDATA[Use this command followed by one or more usernames (separated by comma) in the format of [username1, username2] and a message, to send a private message to other users in the current room.]]></phrase>
+  <phrase title="siropu_chat_commands" version_id="200010" version_string="2.0.0"><![CDATA[Commands]]></phrase>
+  <phrase title="siropu_chat_confirm_conversation_leave" version_id="2020770" version_string="2.2.7"><![CDATA[Are you sure you want to leave this conversation?]]></phrase>
+  <phrase title="siropu_chat_conv_message" version_id="2011470" version_string="2.1.14"><![CDATA[Chat conversation message]]></phrase>
+  <phrase title="siropu_chat_conv_messages" version_id="2010370" version_string="2.1.3"><![CDATA[Chat conversation messages]]></phrase>
+  <phrase title="siropu_chat_conversation_with_x" version_id="200010" version_string="2.0.0"><![CDATA[Conversation with {user}]]></phrase>
+  <phrase title="siropu_chat_conversations" version_id="2020070" version_string="2.2.0"><![CDATA[Conversations]]></phrase>
+  <phrase title="siropu_chat_create_room" version_id="1" version_string="2.0.0"><![CDATA[Create room]]></phrase>
+  <phrase title="siropu_chat_current_message" version_id="200010" version_string="2.0.0"><![CDATA[Current message]]></phrase>
+  <phrase title="siropu_chat_custom_command_created" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Custom command //{command} has been created.]]></phrase>
+  <phrase title="siropu_chat_custom_command_deleted" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Custom command <b>//{command}</b> has been deleted.]]></phrase>
+  <phrase title="siropu_chat_custom_command_updated" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Custom command <b>//{command}</b> has been updated.]]></phrase>
+  <phrase title="siropu_chat_delete_message" version_id="200010" version_string="2.0.0"><![CDATA[Delete message]]></phrase>
+  <phrase title="siropu_chat_delete_selected" version_id="200010" version_string="2.0.0"><![CDATA[Delete selected]]></phrase>
+  <phrase title="siropu_chat_desktop_notifications" version_id="1" version_string="2.0.0"><![CDATA[Desktop notifications]]></phrase>
+  <phrase title="siropu_chat_device_desktop" version_id="200010" version_string="2.0.0"><![CDATA[Desktop]]></phrase>
+  <phrase title="siropu_chat_device_mobile" version_id="200010" version_string="2.0.0"><![CDATA[Mobile]]></phrase>
+  <phrase title="siropu_chat_device_tablet" version_id="200010" version_string="2.0.0"><![CDATA[Tablet]]></phrase>
+  <phrase title="siropu_chat_devices" version_id="200010" version_string="2.0.0"><![CDATA[Devices]]></phrase>
+  <phrase title="siropu_chat_devices_explain" version_id="200010" version_string="2.0.0"><![CDATA[Select the devices on which the chat will be displayed.]]></phrase>
+  <phrase title="siropu_chat_disabled" version_id="200010" version_string="2.0.0"><![CDATA[Disabled]]></phrase>
+  <phrase title="siropu_chat_discourage_ip" version_id="200010" version_string="2.0.0"><![CDATA[Discourage IP]]></phrase>
+  <phrase title="siropu_chat_display_a_message" version_id="2002570" version_string="2.0.25"><![CDATA[Display a message]]></phrase>
+  <phrase title="siropu_chat_display_avatar" version_id="1" version_string="2.0.0"><![CDATA[Display avatar]]></phrase>
+  <phrase title="siropu_chat_display_avatar_explain" version_id="1" version_string="2.0.0"><![CDATA[If enabled, the user avatar will be displayed before username.]]></phrase>
+  <phrase title="siropu_chat_display_mode" version_id="1" version_string="2.0.0"><![CDATA[Display mode]]></phrase>
+  <phrase title="siropu_chat_display_mode_above_content" version_id="1" version_string="2.0.0"><![CDATA[Above content]]></phrase>
+  <phrase title="siropu_chat_display_mode_above_forum_list" version_id="1" version_string="2.0.0"><![CDATA[Above forum list]]></phrase>
+  <phrase title="siropu_chat_display_mode_all_pages" version_id="1" version_string="2.0.0"><![CDATA[All pages]]></phrase>
+  <phrase title="siropu_chat_display_mode_below_breadcrumb" version_id="2002170" version_string="2.0.21"><![CDATA[Below breadcrumb]]></phrase>
+  <phrase title="siropu_chat_display_mode_below_content" version_id="1" version_string="2.0.0"><![CDATA[Below content]]></phrase>
+  <phrase title="siropu_chat_display_mode_below_forum_list" version_id="1" version_string="2.0.0"><![CDATA[Below forum list]]></phrase>
+  <phrase title="siropu_chat_display_mode_chat_page" version_id="1" version_string="2.0.0"><![CDATA[Chat page only]]></phrase>
+  <phrase title="siropu_chat_display_mode_custom" version_id="1" version_string="2.0.0"><![CDATA[Custom]]></phrase>
+  <phrase title="siropu_chat_display_mode_default" version_id="1" version_string="2.0.0"><![CDATA[Default]]></phrase>
+  <phrase title="siropu_chat_display_mode_sidebar_bottom" version_id="1" version_string="2.0.0"><![CDATA[Sidebar bottom]]></phrase>
+  <phrase title="siropu_chat_display_mode_sidebar_top" version_id="1" version_string="2.0.0"><![CDATA[Sidebar top]]></phrase>
+  <phrase title="siropu_chat_display_online_user_count" version_id="2010170" version_string="2.1.1"><![CDATA[Display online user count]]></phrase>
+  <phrase title="siropu_chat_display_unread_message_count" version_id="2010170" version_string="2.1.1"><![CDATA[Display unread message count]]></phrase>
+  <phrase title="siropu_chat_do_not_have_permission" version_id="2000370" version_string="2.0.3"><![CDATA[You do not have the permission to view the chat.]]></phrase>
+  <phrase title="siropu_chat_do_not_have_permission_to_use" version_id="2000570" version_string="2.0.5"><![CDATA[You do not have the permission to use the chat.]]></phrase>
+  <phrase title="siropu_chat_edit_ads" version_id="1" version_string="2.0.0"><![CDATA[Edit ads]]></phrase>
+  <phrase title="siropu_chat_edit_bot_message" version_id="200010" version_string="2.0.0"><![CDATA[Edit bot message]]></phrase>
+  <phrase title="siropu_chat_edit_bot_response" version_id="200010" version_string="2.0.0"><![CDATA[Edit bot response]]></phrase>
+  <phrase title="siropu_chat_edit_command" version_id="200010" version_string="2.0.0"><![CDATA[Edit command]]></phrase>
+  <phrase title="siropu_chat_edit_message" version_id="200010" version_string="2.0.0"><![CDATA[Edit message]]></phrase>
+  <phrase title="siropu_chat_edit_notice" version_id="1" version_string="2.0.0"><![CDATA[Edit notice]]></phrase>
+  <phrase title="siropu_chat_edit_rules" version_id="1" version_string="2.0.0"><![CDATA[Edit rules]]></phrase>
+  <phrase title="siropu_chat_edit_sanction" version_id="200010" version_string="2.0.0"><![CDATA[Edit sanction]]></phrase>
+  <phrase title="siropu_chat_edited" version_id="200010" version_string="2.0.0"><![CDATA[Edited]]></phrase>
+  <phrase title="siropu_chat_embed" version_id="2002770" version_string="2.0.27"><![CDATA[Embed]]></phrase>
+  <phrase title="siropu_chat_embed_code" version_id="2002770" version_string="2.0.27"><![CDATA[Embed code]]></phrase>
+  <phrase title="siropu_chat_enable" version_id="200010" version_string="2.0.0"><![CDATA[Enable Chat]]></phrase>
+  <phrase title="siropu_chat_enable_at_selected_hours" version_id="200010" version_string="2.0.0"><![CDATA[Enable chat at selected hours]]></phrase>
+  <phrase title="siropu_chat_enable_at_selected_hours_explain" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to enable chat only at certain hours.]]></phrase>
+  <phrase title="siropu_chat_enable_disable_bot_message" version_id="200010" version_string="2.0.0"><![CDATA[Enable / disable bot message]]></phrase>
+  <phrase title="siropu_chat_enable_disable_bot_response" version_id="200010" version_string="2.0.0"><![CDATA[Enable / disable bot response]]></phrase>
+  <phrase title="siropu_chat_enable_disable_command" version_id="200010" version_string="2.0.0"><![CDATA[Enable / disable command]]></phrase>
+  <phrase title="siropu_chat_enable_for_selected_rooms" version_id="200010" version_string="2.0.0"><![CDATA[Enable for selected rooms]]></phrase>
+  <phrase title="siropu_chat_enable_for_selected_rooms_explain" version_id="2000051" version_string="2.0.0 RC 1"><![CDATA[If no rooms are selected, the bot message will be posted in all rooms.]]></phrase>
+  <phrase title="siropu_chat_enable_for_selected_user_groups" version_id="200010" version_string="2.0.0"><![CDATA[Enable for selected user groups]]></phrase>
+  <phrase title="siropu_chat_enable_grid_mode" version_id="1" version_string="2.0.0"><![CDATA[Enable grid mode]]></phrase>
+  <phrase title="siropu_chat_enable_grid_mode_explain" version_id="1" version_string="2.0.0"><![CDATA[Allows you to display only the user avatar in a grid style.]]></phrase>
+  <phrase title="siropu_chat_enable_on_selected_days" version_id="200010" version_string="2.0.0"><![CDATA[Enable chat on selected days]]></phrase>
+  <phrase title="siropu_chat_enable_on_selected_days_explain" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to enable chat only on certain days.]]></phrase>
+  <phrase title="siropu_chat_enable_search" version_id="200010" version_string="2.0.0"><![CDATA[Enable search]]></phrase>
+  <phrase title="siropu_chat_enable_search_explain" version_id="200010" version_string="2.0.0"><![CDATA[Enable search if there are more than x results.]]></phrase>
+  <phrase title="siropu_chat_enable_thread_reply" version_id="2002370" version_string="2.0.23"><![CDATA[Enable thread reply]]></phrase>
+  <phrase title="siropu_chat_enable_thread_reply_explain" version_id="2002370" version_string="2.0.23"><![CDATA[This option allows you to post thread replies into the room.]]></phrase>
+  <phrase title="siropu_chat_error" version_id="200010" version_string="2.0.0"><![CDATA[(Error)]]></phrase>
+  <phrase title="siropu_chat_export_complete" version_id="2012070" version_string="2.1.20"><![CDATA[Export complete!]]></phrase>
+  <phrase title="siropu_chat_export_invalid_parameters" version_id="2012070" version_string="2.1.20"><![CDATA[Invalid arguments. Specify a thread ID a post author ID and per post limit, all separated by a space.]]></phrase>
+  <phrase title="siropu_chat_export_thread_not_found" version_id="2012070" version_string="2.1.20"><![CDATA[Thread not found.]]></phrase>
+  <phrase title="siropu_chat_export_user_not_found" version_id="2012070" version_string="2.1.20"><![CDATA[User not found.]]></phrase>
+  <phrase title="siropu_chat_find_room" version_id="200010" version_string="2.0.0"><![CDATA[Find room...]]></phrase>
+  <phrase title="siropu_chat_find_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[Find sanctions]]></phrase>
+  <phrase title="siropu_chat_find_sanctions_for_member" version_id="200010" version_string="2.0.0"><![CDATA[Find sanctions for member]]></phrase>
+  <phrase title="siropu_chat_find_user" version_id="1" version_string="2.0.0"><![CDATA[Find user...]]></phrase>
+  <phrase title="siropu_chat_general_room_description" version_id="1" version_string="2.0.0" global_cache="1"><![CDATA[The general chat room.]]></phrase>
+  <phrase title="siropu_chat_general_room_name" version_id="1" version_string="2.0.0" global_cache="1"><![CDATA[General chat]]></phrase>
+  <phrase title="siropu_chat_gif_command_tenor_api_key" version_id="2020570" version_string="2.2.5"><![CDATA[Tenor API Key]]></phrase>
+  <phrase title="siropu_chat_gif_command_tenor_api_key_explain" version_id="2020570" version_string="2.2.5"><![CDATA[In order to use Tenor, you have to obtain an API Key from <a href="https://tenor.com/developer/keyregistration" target="_blank">https://tenor.com/developer/keyregistration</a>]]></phrase>
+  <phrase title="siropu_chat_giphy_api_key" version_id="2020570" version_string="2.2.5"><![CDATA[Giphy API Key]]></phrase>
+  <phrase title="siropu_chat_giphy_command_api_key_explain" version_id="2020570" version_string="2.2.5"><![CDATA[In order to use Giphy, you have to obtain an API Key from <a href="https://developers.giphy.com/dashboard/?create=true" target="_blank">https://developers.giphy.com/dashboard/?create=true</a>]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating" version_id="2020570" version_string="2.2.5"><![CDATA[Giphy image rating]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating.g" version_id="2011770" version_string="2.1.17"><![CDATA[<b>G:</b> Content that is appropriate for all ages and people.]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating.pg" version_id="2011770" version_string="2.1.17"><![CDATA[<b>PG:</b> Content that is generally safe for everyone, but may require parental preview before children can watch.]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating.pg_13" version_id="2011770" version_string="2.1.17"><![CDATA[<b>PG-13:</b> Mild sexual innuendos, mild substance use, mild profanity, or threatening images. May include images of semi-naked people, but DOES NOT show real human genitalia or nudity.]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating.r" version_id="2011770" version_string="2.1.17"><![CDATA[<b>R:</b> Strong language, strong sexual innuendo, violence, and illegal drug use; not suitable for teens or younger. NO NUDITY.]]></phrase>
+  <phrase title="siropu_chat_giphy_command_rating_explain" version_id="2011770" version_string="2.1.17"><![CDATA[GIPHY Content Rating Specifics]]></phrase>
+  <phrase title="siropu_chat_go_to_conversation" version_id="2002470" version_string="2.0.24"><![CDATA[Go to conversation]]></phrase>
+  <phrase title="siropu_chat_guest" version_id="200010" version_string="2.0.0"><![CDATA[Guest]]></phrase>
+  <phrase title="siropu_chat_guest_nickname" version_id="200010" version_string="2.0.0"><![CDATA[Guest nickname]]></phrase>
+  <phrase title="siropu_chat_guest_x_has_joined_the_room" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Guest [B]{user}[/B] has joined the room.]]></phrase>
+  <phrase title="siropu_chat_guest_x_has_left_the_room" version_id="2000970" version_string="2.0.9"><![CDATA[Guest [B]{user}[/B] has left the room.]]></phrase>
+  <phrase title="siropu_chat_guest_x_has_left_the_room_message" version_id="2000970" version_string="2.0.9"><![CDATA[Guest [B]{user}[/B] has left the room ({message}).]]></phrase>
+  <phrase title="siropu_chat_has_been_disabled" version_id="200010" version_string="2.0.0"><![CDATA[Chat has been disabled. You can enable it again from the same location.]]></phrase>
+  <phrase title="siropu_chat_has_keywords" version_id="200010" version_string="2.0.0"><![CDATA[Has keywords]]></phrase>
+  <phrase title="siropu_chat_header_title" version_id="1" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="siropu_chat_help" version_id="1" version_string="2.0.0"><![CDATA[Help]]></phrase>
+  <phrase title="siropu_chat_help_explain" version_id="200010" version_string="2.0.0"><![CDATA[Here you can learn about the various commands and options that you can use in the chat.]]></phrase>
+  <phrase title="siropu_chat_hour" version_id="200010" version_string="2.0.0"><![CDATA[Hour]]></phrase>
+  <phrase title="siropu_chat_hug_message" version_id="2012270" version_string="2.1.22"><![CDATA[{fromUser} gave {toUser} a hug.]]></phrase>
+  <phrase title="siropu_chat_image_upload_limit" version_id="2012370" version_string="2.1.23"><![CDATA[You may upload up to {limit} images. Delete unwanted images to upload more.]]></phrase>
+  <phrase title="siropu_chat_image_uploads" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Chat image uploads]]></phrase>
+  <phrase title="siropu_chat_infinite_loop_room_post_error" version_id="2002770" version_string="2.0.27"><![CDATA[You cannot set "{room2}" room to post in "{room1}" room because "{room1}" room is set to post in "{room2}" room and this will cause an infinite loop.]]></phrase>
+  <phrase title="siropu_chat_insert_selected" version_id="200010" version_string="2.0.0"><![CDATA[Insert selected]]></phrase>
+  <phrase title="siropu_chat_invalid_room" version_id="2020770" version_string="2.2.7"><![CDATA[Invalid chat room.]]></phrase>
+  <phrase title="siropu_chat_is_typing" version_id="2012370" version_string="2.1.23"><![CDATA[is typing...]]></phrase>
+  <phrase title="siropu_chat_joined_rooms_have_been_reset" version_id="2010770" version_string="2.1.7"><![CDATA[Joined rooms have been reset!]]></phrase>
+  <phrase title="siropu_chat_keyword" version_id="200010" version_string="2.0.0"><![CDATA[Keyword]]></phrase>
+  <phrase title="siropu_chat_kick" version_id="200010" version_string="2.0.0"><![CDATA[Kick]]></phrase>
+  <phrase title="siropu_chat_kick_user" version_id="200010" version_string="2.0.0"><![CDATA[Kick user]]></phrase>
+  <phrase title="siropu_chat_kicked" version_id="200010" version_string="2.0.0"><![CDATA[Kicked]]></phrase>
+  <phrase title="siropu_chat_last_month" version_id="200010" version_string="2.0.0"><![CDATA[Last month]]></phrase>
+  <phrase title="siropu_chat_last_update" version_id="2000032" version_string="2.0.0 Beta 2"><![CDATA[Last update]]></phrase>
+  <phrase title="siropu_chat_last_week" version_id="200010" version_string="2.0.0"><![CDATA[Last week]]></phrase>
+  <phrase title="siropu_chat_leave_conversation" version_id="200010" version_string="2.0.0"><![CDATA[Leave conversation]]></phrase>
+  <phrase title="siropu_chat_leave_conversation_explain" version_id="200010" version_string="2.0.0"><![CDATA[If you leave the conversation, you will no longer receive new messages from <b>{user}</b>. You can restart the conversation anytime, but if <b>{user}</b> leaves the conversation as well, all messages will be deleted from the conversation history.]]></phrase>
+  <phrase title="siropu_chat_leave_last_used_room_and_join" version_id="2002570" version_string="2.0.25"><![CDATA[Leave last used room and join]]></phrase>
+  <phrase title="siropu_chat_leave_room" version_id="200010" version_string="2.0.0"><![CDATA[Leave room]]></phrase>
+  <phrase title="siropu_chat_lift_sanction" version_id="200010" version_string="2.0.0"><![CDATA[Lift sanction]]></phrase>
+  <phrase title="siropu_chat_lift_sanction_confirmation" version_id="200010" version_string="2.0.0"><![CDATA[Please confirm that you want to lift the sanction on the following user]]></phrase>
+  <phrase title="siropu_chat_link_to_this_message" version_id="200010" version_string="2.0.0"><![CDATA[Link to this message]]></phrase>
+  <phrase title="siropu_chat_link_to_this_room" version_id="200010" version_string="2.0.0"><![CDATA[Link to this room]]></phrase>
+  <phrase title="siropu_chat_load_more_messages" version_id="200010" version_string="2.0.0"><![CDATA[Load more messages?]]></phrase>
+  <phrase title="siropu_chat_loading_conversation" version_id="1" version_string="2.0.0"><![CDATA[Loading conversation...]]></phrase>
+  <phrase title="siropu_chat_loading_conversation_messages" version_id="200010" version_string="2.0.0"><![CDATA[Loading conversation messages...]]></phrase>
+  <phrase title="siropu_chat_lock_room" version_id="2002770" version_string="2.0.27"><![CDATA[Lock room]]></phrase>
+  <phrase title="siropu_chat_locked_until" version_id="200010" version_string="2.0.0"><![CDATA[Locked until<br>{date}]]></phrase>
+  <phrase title="siropu_chat_logout" version_id="200010" version_string="2.0.0"><![CDATA[Logout]]></phrase>
+  <phrase title="siropu_chat_message_count" version_id="2001370" version_string="2.0.13"><![CDATA[Message count]]></phrase>
+  <phrase title="siropu_chat_message_deleted" version_id="200010" version_string="2.0.0"><![CDATA[Message has been deleted.]]></phrase>
+  <phrase title="siropu_chat_message_display_limit" version_id="200010" version_string="2.0.0"><![CDATA[Message display limit]]></phrase>
+  <phrase title="siropu_chat_message_display_limit_explain" version_id="200010" version_string="2.0.0"><![CDATA[Set the number of messages to display in the chat when the chat loads.]]></phrase>
+  <phrase title="siropu_chat_message_edit_history" version_id="200010" version_string="2.0.0"><![CDATA[Message edit history]]></phrase>
+  <phrase title="siropu_chat_message_edited" version_id="200010" version_string="2.0.0"><![CDATA[Message has been edited.]]></phrase>
+  <phrase title="siropu_chat_message_has_been_posted" version_id="200010" version_string="2.0.0"><![CDATA[Your message has been posted.]]></phrase>
+  <phrase title="siropu_chat_message_in_conversation_with_x" version_id="200010" version_string="2.0.0"><![CDATA[Chat message in conversation with {username}]]></phrase>
+  <phrase title="siropu_chat_message_in_room_x" version_id="200010" version_string="2.0.0"><![CDATA[Chat message in room '{name}']]></phrase>
+  <phrase title="siropu_chat_message_is_required" version_id="2002570" version_string="2.0.25"><![CDATA[Message is required.]]></phrase>
+  <phrase title="siropu_chat_message_likes" version_id="200010" version_string="2.0.0"><![CDATA[Message likes]]></phrase>
+  <phrase title="siropu_chat_message_url" version_id="200010" version_string="2.0.0"><![CDATA[Message URL]]></phrase>
+  <phrase title="siropu_chat_minute" version_id="200010" version_string="2.0.0"><![CDATA[Minute]]></phrase>
+  <phrase title="siropu_chat_miscellaneous" version_id="1" version_string="2.0.0"><![CDATA[Miscellaneous]]></phrase>
+  <phrase title="siropu_chat_most_likes_first" version_id="200010" version_string="2.0.0"><![CDATA[Most likes first]]></phrase>
+  <phrase title="siropu_chat_msg_command_invalid_arguments" version_id="2000170" version_string="2.0.1"><![CDATA[Invalid arguments. You have to specify a recipient and a message, in the format of: username, message.]]></phrase>
+  <phrase title="siropu_chat_mute" version_id="200010" version_string="2.0.0"><![CDATA[Mute]]></phrase>
+  <phrase title="siropu_chat_mute_user" version_id="200010" version_string="2.0.0"><![CDATA[Mute user]]></phrase>
+  <phrase title="siropu_chat_muted" version_id="200010" version_string="2.0.0"><![CDATA[Muted]]></phrase>
+  <phrase title="siropu_chat_new_media_album_comment_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has commented on the media album "{album}".]]></phrase>
+  <phrase title="siropu_chat_new_media_album_item_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has added a [URL={mediaURL}]new media[/URL] in the album "{album}".]]></phrase>
+  <phrase title="siropu_chat_new_media_album_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has created a new media album called "{album}".]]></phrase>
+  <phrase title="siropu_chat_new_media_category_item_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has added a [URL={mediaURL}]new media[/URL] in the category "{category}".]]></phrase>
+  <phrase title="siropu_chat_new_media_comment_notification" version_id="2020770" version_string="2.2.7" global_cache="1"><![CDATA[{user} has commented on the media "{media}".]]></phrase>
+  <phrase title="siropu_chat_new_message" version_id="200010" version_string="2.0.0"><![CDATA[Chat: New message]]></phrase>
+  <phrase title="siropu_chat_new_post_notification" version_id="2010170" version_string="2.1.1" global_cache="1"><![CDATA[{user} has posted a [URL={url}]new reply[/URL] in the thread "{thread}".]]></phrase>
+  <phrase title="siropu_chat_new_private_message" version_id="200010" version_string="2.0.0"><![CDATA[Chat: New private message]]></phrase>
+  <phrase title="siropu_chat_new_public_message" version_id="200010" version_string="2.0.0"><![CDATA[Chat: New public message]]></phrase>
+  <phrase title="siropu_chat_new_resource_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has submitted a new resource called "{resource}" in the category "{category}".]]></phrase>
+  <phrase title="siropu_chat_new_resource_rating_notification" version_id="2001170" version_string="2.0.11"><![CDATA[{user} [URL={reviewUrl}]reviewed[/URL] the resource {resource}.]]></phrase>
+  <phrase title="siropu_chat_new_thread_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has started a new thread called "{thread}" in {forum}.]]></phrase>
+  <phrase title="siropu_chat_new_user_notification" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} is our newest member. Welcome!]]></phrase>
+  <phrase title="siropu_chat_new_whisper_message" version_id="200010" version_string="2.0.0"><![CDATA[Chat: New whisper message]]></phrase>
+  <phrase title="siropu_chat_newest_messages_first" version_id="200010" version_string="2.0.0"><![CDATA[Newest messages first]]></phrase>
+  <phrase title="siropu_chat_nickname_is_currently_in_use" version_id="200010" version_string="2.0.0"><![CDATA[Nickname is currently in use.]]></phrase>
+  <phrase title="siropu_chat_no_conversations_started" version_id="200010" version_string="2.0.0"><![CDATA[You haven't started any conversations yet.]]></phrase>
+  <phrase title="siropu_chat_no_data_retuned_from_source" version_id="2020570" version_string="2.2.5"><![CDATA[No data was returned from source.]]></phrase>
+  <phrase title="siropu_chat_no_message_likes" version_id="200010" version_string="2.0.0"><![CDATA[This message doesn't have any likes yet.]]></phrase>
+  <phrase title="siropu_chat_no_messages" version_id="1" version_string="2.0.0"><![CDATA[There are no messages in the chat. Be the first one to say Hi!]]></phrase>
+  <phrase title="siropu_chat_no_messages_found" version_id="200010" version_string="2.0.0"><![CDATA[No messages have been found.]]></phrase>
+  <phrase title="siropu_chat_no_one_is_chatting" version_id="1" version_string="2.0.0"><![CDATA[No one is chatting at the moment.]]></phrase>
+  <phrase title="siropu_chat_no_permission_to_edit_message" version_id="200010" version_string="2.0.0"><![CDATA[You don't have the permission to edit this message.]]></phrase>
+  <phrase title="siropu_chat_no_permission_to_use_command" version_id="200010" version_string="2.0.0"><![CDATA[You don't have the permission to use this command.]]></phrase>
+  <phrase title="siropu_chat_no_private_conversations_found" version_id="200010" version_string="2.0.0"><![CDATA[No private conversations found.]]></phrase>
+  <phrase title="siropu_chat_no_response" version_id="1" version_string="2.0.0"><![CDATA[The server has not responded in time. :(]]></phrase>
+  <phrase title="siropu_chat_no_results_have_been_found_for_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[No results have been found for "{term}".]]></phrase>
+  <phrase title="siropu_chat_no_room_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[There are no user sanctions for this room.]]></phrase>
+  <phrase title="siropu_chat_no_room_selected" version_id="2002570" version_string="2.0.25"><![CDATA[No room has been selected.]]></phrase>
+  <phrase title="siropu_chat_no_rooms_joined" version_id="1" version_string="2.0.0"><![CDATA[You haven't joined any rooms.]]></phrase>
+  <phrase title="siropu_chat_no_rules" version_id="1" version_string="2.0.0"><![CDATA[There are currently no special chat rules.]]></phrase>
+  <phrase title="siropu_chat_no_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[There are no sanctions.]]></phrase>
+  <phrase title="siropu_chat_no_top_chatters" version_id="200010" version_string="2.0.0"><![CDATA[There are no users in the top.]]></phrase>
+  <phrase title="siropu_chat_no_user_custom_commands" version_id="200010" version_string="2.0.0"><![CDATA[You haven't created any custom commands.]]></phrase>
+  <phrase title="siropu_chat_not_part_of_the_conversation" version_id="200010" version_string="2.0.0"><![CDATA[Your are not part of this conversation.]]></phrase>
+  <phrase title="siropu_chat_notice" version_id="1" version_string="2.0.0"><![CDATA[Notice]]></phrase>
+  <phrase title="siropu_chat_notice_saved" version_id="1" version_string="2.0.0"><![CDATA[Chat notice has been saved.]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_banned" version_id="200010" version_string="2.0.0"><![CDATA[User has been banned]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_kicked" version_id="200010" version_string="2.0.0"><![CDATA[User has been kicked]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_muted" version_id="200010" version_string="2.0.0"><![CDATA[User has been muted]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_unbanned" version_id="200010" version_string="2.0.0"><![CDATA[User has been unbanned]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_unkicked" version_id="200010" version_string="2.0.0"><![CDATA[User has been unkicked]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_been_unmuted" version_id="200010" version_string="2.0.0"><![CDATA[User has been unmuted]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_joined_room" version_id="200010" version_string="2.0.0"><![CDATA[User has joined the room]]></phrase>
+  <phrase title="siropu_chat_notification_user_has_left_room" version_id="200010" version_string="2.0.0"><![CDATA[User has left the room]]></phrase>
+  <phrase title="siropu_chat_notifications" version_id="2002170" version_string="2.0.21"><![CDATA[Notifications]]></phrase>
+  <phrase title="siropu_chat_oldest_messages_first" version_id="200010" version_string="2.0.0"><![CDATA[Oldest messages first]]></phrase>
+  <phrase title="siropu_chat_open_in_popup" version_id="1" version_string="2.0.0"><![CDATA[Open in popup]]></phrase>
+  <phrase title="siropu_chat_option_not_required" version_id="200010" version_string="2.0.0"><![CDATA[This option is not required.]]></phrase>
+  <phrase title="siropu_chat_option_order_alphabetically" version_id="200010" version_string="2.0.0"><![CDATA[Alphabetically]]></phrase>
+  <phrase title="siropu_chat_option_order_most_active" version_id="200010" version_string="2.0.0"><![CDATA[Most active]]></phrase>
+  <phrase title="siropu_chat_option_order_newest_first" version_id="200010" version_string="2.0.0"><![CDATA[Newest first]]></phrase>
+  <phrase title="siropu_chat_option_order_oldest_first" version_id="200010" version_string="2.0.0"><![CDATA[Oldest first]]></phrase>
+  <phrase title="siropu_chat_options" version_id="1" version_string="2.0.0"><![CDATA[Options]]></phrase>
+  <phrase title="siropu_chat_paste_ad_code" version_id="1" version_string="2.0.0"><![CDATA[Paste your ad code]]></phrase>
+  <phrase title="siropu_chat_please_enter_valid_command_description" version_id="2001870" version_string="2.0.18"><![CDATA[Please enter a valid description name.]]></phrase>
+  <phrase title="siropu_chat_please_enter_valid_command_name" version_id="2001870" version_string="2.0.18"><![CDATA[Please enter a valid command name.]]></phrase>
+  <phrase title="siropu_chat_please_select_at_least_one_room" version_id="2002570" version_string="2.0.25"><![CDATA[Please select at least one room.]]></phrase>
+  <phrase title="siropu_chat_please_set_a_nickname" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Please set a nickname by typing /{command} followed by the desired nickname.]]></phrase>
+  <phrase title="siropu_chat_please_wait" version_id="200010" version_string="2.0.0"><![CDATA[Please wait...]]></phrase>
+  <phrase title="siropu_chat_please_wait_at_least_x_seconds_before_posting" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Please wait at least {x} second(s) before posting a new message.]]></phrase>
+  <phrase title="siropu_chat_please_wait_x_seconds" version_id="200010" version_string="2.0.0"><![CDATA[Please wait {num} seconds...]]></phrase>
+  <phrase title="siropu_chat_post_announcement" version_id="2002570" version_string="2.0.25"><![CDATA[Post announcement]]></phrase>
+  <phrase title="siropu_chat_post_announcement_bot_name_explain" version_id="2002570" version_string="2.0.25"><![CDATA[You can set a bot name if you don't want the announcement to be posted with your username.]]></phrase>
+  <phrase title="siropu_chat_post_at" version_id="200010" version_string="2.0.0"><![CDATA[Post at]]></phrase>
+  <phrase title="siropu_chat_post_chat_messages_in_thread" version_id="2002770" version_string="2.0.27"><![CDATA[Post chat messages in this thread]]></phrase>
+  <phrase title="siropu_chat_post_in" version_id="2002570" version_string="2.0.25"><![CDATA[Post in]]></phrase>
+  <phrase title="siropu_chat_post_thread_replies_in_room" version_id="2002770" version_string="2.0.27"><![CDATA[Post thread replies in this room]]></phrase>
+  <phrase title="siropu_chat_posted_by" version_id="200010" version_string="2.0.0"><![CDATA[Posted by]]></phrase>
+  <phrase title="siropu_chat_posting_message" version_id="200010" version_string="2.0.0"><![CDATA[Posting message...]]></phrase>
+  <phrase title="siropu_chat_private_conversations" version_id="1" version_string="2.0.0"><![CDATA[Private conversations]]></phrase>
+  <phrase title="siropu_chat_read_messages_cannot_be_edited_or_deleted" version_id="200010" version_string="2.0.0"><![CDATA[Messages that have been read by the recipient cannot be edited or deleted.]]></phrase>
+  <phrase title="siropu_chat_remove_ads" version_id="200010" version_string="2.0.0"><![CDATA[Remove ads]]></phrase>
+  <phrase title="siropu_chat_remove_notice" version_id="200010" version_string="2.0.0"><![CDATA[Remove notice]]></phrase>
+  <phrase title="siropu_chat_removing_reactions_for_deleted_messages" version_id="2010670" version_string="2.1.6"><![CDATA[Removing reactions for deleted messages]]></phrase>
+  <phrase title="siropu_chat_repost_in_selected_rooms" version_id="2002770" version_string="2.0.27"><![CDATA[Repost in selected rooms]]></phrase>
+  <phrase title="siropu_chat_repost_in_selected_rooms_explain" version_id="2002770" version_string="2.0.27"><![CDATA[This option allows you to automatically repost the messages you post in this room in other rooms.]]></phrase>
+  <phrase title="siropu_chat_requested_bot_response_not_found" version_id="200010" version_string="2.0.0"><![CDATA[The requested bot response could not be found.]]></phrase>
+  <phrase title="siropu_chat_requested_conversation_not_found" version_id="200010" version_string="2.0.0"><![CDATA[The requested conversation could not be found.]]></phrase>
+  <phrase title="siropu_chat_requested_guest_not_found" version_id="200010" version_string="2.0.0"><![CDATA[The requested guest could not be found.]]></phrase>
+  <phrase title="siropu_chat_requested_message_not_found" version_id="200010" version_string="2.0.0"><![CDATA[The requested message could not be found.]]></phrase>
+  <phrase title="siropu_chat_requested_room_not_found" version_id="200010" version_string="2.0.0"><![CDATA[The requested room could not be found.]]></phrase>
+  <phrase title="siropu_chat_requested_sanction_not_found" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[The requested sanction could not be found.]]></phrase>
+  <phrase title="siropu_chat_reset_chat_data" version_id="2001370" version_string="2.0.13"><![CDATA[Reset chat data]]></phrase>
+  <phrase title="siropu_chat_reset_chat_data_for_x" version_id="2001370" version_string="2.0.13"><![CDATA[Reset chat data for {username}]]></phrase>
+  <phrase title="siropu_chat_reset_color" version_id="2002570" version_string="2.0.25"><![CDATA[Reset color]]></phrase>
+  <phrase title="siropu_chat_reset_joined_rooms" version_id="2010770" version_string="2.1.7"><![CDATA[Reset joined rooms]]></phrase>
+  <phrase title="siropu_chat_reset_joined_rooms_explain" version_id="2010770" version_string="2.1.7"><![CDATA[This will reset joined rooms for all the Chat users. You can use this option if you want to set up the Chat as a shoutbox.]]></phrase>
+  <phrase title="siropu_chat_response" version_id="200010" version_string="2.0.0"><![CDATA[Response]]></phrase>
+  <phrase title="siropu_chat_roll_command_default_dice_count" version_id="200010" version_string="2.0.0"><![CDATA[Default dice count]]></phrase>
+  <phrase title="siropu_chat_roll_command_default_dice_count_explain" version_id="200010" version_string="2.0.0"><![CDATA[The number of dices to roll by default.]]></phrase>
+  <phrase title="siropu_chat_roll_command_default_dice_sides" version_id="200010" version_string="2.0.0"><![CDATA[Default dice sides]]></phrase>
+  <phrase title="siropu_chat_roll_command_default_dice_sides_explain" version_id="200010" version_string="2.0.0"><![CDATA[The number of sides a dice will have by default.]]></phrase>
+  <phrase title="siropu_chat_roll_command_limit_error" version_id="200010" version_string="2.0.0"><![CDATA[You cannot roll more than {dice}!]]></phrase>
+  <phrase title="siropu_chat_roll_command_max_dice_count" version_id="200010" version_string="2.0.0"><![CDATA[Maximum dice count]]></phrase>
+  <phrase title="siropu_chat_roll_command_max_dice_count_explain" version_id="200010" version_string="2.0.0"><![CDATA[The maximum number of dices a user can roll.]]></phrase>
+  <phrase title="siropu_chat_roll_command_max_dice_sides" version_id="200010" version_string="2.0.0"><![CDATA[Maximum dice sides]]></phrase>
+  <phrase title="siropu_chat_roll_command_max_dice_sides_explain" version_id="200010" version_string="2.0.0"><![CDATA[The maximum dice sides a user can roll.]]></phrase>
+  <phrase title="siropu_chat_roll_command_minimum_error" version_id="2011270" version_string="2.1.12"><![CDATA[You cannot roll less than 1d1.]]></phrase>
+  <phrase title="siropu_chat_roll_command_result" version_id="2000033" version_string="2.0.0" global_cache="1"><![CDATA[{user} rolls {dice} and gets {result}.]]></phrase>
+  <phrase title="siropu_chat_roll_command_sum_dice" version_id="2002370" version_string="2.0.23"><![CDATA[Sum the result of multiple dices]]></phrase>
+  <phrase title="siropu_chat_room" version_id="200010" version_string="2.0.0"><![CDATA[Room]]></phrase>
+  <phrase title="siropu_chat_room_already_joined" version_id="1" version_string="2.0.0" global_cache="1"><![CDATA[You have already joined this room!]]></phrase>
+  <phrase title="siropu_chat_room_auto_prune" version_id="200010" version_string="2.0.0"><![CDATA[Auto-prune messages every]]></phrase>
+  <phrase title="siropu_chat_room_auto_prune_explain" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to auto-prune messages every x hours. Set to 0 to disable it.]]></phrase>
+  <phrase title="siropu_chat_room_cannot_be_deleted" version_id="1" version_string="2.0.0" global_cache="1"><![CDATA[This room cannot be deleted.]]></phrase>
+  <phrase title="siropu_chat_room_create" version_id="1" version_string="2.0.0"><![CDATA[Create room]]></phrase>
+  <phrase title="siropu_chat_room_description" version_id="1" version_string="2.0.0"><![CDATA[Room description]]></phrase>
+  <phrase title="siropu_chat_room_description_required" version_id="1" version_string="2.0.0"><![CDATA[Room description is required.]]></phrase>
+  <phrase title="siropu_chat_room_edit" version_id="1" version_string="2.0.0"><![CDATA[Edit room]]></phrase>
+  <phrase title="siropu_chat_room_embed_code" version_id="200010" version_string="2.0.0"><![CDATA[Room embed code]]></phrase>
+  <phrase title="siropu_chat_room_full_page_url" version_id="200010" version_string="2.0.0"><![CDATA[Room full page URL]]></phrase>
+  <phrase title="siropu_chat_room_has_been_pruned" version_id="200010" version_string="2.0.0"><![CDATA[Room has been pruned!]]></phrase>
+  <phrase title="siropu_chat_room_is_locked_until" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[This room is locked until {date}.]]></phrase>
+  <phrase title="siropu_chat_room_is_password_protected" version_id="200010" version_string="2.0.0"><![CDATA[This room is password protected. To join the room, please provide the room password.]]></phrase>
+  <phrase title="siropu_chat_room_is_read_only" version_id="200010" version_string="2.0.0"><![CDATA[This room is read only.]]></phrase>
+  <phrase title="siropu_chat_room_join" version_id="1" version_string="2.0.0"><![CDATA[Join room]]></phrase>
+  <phrase title="siropu_chat_room_joined" version_id="1" version_string="2.0.0"><![CDATA[Joined]]></phrase>
+  <phrase title="siropu_chat_room_leave" version_id="1" version_string="2.0.0"><![CDATA[Leave room]]></phrase>
+  <phrase title="siropu_chat_room_locked" version_id="200010" version_string="2.0.0"><![CDATA[Locked]]></phrase>
+  <phrase title="siropu_chat_room_locked_explain" version_id="200010" version_string="2.0.0"><![CDATA[If locked, users won't be able to join the room until the set date.]]></phrase>
+  <phrase title="siropu_chat_room_max_user_limit_reached" version_id="2012370" version_string="2.1.23"><![CDATA[The maximum number of users than can join the room has been reached ({limit}).]]></phrase>
+  <phrase title="siropu_chat_room_maximum_users" version_id="2012270" version_string="2.1.22"><![CDATA[Maximum users]]></phrase>
+  <phrase title="siropu_chat_room_maximum_users_explain" version_id="2012270" version_string="2.1.22"><![CDATA[The maximum number of users than can join the room. Set to 0 for unlimited users.]]></phrase>
+  <phrase title="siropu_chat_room_message" version_id="2011470" version_string="2.1.14"><![CDATA[Room message]]></phrase>
+  <phrase title="siropu_chat_room_messages" version_id="2010370" version_string="2.1.3"><![CDATA[Chat room messages]]></phrase>
+  <phrase title="siropu_chat_room_name" version_id="1" version_string="2.0.0"><![CDATA[Room name]]></phrase>
+  <phrase title="siropu_chat_room_name_must_be_unique" version_id="200010" version_string="2.0.0"><![CDATA[Room name must be unique.]]></phrase>
+  <phrase title="siropu_chat_room_name_required" version_id="1" version_string="2.0.0"><![CDATA[Room name is required.]]></phrase>
+  <phrase title="siropu_chat_room_no_permission_to_join" version_id="200010" version_string="2.0.0"><![CDATA[You don't have the permission to join this room.]]></phrase>
+  <phrase title="siropu_chat_room_not_joined" version_id="2020770" version_string="2.2.7"><![CDATA[Room not joined.]]></phrase>
+  <phrase title="siropu_chat_room_options" version_id="2002770" version_string="2.0.27"><![CDATA[Chat room options]]></phrase>
+  <phrase title="siropu_chat_room_password" version_id="1" version_string="2.0.0"><![CDATA[Room password]]></phrase>
+  <phrase title="siropu_chat_room_password_explain" version_id="2002770" version_string="2.0.27"><![CDATA[Allow room access using a password.]]></phrase>
+  <phrase title="siropu_chat_room_permission_denied" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Permission to join room denied.]]></phrase>
+  <phrase title="siropu_chat_room_read_only" version_id="200010" version_string="2.0.0"><![CDATA[Read only]]></phrase>
+  <phrase title="siropu_chat_room_read_only_explain" version_id="200010" version_string="2.0.0"><![CDATA[If checked, users who join this room won't be able to post anything.]]></phrase>
+  <phrase title="siropu_chat_room_rss_explain" version_id="2011370" version_string="2.1.13"><![CDATA[This option allows you to get room messages in a RSS feed. Once enabled, the RSS link will show up when you click the "Link" icon in room list for this room.]]></phrase>
+  <phrase title="siropu_chat_room_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[Room sanctions]]></phrase>
+  <phrase title="siropu_chat_room_thread_id" version_id="200010" version_string="2.0.0"><![CDATA[Thread ID]]></phrase>
+  <phrase title="siropu_chat_room_thread_id_explain" version_id="200010" version_string="2.0.0"><![CDATA[If a thread ID is set, messages posted in this room will be posted in that thread as well.]]></phrase>
+  <phrase title="siropu_chat_room_url" version_id="200010" version_string="2.0.0"><![CDATA[Room URL]]></phrase>
+  <phrase title="siropu_chat_room_user_groups_explain" version_id="200010" version_string="2.0.0"><![CDATA[This option allows you to enable room access based on user group.]]></phrase>
+  <phrase title="siropu_chat_room_users" version_id="2002770" version_string="2.0.27"><![CDATA[Room users]]></phrase>
+  <phrase title="siropu_chat_room_users_explain" version_id="2010070" version_string="2.1.0"><![CDATA[The names of the users who can join the room. Users will automatically join the room and get a notification about it.]]></phrase>
+  <phrase title="siropu_chat_room_users_no_valid" version_id="2002770" version_string="2.0.27"><![CDATA[The room users you set could not be found or they don't have the permission to use the chat.]]></phrase>
+  <phrase title="siropu_chat_rooms" version_id="2001370" version_string="2.0.13"><![CDATA[Rooms]]></phrase>
+  <phrase title="siropu_chat_rules" version_id="1" version_string="2.0.0"><![CDATA[Rules]]></phrase>
+  <phrase title="siropu_chat_rules_saved" version_id="1" version_string="2.0.0"><![CDATA[Chat rules have been saved.]]></phrase>
+  <phrase title="siropu_chat_sanction" version_id="200010" version_string="2.0.0"><![CDATA[Sanction]]></phrase>
+  <phrase title="siropu_chat_sanction_by" version_id="200010" version_string="2.0.0"><![CDATA[Sanction by]]></phrase>
+  <phrase title="siropu_chat_sanction_command_invalid_arguments" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Invalid arguments. Separate arguments by comma: username, length (x hours/days/weeks/months/years/permanent), reason (optional)]]></phrase>
+  <phrase title="siropu_chat_sanction_command_invalid_length" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Invalid sanction length. Possible values: x hours/days/weeks/months/years/permanent]]></phrase>
+  <phrase title="siropu_chat_sanction_end" version_id="200010" version_string="2.0.0"><![CDATA[Sanction end]]></phrase>
+  <phrase title="siropu_chat_sanction_length" version_id="200010" version_string="2.0.0"><![CDATA[Sanction length]]></phrase>
+  <phrase title="siropu_chat_sanction_reason" version_id="200010" version_string="2.0.0"><![CDATA[Sanction reason]]></phrase>
+  <phrase title="siropu_chat_sanction_start" version_id="200010" version_string="2.0.0"><![CDATA[Sanction start]]></phrase>
+  <phrase title="siropu_chat_sanction_type" version_id="200010" version_string="2.0.0"><![CDATA[Sanction type]]></phrase>
+  <phrase title="siropu_chat_sanction_user" version_id="200010" version_string="2.0.0"><![CDATA[Sanction user]]></phrase>
+  <phrase title="siropu_chat_sanctioned_users" version_id="200010" version_string="2.0.0"><![CDATA[Sanctioned users]]></phrase>
+  <phrase title="siropu_chat_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[Sanctions]]></phrase>
+  <phrase title="siropu_chat_selected_rooms" version_id="200010" version_string="2.0.0"><![CDATA[Selected rooms]]></phrase>
+  <phrase title="siropu_chat_setting_option_bot_messages" version_id="1" version_string="2.0.0"><![CDATA[Bot messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_disable" version_id="1" version_string="2.0.0"><![CDATA[Disable chat]]></phrase>
+  <phrase title="siropu_chat_setting_option_editor_on_top" version_id="1" version_string="2.0.0"><![CDATA[Display editor on top]]></phrase>
+  <phrase title="siropu_chat_setting_option_forum_activity_messages" version_id="2011270" version_string="2.1.12"><![CDATA[Forum activity messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_hide_bot" version_id="1" version_string="2.0.0"><![CDATA[Hide bot messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_hide_chatter_list" version_id="1" version_string="2.0.0"><![CDATA[Hide chatter list]]></phrase>
+  <phrase title="siropu_chat_setting_option_hide_status" version_id="1" version_string="2.0.0"><![CDATA[Hide statuses]]></phrase>
+  <phrase title="siropu_chat_setting_option_images_as_links" version_id="1" version_string="2.0.0"><![CDATA[Display images as links]]></phrase>
+  <phrase title="siropu_chat_setting_option_inverse_message_direction" version_id="1" version_string="2.0.0"><![CDATA[Inverse message direction]]></phrase>
+  <phrase title="siropu_chat_setting_option_maximized_mode" version_id="1" version_string="2.0.0"><![CDATA[Enable maximized mode]]></phrase>
+  <phrase title="siropu_chat_setting_option_mention_messages" version_id="200010" version_string="2.0.0"><![CDATA[Mention messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_normal_messages" version_id="1" version_string="2.0.0"><![CDATA[Normal messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_private_messages" version_id="1" version_string="2.0.0"><![CDATA[Private messages]]></phrase>
+  <phrase title="siropu_chat_setting_option_receive_mention_alerts" version_id="200010" version_string="2.0.0"><![CDATA[Receive mention alerts]]></phrase>
+  <phrase title="siropu_chat_setting_option_show_ignored" version_id="200010" version_string="2.0.0"><![CDATA[Show messages from ignored users]]></phrase>
+  <phrase title="siropu_chat_setting_option_whisper_messages" version_id="1" version_string="2.0.0"><![CDATA[Whisper messages]]></phrase>
+  <phrase title="siropu_chat_settings" version_id="1" version_string="2.0.0"><![CDATA[Settings]]></phrase>
+  <phrase title="siropu_chat_settings_change_reload_page" version_id="200010" version_string="2.0.0"><![CDATA[Please reload the page to see the changes.]]></phrase>
+  <phrase title="siropu_chat_since_date" version_id="200010" version_string="2.0.0"><![CDATA[Since date...]]></phrase>
+  <phrase title="siropu_chat_slap_message" version_id="2012270" version_string="2.1.22"><![CDATA[{fromUser} slapped {toUser}!]]></phrase>
+  <phrase title="siropu_chat_slap_objects" version_id="2012270" version_string="2.1.22"><![CDATA[Slap objects]]></phrase>
+  <phrase title="siropu_chat_slap_objects_explain" version_id="2012270" version_string="2.1.22"><![CDATA[By providing a list of objects here, the slap command will randomly select an object from the list to slap the user with. Place each object name on a new row.]]></phrase>
+  <phrase title="siropu_chat_slap_with_x_message" version_id="2012270" version_string="2.1.22"><![CDATA[{fromUser} slapped {toUser} with a {object}!]]></phrase>
+  <phrase title="siropu_chat_something_went_wrong" version_id="200010" version_string="2.0.0"><![CDATA[Ups! Something went wrong!]]></phrase>
+  <phrase title="siropu_chat_sound_notifications" version_id="2002170" version_string="2.0.21"><![CDATA[Sound notifications]]></phrase>
+  <phrase title="siropu_chat_start_chat" version_id="2002770" version_string="2.0.27"><![CDATA[Start chat]]></phrase>
+  <phrase title="siropu_chat_start_private_chat_conversation_with_x" version_id="2002770" version_string="2.0.27"><![CDATA[Start private chat conversation with {name}]]></phrase>
+  <phrase title="siropu_chat_start_private_conversation" version_id="1" version_string="2.0.0"><![CDATA[Start private conversation]]></phrase>
+  <phrase title="siropu_chat_status" version_id="2001370" version_string="2.0.13"><![CDATA[Status]]></phrase>
+  <phrase title="siropu_chat_submit" version_id="1" version_string="2.0.0"><![CDATA[Submit]]></phrase>
+  <phrase title="siropu_chat_tag_user" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Tag user]]></phrase>
+  <phrase title="siropu_chat_this_month" version_id="200010" version_string="2.0.0"><![CDATA[This month]]></phrase>
+  <phrase title="siropu_chat_this_week" version_id="200010" version_string="2.0.0"><![CDATA[This week]]></phrase>
+  <phrase title="siropu_chat_thread_reply" version_id="2002370" version_string="2.0.23" global_cache="1"><![CDATA[[URL={url}][SIZE=2][I](Thread reply)[I][/SIZE][/URL]]]></phrase>
+  <phrase title="siropu_chat_today" version_id="200010" version_string="2.0.0"><![CDATA[Today]]></phrase>
+  <phrase title="siropu_chat_top_chatters" version_id="200010" version_string="2.0.0"><![CDATA[Top Chatters]]></phrase>
+  <phrase title="siropu_chat_top_chatters_limit" version_id="1" version_string="2.0.0"><![CDATA[Top chatters limit]]></phrase>
+  <phrase title="siropu_chat_top_chatters_limit_explain" version_id="1" version_string="2.0.0"><![CDATA[Specify the maximum number of users that should be shown in this widget.]]></phrase>
+  <phrase title="siropu_chat_type_nick_to_set_your_nickname" version_id="200010" version_string="2.0.0"><![CDATA[Type /nick followed by the desired name to set your nickname.]]></phrase>
+  <phrase title="siropu_chat_type_to_find_rooms" version_id="200010" version_string="2.0.0"><![CDATA[Type to find rooms...]]></phrase>
+  <phrase title="siropu_chat_unavailable_message" version_id="200010" version_string="2.0.0"><![CDATA[Chat unavailable message]]></phrase>
+  <phrase title="siropu_chat_unavailable_message_explain" version_id="200010" version_string="2.0.0"><![CDATA[If set, this option allows you to display a message when the chat is not available.]]></phrase>
+  <phrase title="siropu_chat_unknown_command" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Unknown command: /{command}]]></phrase>
+  <phrase title="siropu_chat_unknown_custom_command" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Unknown custom command: //{command} Type //name value to create a custom command.]]></phrase>
+  <phrase title="siropu_chat_unknown_prune_option" version_id="2010170" version_string="2.1.1"><![CDATA[Unknown prune option. Available options: a number from 1 to 99, all, forum, media, resource or a valid username.]]></phrase>
+  <phrase title="siropu_chat_until_date" version_id="200010" version_string="2.0.0"><![CDATA[Until date...]]></phrase>
+  <phrase title="siropu_chat_update_status" version_id="1" version_string="2.0.0"><![CDATA[Update status]]></phrase>
+  <phrase title="siropu_chat_update_status_explain" version_id="1" version_string="2.0.0"><![CDATA[Your status will be displayed under your username in chatters list. Max {length} characters.]]></phrase>
+  <phrase title="siropu_chat_upload_image" version_id="200010" version_string="2.0.0"><![CDATA[Upload image]]></phrase>
+  <phrase title="siropu_chat_url_copied_to_clipboard" version_id="2012170" version_string="2.1.21"><![CDATA[URL copied to clipboard.]]></phrase>
+  <phrase title="siropu_chat_user_cannot_be_sanctioned" version_id="200010" version_string="2.0.0"><![CDATA[{user} cannot be sanctioned.]]></phrase>
+  <phrase title="siropu_chat_user_data_has_been_reset" version_id="2001370" version_string="2.0.13"><![CDATA[Chat user data has been successfully reset.]]></phrase>
+  <phrase title="siropu_chat_user_has_posted_at_least_x_messages" version_id="2001470" version_string="2.0.14"><![CDATA[User has posted at least X chat messages]]></phrase>
+  <phrase title="siropu_chat_user_has_posted_no_more_than_x_messages" version_id="2001470" version_string="2.0.14"><![CDATA[User has posted no more than X chat messages]]></phrase>
+  <phrase title="siropu_chat_user_language" version_id="2001770" version_string="2.0.17"><![CDATA[User language]]></phrase>
+  <phrase title="siropu_chat_user_language_explain" version_id="2001770" version_string="2.0.17"><![CDATA[This option allows you to display room based on the user's account language setting.]]></phrase>
+  <phrase title="siropu_chat_user_tagging_button" version_id="2001370" version_string="2.0.13"><![CDATA[Use @ button before the username]]></phrase>
+  <phrase title="siropu_chat_user_tagging_username" version_id="2001370" version_string="2.0.13"><![CDATA[Use the username as the button]]></phrase>
+  <phrase title="siropu_chat_user_x_has_not_been_banned_from_room" version_id="200010" version_string="2.0.0"><![CDATA[{user} has not been banned from this room.]]></phrase>
+  <phrase title="siropu_chat_user_x_has_not_been_kicked_from_room" version_id="200010" version_string="2.0.0"><![CDATA[{user} has not been kicked from this room.]]></phrase>
+  <phrase title="siropu_chat_user_x_has_not_been_muted_in_room" version_id="200010" version_string="2.0.0"><![CDATA[{user} has not been muted in this room.]]></phrase>
+  <phrase title="siropu_chat_users" version_id="1" version_string="2.0.0"><![CDATA[Users]]></phrase>
+  <phrase title="siropu_chat_view_archive" version_id="1" version_string="2.0.0"><![CDATA[View archive]]></phrase>
+  <phrase title="siropu_chat_view_message_in_archive" version_id="200010" version_string="2.0.0"><![CDATA[View message in archive]]></phrase>
+  <phrase title="siropu_chat_view_sanctions" version_id="200010" version_string="2.0.0"><![CDATA[View sanctions]]></phrase>
+  <phrase title="siropu_chat_view_top_chatters" version_id="1" version_string="2.0.0"><![CDATA[View top chatters]]></phrase>
+  <phrase title="siropu_chat_viewing_chat_archive" version_id="2010670" version_string="2.1.6"><![CDATA[Viewing chat archive]]></phrase>
+  <phrase title="siropu_chat_viewing_chat_page" version_id="1" version_string="2.0.0"><![CDATA[Viewing chat page]]></phrase>
+  <phrase title="siropu_chat_viewing_chat_room" version_id="2010670" version_string="2.1.6"><![CDATA[Viewing chat room]]></phrase>
+  <phrase title="siropu_chat_viewing_message_by" version_id="200010" version_string="2.0.0"><![CDATA[Viewing message by {username}]]></phrase>
+  <phrase title="siropu_chat_viewing_top_chatters" version_id="2010670" version_string="2.1.6"><![CDATA[Viewing top chatters]]></phrase>
+  <phrase title="siropu_chat_whisper" version_id="1" version_string="2.0.0"><![CDATA[Whisper]]></phrase>
+  <phrase title="siropu_chat_whisper_command_invalid_arguments" version_id="2000035" version_string="2.0.0"><![CDATA[Invalid arguments. You have to specify a recipient and a message in the format of: [username] message]]></phrase>
+  <phrase title="siropu_chat_whisper_command_no_message" version_id="2000033" version_string="2.0.0 Beta 3"><![CDATA[A message is required in order to whisper.]]></phrase>
+  <phrase title="siropu_chat_whisper_command_no_recipients" version_id="2000070" version_string="2.0.0"><![CDATA[No valid recipients have been provided.]]></phrase>
+  <phrase title="siropu_chat_widget_no_top_chatters" version_id="1" version_string="2.0.0"><![CDATA[There are no chatters in the top.]]></phrase>
+  <phrase title="siropu_chat_widget_rooms" version_id="200010" version_string="2.0.0"><![CDATA[Chat rooms]]></phrase>
+  <phrase title="siropu_chat_widget_top_chatters" version_id="1" version_string="2.0.0"><![CDATA[Top chatters]]></phrase>
+  <phrase title="siropu_chat_widget_users" version_id="1" version_string="2.0.0"><![CDATA[Chat users]]></phrase>
+  <phrase title="siropu_chat_write_a_message" version_id="200010" version_string="2.0.0"><![CDATA[Write a message...]]></phrase>
+  <phrase title="siropu_chat_write_private_message" version_id="1" version_string="2.0.0"><![CDATA[Write a private message...]]></phrase>
+  <phrase title="siropu_chat_write_public_message" version_id="1" version_string="2.0.0"><![CDATA[Write a public message...]]></phrase>
+  <phrase title="siropu_chat_x_already_joined_room" version_id="200010" version_string="2.0.0"><![CDATA[{name} has already joined this room.]]></phrase>
+  <phrase title="siropu_chat_x_cannot_join_room" version_id="200010" version_string="2.0.0"><![CDATA[{name} cannot join the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_already_been_invited_to_join_room" version_id="200010" version_string="2.0.0"><![CDATA[{name} has already been invited to join the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_an_active_room_sanction" version_id="200010" version_string="2.0.0"><![CDATA[{name} has an active room sanction and cannot join the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_banned_by_x_permanently" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been banned by {moderator} permanently.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_banned_by_x_permanently_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been banned by {moderator} permanently for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_banned_by_x_until_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been banned by {moderator} until {date}.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_banned_by_x_until_x_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been banned by {moderator} until {date} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_invited_to_join_room" version_id="200010" version_string="2.0.0"><![CDATA[{name} has been invited to join the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_kicked_by_x_permanently" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been kicked by {moderator} permanently.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_kicked_by_x_permanently_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been kicked by {moderator} permanently for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_kicked_by_x_until_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been kicked by {moderator} until {date}.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_kicked_by_x_until_x_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been kicked by {moderator} until {date} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_muted_by_x_permanently" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been muted by {moderator} permanently.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_muted_by_x_permanently_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been muted by {moderator} permanently for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_muted_by_x_until_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been muted by {moderator} until {date}.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_muted_by_x_until_x_for_reason_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been muted by {moderator} until {date} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_x_has_been_sanctioned_for_x_hours" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[{user} has been sanctioned for {length} hours.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_banned" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully banned.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_kicked" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully kicked.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_muted" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully muted.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_unbanned" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully unbanned.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_unkicked" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully unkicked.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_successfully_unmuted" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been successfully unmuted.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_unbanned_by_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been unbanned by {moderator}.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_unkicked_by_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been unkicked by {moderator}.]]></phrase>
+  <phrase title="siropu_chat_x_has_been_unmuted_by_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has been unmuted by {moderator}.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_all_messages_by_x" version_id="200010" version_string="2.0.0"><![CDATA[{user} has deleted all the messages posted by {author}.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_all_the_messages" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has deleted all the messages.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_forum_notification_messages" version_id="2010170" version_string="2.1.1"><![CDATA[{user} has deleted the forum notification messages.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_media_notification_messages" version_id="2010170" version_string="2.1.1"><![CDATA[{user} has deleted the media gallery notification messages.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_resource_notification_messages" version_id="2010170" version_string="2.1.1"><![CDATA[{user} has deleted the resource notification messages.]]></phrase>
+  <phrase title="siropu_chat_x_has_deleted_the_last_x_messages" version_id="2010170" version_string="2.1.1"><![CDATA[{user} has deleted the last {number} messages.]]></phrase>
+  <phrase title="siropu_chat_x_has_joined_the_room" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has joined the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_left_the_conversation" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has left the conversation and will not be able to see any new messages. {user} can rejoin the conversation anytime. If you leave the conversation as well, the conversation will get deleted.]]></phrase>
+  <phrase title="siropu_chat_x_has_left_the_room" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has left the room.]]></phrase>
+  <phrase title="siropu_chat_x_has_left_the_room_message" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[{user} has left the room ({message}).]]></phrase>
+  <phrase title="siropu_chat_x_has_pruned_the_chat" version_id="200010" version_string="2.0.0"><![CDATA[{user} has pruned the chat.]]></phrase>
+  <phrase title="siropu_chat_x_invited_you_to_join_room_x" version_id="200010" version_string="2.0.0"><![CDATA[{name} has invited you to join the chat room "{room}".]]></phrase>
+  <phrase title="siropu_chat_x_mentioned_you_in_a_chat_message_in_room_x" version_id="2010270" version_string="2.1.2"><![CDATA[{name} mentioned you in a <a href="{message_url}">chat message</a> in "{room}" room.]]></phrase>
+  <phrase title="siropu_chat_x_reacted_to_your_conversation_message_y" version_id="2002770" version_string="2.0.27"><![CDATA[{user} reacted to your chat conversation message {item} with {reaction}.]]></phrase>
+  <phrase title="siropu_chat_x_reacted_to_your_room_message_y" version_id="2002770" version_string="2.0.27"><![CDATA[{user} reacted to your chat room message {item} with {reaction}.]]></phrase>
+  <phrase title="siropu_chat_x_started_a_private_conversation_with_you" version_id="2000035" version_string="2.0.0"><![CDATA[{name} has started a <a href="{conv_url}">private chat conversation</a> with you.]]></phrase>
+  <phrase title="siropu_chat_yesterday" version_id="200010" version_string="2.0.0"><![CDATA[Yesterday]]></phrase>
+  <phrase title="siropu_chat_you_are_not_logged_in" version_id="200010" version_string="2.0.0"><![CDATA[You are not logged in.]]></phrase>
+  <phrase title="siropu_chat_you_cannot_join_more_than_one_room" version_id="200010" version_string="2.0.0"><![CDATA[You cannot join more than one room at the same time.]]></phrase>
+  <phrase title="siropu_chat_you_cannot_join_more_than_x_rooms" version_id="200010" version_string="2.0.0"><![CDATA[You cannot join more than {limit} rooms at the same time.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_from_chat_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned from the chat by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_from_chat_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned from the chat by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_from_room_x_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned from the room "{roomName}" by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_from_room_x_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned from the room "{roomName}" by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_permanently" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[You have been banned permanently for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_permanently_from_chat_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned permanently from the chat by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_permanently_from_chat_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned permanently from the chat by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_permanently_from_room_x_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned permanently from the room "{roomName}" by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_permanently_from_room_x_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been banned permanently from the room "{roomName}" by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_banned_until" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[You have been banned until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_from_chat_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked from the chat by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_from_chat_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked from the chat by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_from_room_x_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked from the room "{roomName}" by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_from_room_x_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked from the room "{roomName}" by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_permanently" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked permanently for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_permanently_from_chat_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked permanently from the chat by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_permanently_from_chat_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked permanently from the chat by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_permanently_from_room_x_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked permanently from the room "{roomName}" by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_permanently_from_room_x_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been kicked permanently from the room "{roomName}" by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_kicked_until" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[You have been kicked until {date}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_in_chat_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted in the chat by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_in_chat_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted in the chat by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_in_room_x_by_x_until_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted in the room "{roomName}" by {author} until {date}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_in_room_x_by_x_until_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted in the room "{roomName}" by {author} until {date} for the following reason: {reason}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_permanently_in_chat_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted permanently in the chat by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_permanently_in_chat_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted permanently in the chat by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_permanently_in_room_x_by_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted permanently in the room "{roomName}" by {author}.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_muted_permanently_in_room_x_by_x_for_the_following_reason_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been muted permanently in the room "{roomName}" by {author} for the following reason: {reason}]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unbanned_from_chat" version_id="2002670" version_string="2.0.26"><![CDATA[You have been unbanned from the chat.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unbanned_from_room_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been unbanned from the room "{roomName}".]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unkicked_from_chat" version_id="2002670" version_string="2.0.26"><![CDATA[You have been unkicked from the chat.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unkicked_from_room_x" version_id="2002670" version_string="2.0.26"><![CDATA[You have been unkicked from the room "{roomName}".]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unmuted_in_chat" version_id="2002670" version_string="2.0.26"><![CDATA[You have been unmuted in the chat.]]></phrase>
+  <phrase title="siropu_chat_you_have_been_unmuted_in_room_x" version_id="2020770" version_string="2.2.7"><![CDATA[You have been unmuted in the room "{roomName}".]]></phrase>
+  <phrase title="siropu_chat_you_have_left_the_room" version_id="200010" version_string="2.0.0"><![CDATA[You have left the room.]]></phrase>
+  <phrase title="siropu_chat_you_have_left_the_room_x" version_id="200010" version_string="2.0.0"><![CDATA[You have left the room "{name}".]]></phrase>
+  <phrase title="siropu_chat_you_have_unread_conversation_messages_from_x" version_id="2000870" version_string="2.0.8"><![CDATA[You have unread <a href="{conv_url}">chat conversation message(s)</a> from {name}.]]></phrase>
+  <phrase title="siropu_chat_you_joined_private_room_x_created_by_x" version_id="2002770" version_string="2.0.27"><![CDATA[You have joined the private room "{room}" created by "{name}".]]></phrase>
+  <phrase title="siropu_chat_you_left_private_room_x" version_id="2002770" version_string="2.0.27"><![CDATA[You have left the private room "{room}".]]></phrase>
+  <phrase title="siropu_chat_your_custom_commands" version_id="200010" version_string="2.0.0"><![CDATA[Your custom commands]]></phrase>
+  <phrase title="siropu_chat_your_message_color" version_id="1" version_string="2.0.0"><![CDATA[Your message color]]></phrase>
+  <phrase title="siropu_chat_your_nickname_has_been_set_to_x" version_id="200010" version_string="2.0.0"><![CDATA[Your nickname has been set to "{nickname}".]]></phrase>
+  <phrase title="siropu_chat_your_status_has_beed_removed" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Your status has been removed.]]></phrase>
+  <phrase title="siropu_chat_your_status_has_beed_set_to_x" version_id="200010" version_string="2.0.0" global_cache="1"><![CDATA[Your status has been set to: {status}]]></phrase>
+  <phrase title="style_prop.siropuChatActiveUserCountBadgeColor" version_id="200010" version_string="2.0.0"><![CDATA[Active user count badge color]]></phrase>
+  <phrase title="style_prop.siropuChatActiveUserCountColor" version_id="200010" version_string="2.0.0"><![CDATA[Active user count color]]></phrase>
+  <phrase title="style_prop.siropuChatAnnouncement" version_id="2002570" version_string="2.0.25"><![CDATA[Message row announcement]]></phrase>
+  <phrase title="style_prop.siropuChatBarButton" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Chat bar button]]></phrase>
+  <phrase title="style_prop.siropuChatBarContainer" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Chat bar container]]></phrase>
+  <phrase title="style_prop.siropuChatContainer" version_id="200010" version_string="2.0.0"><![CDATA[Chat container]]></phrase>
+  <phrase title="style_prop.siropuChatContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[Chat content height]]></phrase>
+  <phrase title="style_prop.siropuChatContentHeightMobile" version_id="2011970" version_string="2.1.19"><![CDATA[Chat mobile content height]]></phrase>
+  <phrase title="style_prop.siropuChatConversationListItem" version_id="200010" version_string="2.0.0"><![CDATA[Conversation list item]]></phrase>
+  <phrase title="style_prop.siropuChatConversationListItemActive" version_id="200010" version_string="2.0.0"><![CDATA[Conversation list item active]]></phrase>
+  <phrase title="style_prop.siropuChatConversationListItemHover" version_id="200010" version_string="2.0.0"><![CDATA[Conversation list item hover]]></phrase>
+  <phrase title="style_prop.siropuChatDateTime" version_id="2000270" version_string="2.0.2"><![CDATA[Message date]]></phrase>
+  <phrase title="style_prop.siropuChatDeleteIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Delete icon color]]></phrase>
+  <phrase title="style_prop.siropuChatEditIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Edit icon color]]></phrase>
+  <phrase title="style_prop.siropuChatEditorInput" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Chat editor input]]></phrase>
+  <phrase title="style_prop.siropuChatEditorToolbar" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Chat editor toolbar]]></phrase>
+  <phrase title="style_prop.siropuChatHelpIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Help icon color]]></phrase>
+  <phrase title="style_prop.siropuChatIconFontSize" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Icon font size]]></phrase>
+  <phrase title="style_prop.siropuChatLikeIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Like icon color]]></phrase>
+  <phrase title="style_prop.siropuChatLinkIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Link icon color]]></phrase>
+  <phrase title="style_prop.siropuChatMaximizedContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[Chat maximized mode content height]]></phrase>
+  <phrase title="style_prop.siropuChatMessageText" version_id="2000870" version_string="2.0.8"><![CDATA[Message text]]></phrase>
+  <phrase title="style_prop.siropuChatNoUserCountBadgeColor" version_id="200010" version_string="2.0.0"><![CDATA[No user count badge color]]></phrase>
+  <phrase title="style_prop.siropuChatNoUserCountColor" version_id="200010" version_string="2.0.0"><![CDATA[No user count color]]></phrase>
+  <phrase title="style_prop.siropuChatOptionsIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Options icon color]]></phrase>
+  <phrase title="style_prop.siropuChatPageContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[Chat page content height]]></phrase>
+  <phrase title="style_prop.siropuChatQuoteIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Quote icon color]]></phrase>
+  <phrase title="style_prop.siropuChatReportIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Report icon color]]></phrase>
+  <phrase title="style_prop.siropuChatRoomListItem" version_id="200010" version_string="2.0.0"><![CDATA[Room list item]]></phrase>
+  <phrase title="style_prop.siropuChatRulesIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Rules icon color]]></phrase>
+  <phrase title="style_prop.siropuChatSanctionIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Sanction icon color]]></phrase>
+  <phrase title="style_prop.siropuChatSettingsIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Settings icon color]]></phrase>
+  <phrase title="style_prop.siropuChatTabsContainer" version_id="200010" version_string="2.0.0"><![CDATA[Tabs container]]></phrase>
+  <phrase title="style_prop.siropuChatTabsItem" version_id="200010" version_string="2.0.0"><![CDATA[Tabs item default]]></phrase>
+  <phrase title="style_prop.siropuChatTabsItemActive" version_id="200010" version_string="2.0.0"><![CDATA[Tabs item active]]></phrase>
+  <phrase title="style_prop.siropuChatTabsItemBadge" version_id="200010" version_string="2.0.0"><![CDATA[Tabs item user count badge]]></phrase>
+  <phrase title="style_prop.siropuChatTabsItemHover" version_id="200010" version_string="2.0.0"><![CDATA[Tabs item hover]]></phrase>
+  <phrase title="style_prop.siropuChatUnlikeIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Unlike icon color]]></phrase>
+  <phrase title="style_prop.siropuChatUserMention" version_id="2020170" version_string="2.2.1"><![CDATA[Message row user mention container]]></phrase>
+  <phrase title="style_prop.siropuChatUserMentionDate" version_id="2020170" version_string="2.2.1"><![CDATA[Message row user mention date]]></phrase>
+  <phrase title="style_prop.siropuChatUserStatus" version_id="200010" version_string="2.0.0"><![CDATA[User status]]></phrase>
+  <phrase title="style_prop.siropuChatUsersIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[Users icon color]]></phrase>
+  <phrase title="style_prop.siropuChatWhosTypingContainer" version_id="2020070" version_string="2.2.0"><![CDATA[Who's typing container]]></phrase>
+  <phrase title="style_prop_desc.siropuChatActiveUserCountBadgeColor" version_id="200010" version_string="2.0.0"><![CDATA[The color of the user count badge for chat navigation and tabs when there are active users in the chat.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatActiveUserCountColor" version_id="200010" version_string="2.0.0"><![CDATA[The color of the user count for chat navigation and tabs when there are active users in the chat.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatAnnouncement" version_id="2002570" version_string="2.0.25"><![CDATA[Styling of the message row for announcements.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatBarButton" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The bar button that displays the number of chat users.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatBarContainer" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The chat bar that shows up at the bottom of the screen when using "All pages" mode.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatContainer" version_id="200010" version_string="2.0.0"><![CDATA[The main chat container.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[The height of the chat content.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatContentHeightMobile" version_id="2011970" version_string="2.1.19"><![CDATA[The height of the chat content on mobile devices.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatConversationListItem" version_id="200010" version_string="2.0.0"><![CDATA[Individual item in the conversation user list.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatConversationListItemActive" version_id="200010" version_string="2.0.0"><![CDATA[Individual item in the conversation user list, active state.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatConversationListItemHover" version_id="200010" version_string="2.0.0"><![CDATA[Individual item in the conversation user list, hover state.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatDateTime" version_id="2000270" version_string="2.0.2"><![CDATA[Styling of the message date.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatDeleteIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the delete icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatEditIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the edit icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatEditorInput" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The chat editor input box.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatEditorToolbar" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The chat editor toolbar.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatHelpIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the help icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatIconFontSize" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The font size of all the icons used in the chat.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatLikeIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the like icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatLinkIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the link icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatMaximizedContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[The height of the chat content in maximized mode.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatMessageText" version_id="2000870" version_string="2.0.8"><![CDATA[Styling of the message text.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatNoUserCountBadgeColor" version_id="200010" version_string="2.0.0"><![CDATA[The color of the user count badge for chat navigation and tabs when there are no active users in the chat.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatNoUserCountColor" version_id="200010" version_string="2.0.0"><![CDATA[The color of the user count for chat navigation and tabs when there are no active users in the chat.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatOptionsIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the options icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatPageContentHeight" version_id="200010" version_string="2.0.0"><![CDATA[The height of the chat content on the dedicated chat page.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatQuoteIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the quote icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatReportIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the report icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatRoomListItem" version_id="200010" version_string="2.0.0"><![CDATA[Individual room list item.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatRulesIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the rules icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatSanctionIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the sanction icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatSettingsIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the settings icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatTabsContainer" version_id="200010" version_string="2.0.0"><![CDATA[The container of the tabs.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatTabsItem" version_id="200010" version_string="2.0.0"><![CDATA[Individual tab item default state.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatTabsItemActive" version_id="200010" version_string="2.0.0"><![CDATA[Individual tab item active state.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatTabsItemBadge" version_id="200010" version_string="2.0.0"><![CDATA[Individual tab item user count badge.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatTabsItemHover" version_id="200010" version_string="2.0.0"><![CDATA[Individual tab item hover state.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatUnlikeIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the unlike icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatUserMention" version_id="2020170" version_string="2.2.1"><![CDATA[Styling of the message row container for user mentions.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatUserMentionDate" version_id="2020170" version_string="2.2.1"><![CDATA[Styling of the message row date for user mentions.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatUserStatus" version_id="200010" version_string="2.0.0"><![CDATA[Styling of the user status.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatUsersIconColor" version_id="200010" version_string="2.0.0 Beta 1"><![CDATA[The color of the users icon.]]></phrase>
+  <phrase title="style_prop_desc.siropuChatWhosTypingContainer" version_id="2020070" version_string="2.2.0"><![CDATA[Style the container of "who's typing" list.]]></phrase>
+  <phrase title="style_prop_group.siropuChat" version_id="200010" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="style_prop_group_desc.siropuChat" version_id="200010" version_string="2.0.0"><![CDATA[Customize style for Chat by Siropu.]]></phrase>
+  <phrase title="widget_def.siropu_chat" version_id="200010" version_string="2.0.0"><![CDATA[Chat]]></phrase>
+  <phrase title="widget_def.siropu_chat_rooms" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Rooms]]></phrase>
+  <phrase title="widget_def.siropu_chat_top_chatters" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Top chatters]]></phrase>
+  <phrase title="widget_def.siropu_chat_users" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Active users]]></phrase>
+  <phrase title="widget_def_desc.siropu_chat" version_id="1" version_string="2.0.0"><![CDATA[Displays Chat by Siropu.]]></phrase>
+  <phrase title="widget_def_desc.siropu_chat_rooms" version_id="1" version_string="2.0.0"><![CDATA[Display Chat by Siropu rooms.]]></phrase>
+  <phrase title="widget_def_desc.siropu_chat_top_chatters" version_id="1" version_string="2.0.0"><![CDATA[Display Chat by Siropu top chatters.]]></phrase>
+  <phrase title="widget_def_desc.siropu_chat_users" version_id="1" version_string="2.0.0"><![CDATA[Display Chat by Siropu active users.]]></phrase>
+  <phrase title="widget_pos.siropu_chat_above_content" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Above content]]></phrase>
+  <phrase title="widget_pos.siropu_chat_above_forum_list" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Above forum list]]></phrase>
+  <phrase title="widget_pos.siropu_chat_all_pages" version_id="200010" version_string="2.0.0"><![CDATA[Chat: All pages]]></phrase>
+  <phrase title="widget_pos.siropu_chat_below_breadcrumb" version_id="2002170" version_string="2.0.21"><![CDATA[Chat: Below breadcrumb]]></phrase>
+  <phrase title="widget_pos.siropu_chat_below_content" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Below content]]></phrase>
+  <phrase title="widget_pos.siropu_chat_below_forum_list" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Below forum list]]></phrase>
+  <phrase title="widget_pos.siropu_chat_page" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Chat page]]></phrase>
+  <phrase title="widget_pos.siropu_chat_page_sidebar" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Chat page sidebar]]></phrase>
+  <phrase title="widget_pos.siropu_chat_sidebar_bottom" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Sidebar bottom]]></phrase>
+  <phrase title="widget_pos.siropu_chat_sidebar_top" version_id="200010" version_string="2.0.0"><![CDATA[Chat: Sidebar top]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_above_content" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_above_forum_list" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_all_pages" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_below_breadcrumb" version_id="2002170" version_string="2.0.21"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_below_content" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_below_forum_list" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_page" version_id="200010" version_string="2.0.0"><![CDATA[Dedicated chat page.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_page_sidebar" version_id="200010" version_string="2.0.0"><![CDATA[Sidebar position for chat page.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_sidebar_bottom" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+  <phrase title="widget_pos_desc.siropu_chat_sidebar_top" version_id="200010" version_string="2.0.0"><![CDATA[Position for Chat by Siropu.]]></phrase>
+</phrases>

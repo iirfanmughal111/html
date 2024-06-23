@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_includeLanguages" edit_format="template" data_type="array" validation_class="FS\Translator\Languages" validation_method="verifyLanguages" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>option_template_fs_languages</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="fs_translator" display_order="30"/>
+  </option>
+  <option option_id="fs_t_FlagStyle" edit_format="select" data_type="string" advanced="0">
+    <default_value>2d</default_value>
+    <edit_format_params>2d=2D (.svg)
+3d=3D (.png)</edit_format_params>
+    <relation group_id="fs_translator" display_order="9"/>
+  </option>
+  <option option_id="fs_t_NativeLanguage" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="fs_translator" display_order="15"/>
+  </option>
+  <option option_id="fs_t_alternativeFlags" edit_format="template" data_type="array" validation_class="FS\Translator\Languages" validation_method="verifyAltFlags" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>option_template_fs_alt_flags</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="fs_translator" display_order="20"/>
+  </option>
+  <option option_id="fs_t_autoSwitch" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="fs_translator" display_order="10"/>
+  </option>
+  <option option_id="fs_t_defaultLanguage" edit_format="select" data_type="string" advanced="0">
+    <default_value>en</default_value>
+    <edit_format_params>af=Afrikaans
+sq=Albanian
+am=Amharic
+ar=Arabic
+hy=Armenian
+az=Azerbaijani
+eu=Basque
+be=Belarusian
+bn=Bengali
+bs=Bosnian
+bg=Bulgarian
+ca=Catalan
+ceb=Cebuano
+ny=Chichewa
+zh-CN=Chinese (Simplified)
+zh-TW=Chinese (Traditional)
+co=Corsican
+hr=Croatian
+cs=Czech
+da=Danish
+nl=Dutch
+en=English
+eo=Esperanto
+et=Estonian
+tl=Filipino
+fi=Finnish
+fr=French
+fy=Frisian
+gl=Galician
+ka=Georgian
+de=German
+el=Greek
+gu=Gujarati
+ht=Haitian Creole
+ha=Hausa
+haw=Hawaiian
+iw=Hebrew
+hi=Hindi
+hmn=Hmong
+hu=Hungarian
+is=Icelandic
+ig=Igbo
+id=Indonesian
+ga=Irish
+it=Italian
+ja=Japanese
+jw=Javanese
+kn=Kannada
+kk=Kazakh
+km=Khmer
+ko=Korean
+ku=Kurdish (Kurmanji)
+ky=Kyrgyz
+lo=Lao
+la=Latin
+lv=Latvian
+lt=Lithuanian
+lb=Luxembourgish
+mk=Macedonian
+mg=Malagasy
+ms=Malay
+ml=Malayalam
+mt=Maltese
+mi=Maori
+mr=Marathi
+mn=Mongolian
+my=Myanmar (Burmese)
+ne=Nepali
+no=Norwegian
+ps=Pashto
+fa=Persian
+pl=Polish
+pt=Portuguese
+pa=Punjabi
+ro=Romanian
+ru=Russian
+sm=Samoan
+gd=Scottish Gaelic
+sr=Serbian
+st=Sesotho
+sn=Shona
+sd=Sindhi
+si=Sinhala
+sk=Slovak
+sl=Slovenian
+so=Somali
+es=Spanish
+su=Sundanese
+sw=Swahili
+sv=Swedish
+tg=Tajik
+ta=Tamil
+te=Telugu
+th=Thai
+tr=Turkish
+uk=Ukrainian
+ur=Urdu
+uz=Uzbek
+vi=Vietnamese
+cy=Welsh
+xh=Xhosa
+yi=Yiddish
+yo=Yoruba
+zu=Zulu</edit_format_params>
+    <relation group_id="fs_translator" display_order="1"/>
+  </option>
+  <option option_id="fs_t_openDirection" edit_format="select" data_type="string" advanced="0">
+    <default_value>top</default_value>
+    <edit_format_params>left=Left
+right=Right
+top=Top
+bottom=Bottom</edit_format_params>
+    <relation group_id="fs_translator" display_order="4"/>
+  </option>
+  <option option_id="fs_t_showLanguage" edit_format="select" data_type="string" advanced="0">
+    <default_value>top_right</default_value>
+    <edit_format_params>no=No
+bottom_left=Bottom left
+bottom_right=Bottom right
+top_left=Top left
+top_right=Top right</edit_format_params>
+    <relation group_id="fs_translator" display_order="3"/>
+  </option>
+  <option option_id="fs_t_widgetLook" edit_format="select" data_type="string" advanced="0">
+    <default_value>float</default_value>
+    <edit_format_params>float=Float
+globe=Globe
+dropdown_with_flags=Nice dropdown with flags
+popup=Popup
+dropdown=Dropdown
+flags=Flags
+flags_dropdown=Flags and dropdown
+flags_name=Flags with language name
+flags_code=Flags with language code
+lang_names=Language names
+lang_codes=Language codes</edit_format_params>
+    <relation group_id="fs_translator" display_order="2"/>
+  </option>
+</options>

@@ -1,0 +1,9 @@
+{
+    "template": "search_forum_view",
+    "description": "addFiltersToNavParam",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:pagenav.*?\"block-outer-main\" \\/>/si",
+    "replace": "<xf:if is=\"$filters\">\n<xf:pagenav page=\"{$page}\" perpage=\"{$perPage}\" total=\"{$total}\"\n\t\t\tlink=\"search-forums/search\" data=\"{$searchForum}\" params=\"{$filters}\" \n\t\t\twrapperclass=\"block-outer-main\" />\n\t\t\n<xf:else />\n\n<xf:pagenav page=\"{$page}\" perpage=\"{$perPage}\" total=\"{$total}\"\n\t\t\tlink=\"search-forums\" data=\"{$searchForum}\"\n\t\t\twrapperclass=\"block-outer-main\" />\n</xf:if>\n"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="dbtechEcommerceEnableInfiniteScroll" group_name="dbtechEcommerce" title="Enable Infinite Scroll" description="Toggles whether infinite scrolling is enabled for this style." property_type="value" value_type="boolean" value_group="infiniteScroll" display_order="100">
+    <value>1</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceFeaturedRibbon" group_name="dbtechEcommerce" title="Featured Ribbon" description="Definition of the ribbon that will be shown when a product is featured." property_type="css" display_order="300" css_components="text,extra">
+    <value>{
+    "color": "#FFFFFF",
+    "extra": ".m-gradient(xf-diminish(@xf-textColorAttention, 9%), @xf-textColorAttention, @xf-textColorAttention);\nbox-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceFeaturedRibbonBorder" group_name="dbtechEcommerce" title="Featured Ribbon: Surrounding Border" description="The border that gives the &quot;wrap around&quot; effect." property_type="css" display_order="400" css_components="border">
+    <value>{
+    "border-width": "3px",
+    "border-color": "@xf-textColorAttention"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInfiniteScrollAfter" group_name="dbtechEcommerce" title="Only require click after X pages" description="If you want to require click only after a certain amount of pages have loaded, set this here.&lt;br /&gt;&#10;0 = Always require click" property_type="value" value_type="number" depends_on="dbtechEcommerceInfiniteScrollClick" value_group="infiniteScroll" display_order="300">
+    <value>"0"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInfiniteScrollClick" group_name="dbtechEcommerce" title="Require click to load" description="Controls whether loading the next page happens automatically, or upon pressing a button." property_type="value" value_type="boolean" depends_on="dbtechEcommerceEnableInfiniteScroll" value_group="infiniteScroll" display_order="200">
+    <value>1</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInfiniteScrollHistory" group_name="dbtechEcommerce" title="Append to browser history" description="If selected, new pages loaded will also update the browser's history." property_type="value" value_type="boolean" depends_on="dbtechEcommerceEnableInfiniteScroll" value_group="infiniteScroll" display_order="400">
+    <value>1</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInvoiceBackground" group_name="dbtechEcommerce" title="Invoice: Background" description="The background wrapper for the invoice itself." property_type="css" display_order="1000" css_components="background,extra">
+    <value>{
+    "background-color": "white",
+    "background-image": "none"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInvoiceHeader" group_name="dbtechEcommerce" title="Invoice: Header/logo row" description="The header row contains your logo and sits at the top of the first page of the invoice." property_type="css" display_order="1010" css_components="text,background,border,padding,extra">
+    <value>{
+    "border-bottom-width": "1px",
+    "border-bottom-color": "@xf-chromeBg",
+    "padding-bottom": "@xf-paddingMedium"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceInvoicePageWrapper" group_name="dbtechEcommerce" title="Invoice: Page wrapper" description="The main page wrapper inside the &lt;body&gt; tag." property_type="css" display_order="1005" css_components="background,extra">
+    <value>{
+    "background-color": "white",
+    "background-image": "none",
+    "extra": "position: relative;\ntop: 1cm;\nleft: 1cm;\nwidth: 19cm;\nheight: 27.6cm;"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceLicenseReleaseList" group_name="dbtechEcommerce" title="List recent releases on license page" description="Toggles whether the list of recent releases is enabled in the license area for this style." property_type="value" value_type="boolean" value_group="licenseList" display_order="1200">
+    <value>1</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceProductListStyle" group_name="dbtechEcommerce" title="Product list style" description="This only affects the category view and the main home page overview." property_type="value" value_type="radio" value_group="productList" display_order="1100">
+    <value_parameters>grid={{ phrase('dbtech_ecommerce_grid') }}
+list={{ phrase('list') }}</value_parameters>
+    <value>"grid"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceProductRatingCircleBarColor" group_name="dbtechEcommerce" title="Product Rating Circle: Bar Color" description="The color of the rating circle bar." property_type="value" value_type="color" value_group="productInfo" display_order="1130">
+    <value>"@xf-paletteColor3"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceProductRatingCircleBarWidth" group_name="dbtechEcommerce" title="Product Rating Circle: Bar Width" description="The width of the bar in the product rating circle" property_type="value" value_type="unit" value_group="productInfo" display_order="1110">
+    <value>"10px"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceProductRatingCircleBgColor" group_name="dbtechEcommerce" title="Product Rating Circle: Background Color" description="The background color for the product rating circle's bar." property_type="value" value_type="color" value_group="productInfo" display_order="1120">
+    <value>"@xf-pageBg"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceProductRatingStyle" group_name="dbtechEcommerce" title="Product rating style" description="Toggles how a product's rating appears in the sidebar on the product information page." property_type="value" value_type="radio" value_group="productInfo" display_order="1100">
+    <value_parameters>circle={{ phrase('dbtech_ecommerce_circle') }}
+stars={{ phrase('dbtech_ecommerce_stars') }}</value_parameters>
+    <value>"circle"</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceSaleRibbon" group_name="dbtechEcommerce" title="Sale Ribbon" description="Definition of the ribbon that will be shown when a product is on sale." property_type="css" display_order="100" css_components="text,extra">
+    <value>{
+    "color": "#FFFFFF",
+    "extra": ".m-gradient(xf-diminish(@xf-successColor, 9%), @xf-successColor, @xf-successColor);\nbox-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceSaleRibbonBorder" group_name="dbtechEcommerce" title="Sale Ribbon: Surrounding Border" description="The border that gives the &quot;wrap around&quot; effect." property_type="css" display_order="200" css_components="border">
+    <value>{
+    "border-width": "3px",
+    "border-color": "@xf-successColor"
+}</value>
+  </style_property>
+  <style_property property_name="dbtechEcommerceShowOwnerOverview" group_name="dbtechEcommerce" title="Show product owner on overview list" property_type="value" value_type="boolean" value_group="productList" display_order="1000">
+    <value>0</value>
+  </style_property>
+</style_properties>

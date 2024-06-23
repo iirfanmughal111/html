@@ -1,0 +1,12 @@
+<xf:if is="$extra.status==1">
+{{ phrase('fs_escrow_withdraw_confiremed', {
+		'name':$extra.username,
+		'amount': $extra.amount
+
+}) }}
+	<xf:elseif is="$extra.status==0"/>
+	{{ phrase('fs_escrow_withdraw_error', {
+		'name':$extra.username,
+		'amount': $extra.amount
+}) }}
+</xf:if>

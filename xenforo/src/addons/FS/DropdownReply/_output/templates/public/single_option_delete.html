@@ -1,0 +1,25 @@
+<xf:title>{{ phrase('confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('opt-reply/deletesingle',$thread_id) }}"   class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_are_you_sure_to_delete_option') }}
+				<xf:if is="$contentUrl">
+					<strong><a href="{$contentUrl}">{$optiontitle}</a></strong>
+				<xf:else />
+					<strong>{$optiontitle}</strong>
+					<input name='thread_id' value="{$thread_id}" type="hidden">
+					<input name='id' value="{$id}" type="hidden">
+					
+				</xf:if>
+				<xf:if is="$deletionImportantPhrase">
+					<div class="blockMessage blockMessage--important blockMessage--iconic">
+						{{ phrase_dynamic($deletionImportantPhrase) }}
+					</div>
+				</xf:if>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="delete" />
+	</div>
+</xf:form>

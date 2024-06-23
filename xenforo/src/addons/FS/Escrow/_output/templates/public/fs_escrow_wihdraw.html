@@ -1,0 +1,18 @@
+<xf:title> {{ phrase('fs_escrow_withdraw') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+
+<xf:form
+  action="{{ link('escrow/withdraw-request') }}"
+  class="block"
+	ajax="false"
+>
+  <div class="block-container">
+    <div class="block-body">
+		<xf:textboxrow label="{{ phrase('fs_escrow_address_from') }}" value="{$source_address}" readonly="true" />
+	    <xf:textboxrow name="destination_address" label="{{ phrase('fs_escrow_address_to') }}" />
+		<xf:numberboxrow min="0" name="withdraw_amount" explain="{{ phrase('escrow_current_amount') }} {{phrase('fs_escrow_amount_symbol')}}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0}}" label="{{ phrase('fs_escrow_amount') }}" />
+    <xf:submitrow submit="" icon="save" />
+  </div>
+	  </div>
+	  
+</xf:form>

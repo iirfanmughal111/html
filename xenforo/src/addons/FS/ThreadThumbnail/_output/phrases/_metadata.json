@@ -1,0 +1,104 @@
+{
+    "fs_add_thumbnail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "113f7a1094e1a3aacee8385d96c770a4"
+    },
+    "fs_thread_image_format_required.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "288c3e17eb984d56cb677bce851ac4e6"
+    },
+    "fs_thread_image_process_error.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "57df69a7f99fae8599a82c5a93a76f55"
+    },
+    "fs_thread_thumbnail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "113f7a1094e1a3aacee8385d96c770a4"
+    },
+    "fs_thread_thumbnail_explain.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "229ecce585eb05b9845c60b06e25aa33"
+    },
+    "fs_thread_thumbnail_img.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "276e5a54c38245ab85226321d03e6fed"
+    },
+    "fs_thread_thumbnail_required.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "b651efdb98a5d6bd2b3935d0c3f4a5e2"
+    },
+    "fs_thread_thumbnail_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "92493826d4f58e68600eb9c74be3e62a"
+    },
+    "fs_thumbnail_image_demension_required.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a7471028444f18c2659b9a60d936428f"
+    },
+    "fs_thumbnail_image_required.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2f5ed620207b128314586ef738a84650"
+    },
+    "fs_thumbnail_title_required.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d5e64da82c4b5544eaf5e07b016070f4"
+    },
+    "option.thumbnailImageDimensions.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "409e3d5f1ae75a1d490ed37ee6d59ec7"
+    },
+    "option_explain.thumbnailImageDimensions.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "0fedeb48ca75b60ea12b9359bac7c1af"
+    },
+    "option_group.fs_thread_thumbnail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d3eeb2c46fead91eab1166172f1a3bf4"
+    },
+    "option_group_description.fs_thread_thumbnail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "permission.fs_thread_thumbnail_group_fs_thread_thumbnail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "169fd1714ae432221cce95f8d4ed0f3f"
+    },
+    "permission_interface.fs_Thread_Thumbnail_perms.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d3eeb2c46fead91eab1166172f1a3bf4"
+    }
+}

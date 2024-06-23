@@ -1,0 +1,20 @@
+.upload_photo_modal .header-cont, .upload_banner_modal .header-cont {
+    background-color: #5C66FF;
+    text-align: center;
+    padding: 20px 0;
+}
+#edit_profile_name,#edit_profile_tag{display: none;}
+.game-details-inner img{max-width: 100%;height: auto !important;}
+.upload_banner_modal .modal-dialog{max-width: auto !important;}
+.creditcard.stripecard {padding: 10px;}
+.form-group.creditcard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.lockicon {
+    height: 16px;
+    width: auto;
+}
+

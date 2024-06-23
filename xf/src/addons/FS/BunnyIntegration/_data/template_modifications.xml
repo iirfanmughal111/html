@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="forum_post_thread" modification_key="upload_button" description="upload button" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$xf.options.multiQuote">]]></find>
+    <replace><![CDATA[<xf:if is="{{ $xf.visitor.hasPermission('fs_bunny', 'allow') AND $xf.options.fs_bi_accessKey AND $xf.options.fs_bi_libraryId }}">
+
+	<xf:macro template="bunny_helper_attach_upload" name="upload_block"
+								arg-attachmentData="{$attachmentData}"
+								arg-forceHash="{$forum.draft_thread.attachment_hash}" />
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="helper_attach_upload" modification_key="fs_bunny_integration_dub_btn" description="Add Bunny Upload Btn" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:button href="{{ link('attachments/upload', null, {'type': $type, 'context': $context, 'hash': $hash}) }}"
+		target="_blank" class="button--link js-attachmentUpload" icon="attach"
+		data-accept=".{$constraints.extensions|join(',.')}"
+		data-video-size="{$constraints.video_size}" />]]></find>
+    <replace><![CDATA[<xf:if is="{{ $xf.visitor.hasPermission('fs_bunny', 'allow') AND $xf.options.fs_bi_accessKey AND $xf.options.fs_bi_libraryId }}">
+	<xf:js src="Bunny/OnClickBunny.js"/>
+	<xf:js src="Bunny/extend_manager.js"/>
+	<xf:button href="{{ link('attachments/upload', null, {'type': $type, 'context': $context, 'hash': $hash}) }}"
+			   target="_blank" class="button--link js-attachmentUpload" icon="attach"
+			   data-accept=".{$constraints.extensions|join(',.')}"
+			   data-video-size="{$constraints.video_size}" id="attachVideoBtn"/>
+	<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="post_edit" modification_key="upload_bunny" description="upload bunny" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:formrow rowtype="{{ \$quickEdit \? 'fullWidth noLabel mergePrev' : '' }}">.*?<\/xf:formrow>/si]]></find>
+    <replace><![CDATA[$0
+<xf:if is="{{ $xf.visitor.hasPermission('fs_bunny', 'allow') AND $xf.options.fs_bi_accessKey AND $xf.options.fs_bi_libraryId }} && $post.isFirstPost()">
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<xf:js>
+	$(document).ready(function() {
+		
+			$("#bunnyVideoBtn").click(function () {
+			
+				$('input[name="isBunnyUpload"]').val("1");
+			});
+			 $("#attachVideoBtn").click(function () {
+				
+			  $('input[name="isBunnyUpload"]').val("0");
+			});
+	});
+</xf:js>
+	<xf:macro template="bunny_helper_attach_upload" name="upload_block"
+								arg-attachmentData="{$attachmentData}"
+								arg-forceHash="{$forum.draft_thread.attachment_hash}" />
+</xf:if>
+]]></replace>
+  </modification>
+</template_modifications>

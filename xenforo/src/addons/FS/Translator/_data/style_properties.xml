@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="gtf_float" group_name="cxfGoogleTranslateForum" title="Float" property_type="value" value_type="radio" display_order="120">
+    <value_parameters>left=left
+right=right</value_parameters>
+    <value>"right"</value>
+  </style_property>
+  <style_property property_name="gtf_options" group_name="cxfGoogleTranslateForum" title="Set style for FS Translator" property_type="value" value_type="radio" display_order="10">
+    <value_parameters>HORIZONTAL=horizontal translate button
+VERTICAL=vertical translate button
+SIMPLE=simple translate button, with no text</value_parameters>
+    <value>"HORIZONTAL"</value>
+  </style_property>
+  <style_property property_name="gtf_positions" group_name="cxfGoogleTranslateForum" title="Predefined positions for FS Translator" description="*use Custom position to add the template for instance in a widget, advertising positons or any other location. Just include &lt;code&gt;cxf_google_translate_forum&lt;/code&gt; template anywhere you want to show the Google Translate." property_type="value" value_type="radio" display_order="100">
+    <value_parameters>above_notices=above notices
+below_notices=below notices
+below_bottom_breadcrumbs=below bottom breadcrumbs
+custom=custom</value_parameters>
+    <value>"below_notices"</value>
+  </style_property>
+  <style_property property_name="gtf_style" group_name="cxfGoogleTranslateForum" title="Styling" property_type="css" display_order="200" css_components="padding,extra">
+    <value>{
+    "padding-top": "20px",
+    "padding-bottom": "20px"
+}</value>
+  </style_property>
+</style_properties>

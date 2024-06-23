@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_moveThread_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Move post as thread]]></phrase>
+  <phrase title="fs_post_as_thread" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post as Thread]]></phrase>
+  <phrase title="permission.fs_move_post_perm_group_fs_move_post_as_thread" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Allow to move post as a new thread]]></phrase>
+  <phrase title="permission_interface.fs_move_Thread_perms_group" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Move Post]]></phrase>
+  <phrase title="you_sure_you_want_to_move_this_posts_to_new_thread" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Are you sure you want to move this post as a new thread?]]></phrase>
+</phrases>

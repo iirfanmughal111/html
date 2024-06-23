@@ -1,0 +1,71 @@
+<div class="block" style="margin-top:5px;">
+
+		  <xf:button
+    href="{{ link('conversations/add',null,{'to':$thread.User.username}) }}"
+    class="button"
+    >{{ phrase('fs_register_pm_me') }}</xf:button
+  >
+	  <xf:button
+    href="{{ link('members',$thread.User) }}"
+    class="button"
+    >{{ phrase('fs_register_my_profile') }}</xf:button
+  >
+	
+		<xf:if is="$xf.visitor->account_type==1">		
+		<xf:button
+				   href="{{ link('members/Mailpopup',$thread.User) }}"
+				   class="button"
+				   overlay="true"
+				   >{{ phrase('fs_register_email_me') }}</xf:button
+			>
+	</xf:if>
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{ phrase('fs_register_hair_color') }}
+					</dt>
+				<dd>
+					
+			{{$thread.User.Profile.custom_fields.haircolor}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_eyes')}}
+					</dt>
+				<dd>
+					{{$thread.User.Profile.custom_fields.eyes}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_age')}}
+					</dt>
+				<dd>
+					{{phrase('fs_register_age_view',{'age':{$thread.User.Profile.custom_fields.age}})}}
+					
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_height')}}
+					</dt>
+				<dd>
+					{$thread.User.Profile.custom_fields.height}
+				</dd>
+			</dl>
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+			<dt>
+				{{phrase('fs_register_ethincity')}}
+			</dt>
+			<dd>
+				{$thread.User.Profile.custom_fields.ethnicity}
+			</dd>
+		</dl>
+	
+		
+
+	
+</div>

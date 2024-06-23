@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="fs_threadHash_cron" cron_class="FS\ThreadHash\Cron\UpdateHash" cron_method="ChangeHash" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0,6,12,18],"minutes":[0]}]]></entry>
+</cron>

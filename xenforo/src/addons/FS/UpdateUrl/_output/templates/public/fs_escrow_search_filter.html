@@ -1,0 +1,30 @@
+<xf:form action="{{ link('escrow') }}">
+	<div class="menu-row">
+    {{ phrase('fs_auction_username:') }}
+    <div class="u-inputSpacer">
+      	<xf:textbox name="fs_escrow_username" value="{$conditions.fs_escrow_username}" ac="single" />
+    </div>
+  </div>
+	
+	<div class="menu-row menu-row--separated">
+			{{ phrase('fs_auction_status:') }}
+			<div class="u-inputSpacer">
+				<xf:select name="fs_escrow_status" value="{$conditions.fs_auction_status}">
+					<xf:option value="all" selected="true" label="{{ phrase('all') }}" />
+					<xf:option value="1" label="{{ phrase('fs_auction_active') }}" />
+					<xf:option value="0" label="{{ phrase('fs_auction_expired') }}" />
+				</xf:select>
+			</div>
+		</div>
+	
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>

@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "link-proxy",
+    "sub_name": "",
+    "format": ":int<list_id>/:page",
+    "build_class": "",
+    "build_method": "",
+    "controller": "DC\\LinkProxy:LinkProxy",
+    "context": "",
+    "action_prefix": ""
+}

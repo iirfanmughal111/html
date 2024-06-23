@@ -1,0 +1,9 @@
+{
+    "template": "member_shared_ips_list",
+    "description": "remove_ip_filter_from_fromList",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<li><a href=\"{{ link('misc/ip-info', '', {'ip': $ip.ip|ip}) }}\" target=\"_blank\">{$ip.ip|ip}</a></li>",
+    "replace": "<li><a href=\"{{ link('misc/ip-info', '', {'ip': $ip.ip}) }}\" target=\"_blank\">{$ip.ip}</a></li>"
+}

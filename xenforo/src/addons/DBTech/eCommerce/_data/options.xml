@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="dbtechEcommerceAddonProductTitle" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>[{parent}] {title}</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1020"/>
+  </option>
+  <option option_id="dbtechEcommerceAddress" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"required":true,"onlyPaid":true,"validate":false}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceAddress</edit_format_params>
+    <sub_options>required
+onlyPaid
+validate</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2050"/>
+  </option>
+  <option option_id="dbtechEcommerceAddressCountry" edit_format="callback" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>DBTech\eCommerce\Option\Country::renderSelect</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="3075"/>
+  </option>
+  <option option_id="dbtechEcommerceAllowAnonReview" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1387"/>
+  </option>
+  <option option_id="dbtechEcommerceApiLicenseFilterField" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="5010"/>
+  </option>
+  <option option_id="dbtechEcommerceApiLicenseFilterStrict" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="5020"/>
+  </option>
+  <option option_id="dbtechEcommerceApplyRounding" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="debug" display_order="1030"/>
+  </option>
+  <option option_id="dbtechEcommerceAutomaticInvoices" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="3010"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessAddress1" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3040"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessAddress2" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3050"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessAddress3" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3060"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessAddress4" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3070"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessCo" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3030"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessTaxId" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3080"/>
+  </option>
+  <option option_id="dbtechEcommerceBusinessTitle" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="3020"/>
+  </option>
+  <option option_id="dbtechEcommerceConfirmationEmail" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="debug" display_order="1010"/>
+  </option>
+  <option option_id="dbtechEcommerceConfirmationMailboxLogin" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"imapHost":"","imapPort":"","imapMailbox":"INBOX","imapAuth":"none","imapLoginUsername":"","imapLoginPassword":"","imapEncrypt":""}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceConfirmationMailboxLogin</edit_format_params>
+    <sub_options>imapHost
+imapPort
+imapMailbox
+imapAuth
+imapLoginUsername
+imapLoginPassword
+imapEncrypt</sub_options>
+    <relation group_id="debug" display_order="1020"/>
+  </option>
+  <option option_id="dbtechEcommerceContentDeleteThreadAction" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"action":"close","update_title":"1","title_template":"{title} [Deleted]","add_post":"1"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceContentDeleteThreadAction</edit_format_params>
+    <sub_options>action
+update_title
+title_template
+add_post</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="1015"/>
+  </option>
+  <option option_id="dbtechEcommerceCoupons" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"enabled":"1","alwaysShow":"1"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceCoupons</edit_format_params>
+    <sub_options>enabled
+alwaysShow</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="1310"/>
+  </option>
+  <option option_id="dbtechEcommerceCurrency" edit_format="template" data_type="string" advanced="0">
+    <default_value>USD</default_value>
+    <edit_format_params>option_template_dbtechEcommerceCurrency</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="2001"/>
+  </option>
+  <option option_id="dbtechEcommerceCustomerGroup" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>XF\Option\UserGroup::renderSelect</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1135"/>
+  </option>
+  <option option_id="dbtechEcommerceDefaultAddressCountry" edit_format="callback" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>DBTech\eCommerce\Option\Country::renderSelect</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1150"/>
+  </option>
+  <option option_id="dbtechEcommerceDefaultProductOwner" edit_format="username" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1140"/>
+  </option>
+  <option option_id="dbtechEcommerceDownloadsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1247"/>
+  </option>
+  <option option_id="dbtechEcommerceEnableApi" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="dbtechEcommerce" display_order="5001"/>
+  </option>
+  <option option_id="dbtechEcommerceEnableCheckoutProductPage" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1340"/>
+  </option>
+  <option option_id="dbtechEcommerceEnableConfirmationMailbox" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="debug" display_order="1000"/>
+  </option>
+  <option option_id="dbtechEcommerceEnableIncomeGraph" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1305"/>
+  </option>
+  <option option_id="dbtechEcommerceEnableRate" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1374"/>
+  </option>
+  <option option_id="dbtechEcommerceExpiredRenewDiscount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>25</default_value>
+    <edit_format_params>min=0
+max=100</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="2130"/>
+  </option>
+  <option option_id="dbtechEcommerceExpiryReminder" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"send_reminder":"1","expiry_length_amount":"7","expiry_length_unit":"day"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceExpiryReminder</edit_format_params>
+    <sub_options>send_reminder
+expiry_length_amount
+expiry_length_unit</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2260"/>
+  </option>
+  <option option_id="dbtechEcommerceGeneratedFilename" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>{title} [{license_key}]</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1025"/>
+  </option>
+  <option option_id="dbtechEcommerceHtmlInvoice" edit_format="onofftextbox" data_type="array" validation_class="DBTech\eCommerce\Option\Invoice" validation_method="verifyHtmlInvoice" advanced="0">
+    <default_value>{"enabled":"0","path":""}</default_value>
+    <edit_format_params>onoff=enabled
+value=path</edit_format_params>
+    <sub_options>enabled
+path</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="3015"/>
+  </option>
+  <option option_id="dbtechEcommerceInvoiceActive" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="3001"/>
+  </option>
+  <option option_id="dbtechEcommerceInvoiceIconDate" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="debug" display_order="10000"/>
+  </option>
+  <option option_id="dbtechEcommerceInvoiceIconPath" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="debug" display_order="10000"/>
+  </option>
+  <option option_id="dbtechEcommerceInvoiceOverrideStyle" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>DBTech\eCommerce\Option\Style::renderSelect</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="3016"/>
+  </option>
+  <option option_id="dbtechEcommerceListDefaultOrder" edit_format="select" data_type="string" advanced="0">
+    <default_value>last_update</default_value>
+    <edit_format_params>last_update={{ phrase('dbtech_ecommerce_last_update') }}
+creation_date={{ phrase('dbtech_ecommerce_creation_date') }}
+rating_weighted={{ phrase('rating') }}
+download_count={{ phrase('dbtech_ecommerce_downloads') }}
+title={{ phrase('title') }}
+random={{ phrase('dbtech_ecommerce_random') }}</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1265"/>
+  </option>
+  <option option_id="dbtechEcommerceLogEntriesPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1260"/>
+  </option>
+  <option option_id="dbtechEcommerceMaxDiscount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>50</default_value>
+    <edit_format_params>min=0
+max=100</edit_format_params>
+    <relation group_id="debug" display_order="500"/>
+  </option>
+  <option option_id="dbtechEcommerceMaxMindApiKey" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="dbtechEcommerce" display_order="2070"/>
+  </option>
+  <option option_id="dbtechEcommerceMinimumReviewLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1385"/>
+  </option>
+  <option option_id="dbtechEcommerceOrderCleanUp" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"do_cleanup":"1","inactive_length_amount":"1","inactive_length_unit":"month"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceOrderCleanUp</edit_format_params>
+    <sub_options>do_cleanup
+inactive_length_amount
+inactive_length_unit</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2250"/>
+  </option>
+  <option option_id="dbtechEcommerceOrderDefaultOrder" edit_format="select" data_type="string" advanced="0">
+    <default_value>order_date</default_value>
+    <edit_format_params>order_date={{ phrase('dbtech_ecommerce_order_date') }}
+order_state={{ phrase('dbtech_ecommerce_order_state') }}
+cost_amount={{ phrase('dbtech_ecommerce_order_total') }}</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1270"/>
+  </option>
+  <option option_id="dbtechEcommerceOrderReminder" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"send_reminder":"1","inactive_length_amount":"14","inactive_length_unit":"day","create_coupon":"1","coupon_percent":"10","length_amount":"7","length_unit":"day"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceOrderReminder</edit_format_params>
+    <sub_options>send_reminder
+inactive_length_amount
+inactive_length_unit
+create_coupon
+coupon_percent
+length_amount
+length_unit</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2240"/>
+  </option>
+  <option option_id="dbtechEcommerceOrdersPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1250"/>
+  </option>
+  <option option_id="dbtechEcommercePaymentProfileIds" edit_format="template" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>option_template_dbtechEcommercePaymentProfileIds</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2010"/>
+  </option>
+  <option option_id="dbtechEcommercePhysicalProductTitle" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>{title} ({variation})</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1019"/>
+  </option>
+  <option option_id="dbtechEcommerceProductIconMaxDimensions" edit_format="template" data_type="array" validation_class="XF\Option\Style" validation_method="triggerStyleUpdate" advanced="0">
+    <default_value>{"width":"","height":""}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceProductIconMaxDimensions</edit_format_params>
+    <sub_options>width
+height</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="1030"/>
+  </option>
+  <option option_id="dbtechEcommerceProductsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1245"/>
+  </option>
+  <option option_id="dbtechEcommerceReleaseThreadTitle" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>{title} [{category}]</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1026"/>
+  </option>
+  <option option_id="dbtechEcommerceRenewDiscount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>50</default_value>
+    <edit_format_params>min=0
+max=100</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="2120"/>
+  </option>
+  <option option_id="dbtechEcommerceRequireAccount" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="2020"/>
+  </option>
+  <option option_id="dbtechEcommerceRequireDownloadToRate" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1375"/>
+  </option>
+  <option option_id="dbtechEcommerceReviewRequired" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1380"/>
+  </option>
+  <option option_id="dbtechEcommerceReviewVoting" edit_format="radio" data_type="string" advanced="0">
+    <default_value>yes</default_value>
+    <edit_format_params>yes={{ phrase('yes_upvoting_and_downvoting') }}
+upvote={{ phrase('yes_upvoting_only') }}
+={{ phrase('no') }}</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1390"/>
+  </option>
+  <option option_id="dbtechEcommerceReviewsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <relation group_id="dbtechEcommerce" display_order="1255"/>
+  </option>
+  <option option_id="dbtechEcommerceSales" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"enabled":"1","alwaysShow":"1"}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceSales</edit_format_params>
+    <sub_options>enabled
+alwaysShow</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="1320"/>
+  </option>
+  <option option_id="dbtechEcommerceSalesTax" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"enabled":true,"digital":"buyer","physical":"seller","globalDefault":0,"includeTax":true,"enableVat":true,"apiKey":"","enhancedVatValidation":false}</default_value>
+    <edit_format_params>option_template_dbtechEcommerceSalesTax</edit_format_params>
+    <sub_options>enabled
+digital
+physical
+globalDefault
+includeTax
+enableVat
+apiKey
+enhancedVatValidation</sub_options>
+    <relation group_id="dbtechEcommerce" display_order="2060"/>
+  </option>
+  <option option_id="dbtechEcommerceSeparateRefundPolicy" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="dbtechEcommerce" display_order="2040"/>
+  </option>
+  <option option_id="dbtechEcommerceShippingAlert" edit_format="radio" data_type="string" advanced="0">
+    <default_value>seller</default_value>
+    <edit_format_params>seller={{ phrase('dbtech_ecommerce_seller') }}
+forum={{ phrase('dbtech_ecommerce_forum_contact') }}</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="2007"/>
+  </option>
+  <option option_id="dbtechEcommerceShippingWeightUnit" edit_format="radio" data_type="string" advanced="0">
+    <default_value>lbs</default_value>
+    <edit_format_params>lbs=lbs
+kg=kg</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="2005"/>
+  </option>
+  <option option_id="dbtechEcommerceTermsPageId" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>DBTech\eCommerce\Option\Page::renderSelect</edit_format_params>
+    <relation group_id="dbtechEcommerce" display_order="1130"/>
+  </option>
+</options>

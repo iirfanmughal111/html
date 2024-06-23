@@ -1,0 +1,9 @@
+{
+    "template": "post_edit",
+    "description": "AddpostEditSelector",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:editorrow name=\"message\" value=\"{$post.message}\"\n\t\t\t\tattachments=\"{$attachmentData.attachments}\"\n\t\t\t\trowtype=\"fullWidth noLabel\"\n\t\t\t\tdata-min-height=\"{{ $quickEdit ? 100 : '' }}\"\n\t\t\t\tlabel=\"{{ phrase('message') }}\"\n\t\t\t\tdata-preview-url=\"{{ link('posts/preview', $post) }}\" />",
+    "replace": "<xf:if is=\"$thread\">\t\n<xf:if is=\"$thread.is_dropdown_active\">\n\t\t<xf:selectrow\n        name=\"message\"\n        label=\"{{ phrase('dropdownReply') }}\"\n      >\n       \t\t<xf:option value=\"{$post.message}\">\n\t\t   {{snippet($post.message, 41, {'stripBbCode': true})}}\n\t\t\t</xf:option\n          >\n        <xf:foreach loop=\"$thread.dropdwon_options\" value=\"$val\">\n\t\t\t <xf:if is=\"$val && $val!=$post.message\">\n\t\t\t    <xf:option\n\t\t\t\tvalue=\"{$val}\"\n\t\t\t\t>{{snippet($val, 41, {'stripBbCode': true})}}\n\t\t\t\t</xf:option>\n\t\t\t</xf:if>\n\n        </xf:foreach>\n      </xf:selectrow>\n\t\n\t\t<xf:else />\n\t\t$0\n\t\t\n</xf:if>\n\t\n<xf:else />\n\t\t$0\n\t</xf:if>"
+}

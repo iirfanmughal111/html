@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_forum_gorups_per_row" edit_format="textbox" data_type="integer">
+    <default_value>3</default_value>
+    <relation group_id="fs_forum_groups" display_order="1"/>
+  </option>
+  <option option_id="fs_forum_groups_applicable_forum" edit_format="textbox" data_type="integer">
+    <default_value>0</default_value>
+    <relation group_id="fs_forum_groups" display_order="1"/>
+  </option>
+  <option option_id="fs_forum_groups_approval" edit_format="select" data_type="integer">
+    <default_value>0</default_value>
+    <edit_format_params>1=Yes
+0=No</edit_format_params>
+    <relation group_id="fs_forum_groups" display_order="1"/>
+  </option>
+</options>

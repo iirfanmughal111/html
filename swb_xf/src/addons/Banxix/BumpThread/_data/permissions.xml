@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="forum" permission_id="bump" permission_type="flag" interface_group_id="bumpThreadPermissions" display_order="10"/>
+  <permission permission_group_id="forum" permission_id="bumpDisable" permission_type="flag" interface_group_id="bumpThreadPermissions" display_order="100"/>
+  <permission permission_group_id="forum" permission_id="bumpFloodRate" permission_type="integer" interface_group_id="bumpThreadPermissions" display_order="1"/>
+  <permission permission_group_id="forum" permission_id="bumpMaxPerDay" permission_type="integer" interface_group_id="bumpThreadPermissions" display_order="1"/>
+  <permission permission_group_id="forum" permission_id="bumpOthers" permission_type="flag" interface_group_id="bumpThreadPermissions" display_order="20"/>
+</permissions>

@@ -1,0 +1,6 @@
+<xf:set var="$feedbackLink">{{ link('classifieds/give-feedback', {'listing_id': $alert.content_id} ) }}</xf:set>
+{{ phrase('z61_classifieds_you_have_been_listed_as_acquirer_of_item_x_being_sold_by_user_x', {
+	'title': '<a href="' . link('classifieds', $extra) .'" class="fauxBlockLink-blockLink">' . prefix('classifieds_listing', $extra.prefix_id) . $extra.title . '</a>',
+	'user': username_link($alert.User, false, {'defaultname': $alert.username}),
+	'feedbackLink': $feedbackLink
+}) }}

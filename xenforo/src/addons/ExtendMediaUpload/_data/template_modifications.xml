@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="EWRmedio_media_macros" modification_key="EMUsidebarpic" description="show the image of side bar of bunny net by uniq id" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="sidebar" arg-media="!" arg-customs="!">.*?<\/xf:macro>/si]]></find>
+    <replace><![CDATA[<xf:macro name="sidebar" arg-media="!" arg-customs="!">
+<xf:if is="$media.uniq_code">
+<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">{{ phrase('details') }}</h3>
+			<div class="block-body block-row medio-details">
+				<img src="https://{$xf.options.thumbnailcdnhost}/{$media.uniq_code}/thumbnail.jpg"  />
+				
+				<div class="medio-title medio-spacer">{{ date_time($media.media_date) }}</div>
+				<div>{{ phrase('posted_by') }} 
+					<xf:username href="{{ link('ewr-medio', '', {'poster':$media.user_id}) }}" user="$media.User" defaultname="$media.username" />
+				</div>
+				
+				<div class="medio-desc medio-spacer" data-xf-init="medio-seekable">
+					{{ bb_code($media.media_description, 'ewr_medio_media', $media) }}
+				</div>
+				
+				<div id="media-keylinks">
+					<xf:include template="EWRmedio_media_keylinks" />
+				</div>
+				<div id="media-userlinks">
+					<xf:include template="EWRmedio_media_userlinks" />
+				</div>
+				
+				<xf:foreach loop="$customs" value="$custom">
+					<xf:if is="$custom.value">
+						<xf:macro name="custom_block" arg-custom="{$custom}" />
+					</xf:if>
+				</xf:foreach>
+				
+				<div class="medio-title medio-spacer">
+					<a href="{{ link('ewr-medio', '', {'category':$media.category_id}) }}">{$media.Category.category_name}</a>
+				</div>
+				<div>
+					<xf:fa icon="fa-comments" /> {$media.media_comments|NUMBER} &nbsp; &nbsp;
+					<xf:fa icon="fa-thumbs-up" /> {$media.reaction_score|NUMBER} &nbsp; &nbsp;
+					<xf:fa icon="fa-eye" /> {$media.media_views|NUMBER}
+				</div>
+				
+				<div class="medio-title medio-spacer">
+					<xf:macro template="share_page_macros" name="share_clipboard_input"
+						arg-label="" arg-text="[medio]{$media.media_id}[/medio]" />
+				</div>
+			</div>
+		</div>
+	</div>
+<xf:else/>
+	
+	
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">{{ phrase('details') }}</h3>
+			<div class="block-body block-row medio-details">
+				<img src="{{ base_url($media.image) }}" />
+				
+				<div class="medio-title medio-spacer">{{ date_time($media.media_date) }}</div>
+				<div>{{ phrase('posted_by') }} 
+					<xf:username href="{{ link('ewr-medio', '', {'poster':$media.user_id}) }}" user="$media.User" defaultname="$media.username" />
+				</div>
+				
+				<div class="medio-desc medio-spacer" data-xf-init="medio-seekable">
+					{{ bb_code($media.media_description, 'ewr_medio_media', $media) }}
+				</div>
+				
+				<div id="media-keylinks">
+					<xf:include template="EWRmedio_media_keylinks" />
+				</div>
+				<div id="media-userlinks">
+					<xf:include template="EWRmedio_media_userlinks" />
+				</div>
+				
+				<xf:foreach loop="$customs" value="$custom">
+					<xf:if is="$custom.value">
+						<xf:macro name="custom_block" arg-custom="{$custom}" />
+					</xf:if>
+				</xf:foreach>
+				
+				<div class="medio-title medio-spacer">
+					<a href="{{ link('ewr-medio', '', {'category':$media.category_id}) }}">{$media.Category.category_name}</a>
+				</div>
+				<div>
+					<xf:fa icon="fa-comments" /> {$media.media_comments|NUMBER} &nbsp; &nbsp;
+					<xf:fa icon="fa-thumbs-up" /> {$media.reaction_score|NUMBER} &nbsp; &nbsp;
+					<xf:fa icon="fa-eye" /> {$media.media_views|NUMBER}
+				</div>
+				
+				<div class="medio-title medio-spacer">
+					<xf:macro template="share_page_macros" name="share_clipboard_input"
+						arg-label="" arg-text="[medio]{$media.media_id}[/medio]" />
+				</div>
+			</div>
+		</div>
+	</div>
+	</xf:if>
+</xf:macro>
+]]></replace>
+  </modification>
+  <modification type="public" template="EWRmedio_media_submit" modification_key="uploadvideochangeaction" description="changes in action" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:form action="{{ link('ewr-medio/submit') }}" class="block">]]></find>
+    <replace><![CDATA[<xf:form action="{{ link('ewr-medio/submit') }}" autocomplete="off" upload="true"  ajax="true">]]></replace>
+  </modification>
+  <modification type="public" template="EWRmedio_media_view" modification_key="youtubelink" description="remove the youtube link from the bunny videeos and add the slider" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:title>{$media.media_title}</xf:title>
+<xf:description><a href="{$media.url}" target="_blank">{$media.url}</a></xf:description>]]></find>
+    <replace><![CDATA[<xf:if is="$media.uniq_code">
+<xf:title>{$media.media_title}</xf:title>
+
+<xf:js src="ExtendMediaUpload/slider.js"  />
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+	
+		
+<xf:if is="$per_page == 1">
+	
+<xf:elseif is="$per_page == 2" />
+	
+	
+	<div id="image-slider" class="splide" data-splide='{"type":"loop","perPage":1}'>
+
+	<div class="splide__track">
+		<ul class="splide__list">
+			<xf:foreach loop="$uniq_code" value="$uniq_code">
+				<xf:if is="$media.uniq_code != $uniq_code.uniq_code">
+			<li class="splide__slide">
+		<a href="{{ link('ewr-medio', $uniq_code) }}">				
+<img src="https://{$xf.options.thumbnailcdnhost}/{$uniq_code.uniq_code}/thumbnail.jpg"  style="width: 220px; height: 150px" />		
+				</a>
+			</li>
+						</xf:if>
+				</xf:foreach>
+            
+		</ul>
+	</div>
+</div>
+	
+<xf:elseif is="$per_page == 3" />
+	
+	
+	<div id="image-slider" class="splide" data-splide='{"type":"loop","perPage":2}'>
+
+	<div class="splide__track">
+		<ul class="splide__list">
+			<xf:foreach loop="$uniq_code" value="$uniq_code">
+				<xf:if is="$media.uniq_code != $uniq_code.uniq_code">
+			<li class="splide__slide">
+		<a href="{{ link('ewr-medio', $uniq_code) }}">				
+<img src="https://{$xf.options.thumbnailcdnhost}/{$uniq_code.uniq_code}/thumbnail.jpg"  style="width: 220px; height: 150px" />		
+				</a>
+			</li>
+						</xf:if>
+				</xf:foreach>
+            
+		</ul>
+	</div>
+</div>
+
+	<xf:elseif is="$per_page == 4" />
+	
+	
+	<div id="image-slider" class="splide" data-splide='{"type":"loop","perPage":3}'>
+
+	<div class="splide__track">
+		<ul class="splide__list">
+			<xf:foreach loop="$uniq_code" value="$uniq_code">
+				<xf:if is="$media.uniq_code != $uniq_code.uniq_code">
+			<li class="splide__slide">
+		<a href="{{ link('ewr-medio', $uniq_code) }}">				
+<img src="https://{$xf.options.thumbnailcdnhost}/{$uniq_code.uniq_code}/thumbnail.jpg"  style="width: 220px; height: 150px" />		
+				</a>
+			</li>
+						</xf:if>
+				</xf:foreach>
+            
+		</ul>
+	</div>
+</div>
+	
+	<xf:else />
+	
+	<div id="image-slider" class="splide" data-splide='{"type":"loop","perPage":4}'>
+
+	<div class="splide__track">
+		<ul class="splide__list">
+			<xf:foreach loop="$uniq_code" value="$uniq_code">
+				<xf:if is="$media.uniq_code != $uniq_code.uniq_code">
+			<li class="splide__slide">
+		<a href="{{ link('ewr-medio', $uniq_code) }}">				
+<img src="https://{$xf.options.thumbnailcdnhost}/{$uniq_code.uniq_code}/thumbnail.jpg"  style="width: 220px; height: 150px" />		
+				</a>
+			</li>
+						</xf:if>
+				</xf:foreach>
+            
+		</ul>
+	</div>
+</div>
+
+	</xf:if>
+	
+    	
+<xf:else />
+	<xf:title>{$media.media_title}</xf:title>
+	<xf:description><a href="{$media.url}" target="_blank">{$media.url}</a></xf:description>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="EWRmedio_medias_macros" modification_key="EMUbunnylink" description="make the link in img src and add the code for thumbnail" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:macro name="media_tile" arg-media="!">.*?<\/xf:macro>/si]]></find>
+    <replace><![CDATA[<xf:macro name="media_tile" arg-media="!">
+<xf:if is="$media.uniq_code">
+<div class="medio-tile-block media-tile">
+		<div class="medio-tile-item">
+			<xf:if is="$xf.options.EWRmedio_redirect && $media.canEdit()">
+				<a href="{{ link('ewr-medio/edit', $media) }}" class="overlays botRight">
+					<xf:fa icon="fa-pencil" />
+				</a>
+			</xf:if>
+			
+			<a href="{{ link('ewr-medio', $media) }}" class="thumb">
+				
+				<xf:if is="$media.Service.service_type == 'video'">
+					<div class="overlays botRight"><b>
+						<xf:if is="$media.duration.hours">
+							{$media.duration.hours}:{$media.duration.mins|ZEROFILL(2)}:{$media.duration.secs|ZEROFILL(2)}
+						<xf:else/>
+							{$media.duration.mins}:{$media.duration.secs|ZEROFILL(2)}
+						</xf:if>
+					</b></div>
+				<xf:else/>
+					<div class="overlays topLeft"><b>
+						{$media.duration.secs} {{ phrase('EWRmedio_images') }}
+					</b></div>
+				</xf:if>
+
+				<div class="playall"><xf:fa icon="{$media.Service.class}" /></div>
+			<img src="https://{$xf.options.thumbnailcdnhost}/{$media.uniq_code}/thumbnail.jpg"  border="0" alt="" />
+			
+			</a>
+
+			<div class="title">
+				<a href="{{ link('ewr-medio', $media) }}"><b>{$media.media_title}</b></a>
+			</div>
+			<div class="date">{{ date_time($media.media_date) }}</div>
+			<div class="user">{{ phrase('posted_by') }}
+				<xf:username href="{{ link('ewr-medio', '', {'poster':$media.user_id}) }}" user="$media.User" defaultname="$media.username" />
+			</div>
+			<div class="category">
+				<a href="{{ link('ewr-medio', '', {'category':$media.category_id}) }}"><b>{$media.Category.category_name}</b></a>
+			</div>
+		</div>
+	</div>
+	
+<xf:else/>
+	
+	
+	<div class="medio-tile-block media-tile">
+		<div class="medio-tile-item">
+			<xf:if is="$xf.options.EWRmedio_redirect && $media.canEdit()">
+				<a href="{{ link('ewr-medio/edit', $media) }}" class="overlays botRight">
+					<xf:fa icon="fa-pencil" />
+				</a>
+			</xf:if>
+			
+			<a href="{{ link('ewr-medio', $media) }}" class="thumb">
+				<div class="overlays topRight"><b>{$media.Service.service_name}</b></div>
+				<xf:if is="!$xf.options.EWRmedio_redirect">
+					<div class="overlays botLeft"><b>
+						<xf:fa icon="fa-comments" /> {$media.media_comments|NUMBER}
+						<xf:fa icon="fa-thumbs-up" /> {$media.reaction_score|NUMBER}
+						<xf:fa icon="fa-eye" /> {$media.media_views|NUMBER}
+					</b></div>
+					
+				</xf:if>
+				<xf:if is="$media.Service.service_type == 'video'">
+					<div class="overlays botRight"><b>
+						<xf:if is="$media.duration.hours">
+							{$media.duration.hours}:{$media.duration.mins|ZEROFILL(2)}:{$media.duration.secs|ZEROFILL(2)}
+						<xf:else/>
+							{$media.duration.mins}:{$media.duration.secs|ZEROFILL(2)}
+						</xf:if>
+					</b></div>
+				<xf:else/>
+					<div class="overlays topLeft"><b>
+						{$media.duration.secs} {{ phrase('EWRmedio_images') }}
+					</b></div>
+				</xf:if>
+
+				<div class="playall"><xf:fa icon="{$media.Service.class}" /></div>
+			<img src="{{ base_url($media.image) }}" border="0" alt="" />
+			
+			</a>
+
+			<div class="title">
+				<a href="{{ link('ewr-medio', $media) }}"><b>{$media.media_title}</b></a>
+			</div>
+			<div class="date">{{ date_time($media.media_date) }}</div>
+			<div class="user">{{ phrase('posted_by') }}
+				<xf:username href="{{ link('ewr-medio', '', {'poster':$media.user_id}) }}" user="$media.User" defaultname="$media.username" />
+			</div>
+			<div class="category">
+				<a href="{{ link('ewr-medio', '', {'category':$media.category_id}) }}"><b>{$media.Category.category_name}</b></a>
+			</div>
+		</div>
+	</div>
+	</xf:if>
+</xf:macro>
+]]></replace>
+  </modification>
+</template_modifications>

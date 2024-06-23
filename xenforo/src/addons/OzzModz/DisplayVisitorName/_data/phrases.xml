@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option.ozzmodz_dvn_token" version_id="2000000" version_string="2.0.0"><![CDATA[Token for replacement]]></phrase>
+  <phrase title="option_explain.ozzmodz_dvn_token" version_id="2000000" version_string="2.0.0"><![CDATA[Enter the token that will be used for replacement to visitor name. Case insensitive.]]></phrase>
+  <phrase title="option_group.ozzmodz_dvn" version_id="2000000" version_string="2.0.0"><![CDATA[[OzzModz] Display Visitor Name]]></phrase>
+  <phrase title="option_group_description.ozzmodz_dvn" version_id="2000000" version_string="2.0.0"><![CDATA[]]></phrase>
+  <phrase title="ozzmodz_dvn_guest" version_id="2000000" version_string="2.0.0"><![CDATA[Guest]]></phrase>
+</phrases>

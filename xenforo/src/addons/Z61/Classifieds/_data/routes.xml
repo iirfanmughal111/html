@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="classifieds" controller="Z61\Classifieds:Classifieds" context="z61Classifieds"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/" controller="Z61\Classifieds:Category" context="z61ClassifiedCategories"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="conditions" format="conditions/:int&lt;condition_id,title&gt;/" controller="Z61\Classifieds:Conditions" context="z61ClassifiedConditions"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="fields" format="fields/:str&lt;field_id&gt;/" controller="Z61\Classifieds:ListingField" context="z61ClassifiedFields"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="listing-types" format="listing-types/:int&lt;listing_type_id,title&gt;/" controller="Z61\Classifieds:ListingType" context="z61ClassifiedListingType"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="packages" format="packages/:int&lt;package_id,title&gt;/" controller="Z61\Classifieds:Package" context="z61ClassifiedsPackages"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="prefixes" format="prefixes/:int&lt;prefix_id,title&gt;/" controller="Z61\Classifieds:ListingPrefix" context="z61ClassifiedPrefixes"/>
+  <route route_type="admin" route_prefix="classifieds" sub_name="prefixes/group" format="prefixes/group/:int&lt;prefix_group_id,title&gt;/" controller="Z61\Classifieds:ListingPrefix" context="classifieds" action_prefix="Group"/>
+  <route route_type="admin" route_prefix="permissions" sub_name="classifieds-categories" format="classifieds-categories/:int&lt;category_id,title&gt;/" controller="Z61\Classifieds:Permission" context="classifieds" action_prefix="category"/>
+  <route route_type="public" route_prefix="classifieds" format=":int&lt;listing_id,title&gt;/" controller="Z61\Classifieds:Listing" context="classifieds"/>
+  <route route_type="public" route_prefix="classifieds" sub_name="authors" format="authors/:int&lt;user_id,username&gt;/" controller="Z61\Classifieds:Author" context="classifieds"/>
+  <route route_type="public" route_prefix="classifieds" sub_name="categories" format="categories/:int&lt;category_id,title&gt;/" controller="Z61\Classifieds:Category" context="classifieds"/>
+  <route route_type="public" route_prefix="classifieds" sub_name="questions" format="questions/:int&lt;question_id&gt;/" controller="Z61\Classifieds:ListingQuestion" context="classifieds"/>
+  <route route_type="public" route_prefix="whats-new" sub_name="classifieds" format="classifieds/:int&lt;find_new_id&gt;/:page" controller="Z61\Classifieds:WhatsNewListing" context="classifieds"/>
+</routes>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permission_interface_groups>
+  <interface_group interface_group_id="dbtechEcommerce" display_order="3000" is_moderator="0"/>
+  <interface_group interface_group_id="dbtechEcommerceAdmin" display_order="3200" is_moderator="1"/>
+  <interface_group interface_group_id="dbtechEcommerceModerator" display_order="3100" is_moderator="1"/>
+</permission_interface_groups>

@@ -1,0 +1,9 @@
+{
+    "template": "forum_post_thread",
+    "description": "add_desc_as_ros",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if contentcheck=\"true\">\n\t\t\t\t\t<hr class=\"formRowSep\" \\/>\n\t\t\t\t\t<xf:contentcheck>.*?<\\/xf:contentcheck>\n\t\t\t\t<\\/xf:if>/is",
+    "replace": "$0\n<xf:if is=\"$forum.getReviewsThreadIds()\">\n\t<div class=\"developer-div\"> \n\t\t\t\t\t<xf:editorrow name=\"message\" class=\"developer\"\n\t\t\t\t\tvalue=\"{{ $post.message ?: $forum.draft_thread.message }}\"\n\t\t\t\t\tattachments=\"{{ $attachmentData ? $attachmentData.attachments : [] }}\"\n\t\t\t\t\trowtype=\"fullWidth noLabel mergePrev\"\n\t\t\t\t\tlabel=\"{{ phrase('fs_register_message') }}\"\n\t\t\t\t\tplaceholder=\"{{ phrase('fs_register_message') }}\"\n\t\t\t\t\tdata-preview-url=\"{{ link('forums/thread-preview', $forum) }}\" />\n\t\t\t\t</div>\n\t</xf:if>"
+}

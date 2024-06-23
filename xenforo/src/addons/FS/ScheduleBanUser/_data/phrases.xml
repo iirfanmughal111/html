@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="ban_user_on" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ban start]]></phrase>
+  <phrase title="cron_entry.fs_scheduleBanUsers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Schedule Ban User]]></phrase>
+  <phrase title="editScheduleBanUser" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Edit ]]></phrase>
+  <phrase title="fs_are_you_sure_to_cancel_user_ban" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Are you sure to cancel ban about this User : ]]></phrase>
+  <phrase title="fs_automatically_triggered" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Automatically triggered]]></phrase>
+  <phrase title="fs_ban_info_message" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please note, if you want to make a deal with this user, that it is blocked.]]></phrase>
+  <phrase title="fs_ban_info_post" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<i class="fas fa-exclamation-triangle"></i> Please note, this user will ban on : ]]></phrase>
+  <phrase title="fs_baninfo_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[If you are planning a transaction with his participation, we strongly recommend that you do not make it before the end of the blockage. If the user has already deceived you in any way, please contact our arbitration office so that we can resolve the problem as soon as possible.]]></phrase>
+  <phrase title="fs_baninfo_header" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[The user {user} is blocked]]></phrase>
+  <phrase title="fs_cancel_ban" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Cancel Ban]]></phrase>
+  <phrase title="fs_sch_ban_on" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ban on]]></phrase>
+  <phrase title="fs_sch_ban_user" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[User Banned]]></phrase>
+  <phrase title="fs_sch_baninfo_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ban In formation]]></phrase>
+  <phrase title="fs_sch_baninfo_header" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ban Information]]></phrase>
+  <phrase title="fs_schedule_Please_enter_future_date" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please enter a date in the future.]]></phrase>
+  <phrase title="fs_schedule_reason_for_banning" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Reason for banning]]></phrase>
+  <phrase title="fs_schedule_this_will_be_shown_to_user_if_provided" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[This will be shown to the user if provided.]]></phrase>
+  <phrase title="option.fs_scheduled_ban_user_timezone" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Timezones]]></phrase>
+  <phrase title="option_explain.fs_scheduled_ban_user_timezone" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[According to this Time Zone User will be banned.]]></phrase>
+  <phrase title="option_group.scheduled" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Scheduled Ban User]]></phrase>
+  <phrase title="option_group_description.scheduled" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="permission.general_fs_viewBannedProfile" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[View Banned Profile]]></phrase>
+  <phrase title="scheduleBanUser" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ban Member]]></phrase>
+  <phrase title="secheduleBan" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Schedule Ban User]]></phrase>
+</phrases>

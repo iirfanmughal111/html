@@ -1,0 +1,92 @@
+{
+    "DropdownOptions.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "190ee2d73e9bae0141e1c0c97d4ee8e9"
+    },
+    "DropdwonOptions.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dae8ace18bdcbcc6ae5aece263e14fe8"
+    },
+    "activeStatus.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "ec53a8c4f07baed5d8825072c89799be"
+    },
+    "addNewdropdownReply.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "9e8165450ef5b16b2b82f24dbc601c9d"
+    },
+    "dropdownReply.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c2d220bfd1ed0438e667085d57bb2c98"
+    },
+    "dropdownTitle.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "31c3a4617f53cfb98a48c59987a7d61a"
+    },
+    "editNewdropdownReply.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c13ee4fd00cee57d25631dda7a3afcfc"
+    },
+    "enter_new_replay.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "51ffde1baa54d0990eb7af2fa96fd0e4"
+    },
+    "fs_are_you_sure_to_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "871cc5734ba2d069e2ab771f606ede70"
+    },
+    "fs_are_you_sure_to_delete_option.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6ad086b06dcfb7d70ccd2c6c370d7bec"
+    },
+    "fs_dropdown_reply.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "7695df29bbc9d37f9ab812a966da645f"
+    },
+    "fs_dropdown_reply_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "196cf556857d1030cb09d8db7791f341"
+    },
+    "fs_dropdown_reply_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6f959f8a494d80c87718462ca18d7b8d"
+    },
+    "message_not_allowed.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "e5918e689004c5d7ce1e7b32358204ea"
+    },
+    "optionList.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "1d33a5e2bf6557beaa19549e7ac96f1f"
+    }
+}

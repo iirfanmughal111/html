@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="all_question_forums" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[All question forums]]></phrase>
+  <phrase title="answers_on_questions_in_which_youve_answered" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Answers on questions in which you've answered]]></phrase>
+  <phrase title="answers_on_questions_that_you_youve_started" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Answers on questions that  you've  started]]></phrase>
+  <phrase title="find_all_answers_by_x" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Find all answers by {name}]]></phrase>
+  <phrase title="find_all_questions_by_x" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Find all questions by {name}]]></phrase>
+  <phrase title="fs_new_answers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Answers]]></phrase>
+  <phrase title="fs_new_questions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Questions]]></phrase>
+  <phrase title="fs_question_and_answer_count" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[QeA]]></phrase>
+  <phrase title="fs_question_answers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Question Answers]]></phrase>
+  <phrase title="fs_search_question_answers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Search Question&Answers]]></phrase>
+  <phrase title="fs_submit_your_question" version_id="1000500" version_string="1.0.5"><![CDATA[Submit your question]]></phrase>
+  <phrase title="nav.fs_new_answers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Answers]]></phrase>
+  <phrase title="nav.fs_new_questions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Questions]]></phrase>
+  <phrase title="nav.fs_questionAnswer_nav" version_id="1000100" version_string="1.0.1"><![CDATA[QuestionsAnswers]]></phrase>
+  <phrase title="no_unread_answers_view_latest" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[You have no unread answers. You may <a href="{link}" rel="nofollow">view all latest answers</a> instead.]]></phrase>
+  <phrase title="no_unread_questions_view_latest" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[You have no unread questions. You may <a href="{link}" rel="nofollow">view all latest questions</a> instead.]]></phrase>
+  <phrase title="option.fs_qa_routeFilterId" version_id="1000100" version_string="1.0.1"><![CDATA[Route Filter ID]]></phrase>
+  <phrase title="option.fs_questionAnswerForum" version_id="1000100" version_string="1.0.1"><![CDATA[Applicable Forum]]></phrase>
+  <phrase title="option_explain.fs_qa_routeFilterId" version_id="1000100" version_string="1.0.1"><![CDATA[Enter the ID of RouteFilter which you yave create for QuestionsAnswers forum]]></phrase>
+  <phrase title="option_explain.fs_questionAnswerForum" version_id="1000100" version_string="1.0.1"><![CDATA[Select the Question Forum on which Question&Answers search functionality will work.]]></phrase>
+  <phrase title="option_group.fs_question_answers" version_id="1000100" version_string="1.0.1"><![CDATA[[FS] Question-Answers]]></phrase>
+  <phrase title="option_group_description.fs_question_answers" version_id="1000100" version_string="1.0.1"><![CDATA[]]></phrase>
+  <phrase title="questions_below_not_updated_since_your_last_visit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Questions below have not been updated since your last visit.]]></phrase>
+  <phrase title="questions_in_which_youve_answered" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Questions in which you've answered]]></phrase>
+  <phrase title="questions_youve_started" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Questions you've started]]></phrase>
+  <phrase title="search_in_question_forums" version_id="1000100" version_string="1.0.1"><![CDATA[Search in question forum
+]]></phrase>
+  <phrase title="unanswered_questions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Unanswered questions]]></phrase>
+  <phrase title="unread_answers" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Unread answers]]></phrase>
+  <phrase title="unread_questions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Unread Questions]]></phrase>
+</phrases>

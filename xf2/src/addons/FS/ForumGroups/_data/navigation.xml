@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+  <navigation_entry navigation_id="forumGroupsAddSubForum" parent_navigation_id="fs_forumGroups_index" display_order="20" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('forumGroups\/add') }}","display_condition":"","extra_attributes":{"data-xf-click":"overlay"}}]]></navigation_entry>
+  <navigation_entry navigation_id="fs_forumGroups_index" display_order="400" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('forumGroups') }}","display_condition":"$xf.visitor.haspermission('fs_forum_group_permission','add')","extra_attributes":[]}]]></navigation_entry>
+</navigation>

@@ -1,0 +1,126 @@
+<xf:title page="{$page}">{{ phrase('escrow_live_data') }}</xf:title>
+<div class="block-container">
+	<xf:macro name="search_menu" arg-conditions="{$conditions}" />
+        <xf:if is="count($logs) > 0 ">
+          <div class="block-body">
+            <xf:datalist data-xf-init="responsive-data-list">
+              <xf:macro
+                name="logs_table_list"
+                arg-logs="{$logs}"
+              />
+            </xf:datalist>
+          </div>
+
+          <xf:else />
+          <div class="block-body block-row">
+            {{ phrase('no_any_data_found') }}
+          </div>
+        </xf:if>
+	<div class="block-footer">
+  
+    <div class="block-body block-row">
+      <dl class="pairs pairs--justified">
+        <dt><span class="block-footer-counter">{{ display_totals($logs, $total) }}</span></dt>
+        <dd>
+       <xf:pagenav
+            page="{$page}"
+            perpage="{$perPage}"
+            total="{$total}"
+            link="escrow/live"
+            data="{$logs}"
+            params="{$logs}"
+            wrapperclass="block-outer-main"
+          />
+      </dd>
+      </dl>
+      </div>
+  </div>
+      </div>
+
+<xf:macro name="logs_table_list" arg-logs="!">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_txId') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_sender_addreses') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_externalId') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_status') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amountUSD') }} </xf:cell>
+			
+			
+		</xf:datarow>
+	
+<set var="$sum" value="0"></set>
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			<xf:cell> {{ snippet($log.TxId, 30, {'stripBbCode': true}) }} </xf:cell>
+			
+			<xf:cell> 
+				<xf:macro
+                name="sender_address"
+                arg-addresses="{$log.SenderAddresses}"
+              />
+			</xf:cell>
+			
+			<xf:cell>{{$log.ExternalId}}</xf:cell>
+			<xf:cell>{{$log.Date}}</xf:cell>
+			
+			<xf:cell>
+				<xf:if is="$log.Status!=2">
+					{{$log.FailReason}}
+					<xf:else />
+					{{phrase('fs_amount_received')}}
+				</xf:if>
+			</xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.Amount }} </xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.AmountUSD }} </xf:cell>
+			
+		</xf:datarow>
+		
+	</xf:foreach>
+</xf:macro>
+
+
+<xf:macro name="sender_address" arg-addresses="!">
+	
+	<xf:foreach loop="$addresses" value="$address">
+		<p>
+			{{$address}}
+		</p>
+		
+		
+	</xf:foreach>
+</xf:macro>
+
+
+
+<xf:macro name="search_menu" arg-conditions="!">
+  <div class="block-filterBar">
+    <div class="filterBar">
+      <a
+        class="filterBar-menuTrigger"
+        data-xf-click="menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-haspopup="true"
+        >{{ phrase('filters') }}</a
+      >
+      <div
+        class="menu menu--wide"
+        data-menu="menu"
+        aria-hidden="true"
+        data-href="{{ link('escrow/refine-live', null, $conditions)}}"
+        data-load-target=".js-filterMenuBody"
+      >
+        <div class="menu-content">
+          <h4 class="menu-header">{{ phrase('show_only:') }}</h4>
+          <div class="js-filterMenuBody">
+            <div class="menu-row">{{ phrase('loading...') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xf:macro>

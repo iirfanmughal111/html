@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="tourn" format=":int&lt;tourn_id&gt;/" controller="XenBulletins\Tournament:TournController"/>
+  <route route_type="public" route_prefix="uptourn" format=":int&lt;tourn_id&gt;/" controller="XenBulletins\Tournament:Upcomingtourn" context="tournament_pub"/>
+</routes>

@@ -1,0 +1,17 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "option_template_dbtechEcommerceAddress",
+    "data_type": "array",
+    "sub_options": [
+        "required",
+        "onlyPaid",
+        "validate"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "{\"required\":true,\"onlyPaid\":true,\"validate\":false}",
+    "relations": {
+        "dbtechEcommerce": 2050
+    }
+}

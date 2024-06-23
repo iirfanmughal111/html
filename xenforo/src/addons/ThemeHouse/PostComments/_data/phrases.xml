@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option.thpostcomments_enableMultiQuote" version_id="1000070" version_string="1.0.0"><![CDATA[Enable multi-quote for comments]]></phrase>
+  <phrase title="option.thpostcomments_hide_comment_depth" version_id="1000170" version_string="1.0.1"><![CDATA[Hide comment depth]]></phrase>
+  <phrase title="option.thpostcomments_max_comment_depth" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Maximum comment depth]]></phrase>
+  <phrase title="option.thpostcomments_replaceReplyButton" version_id="1000111" version_string="1.0.1 Alpha 1"><![CDATA[Replace reply and multi-quote links]]></phrase>
+  <phrase title="option_explain.thpostcomments_enableMultiQuote" version_id="1000111" version_string="1.0.1 Alpha 1"><![CDATA[Disabling this option will disable the multi-quote functionality for comments when the multi-quote system is enabled.]]></phrase>
+  <phrase title="option_explain.thpostcomments_hide_comment_depth" version_id="1000191" version_string="1.0.1 Patch Level 1"><![CDATA[This option regulates how deep comments on posts can be shown on page load. Any depth below this level will initially be hidden and can only be revealed by clicking on a link. Set to 0 to hide all comments.]]></phrase>
+  <phrase title="option_explain.thpostcomments_max_comment_depth" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[This option regulates, how deep comments on posts can be nested. For example with a nesting depth of 1, only regular posts can be commented on, with a nesting depth of 2, their comments can also be commented on, and so forth.]]></phrase>
+  <phrase title="option_explain.thpostcomments_replaceReplyButton" version_id="1000111" version_string="1.0.1 Alpha 1"><![CDATA[If this option is enabled, a single reply link will appear and will be able to be used to post comments. Multi-quote will be disabled. If this option is disabled, a separate comment link will be shown alongside the reply and multi-quote links.]]></phrase>
+  <phrase title="option_group.thpostcomments" version_id="1000292" version_string="1.0.2 Patch Level 2"><![CDATA[[OzzModz] Post Comments]]></phrase>
+  <phrase title="option_group_description.thpostcomments" version_id="1000292" version_string="1.0.2 Patch Level 2"><![CDATA[Options for the [OzzModz] Post Comments add-on.]]></phrase>
+  <phrase title="permission.forum_thpostcomments_comment" version_id="1000070" version_string="1.0.0"><![CDATA[Can comment on post]]></phrase>
+  <phrase title="thcomments_comment_placeholder" version_id="1000111" version_string="1.0.1 Alpha 1"><![CDATA[Write your comment...]]></phrase>
+  <phrase title="thpostcomments_comment" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Comment]]></phrase>
+  <phrase title="thpostcomments_comment_in_watched_thread_x" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[{title} - New comment to post in watched thread]]></phrase>
+  <phrase title="thpostcomments_comment_on_x_post" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Comment on {author}'s post]]></phrase>
+  <phrase title="thpostcomments_max_comment_depth_reached" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Maximum comment depth reached.]]></phrase>
+  <phrase title="thpostcomments_max_nesting_depth_reached" version_id="1000070" version_string="1.0.0"><![CDATA[The maximum nesting depth has been reached.]]></phrase>
+  <phrase title="thpostcomments_post_comment" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Post comment]]></phrase>
+  <phrase title="thpostcomments_rebuild_post_nesting" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Rebuild post nesting]]></phrase>
+  <phrase title="thpostcomments_reply_directly_to_this_message" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Reply directly to this message]]></phrase>
+  <phrase title="thpostcomments_watched_thread_post_comment_email_html" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[<p>{replier} commented to a {parentPoster} post in thread you are watching at {board}.</p>]]></phrase>
+  <phrase title="thpostcomments_x_commented_to_y_post_in_thread_z" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[{name} commented {parentPoster}'s post in the thread {title}.]]></phrase>
+  <phrase title="thpostcomments_x_commented_to_your_post_in_thread_z" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[{name} commented your post in the thread {title}.]]></phrase>
+  <phrase title="thpostcomments_x_comments" version_id="1000070" version_string="1.0.0"><![CDATA[{count} comments]]></phrase>
+</phrases>

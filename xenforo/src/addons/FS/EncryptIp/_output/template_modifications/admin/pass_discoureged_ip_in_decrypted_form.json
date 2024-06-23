@@ -1,0 +1,9 @@
+{
+    "template": "discourage_ip",
+    "description": "pass_discoureged_ip_in_decrypted_form",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:form action=\"{{ link('banning/discouraged-ips/add', null, {'ip': $ip}) }}\" ajax=\"true\" data-redirect=\"off\" class=\"block\">",
+    "replace": "<xf:set var=\"$decIp\" value=\"{{ $xf.app.em.getRepository('XF:Ip')->getDecrytedIp($ip) }}\" />\n<xf:form action=\"{{ link('banning/discouraged-ips/add', null, {'ip': $decIp}) }}\" ajax=\"true\" data-redirect=\"off\" class=\"block\">"
+}

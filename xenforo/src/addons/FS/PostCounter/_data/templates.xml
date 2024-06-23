@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="fs_post_counter_index" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title>{{ phrase('fs_pc_xs_post_counts', {'name': $user.username}) }}</xf:title>
+
+<xf:css src="fs_post_counter_tab_content.css" />
+
+<div class="block">
+	  <div class="block-container">
+		  <div id="PostAreas">			  		  
+			  <xf:if is="{$postCounters}">
+				<table>
+				  <thead>
+					<tr> 
+					  <td class='header forum_title_column'>{{ phrase ('forum') }}</td>
+					  <xf:if is="{$hasCreatedAThread}">
+						 <td class='header thread_counts_column'> {{ phrase ('threads') }} </td>
+					  </xf:if>
+					  <td class='header post_counts_column'> {{ phrase ('posts') }} </td>        
+				  </thead>    
+				  <tbody>
+					<xf:foreach loop="$postCounters" key="$key" value="$entry">
+					<tr>
+						  <td class="forum_title_column"> <a href='{{ link ('forums', {'node_id': {$postCounters.{$key}.node_id}}) }}' rel="nofollow"> {$entry.title} </a> </td>
+						  <xf:if is="{$hasCreatedAThread}">
+							<td class="thread_counts_column"> 
+								<xf:if is="$entry.thread_count > 0">
+								<a href='{{ link('search/threads-of-member', null, {'user_id': {$user.user_id}, 'node': {$postCounters.{$key}.node_id} } ) }}'>
+										{$entry.thread_count}
+								</a>	
+								<xf:else />
+									<span style="color: #2577b1;">0</span>
+									</xf:if>							
+							</td>
+						  </xf:if>
+						  <td class="post_counts_column"> 
+							  <a href='{{ link('search/search', null, {'search_type': 'post', 'c[users]': {$user.username}, 'c[nodes][]': {$postCounters.{$key}.node_id} } ) }}'>{$entry.post_count}</a>						
+						  </td>
+					</tr> 
+				  </xf:foreach>
+				  </tbody>
+				</table>
+			  <xf:else />
+				<span> {{ phrase ('fs_pc_no_posts') }} </span>
+			  </xf:if>
+	  </div>
+  </div>
+</div>]]></template>
+  <template type="public" title="fs_post_counter_tab_content.css" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[#PostAreas table
+{
+	margin: 10px;
+}
+
+#PostAreas .header
+{
+  font-weight: bold;
+  padding-bottom: 5px;
+
+}
+
+#PostAreas .post_counts_column,
+#PostAreas .thread_counts_column
+{
+  padding-left: 25px;
+  text-align: right;
+}]]></template>
+</templates>

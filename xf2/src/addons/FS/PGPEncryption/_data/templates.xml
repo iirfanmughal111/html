@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="admin_pgp_encryption" version_id="2030010" version_string="2.3.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('login/login', $user) }}"  class="block" ajax="true">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="user_id" value="{$user.user_id}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="admin" title="option_template_pgp_encryption" version_id="2030010" version_string="2.3.0 Alpha"><![CDATA[<xf:checkboxrow name="{$inputName}[enable_admin_pgp]" value="{$option.option_value.enable_admin_pgp}"
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}">
+
+	<xf:option value="enable_public_key" label="{{ phrase('fs_enable_for_admin') }}" data-hide="true">
+		<xf:dependent>
+		
+			<xf:textarearow name="{$inputName}[public_key]" label="{{ phrase('fs_public_key') }}" rows="5" autosize="true" placeholder="{{ phrase('public_key') }}" value="{$option.option_value.public_key}"  required="true"/>
+	   
+	</xf:dependent>
+	</xf:option>
+</xf:checkboxrow>]]></template>
+  <template type="public" title="both_option" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('account/change-both', $null) }}"   ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$xf.visitor.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="passphrase_option" value="{$passphrase_option}" />
+				<input type="hidden" name="pgp_option" value="{$pgp_option}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="enable_passphrase_option" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('account/change-passphrase', $null) }}"   ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$xf.visitor.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="passphrase_option" value="{$passphrase_option}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="enable_pgp_option" version_id="1080010" version_string="1.8.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('account/change-pgp', $null) }}"   ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$xf.visitor.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="pgp_option" value="{$pgp_option}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="forget_password_required_pgp" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('lost-password/pgp', $user) }}" ajax="true"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre>{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="forget_password_username_pgp" version_id="2000010" version_string="2.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_forget_password') }}</xf:title>
+<xf:form action="{{ link('lost-password', $null) }}"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+	<xf:textboxrow name="username" autofocus="autofocus" autocomplete="username"
+					label="{{ phrase('fs_username') }}" />
+			
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="forget_verify_lass_pass" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('lost-password/pass', $user) }}" ajax="true"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+			<xf:formrow 
+				label="{{ phrase('fs_message') }}">{{ phrase('fs_passphrase_require_overlay_msg3') }}</xf:formrow>
+			
+					<xf:textboxrow name="passphrase_3"  autosize="true"
+				label="{{ phrase('fs_passphrase3') }}" explain="{{ phrase('fs_passphrase_3_key_expl') }}"/>
+	
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_confirm_password" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[<xf:title>{{ phrase('reset_password') }}</xf:title>
+
+<xf:head option="meta_referrer"><meta name="referrer" content="origin" /></xf:head>
+
+<xf:form action="{{ link('lost-password/confirm', $user) }}" class="block" ajax="true">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:formrow label="{{ phrase('your_name') }}">{$user.username}</xf:formrow>
+
+			<xf:passwordboxrow name="password" label="{{ phrase('new_password') }}" autocomplete="new-password" checkstrength="true" />
+
+			<xf:passwordboxrow name="password_confirm" label="{{ phrase('confirm_new_password') }}" autocomplete="new-password" />
+		</div>
+		<xf:submitrow icon="save" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="login_pgp_pass" version_id="2020010" version_string="2.2.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('register/pgp-verify') }}"  ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	    <input type="hidden" name="publicKey" value="{$publicKey}" />
+	    <input type="hidden" name="passphrase_2" value="{$passphrase_2}" />
+			 <input type="hidden" name="passphrase_1" value="{$passphrase_1}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="login_pgp_pass_last" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('register/pgp-verify-last') }}"  ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	    <input type="hidden" name="publicKey" value="{$publicKey}" />
+	    <input type="hidden" name="passphrase_3" value="{$passphrase_3}" />
+		
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="new_public_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_change_public_key')}}</xf:title>
+<xf:form action="{{ link('account/new-public-key', $null) }}"  ajax="true"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+      	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="passphrase_login" version_id="1040010" version_string="1.4.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_passphrase')}}</xf:title>
+<xf:form action="{{ link('login/pas-phrase', $user) }}"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+        <xf:formrow label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+		<xf:textboxrow name="passphrase" label="{{ phrase('fs_passphrase') }}" required="true" />
+		
+		<input type="hidden" name="user_id" value="{$user.user_id}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="passphrase_overlay" version_id="2020010" version_string="2.2.0 Alpha"><![CDATA[<div class="overlay-container is-active" id="overlayer" style="overflow-y: scroll !important;">
+   <div class="overlay" tabindex="-1" role="dialog" aria-hidden="false">
+<div class="overlay-title">
+	{{ phrase('fs_passphrase_require_overlay') }}
+ </div>
+<xf:form action="{{ link('register/login-pass') }}"  ajax="true" class="block">
+    <div class="block-container">
+		<div class="block-body">
+			
+			<xf:formrow 
+				label="{{ phrase('fs_message') }}">{{ phrase('fs_passphrase_require_overlay_msg') }}</xf:formrow>
+			 	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" style="font-size:10px;"/>
+		      	<xf:textboxrow name="passphrase_1"  autosize="true"
+				label="{{ phrase('fs_passphrase1') }}" explain="{{ phrase('fs_passphrase_1_key_expl') }}" />
+					<xf:textboxrow name="passphrase_2"  autosize="true"
+				label="{{ phrase('fs_passphrase2') }}" explain="{{ phrase('fs_passphrase_2_key_expl') }}"/>
+				<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+						</div>
+			</div>		
+</xf:form>
+           </div>
+</div>]]></template>
+  <template type="public" title="passphrase_overlay_3" version_id="2060010" version_string="2.6.0 Alpha"><![CDATA[<div class="overlay-container is-active" id="overlayer" style="overflow-y: scroll !important;">
+   <div class="overlay" tabindex="-1" role="dialog" aria-hidden="false">
+<div class="overlay-title">
+	{{ phrase('fs_passphrase_require_overlay') }}
+ </div>
+<xf:form action="{{ link('register/login-pass-last') }}"  ajax="true" class="block">
+    <div class="block-container">
+		<div class="block-body">
+			
+			<xf:formrow 
+				label="{{ phrase('fs_message') }}">{{ phrase('fs_passphrase_require_overlay_msg3') }}</xf:formrow>
+			 	<xf:textarearow name="public_key" rows="5" autosize="true"
+				label="{{ phrase('fs_public_key') }}" required="required" hint="{{ phrase('required') }}" style="font-size:10px;"/>
+					<xf:textboxrow name="passphrase_3"  autosize="true"
+				label="{{ phrase('fs_passphrase3') }}" explain="{{ phrase('fs_passphrase_3_key_expl') }}"/>
+				<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+						</div>
+			</div>		
+</xf:form>
+           </div>
+</div>]]></template>
+  <template type="public" title="pgp_login" version_id="1090010" version_string="1.9.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('login/pass-phrase', $null) }}"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre>{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="user_id" value="{$user.user_id}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="pgp_options" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:checkboxrow label="{{ phrase('fs_login_options') }}">
+		<xf:option name="pgp_option" selected="$xf.visitor.pgp_option"
+			label="{{ phrase('fs_pgp') }}"
+			hint="{{ phrase('fs_enable_pgp') }}" />
+
+			<xf:option name="passphrase_option"
+				selected="$xf.visitor.passphrase_option"
+				label="{{ phrase('fs_passphrase') }}"
+				hint="{{ phrase('fs_enable_passphrase') }}" />
+		
+
+	
+</xf:checkboxrow>]]></template>
+  <template type="public" title="pgp_register" version_id="1010010" version_string="1.1.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('register/verify-message', $user) }}"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$user.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$user.encrypt_message }}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="user_id" value="{$user.user_id}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="profile_public_key" version_id="2070010" version_string="2.7.0 Alpha"><![CDATA[<div class="block">
+	<div class="block-container">
+		<div class="block-header">
+			<div class="header-public-key" style="display: flex;justify-content: space-between;">
+				<h3 class="block-minorHeader">{{ phrase('fs_pgp_public_key') }}</h3>
+				<xf:if is="$user.public_key">	
+				  <xf:button icon="copy"
+					data-xf-init="copy-to-clipboard"
+					data-copy-target=".js-copyTarget"
+					data-success="{{ phrase('fs_public_key_copy_to_clipboard') }}" class="button--link is-hidden" >{{ phrase('fs_copy_to_clipboard') }}</xf:button>
+				</xf:if>
+		</div>
+		</div>
+			
+		<div class="block-body block-row block-row--separated">
+			<div class="block-body">
+
+		<Pre class="js-copyTarget">{{ $user.public_key ? $user.public_key : phrase('fs_not_found') }}</Pre>
+		
+			</div>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="require_encrypt_message_for_new_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message_new_public_key')}}</xf:title>
+<xf:form action="{{ link('account/save-publickey', $null) }}"  ajax="true" class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$encrypt_message}}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="encrypt_message" value="{$encrypt_message}" />
+			<input type="hidden" name="public_key" value="{$public_key}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="require_encrypt_message_for_old_key" version_id="1070010" version_string="1.7.0 Alpha"><![CDATA[<xf:title>{{phrase('fs_require_encrypt_message_old_public_key')}}</xf:title>
+<xf:form action="{{ link('account/old-publickey', $null) }}"  class="block">
+		  
+    <div class="block-container">
+		<div class="block-body">
+			
+
+	<xf:formrow 
+				label="{{ phrase('fs_hi') }}">{{$xf.visitor.username}}</xf:formrow>
+
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$encrypt_message}}</pre></xf:formrow>
+
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_encrypt_message') }}" required="true" />
+	<input type="hidden" name="encrypt_message" value="{$encrypt_message}" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>]]></template>
+</templates>

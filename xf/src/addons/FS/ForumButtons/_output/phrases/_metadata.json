@@ -1,0 +1,14 @@
+{
+    "fs_register_post_review_in.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "3ce2cabfca774d35c1250fc58a4659f1"
+    },
+    "post_compainion.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cae45c9b5d79824ff521fd0bfd2d77f1"
+    }
+}

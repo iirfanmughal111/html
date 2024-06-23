@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="fs_move_post_perm_group" permission_id="fs_move_post_as_thread" permission_type="flag" interface_group_id="fs_move_Thread_perms_group" display_order="1"/>
+</permissions>

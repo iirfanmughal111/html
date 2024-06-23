@@ -1,0 +1,14 @@
+{
+  "legacy_addon_id": "",
+  "title": "[FS] Bitcoin Payment",
+  "description": "",
+  "version_id": 1000010,
+  "version_string": "1.0.0 Alpha",
+  "dev": " ",
+  "dev_url": "https://forum-solution.com",
+  "faq_url": "",
+  "support_url": "",
+  "extra_urls": [],
+  "require": [],
+  "icon": "fab fa-btc"
+}

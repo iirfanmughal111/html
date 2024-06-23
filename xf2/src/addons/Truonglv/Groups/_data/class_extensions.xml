@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XFMG\Attachment\Media" to_class="Truonglv\Groups\XFMG\Attachment\Media" execute_order="10" active="1"/>
+  <extension from_class="XFMG\Entity\Album" to_class="Truonglv\Groups\XFMG\Entity\Album" execute_order="10" active="1"/>
+  <extension from_class="XFMG\Finder\Album" to_class="Truonglv\Groups\XFMG\Finder\Album" execute_order="10" active="1"/>
+  <extension from_class="XFMG\Pub\Controller\Album" to_class="Truonglv\Groups\XFMG\Pub\Controller\Album" execute_order="10" active="1"/>
+  <extension from_class="XFMG\Pub\Controller\Media" to_class="Truonglv\Groups\XFMG\Pub\Controller\Media" execute_order="10" active="1"/>
+  <extension from_class="XF\Admin\Controller\Node" to_class="Truonglv\Groups\XF\Admin\Controller\Node" execute_order="10" active="1"/>
+  <extension from_class="XF\Admin\Controller\Option" to_class="Truonglv\Groups\XF\Admin\Controller\Option" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Forum" to_class="Truonglv\Groups\XF\Entity\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Node" to_class="Truonglv\Groups\XF\Entity\Node" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Post" to_class="Truonglv\Groups\XF\Entity\Post" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Thread" to_class="Truonglv\Groups\XF\Entity\Thread" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\User" to_class="Truonglv\Groups\XF\Entity\User" execute_order="99" active="1"/>
+  <extension from_class="XF\Entity\UserOption" to_class="Truonglv\Groups\XF\Entity\UserOption" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\UserPrivacy" to_class="Truonglv\Groups\XF\Entity\UserPrivacy" execute_order="10" active="1"/>
+  <extension from_class="XF\InlineMod\Thread\Move" to_class="Truonglv\Groups\XF\InlineMod\Thread\Move" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Account" to_class="Truonglv\Groups\XF\Pub\Controller\Account" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Forum" to_class="Truonglv\Groups\XF\Pub\Controller\Forum" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\InlineMod" to_class="Truonglv\Groups\XF\Pub\Controller\InlineMod" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Thread" to_class="Truonglv\Groups\XF\Pub\Controller\Thread" execute_order="10" active="1"/>
+  <extension from_class="XF\Repository\Node" to_class="Truonglv\Groups\XF\Repository\Node" execute_order="10" active="1"/>
+</class_extensions>

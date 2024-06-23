@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="xc_thread_article" permission_id="xc_change_to_article_view" permission_type="flag" interface_group_id="xc_thread_article" display_order="1"/>
+</permissions>

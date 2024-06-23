@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="admin" route_prefix="group-categories" format=":int&lt;category_id,category_title&gt;" controller="Truonglv\Groups:Category" context="tl_groups"/>
+  <route route_type="admin" route_prefix="group-fields" format=":str&lt;field_id&gt;" controller="Truonglv\Groups:Field" context="tl_groups"/>
+  <route route_type="admin" route_prefix="group-member-roles" format=":str&lt;member_role_id&gt;" controller="Truonglv\Groups:MemberRole" context="tl_groups"/>
+  <route route_type="admin" route_prefix="groups" sub_name="forums" format="forums/:int&lt;node_id,title&gt;/" controller="Truonglv\Groups:Forum" context="tl_groups"/>
+  <route route_type="admin" route_prefix="tlg-groups" format=":int&lt;group_id,name&gt;" controller="Truonglv\Groups:Group" context="tl_groups"/>
+  <route route_type="api" route_prefix="group-categories" controller="Truonglv\Groups:Categories"/>
+  <route route_type="api" route_prefix="group-categories" sub_name="-" format=":+int&lt;category_id&gt;/" controller="Truonglv\Groups:Category"/>
+  <route route_type="api" route_prefix="group-comments" sub_name="-" format=":+int&lt;comment_id&gt;/" controller="Truonglv\Groups:Comment"/>
+  <route route_type="api" route_prefix="group-posts" controller="Truonglv\Groups:Posts"/>
+  <route route_type="api" route_prefix="group-posts" sub_name="-" format=":+int&lt;post_id&gt;/" controller="Truonglv\Groups:Post"/>
+  <route route_type="api" route_prefix="groups" controller="Truonglv\Groups:Groups"/>
+  <route route_type="api" route_prefix="groups" sub_name="-" format=":+int&lt;group_id&gt;/" controller="Truonglv\Groups:Group"/>
+  <route route_type="public" route_prefix="group-categories" format=":int&lt;category_id,category_title&gt;/" controller="Truonglv\Groups:Category" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-comments" format=":int&lt;comment_id&gt;/" controller="Truonglv\Groups:Comment" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-events" format=":int&lt;event_id,event_name&gt;/" controller="Truonglv\Groups:Event" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-forums" format=":int&lt;node_id,title&gt;/" controller="Truonglv\Groups:Forum" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-members" format=":int&lt;member_id&gt;/" controller="Truonglv\Groups:Member" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-posts" format=":int&lt;post_id&gt;/" controller="Truonglv\Groups:Post" context="tl_groups"/>
+  <route route_type="public" route_prefix="group-resources" format=":int&lt;resource_id,title&gt;/" controller="Truonglv\Groups:ResourceItem" context="tl_groups"/>
+  <route route_type="public" route_prefix="groups" format=":int&lt;group_id,name&gt;/" controller="Truonglv\Groups:Group" context="tl_groups"/>
+  <route route_type="public" route_prefix="groups" sub_name="browse" format="browse" controller="Truonglv\Groups:Browse" context="tl_groups"/>
+</routes>

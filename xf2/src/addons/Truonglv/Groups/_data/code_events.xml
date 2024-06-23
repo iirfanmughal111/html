@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_events>
+  <event event_id="tlg_member_role_handler_class"><![CDATA[<p>Called when get list member roles</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>array</em> &$handlers</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>array</em> &$handlers</code> - List of all classes</li>
+</ol>]]></event>
+</code_events>

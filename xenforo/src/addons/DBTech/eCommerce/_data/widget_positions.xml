@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_positions>
+  <widget_position position_id="dbtech_ecommerce_category_sidenav" active="1"/>
+  <widget_position position_id="dbtech_ecommerce_overview_sidenav" active="1"/>
+  <widget_position position_id="dbtech_ecommerce_product_sidebar" active="1"/>
+</widget_positions>

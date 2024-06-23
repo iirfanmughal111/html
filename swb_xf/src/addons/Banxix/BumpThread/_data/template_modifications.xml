@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="admin" template="forum_edit" modification_key="btDefaultSortOrder" description="Default Sort Order" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:option value="view_count" label="{{ phrase('views') }}" />]]></find>
+    <replace><![CDATA[$0
+<xf:option value="bumped_threads" label="{{ phrase('bump_thread_filter') }}" />]]></replace>
+  </modification>
+  <modification type="public" template="forum_filters" modification_key="btFilter" description="Add bumped threads filter in forum XF 2.1" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:option value="first_post_reaction_score">{{ phrase('first_message_reaction_score') }}</xf:option>]]></find>
+    <replace><![CDATA[$0
+<xf:option value="bumped_threads">{{ phrase('bump_thread_filter') }}</xf:option>]]></replace>
+  </modification>
+  <modification type="public" template="forum_filters" modification_key="btFilter2" description="Add bumped threads filter in forum XF 2.2" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:foreach loop="\$sortOptions".+xf:foreach>/isU]]></find>
+    <replace><![CDATA[$0
+<xf:option value="bumped_threads">{{ phrase('bump_thread_filter') }}</xf:option>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="bump_thread_qr_add_arg" description="Add argument" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[arg-message=""]]></find>
+    <replace><![CDATA[$0
+arg-thread=""]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="bump_thread_qr_register_arg_editor" description="Register argument editor" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro name="editor"
+							arg-message="{$message}"]]></find>
+    <replace><![CDATA[$0
+arg-thread="{$thread}"]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="bump_thread_thread_view_button_qr" description="Include template button qr XF 2.1" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:button type="submit" class="button--primary" icon="reply">
+				{{ $submitText ?: phrase('post_reply') }}
+			</xf:button>
+			<xf:if is="$showPreviewButton">
+				<xf:button class="u-jsOnly" data-xf-click="preview-click" icon="preview" />
+			</xf:if>]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.bump_thread_button_positions == 'quickreply_left'">
+	<xf:include template="bump_thread_button_qr" />
+</xf:if>
+$0
+<xf:if is="$xf.options.bump_thread_button_positions == 'quickreply_right'">
+	<xf:include template="bump_thread_button_qr" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="quick_reply_macros" modification_key="bump_thread_thread_view_button_qr2" description="Include template button qr XF 2.2" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:button type="submit".+xf:button>/isU]]></find>
+    <replace><![CDATA[
+			<xf:if is="$xf.options.bump_thread_button_positions == 'quickreply_left'">
+				<xf:include template="bump_thread_button_qr" />
+			</xf:if>
+			$0
+			<xf:if is="$xf.options.bump_thread_button_positions == 'quickreply_right'">
+				<xf:include template="bump_thread_button_qr" />
+			</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="thread_list_macros" modification_key="bump_thread_thread_list_macros_button" description="Add button" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$chooseName">
+							<li><xf:checkbox standalone="true">]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.bump_thread_thread_list">	
+							<xf:include template="bump_thread_thread_list_macros_button" />
+						</xf:if>
+
+						$0]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="bump_thread_quick_reply_arg" description="Register argument quick reply" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="quick_reply_macros" name="body"]]></find>
+    <replace><![CDATA[$0
+arg-thread="{$thread}"]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="bump_thread_thread_view_button" description="Include template button" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$thread\.canWatch\(\)">.+xf:button>.+xf:if>/isU]]></find>
+    <replace><![CDATA[$0
+						<xf:if is="$xf.options.bump_thread_above_post">	
+							<xf:include template="bump_thread_button" />
+						</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="bump_thread_thread_view_mod_tools_button" description="Include template button (moderator tools)" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:thread_tools_menu:before_footer]-->]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.bump_thread_menu">	
+												<xf:include template="bump_thread_button_menu" />
+											</xf:if>
+											<xf:if is="$thread.canDisableBump()">
+												<a href="{{ link('threads/bump-disable', $thread) }}"
+													class="menu-linkRow"
+													data-xf-click="switch"
+													data-menu-closer="true">
+
+													<xf:if is="$thread.bump_thread_disabled">
+														{{ phrase('bump_thread_allow') }}
+													<xf:else />
+														{{ phrase('bump_thread_disallow') }}
+													</xf:if>
+												</a>
+											</xf:if>
+											$0]]></replace>
+  </modification>
+</template_modifications>

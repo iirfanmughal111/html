@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_event_listeners>
+  <listener event_id="app_setup" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="appSetup" active="1" description="Autoload 3rd party libraries."/>
+  <listener event_id="criteria_user" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="criteriaUser" active="1" description="Add chat user criteria."/>
+  <listener event_id="editor_button_data" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="editorButtonData" active="1" description="Add editor icon for chat image uploads button."/>
+  <listener event_id="editor_dialog" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="editorDialog" active="1" hint="chat" description="Add additional data and logic to the chat image uploads editor dialog."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="postEntityPostDelete" active="1" hint="XF\Entity\Post" description="Extend post entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="RMResourceItemEntityPostDelete" active="1" hint="XFRM\Entity\ResourceItem" description="Extend resource item entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="RMResourceRatingEntityPostDelete" active="1" hint="XFRM\Entity\ResourceRating" description="Extend resource rating entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="threadEntityPostDelete" active="1" hint="XF\Entity\Thread" description="Extend thread entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="userEntityPostDelete" active="1" hint="XF\Entity\User" description="Extend user entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGAlbumEntityPostDelete" active="1" hint="XFMG\Entity\Album" description="Extend XFMG album entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGCommentEntityPostDelete" active="1" hint="XFMG\Entity\Comment" description="Extend XFMG comment entity post delete."/>
+  <listener event_id="entity_post_delete" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGMediaItemEntityPostDelete" active="1" hint="XFMG\Entity\MediaItem" description="Extend XFMG media item entity post delete."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="postEntityPostSave" active="1" hint="XF\Entity\Post" description="Extend post entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="RMResourceItemEntityPostSave" active="1" hint="XFRM\Entity\ResourceItem" description="Extend XFRM resource entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="RMResourceRatingEntityPostSave" active="1" hint="XFRM\Entity\ResourceRating" description="Extend resource rating entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="threadEntityPostSave" active="1" hint="XF\Entity\Thread" description="Extend thread entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="userEntityPostSave" active="1" hint="XF\Entity\User" description="Extend user entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGAlbumEntityPostSave" active="1" hint="XFMG\Entity\Album" description="Extend XFMG album entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGCommentEntityPostSave" active="1" hint="XFMG\Entity\Comment" description="Extend XFMG comment entity post save."/>
+  <listener event_id="entity_post_save" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="XFMGMediaItemEntityPostSave" active="1" hint="XFMG\Entity\MediaItem" description="Extend XFMG media item entity post save."/>
+  <listener event_id="templater_setup" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="templaterSetup" active="1" description="Add templater functions."/>
+  <listener event_id="templater_template_pre_render" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="templaterTemplatePreRenderEditor" active="1" hint="public:editor" description="Editor icon for chat image upload."/>
+  <listener event_id="user_merge_combine" execute_order="10" callback_class="Siropu\Chat\Listener" callback_method="userMergeCombine" active="1" description="Allow the chat message count to be updated when merging users."/>
+</code_event_listeners>

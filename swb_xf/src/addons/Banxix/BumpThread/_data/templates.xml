@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="bump_thread_button" version_id="101" version_string="1.0.1"><![CDATA[<xf:if is="$thread is not empty && $thread.canBump()">
+	<xf:button href="{{ link('threads/bump', $thread) }}" data-xf-click="switch" class="button--link">
+		<xf:include template="bump_thread_button_text" />
+	</xf:button>
+</xf:if>]]></template>
+  <template type="public" title="bump_thread_button_menu" version_id="2010101" version_string="2.1.1 1"><![CDATA[<xf:if is="$thread is not empty && $thread.canBump()">
+	<a href="{{ link('threads/bump', $thread) }}" class="menu-linkRow" data-xf-click="switch" data-menu-closer="true">
+		<xf:include template="bump_thread_button_text" />
+	</a>
+</xf:if>]]></template>
+  <template type="public" title="bump_thread_button_qr" version_id="105" version_string="1.0.5"><![CDATA[<xf:if is="$thread is not empty && $thread.canBump()">
+	<xf:button href="{{ link('threads/bump', $thread) }}" data-xf-click="switch" class="button--primary">
+		<xf:include template="bump_thread_button_text" />
+	</xf:button>
+</xf:if>]]></template>
+  <template type="public" title="bump_thread_button_text" version_id="104" version_string="1.0.4"><![CDATA[<xf:set var="$timeToNextBump" value="{{ $thread.getTimeToNextBump() }}" />
+<xf:if is="$timeToNextBump">
+	<xf:date time="{{ $xf.time + $timeToNextBump }}" />
+<xf:else/>
+	{{ phrase('bump_thread') }}
+</xf:if>]]></template>
+  <template type="public" title="bump_thread_thread_list_macros_button" version_id="2010103" version_string="2.1.1 3"><![CDATA[<xf:if is="$thread && $thread.canBump()">
+	<li class="structItem-extraInfoMinor">
+		<a href="{{ link('threads/bump', $thread) }}" data-xf-click="switch">
+			{{ phrase('bump_thread') }}
+		</a>
+	</li>
+</xf:if>]]></template>
+</templates>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="are_your_to_change_normal_view" version_id="1010010" version_string="1.1.0 Alpha"><![CDATA[Are you sure to Change Normal View?]]></phrase>
+  <phrase title="change_view_upload_required_image" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Change View by upload Image required....]]></phrase>
+  <phrase title="fs_change_to_article_view" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[To Article View]]></phrase>
+  <phrase title="fs_change_to_normal_view" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[To Normal View]]></phrase>
+  <phrase title="fs_demension_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Minimum image required dimension 1920 × 460 px]]></phrase>
+  <phrase title="fs_header_image" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Header Image]]></phrase>
+  <phrase title="fs_image_format_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Required Image Format......!]]></phrase>
+  <phrase title="fs_image_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Image Required...]]></phrase>
+  <phrase title="fs_uplaod_header_banner" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload Header Image]]></phrase>
+  <phrase title="image_demension_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Image dimension required in {width} * {height} ]]></phrase>
+  <phrase title="option.headerImageDimensions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Minimum Header Image dimensions]]></phrase>
+  <phrase title="option_explain.headerImageDimensions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Default 1920 × 460 px]]></phrase>
+  <phrase title="option_group.thread_article_view" version_id="1010010" version_string="1.1.0 Alpha"><![CDATA[[FS] Thread Article View]]></phrase>
+  <phrase title="option_group_description.thread_article_view" version_id="1010010" version_string="1.1.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="permission.xc_thread_article_xc_change_to_article_view" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Allow to Change Thread View ?]]></phrase>
+  <phrase title="permission_interface.xc_thread_article" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Thread Change Article]]></phrase>
+</phrases>

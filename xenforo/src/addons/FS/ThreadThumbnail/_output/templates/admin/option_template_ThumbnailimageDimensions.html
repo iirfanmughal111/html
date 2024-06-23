@@ -1,0 +1,13 @@
+<xf:formrow rowtype="input"
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}">
+
+	<div class="inputGroup inputGroup--numbers">
+		<xf:numberbox name="{$inputName}[width]" min="50" value="{$option.option_value.width}" placeholder="{{ phrase('width') }}" />
+		<span class="inputGroup-text">x</span>
+		<xf:numberbox name="{$inputName}[height]" min="50" value="{$option.option_value.height}" placeholder="{{ phrase('height') }}" />
+		<span class="inputGroup-text">{{ phrase('units_pixels') }}</span>
+	</div>
+</xf:formrow>

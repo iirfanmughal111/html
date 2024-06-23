@@ -1,0 +1,40 @@
+<xf:title> {{ phrase('fs_escrow_deposit') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+
+<xf:form
+  action="{{ link('escrow/deposit-save') }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+		<xf:css src="share_controls.less" />
+
+  <div class="block-container">
+    <div class="block-body">
+		<xf:formrow label="{{ phrase('fs_escrow_address') }}" rowtype="input">
+			<div class="shareInput" data-xf-init="share-input" data-success-text="{$successText}">
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="{{ phrase('copy_to_clipboard')|for_attr }}">
+
+				<i aria-hidden="true"></i>
+			</div>
+			<xf:textbox class="shareInput-input js-shareInput"
+				value="{$address}" readonly="true" />
+		</div>
+	</div>
+			<xf:set var="$user" value="{$xf.visitor->user_id}"/>
+			<img src="{{ base_url('data/qrcode/'.{$user}.'.png') }}"/>
+		</xf:formrow>
+			
+	  </div>
+	 
+	      <xf:numberboxrow name="deposit_amount" explain="{{ phrase('escrow_current_amount') }} {{phrase('fs_escrow_amount_symbol')}}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0}}" min="0" label="{{ phrase('fs_escrow_amount') }}" />
+ <xf:comment>
+	  <xf:checkboxrow label="">
+				<xf:option name="fee" hint="{{ phrase('escrow_current_fee_percentage') }} : {$xf.options.fs_escrow_fee_percentage}%">{{ phrase('fs_escrow_include_fee') }}</xf:option>
+			</xf:checkboxrow>
+	  </xf:comment>
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>

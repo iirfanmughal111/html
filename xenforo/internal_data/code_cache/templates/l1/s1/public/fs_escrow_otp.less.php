@@ -1,0 +1,85 @@
+<?php
+// FROM HASH: 5845d031444c47b39511621e1500663e
+return array(
+'code' => function($__templater, array $__vars, $__extensions = null)
+{
+	$__finalCompiled = '';
+	$__finalCompiled .= '.title{
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  h3{
+    font-weight: bold;
+  }
+  p{
+    font-size: 12px;
+    color: #118a44;
+    &.msg{
+      color: initial;
+      text-align: initial;
+      font-weight: bold;
+    }
+  }
+}
+  
+.otp-input-fields{
+  margin: auto;
+  background-color: white;
+ /* box-shadow: 0px 0px 8px 0px #02025044;*/
+  max-width: 400px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+  
+  input{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #2f8f1f;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+    &:focus{
+      border-width: 2px;
+      border-color: darken(#2f8f1f, 5%);
+      font-size: 20px;
+    }
+  }
+}
+
+.result{
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+  p{
+    font-size: 24px;
+    font-family: \'Antonio\', sans-serif;
+    opacity: 1;
+    transition: color 0.5s ease;
+    &._ok{
+      color: green;
+    }
+    &._notok{
+      color: red;
+      border-radius: 3px;
+    }
+  }
+}';
+	return $__finalCompiled;
+}
+);

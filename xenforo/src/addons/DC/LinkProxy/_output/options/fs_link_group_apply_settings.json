@@ -1,0 +1,13 @@
+{
+    "edit_format": "select",
+    "edit_format_params": "1=High\n0=Low",
+    "data_type": "integer",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "1",
+    "relations": {
+        "DC_LinkProxy": 1
+    }
+}

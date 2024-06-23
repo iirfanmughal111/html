@@ -1,0 +1,97 @@
+<xf:title>{{ phrase('z61_classifieds_add_listing') }}</xf:title>
+
+<xf:breadcrumb source="$category.getBreadcrumbs()" />
+
+<xf:js src="https://maps.googleapis.com/maps/api/js?key={$xf.options.z61ClassifiedsGoogleApi}&libraries=places"></xf:js>
+<xf:js src="z61/classifieds/geocomplete.js"></xf:js>
+<xf:js>
+	$("#location").geocomplete();  
+</xf:js>
+
+<xf:form action="{{ link('classifieds/categories/add', $category) }}" ajax="true" class="block"
+	data-xf-init="attachment-manager"
+	draft="{{ link('classifieds/categories/draft', $category) }}"
+	data-preview-url="{{ link('classifieds/categories/listing-preview', $category) }}">
+
+	<div class="block-container">
+		<div class="block-body">
+			<xf:macro template="z61_classifieds_listing_edit_macros" name="title"
+			    arg-category="{$category}"
+				arg-listing="{$listing}"
+				arg-prefixes="{$prefixes}" />
+
+			<div>
+				<xf:editorrow name="message"
+				  value="{{ $category.draft_listing.message ?: $category.listing_template }}"
+				  attachments="{{ $attachmentData ? $attachmentData.attachments : [] }}"
+				  rowtype="fullWidth noLabel mergePrev"
+				  label="{{ phrase('message') }}" />
+
+				<xf:formrow>
+					<xf:if is="$attachmentData">
+						<xf:macro template="helper_attach_upload" name="upload_block"
+						  arg-attachmentData="{$attachmentData}"
+						  arg-forceHash="{$category.draft_listing.attachment_hash}" />
+					</xf:if>
+				</xf:formrow>
+			</div>
+			<xf:if is="{$category.location_enable}">
+				<xf:textboxrow name="listing_location"
+				   id="location"
+				   maxlength="{{ max_length($listing, 'listing_location' )}}"
+				   label="{{ phrase('z61_classifieds_location') }}"
+				   placeholder="{{ phrase('z61_classifieds_enter_a_location...') }}"
+				   value="{$listing.listing_location}"/>
+			</xf:if>
+			<xf:macro template="z61_classifieds_listing_edit_macros" name="tags"
+					  arg-listing="{$listing}"
+					  arg-category="{$category}" />
+
+			<xf:if is="$category.allow_paid">
+				<xf:formrow rowtype="input" label="{{ phrase('price') }}">
+					<xf:macro template="z61_classifieds_listing_edit_macros" name="purchase_inputs"
+							  arg-listing="{$listing}" />
+				</xf:formrow>
+			</xf:if>
+
+			<xf:if contentcheck="true">
+				<h2 class="block-formSectionHeader"><span class="block-formSectionHeader-aligner">{{ phrase('z61_classifieds_additional_information') }}</span></h2>
+				<xf:contentcheck>
+					<xf:macro template="custom_fields_macros" name="custom_fields_edit"
+							  arg-type="classifiedsListings"
+							  arg-set="{$listing.custom_fields}"
+							  arg-group="{{ ['above', 'below', 'extra'] }}"
+							  arg-editMode="{{ $listing.getFieldEditMode() }}"
+							  arg-onlyInclude="{$category.field_cache}" />
+				</xf:contentcheck>
+			</xf:if>
+
+			<h2 class="block-formSectionHeader"><span class="block-formSectionHeader-aligner">{{ phrase('z61_classifieds_listing_options') }}</span></h2>
+
+			<xf:macro template="z61_classifieds_listing_edit_macros" name="type"
+				arg-listing="{$listing}"
+				arg-category="{$category}"
+				arg-listingTypes="{$listingTypes}" />
+
+			<xf:if is="$conditions is not empty">
+				<xf:macro template="z61_classifieds_listing_edit_macros" name="condition"
+				    arg-category="{$category}"
+					arg-listing="{$listing}"
+					arg-conditions="{$conditions}" />
+			</xf:if>
+
+			<xf:if is="$packages is not empty">
+				<xf:macro template="z61_classifieds_listing_edit_macros" name="package"
+						  arg-category="{$category}"
+						  arg-listing="{$listing}"
+						  arg-packages="{$packages}" />
+			</xf:if>
+		</div>
+
+		<xf:macro template="z61_classifieds_listing_edit_macros" name="contact_info"
+		  arg-listing="{$listing}"
+		  arg-category="{$category}" />
+
+		<xf:submitrow icon="save" sticky="true" />
+	</div>
+</xf:form>

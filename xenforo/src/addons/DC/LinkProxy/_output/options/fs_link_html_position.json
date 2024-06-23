@@ -1,0 +1,13 @@
+{
+    "edit_format": "select",
+    "edit_format_params": "1=Top of Page\n0=Bottom of page",
+    "data_type": "integer",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "0",
+    "relations": {
+        "DC_LinkProxy": 1
+    }
+}

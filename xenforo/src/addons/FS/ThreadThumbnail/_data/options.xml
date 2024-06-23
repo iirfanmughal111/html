@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="thumbnailImageDimensions" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"height":100,"width":100}</default_value>
+    <edit_format_params>option_template_ThumbnailimageDimensions</edit_format_params>
+    <sub_options>height
+width</sub_options>
+    <relation group_id="fs_thread_thumbnail" display_order="1"/>
+  </option>
+</options>

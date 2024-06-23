@@ -1,0 +1,39 @@
+{
+    "legacy_addon_id": "",
+    "title": "DragonByte eCommerce",
+    "description": "Sell digital downloads or physical products via your forum.",
+    "version_id": 3010071,
+    "version_string": "3.1.0.1",
+    "dev": "DragonByte Technologies, Ltd.",
+    "dev_url": "https://www.dragonbyte-tech.com",
+    "faq_url": "",
+    "support_url": "https://www.dragonbyte-tech.com/support/create-ticket",
+    "extra_urls": {
+        "Product Information": "https://www.dragonbyte-tech.com/store/dragonbyte-ecommerce.371/",
+        "Twitter": "https://twitter.com/DragonByteTech"
+    },
+    "require": {
+        "XF": [
+            2020070,
+            "XenForo 2.2.0+"
+        ],
+        "php": [
+            "7.3.0",
+            "PHP 7.3.0+"
+        ]
+    },
+    "icon": "icon.png",
+    "require-soft": {
+        "php": [
+            "7.4.0",
+            "PHP 7.4.0+",
+            false
+        ],
+        "DBTech/Tickets": [
+            2010070,
+            "DragonByte eCommerce Tickets v2.1.0+",
+            false
+        ]
+    },
+    "composer_autoload": "vendor/composer"
+}

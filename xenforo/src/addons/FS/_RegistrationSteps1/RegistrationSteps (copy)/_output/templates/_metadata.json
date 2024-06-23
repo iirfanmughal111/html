@@ -1,0 +1,82 @@
+{
+    "email/male_email_send_template.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "75d4f9b98e9801b9d1fdf96952747014"
+    },
+    "public/forum_post_review_chooser.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "13960745c1380d976d034890174f3b25"
+    },
+    "public/fs_register_attention_overlay.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "47843642d8ba791e89bab13e66dabdc3"
+    },
+    "public/fs_register_featured_ads.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "5af997b9fd571d3b983bf8f5c6b526ad"
+    },
+    "public/fs_register_featured_overlay.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "f9f6b2166db06b04b70b8c6fa32af24c"
+    },
+    "public/fs_register_mail_input.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "800e0c46b7b55138b81a0b5dc59b3aa6"
+    },
+    "public/fs_register_thread_overview_box.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "768b979f6b0a1e3ede1b48a001ad2059"
+    },
+    "public/fs_register_user_ads_list.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "29c005cf0b7270e4bd0e63112a9b3766"
+    },
+    "public/fs_register_user_alert_list.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "bb0d89328686e01d89da4444f3e24507"
+    },
+    "public/fs_register_user_review_list.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "1d1639f719bc7e81feb976eb699ce62b"
+    },
+    "public/fs_register_vouch_list.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "2a437d0bacd1c6630dbc62f690610dc0"
+    },
+    "public/fs_register_vouch_message.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "bc9c9fe37d86bb3dbc153370d62b822e"
+    },
+    "public/regsitration_steps.less": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "789b0fdbc506c1e7b4bd78ed2069c7f9"
+    },
+    "public/widget_featured_provider.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "53ebdab6bda6b060402b9ad5a98c537a"
+    },
+    "public/widget_top_users.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "e9e5b330876765ae8c9141f354bbe3ef"
+    },
+    "public/widget_user_statistics.html": {
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "732ba84203d37169b2e0dd9334e9d4a1"
+    }
+}

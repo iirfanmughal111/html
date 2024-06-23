@@ -1,0 +1,1 @@
+{user} requested to withdraw <strong>${amount}</strong> from <strong>{address_from}</strong>.

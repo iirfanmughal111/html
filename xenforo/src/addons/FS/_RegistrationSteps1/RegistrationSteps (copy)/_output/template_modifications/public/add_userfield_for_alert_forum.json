@@ -1,0 +1,9 @@
+{
+    "template": "forum_post_thread",
+    "description": "add_userfield_for_alert_forum",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:macro name=\"type_fields\"\n\t\t\t\t\targ-thread=\"{\\$thread}\".*?>/is",
+    "replace": "<xf:if is=\"$thread.getAlertThreadIds()\">\n\t<div class=\"menu-row\">\n\t\t{{ phrase('fs_regiter_review_for:') }}\n\t\t<div class=\"u-inputSpacer\">\n\t\t\t<xf:textbox name=\"review_for\" required=\"true\" value=\"{{$review_for ? $review_for : ''}}\" ac=\"single\" />\n\t\t</div>\n\t</div>\n</xf:if>\n$0"
+}

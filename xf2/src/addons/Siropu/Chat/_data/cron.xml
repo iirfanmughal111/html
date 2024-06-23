@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="siropuChatBotMessages" cron_class="Siropu\Chat\Cron\Bot" cron_method="postBotMessages" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[-1]}]]></entry>
+  <entry entry_id="siropuChatIgnoredMessages" cron_class="Siropu\Chat\Cron\Message" cron_method="deleteIgnoredMessages" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[-1]}]]></entry>
+  <entry entry_id="siropuChatInactiveRooms" cron_class="Siropu\Chat\Cron\Room" cron_method="deleteInactiveRooms" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[0]}]]></entry>
+  <entry entry_id="siropuChatOlderMessages" cron_class="Siropu\Chat\Cron\Message" cron_method="deleteOlderMessages" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[0]}]]></entry>
+  <entry entry_id="siropuChatRoomAutoPrune" cron_class="Siropu\Chat\Cron\Room" cron_method="pruneMessages" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[15]}]]></entry>
+  <entry entry_id="siropuChatRoomUsers" cron_class="Siropu\Chat\Cron\Room" cron_method="updateUserCount" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[0,15,30,45]}]]></entry>
+  <entry entry_id="siropuChatSanctions" cron_class="Siropu\Chat\Cron\Sanction" cron_method="deleteExpiredSanctions" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[-1],"minutes":[5]}]]></entry>
+</cron>

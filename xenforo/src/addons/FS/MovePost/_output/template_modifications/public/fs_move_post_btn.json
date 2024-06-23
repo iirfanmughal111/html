@@ -1,0 +1,9 @@
+{
+    "template": "post_macros",
+    "description": "fs_move_post_btn",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if is=\"\\$thread\\.canReply\\(\\) OR \\$thread.canReplyPreReg\\(\\)\">.*?<\\/xf:if>/is",
+    "replace": "\t\t\t<xf:if is=\"{{ $xf.visitor.hasPermission('fs_move_post_perm_group', 'fs_move_post_as_thread') && ($xf.visitor.user_id==$post.user_id OR $xf.visitor.is_admin OR $xf.visitor.is_moderator) }}\">\n\t\t\t<a href=\"{{ link('posts/move-post', $post) }}\"\n\t\t\t\t\tclass=\"actionBar-action\"\n\t\t\t\t\ttitle=\"{{ phrase('fs_post_as_thread')|for_attr }}\"\n\t\t\t\t\tdata-xf-click=\"overlay\"\n\t\t\t\t\t><i class=\"far fa-share\"></i> {{ phrase('fs_post_as_thread') }} </a>\n\t\t\t\n\t\t\t\n\t\t\t</xf:if>\n$0\n"
+}

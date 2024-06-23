@@ -1,0 +1,12 @@
+{
+    "admin/user_ip_list_replace.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c77c1afd2993ed548cdbfaf2e20de167"
+    },
+    "public/member_user_ip_list_replace.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "78ba1a492ceec26585249ff332c638ba"
+    }
+}

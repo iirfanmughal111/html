@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="bump_thread" version_id="100" version_string="1.0.0"><![CDATA[Bump Thread]]></phrase>
+  <phrase title="bump_thread_allow" version_id="2010102" version_string="2.1.1 2"><![CDATA[Allow thread bumping]]></phrase>
+  <phrase title="bump_thread_bumped" version_id="100" version_string="1.0.0"><![CDATA[Bumped]]></phrase>
+  <phrase title="bump_thread_disallow" version_id="2010102" version_string="2.1.1 2"><![CDATA[Disallow thread bumping]]></phrase>
+  <phrase title="bump_thread_filter" version_id="102" version_string="1.0.2"><![CDATA[Bumped Threads]]></phrase>
+  <phrase title="bump_thread_max_reached_today" version_id="100" version_string="1.0.0"><![CDATA[You have reached maximum number of times to bump thread today.]]></phrase>
+  <phrase title="bump_thread_need_to_wait" version_id="100" version_string="1.0.0"><![CDATA[You are doing too fast! Try again in {time} seconds.]]></phrase>
+  <phrase title="bump_thread_not_allow" version_id="100" version_string="1.0.0"><![CDATA[You do have enough permission to bump thread.]]></phrase>
+  <phrase title="bump_thread_successful" version_id="100" version_string="1.0.0"><![CDATA[Thread bumped successfully!]]></phrase>
+  <phrase title="forum_sort.bumped_threads" version_id="2010071" version_string="2.1.0.1"><![CDATA[Bumped Threads]]></phrase>
+  <phrase title="option.bump_thread_above_post" version_id="2000070" version_string="2.0.0"><![CDATA[Button Above First Post]]></phrase>
+  <phrase title="option.bump_thread_button_positions" version_id="2010101" version_string="2.1.1 1"><![CDATA[Quick Reply Button Position]]></phrase>
+  <phrase title="option.bump_thread_default_sort_forums" version_id="104" version_string="1.0.4"><![CDATA[Default Sort Forums]]></phrase>
+  <phrase title="option.bump_thread_enabled" version_id="100" version_string="1.0.0"><![CDATA[Enabled]]></phrase>
+  <phrase title="option.bump_thread_menu" version_id="2010101" version_string="2.1.1 1"><![CDATA[Button in thread moderator tools menu]]></phrase>
+  <phrase title="option.bump_thread_reverse_time_limit" version_id="104" version_string="1.0.4"><![CDATA[Reverse time-limit permission]]></phrase>
+  <phrase title="option.bump_thread_thread_list" version_id="2010101" version_string="2.1.1 1"><![CDATA[Button in thread list]]></phrase>
+  <phrase title="option.bump_thread_timer_from_thread_post_date" version_id="105" version_string="1.0.5"><![CDATA[Timer from thread post date]]></phrase>
+  <phrase title="option_explain.bump_thread_above_post" version_id="2000070" version_string="2.0.0"><![CDATA[If this option is selected, a Bump Thread button will show above the first post in a thread]]></phrase>
+  <phrase title="option_explain.bump_thread_button_positions" version_id="100" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="option_explain.bump_thread_default_sort_forums" version_id="104" version_string="1.0.4"><![CDATA[Use "Bumped Threads" as default sort order]]></phrase>
+  <phrase title="option_explain.bump_thread_enabled" version_id="100" version_string="1.0.0"><![CDATA[Enable / Disable addon]]></phrase>
+  <phrase title="option_explain.bump_thread_menu" version_id="2010101" version_string="2.1.1 1"><![CDATA[If this option is selected, a Bump Thread button will show in thread tools menu]]></phrase>
+  <phrase title="option_explain.bump_thread_reverse_time_limit" version_id="104" version_string="1.0.4"><![CDATA[Lower time limit gets priority]]></phrase>
+  <phrase title="option_explain.bump_thread_thread_list" version_id="2010101" version_string="2.1.1 1"><![CDATA[If this option is selected, a Bump Thread button will show above thread list item in form view]]></phrase>
+  <phrase title="option_explain.bump_thread_timer_from_thread_post_date" version_id="105" version_string="1.0.5"><![CDATA[The "time-limit" permission is counted from thread's start date.<br>
+If this is disabled, user can bump thread immediately after the thread is posted regardless of permissions.]]></phrase>
+  <phrase title="option_group.bump_thread_options" version_id="2000070" version_string="2.0.0"><![CDATA[[OzzModz/Banxix] Bump Thread]]></phrase>
+  <phrase title="option_group_description.bump_thread_options" version_id="100" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="permission.forum_bump" version_id="100" version_string="1.0.0"><![CDATA[Can bump own threads]]></phrase>
+  <phrase title="permission.forum_bumpDisable" version_id="2010102" version_string="2.1.1 2"><![CDATA[Can disable thread bumping]]></phrase>
+  <phrase title="permission.forum_bumpFloodRate" version_id="100" version_string="1.0.0"><![CDATA[Time limit in seconds between each bump]]></phrase>
+  <phrase title="permission.forum_bumpMaxPerDay" version_id="100" version_string="1.0.0"><![CDATA[Max bumps per day]]></phrase>
+  <phrase title="permission.forum_bumpOthers" version_id="100" version_string="1.0.0"><![CDATA[Can bump other threads]]></phrase>
+  <phrase title="permission_interface.bumpThreadPermissions" version_id="2000070" version_string="2.0.0"><![CDATA[[OzzModz/Banxix] Bump Thread]]></phrase>
+</phrases>

@@ -1,0 +1,1 @@
+Amount should be greater than ZERO and less than {amount}.

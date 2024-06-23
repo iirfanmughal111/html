@@ -1,0 +1,77 @@
+<xf:title>
+  <xf:if is="$downgradeUserGroup.usg_id"> {{ phrase('fs_edit_userGroup') }}
+  <xf:else /> {{ phrase('fs_downgrade_usergroup') }} </xf:if>
+</xf:title>
+<xf:form
+  action="{{ link('downgradeGroup/save', $downgradeUserGroup) }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+    <div class="block-body">
+      <xf:selectrow
+        name="sl_ug_id"
+        label="{{ phrase('fs_select_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$downgradeUserGroup.exist_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_user') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:textbox
+          name="username"
+          ac="single"
+          placeholder="{{ phrase('fs_enter_user') }}"
+          data-i="0"
+          value="{$downgradeUserGroup.User.username}"
+        />
+      </xf:formrow>
+
+      <xf:formrow
+        rowtype="input"
+        label="{{ phrase('fs_enter_last_login') }}"
+        hint="{{ phrase('required') }}"
+      >
+        <xf:numberboxrow
+          name="last_login"
+          placeholder="{{ phrase('fs_enter_message') }}"
+          data-i="0"
+          rowtype="fullWidth"
+          value="{$downgradeUserGroup.last_login}"
+        />
+      </xf:formrow>
+
+      <xf:selectrow
+        name="up_ug_id"
+        label="{{ phrase('fs_downgrade_user_group') }}"
+        hint="{{ phrase('required') }}"
+        required="required"
+      >
+        <xf:option value="0">{{ phrase('(none)') }}</xf:option>
+
+        <xf:foreach loop="$userGroups" key="$key" value="$group">
+          <xf:option
+            value="{$key}"
+            selected="{{$downgradeUserGroup.downgrade_userGroup== $key }}"
+            >{$group}</xf:option
+          >
+        </xf:foreach>
+      </xf:selectrow>
+    </div>
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>

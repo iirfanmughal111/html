@@ -1,0 +1,452 @@
+{
+    "admin_navigation.fsEscrowLogNav.txt": {
+        "global_cache": false,
+        "version_id": 1000400,
+        "version_string": "1.0.4 Alpha",
+        "hash": "640986ec9c39b2d76c857bdc11fd45d1"
+    },
+    "admin_navigation.fs_escrow_live_log.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "0ab8171e58b729ff64d24157664f7129"
+    },
+    "amount_to_withdraw.txt": {
+        "global_cache": false,
+        "version_id": 1010100,
+        "version_string": "1.1.1 Alpha",
+        "hash": "8ddc54f9b84decdac87627dd31056af5"
+    },
+    "crypto_address.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6d49194c0d213fa932454a9d2f27a84c"
+    },
+    "escrow_admin_logs.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "b2d37ae1cedf42ff874289b721860af2"
+    },
+    "escrow_current_fee_percentage.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "837d48643932494f8deb9939158d31c1"
+    },
+    "escrow_live_data.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "4c3fcd04399838872833712c67d191fd"
+    },
+    "fs_amount_received.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "ac5bb077c33753116b5e91ff1766e7bc"
+    },
+    "fs_decrypt_message.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "7b41775400700bcd3fca5562f6e4a8bf"
+    },
+    "fs_encrypt_message.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "d61bc9d10171d8da1a7e7a521c403d61"
+    },
+    "fs_escrow_0_date.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "4ae2c96fcec6f3a3a837223cb5e00402"
+    },
+    "fs_escrow_1_date.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "3a6a0d8ed01433815f24374e03058c74"
+    },
+    "fs_escrow_2_date.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "618afc92caf3989bde791ccf1a548087"
+    },
+    "fs_escrow_3_date.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "52b62b73ec474189cae3770b84c2165d"
+    },
+    "fs_escrow_4_date.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "071410b2c4f0fc7916ee6cc18bebbfd4"
+    },
+    "fs_escrow_address.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dd7bf230fde8d4836917806aff6a6b27"
+    },
+    "fs_escrow_address_error.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "4e27fe6ada9eadb78fdbf1ed57c945f4"
+    },
+    "fs_escrow_address_from.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "bc90d48c2226d3c1d93895e37bec3446"
+    },
+    "fs_escrow_address_to.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "187a9bb4043668d1d2f495cd0c71687d"
+    },
+    "fs_escrow_admins_lastUpdate.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "f5410099c8ea7e188bb1f5e98f4190af"
+    },
+    "fs_escrow_amount_error.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "039f2b0469e080f08b41d89ae79b50fe"
+    },
+    "fs_escrow_amount_withdraw.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "9d5dbce7d87cede9e0224bb3a48ca1d7"
+    },
+    "fs_escrow_container_amount.txt": {
+        "global_cache": false,
+        "version_id": 1000300,
+        "version_string": "1.0.3 Alpha",
+        "hash": "b84d01ebe0333b969998bcc64a1652ee"
+    },
+    "fs_escrow_deposit_confiremed.txt": {
+        "global_cache": false,
+        "version_id": 1000300,
+        "version_string": "1.0.3 Alpha",
+        "hash": "ed1491f1b4cb68e2c5d41e49a1ff2b2c"
+    },
+    "fs_escrow_deposit_error.txt": {
+        "global_cache": false,
+        "version_id": 1000300,
+        "version_string": "1.0.3 Alpha",
+        "hash": "1875952b0510989f14cf909eb6bef9d1"
+    },
+    "fs_escrow_deposit_error_2.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "5882a6cc466af7bd95c8a6c9d31db8d4"
+    },
+    "fs_escrow_deposit_title_error.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "b37e11c30d040cac041ea47f3f4ef465"
+    },
+    "fs_escrow_include_fee.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "482786284234cd9556b0f1095841232f"
+    },
+    "fs_escrow_message_does_not_matched.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "cce58a5cf3c8c6c8aad6958490b3f6e7"
+    },
+    "fs_escrow_otp_alert_mail.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f6bd94c7df26df95a2bf0be9370142c8"
+    },
+    "fs_escrow_otp_does_not_matched_or_expired.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "eddd5d19aa93967e01a9a6ef8201620c"
+    },
+    "fs_escrow_otp_verfication_enter.txt": {
+        "global_cache": false,
+        "version_id": 1000200,
+        "version_string": "1.0.2 Alpha",
+        "hash": "7d05034fd8962a04fbbe63a6ff3f6d02"
+    },
+    "fs_escrow_relaase_error.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "08cbbe73fdd18da8edbe0cea43da0211"
+    },
+    "fs_escrow_release_error_2.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "2862765db280228571cea1d6ed850891"
+    },
+    "fs_escrow_request_from.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f1480ef358b45b1c1f71cb75992ae23c"
+    },
+    "fs_escrow_request_subject.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "74079ae3e922fa6310a54b31ba20ce19"
+    },
+    "fs_escrow_trans_amountUSD.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "3518f8944d42212dd37daffe097d216e"
+    },
+    "fs_escrow_trans_amount_deposit.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "41627a61692d3f164067e10dc72c9c4e"
+    },
+    "fs_escrow_trans_escrow.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6c73f7154eb60e61e425204185743f17"
+    },
+    "fs_escrow_trans_externalId.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "8f9bfe9d1345237cb3b2b205864da075"
+    },
+    "fs_escrow_trans_sender_addreses.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "86c61d2597857a96ae3a6048b5e7c5a7"
+    },
+    "fs_escrow_trans_status.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "ec53a8c4f07baed5d8825072c89799be"
+    },
+    "fs_escrow_trans_txId.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "0560029b0d87be415376d4b51bfc3f40"
+    },
+    "fs_escrow_visit_request_page.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "5e706a9b7eb9b142a619e4331d6976e6"
+    },
+    "fs_escrow_wirthraw_error.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "3430f74e131a65d25a78947aacfb777d"
+    },
+    "fs_escrow_withdraw.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dc20dd3408e947c47bd725aa6854d94c"
+    },
+    "fs_escrow_withdrawRequest.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "8ed767695b7f462148631e324866cc1e"
+    },
+    "fs_escrow_withdraw_confiremed.txt": {
+        "global_cache": false,
+        "version_id": 1000300,
+        "version_string": "1.0.3 Alpha",
+        "hash": "3c28c945ca115d0f34f37381c42677bb"
+    },
+    "fs_escrow_withdraw_error.txt": {
+        "global_cache": false,
+        "version_id": 1000300,
+        "version_string": "1.0.3 Alpha",
+        "hash": "f8ddd07186cf15dcf791a43cf1d02a37"
+    },
+    "fs_escrow_withdraw_error_2.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "37b7216518b7e24dbf46cdbedad312a8"
+    },
+    "fs_hi.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "c1a5298f939e87e8f962a5edfc206918"
+    },
+    "fs_otp_verfication_email.txt": {
+        "global_cache": false,
+        "version_id": 1000200,
+        "version_string": "1.0.2 Alpha",
+        "hash": "3fe31595175363624e8b5e86034704c2"
+    },
+    "fs_public_key.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "37c5b6e7c4291021b6100a6754ae7ffe"
+    },
+    "fs_require_encrypt_message.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "1231c465fce56ea273e7b392e5f04cea"
+    },
+    "fs_require_public_key.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "e4548d266abac03523ef53acd13a4d04"
+    },
+    "fs_title_otp_verfication.txt": {
+        "global_cache": false,
+        "version_id": 1000200,
+        "version_string": "1.0.2 Alpha",
+        "hash": "efa4da0ff76f7ce86ce0e7c7cd06b600"
+    },
+    "option.fs_escrow_api.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c4890985ad3b36106a595fce1be131af"
+    },
+    "option.fs_escrow_approval_que_option.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "bf18324faf0a5cad832d6e8dcd11ab43"
+    },
+    "option.fs_escrow_bit_base_url.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a5f82b92fd94524f764607aff4b07158"
+    },
+    "option.fs_escrow_callback_link.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "97d47c397848975ae1f33624ea406d29"
+    },
+    "option.fs_escrow_conversion_api.txt": {
+        "global_cache": false,
+        "version_id": 1000900,
+        "version_string": "1.0.9 Alpha",
+        "hash": "a56d917a134e1b68d9cb67b785a62dbd"
+    },
+    "option.fs_escrow_currency.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f780f62e8786c16e31743c6ed28ea24e"
+    },
+    "option.fs_escrow_pgp_option.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "9fff883aefceadb6c8ee54a9c1cdb9d1"
+    },
+    "option_explain.fs_escrow_api.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6279121e91b6e48c4d20b34070e0ec76"
+    },
+    "option_explain.fs_escrow_applicable_forum.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6 Alpha",
+        "hash": "974bf0e7e7b332338b370d9b8b1a8fea"
+    },
+    "option_explain.fs_escrow_approval_que_option.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "354b5029831be50f5ee695470a6f6f26"
+    },
+    "option_explain.fs_escrow_bit_base_url.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_explain.fs_escrow_callback_link.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "26ae662082fa5ffbeebe92526aa21e57"
+    },
+    "option_explain.fs_escrow_conversion_api.txt": {
+        "global_cache": false,
+        "version_id": 1000900,
+        "version_string": "1.0.9 Alpha",
+        "hash": "f29687f7eba2dfe79682014019c711d0"
+    },
+    "option_explain.fs_escrow_currency.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_explain.fs_escrow_pgp_option.txt": {
+        "global_cache": false,
+        "version_id": 1010000,
+        "version_string": "1.1.0 Alpha",
+        "hash": "13c728f768e0e3010dfd93d3535e51bb"
+    },
+    "permission_interface.escrowModeratorPermissions.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f5ec775629c9a7074da0fa13bcbe056d"
+    },
+    "please_enter_amount.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "981c8dd4d4e0e96acff8261ef28dee60"
+    },
+    "user_x_request_withdraw.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2e8a14f6ed0be042d2abbbb5c4b58d14"
+    },
+    "username.txt": {
+        "global_cache": false,
+        "version_id": 1000400,
+        "version_string": "1.0.4 Alpha",
+        "hash": "8f9bfe9d1345237cb3b2b205864da075"
+    }
+}

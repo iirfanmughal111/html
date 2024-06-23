@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="xaScAllowedFileExtensions" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>zip
+txt
+pdf
+png
+jpg
+jpeg
+jpe
+gif</default_value>
+    <edit_format_params>rows=6</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8114"/>
+  </option>
+  <option option_id="xaScAuthorOtherItemsCount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2320"/>
+  </option>
+  <option option_id="xaScAutoFeatureCategories" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>XenAddons\Showcase\Option\Category::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="xaShowcase" display_order="5005"/>
+  </option>
+  <option option_id="xaScAutoFeatureComments" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>-1</default_value>
+    <edit_format_params>min=-1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="5014"/>
+  </option>
+  <option option_id="xaScAutoFeatureCreated" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"0","days":"1"}</default_value>
+    <edit_format_params>onoff=enabled
+value=days
+type=spinbox
+min=1
+default=1
+units={{ phrase('units_days') }}</edit_format_params>
+    <sub_options>enabled
+days</sub_options>
+    <relation group_id="xaShowcase" display_order="5030"/>
+  </option>
+  <option option_id="xaScAutoFeatureExclusive" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="5020"/>
+  </option>
+  <option option_id="xaScAutoFeatureItems" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="5000"/>
+  </option>
+  <option option_id="xaScAutoFeatureRating" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>-1</default_value>
+    <edit_format_params>min=-1
+max=5</edit_format_params>
+    <relation group_id="xaShowcase" display_order="5012"/>
+  </option>
+  <option option_id="xaScAutoFeatureReactionScore" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>-1</default_value>
+    <edit_format_params>min=-1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="5011"/>
+  </option>
+  <option option_id="xaScAutoFeatureUpdated" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"0","days":"1"}</default_value>
+    <edit_format_params>onoff=enabled
+value=days
+type=spinbox
+min=1
+default=1
+units={{ phrase('units_days') }}</edit_format_params>
+    <sub_options>enabled
+days</sub_options>
+    <relation group_id="xaShowcase" display_order="5032"/>
+  </option>
+  <option option_id="xaScAutoFeatureUserGroups" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>XF\Option\UserGroup::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="xaShowcase" display_order="5006"/>
+  </option>
+  <option option_id="xaScAutoFeatureViews" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>-1</default_value>
+    <edit_format_params>min=-1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="5010"/>
+  </option>
+  <option option_id="xaScAutoUnfeatureItems" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"0","days":"180"}</default_value>
+    <edit_format_params>onoff=enabled
+value=days
+type=spinbox
+min=1
+default=180
+units={{ phrase('units_days') }}</edit_format_params>
+    <sub_options>enabled
+days</sub_options>
+    <relation group_id="xaShowcase" display_order="5300"/>
+  </option>
+  <option option_id="xaScCategoryOtherItemsCount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2310"/>
+  </option>
+  <option option_id="xaScCommentAllowedFileExtensions" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>png
+jpg
+jpeg
+jpe
+gif</default_value>
+    <edit_format_params>rows=6</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8214"/>
+  </option>
+  <option option_id="xaScCommentAttachmentMaxFileSize" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>2048</default_value>
+    <edit_format_params>min=0
+step=1
+units={{ phrase('units_kb') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8210"/>
+  </option>
+  <option option_id="xaScCommentMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>10000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2015"/>
+  </option>
+  <option option_id="xaScCommentsPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2112"/>
+  </option>
+  <option option_id="xaScDefaultFeaturedMapMarkerIconUrl" edit_format="template" data_type="string" advanced="0">
+    <default_value>data/assets/xa_sc_map_markers/blue-dot.png</default_value>
+    <edit_format_params>option_template_xaScDefaultMapMarkerIconUrl</edit_format_params>
+    <relation group_id="xaShowcase" display_order="4122"/>
+  </option>
+  <option option_id="xaScDefaultMapMarkerIconUrl" edit_format="template" data_type="string" advanced="0">
+    <default_value>data/assets/xa_sc_map_markers/red-dot.png</default_value>
+    <edit_format_params>option_template_xaScDefaultMapMarkerIconUrl</edit_format_params>
+    <relation group_id="xaShowcase" display_order="4120"/>
+  </option>
+  <option option_id="xaScDisplayCoverImageHeader" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="2000"/>
+  </option>
+  <option option_id="xaScDisplayCoverImageSidebar" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="2001"/>
+  </option>
+  <option option_id="xaScDisplayDescriptionHeader" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="2002"/>
+  </option>
+  <option option_id="xaScDisplayDescriptionItemDetails" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="2003"/>
+  </option>
+  <option option_id="xaScDisplaySectionsOnThread" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="6400"/>
+  </option>
+  <option option_id="xaScEnableAuthorList" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="6200"/>
+  </option>
+  <option option_id="xaScExcludeFeaturedItemsFromListing" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="1003"/>
+  </option>
+  <option option_id="xaScExcludeFeaturedSeriesFromListing" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="3002"/>
+  </option>
+  <option option_id="xaScExpandCategoryNav" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="210"/>
+  </option>
+  <option option_id="xaScFeaturedItemsDisplayType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>carousel</default_value>
+    <edit_format_params>carousel={{ phrase('xa_sc_carousel') }}
+featured_grid={{ phrase('xa_sc_grid_block') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1000"/>
+  </option>
+  <option option_id="xaScFeaturedItemsLimit" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1002"/>
+  </option>
+  <option option_id="xaScFeaturedSeriesLimit" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="3001"/>
+  </option>
+  <option option_id="xaScFilesLocation" edit_format="radio" data_type="string" advanced="0">
+    <default_value>sidebar</default_value>
+    <edit_format_params>below_item={{ phrase('xa_sc_below_item_overview') }}
+sidebar={{ phrase('xa_sc_sidebar_block') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2520"/>
+  </option>
+  <option option_id="xaScGalleryDisplayType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>multiple_blocks</default_value>
+    <edit_format_params>single_block={{ phrase('xa_sc_single_block') }}
+multiple_blocks={{ phrase('xa_sc_multiple_blocks') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2511"/>
+  </option>
+  <option option_id="xaScGalleryLocation" edit_format="radio" data_type="string" advanced="0">
+    <default_value>own_tab</default_value>
+    <edit_format_params>own_tab={{ phrase('xa_sc_own_tab') }}
+above_item={{ phrase('xa_sc_above_item') }}
+below_item={{ phrase('xa_sc_below_item') }}
+no_gallery={{ phrase('xa_sc_no_gallery') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2510"/>
+  </option>
+  <option option_id="xaScGoogleMapsEmbedApiKey" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="xaShowcase" display_order="4010"/>
+  </option>
+  <option option_id="xaScGoogleMapsGeocodingApiKey" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="xaShowcase" display_order="4014"/>
+  </option>
+  <option option_id="xaScGoogleMapsJavaScriptApiKey" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="xaShowcase" display_order="4012"/>
+  </option>
+  <option option_id="xaScIncludeCommentsImagesInGallery" edit_format="radio" data_type="string" advanced="0">
+    <default_value>disabled</default_value>
+    <edit_format_params>disabled={{ phrase('xa_sc_do_not_include_images_from_comments') }}
+owners={{ phrase('xa_sc_from_owners_only') }}
+contributors={{ phrase('xa_sc_from_contributors_only') }}
+all={{ phrase('xa_sc_from_all_comments') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2514"/>
+  </option>
+  <option option_id="xaScIncludePostsImagesInGallery" edit_format="radio" data_type="string" advanced="0">
+    <default_value>disabled</default_value>
+    <edit_format_params>disabled={{ phrase('xa_sc_do_not_include_images_from_posts') }}
+owners={{ phrase('xa_sc_from_owners_only') }}
+contributors={{ phrase('xa_sc_from_contributors_only') }}
+all={{ phrase('xa_sc_from_all_posts') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2515"/>
+  </option>
+  <option option_id="xaScIncludeReviewsImages" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="2513"/>
+  </option>
+  <option option_id="xaScIndexFullPageMapOptions" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"enable_full_page_map":false,"marker_fetch_order":false,"marker_limit":false}</default_value>
+    <edit_format_params>option_template_xaScIndexFullPageMapOptions</edit_format_params>
+    <sub_options>enable_full_page_map
+marker_fetch_order
+marker_limit</sub_options>
+    <relation group_id="xaShowcase" display_order="4310"/>
+  </option>
+  <option option_id="xaScIndexMapOptions" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"enable_map":false,"map_display_location":false,"container_height":false}</default_value>
+    <edit_format_params>option_template_xaScIndexMapOptions</edit_format_params>
+    <sub_options>enable_map
+map_display_location
+container_height</sub_options>
+    <relation group_id="xaShowcase" display_order="4300"/>
+  </option>
+  <option option_id="xaScIndexPageType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>standard</default_value>
+    <edit_format_params>standard={{ phrase('xa_sc_standard_index_page') }}
+modular={{ phrase('xa_sc_modular_index_page') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="110"/>
+  </option>
+  <option option_id="xaScItemAttachmentMaxFileSize" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>2048</default_value>
+    <edit_format_params>min=0
+step=1
+units={{ phrase('units_kb') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8110"/>
+  </option>
+  <option option_id="xaScItemDeleteThreadAction" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"action":"close","update_title":"1","title_template":"{title} [Deleted]","add_post":"1"}</default_value>
+    <edit_format_params>option_template_xaScItemDeleteThreadAction</edit_format_params>
+    <sub_options>action
+update_title
+title_template
+add_post</sub_options>
+    <relation group_id="xaShowcase" display_order="7000"/>
+  </option>
+  <option option_id="xaScItemListLayoutType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>list_view</default_value>
+    <edit_format_params>list_view={{ phrase('xa_sc_list_view_layout') }}
+grid_view={{ phrase('xa_sc_grid_view_layout') }}
+tile_view={{ phrase('xa_sc_tile_view_layout') }}
+item_view={{ phrase('xa_sc_item_view_layout') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1182"/>
+  </option>
+  <option option_id="xaScItemMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>50000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2010"/>
+  </option>
+  <option option_id="xaScItemsPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1190"/>
+  </option>
+  <option option_id="xaScItemsPerPageGridView" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>18</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1191"/>
+  </option>
+  <option option_id="xaScItemsPerPageItemView" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>10</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1193"/>
+  </option>
+  <option option_id="xaScItemsPerPageTileView" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>18</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1192"/>
+  </option>
+  <option option_id="xaScLatestReviewsCutOffDays" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>90</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="6300"/>
+  </option>
+  <option option_id="xaScLatestUpdatesCutOffDays" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>90</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="6300"/>
+  </option>
+  <option option_id="xaScLimitedViewItemLength" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>500</default_value>
+    <relation group_id="xaShowcase" display_order="2012"/>
+  </option>
+  <option option_id="xaScListDefaultOrder" edit_format="select" data_type="string" advanced="0">
+    <default_value>create_date</default_value>
+    <edit_format_params>create_date={{ phrase('xa_sc_create_date') }}
+last_update={{ phrase('xa_sc_last_update') }}
+rating_weighted={{ phrase('rating') }}
+reaction_score={{ phrase('reaction_score') }}
+view_count={{ phrase('views') }}
+title={{ phrase('title') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1110"/>
+  </option>
+  <option option_id="xaScLocalizeGoogleMaps" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="4200"/>
+  </option>
+  <option option_id="xaScLocationDisplayType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>link</default_value>
+    <edit_format_params>link={{ phrase('xa_sc_display_link_item_info_block') }}
+map={{ phrase('xa_sc_display_as_map_in_sidebar_block') }}
+map_below_content={{ phrase('xa_sc_display_as_map_below_item') }}
+map_own_tab={{ phrase('xa_sc_display_as_map_in_own_tab') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2605"/>
+  </option>
+  <option option_id="xaScMarkerClustering" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="4210"/>
+  </option>
+  <option option_id="xaScMetaDescription" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>Showcase index</default_value>
+    <relation group_id="xaShowcase" display_order="6001"/>
+  </option>
+  <option option_id="xaScMinimumReviewLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2018"/>
+  </option>
+  <option option_id="xaScMoreFromAuthorLayoutType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>list_view</default_value>
+    <edit_format_params>list_view={{ phrase('xa_sc_list_view_layout') }}
+grid_view={{ phrase('xa_sc_grid_view_layout') }}
+tile_view={{ phrase('xa_sc_tile_view_layout') }}
+item_view={{ phrase('xa_sc_item_view_layout') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2322"/>
+  </option>
+  <option option_id="xaScMoreFromAuthorLocation" edit_format="radio" data_type="string" advanced="0">
+    <default_value>sidebar</default_value>
+    <edit_format_params>below_item={{ phrase('xa_sc_below_item') }}
+sidebar={{ phrase('xa_sc_sidebar_block') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2321"/>
+  </option>
+  <option option_id="xaScMoreInCategoryLayoutType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>list_view</default_value>
+    <edit_format_params>list_view={{ phrase('xa_sc_list_view_layout') }}
+grid_view={{ phrase('xa_sc_grid_view_layout') }}
+tile_view={{ phrase('xa_sc_tile_view_layout') }}
+item_view={{ phrase('xa_sc_item_view_layout') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2312"/>
+  </option>
+  <option option_id="xaScMoreInCategoryLocation" edit_format="radio" data_type="string" advanced="0">
+    <default_value>sidebar</default_value>
+    <edit_format_params>below_item={{ phrase('xa_sc_below_item') }}
+sidebar={{ phrase('xa_sc_sidebar_block') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2311"/>
+  </option>
+  <option option_id="xaScOverrideStyle" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>XenAddons\Showcase\Option\Style::renderSelect</edit_format_params>
+    <relation group_id="xaShowcase" display_order="60"/>
+  </option>
+  <option option_id="xaScRecentReviewsCount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>3</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2111"/>
+  </option>
+  <option option_id="xaScRecentUpdatesCount" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>3</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2110"/>
+  </option>
+  <option option_id="xaScRequireReviewTitle" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="2200"/>
+  </option>
+  <option option_id="xaScReviewAllowedFileExtensions" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>png
+jpg
+jpeg
+jpe
+gif</default_value>
+    <edit_format_params>rows=6</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8314"/>
+  </option>
+  <option option_id="xaScReviewAttachmentMaxFileSize" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>2048</default_value>
+    <edit_format_params>min=0
+step=1
+units={{ phrase('units_kb') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="8310"/>
+  </option>
+  <option option_id="xaScReviewMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>10000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2016"/>
+  </option>
+  <option option_id="xaScReviewReplyMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>1000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2020"/>
+  </option>
+  <option option_id="xaScReviewsPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2114"/>
+  </option>
+  <option option_id="xaScSectionsDisplayType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>stacked</default_value>
+    <edit_format_params>stacked={{ phrase('xa_sc_stacked') }}
+tabbed={{ phrase('xa_sc_tabbed') }}</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2005"/>
+  </option>
+  <option option_id="xaScSeriesDetailsMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>50000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="3100"/>
+  </option>
+  <option option_id="xaScSeriesItemsPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="3015"/>
+  </option>
+  <option option_id="xaScSeriesMinTags" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="3110"/>
+  </option>
+  <option option_id="xaScSeriesPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="3010"/>
+  </option>
+  <option option_id="xaScShowPointsOfInterest" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="4220"/>
+  </option>
+  <option option_id="xaScShowRatingFilters" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="1215"/>
+  </option>
+  <option option_id="xaScShowTitleFilters" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="1210"/>
+  </option>
+  <option option_id="xaScShowcaseSearchFormTabOrder" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>134</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="6100"/>
+  </option>
+  <option option_id="xaScSignatureOnComments" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="2410"/>
+  </option>
+  <option option_id="xaScSnippetLengthFC" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>300</default_value>
+    <edit_format_params>min=75</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1001"/>
+  </option>
+  <option option_id="xaScSnippetLengthGV" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>150</default_value>
+    <edit_format_params>min=75</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1184"/>
+  </option>
+  <option option_id="xaScSnippetLengthIV" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>500</default_value>
+    <edit_format_params>min=150</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1185"/>
+  </option>
+  <option option_id="xaScSnippetLengthLV" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>300</default_value>
+    <edit_format_params>min=150</edit_format_params>
+    <relation group_id="xaShowcase" display_order="1183"/>
+  </option>
+  <option option_id="xaScUnreadCounter" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="xaShowcase" display_order="50"/>
+  </option>
+  <option option_id="xaScUpdateMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>10000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2013"/>
+  </option>
+  <option option_id="xaScUpdateReplyMaxLength" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>1000</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2014"/>
+  </option>
+  <option option_id="xaScUpdatesPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="xaShowcase" display_order="2116"/>
+  </option>
+  <option option_id="xaScViewFullItem" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="xaShowcase" display_order="2400"/>
+  </option>
+</options>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="message.less" modification_key="th_postComments_styles" description="Includes the styling for post comment depth" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/$/]]></find>
+    <replace><![CDATA[$0
+{{ include('thpostcomments_post.less') }}
+]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros" description="Add message depth to container" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<article class="message ]]></find>
+    <replace><![CDATA[$0 {{ $post.thpostcomments_depth ? ' message--depth' . $post.thpostcomments_depth . ' ' : '' }} {{$post.thpostcomments_depth ? ' message-comment thpostcomments_message--condensed ' : ''}} {{ $xf.options.thpostcomments_hide_comment_depth > $post.thpostcomments_depth ? ' thpostcomments_message--expanded ' : '' }}]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros_j" description="Add &quot;nestedPost&quot; and &quot;depth&quot; argument to &quot;post_last_edit&quot; macro" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#(^<xf:macro name="post_last_edit".*?)(.*?>)#m]]></find>
+    <replace><![CDATA[$1 arg-nestedPost="{{ null }}" arg-depth="0"$2]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros_k" description="Pass &quot;nestedPost&quot; and &quot;depth&quot; argument to &quot;post_last_edit&quot; macro" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#(^\s*<xf:macro name="post_last_edit")(.*?\/>$)#m]]></find>
+    <replace><![CDATA[$1 arg-nestedPost="{$nestedPost}" arg-depth="{$depth}"$2]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros_replaceReactionListData" description="Replaces reaction list class data with id" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[list="< .js-post | .js-reactionsList"]]></find>
+    <replace><![CDATA[list="#js-reactionsList-{$post.post_id}"]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros_replaceReactionsBarId" description="Add ID to reactions bar" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="reactionsBar js-reactionsList]]></find>
+    <replace><![CDATA[<div id="js-reactionsList-{$post.post_id}" class="reactionsBar js-reactionsList]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thcomments_post_macros_reply" description="Modify the reply button for comments" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#<xf:if is="(\$thread\.canReply\(\)(?:.*?\$thread\.canReplyPreReg\(\)))?(">.*?>{{ phrase\('reply'\) }}<\/a>\s*<\/xf:if>)#s]]></find>
+    <replace><![CDATA[<xf:if is="($1) && (($post.canComment() && (!$xf.options.thpostcomments_max_comment_depth || !$xf.options.thpostcomments_replaceReplyButton)) || !$post.canComment()) $2
+
+<xf:if is="$post.canComment()">
+	<xf:if is="$xf.options.thpostcomments_max_comment_depth && $xf.options.thpostcomments_replaceReplyButton && $xf.visitor.hasNodePermission($thread.node_id, 'thpostcomments_comment')">
+		<a href="{{ link('posts/comment', $post) }}"
+		   class="actionBar-action actionBar-action--comment"
+		   title="{{ phrase('thpostcomments_reply_directly_to_this_message')|for_attr }}"
+		   data-editor-target="#js-post-{$post.post_id}"
+		   data-xf-click="comment">{{ phrase('reply') }}</a>
+	<xf:elseif is="$xf.options.thpostcomments_max_comment_depth && $xf.visitor.hasNodePermission($thread.node_id, 'thpostcomments_comment')" />
+		<a href="{{ link('posts/comment', $post) }}"
+		   class="actionBar-action actionBar-action--comment"
+		   title="{{ phrase('thpostcomments_reply_directly_to_this_message')|for_attr }}"
+		   data-editor-target="#js-post-{$post.post_id}"
+		   data-xf-click="comment">{{ phrase('thpostcomments_comment') }}</a>
+	</xf:if>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros" description="Add nested posts" execution_order="11" enabled="1" action="preg_replace">
+    <find><![CDATA[#^\s*<\/article>.*?<xf:ad position="post_below_container".*?<xf:macro name="post_attribution"$#sm]]></find>
+    <replace><![CDATA[		<xf:include template="thpostcomments_post_macros_nested" />
+
+$0]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_add_arg" description="Pass additional argument to post macro." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#(^<xf:macro name="post".*?)(>)#si]]></find>
+    <replace><![CDATA[$1 arg-nestedPost="{{ null }}" arg-depth="0"$2]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_attribution" description="Adds condensed class to message attribution" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/(<header class=".*?message-attribution.*?">.*?<\/header>)/s]]></find>
+    <replace><![CDATA[$0
+<xf:if is="{$post.thpostcomments_depth}">
+<header class="message-attribution message-attribution--condensed">
+	<ul class="listInline listInline--bullet">
+		<li class="message-attribution-user">
+			<xf:avatar user="$post.User" size="xxs" />
+			<h4 class="attribution attribution--plain"><xf:username user="$post.User" rich="true" defaultname="{$fallbackName}" itemprop="name" /></h4>
+		</li>
+		<li><span class="u-concealed" rel="nofollow"><xf:date time="$post.post_date" /></span></li>
+	</ul>	
+</header>	
+</xf:if>
+]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_comments" description="Adds the comments count link to posts" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$post.last_edit_date">]]></find>
+    <replace><![CDATA[<xf:if is="$post.thpostcomments_depth >= $xf.options.thpostcomments_hide_comment_depth && count($nestedPost.children)">
+	<a href="#" class="thpostcomments_commentLink">{{ phrase('thpostcomments_x_comments', {'count': count($nestedPost.children) }) }}</a>
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_expand_line" description="Adds the expandable line to the post" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<span class="u-anchorTarget"]]></find>
+    <replace><![CDATA[<xf:if is="$post.thpostcomments_depth">
+<div class="thpostcomments_exandLine"></div>
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_multiQuote" description="Multi-quote option for comments" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#(^\s*<xf:if is="\$xf\.options\.multiQuote.*?)(">)$#sim]]></find>
+    <replace><![CDATA[$1 AND (!$post.thpostcomments_depth || ($post.thpostcomments_depth && $xf.options.thpostcomments_enableMultiQuote))$2]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_post_deleted_macros" description="Add message depth to deleted post container" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="message message--deleted]]></find>
+    <replace><![CDATA[$0 {{ $post.thpostcomments_depth ? ' message--depth' . $post.thpostcomments_depth . ' ' : '' }} {{$post.thpostcomments_depth ? ' message-comment thpostcomments_message--condensed ' : ''}} {{ $xf.options.thpostcomments_hide_comment_depth > $post.thpostcomments_depth ? ' thpostcomments_message--expanded ' : '' }}]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_post_deleted_macros_arg" description="Add message depth to deleted post container arguments" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro name="post_deleted" arg-post="!" arg-thread="!"]]></find>
+    <replace><![CDATA[$0 arg-nestedPost="{{ null }}" arg-depth="0"]]></replace>
+  </modification>
+  <modification type="public" template="post_macros" modification_key="thpostcomments_post_macros_quickEditTarget" description="Alter quick edit target selector" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[data-editor-target="#js-post-{$post.post_id} .js-quickEditTarget"]]></find>
+    <replace><![CDATA[data-editor-target="#js-post-{$post.post_id} > div > div > .js-quickEditTarget"]]></replace>
+  </modification>
+  <modification type="public" template="thread_list_macros" modification_key="thpostcomments_thread_list_macros" description="Modify thread list page count" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[last_pages($thread.reply_count]]></find>
+    <replace><![CDATA[last_pages($thread.thpostcomments_root_reply_count]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="thcomments_thread_view" description="Replace page nav item counter (XF 2.1)" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[total="{{ $thread.reply_count + 1 }}"]]></find>
+    <replace><![CDATA[total="{$total}"]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="thcomments_thread_view_commentjs" description="Adds the comment JS" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:description meta="false">]]></find>
+    <replace><![CDATA[<xf:js prod="themehouse/post-comments/comment.min.js" dev="themehouse/post-comments/comment.js" addon="ThemeHouse/PostComments" />
+<xf:include template="thpostcomments_js" />
+$0]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="thpostcomments_nested_posts" description="Change default post loop to use nested loop" execution_order="9999" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:foreach loop="$posts" value="$post">]]></find>
+    <replace><![CDATA[<xf:foreach loop="$nestedPosts" value="$nestedPost">
+	<xf:set var="$post" value="{$nestedPost.record}" />]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="thpostcomments_thread_view" description="Pass nested info to post macro." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#\s*<xf:macro (?:template="post_macros" )?name="(?:{{ \$templateOverrides\.post_macro \?: 'post_macros::)?post(?:' }})?"$#m]]></find>
+    <replace><![CDATA[$0 arg-nestedPost="{$nestedPost}"]]></replace>
+  </modification>
+  <modification type="public" template="thread_view" modification_key="thpostcomments_thread_view_messageSelector" description="Add extra element to select-to-quote message selector." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/(data-message-selector|arg-messageSelector)="\.js-post"/]]></find>
+    <replace><![CDATA[$1=".js-post .message-inner"]]></replace>
+  </modification>
+  <modification type="admin" template="tools_rebuild" modification_key="thpostcomments_tools_rebuild" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:rebuild_bottom]-->]]></find>
+    <replace><![CDATA[$0
+
+<xf:macro name="rebuild_job" arg-header="{{ phrase('thpostcomments_rebuild_post_nesting')}}" arg-job="ThemeHouse\PostComments:RebuildNesting" />]]></replace>
+  </modification>
+</template_modifications>

@@ -1,0 +1,84 @@
+<xf:title>{{ phrase('link_proxy_title') }}</xf:title>
+
+
+<xf:pageaction>
+		<xf:button href="{{ link('link-proxy/add') }}"  class="button button--icon button--icon--add" icon="add">{{ phrase('link_proxy_add') }}</xf:button>
+
+</xf:pageaction>
+
+
+
+<div class="block-container">
+	<div class="block-body">
+		<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+			<div class="block-container">
+				<xf:if is="$lists != null">
+					<div class="block-body">
+						<xf:datalist data-xf-init="responsive-data-list">
+							<xf:macro
+									  name="link_table_list"
+									  arg-lists="{$lists}"
+									  />
+						</xf:datalist>
+					</div>
+
+					<xf:else />
+					<div class="block-body block-row">
+						{{ phrase('no_items_have_been_created_yet') }}
+					</div>
+				</xf:if>
+			</div>
+		</xf:form>
+	</div>
+
+	<div class="block-footer">
+
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt><span class="block-footer-counter">{{ display_totals($attendance, $total) }}</span></dt>
+				<dd>
+					<xf:pagenav
+								page="{$page}"
+								perpage="{$perPage}"
+								total="{$total}"
+								link="link-proxy"
+								data="{$lists}"
+								params="{$lists}"
+								wrapperclass="block-outer-main"
+								/>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+
+
+<xf:macro name="link_table_list" arg-lists="{$lists}">
+	<xf:datarow rowtype="header">
+		<xf:cell> {{ phrase('user_group') }} </xf:cell>
+		<xf:cell> {{ phrase('link_delay_time') }} </xf:cell>
+		<xf:cell> {{ phrase('link_html') }} </xf:cell>
+
+
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_link_edit') }}</xf:cell>
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_Link_delete') }}</xf:cell>
+	</xf:datarow>
+	<xf:foreach loop="$lists" value="$list">
+		<xf:datarow>
+			<xf:cell> {{$list.UserGroup.title}} </xf:cell>
+			<xf:cell> {{$list.redirect_time }} </xf:cell>
+			<xf:cell>
+				{{$list.link_redirect_html != '' ? snippet($list.link_redirect_html, 30, {'stripBbCode': true}) : phrase('no_link_redirect_html') }}
+			</xf:cell>
+
+			<xf:action
+					   href="{{link('link-proxy/edit', $list) }}"
+					   >{{ phrase('edit') }}</xf:action>
+			<xf:delete
+					   href="{{ link('link-proxy/delete', $list) }}"
+					   overlay="true"
+					   />
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>

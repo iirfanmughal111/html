@@ -1,0 +1,9 @@
+{
+    "template": "post_edit",
+    "description": "hideAttachemtPostEdit",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:formrow rowtype=\"{{ $quickEdit ? 'fullWidth noLabel mergePrev' : '' }}\">\n\t\t\t\t<xf:if is=\"$attachmentData\">\n\t\t\t\t\t<xf:macro template=\"helper_attach_upload\" name=\"upload_block\" arg-attachmentData=\"{$attachmentData}\" />\n\t\t\t\t</xf:if>\n\t\t\t</xf:formrow>",
+    "replace": "<xf:if is=\"$thread\">\t\n<xf:if is=\"$thread.is_dropdown_active\">\n\t  \n\t<xf:else />\n\t\t$0\n\t\t\n</xf:if>\n\t\n<xf:else />\n\t\t$0\n\t</xf:if>"
+}

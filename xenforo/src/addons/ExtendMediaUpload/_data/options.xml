@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="Domainbunnynet" edit_format="username" data_type="string">
+    <default_value></default_value>
+    <relation group_id="EMU" display_order="1"/>
+  </option>
+  <option option_id="apikey" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="EMU" display_order="1"/>
+  </option>
+  <option option_id="collectionid" edit_format="username" data_type="string">
+    <default_value></default_value>
+    <relation group_id="EMU" display_order="1"/>
+  </option>
+  <option option_id="thumbnailcdnhost" edit_format="username" data_type="string">
+    <default_value></default_value>
+    <relation group_id="EMU" display_order="1"/>
+  </option>
+  <option option_id="videolibraryid" edit_format="username" data_type="string">
+    <default_value></default_value>
+    <relation group_id="EMU" display_order="1"/>
+  </option>
+</options>

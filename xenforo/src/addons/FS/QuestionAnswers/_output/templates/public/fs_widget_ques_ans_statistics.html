@@ -1,0 +1,17 @@
+<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('fs_question_count') }}</dt>
+				<dd>{$questionAnswerCount.question|number}</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('fs_answer_count') }}</dt>
+				<dd>{$questionAnswerCount.ans|number}</dd>
+			</dl>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_event_listeners>
+  <listener event_id="app_pub_setup" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="appPubSetup" active="1" description="App setup"/>
+  <listener event_id="app_setup" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="appSetup" active="1" description="App setup"/>
+  <listener event_id="criteria_page" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="criteriaPage" active="1" description="Add the eCommerce-related page criteria."/>
+  <listener event_id="criteria_template_data" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="criteriaTemplateData" active="1" description="Add products to criteria template"/>
+  <listener event_id="criteria_user" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="criteriaUser" active="1" description="Add the eCommerce-related criteria."/>
+  <listener event_id="import_importer_classes" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="importImporterClasses" active="1" description="Add importers to the list"/>
+  <listener event_id="templater_macro_pre_render" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="templaterMacroPreRender" active="1" hint="admin:option_macros:option_form_block" description="Modify the option macro to allow tabbed options."/>
+  <listener event_id="templater_setup" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="templaterSetup" active="1" description="Add the custom templater functions needed by eCommerce."/>
+  <listener event_id="user_content_change_init" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="userContentChangeInit" active="1" description="Register the updates that need to happen when a user is renamed, deleted, etc."/>
+  <listener event_id="user_delete_clean_init" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="userDeleteCleanInit" active="1" description="Register the clean up queries that need to run when a user is deleted."/>
+  <listener event_id="user_merge_combine" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="userMergeCombine" active="1" description="Allow the product count to be updated when merging users."/>
+  <listener event_id="user_searcher_orders" execute_order="10" callback_class="DBTech\eCommerce\Listener" callback_method="userSearcherOrders" active="1" description="Add product count to user searcher orders."/>
+</code_event_listeners>

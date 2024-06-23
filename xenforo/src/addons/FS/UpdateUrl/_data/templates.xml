@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="fs_escrow_list_view.less" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[// ############################ Escrow List View ######################
+
+.structItem-cell.structItem-cell--listingMeta
+{
+	width: 250px;
+}
+.label--counter{
+	font-size:13px;
+}
+.auction-category{
+	font-size: 12px;
+    color: #8c8c8c;
+}
+#counter-before:after{
+	content:none;
+}
+.structItem-metaItem--ratingf
+{
+	font-size: @xf-fontSizeSmall;
+}
+.label--counter-single{
+	font-size:25px;
+}
+@media (max-width: @xf-responsiveWide)
+{
+	.structItem-cell.structItem-cell--listingMeta
+	{
+		width: 190px;
+		font-size: @xf-fontSizeSmaller;
+	}
+}
+
+@media (max-width: @xf-responsiveMedium)
+{
+	.structItem-cell.structItem-cell--listingMeta
+	{
+		display: block;
+		width: auto;
+		float: left;
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		color: @xf-textColorMuted;
+
+		.pairs
+		{
+			display: inline;
+
+			&:before,
+			&:after
+			{
+				display: none;
+			}
+
+			> dt,
+			> dd
+			{
+				display: inline;
+				float: none;
+				margin: 0;
+			}
+		}
+
+		.structItem-metaItem
+		{
+			display: inline;
+		}
+
+		.ratingStarsRow
+		{
+			display: inline;
+
+			.ratingStarsRow-text
+			{
+				display: none;
+			}
+		}
+
+		.structItem-metaItem--lastUpdate > dt
+		{
+			display: none;
+		}
+
+		.structItem-metaItem + .structItem-metaItem:before
+		{
+			display: inline;
+			content: "\20\00B7\20";
+			color: @xf-textColorMuted;
+		}
+	}
+}
+
+// #################################### Escrow LISTING BODY / VIEW ########################
+
+.listingBody
+{
+	display: flex;
+}
+
+.listingBody-main
+{
+	flex: 1;
+	min-width: 0;
+	padding: @xf-blockPaddingV @xf-blockPaddingH;
+}
+
+.listingBody-sidebar
+{
+	flex: 0 0 auto;
+	width: 250px;
+	.xf-contentAltBase();
+	border-left: @xf-borderSize solid @xf-borderColor;
+	padding: @xf-blockPaddingV @xf-blockPaddingH;
+	font-size: @xf-fontSizeSmall;
+
+	> :first-child
+	{
+		margin-top: 0;
+	}
+
+	> :last-child
+	{
+		margin-bottom: 0;
+	}
+}
+
+.listingBody-fields
+{
+	&.listingBody-fields--before
+	{
+		margin-bottom: @xf-paddingLarge;
+		padding-bottom: @xf-paddingMedium;
+		border-bottom: @xf-borderSize solid @xf-borderColorLight;
+	}
+
+	&.listingBody-fields--after
+	{
+		margin-top: @xf-paddingLarge;
+		padding-top: @xf-paddingMedium;
+		border-top: @xf-borderSize solid @xf-borderColorLight;
+	}
+}
+
+.listingBody-attachments
+{
+	margin: .5em 0;
+}
+
+.listingBody .actionBar-set
+{
+	margin-top: @xf-messagePadding;
+	font-size: @xf-fontSizeSmall;
+}
+
+.listingSidebarGroup
+{
+	margin-bottom: @xf-elementSpacer;
+
+	&.listingSidebarGroup--buttons
+	{
+		> .button
+		{
+			display: block;
+			margin: 5px 0;
+
+			&:first-child
+			{
+				margin-top: 0;
+			}
+
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.listingSidebarGroup-title
+{
+	margin: 0;
+	padding: 0;
+
+	font-size: @xf-fontSizeLarge;
+	font-weight: @xf-fontWeightNormal;
+	color: @xf-textColorFeature;
+	padding-bottom: @xf-paddingMedium;
+
+	.m-hiddenLinks();
+}
+
+.listingSidebarList
+{
+	.m-listPlain();
+
+	> li
+	{
+		padding: @xf-paddingSmall 0;
+
+		&:first-child
+		{
+			padding-top: 0;
+		}
+
+		&:last-child
+		{
+			padding-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: @xf-responsiveWide)
+{
+	.listingBody
+	{
+		display: block;
+	}
+
+	.listingBody-sidebar
+	{
+		width: auto;
+		border-left: none;
+		border-top: @xf-borderSize solid @xf-borderColor;
+	}
+
+	.listingSidebarGroup
+	{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+.structItem-cell.structItem-cell--icon.structItem-cell--iconExpanded.structItem-cell--iconListingCoverImage
+{
+	width: 110px;
+}
+
+.structItem-cell.structItem-cell--icon.structItem-cell--iconExpanded.structItem-cell--iconListingCoverImageGrid
+{
+	min-width: 300px !important;
+}
+
+.structItem-cell--iconListingCoverImage .structItem-iconContainer .avatar
+{
+	width: 96px;
+	height: 96px;
+	font-size: 57.6px;
+	border-radius:0;
+}]]></template>
+  <template type="public" title="fs_escrow_search_filter" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:form action="{{ link('escrow') }}">
+	<div class="menu-row">
+    {{ phrase('fs_auction_username:') }}
+    <div class="u-inputSpacer">
+      	<xf:textbox name="fs_escrow_username" value="{$conditions.fs_escrow_username}" ac="single" />
+    </div>
+  </div>
+	
+	<div class="menu-row menu-row--separated">
+			{{ phrase('fs_auction_status:') }}
+			<div class="u-inputSpacer">
+				<xf:select name="fs_escrow_status" value="{$conditions.fs_auction_status}">
+					<xf:option value="all" selected="true" label="{{ phrase('all') }}" />
+					<xf:option value="1" label="{{ phrase('fs_auction_active') }}" />
+					<xf:option value="0" label="{{ phrase('fs_auction_expired') }}" />
+				</xf:select>
+			</div>
+		</div>
+	
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>]]></template>
+  <template type="public" title="index_url_update" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:if is="$thread">
+  <xf:title>{{ phrase('fs_url_title') }}</xf:title>
+</xf:if>
+<div class="block">
+
+  <xf:if is="$thread">
+    <xf:breadcrumb source="$thread.getBreadcrumbs(false)" />
+    <xf:form
+      action="{{ link('update-url/save') }}"
+      ajax="true"
+      class="block-container"
+      data-force-flash-message="true"
+    >
+      <div class="block-body">
+        <input type="hidden" name="thread_id" value="{{$thread.thread_id}}" />
+
+            <xf:textboxrow
+              name="url_string"
+              value="{{$thread.url_string=='null' ? 'Not defiened' : $thread.url_string}}"
+				label="{{ phrase('fs_url_label_title') }}"		   
+            />
+          </div>
+      
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+  </xf:if>
+
+</div>]]></template>
+</templates>

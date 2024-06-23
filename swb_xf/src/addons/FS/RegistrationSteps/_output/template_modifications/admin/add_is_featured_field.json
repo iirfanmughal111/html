@@ -1,0 +1,9 @@
+{
+    "template": "user_edit",
+    "description": "add_is_featured_field",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:textboxrow name=\"user\\[email]\" .*?>/is",
+    "replace": "$0\n\n<xf:checkboxrow label=\"\"   >\n\t<xf:option selected=\"{$user.is_featured}\" name=\"user[is_featured]\">{{ phrase('fs_user_is_featured') }}</xf:option>\n</xf:checkboxrow>\n\n"
+}

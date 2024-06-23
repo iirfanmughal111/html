@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XF\Admin\Controller\Index" to_class="DBTech\eCommerce\XF\Admin\Controller\Index" execute_order="10" active="1"/>
+  <extension from_class="XF\Admin\Controller\User" to_class="DBTech\eCommerce\XF\Admin\Controller\User" execute_order="10" active="1"/>
+  <extension from_class="XF\BbCode\ProcessorAction\AnalyzeUsage" to_class="DBTech\eCommerce\XF\BbCode\ProcessorAction\AnalyzeUsage" execute_order="10" active="1"/>
+  <extension from_class="XF\Behavior\PermissionRebuildable" to_class="DBTech\eCommerce\XF\Behavior\PermissionRebuildable" execute_order="10" active="1"/>
+  <extension from_class="XF\ChangeLog\User" to_class="DBTech\eCommerce\XF\ChangeLog\User" execute_order="10" active="1"/>
+  <extension from_class="XF\ControllerPlugin\Login" to_class="DBTech\eCommerce\XF\ControllerPlugin\Login" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\ApiKey" to_class="DBTech\eCommerce\XF\Entity\ApiKey" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\Post" to_class="DBTech\eCommerce\XF\Entity\Post" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\User" to_class="DBTech\eCommerce\XF\Entity\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Entity\UserOption" to_class="DBTech\eCommerce\XF\Entity\UserOption" execute_order="10" active="1"/>
+  <extension from_class="XF\ForumType\Discussion" to_class="DBTech\eCommerce\XF\ForumType\Discussion" execute_order="10" active="1"/>
+  <extension from_class="XF\Logger" to_class="DBTech\eCommerce\XF\Logger" execute_order="10" active="1"/>
+  <extension from_class="XF\Mvc\Renderer\Json" to_class="DBTech\eCommerce\XF\Mvc\Renderer\Json" execute_order="10" active="1"/>
+  <extension from_class="XF\Payment\PayPal" to_class="DBTech\eCommerce\XF\Payment\PayPal" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Account" to_class="DBTech\eCommerce\XF\Pub\Controller\Account" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Register" to_class="DBTech\eCommerce\XF\Pub\Controller\Register" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Thread" to_class="DBTech\eCommerce\XF\Pub\Controller\Thread" execute_order="10" active="1"/>
+  <extension from_class="XF\Pub\Controller\Watched" to_class="DBTech\eCommerce\XF\Pub\Controller\Watched" execute_order="10" active="1"/>
+  <extension from_class="XF\Searcher\User" to_class="DBTech\eCommerce\XF\Searcher\User" execute_order="10" active="1"/>
+  <extension from_class="XF\Service\Message\Preparer" to_class="DBTech\eCommerce\XF\Service\Message\Preparer" execute_order="10" active="1"/>
+  <extension from_class="XF\Service\User\ContentChange" to_class="DBTech\eCommerce\XF\Service\User\ContentChange" execute_order="10" active="1"/>
+  <extension from_class="XF\Service\User\DeleteCleanUp" to_class="DBTech\eCommerce\XF\Service\User\DeleteCleanUp" execute_order="10" active="1"/>
+</class_extensions>

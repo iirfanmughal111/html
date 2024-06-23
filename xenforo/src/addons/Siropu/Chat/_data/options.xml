@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="siropuChatActionJsonFileCache" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="53"/>
+  </option>
+  <option option_id="siropuChatActiveBotMessageCount" edit_format="spinbox" data_type="unsigned_integer" advanced="1">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="9999"/>
+  </option>
+  <option option_id="siropuChatActiveBotResponseCount" edit_format="spinbox" data_type="unsigned_integer" advanced="1">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="9999"/>
+  </option>
+  <option option_id="siropuChatActiveStatusTimeout" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>10</default_value>
+    <edit_format_params>min=1
+units={{ phrase('units_minutes') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="24"/>
+  </option>
+  <option option_id="siropuChatActivityNotificationsBot" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="33"/>
+  </option>
+  <option option_id="siropuChatAdsAboveEditor" edit_format="template" data_type="array" validation_class="Siropu\Chat\Option\AdNotice" validation_method="verifyOption" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>siropu_chat_option_template_adNotice</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="1002"/>
+  </option>
+  <option option_id="siropuChatAdsBelowEditor" edit_format="template" data_type="array" validation_class="Siropu\Chat\Option\AdNotice" validation_method="verifyOption" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>siropu_chat_option_template_adNotice</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="1003"/>
+  </option>
+  <option option_id="siropuChatAllowedPages" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>rows=5</edit_format_params>
+    <relation group_id="siropuChat" display_order="1110"/>
+  </option>
+  <option option_id="siropuChatArchiveMessageTypes" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"chat":1,"whisper":1,"bot":0,"forum":0}</default_value>
+    <edit_format_params>chat={{ phrase('siropu_chat_setting_option_normal_messages') }}
+whisper={{ phrase('siropu_chat_setting_option_whisper_messages') }}
+bot={{ phrase('siropu_chat_setting_option_bot_messages') }}
+forum={{ phrase('siropu_chat_setting_option_forum_activity_messages') }}</edit_format_params>
+    <sub_options>chat
+whisper
+bot
+forum</sub_options>
+    <relation group_id="siropuChat" display_order="50"/>
+  </option>
+  <option option_id="siropuChatArchiveMessagesPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>25</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="28"/>
+  </option>
+  <option option_id="siropuChatAutoLoginUsers" edit_format="radio" data_type="string" advanced="0">
+    <default_value>disabled</default_value>
+    <edit_format_params>any={{ phrase('siropu_chat_any_page') }}
+chat={{ phrase('siropu_chat_chat_page') }}
+disabled={{ phrase('siropu_chat_disabled') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="18"/>
+  </option>
+  <option option_id="siropuChatAvatarInMessageList" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="11"/>
+  </option>
+  <option option_id="siropuChatAvatarInUserList" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="12"/>
+  </option>
+  <option option_id="siropuChatBotAvatar" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="32"/>
+  </option>
+  <option option_id="siropuChatBotName" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>Chat Bot</default_value>
+    <relation group_id="siropuChat" display_order="31"/>
+  </option>
+  <option option_id="siropuChatCompactMobileMode" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="37"/>
+  </option>
+  <option option_id="siropuChatComplyWithUserPrivacy" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="38"/>
+  </option>
+  <option option_id="siropuChatConvLoadMoreButton" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="35"/>
+  </option>
+  <option option_id="siropuChatConvTabCount" edit_format="radio" data_type="string" advanced="0">
+    <default_value>onlineCount</default_value>
+    <edit_format_params>onlineCount={{ phrase('siropu_chat_display_online_user_count') }}
+unreadCount={{ phrase('siropu_chat_display_unread_message_count') }}
+disabled={{ phrase('disabled') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="14"/>
+  </option>
+  <option option_id="siropuChatConversationMessageAlert" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="16"/>
+  </option>
+  <option option_id="siropuChatCountConversationReactions" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="46"/>
+  </option>
+  <option option_id="siropuChatCountRoomReactions" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="45"/>
+  </option>
+  <option option_id="siropuChatDefaultJoinedRooms" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[1]</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="6"/>
+  </option>
+  <option option_id="siropuChatDefaultMiscSettings" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"inverse":0,"editor_on_top":0,"maximized":0,"image_as_link":0,"mention_alert":0,"hide_bot":0,"hide_status":0,"hide_chatters":0,"show_ignored":0,"disable":0}</default_value>
+    <edit_format_params>inverse={{ phrase('siropu_chat_setting_option_inverse_message_direction') }}
+editor_on_top={{ phrase('siropu_chat_setting_option_editor_on_top') }}
+maximized={{ phrase('siropu_chat_setting_option_maximized_mode') }}
+image_as_link={{ phrase('siropu_chat_setting_option_images_as_links') }}
+mention_alert={{ phrase('siropu_chat_setting_option_receive_mention_alerts') }}
+hide_bot={{ phrase('siropu_chat_setting_option_hide_bot') }}
+hide_status={{ phrase('siropu_chat_setting_option_hide_status') }}
+hide_chatters={{ phrase('siropu_chat_setting_option_hide_chatter_list') }}
+show_ignored={{ phrase('siropu_chat_setting_option_show_ignored') }}
+disable={{ phrase('siropu_chat_setting_option_disable') }}</edit_format_params>
+    <sub_options>inverse
+editor_on_top
+maximized
+image_as_link
+mention_alert
+hide_bot
+hide_status
+hide_chatters
+show_ignored
+disable</sub_options>
+    <relation group_id="siropuChat" display_order="103"/>
+  </option>
+  <option option_id="siropuChatDefaultNotificationSettings" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"normal":0,"whisper":0,"private":0,"mention":"","bot":0}</default_value>
+    <edit_format_params>normal={{ phrase('siropu_chat_setting_option_normal_messages') }}
+whisper={{ phrase('siropu_chat_setting_option_whisper_messages') }}
+private={{ phrase('siropu_chat_setting_option_private_messages') }}
+mention={{ phrase('siropu_chat_setting_option_mention_messages') }}
+bot={{ phrase('siropu_chat_setting_option_bot_messages') }}</edit_format_params>
+    <sub_options>normal
+whisper
+private
+mention
+bot</sub_options>
+    <relation group_id="siropuChat" display_order="101"/>
+  </option>
+  <option option_id="siropuChatDefaultSoundSettings" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"normal":0,"whisper":0,"private":0,"mention":"","bot":0}</default_value>
+    <edit_format_params>normal={{ phrase('siropu_chat_setting_option_normal_messages') }}
+whisper={{ phrase('siropu_chat_setting_option_whisper_messages') }}
+private={{ phrase('siropu_chat_setting_option_private_messages') }}
+mention={{ phrase('siropu_chat_setting_option_mention_messages') }}
+bot={{ phrase('siropu_chat_setting_option_bot_messages') }}</edit_format_params>
+    <sub_options>normal
+whisper
+private
+mention
+bot</sub_options>
+    <relation group_id="siropuChat" display_order="100"/>
+  </option>
+  <option option_id="siropuChatDeleteMessagesOlderThan" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>30</default_value>
+    <edit_format_params>units={{ phrase('days') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="26"/>
+  </option>
+  <option option_id="siropuChatDeleteUserConversationIfDeleted" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="40"/>
+  </option>
+  <option option_id="siropuChatDisableCustomEditorButtons" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="302"/>
+  </option>
+  <option option_id="siropuChatDisableSmilieButton" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="303"/>
+  </option>
+  <option option_id="siropuChatDisallowedCustomBbCodes" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>Siropu\Chat\Option\BbCode::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="301"/>
+  </option>
+  <option option_id="siropuChatDisallowedPages" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>rows=5</edit_format_params>
+    <relation group_id="siropuChat" display_order="1100"/>
+  </option>
+  <option option_id="siropuChatDisplayMode" edit_format="radio" data_type="string" advanced="0">
+    <default_value>all_pages</default_value>
+    <edit_format_params>all_pages={{ phrase('siropu_chat_display_mode_all_pages') }}
+below_breadcrumb={{ phrase('siropu_chat_display_mode_below_breadcrumb') }}
+above_forum_list={{ phrase('siropu_chat_display_mode_above_forum_list') }}
+below_forum_list={{ phrase('siropu_chat_display_mode_below_forum_list') }}
+above_content={{ phrase('siropu_chat_display_mode_above_content') }}
+below_content={{ phrase('siropu_chat_display_mode_below_content') }}
+sidebar_top={{ phrase('siropu_chat_display_mode_sidebar_top') }}
+sidebar_bottom={{ phrase('siropu_chat_display_mode_sidebar_bottom') }}
+chat_page={{ phrase('siropu_chat_display_mode_chat_page') }}
+custom={{ phrase('siropu_chat_display_mode_custom') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="5"/>
+  </option>
+  <option option_id="siropuChatDynamicTitle" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="17"/>
+  </option>
+  <option option_id="siropuChatEditorSubmitButton" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="305"/>
+  </option>
+  <option option_id="siropuChatEditorToggleBbcode" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="304"/>
+  </option>
+  <option option_id="siropuChatEnableRightNavLinkMobile" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="49"/>
+  </option>
+  <option option_id="siropuChatEnableWhosTyping" edit_format="checkbox" data_type="array" validation_class="Siropu\Chat\Option\WhosTyping" validation_method="verifyOption" advanced="0">
+    <default_value>{"room":0,"conv":0}</default_value>
+    <edit_format_params>room={{ phrase('siropu_chat_rooms') }}
+conv={{ phrase('siropu_chat_conversations') }}</edit_format_params>
+    <sub_options>room
+conv</sub_options>
+    <relation group_id="siropuChat" display_order="51"/>
+  </option>
+  <option option_id="siropuChatEnabled" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="1"/>
+  </option>
+  <option option_id="siropuChatEnabledBBCodes" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"b":1,"i":1,"u":1,"s":1,"color":1,"font":1,"size":1,"paragraph":1,"hr":1,"url":1,"img":1,"media":1,"quote":1,"spoiler":1,"ispoiler":1,"code":1,"icode":1,"table":1,"remove":1}</default_value>
+    <edit_format_params>b={{ phrase('weight_bold') }}
+i={{ phrase('italic') }}
+u={{ phrase('underline') }}
+s={{ phrase('strike_through') }}
+color={{ phrase('color') }}
+font={{ phrase('font_family') }}
+size={{ phrase('font_size') }}
+paragraph={{ phrase('paragraph_format') }}
+hr={{ phrase('insert_horizontal_line') }}
+url={{ phrase('link') }}
+img={{ phrase('image') }}
+media={{ phrase('media') }}
+quote={{ phrase('quote') }}
+spoiler={{ phrase('spoiler') }}
+ispoiler={{ phrase('inline_spoiler') }}
+code={{ phrase('code') }}
+icode={{ phrase('inline_code') }}
+table={{ phrase('insert_table') }}
+remove={{ phrase('remove_formatting') }}</edit_format_params>
+    <sub_options>b
+i
+u
+s
+color
+font
+size
+paragraph
+hr
+url
+img
+media
+quote
+spoiler
+ispoiler
+code
+icode
+table
+remove</sub_options>
+    <relation group_id="siropuChat" display_order="300"/>
+  </option>
+  <option option_id="siropuChatFloodCheckLength" edit_format="spinbox" data_type="integer" advanced="0">
+    <default_value>1</default_value>
+    <edit_format_params>min=0
+units={{ phrase('seconds') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="22"/>
+  </option>
+  <option option_id="siropuChatForumActivityBotName" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="406"/>
+  </option>
+  <option option_id="siropuChatForumActivityForums" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>XF\Option\Forum::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="405"/>
+  </option>
+  <option option_id="siropuChatForumActivityPosts" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="403"/>
+  </option>
+  <option option_id="siropuChatForumActivityPostsExcept" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"0","limit":"0"}</default_value>
+    <edit_format_params>onoff=enabled
+value=limit
+min=0
+default=0
+type=spinbox
+step=10</edit_format_params>
+    <sub_options>enabled
+limit</sub_options>
+    <relation group_id="siropuChat" display_order="404"/>
+  </option>
+  <option option_id="siropuChatForumActivityRoom" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelect</edit_format_params>
+    <relation group_id="siropuChat" display_order="400"/>
+  </option>
+  <option option_id="siropuChatForumActivityThreads" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="402"/>
+  </option>
+  <option option_id="siropuChatForumActivityUsers" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="401"/>
+  </option>
+  <option option_id="siropuChatGuestRoom" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelect</edit_format_params>
+    <relation group_id="siropuChat" display_order="8"/>
+  </option>
+  <option option_id="siropuChatHideMessageContentFromUserGroups" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>Siropu\Chat\Option\UserGroup::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="900"/>
+  </option>
+  <option option_id="siropuChatIdleStatusTimeout" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1
+units={{ phrase('units_minutes') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="25"/>
+  </option>
+  <option option_id="siropuChatKeepUsersLoggedIn" edit_format="radio" data_type="string" advanced="0">
+    <default_value>disabled</default_value>
+    <edit_format_params>any={{ phrase('siropu_chat_any_page') }}
+chat={{ phrase('siropu_chat_chat_page') }}
+disabled={{ phrase('siropu_chat_disabled') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="19"/>
+  </option>
+  <option option_id="siropuChatLoadRoomsIfNoneJoined" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="41"/>
+  </option>
+  <option option_id="siropuChatLogoutUserOnSiteLogout" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="47"/>
+  </option>
+  <option option_id="siropuChatMaxImageSize" edit_format="callback" data_type="unsigned_integer" validation_class="XF\Option\MaxFilesize" validation_method="verifyOption" advanced="0">
+    <default_value>1024</default_value>
+    <edit_format_params>XF\Option\MaxFilesize::renderOption</edit_format_params>
+    <relation group_id="siropuChat" display_order="39"/>
+  </option>
+  <option option_id="siropuChatMaxMessageLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>1000</default_value>
+    <edit_format_params>min=0
+size=5</edit_format_params>
+    <relation group_id="siropuChat" display_order="23"/>
+  </option>
+  <option option_id="siropuChatMessageContentReplacementCharacter" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>*</default_value>
+    <relation group_id="siropuChat" display_order="901"/>
+  </option>
+  <option option_id="siropuChatMessageDisplayLimit" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>25</default_value>
+    <edit_format_params>size=5
+min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="21"/>
+  </option>
+  <option option_id="siropuChatMultiLineMessages" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="306"/>
+  </option>
+  <option option_id="siropuChatNavIcon" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="30"/>
+  </option>
+  <option option_id="siropuChatNavUserCount" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="14"/>
+  </option>
+  <option option_id="siropuChatNavigationPopup" edit_format="onoff" data_type="string" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="36"/>
+  </option>
+  <option option_id="siropuChatNotice" edit_format="template" data_type="array" validation_class="Siropu\Chat\Option\AdNotice" validation_method="verifyOption" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>siropu_chat_option_template_adNotice</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="siropuChat" display_order="1001"/>
+  </option>
+  <option option_id="siropuChatNotificationTimeout" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=1
+max=60
+units={{ phrase('units_seconds') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="102"/>
+  </option>
+  <option option_id="siropuChatOpenInternalLinksInNewTab" edit_format="onoff" data_type="string" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="43"/>
+  </option>
+  <option option_id="siropuChatPage" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="4"/>
+  </option>
+  <option option_id="siropuChatPrimaryRoom" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelect</edit_format_params>
+    <relation group_id="siropuChat" display_order="7"/>
+  </option>
+  <option option_id="siropuChatPrivateConversations" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="3"/>
+  </option>
+  <option option_id="siropuChatReactions" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="44"/>
+  </option>
+  <option option_id="siropuChatRefreshIntervalActive" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="800"/>
+  </option>
+  <option option_id="siropuChatRefreshIntervalActiveHidden" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>15</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="801"/>
+  </option>
+  <option option_id="siropuChatRefreshIntervalInactive" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>30</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="802"/>
+  </option>
+  <option option_id="siropuChatRefreshIntervalInactiveHidden" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>60</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="siropuChat" display_order="803"/>
+  </option>
+  <option option_id="siropuChatRoomJoinLimitAction" edit_format="radio" data_type="string" advanced="0">
+    <default_value>message</default_value>
+    <edit_format_params>message={{ phrase('siropu_chat_display_a_message') }}
+leave={{ phrase('siropu_chat_leave_last_used_room_and_join') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="42"/>
+  </option>
+  <option option_id="siropuChatRoomLoadMoreButton" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="34"/>
+  </option>
+  <option option_id="siropuChatRoomNotifications" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"join":1,"leave":1,"mute":1,"unmute":1,"kick":1,"unkick":1,"ban":1,"unban":1}</default_value>
+    <edit_format_params>join={{ phrase('siropu_chat_notification_user_has_joined_room') }}
+leave={{ phrase('siropu_chat_notification_user_has_left_room') }}
+mute={{ phrase('siropu_chat_notification_user_has_been_muted') }}
+unmute={{ phrase('siropu_chat_notification_user_has_been_unmuted') }}
+kick={{ phrase('siropu_chat_notification_user_has_been_kicked') }}
+unkick={{ phrase('siropu_chat_notification_user_has_been_unkicked') }}
+ban={{ phrase('siropu_chat_notification_user_has_been_banned') }}
+unban={{ phrase('siropu_chat_notification_user_has_been_unbanned') }}</edit_format_params>
+    <sub_options>join
+leave
+mute
+unmute
+kick
+unkick
+ban
+unban</sub_options>
+    <relation group_id="siropuChat" display_order="700"/>
+  </option>
+  <option option_id="siropuChatRoomTabUserCount" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="14"/>
+  </option>
+  <option option_id="siropuChatRooms" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="2"/>
+  </option>
+  <option option_id="siropuChatRoomsOrder" edit_format="select" data_type="string" advanced="0">
+    <default_value>users</default_value>
+    <edit_format_params>users={{ phrase('siropu_chat_option_order_most_active') }}
+newest={{ phrase('siropu_chat_option_order_newest_first') }}
+oldest={{ phrase('siropu_chat_option_order_oldest_first') }}
+alphabetically={{ phrase('siropu_chat_option_order_alphabetically') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="10"/>
+  </option>
+  <option option_id="siropuChatRoomsPerPage" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>100</default_value>
+    <edit_format_params>min=5</edit_format_params>
+    <relation group_id="siropuChat" display_order="52"/>
+  </option>
+  <option option_id="siropuChatRules" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <edit_format_params>rows=5</edit_format_params>
+    <relation group_id="siropuChat" display_order="1000"/>
+  </option>
+  <option option_id="siropuChatStatus" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="200"/>
+  </option>
+  <option option_id="siropuChatStatusMaxLength" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>80</default_value>
+    <edit_format_params>size=5
+min=10
+max=255</edit_format_params>
+    <relation group_id="siropuChat" display_order="201"/>
+  </option>
+  <option option_id="siropuChatStripPostBbCode" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="48"/>
+  </option>
+  <option option_id="siropuChatTabNotification" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="siropuChat" display_order="13"/>
+  </option>
+  <option option_id="siropuChatThreadMessageMinLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>min=0</edit_format_params>
+    <relation group_id="siropuChat" display_order="29"/>
+  </option>
+  <option option_id="siropuChatTopChatters" edit_format="spinbox" data_type="positive_integer" advanced="0">
+    <default_value>10</default_value>
+    <edit_format_params>min=3</edit_format_params>
+    <relation group_id="siropuChat" display_order="27"/>
+  </option>
+  <option option_id="siropuChatUserMentionAlert" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="15"/>
+  </option>
+  <option option_id="siropuChatUserSanctionAlert" edit_format="checkbox" data_type="array" advanced="0">
+    <default_value>{"mute":1,"unmute":1,"kick":1,"unkick":1,"ban":1,"unban":1}</default_value>
+    <edit_format_params>mute={{ phrase('siropu_chat_notification_user_has_been_muted') }}
+unmute={{ phrase('siropu_chat_notification_user_has_been_unmuted') }}
+kick={{ phrase('siropu_chat_notification_user_has_been_kicked') }}
+unkick={{ phrase('siropu_chat_notification_user_has_been_unkicked') }}
+ban={{ phrase('siropu_chat_notification_user_has_been_banned') }}
+unban={{ phrase('siropu_chat_notification_user_has_been_unbanned') }}</edit_format_params>
+    <sub_options>mute
+unmute
+kick
+unkick
+ban
+unban</sub_options>
+    <relation group_id="siropuChat" display_order="701"/>
+  </option>
+  <option option_id="siropuChatUserTagging" edit_format="radio" data_type="string" advanced="0">
+    <default_value>disabled</default_value>
+    <edit_format_params>button={{ phrase('siropu_chat_user_tagging_button') }}
+username={{ phrase('siropu_chat_user_tagging_username') }}
+disabled={{ phrase('siropu_chat_disabled') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="20"/>
+  </option>
+  <option option_id="siropuChatUsersOrder" edit_format="select" data_type="string" advanced="0">
+    <default_value>most_active</default_value>
+    <edit_format_params>most_active={{ phrase('siropu_chat_option_order_most_active') }}
+alphabetically={{ phrase('siropu_chat_option_order_alphabetically') }}</edit_format_params>
+    <relation group_id="siropuChat" display_order="9"/>
+  </option>
+  <option option_id="siropuChatXFMGActivityBotName" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="504"/>
+  </option>
+  <option option_id="siropuChatXFMGActivityComment" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="503"/>
+  </option>
+  <option option_id="siropuChatXFMGActivityMediaAlbum" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="501"/>
+  </option>
+  <option option_id="siropuChatXFMGActivityMediaItem" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="502"/>
+  </option>
+  <option option_id="siropuChatXFMGActivityRoom" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelect</edit_format_params>
+    <relation group_id="siropuChat" display_order="500"/>
+  </option>
+  <option option_id="siropuChatXFRMActivityBotName" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="siropuChat" display_order="602"/>
+  </option>
+  <option option_id="siropuChatXFRMActivityRating" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="siropuChat" display_order="601"/>
+  </option>
+  <option option_id="siropuChatXFRMActivityRoom" edit_format="callback" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Siropu\Chat\Option\Room::renderSelect</edit_format_params>
+    <relation group_id="siropuChat" display_order="600"/>
+  </option>
+</options>

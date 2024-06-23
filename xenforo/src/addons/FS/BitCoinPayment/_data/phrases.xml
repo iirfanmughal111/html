@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_bitcoin_btn_text" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upgrade with ]]></phrase>
+  <phrase title="fs_bitcoin_btn_txt" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upgrade]]></phrase>
+  <phrase title="fs_bitcoin_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upgrade Account]]></phrase>
+  <phrase title="fs_bitcoin_upgrade_body" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<ul>
+<li>These credits has a one-month validity and will stay in your account until you use it or decide to gift it. </li>
+<li>You can purchase these credits with Bitcoin by following the 'Buying Crypto Tutorials' link. </li>
+<li>For additional help, feel free to send a private message to admin. </li>
+<li>In case of payment failures, provide us with the 'Transaction ID' (TxID) or details such as the crypto amount, date, and address to which you sent the payment.</li>
+</ul>]]></phrase>
+  <phrase title="fs_bitcoin_warning_msg" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[WARNING: We do NOT support BITCOIN CASH (BCH). Bitcoin (BTC) is NOT the same thing.
+
+If you send Bitcoin Cash you will lose your money as we will not receive it.
+
+All sales are final. We do not refund cryptocurrency.]]></phrase>
+  <phrase title="nav.upgradeAccount" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upgrade]]></phrase>
+</phrases>

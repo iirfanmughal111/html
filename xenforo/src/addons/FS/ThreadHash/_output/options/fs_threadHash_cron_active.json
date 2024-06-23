@@ -1,0 +1,13 @@
+{
+    "edit_format": "onoff",
+    "edit_format_params": "",
+    "data_type": "integer",
+    "sub_options": [],
+    "validation_class": "FS\\ThreadHash\\XF\\Option\\ThreadHashOption",
+    "validation_method": "CronActive",
+    "advanced": false,
+    "default_value": "1",
+    "relations": {
+        "fs_threadHash": 5
+    }
+}

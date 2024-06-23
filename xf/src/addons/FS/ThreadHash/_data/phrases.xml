@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="cron_entry.fs_threadHash_cron" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Update Thread Hash]]></phrase>
+  <phrase title="fs_threadHash_cron_not_found" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Assinged cron not found.]]></phrase>
+  <phrase title="option.fs_threadHash_cron_active" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Active]]></phrase>
+  <phrase title="option.fs_threadHash_runRules_hours" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Run at hours]]></phrase>
+  <phrase title="option.fs_threadHash_runRules_mins" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Run at minutes]]></phrase>
+  <phrase title="option.fs_threadHash_type_of_day" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Run on type of day]]></phrase>
+  <phrase title="option_explain.fs_threadHash_cron_active" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_threadHash_runRules_hours" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_threadHash_runRules_mins" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_threadHash_type_of_day" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_group.fs_threadHash" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Thrad Hash]]></phrase>
+  <phrase title="option_group_description.fs_threadHash" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="please_enter_valid_values" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter valid values]]></phrase>
+</phrases>

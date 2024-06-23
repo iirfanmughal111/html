@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+  <navigation_entry navigation_id="siropuChat" display_order="1000" navigation_type_id="callback" enabled="1"><![CDATA[{"callback":["Siropu\\Chat\\Navigation\\Tab","chat"],"context":""}]]></navigation_entry>
+  <navigation_entry navigation_id="siropuChatArchive" parent_navigation_id="siropuChat" display_order="1" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('chat\/archive') }}","display_condition":"$xf.visitor.canViewSiropuChatArchive()","extra_attributes":[]}]]></navigation_entry>
+  <navigation_entry navigation_id="siropuChatSanctions" parent_navigation_id="siropuChat" display_order="3" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('chat\/sanctions') }}","display_condition":"$xf.visitor.canViewSiropuChatSanctions()","extra_attributes":[]}]]></navigation_entry>
+  <navigation_entry navigation_id="siropuChatTopChatters" parent_navigation_id="siropuChat" display_order="2" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('chat\/top-chatters') }}","display_condition":"$xf.visitor.canViewSiropuChatTopChatters()","extra_attributes":[]}]]></navigation_entry>
+</navigation>

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="email" title="fs_register_send_newAccount_mail" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_register_mail_subject') }}
+</mail:subject>
+
+	{{ phrase('fs_register_mail_body',{
+	'username': $user.username
+}
+
+) }}]]></template>
+  <template type="email" title="fs_verify_account" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_account_verify_mail_subject') }}
+</mail:subject>
+
+{{ phrase('fs_note_user', {
+	'username': $user.username,
+     'verify_link': $link,
+     'direct_link' :$direct_link,
+     'activation_id' :$activation_id,
+     'contact_email':{$xf.options.contactEmailAddress}
+}) }}]]></template>
+  <template type="email" title="male_email_send_template" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<p>
+	prefered contact method: {$contact}
+</p>
+<table>
+  <tr>
+    <td>Request type</td>
+    <td>Appointment</td>
+  </tr>
+  <tr>
+    <td>Desired Date</td>
+    <td>{$date}</td>
+
+  </tr>
+  <tr>
+    <td>Desired Time</td>
+    <td>{$time}</td>
+  </tr>
+  <tr>
+    <td>Appointment Duration</td>
+    <td>{$type}</td>
+  </tr>
+  <tr>
+    <td>Desired City</td>
+    <td>{$city}</td>
+  </tr>
+	  <tr>
+    <td>Providers Rates</td>
+    <td>{$rates}</td>
+  </tr>
+  <tr>
+    <td>P411 Promotion</td>
+    <td>{$promotion}</td>
+  </tr>
+</table>]]></template>
+  <template type="public" title="forum_post_review_chooser" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title>{{ phrase('fs_register_post_review_in') }}</xf:title>
+
+<xf:head option="metaNoindex"><meta name="robots" content="noindex" /></xf:head>
+
+<xf:macro name="node_list" arg-children="{$nodeTree}" arg-extras="{$nodeExtras}" arg-user_id="{$user_id}"/>
+
+<xf:macro name="node_list" arg-children="!" arg-extras="!"  arg-depth="0" arg-user_id="">
+	
+	<xf:foreach loop="$children" key="$id" value="$child">
+		<xf:macro name="node_list_entry"
+			arg-node="{$child.record}" arg-extras="{$extras.{$id}}"
+			arg-children="{$child.children}" arg-childExtras="{$extras}"
+			arg-depth="{$depth}" 
+			arg-user_id="{$user_id}"/>
+	</xf:foreach>
+</xf:macro>
+
+<xf:macro name="node_list_entry" arg-node="!" arg-extras="!" arg-children="!" arg-childExtras="!" arg-depth="0" arg-user_id="">
+	<xf:if is="$depth == 0">
+		<xf:if is="$node.node_type_id == 'Category'">
+			<xf:macro name="node_list_entry_category_level_0"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" 
+				arg-user_id="{$user_id}"
+					  />
+		<xf:elseif is="$node.node_type_id == 'Forum' AND ($node.Data.canCreateThread() OR $node.Data.canCreateThreadPreReg())" />
+			<xf:macro name="node_list_entry_forum_level_0"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" 
+				arg-user_id="{$user_id}"/>
+		<xf:else />
+				
+			<xf:macro name="node_list_entry_no_posting_level_0"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}"
+				arg-user_id="{$user_id}"
+					  />
+		</xf:if>
+	<xf:else />
+		<xf:if is="$node.node_type_id == 'Forum' AND ($node.Data.canCreateThread() OR $node.Data.canCreateThreadPreReg())">
+			<xf:macro name="node_list_entry_forum"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" 
+				arg-user_id="{$user_id}"
+					  />
+		<xf:else />
+			<xf:macro name="node_list_entry_no_posting"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" 
+				arg-user_id="{$user_id}"/>
+		</xf:if>
+	</xf:if>
+</xf:macro>
+
+<xf:macro name="node_list_entry_category_level_0"
+	arg-node="!"
+	arg-extras="!"
+	arg-children="!"
+	arg-childExtras="!"
+	arg-depth="0"
+	arg-user_id="">
+
+	<div class="block block--treeEntryChooser">
+		<div class="block-container">
+			<h2 class="block-header">
+				{$node.title}
+				<xf:if is="$node.description">
+					<span class="block-desc">
+						{$node.description|raw}
+					</span>
+				</xf:if>
+			</h2>
+			<div class="block-body">
+				<xf:macro name="node_list"
+					arg-children="{$children}" arg-extras="{$childExtras}" arg-depth="{{ $depth + 1 }}" arg-user_id="{$user_id}"/>
+			</div>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="node_list_entry_forum_level_0"
+	arg-node="!"
+	arg-extras="!"
+	arg-children="!"
+	arg-childExtras="!"
+	arg-depth="0"
+	arg-user_id="">
+
+	<div class="block block--treeEntryChooser">
+		<div class="block-container">
+			<xf:macro name="node_list_entry_forum"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}" 
+				arg-user_id="{$user_id}"/>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="node_list_entry_no_posting_level_0"
+	arg-node="!"
+	arg-extras="!"
+	arg-children="!"
+	arg-childExtras="!"
+	arg-depth="0"
+	arg-user_id="">
+
+	<div class="block block--treeEntryChooser">
+		<div class="block-container">
+			<xf:macro name="node_list_entry_no_posting"
+				arg-node="{$node}"
+				arg-extras="{$extras}"
+				arg-children="{$children}"
+				arg-childExtras="{$childExtras}"
+				arg-depth="{$depth}"
+				arg-user_id="{$user_id}"/>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="node_list_entry_forum"
+	arg-node="!"
+	arg-extras="!"
+	arg-children="!"
+	arg-childExtras="!"
+	arg-depth="0"
+	arg-user_id="!">
+
+	<div class="block-row block-row--clickable block-row--separated fauxBlockLink">
+		<div class="contentRow contentRow--alignMiddle{{ $depth > 1 ? ' u-depth' . ($depth - 1) : '' }}">
+			<div class="contentRow-main">
+				<h2 class="contentRow-title">
+					<a href="{{ link('forums/post-thread', $node,{'user_id':{$user_id}}) }}" class="fauxBlockLink-blockLink" rel="nofollow">
+						{$node.title}
+					
+					</a>
+				</h2>
+				<xf:if is="$node.description">
+					<div class="contentRow-minor contentRow-minor--singleLine">
+						{$node.description|raw}
+					</div>
+				</xf:if>
+			</div>
+			<div class="contentRow-suffix">
+				<dl class="pairs pairs--rows pairs--rows--centered">
+					<dt>{{ phrase('fs_register_reviews') }}</dt>
+					<dd>{$extras.discussion_count|number_short}</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<xf:macro name="node_list"
+		arg-children="{$children}" arg-extras="{$childExtras}" arg-depth="{{ $depth + 1 }}" />
+</xf:macro>
+
+<xf:macro name="node_list_entry_no_posting"
+	arg-node="!"
+	arg-extras="!"
+	arg-children="!"
+	arg-childExtras="!"
+	arg-depth="0"
+	arg-user_id="">
+
+	<div class="block-row block-row--separated">
+		<div class="contentRow contentRow--alignMiddle{{ $depth > 1 ? ' u-depth' . ($depth - 1) : '' }} is-disabled">
+			<div class="contentRow-main">
+				<h2 class="contentRow-title">
+					{$node.title}
+				</h2>
+				<xf:if is="$node.node_type_id == 'Forum'">
+					<div class="contentRow-minor contentRow-minor--singleLine">
+						{{ phrase('no_permission_to_post') }}
+					</div>
+				</xf:if>
+			</div>
+			<div class="contentRow-suffix">
+				<dl class="pairs pairs--rows pairs--rows--centered">
+					<dt>{{ phrase('fs_register_reviews') }}</dt>
+					<dd>{{ $node.node_type_id == 'Forum' ? $extras.discussion_count|number_short : phrase('n_a') }}</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<xf:macro name="node_list"
+		arg-children="{$children}"
+		arg-extras="{$childExtras}"
+		arg-depth="{{ $depth + 1 }}" 
+		arg-user_id=""
+			  />
+</xf:macro>]]></template>
+  <template type="public" title="fs_BitCoinPayment_deposit" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:css>
+	.paymnet_btc_img{
+	margin-left:3px;
+	display:inline-block;
+	width:25px;
+	height:25px;
+	}
+</xf:css>
+
+<a href="" class="blockoPayBtn button button--icon " data-toggle="modal" data-uid=7d7e97f3cf4d403c>
+	{{ phrase('fs_bitcoin_btn_text', {'amount':10}) }}  
+	<img class="paymnet_btc_img " src="{{ base_url('styles/FS/BitCoinPayment/btc.png') }}">
+</a>
+
+<a href="" class="blockoPayBtn  button button--icon " data-toggle="modal" data-uid=a4757403ff494844>
+	{{ phrase('fs_bitcoin_btn_text', {'amount':20}) }}  
+	<img class="paymnet_btc_img " src="{{ base_url('styles/FS/BitCoinPayment/btc.png') }}">
+</a>]]></template>
+  <template type="public" title="fs_direct_verify_account" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title>{{ phrase('fs_activation_account') }}</xf:title>
+
+
+<xf:form action="{{ link('register/direct-verify') }}" ajax="true" class="block">
+
+		<div class="block-container">
+		<div class="block-body">
+			
+				<xf:textboxrow name="username" label="{{ phrase('username') }}"
+								placeholder="{{ phrase('username') }}" />
+
+				<xf:textboxrow name="activation_id" label="{{ phrase('activation_id') }}"
+					placeholder="{{ phrase('activation_id') }}" />
+	
+</div>
+		<xf:submitrow submit="{{ phrase('fs_activate') }}" />
+	</div>
+	
+</xf:form>]]></template>
+  <template type="public" title="fs_register_attention_overlay" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title> {{ phrase('fs_register_attentaion') }} </xf:title>
+
+	  
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				<div class="block-row">
+				<p>
+					{{phrase('overlay_attention_body')}}
+				</p>
+				
+				<xf:button href="{{ link('forums/post-thread', $forum) }}" class=""  icon="write" rel="nofollow">
+					{{ phrase('fs_register_i_aggree') }}
+				</xf:button>
+						
+						<xf:button class=" button--cta js-overlayClose" >
+						{{ phrase('fs_register_cancel_ad') }}
+						</xf:button>
+				</div>	
+			</div>
+		</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_compliance" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[<xf:title>{{ phrase('fs_register_compliance_title') }}</xf:title>
+	
+	<div class="block">
+		<div class="block-container">
+			<div class="block-row">
+
+			{{ phrase('fs_register_compliance_body') }}
+		</div>
+		</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_featured_ads" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:css src="regsitration_steps.less"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="block"{{ widget_data($widget) }}>
+	<xf:if is="{{count($featured_threads)}}">
+	
+	<div class="block-container">
+		<h3 class="block-minorHeader">{{ phrase('fs_regisgter_featuerd_title') }}</h3>
+		<div class="block-body block-row">
+			<div class="owl-carousel">
+				<xf:foreach loop="$featured_threads" value="$thread">
+					<div class="text-center">
+						<xf:if is="{{ count($thread.FirstPost.Attachments) }}">
+						<img src="{{ link('full:attachments', $thread.FirstPost.Attachments.first() ) }}" alt="{$thread.title}" class="thread-img1" />
+							<xf:else/>
+							<xf:avatar user="{$thread.User}" size="l"
+									href="{{ link('members',$thread.User) }}" class="square-border"/>
+						</xf:if>
+						
+						<p>
+							<a href="{{ link('threads',$thread)}}">  {{$thread.title }}</a>
+						</p>
+						
+					</div>
+				</xf:foreach>
+			</div>
+		</div>
+	</div>
+	</xf:if>
+		
+</div>
+
+<xf:js>
+	$(document).ready(function(){
+	  $('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		autoplay:true,
+		autoplaySpeed:2000,
+		autoplayTimeout:3000,
+		responsiveClass:true,
+		nav:true,
+	    navRewind:true,
+		center:true,
+		responsive:{
+			0:{
+				items:1,
+			
+			},
+			400:{
+				items:2,
+			
+			},
+			600:{
+				items:4,
+			
+			},
+			1000:{
+				items:5,
+				
+			
+			}
+		}
+
+	})
+});
+</xf:js>]]></template>
+  <template type="public" title="fs_register_featured_overlay" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title> {{ $thread.title }} </xf:title>
+	  
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				
+				   <xf:form
+					  action="{{ link('threads/featured-save',$thread) }}"
+					  ajax="true"
+					
+						data-force-flash-message="true"
+					>
+						  <xf:checkboxrow label="{{phrase('is_featured_thread_title')}}">
+							<xf:option name="is_featured" selected="{{$thread->is_featured}}">{{phrase('is_featured_thread')}}</xf:option>
+						  </xf:checkboxrow>
+					   <xf:submitrow icon="save" sticky="true" />
+					</xf:form>
+				
+			</div>
+		</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_mail_input" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title> {{ phrase('fs_register_male_email') }} </xf:title>
+<xf:form
+  action="{{ link('members/sendmail',$xf.visitor) }}"
+  ajax="true"
+  class="block"
+  data-force-flash-message="true"
+>
+  <div class="block-container">
+	  <xf:formrow label="{{ phrase('fs_register_contact_method') }}">
+	  <div class="inputChoices"  >
+	  <xf:radio name="contact"  required="true" >
+		  <xf:option label="{{ phrase('fs_register_contact_email') }}">
+			  <xf:dependent>
+	 		<xf:textbox name="contact_email"  />
+			  </xf:dependent>
+		  </xf:option>
+		  <xf:option label="{{ phrase('contact_mobile') }}" name="contact_mobile">
+			  <xf:dependent>
+					 <xf:textbox name="contact_mobile"  />
+			  </xf:dependent>
+
+		  </xf:option>
+	  </xf:radio>
+	  </div>
+	  </xf:formrow>
+	<input type="hidden" name="user_id" value="{{ $user_id }}">
+	  <xf:dateinputrow name="date" label="{{phrase('fs_register_date')}}"
+				 />
+	  <xf:textboxrow label="{{phrase('fs_register_time')}}" name="time" class="input--date time start" required="true" type="time"
+
+					 />	  
+	    <xf:textboxrow name="duration" label="{{ phrase('fs_register_duration') }}"  required="true" />
+	    <xf:textboxrow name="type" label="{{ phrase('fs_register_type') }}"  required="true" />
+	    <xf:textboxrow name="city" label="{{ phrase('fs_register_city') }}"   required="true"/>
+	    <xf:textboxrow name="rates" label="{{ phrase('fs_register_rates') }}"  required="true" />
+	    <xf:textboxrow name="promotion" label="{{ phrase('fs_register_promotion') }}"  required="true" />
+	  
+	  
+	  
+
+    <xf:submitrow submit="" icon="save" />
+  </div>
+</xf:form>]]></template>
+  <template type="public" title="fs_register_premiuem" version_id="1000800" version_string="1.0.8 Alpha"><![CDATA[<xf:title>{{phrase('fs_register_premiuem_title')}}</xf:title>
+		  
+ 	<div class="block">
+		<div class="block-container">
+			<div class="block-row">
+	{{ phrase('fs_register_premiuem_body') }}
+	
+		</div>
+			</div>
+	</div>]]></template>
+  <template type="public" title="fs_register_thread_overview_box" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<div class="block" style="margin-top:5px;">
+
+		  <xf:button
+    href="{{ link('conversations/add',null,{'to':$thread.User.username}) }}"
+    class="button"
+    >{{ phrase('fs_register_pm_me') }}</xf:button
+  >
+	  <xf:button
+    href="{{ link('members',$thread.User) }}"
+    class="button"
+    >{{ phrase('fs_register_my_profile') }}</xf:button
+  >
+	<xf:if is="true">		
+		<xf:button
+				   href="{{ link('members/Mailpopup',$thread.User) }}"
+				   class="button"
+				   >{{ phrase('fs_register_emmai_me') }}</xf:button
+			>
+	</xf:if>
+
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{ phrase('fs_register_hair_color') }}
+					</dt>
+				<dd>
+					
+			{{$thread.User.Profile.custom_fields.haircolor}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_eyes')}}
+					</dt>
+				<dd>
+					{{$thread.User.Profile.custom_fields.eyes}}
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_age')}}
+					</dt>
+				<dd>
+					{{phrase('fs_register_age_view',{'age':{$thread.User.Profile.custom_fields.age}})}}
+					
+				</dd>
+			</dl>
+		
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+				<dt>
+				{{phrase('fs_register_height')}}
+					</dt>
+				<dd>
+					{$thread.User.Profile.custom_fields.height}
+				</dd>
+			</dl>
+		<dl  class="pairs pairs--columns pairs--fixedSmall pairs--customField">
+			<dt>
+				{{phrase('fs_register_ethincity')}}
+			</dt>
+			<dd>
+				{$thread.User.Profile.custom_fields.ethnicity}
+			</dd>
+		</dl>
+	
+		
+
+	
+</div>]]></template>
+  <template type="public" title="fs_register_user_review_list" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<div class="block-container">
+		
+		<xf:if is="$reviews is not empty">
+				<ul class="block-body js-myReviewsTarget">
+						<xf:foreach loop="$reviews" value="$review">
+							<xf:macro  name="reviews_list"
+							arg-review="{$review}"
+							 />
+						</xf:foreach>	
+				</ul>
+				<div class="block-footer js-myLoadMore">
+					<span class="block-footer-controls"><xf:button href="{{ link('members/my-reviews', $user, {'before_id': $oldestItemId}) }}"
+							rel="nofollow"
+							data-xf-click="inserter"
+							data-append=".js-myReviewsTarget"
+							data-replace=".js-myLoadMore">
+							{{ phrase('show_older_items') }}
+						</xf:button></span>
+				</div>
+			<xf:elseif is="$beforeId" />
+				<div class="block-body ">
+					<div class="block-row block-row--separated">{{ phrase('there_no_more_items_to_show') }}</div>
+				</div>
+			<xf:else />
+				<div class="block-body  ">
+					<div class="block-row">{{ phrase('no_any_data_found') }}</div>
+				</div>
+			</xf:if>
+		
+</div>
+
+
+
+<xf:macro name="reviews_list"
+	arg-review="!">
+	
+		<li class="block-row block-row--separated js-inlineModContainer" data-author="{{ $review.User.username ?: $review.username }}">
+	<div class="contentRow {{ !$review.isVisible() ? 'is-deleted' : '' }}">
+		<span class="contentRow-figure">
+			<xf:avatar user="{$review.User}" size="s" defaultname="{$review.username}" />
+		</span>
+		<div class="contentRow-main">
+			<h3 class="contentRow-title">
+				<a href="{{ link('threads', $review) }}">{{ prefix('thread', $review) . highlight($review.title, $options.term) }}</a>
+			</h3>
+
+			<div class="contentRow-snippet">{{ $review.custom_fields.overall_experience ? $review.custom_fields.overall_experience : ''}}</div>
+
+			<div class="contentRow-minor contentRow-minor--hideLinks">
+				<ul class="listInline listInline--bullet">
+					<li><xf:username user="{$review.User}" defaultname="{$review.username}" /></li>
+					<li><xf:date time="{$review.post_date}" /></li>
+					<li>{{ phrase('fs_register_location') }} <a href="{{ link('forums', $post.Thread.Forum) }}">{$review.Forum.title}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</li>
+
+</xf:macro>]]></template>
+  <template type="public" title="fs_register_vouch_list" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title>{{ phrase('fs_register_vouch_list') }}</xf:title>
+
+<div class="block-container">
+	<div class="block-body">
+		<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+			<div class="block-container">
+				<xf:if is="$lists != null">
+					<div class="block-body">
+						<xf:datalist data-xf-init="responsive-data-list">
+							<xf:macro
+									  name="fs_register_vouch_table_list"
+									  arg-lists="{$lists}"
+									  />
+						</xf:datalist>
+					</div>
+
+					<xf:else />
+					<div class="block-body block-row">
+						{{ phrase('no_items_have_been_created_yet') }}
+					</div>
+				</xf:if>
+			</div>
+		</xf:form>
+	</div>
+
+	<div class="block-footer">
+
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt><span class="block-footer-counter">{{ display_totals($attendance, $total) }}</span></dt>
+				<dd>
+					<xf:pagenav
+								page="{$page}"
+								perpage="{$perPage}"
+								total="{$total}"
+								link="link-proxy"
+								data="{$lists}"
+								params="{$lists}"
+								wrapperclass="block-outer-main"
+								/>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+
+
+<xf:macro name="fs_register_vouch_table_list" arg-lists="{$lists}">
+	<xf:datarow rowtype="header">
+		<xf:cell> {{ phrase('user_group') }} </xf:cell>
+		<xf:cell> {{ phrase('link_delay_time') }} </xf:cell>
+		<xf:cell> {{ phrase('link_html') }} </xf:cell>
+
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_link_edit') }}</xf:cell>
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_Link_delete') }}</xf:cell>
+	</xf:datarow>
+	<xf:foreach loop="$lists" value="$list">
+		<xf:datarow>
+			<xf:cell> <xf:avatar user="{$list.UserTo}" size="o" defaultname="{$listing.UserTo.username}" /> {{$list.UserGroup.title}} </xf:cell>
+			<xf:cell> {{$list.redirect_time }} </xf:cell>
+			<xf:cell>
+				{{$list.link_redirect_html != '' ? snippet($list.link_redirect_html, 30, {'stripBbCode': true}) : phrase('no_link_redirect_html') }}
+			</xf:cell>
+
+			<xf:action
+					   href="{{link('link-proxy/edit', $list) }}"
+					   >{{ phrase('edit') }}</xf:action>
+			<xf:delete
+					   href="{{ link('link-proxy/delete', $list) }}"
+					   overlay="true"
+					   />
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>]]></template>
+  <template type="public" title="fs_register_vouch_message" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:title>{{ phrase('fs_register_vouch_message') }}</xf:title>
+
+<xf:form action="{{ link('members/savevouch',$user) }}" ajax="true" class="block"   data-force-flash-message="true">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_register_r_u_sure') }}
+			</xf:inforow>
+					<xf:hiddenval value="{$user_id}" name="user_id"/>
+
+		</div>
+		<xf:submitrow rowtype="simple" icon="save" />
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="fs_verify_account" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[<mail:subject>
+	{{ phrase('fs_account_verify_mail_subject') }}
+</mail:subject>
+
+{{ phrase('fs_note_user', {
+	'username': $user.username,
+     'verify_link': $link,
+     'direct_link' :$direct_link,
+     'activation_id' :$activation_id,
+     'contact_email':{$xf.options.contactEmailAddress}
+}) }}]]></template>
+  <template type="public" title="fs_verify_account_compulsory" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[<div class="blockMessage blockMessage--important blockMessage--iconic">
+	
+	{{ phrase('fs_verify_account_compulsory', {
+	'link': '<a href="' . link('canonical:register/verify-reagain') . '">' . "Click here". '</a>'}
+) }}
+	
+	
+
+</div>]]></template>
+  <template type="public" title="register_custom_fields" version_id="1000900" version_string="1.0.9 Alpha"><![CDATA[<xf:macro name="general_custom_fields_edit"
+	arg-type="!"
+	arg-group="{{ null }}"
+	arg-set="!"
+	arg-editMode="user"
+	arg-onlyInclude="{{ null }}"
+	arg-additionalFilters="{{ [] }}"
+	arg-rowType=""
+	arg-rowClass=""
+	arg-namePrefix="custom_fields"
+	arg-requiredOnly="{{ false }}">
+	<xf:foreach loop="$xf.app.getCustomFieldsForEdit({$type}, {$set}, {$editMode}, {$group}, {$onlyInclude}, {$additionalFilters})" key="$fieldId" value="$fieldDefinition">
+
+		<xf:if is="$fieldDefinition.getExsitedField() && $fieldDefinition.getAccountTypeField()">
+		
+		
+		<xf:if is="!$requiredOnly OR ($requiredOnly AND $fieldDefinition.required)">
+			<xf:set var="$controlId" value="{{
+				in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'select', 'multiselect', 'date', 'stars', 'color'])
+				? unique_id()
+				: '' }}" />
+			<xf:set var="$labelId" value="{{
+				in_array($fieldDefinition.field_type, ['radio', 'checkbox'])
+				? unique_id()
+				: '' }}" />
+
+			<xf:formrow label="{$fieldDefinition.title}"
+				explain="{$fieldDefinition.description}"
+				hint="{{ $fieldDefinition.isRequired($editMode) ? phrase('required') : '' }}"
+				rowtype="{$rowType} customField {{ in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'bbcode', 'select']) ? 'input' : '' }}"
+				rowclass="{$rowClass}"
+				labelid="{$labelId}"
+				controlid="{$controlId}"
+				data-field="{$fieldDefinition.field_id}">
+
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit_{$fieldDefinition.field_type}"
+					arg-set="{$set}"
+					arg-definition="{$fieldDefinition}"
+					arg-editMode="{$editMode}"
+					arg-refId="{{ $controlId ?: $labelId }}"
+					arg-namePrefix="{$namePrefix}" />
+			</xf:formrow>
+		</xf:if>
+		</xf:if>
+	
+			
+			
+	</xf:foreach>
+</xf:macro>
+
+
+<xf:macro name="custom_account_type_fields"
+	arg-type="!"
+	arg-group="{{ null }}"
+	
+	arg-editMode="user"
+	arg-custom_fields=""
+	arg-onlyInclude="{{ null }}"
+	arg-additionalFilters="{{ [] }}"
+	arg-rowType=""
+	arg-rowClass=""
+	arg-namePrefix="custom_fields"
+	arg-requiredOnly="{{ false }}">
+	<xf:foreach loop="$custom_fields" key="$fieldId" value="$fieldDefinition">
+		<xf:if is="!$requiredOnly OR ($requiredOnly AND $fieldDefinition.required)">
+			<xf:set var="$controlId" value="{{
+				in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'select', 'multiselect', 'date', 'stars', 'color'])
+				? unique_id()
+				: '' }}" />
+			<xf:set var="$labelId" value="{{
+				in_array($fieldDefinition.field_type, ['radio', 'checkbox'])
+				? unique_id()
+				: '' }}" />
+
+			<xf:formrow label="{$fieldDefinition.title}"
+				explain="{$fieldDefinition.description}"
+				hint="{{ $fieldDefinition.required ? phrase('required') : '' }}"
+				rowtype="{$rowType} customField {{ in_array($fieldDefinition.field_type, ['textbox', 'textarea', 'bbcode', 'select']) ? 'input' : '' }}"
+				rowclass="{$rowClass}"
+				labelid="{$labelId}"
+				controlid="{$controlId}"
+				data-field="{$fieldDefinition.field_id}">
+	
+				<xf:macro template="custom_fields_macros" name="custom_fields_edit_{$fieldDefinition.field_type}"
+					arg-set="{$set}"
+					arg-definition="{$fieldDefinition}"
+					arg-editMode="{$editMode}"
+					arg-refId="{{ $controlId ?: $labelId }}"
+					arg-namePrefix="{$namePrefix}" />
+			</xf:formrow>
+		</xf:if>
+	</xf:foreach>
+</xf:macro>]]></template>
+  <template type="public" title="regsitration_steps.less" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[.widget-heading{
+	padding-left: unset !important;
+}
+.text-center{
+	text-align:center;
+}
+	.owl-nav{
+    display: flex;
+    position: relative;
+    bottom: 100px;
+	margin-top:-65px;
+    justify-content: space-between;
+	}
+	.owl-nav button{
+	font-size: 41px !important;
+	}
+
+.square-border{
+	border-radius:3px !important;
+}
+.thread-img{
+	height:192px;
+}]]></template>
+  <template type="public" title="widget_featured_provider" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<xf:css src="regsitration_steps.less"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<div class="owl-carousel">
+				<xf:foreach loop="$users" value="$user">
+					<div class="text-center">
+						<xf:avatar user="{$user}" size="l"
+									href="{{ link('members',$user) }}" class="square-border"/>
+						<p>
+							<a href="{{ link('members',$user)}}">  {{$user.username }}</a>
+						</p>
+						
+					</div>
+				</xf:foreach>
+			</div>
+		</div>
+	</div>
+</div>
+
+<xf:js>
+	$(document).ready(function(){
+	  $('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:1,
+		autoplay:true,
+		autoplaySpeed:2000,
+		autoplayTimeout:3000,
+		responsiveClass:true,
+		nav:true,
+	    navRewind:true,
+		center:true,
+		responsive:{
+			0:{
+				items:1,
+			
+			},
+			400:{
+				items:2,
+			
+			},
+			600:{
+				items:3,
+			
+			},
+			1000:{
+				items:4,
+				
+				loop:true
+			}
+		}
+
+	})
+});
+</xf:js>]]></template>
+  <template type="public" title="widget_top_users" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<xf:foreach loop="$users" value="$user">
+				<dl class="pairs pairs--justified count--threads">
+					<dt>{{ $user.username }}</dt>
+					<dd>{{ $user.total }}</dd>
+				</dl>
+			</xf:foreach>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="widget_user_statistics" version_id="1010100" version_string="1.1.1 Alpha"><![CDATA[<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('members_online') }}</dt>
+				<dd>{$counts.members|number}</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('guests_online') }}</dt>
+				<dd>{$counts.guests|number}</dd>
+			</dl>
+
+			<dl class="pairs pairs--justified">
+				<dt>{{ phrase('total_visitors') }}</dt>
+				<dd>{$counts.total|number}</dd>
+			</dl>
+		
+		<h3 class="block-minorHeader">{{ phrase('fs_register_latest_provider') }}</h3>
+		
+		<xf:foreach loop="$ProviderUsers" value="$user">
+			<dl class="pairs pairs--justified">
+				<dt><a href="{{ link('members',$user)}}">  {{$user.username }}</a></dt>
+				<dd><xf:date time="$user.register_date" /></dd>
+			</dl>
+		</xf:foreach>
+			
+			<h3 class="block-minorHeader">{{ phrase('fs_register_latest_male') }}</h3>
+		
+				<xf:foreach loop="$MaleUsers" value="$user">
+					<dl class="pairs pairs--justified">
+						<dt><a href="{{ link('members',$user)}}">  {{$user.username }}</a></dt>
+						<dd><xf:date time="$user.register_date" /></dd>
+					</dl>
+				</xf:foreach>
+		</div>
+	</div>
+</div>]]></template>
+</templates>

@@ -1,0 +1,24 @@
+<xf:css src="fs_rule_landing_page.less" />
+<div class="container-landing">
+	<xf:comment>
+	<div class="header-landing">
+		<div class="p-header-logo p-header-logo--image image-logo">
+			<a href="{{ ($xf.options.logoLink && $xf.homePageUrl) ? $xf.homePageUrl : link('index') }}"> <img src="{{ base_url(property('publicLogoUrl')) }}" alt="{$xf.options.boardTitle}" {{ property( 'publicLogoUrl2x') ? 'srcset="' . base_url(property( 'publicLogoUrl2x')) . ' 2x"' : '' }} /> </a>
+		</div>
+	</div>
+	</xf:comment>
+	<br>
+	<br>
+	<h3>{{phrase('fs_header_title')}}</h3>
+	<div class="swb-rules"> {{phrase('fs_landing_page_rules')}}
+		<br>
+		
+			<xf:button  href="{{ link('forums/', $null) }}" class="button-agree">{{ phrase('fs_landing_agree') }}</xf:button>
+			<xf:button  href="http://google.com/" class="button-disagree">{{ phrase('fs_landing_disagree') }}</xf:button>
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	<footer class="landing-footer">
+		<!-- Footer content --><a  href="{$xf.contactUrl}">{{phrase('fs_customer_support')}}</a> | <a href="{$xf.tosUrl}">{{phrase('fs_terms')}}</a>| <a href="{$xf.privacyPolicyUrl}">{{phrase('fs_privacy')}}</a>| <a href="help/complaince">{{phrase('fs_exemption')}}</a>| <a href="{$xf.homePageUrl}">{{phrase('fs_home')}}</a> </footer>

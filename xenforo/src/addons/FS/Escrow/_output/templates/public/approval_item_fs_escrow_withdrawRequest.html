@@ -1,0 +1,17 @@
+<xf:set var="$messageHtml">
+	<h4 class="message-title"><a href="{{ link('members', $content.User) }}">{{phrase('fs_escrow_request_from', {'user': $content.User.username})}}</a></h4>
+</xf:set>
+<xf:macro template="approval_queue_macros" name="item_message_type"
+	arg-content="{$content}"
+	arg-contentDate="{$content.created_at}"	  
+	arg-user="{$content.User}"
+	arg-messageHtml="{$messageHtml}"
+	arg-typePhraseHtml="{{ phrase('fs_escrow_withdrawRequest') }}"
+	arg-spamDetails="{$spamDetails}"
+	arg-unapprovedItem="{$unapprovedItem}"
+	arg-handler="{$handler}"
+	arg-headerPhraseHtml="{{ phrase('user_x_request_withdraw', {
+		'user': $content.User.username,
+		'amount': $content.amount,
+		'address_from': $content.address_from
+	}) }}"/>

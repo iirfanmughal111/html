@@ -1,0 +1,17 @@
+{
+    "public/alert_classifieds_listing_marked_sold.html": {
+        "version_id": 1001470,
+        "version_string": "1.0.14",
+        "hash": "460402fa79105e49f8bfe8bd178d5ac1"
+    },
+    "public/z61_classifieds_add_listing_chooser.html": {
+        "version_id": 1001470,
+        "version_string": "1.0.14",
+        "hash": "d34dc58c3c30ce467c4546a6fba812b5"
+    },
+    "public/z61_classifieds_category_add_listing.html": {
+        "version_id": 1001230,
+        "version_string": "1.0.12 Beta",
+        "hash": "393e409880b109bde65b2f08d3b9181c"
+    }
+}

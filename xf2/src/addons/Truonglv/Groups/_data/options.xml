@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="tl_groups_archiveNodeId" edit_format="callback" data_type="unsigned_integer" validation_class="Truonglv\Groups\Option\Node" validation_method="verifyArchiveNodeId" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>Truonglv\Groups\Option\Node::renderArchiveNodeId</edit_format_params>
+    <relation group_id="tl_groups" display_order="3020"/>
+  </option>
+  <option option_id="tl_groups_autoWatchForums" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="3120"/>
+  </option>
+  <option option_id="tl_groups_cleanUpInactiveXDays" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>min=0
+units={{ phrase('days') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="150"/>
+  </option>
+  <option option_id="tl_groups_commentsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1
+step=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="705"/>
+  </option>
+  <option option_id="tl_groups_defaultEventView" edit_format="radio" data_type="string" advanced="0">
+    <default_value>list</default_value>
+    <edit_format_params>list=List compact
+calendar=Calendar</edit_format_params>
+    <relation group_id="tl_groups" display_order="2055"/>
+  </option>
+  <option option_id="tl_groups_defaultLocationType" edit_format="radio" data_type="string" advanced="0">
+    <default_value>real</default_value>
+    <edit_format_params>={{ phrase('none') }}
+virtual={{ phrase('tlg_location_type_virtual') }}
+real={{ phrase('tlg_location_type_real') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="2030"/>
+  </option>
+  <option option_id="tl_groups_defaultSort" edit_format="template" data_type="array" advanced="0">
+    <default_value>{"order":"last_activity","direction":"desc"}</default_value>
+    <edit_format_params>tlg_option_defaultSort</edit_format_params>
+    <sub_options>order
+direction</sub_options>
+    <relation group_id="tl_groups" display_order="550"/>
+  </option>
+  <option option_id="tl_groups_defaultTab" edit_format="callback" data_type="string" advanced="0">
+    <default_value>newsFeed</default_value>
+    <edit_format_params>Truonglv\Groups\Option\DefaultTab::renderOption</edit_format_params>
+    <relation group_id="tl_groups" display_order="10"/>
+  </option>
+  <option option_id="tl_groups_deleteForumAction" edit_format="callback" data_type="array" validation_class="Truonglv\Groups\Option\DeleteForumAction" validation_method="verifyOption" advanced="0">
+    <default_value>{"type":0,"node_id":0}</default_value>
+    <edit_format_params>Truonglv\Groups\Option\DeleteForumAction::renderOption</edit_format_params>
+    <sub_options>type
+node_id</sub_options>
+    <relation group_id="tl_groups" display_order="3030"/>
+  </option>
+  <option option_id="tl_groups_enableBadge" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="tl_groups" display_order="50"/>
+  </option>
+  <option option_id="tl_groups_enableEvents" edit_format="onoff" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="2000"/>
+  </option>
+  <option option_id="tl_groups_enableForums" edit_format="radio" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <edit_format_params>0={{ phrase('no') }}
+1={{ phrase('yes') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="3005"/>
+  </option>
+  <option option_id="tl_groups_enableLanguage" edit_format="onoff" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="20"/>
+  </option>
+  <option option_id="tl_groups_enableMedia" edit_format="radio" data_type="unsigned_integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>0={{ phrase('no') }}
+1={{ phrase('yes') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="1500"/>
+  </option>
+  <option option_id="tl_groups_enableResources" edit_format="onoff" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="5000"/>
+  </option>
+  <option option_id="tl_groups_eventReminder" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>24</default_value>
+    <edit_format_params>min=0
+units={{ phrase('units_hours') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="2020"/>
+  </option>
+  <option option_id="tl_groups_eventTimeZone" edit_format="template" data_type="string" advanced="0">
+    <default_value>visitor</default_value>
+    <edit_format_params>tlg_option_template_eventTimeZone</edit_format_params>
+    <relation group_id="tl_groups" display_order="2040"/>
+  </option>
+  <option option_id="tl_groups_eventTimeZoneEdit" edit_format="onoff" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="2050"/>
+  </option>
+  <option option_id="tl_groups_eventsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="2010"/>
+  </option>
+  <option option_id="tl_groups_googleMapKey" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="tl_groups" display_order="2005"/>
+  </option>
+  <option option_id="tl_groups_groupNodeCache" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>Truonglv\Groups\Option\GroupNodeCache::renderOption</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="tl_groups" display_order="1"/>
+  </option>
+  <option option_id="tl_groups_groupsPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1
+step=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="700"/>
+  </option>
+  <option option_id="tl_groups_lazyLoadCover" edit_format="onoff" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="30"/>
+  </option>
+  <option option_id="tl_groups_maxMembersInCard" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>5</default_value>
+    <edit_format_params>min=0
+step=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="720"/>
+  </option>
+  <option option_id="tl_groups_maxNodes" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <edit_format_params>min=1
+step=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="3100"/>
+  </option>
+  <option option_id="tl_groups_maxPostStickies" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>1</default_value>
+    <edit_format_params>min=0
+step=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="745"/>
+  </option>
+  <option option_id="tl_groups_newsFeedPreviewMaxLength" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>300</default_value>
+    <edit_format_params>min=0
+step=50</edit_format_params>
+    <relation group_id="tl_groups" display_order="740"/>
+  </option>
+  <option option_id="tl_groups_nodeTitleFormat" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>{title} - {name}</default_value>
+    <relation group_id="tl_groups" display_order="3010"/>
+  </option>
+  <option option_id="tl_groups_resourceIconSize" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>100</default_value>
+    <edit_format_params>min=1
+units={{ phrase('units_pixels') }}</edit_format_params>
+    <relation group_id="tl_groups" display_order="5020"/>
+  </option>
+  <option option_id="tl_groups_resourceRequiredFiles" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="tl_groups" display_order="5030"/>
+  </option>
+  <option option_id="tl_groups_resourcesPerPage" edit_format="spinbox" data_type="unsigned_integer" advanced="0">
+    <default_value>20</default_value>
+    <edit_format_params>min=1</edit_format_params>
+    <relation group_id="tl_groups" display_order="5010"/>
+  </option>
+  <option option_id="tl_groups_watchAlertActiveOnly" edit_format="onofftextbox" data_type="array" advanced="0">
+    <default_value>{"enabled":"1","days":"180"}</default_value>
+    <edit_format_params>onoff=enabled
+value=days
+type=spinbox
+min=1
+default=180
+units={{ phrase('units_days') }}</edit_format_params>
+    <sub_options>enabled
+days</sub_options>
+    <relation group_id="tl_groups" display_order="780"/>
+  </option>
+</options>

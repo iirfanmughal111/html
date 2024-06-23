@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<member_stats>
+  <member_stat member_stat_key="dbtech_ecommerce_amount_spent" callback_class="DBTech\eCommerce\MemberStat\Formatter" callback_method="amountSpent" sort_order="dbtech_ecommerce_amount_spent" sort_direction="desc" permission_limit="dbtechEcommerceAdmin-viewLicenses" show_value="1" user_limit="20" display_order="57" overview_display="1" active="1" cache_lifetime="60"><![CDATA[[]]]></member_stat>
+  <member_stat member_stat_key="dbtech_ecommerce_most_licenses" callback_class="DBTech\eCommerce\MemberStat\Formatter" callback_method="number" sort_order="dbtech_ecommerce_license_count" sort_direction="desc" permission_limit="dbtechEcommerceAdmin-viewLicenses" show_value="1" user_limit="20" display_order="55" overview_display="1" active="1" cache_lifetime="60"><![CDATA[[]]]></member_stat>
+  <member_stat member_stat_key="dbtech_ecommerce_most_products" callback_class="DBTech\eCommerce\MemberStat\Formatter" callback_method="number" sort_order="dbtech_ecommerce_product_count" sort_direction="desc" permission_limit="dbtechEcommerce-view" show_value="1" user_limit="20" display_order="50" overview_display="1" active="1" cache_lifetime="60"><![CDATA[[]]]></member_stat>
+</member_stats>

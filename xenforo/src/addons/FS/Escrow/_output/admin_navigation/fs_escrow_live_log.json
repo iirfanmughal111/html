@@ -1,0 +1,10 @@
+{
+    "parent_navigation_id": "fsEscrowList",
+    "display_order": 6,
+    "link": "escrow/live",
+    "icon": "",
+    "admin_permission_id": "",
+    "debug_only": false,
+    "development_only": false,
+    "hide_no_children": false
+}

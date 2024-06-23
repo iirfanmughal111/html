@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_event_listeners>
+  <listener event_id="addon_post_install" execute_order="10" callback_class="FS\AuctionPlugin\Listener" callback_method="addonPostInstall" active="0"/>
+</code_event_listeners>

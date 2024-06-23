@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<admin_navigation>
+  <admin_navigation_entry navigation_id="fsDownGrade" parent_navigation_id="fsUpgradeUserGroup" display_order="100" link="downgradeGroup" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="fsUpgradeGroup" parent_navigation_id="fsUpgradeUserGroup" display_order="10" link="upgradeGroup" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="fsUpgradeUserGroup" display_order="1000" icon="fa-edit" debug_only="0" development_only="0" hide_no_children="0"/>
+</admin_navigation>

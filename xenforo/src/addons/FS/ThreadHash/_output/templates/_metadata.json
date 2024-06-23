@@ -1,0 +1,17 @@
+{
+    "admin/option_template_fs_threadHash_run_rules_hours.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "969958bfa475585e13932b91b29bd4c4"
+    },
+    "admin/option_template_fs_threadHash_run_rules_mins.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "4a9c1e2995a9ea2ef02b8f89e2920bca"
+    },
+    "admin/option_template_fs_threadHash_type_of_day.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "ff88cd0ecd2b2ffaa56d609c24790d53"
+    }
+}

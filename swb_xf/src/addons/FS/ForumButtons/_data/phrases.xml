@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option.fs_register_Reviews_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Reviews Forums]]></phrase>
+  <phrase title="option.fs_register_alert_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Alert Forums]]></phrase>
+  <phrase title="option.fs_register_compainion_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Compainion Forums]]></phrase>
+  <phrase title="option.fs_register_discussion_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Discussion Forums]]></phrase>
+  <phrase title="option_explain.fs_register_Reviews_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the FORUM_IDS Comma separated like 25,26.]]></phrase>
+  <phrase title="option_explain.fs_register_alert_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the FORUM_IDS Comma separated like 25,26.]]></phrase>
+  <phrase title="option_explain.fs_register_compainion_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the FORUM_IDS Comma separated like 25,26.]]></phrase>
+  <phrase title="option_explain.fs_register_discussion_ids" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the FORUM_IDS Comma separated like 25,26.]]></phrase>
+  <phrase title="option_group.fs_forum_buttons" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Forum Buttons]]></phrase>
+  <phrase title="option_group_description.fs_forum_buttons" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="post_alert" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post alert]]></phrase>
+  <phrase title="post_compainion" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post companion]]></phrase>
+  <phrase title="post_discussion" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post discussion]]></phrase>
+  <phrase title="post_review" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post review]]></phrase>
+</phrases>

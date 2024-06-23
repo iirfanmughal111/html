@@ -1,0 +1,22 @@
+{
+    "public/addEdit_dropdownReply.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "319300fbf8f898cba3ead4c542e3eca3"
+    },
+    "public/editSingleOption.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "45283694e9183fecf6d9b46fb72c605d"
+    },
+    "public/index_dropdownReply.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "07dc36d4b8d51005460de3682bc12f38"
+    },
+    "public/single_option_delete.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "13cecf602624e671ef7099c1ea2beac9"
+    }
+}

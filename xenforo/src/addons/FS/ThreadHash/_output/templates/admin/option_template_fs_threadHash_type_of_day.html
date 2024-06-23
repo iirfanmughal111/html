@@ -1,0 +1,65 @@
+<xf:radiorow
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}"
+	rowclass="{$rowClass}"
+	listclass="listColumns"
+	name="{$inputName}[type]"
+	value="{$option.option_value.type}">
+
+	<xf:option value="dom" label="{{ phrase('day_of_month:') }}"  name="{$inputName}[type]" >
+		<xf:select name="{$inputName}[day_type]" 
+		    value="{$option.option_value.day_type}"
+			multiple="true" size="8"  style="width: 200px">
+			<xf:option value="-1">{{ phrase('any') }}</xf:option>
+			<xf:option value="1">1</xf:option>
+			<xf:option value="2">2</xf:option>
+			<xf:option value="3">3</xf:option>
+			<xf:option value="4">4</xf:option>
+			<xf:option value="5">5</xf:option>
+			<xf:option value="6">6</xf:option>
+			<xf:option value="7">7</xf:option>
+			<xf:option value="8">8</xf:option>
+			<xf:option value="9">9</xf:option>
+			<xf:option value="10">10</xf:option>
+			<xf:option value="11">11</xf:option>
+			<xf:option value="12">12</xf:option>
+			<xf:option value="13">13</xf:option>
+			<xf:option value="14">14</xf:option>
+			<xf:option value="15">15</xf:option>
+			<xf:option value="16">16</xf:option>
+			<xf:option value="17">17</xf:option>
+			<xf:option value="18">18</xf:option>
+			<xf:option value="19">19</xf:option>
+			<xf:option value="20">20</xf:option>
+			<xf:option value="21">21</xf:option>
+			<xf:option value="22">22</xf:option>
+			<xf:option value="23">23</xf:option>
+			<xf:option value="24">24</xf:option>
+			<xf:option value="25">25</xf:option>
+			<xf:option value="26">26</xf:option>
+			<xf:option value="27">27</xf:option>
+			<xf:option value="28">28</xf:option>
+			<xf:option value="29">29</xf:option>
+			<xf:option value="30">30</xf:option>
+			<xf:option value="31">31</xf:option>
+		</xf:select>
+	</xf:option>
+	<xf:option value="dow" label="{{ phrase('day_of_week:') }}"  name="{$inputName}[type]" >
+		<xf:select
+				value="{$option.option_value.day_type}"
+				name="{$inputName}[day_type]" 
+				multiple="true" size="8"  style="width: 200px">
+
+			<xf:option value="-1">{{ phrase('any') }}</xf:option>
+			<xf:option value="0">{{ phrase('day_sunday') }}</xf:option>
+			<xf:option value="1">{{ phrase('day_monday') }}</xf:option>
+			<xf:option value="2">{{ phrase('day_tuesday') }}</xf:option>
+			<xf:option value="3">{{ phrase('day_wednesday') }}</xf:option>
+			<xf:option value="4">{{ phrase('day_thursday') }}</xf:option>
+			<xf:option value="5">{{ phrase('day_friday') }}</xf:option>
+			<xf:option value="6">{{ phrase('day_saturday') }}</xf:option>
+		</xf:select>
+	</xf:option>
+</xf:radiorow>

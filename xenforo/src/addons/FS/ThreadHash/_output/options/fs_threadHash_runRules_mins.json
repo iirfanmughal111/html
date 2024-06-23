@@ -1,0 +1,15 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "option_template_fs_threadHash_run_rules_mins",
+    "data_type": "array",
+    "sub_options": [
+        "*"
+    ],
+    "validation_class": "FS\\ThreadHash\\XF\\Option\\ThreadHashOption",
+    "validation_method": "CronMins",
+    "advanced": false,
+    "default_value": "[]",
+    "relations": {
+        "fs_threadHash": 3
+    }
+}

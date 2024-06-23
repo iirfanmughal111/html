@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="AuctionStarting_bid" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bid]]></phrase>
+  <phrase title="BidCost" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bidding Cost]]></phrase>
+  <phrase title="admin_navigation.fsAuctionCategory" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction categories]]></phrase>
+  <phrase title="admin_navigation.fsAuctionPlugin" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction]]></phrase>
+  <phrase title="auctionBidClosed" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bidding Closed]]></phrase>
+  <phrase title="auctionCustomBid" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Custom Bid]]></phrase>
+  <phrase title="auctionDropdownBid" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bid from Dropdown]]></phrase>
+  <phrase title="auctionEndsOn" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Expire]]></phrase>
+  <phrase title="auctionOwnerCanNotBid" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[You can not bid your own Auction]]></phrase>
+  <phrase title="auctionPostThread" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Post Thread]]></phrase>
+  <phrase title="auction_bid_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Must be in whole US dollars only. Do not put $. It will automatically be added when saved.]]></phrase>
+  <phrase title="auction_bumpingRule_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<ol>
+	<li>You can bump your auction <strong>ONCE</strong> per day and <b>TWICE</b> on the day it ends.</li>
+	<li>This excludes answering direct questions regarding the item, payment, and shipping terms.</li>
+		<li>Failure to abide by these rules can result in the loss of using the Auctions and Classifieds.</li>
+</ol>]]></phrase>
+  <phrase title="auction_endDate" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[AUCTION ENDS ON]]></phrase>
+  <phrase title="auction_endDate_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Choose a date.2 to 5 days is the most used range with 3 days being the most common.]]></phrase>
+  <phrase title="auction_guidlines_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<ol>
+	<li>The highest bid at the closing time listed above will win. If there is a bid within 5 minutes of the closing time (original or extended closing time), 5 minutes shall be added to the time of the last bid, until there are no bids within the final 5 minutes. Because seconds are not displayed on post timestamps, <a href="#"><b>these examples</b></a> will be used as a reference.</li>
+	<li>No Reserve. The Starting Bid of this auction will be treated as the Reserve Price.</li>
+		<li>Bids must be placed in whole US dollars, using numbers in minimum increments as stated above. (bids using images or spelled out numbers are not valid)</li>
+		<li>All bids are to be placed openly in this thread. No bids via Private Message/Convo. Sellers are not permitted to bid on their own auctions.</li>
+		<li>The seller reserves the right to edit the listing to clarify statements or correct any errors.</li>
+<li>Once a valid bid is made, the auction can not be canceled. Bid edits and/or retractions are not permitted. Violations of this rule will result in discipline at the discretion of PC Admins and/or Moderators.
+</li>
+<li>PCF (its Owner, Admins, and Moderators) are not responsible for any actions or outcomes that take place in this auction.</li>
+</ol>]]></phrase>
+  <phrase title="auction_payment_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Chose which forms of payment you accept.]]></phrase>
+  <phrase title="auction_payment_notAdded_explain" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[At least one payment is required...!]]></phrase>
+  <phrase title="auction_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Required]]></phrase>
+  <phrase title="auction_shippingTerms_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Chose your shipping terms.]]></phrase>
+  <phrase title="auction_shippingVia_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Choose the shipping service you will use.]]></phrase>
+  <phrase title="auction_timeZone_explain" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[All auction closing times will use the Pacfic Time Zone.]]></phrase>
+  <phrase title="auction_time_zone" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[AUCTION ENDS AT]]></phrase>
+  <phrase title="auctionsOptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Options]]></phrase>
+  <phrase title="bid_increments" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[MINIMUM BID INCREMENT]]></phrase>
+  <phrase title="biddingNotAllowed" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bidding Not Allowed.]]></phrase>
+  <phrase title="bumpingRule" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Auction Bumping Rules]]></phrase>
+  <phrase title="bumpingRule_statement" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[I have read and accept the auction bumping rules.]]></phrase>
+  <phrase title="dollorSymbol" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[ $]]></phrase>
+  <phrase title="fs_add_auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Term]]></phrase>
+  <phrase title="fs_add_auction_add" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Via]]></phrase>
+  <phrase title="fs_auction" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction]]></phrase>
+  <phrase title="fs_auction_DD" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[00 D]]></phrase>
+  <phrase title="fs_auction_HH" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[00 H]]></phrase>
+  <phrase title="fs_auction_MM" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[00 M]]></phrase>
+  <phrase title="fs_auction_Please_enter_future_date" version_id="1000400" version_string="1.0.4 Alpha"><![CDATA[Auction end date should be greater then today...!]]></phrase>
+  <phrase title="fs_auction_SS" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[00 S]]></phrase>
+  <phrase title="fs_auction_active" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Active]]></phrase>
+  <phrase title="fs_auction_add_auction" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Add auction]]></phrase>
+  <phrase title="fs_auction_attachment_reqired" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Attachment Required...!]]></phrase>
+  <phrase title="fs_auction_auctions" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auctions]]></phrase>
+  <phrase title="fs_auction_bid_amount" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Amount]]></phrase>
+  <phrase title="fs_auction_bid_at" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bid At]]></phrase>
+  <phrase title="fs_auction_bid_on_x" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bid on auction: {auction_title}]]></phrase>
+  <phrase title="fs_auction_bidding_alert_mail" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[<br>
+Hello {auction_owner}, 
+<br><br>
+Your auction <a href="{auctionLink}"> {auctionTitle}</a> get new bid from user: {user}.
+<br><br>
+Thankyou...!
+<br><br>]]></phrase>
+  <phrase title="fs_auction_bidding_alert_message" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Your auction <a href="{auctionLink}"> {auctionTitle}</a> get new bid from user: {user}.]]></phrase>
+  <phrase title="fs_auction_bidding_username" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[By User]]></phrase>
+  <phrase title="fs_auction_bumping" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Bumping]]></phrase>
+  <phrase title="fs_auction_cat" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[By Category]]></phrase>
+  <phrase title="fs_auction_categories" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction categories]]></phrase>
+  <phrase title="fs_auction_categories_add_listing" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Add Auction]]></phrase>
+  <phrase title="fs_auction_category" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction]]></phrase>
+  <phrase title="fs_auction_edit_post" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Edit Post Thread]]></phrase>
+  <phrase title="fs_auction_enter_correct_amount" version_id="1000200" version_string="1.0.2 Alpha"><![CDATA[Please enter correct amount..!]]></phrase>
+  <phrase title="fs_auction_expired" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Expired]]></phrase>
+  <phrase title="fs_auction_grid_view_layout" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Grid view layout]]></phrase>
+  <phrase title="fs_auction_list_view_layout" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[List view layout]]></phrase>
+  <phrase title="fs_auction_maxBid" version_id="1000500" version_string="1.0.5 Alpha"><![CDATA[Current bid]]></phrase>
+  <phrase title="fs_auction_maximum_attachments" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Maximum attachments per auction : ]]></phrase>
+  <phrase title="fs_auction_no_auctions_have_been_created_yet" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[No auctions have been created yet.]]></phrase>
+  <phrase title="fs_auction_no_categories_exist_at_this_time" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[No auction categories exist at this time.]]></phrase>
+  <phrase title="fs_auction_permission_denied" version_id="1000500" version_string="1.0.5 Alpha"><![CDATA[You must login to add auction]]></phrase>
+  <phrase title="fs_auction_requested_category_not_found" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Requested category not found...!]]></phrase>
+  <phrase title="fs_auction_select_amount" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Enter Amount first...!]]></phrase>
+  <phrase title="fs_auction_statistics" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction statistics]]></phrase>
+  <phrase title="fs_auction_status" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction Status]]></phrase>
+  <phrase title="fs_auction_term_label" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Shipping Term]]></phrase>
+  <phrase title="fs_auction_there_no_auction_matching_your_filters" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[There are currently no auctions that match your filters.]]></phrase>
+  <phrase title="fs_auction_top_bidding" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Top Bid :]]></phrase>
+  <phrase title="fs_auction_username" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Username]]></phrase>
+  <phrase title="fs_auction_via_label" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ship Via]]></phrase>
+  <phrase title="fs_auction_visit_auction" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Visit auction]]></phrase>
+  <phrase title="fs_auction_you_already_bumping" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Sorry! you already bumping this auction ]]></phrase>
+  <phrase title="fs_auctions_add_auction_to" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Add Auction to]]></phrase>
+  <phrase title="fs_auctions_please_enter_valid_category" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Please enter valid category...!]]></phrase>
+  <phrase title="fs_cell_ship_via" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Ships Via]]></phrase>
+  <phrase title="fs_cell_shipping_terms" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Shipping Terms]]></phrase>
+  <phrase title="fs_edit_auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Edit Term]]></phrase>
+  <phrase title="fs_edit_auction_via" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Edit Via]]></phrase>
+  <phrase title="fs_filled_reqired_fields_auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Fill require fields ...!]]></phrase>
+  <phrase title="fs_stats_auctions" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auctions]]></phrase>
+  <phrase title="fs_stats_auctions_active" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Active Auctions]]></phrase>
+  <phrase title="fs_stats_auctions_expired" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Expired Auctions]]></phrase>
+  <phrase title="fs_stats_categories" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Categories]]></phrase>
+  <phrase title="fs_title_auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Shipping Terms]]></phrase>
+  <phrase title="fs_title_auction_via" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Ships Via]]></phrase>
+  <phrase title="guidlines" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[AUCTION GUIDLINES]]></phrase>
+  <phrase title="guidlines_statement" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[These are the Auction Guidelines. Please read carefully.]]></phrase>
+  <phrase title="nav.auctionAddListing" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Add Auction]]></phrase>
+  <phrase title="nav.fs_auction_category" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auction]]></phrase>
+  <phrase title="option.auction_thread_prefix_id" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Thread Prefix Id]]></phrase>
+  <phrase title="option.fs_auction_applicable_forum" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Forum Id]]></phrase>
+  <phrase title="option.fs_auction_bumping_allowed" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Allowed Bumping]]></phrase>
+  <phrase title="option.fs_auction_dropDown_list_limit" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[Bidding Drop Down List Limit]]></phrase>
+  <phrase title="option.fs_auction_per_page" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Auctions display on per page]]></phrase>
+  <phrase title="option_explain.auction_thread_prefix_id" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_auction_applicable_forum" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_auction_bumping_allowed" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[how many times user can bump there auction...!]]></phrase>
+  <phrase title="option_explain.fs_auction_dropDown_list_limit" version_id="1000600" version_string="1.0.6 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_auction_per_page" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[how many auctions display on per page you can set from here..!]]></phrase>
+  <phrase title="option_group.auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Auction]]></phrase>
+  <phrase title="option_group_description.auction" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Auction Plugin]]></phrase>
+  <phrase title="payment_methods" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[PAYMENTS ACCEPTED]]></phrase>
+  <phrase title="permission.fs_auction_add" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[Add auction listing]]></phrase>
+  <phrase title="permission_interface.fs_auction_permissions" version_id="1000100" version_string="1.0.1 Alpha"><![CDATA[FS Auction Plugin Permissions]]></phrase>
+  <phrase title="receiveEmailNotification" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[and receive email notifications]]></phrase>
+  <phrase title="shippingTerms" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[SHIPPING TERMS]]></phrase>
+  <phrase title="shippingVia" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[SHIPS VIA]]></phrase>
+  <phrase title="starting_bid" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[STARTING BID]]></phrase>
+  <phrase title="watchThisThread" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Watch this thread...]]></phrase>
+</phrases>

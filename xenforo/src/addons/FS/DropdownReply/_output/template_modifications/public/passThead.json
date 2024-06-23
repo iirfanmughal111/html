@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "passThead",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "arg-showGuestControls=\"{{ !$isPreRegReply }}\"",
+    "replace": "$0\narg-thread=\"{{$thread}}\""
+}

@@ -1,0 +1,9 @@
+{
+    "template": "xfmg_album_user_index",
+    "description": "replace_media_phrase_album",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:button href=\"{{ link('media/add') }}\" class=\"button--cta\" icon=\"add\" data-xf-click=\"overlay\">\n\t\t\t{{ phrase('xfmg_add_media...') }}\n\t\t</xf:button>",
+    "replace": "<xf:button href=\"{{ link('media/albums/create') }}\" class=\"button--cta\" icon=\"add\">\n\t\t\t{{ phrase('fs_add_album') }}\n\t\t</xf:button>\n"
+}

@@ -1,0 +1,9 @@
+{
+    "template": "post_edit",
+    "description": "upload bunny",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:formrow rowtype=\"{{ \\$quickEdit \\? 'fullWidth noLabel mergePrev' : '' }}\">\n\t\t\t\t<xf:if is=\"\\$attachmentData\">.*?<\\/xf:if>/si",
+    "replace": "$0\n<xf:if is=\"{{ $xf.visitor.hasPermission('fs_bunny', 'allow') AND $xf.options.fs_bi_accessKey AND $xf.options.fs_bi_libraryId }} && $post.isFirstPost()\">\n\n\t<script src=\"http://code.jquery.com/jquery-latest.min.js\" type=\"text/javascript\"></script>\n<xf:js>\n\t$(document).ready(function() {\n\t\t\n\t\t\t$(\"#bunnyVideoBtn\").click(function () {\n\t\t\t\n\t\t\t\t$('input[name=\"isBunnyUpload\"]').val(\"1\");\n\t\t\t});\n\t\t\t $(\"#attachVideoBtn\").click(function () {\n\t\t\t\t\n\t\t\t  $('input[name=\"isBunnyUpload\"]').val(\"0\");\n\t\t\t});\n\t});\n</xf:js>\n\t\n\t<xf:macro template=\"bunny_helper_attach_upload\" name=\"upload_block\"\n\t\t\t\t\t\t\t\targ-attachmentData=\"{$attachmentData}\"\n\t\t\t\t\t\t\t\targ-forceHash=\"{$forum.draft_thread.attachment_hash}\" />\n\t\n</xf:if>\n"
+}

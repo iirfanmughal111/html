@@ -1,0 +1,9 @@
+{
+    "template": "forum_post_thread",
+    "description": "fs_escrow_post_thread_add_fields",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:macro name=\"type_fields\".*?arg-subContext=\"full\" \\/>/is",
+    "replace": "<xf:if is=\"$forum.node_id == $xf.options.fs_escrow_applicable_forum\">\n\t<xf:textboxrow name=\"to_user\" value=\"{{ $starterFilter ? $starterFilter.username : '' }}\" label=\"{{ phrase('escrow_user') }}\" ac=\"single\"\n\t\t\t\tmaxlength=\"{{ max_length($xf.visitor, 'username') }}\" id=\"ctrl_started_by\" />\n\t\t\t\t<xf:numberboxrow name=\"escrow_amount\" value=\"\" explain=\"{{ phrase('escrow_total_amount') }} {{ phrase('fs_escrow_amount_symbol') }}{{$xf.visitor.getOrignolAmount() ? $xf.visitor.getOrignolAmount() : 0.00}}\" min=\"0\" label=\"{{ phrase('escrow_amount') }}\" />\n\t\t\t </xf:if>\n\t\t\t \n\t\t\t $0"
+}

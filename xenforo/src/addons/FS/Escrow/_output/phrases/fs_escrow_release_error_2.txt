@@ -1,0 +1,1 @@
+Release Payment issue of payment {amount}$

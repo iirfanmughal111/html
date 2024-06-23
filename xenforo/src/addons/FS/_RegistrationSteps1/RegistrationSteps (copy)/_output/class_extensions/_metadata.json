@@ -1,0 +1,20 @@
+{
+    "XF-Admin-Controller-User_FS-RegistrationSteps-XF-Admin-Controller-User.json": {
+        "hash": "4be078c9e108cba4b454e800aa7e9f96"
+    },
+    "XF-Entity-Forum_FS-RegistrationSteps-XF-Entity-Forum.json": {
+        "hash": "2e401d4a65727d454ac708c9fe2ddd0b"
+    },
+    "XF-Pub-Controller-Forum_FS-RegistrationSteps-XF-Pub-Controller-Forum.json": {
+        "hash": "9fc3a62da0598415b2214c3aad7568bc"
+    },
+    "XF-Pub-Controller-Member_FS-RegistrationSteps-XF-Pub-Controller-Member.json": {
+        "hash": "fa01060976421c4ef414573258dad022"
+    },
+    "XF-Pub-Controller-Thread_FS-RegistrationSteps-XF-Pub-Controller-Thread.json": {
+        "hash": "2694c12f83d9655e6728d35d11c12523"
+    },
+    "XF-Service-Thread-Creator_FS-RegistrationSteps-XF-Service-Thread-Creator.json": {
+        "hash": "30629e5331787c09a5c6c84fbf826ce3"
+    }
+}

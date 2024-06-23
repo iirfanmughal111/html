@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="forum_view" modification_key="change_post_btn_text" description="change_post_btn_text" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{{ phrase('post_thread') }}]]></find>
+    <replace><![CDATA[{{$btn_phrase}}]]></replace>
+  </modification>
+</template_modifications>

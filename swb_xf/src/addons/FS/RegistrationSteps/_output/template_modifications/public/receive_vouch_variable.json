@@ -1,0 +1,9 @@
+{
+    "template": "member_macros",
+    "description": "receive_vouch_variable",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro name=\"member_action_buttons\" arg-user=\"!\" arg-context=\"!\">",
+    "replace": "<xf:macro name=\"member_action_buttons\" arg-user=\"!\" arg-context=\"!\" arg-vouch=\"\">"
+}

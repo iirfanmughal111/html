@@ -1,0 +1,235 @@
+<xf:macro name="listing"
+	arg-listing="!"
+	arg-type="{{ null }}"
+>
+	<xf:css src="structured_list.less" />
+	<xf:css src="fs_escrow_list_view.less" />
+	<div class="structItem structItem--listing js-inlineModContainer " id="escrow-{{$listing.escrow_id}}" data-author="{{ $listing.Thread.username ?: '' }}">
+		<div class="structItem-cell structItem-cell--icon structItem-cell--iconExpanded structItem-cell--iconListingCoverImage">
+			<div class="structItem-iconContainer">
+				<xf:if is="count($listing.Thread.FirstPost.Attachments)">
+						<a href="{{ link('threads', $listing.Thread) }}" class="" data-tp-primary="on">
+							<img src ="{{ link('full:attachments', $listing.Thread.FirstPost.Attachments.first())}}" style="min-height: 92px; max-height: 92px;"></a>
+				<xf:else />
+						<a href="{{ link('threads', $listing.Thread) }}" class="" data-tp-primary="on">
+							<xf:avatar user="{$listing.Thread.User}" size="o" style="width: 92px; height: 92px;"  defaultname="{$listing.Thread.User.username}" /></a>
+				</xf:if>		
+			</div>
+		</div>
+		<div class="structItem-cell structItem-cell--main" data-xf-init="touch-proxy">
+			<div class="structItem-title">
+				<a href="{{ link('threads/', $listing.Thread) }}" class="" data-tp-primary="on">{$listing.Thread.title}</a>
+					<xf:comment><span class="structItem-listingDescription">  {{ phrase('AuctionStarting_bid') }}: {{ phrase('dollorSymbol') }}{{ $listing.Thread.custom_fields.starting_bid}}</span>
+			</xf:comment>
+						</div>
+			<div class="structItem-minor">
+
+					<ul class="structItem-parts">
+						<li><xf:username user="$listing.Thread.User" defaultname="{$listing.Thread.User}" /></li>
+						<li class="structItem-startDate">
+							<xf:date time="{$listing.Thread.post_date}" /> 
+						</li>
+				</ul>
+			</div>
+			
+		<div class="auction-category">{{ snippet($listing.Thread.FirstPost.message, 100, {'stripBbCode': true}) }}</div>
+		
+		</div>
+		<div class="structItem-cell structItem-cell--listingMeta">
+
+			<dl class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--type">
+				<dt ><b>{{ phrase('fs_escrow_form_status') }}</b></dt>
+				<dd>
+					<xf:macro
+						name="status"
+						arg-status="{$listing.escrow_status}"
+					  />
+				</dd>
+			</dl>
+					
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_amount')}}</b>
+					</dt>
+				<dd>
+					{{phrase('fs_escrow_amount_symbol')}}{{$listing.getOrignolAmount()}}
+				</dd>
+			</dl>
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_admin_from')}}</b>
+					</dt>
+				<dd>
+					{{$listing.Thread.User.username}}
+				</dd>
+			</dl>
+			
+			<dl style="margin-top:5px;" class="pairs pairs--justified structItem-minor structItem-metaItem structItem-metaItem--expiration">
+				<dt>
+					<b>{{phrase('fs_escrow_admin_to')}}</b>
+					</dt>
+				<dd>
+					{{$listing.User.username}}
+				</dd>
+			</dl>
+		</div>
+	</div>
+</xf:macro>
+
+<xf:macro name="escrow"
+	arg-escrow="!"
+	arg-type="!"
+	>
+	
+	<xf:if is="$escrow And $escrow.Thread.escrow_id!=0">
+		<div class="block-row block-row--separated  js-inlineModContainer" >
+			<div class="contentRow ">
+				<span class="contentRow-figure">
+					<xf:avatar user="{$escrow.Thread.User}" size="s" defaultname="{$escrow.Thread.User.username}" />
+				</span>
+				<div class="contentRow-main">
+					<h3 class="contentRow-title">
+						<a href="{{ link('threads', $escrow.Thread) }}">{{$escrow.Thread.title}}</a>
+					</h3>
+					<div class="contentRow-minor contentRow-minor--hideLinks">
+						<ul class="listInline listInline--bullet">
+							<li>
+								<xf:if is="$type=='my'">
+									<xf:username user="{$escrow.User}" defaultname="{$escrow.User.username}" />
+									<xf:elseif is="$type == 'mentioned'" />
+									<xf:username user="{$escrow.Thread.User}" defaultname="{$escrow.Thread.User.username}" />
+									
+								</xf:if>
+							</li>
+							<li><xf:date time="{$escrow.Thread.post_date}" /></li>
+							<li>{{ phrase('fs_escrow_amount:') }} {{phrase('fs_escrow_amount_symbol')}}{$escrow.escrow_amount|number}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</xf:if>		
+	
+</xf:macro>	
+
+
+
+<!-- placingProperTableCellTemplate -->
+
+<xf:macro name="logs_table_list" arg-logs="!" arg-beforeId="">
+	
+		<xf:datarow rowtype="header">
+			<xf:cell> {{ phrase('fs_escrow_trans_type') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_date') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_amount') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_current') }} </xf:cell>
+			<xf:cell> {{ phrase('fs_escrow_trans_action') }} </xf:cell>
+			
+		</xf:datarow>
+	
+
+	<xf:foreach loop="$logs" value="$log">
+		<xf:datarow>
+			
+			<xf:cell> {{$log.transaction_type}} </xf:cell>
+			<xf:cell><xf:date time="$log.created_at" /></xf:cell>
+			<xf:cell> {{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolAmount() }} </xf:cell>
+			<xf:cell>{{phrase('fs_escrow_amount_symbol')}}{{$log.getOrignolBalance()}}</xf:cell>
+			<xf:if is="$log.conversation_id">
+				<xf:cell><a href="{{ link('conversations', $log.Conversation) }}">{{ phrase('fs_conversation') }}</a></xf:cell>
+			<xf:else/>
+				<xf:cell><a href="{{ link('members/trans-report', $null,{'id':$log.transaction_id}) }}">{{phrase('fs_report')}} </a></xf:cell>
+			</xf:if>
+			
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>
+
+<xf:macro name="fs_escrow_Count" arg-escrowsCount="!" arg-isSelected="all">
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">{{ phrase('fs_escrows_details') }}</h3>
+			<div class="block-body">
+				<xf:if is="$escrowsCount">
+							
+					<ol class="categoryList toggleTarget is-active">
+		<xf:set var="$isSelected" value="{$isSelected}" />
+		<xf:foreach loop="$escrowsCount" key="$id" value="$escrow">
+
+			<li class="categoryList-item">
+		<div class="categoryList-itemRow">
+			<div class="categoryList-link" style="color:#2577b1;">
+				<a href="{{ link('escrow&type='.{$escrow.type}) }}" class="categoryList-link{{ $isSelected==$escrow.type ? ' is-selected' : '' }}">
+				{$escrow.title}
+			</a>
+				
+			</div>
+			<span class="categoryList-label">
+				<span class="label label--subtle label--smallest">{$escrow.count}</span>
+			</span>
+		</div>
+	</li>
+		
+		</xf:foreach>
+	</ol>
+				<xf:else />
+					<div class="block-row">{{ phrase('n_a') }}</div>
+				</xf:if>
+				
+			</div>
+		</div>
+	</div>
+</xf:macro>
+<xf:macro name="fs_escrow_stats" arg-stats="!">
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">{{ phrase('fs_escrow_statistics') }}</h3>
+			<div class="block-body">
+				<xf:if is="$stats">
+							
+					<ol class="categoryList toggleTarget is-active">
+
+		<xf:foreach loop="$stats" key="$id" value="$category">
+			
+			<li class="categoryList-item">
+		<div class="categoryList-itemRow">
+			<div class="categoryList-link" style="color:#2577b1;">
+				{$category.title}
+			</div>
+			<span class="categoryList-label">
+				<span class="label label--subtle label--smallest">{$category.count}</span>
+			</span>
+		</div>
+	</li>
+		
+		</xf:foreach>
+	</ol>
+				<xf:else />
+					<div class="block-row">{{ phrase('n_a') }}</div>
+				</xf:if>
+				
+			</div>
+		</div>
+	</div>
+</xf:macro>
+
+
+
+<xf:macro name="status"
+	arg-status="!"
+	>
+		<xf:if is="$status==0">
+			{{ phrase('fs_escrow_status_0') }}
+		<xf:elseif is="$status == 1" />
+			{{ phrase('fs_escrow_status_1') }}
+		<xf:elseif is="$status == 2" />
+			{{ phrase('fs_escrow_status_2') }}
+		<xf:elseif is="$status == 3" />
+			{{ phrase('fs_escrow_status_3') }}
+		<xf:elseif is="$status == 4" />
+			{{ phrase('fs_escrow_status_4') }}
+		<xf:else/>
+			{{ phrase('fs_escrow_status_undefined') }}
+		</xf:if>
+	
+	</xf:macro>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_update_url_btn" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[URL string]]></phrase>
+  <phrase title="fs_update_url_not_allowwd" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Action not allowed]]></phrase>
+  <phrase title="fs_update_url_success" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread URL updated Successfully.]]></phrase>
+  <phrase title="fs_update_url_thread_not_founnd" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread not found]]></phrase>
+  <phrase title="fs_url_label_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[URL string]]></phrase>
+  <phrase title="fs_url_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[URL string]]></phrase>
+  <phrase title="option.fs_updateUrl_limit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[URL  Character Limit]]></phrase>
+  <phrase title="option.fs_updateUrl_title_limit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread Title Character Limit]]></phrase>
+  <phrase title="option_explain.fs_updateUrl_limit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.fs_updateUrl_title_limit" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_group.UpdateUrl" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Update Thread Url]]></phrase>
+  <phrase title="option_group_description.UpdateUrl" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Update Thread Url]]></phrase>
+</phrases>

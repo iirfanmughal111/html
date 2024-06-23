@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="custom_bb_code_desc.br" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="custom_bb_code_desc.fsbunny" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="custom_bb_code_example.br" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="custom_bb_code_example.fsbunny" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[fsbunny=libarayId]videoId[/fsbunny]]]></phrase>
+  <phrase title="custom_bb_code_output.br" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="custom_bb_code_output.fsbunny" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="custom_bb_code_title.br" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[New Line]]></phrase>
+  <phrase title="custom_bb_code_title.fsbunny" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Bunny BBCode]]></phrase>
+  <phrase title="fs_bunny_insert_video" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Insert]]></phrase>
+  <phrase title="fs_bunny_request_empty_body" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[A non-empty request body is required...!]]></phrase>
+  <phrase title="fs_bunny_request_method_not_allowed" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Method Not Allowed...!]]></phrase>
+  <phrase title="fs_bunny_request_not_found" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Requested file not found...!]]></phrase>
+  <phrase title="fs_bunny_request_not_success" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Server not responding please try again...!]]></phrase>
+  <phrase title="fs_bunny_request_server_error" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Server Error...!]]></phrase>
+  <phrase title="fs_bunny_request_unauthorized" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Unauthorized, Authentication has been denied for this request.]]></phrase>
+  <phrase title="fs_bunny_request_unsported_media" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Unsupported Media Type..!]]></phrase>
+  <phrase title="fs_bunny_upload_video" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload Video]]></phrase>
+  <phrase title="fs_bunny_you_can_only_video" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please select ony video...!]]></phrase>
+  <phrase title="option.fs_bi_accessKey" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[AccessKey]]></phrase>
+  <phrase title="option.fs_bi_libraryId" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Library ID]]></phrase>
+  <phrase title="option_explain.fs_bi_accessKey" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter AccessKey of bunny Api]]></phrase>
+  <phrase title="option_explain.fs_bi_libraryId" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enter the video libraryId of Bunny.net]]></phrase>
+  <phrase title="option_group.fs_bunny_integration" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Bunny-Integration]]></phrase>
+  <phrase title="option_group_description.fs_bunny_integration" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[bunny.net Api Integration]]></phrase>
+  <phrase title="permission.fs_bunny_allow" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Can Upload Video]]></phrase>
+  <phrase title="permission_interface.fs_bunny_integration" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Bunny Integration]]></phrase>
+</phrases>

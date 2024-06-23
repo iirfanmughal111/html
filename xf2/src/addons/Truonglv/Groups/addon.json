@@ -1,0 +1,25 @@
+{
+    "legacy_addon_id": "",
+    "title": "[tl] Social Groups",
+    "description": "A powerful social groups",
+    "version_id": 3030300,
+    "version_string": "3.3.3",
+    "dev": "Truonglv",
+    "dev_url": "https://nobita.me",
+    "faq_url": "https://nobita.me/forums/94/",
+    "support_url": "https://nobita.me/forums/94/",
+    "extra_urls": {
+		
+    },
+    "require": {
+        "XF": [
+            2020070,
+            "XenForo 2.2.0 or higher"
+        ],
+        "php": [
+            "7.2.0",
+            "PHP 7.2.0 or higher"
+        ]
+    },
+    "icon": "icon.png"
+}

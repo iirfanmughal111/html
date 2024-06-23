@@ -1,0 +1,20 @@
+<xf:title>{{phrase('fs_require_encrypt_message')}}</xf:title>
+<xf:form action="{{ link('escrow/withdraw-save') }}"  class="block" ajax="false">
+		  
+    <div class="block-container">
+		<div class="block-body">
+		<input type="hidden" name="withdraw_amount" value="{$data.withdraw_amount}" />
+		<input type="hidden" name="destination_address" value="{$data.destination_address}" />
+		<input type="hidden" name="public_key" value="{$public_key}" />
+			
+	<xf:formrow 
+				label="{{ phrase('amount_to_withdraw') }}">{{$data.withdraw_amount}}</xf:formrow>
+	<xf:formrow 
+				label="{{ phrase('fs_encrypt_message') }}"><pre style="font-size:10px;">{{$xf.visitor.encrypt_message }}</pre></xf:formrow>
+      	<xf:textboxrow name="message"
+					label="{{ phrase('fs_decrypt_message') }}" required="true" />
+		<xf:submitrow submit="{{ phrase('continue') }}"  />
+	
+		</div>
+	</div>
+</xf:form>

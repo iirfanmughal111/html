@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="addEdit_dropdownReply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:if is="$thread">
+  <xf:title>{{ phrase('editNewdropdownReply') }}</xf:title>
+  <xf:else />
+  <xf:title>{{ phrase('addNewdropdownReply:') }}</xf:title>
+</xf:if>
+
+<div class="block">
+
+
+  <xf:if is="$thread">
+    <xf:breadcrumb source="$thread.getBreadcrumbs(false)" />
+    <xf:form
+      action="{{ link('opt-reply/save') }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+        <xf:if is="$thread.is_dropdown_active">
+          <xf:checkboxrow>
+            <xf:option name="status" checked="true">Active</xf:option>
+          </xf:checkboxrow>
+          <xf:else />
+          <xf:checkboxrow>
+            <xf:option name="status">Active</xf:option>
+          </xf:checkboxrow>
+        </xf:if>
+        <input type="hidden" name="thread_id" value="{{$thread.thread_id}}" />
+
+        <xf:formrow label="{{ phrase('DropdownOptions') }}" rowtype="input">
+          <xf:foreach loop="$thread.dropdwon_options" value="$thread_val">
+            <xf:if is="$thread_val">
+              <xf:textboxrow
+                name="options[]"
+                placeholder="{{ phrase('enter_new_replay') }}"
+                data-i="0"
+                dir="ltr"
+                value="{$thread_val}"
+                rowtype="fullWidth"
+              />
+            </xf:if>
+          </xf:foreach>
+          <div
+            class="inputGroup is-undraggable js-blockDragafter"
+            data-xf-init="field-adder"
+            data-remove-class="is-undraggable js-blockDragafter"
+          >
+            <xf:textboxrow
+              name="options[]"
+              placeholder="{{ phrase('enter_new_replay') }}"
+              data-i="0"
+              dir="ltr"
+              rowtype="fullWidth"
+            />
+          </div>
+        </xf:formrow>
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+    <xf:else />
+
+    <xf:form
+      action="{{ link('opt-reply/save',$thread) }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+        <xf:checkboxrow>
+          <xf:option name="status">Active</xf:option>
+        </xf:checkboxrow>
+        <input type="hidden" name="thread_id" value="{{$thread_id}}" />
+        <xf:formrow label="{{ phrase('DropdownOptions') }}" rowtype="input">
+          <div
+            class="inputGroup is-undraggable js-blockDragafter"
+            data-xf-init="field-adder"
+            data-remove-class="is-undraggable js-blockDragafter"
+          >
+            <xf:textboxrow
+              name="options[]"
+              placeholder="{{ phrase('enter_new_replay') }}"
+              data-i="0"
+              dir="ltr"
+              rowtype="fullWidth"
+            />
+          </div>
+        </xf:formrow>
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+
+  </xf:if>
+
+</div>
+]]></template>
+  <template type="public" title="editSingleOption" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('editNewdropdownReply') }}</xf:title>
+
+<div class="block">
+  <xf:form
+    action="{{ link('opt-reply/'.{$thread_id}.'/update-single',[$thread_id],{'id':$index}) }}"
+    ajax="true"
+    class="block-container"
+    novalidate="novalidate"
+  >
+    <div class="block-body">
+      <input type="hidden" name="thread_id" value="{{$thread_id}}" />
+      <input type="hidden" name="arrayIndex" value="{{$array_index}}" />
+
+      <xf:formrow label="{{ phrase('DropdownOptions') }}" rowtype="input">
+        <xf:textboxrow
+          name="option"
+          placeholder="{{ phrase('enter_new_replay') }}"
+          data-i="0"
+          dir="ltr"
+          value="{{$array_value}}"
+          rowtype="fullWidth"
+        />
+      </xf:formrow>
+    </div>
+
+    <xf:submitrow icon="save" sticky="true" />
+  </xf:form>
+</div>
+]]></template>
+  <template type="public" title="index_dropdownReply" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('fs_dropdown_reply_title') }}</xf:title>
+
+<xf:breadcrumb source="$dropdownReplys.getBreadcrumbs(false)" />
+
+<xf:pageaction>
+  <xf:if is="$dropdownReplys.dropdwon_options != null">
+    <xf:button
+      href="{{ link('opt-reply/delete',$dropdownReplys) }}"
+      icon="delete"
+      overlay="true"
+      ajax="true"
+      >{{ phrase('fs_dropdown_reply_delete') }}</xf:button
+    >
+    <xf:else />
+
+    <xf:button href="{{ link('opt-reply/add',$dropdownReplys) }}" icon="add"
+      >{{ phrase('fs_dropdown_reply') }}</xf:button
+    >
+  </xf:if>
+</xf:pageaction>
+
+<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+  <div class="block-container">
+    <xf:if is="$dropdownReplys.dropdwon_options != null">
+      <div class="block-body">
+        <xf:datalist data-xf-init="responsive-data-list">
+          <xf:macro
+            name="dropdown_table_list"
+            arg-usergroupData="{$dropdownReplys}"
+          />
+        </xf:datalist>
+      </div>
+
+      <xf:else />
+      <div class="block-body block-row">
+        {{ phrase('no_items_have_been_created_yet') }}
+      </div>
+    </xf:if>
+  </div>
+</xf:form>
+<xf:macro name="dropdown_table_list" arg-dropdownReplys="{$dropdownReplys}">
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('dropdownTitle') }} </xf:cell>
+    <xf:cell> {{ phrase('activeStatus') }} </xf:cell>
+
+    <xf:cell class="dataList-cell--min"></xf:cell>
+    <xf:cell class="dataList-cell--min"></xf:cell>
+  </xf:datarow>
+
+  <xf:datarow>
+    <xf:cell> {$dropdownReplys.title} </xf:cell>
+
+    <xf:cell>
+      {{$dropdownReplys.is_dropdown_active == 0 ? 'Inactive' : 'Active' }}
+    </xf:cell>
+  
+
+    <xf:action href="{{ link('opt-reply/edit', $dropdownReplys) }}"
+      >{{ phrase('edit') }}</xf:action
+    >
+    <xf:delete
+      href="{{ link('opt-reply/delete', $dropdownReplys) }}"
+      overlay="true"
+    />
+  </xf:datarow>
+</xf:macro>
+
+<!--Options-->
+
+<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+  <div class="block-container">
+    <xf:if is="$dropdownReplys.dropdwon_options != null">
+      <div class="block-body">
+        <xf:datalist data-xf-init="responsive-data-list">
+          <xf:macro
+            name="dropdownOptions_table_list"
+            arg-dropdownOptionData="{$dropdownReplys}"
+          />
+        </xf:datalist>
+      </div>
+
+    </xf:if>
+  </div>
+</xf:form>
+
+<xf:macro name="dropdownOptions_table_list" arg-dropdownOptionData="">
+  <xf:datarow rowtype="header">
+    <xf:cell> {{ phrase('optionList') }} </xf:cell>
+
+    <xf:cell class="dataList-cell--min"></xf:cell>
+    <xf:cell class="dataList-cell--min"></xf:cell>
+  </xf:datarow>
+  <xf:foreach
+    loop="$dropdownOptionData.dropdwon_options"
+    key="$index"
+    value="$option"
+  >
+    <xf:if is="$option">
+      <xf:datarow>
+        <xf:cell> {{snippet($option, 10, {'stripBbCode': true})}} </xf:cell>
+        <xf:action
+          href="{{ link('opt-reply/edit-single', $dropdownOptionData,{'id':$index}) }}"
+          >{{ phrase('edit') }}</xf:action
+        >
+        <xf:delete
+          href="{{ link('opt-reply/delete-single', $dropdownOptionData,{'id':$index}) }}"
+        />
+      </xf:datarow>
+    </xf:if>
+  </xf:foreach>
+</xf:macro>
+]]></template>
+  <template type="public" title="single_option_delete" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('opt-reply/deletesingle',$thread_id) }}"   class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('fs_are_you_sure_to_delete_option') }}
+				<xf:if is="$contentUrl">
+					<strong><a href="{$contentUrl}">{$optiontitle}</a></strong>
+				<xf:else />
+					<strong>{$optiontitle}</strong>
+					<input name='thread_id' value="{$thread_id}" type="hidden">
+					<input name='id' value="{$id}" type="hidden">
+					
+				</xf:if>
+				<xf:if is="$deletionImportantPhrase">
+					<div class="blockMessage blockMessage--important blockMessage--iconic">
+						{{ phrase_dynamic($deletionImportantPhrase) }}
+					</div>
+				</xf:if>
+			</xf:inforow>
+		</div>
+		<xf:submitrow rowtype="simple" icon="delete" />
+	</div>
+</xf:form>]]></template>
+</templates>

@@ -1,0 +1,170 @@
+{
+    "AddNewUser.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "aea9f7baeebf30edcb5b25159af569ac"
+    },
+    "UserAttendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6977def9e494284cd15cf7d95bc06190"
+    },
+    "UserCrud.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f67ee454b4c8deebf7375b883b299daf"
+    },
+    "addNewAttendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "df5cc0124faa6d30a4725f033d7a503b"
+    },
+    "addNewUserTitle.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "e30c7fae1ffb51f44c16dcb62f2ea4c4"
+    },
+    "admin_navigation.attendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cc890cd541078ee10ea63874e668df9f"
+    },
+    "admin_navigation.viewAttendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "5564fca0847cc3b53d348da87b5a9f9b"
+    },
+    "att_Date.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "44749712dbec183e983dcd78a7736c41"
+    },
+    "att_comments.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "8413c683b4b27cc3f4dbd4c90329d8ba"
+    },
+    "att_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f2a6c498fb90ee345d997f888fce3b18"
+    },
+    "att_edit.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "7dce122004969d56ae2e0245cb754d35"
+    },
+    "att_notAllowed.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "fbef489f40e99d634e4de769c9572f11"
+    },
+    "att_username.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "841621dbcac95ec5a505a7c957fd9614"
+    },
+    "att_view.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "93d75acebbca2d8e37558b97c9cbc9cf"
+    },
+    "attendance_comments.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6796cc9f5dcfe38bc4ac5803bbecd84e"
+    },
+    "currentUserAttendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c4b3c86fec14298ef0fc42030c2507a8"
+    },
+    "inTime.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "e0cb486d446f7898fc9a654a7c31b7da"
+    },
+    "nav.attendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6d1460aaad85e8233c4f1a794530f94c"
+    },
+    "nav.note.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "3b0649c72650c313a357338dcdfb64ec"
+    },
+    "noAnyAttendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "8820b05c32862bcca3e45a1a66a07a5b"
+    },
+    "noComments.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "43746c7861e7d19819a276b997326ac4"
+    },
+    "option.attendanceEmployeeGroup.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "fd1c5ca0856b1734535eb666d0561bfd"
+    },
+    "option_explain.attendanceEmployeeGroup.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_group.attendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6d1460aaad85e8233c4f1a794530f94c"
+    },
+    "option_group_description.attendance.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "outTime.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a6d026c7c6999ee082e9bda4df6cfc7b"
+    },
+    "todayDate.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "5e9b48d6f99f3702abed5fef236ad240"
+    },
+    "totalCount.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c5ccf531362633207ae58589ad607ba6"
+    }
+}

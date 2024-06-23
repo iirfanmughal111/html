@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code_events>
+  <event event_id="dbtech_ecommerce_commission_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\CommissionPayment</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that store credit logs can be ordered by. This affects commission payment log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\CommissionPayment</em> $commissionPaymentSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\CommissionPayment</em> $commissionPaymentSearcher</code> - Commission payment log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_coupon_log_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\CouponLog</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that coupon logs can be ordered by. This affects coupon log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\CouponLog</em> $couponLogSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\CouponLog</em> $couponLogSearcher</code> - Coupon log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_distributor_log_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\DistributorLog</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that distributor logs can be ordered by. This affects distributor log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\DistributorLog</em> $distributorLogSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\DistributorLog</em> $distributorLogSearcher</code> - Distributor log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_download_log_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\DownloadLog</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that download logs can be ordered by. This affects download log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\DownloadLog</em> $downloadLogSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\DownloadLog</em> $downloadLogSearcher</code> - Download log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_download_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\Download</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that downloads can be ordered by. This affects download searches in the control panel and download stats.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\Download</em> $downloadSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\Download</em> $downloadSearcher</code> - Download searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_license_purchase"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Service\Order\Complete</code> class in the <code>complete()</code> method when a license is successfully purchased.</p>
+
+<p>This allows you to run a custom callback when an order has been completed and a license has been purchased.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Entity\License</em> $license, <em>\DBTech\eCommerce\Entity\Order</em> $order, <em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Entity\License</em> $license</code> - License entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\Order</em> $order</code> - Order entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code> - OrderItem entity.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_license_renew"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Service\Order\Complete</code> class in the <code>complete()</code> method when a license is successfully renewed.</p>
+
+<p>This allows you to run a custom callback when an order has been completed and a license has been renewed.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Entity\License</em> $license, <em>\DBTech\eCommerce\Entity\Order</em> $order, <em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Entity\License</em> $license</code> - License entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\Order</em> $order</code> - Order entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code> - OrderItem entity.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_license_reverse"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Service\Order\Reverse</code> class in the <code>reverse()</code> method when a license is deleted.</p>
+
+<p>This allows you to run a custom callback when an order has been reversed and a license has been deleted.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Entity\License</em> $license, <em>\DBTech\eCommerce\Entity\Order</em> $order, <em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Entity\License</em> $license</code> - License entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\Order</em> $order</code> - Order entity.</li>
+	<li><code><em>\DBTech\eCommerce\Entity\OrderItem</em> $orderItem</code> - OrderItem entity.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_license_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\License</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that licenses can be ordered by. This affects license searches in the control panel and license stats.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\License</em> $licenseSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\License</em> $licenseSearcher</code> - License searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_order_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\Order</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that order logs can be ordered by. This affects order log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\Order</em> $orderSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\Order</em> $orderSearcher</code> - Order searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_post_build_tasks"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Service\DownloadVersion\Generator</code> class in the <code>performBuildTasks()</code> method when a download version's zip file is generated, <em>after</em> other build tasks are ran.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Service\DownloadVersion\Generator</em> $generatorService, <em>string</em> $buildJson</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Service\DownloadVersion\Generator</em> $generatorService</code> - Generator service object.</li>
+	<li><code><em>string</em> $buildJson</code> - The parsed <code>build.json</code> file.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_pre_build_tasks"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Service\DownloadVersion\Generator</code> class in the <code>performBuildTasks()</code> method when a download version's zip file is generated, <em>before</em> other build tasks are ran.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Service\DownloadVersion\Generator</em> $generatorService, <em>string</em> $buildJson</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Service\DownloadVersion\Generator</em> $generatorService</code> - Generator service object.</li>
+	<li><code><em>string</em> $buildJson</code> - The parsed <code>build.json</code> file.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_purchase_log_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\PurchaseLog</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that purchase logs can be ordered by. This affects purchase log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\PurchaseLog</em> $purchaseLogSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\PurchaseLog</em> $purchaseLogSearcher</code> - Purchase log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+  <event event_id="dbtech_ecommerce_store_credit_log_searcher_orders"><![CDATA[<p>Fired inside the <code>DBTech\eCommerce\Searcher\StoreCreditLog</code> class in the <code>getDefaultOrderOptions()</code> method.</p>
+
+<p>This allows you to add additional fields that store credit logs can be ordered by. This affects store credit log searches in the control panel.</p>
+
+<p>Callback signature:</p>
+<blockquote><code><em>\DBTech\eCommerce\Searcher\StoreCreditLog</em> $storeCreditLogSearcher, <em>array</em> &amp;$sortOrders</code></blockquote>
+
+<p>Arguments:</p>
+<ol>
+	<li><code><em>\DBTech\eCommerce\Searcher\StoreCreditLog</em> $storeCreditLogSearcher</code> - Store credit log searcher object.</li>
+	<li><code><em>array</em> &amp;$sortOrders</code> - Array of existing sort order fields.</li>
+</ol>]]></event>
+</code_events>

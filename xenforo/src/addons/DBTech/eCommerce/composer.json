@@ -1,0 +1,8 @@
+{
+    "require": {
+        "mossadal/math-parser": "^1.3",
+        "mikehaertl/phpwkhtmltopdf": "^2.4",
+        "geoip2/geoip2": "^2.10",
+        "ibericode/vat": "^2.0"
+    }
+}

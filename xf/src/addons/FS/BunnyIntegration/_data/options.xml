@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_bi_accessKey" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="fs_bunny_integration" display_order="1"/>
+  </option>
+  <option option_id="fs_bi_libraryId" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="fs_bunny_integration" display_order="2"/>
+  </option>
+</options>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<admin_permission>
+  <admin_permission admin_permission_id="dbtechEcomBusiness" display_order="1510"/>
+  <admin_permission admin_permission_id="dbtechEcomCategory" display_order="1520"/>
+  <admin_permission admin_permission_id="dbtechEcomCommissions" display_order="1620"/>
+  <admin_permission admin_permission_id="dbtechEcomCoupon" display_order="1530"/>
+  <admin_permission admin_permission_id="dbtechEcomCredit" display_order="1540"/>
+  <admin_permission admin_permission_id="dbtechEcomDiscount" display_order="1550"/>
+  <admin_permission admin_permission_id="dbtechEcomDistributors" display_order="1630"/>
+  <admin_permission admin_permission_id="dbtechEcomDownload" display_order="1560"/>
+  <admin_permission admin_permission_id="dbtechEcomLicense" display_order="1570"/>
+  <admin_permission admin_permission_id="dbtechEcomLogs" display_order="1590"/>
+  <admin_permission admin_permission_id="dbtechEcomOrders" display_order="1640"/>
+  <admin_permission admin_permission_id="dbtechEcomProduct" display_order="1580"/>
+  <admin_permission admin_permission_id="dbtechEcomSale" display_order="1600"/>
+  <admin_permission admin_permission_id="dbtechEcomSalesTax" display_order="1610"/>
+</admin_permission>

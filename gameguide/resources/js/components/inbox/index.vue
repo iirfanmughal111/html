@@ -1,0 +1,303 @@
+<template>
+    <div>
+        <notifications position="bottom right"/>
+        <div class="inbox-section">
+            <div class="container" v-if="chatLoaded == true">
+                <div v-if="contacts && contacts.length">
+                  <div class="row" v-if="$isMobile()">
+                   <div class="col-md-12"> <button class="user-btn" @click="show = !show" v-show="show == false"><i class="fa fa-times-circle" aria-hidden="true"></i></button></div>
+                    <transition name="slide">
+                      <div v-if="show" key="1">
+                        <contacts-list
+                          :contacts="contacts"
+                          :selectedContact="selectedContact"
+                          :baseUrl="base_url"
+                          @selected="startConversationWith"
+                           :user="user"
+                        />
+                      </div>
+                      <div v-else key="2">
+                        <conversations
+                        :baseUrl="base_url"
+                        :contact="selectedContact"
+                        :messages="messages"
+                        :initConvLoading="initConvLoading"
+                        @new="saveNewMessage"
+                        :user="user"/>
+                      </div>
+                      </transition>
+                  </div>
+                  <div class="row" v-else>
+                    <contacts-list
+                      :contacts="contacts"
+                      :selectedContact="selectedContact"
+                      :baseUrl="base_url"
+                      @selected="startConversationWith"
+					             :user="user"
+                    />
+                    <conversations
+                      :baseUrl="base_url"
+                      :contact="selectedContact"
+                      :messages="messages"
+                      :initConvLoading="initConvLoading"
+          					  @new="saveNewMessage"
+          					  :user="user"/>
+                  </div>
+                </div>
+                <div v-else class="row">
+                  <div class="img-notfound">
+                    <img class="img-responsive" :src="base_url+'images/chat-image.png'">
+                    <h5> There is not user yet to chat. You can only chat with subscribed user. </h5>
+                  </div>
+                </div>
+            </div>
+            <div v-else class="container">
+              <div class="chat-loader"></div>
+            </div>
+
+        </div>
+    </div>
+</template>
+<script>
+import VueMobileDetection from 'vue-mobile-detection'
+Vue.use(VueMobileDetection);
+import Config from '../../config';
+import ContactsList from './ContactsList.vue';
+import Conversations from './Conversations.vue';
+import { mapState, mapActions, mapMutations } from 'vuex';
+import { Role } from '../../_helpers';
+
+export default {
+  props: ['user'],
+
+  components: {
+      ContactsList,
+      Conversations,
+  },
+  data(){
+    return {
+        base_url: Config.BASE_URL,
+	      selectedContact: null,
+        page : 1,
+        contacts: [],
+        chatLoaded:false,
+        show: false
+    };
+  },
+
+  created() {
+     
+      this.resetMessage();
+      this.resetComposeMessage();
+  },
+  computed: {
+    ...mapState({
+        //currentUser: state => state.account.user,
+        selectedChat: state => state.inbox.selectedChat,
+        messages: state => state.inbox.messages,
+        initConvLoading: state => state.inbox.initConvLoading,
+        latestMessage: state => state.inbox.lastMessage
+    })
+  },
+ mounted() {
+
+            Echo.private(`messages.${this.user}`)
+                .listen('NewMessage', (e) => {
+                  this.hanleIncoming(e.message);
+                  this.getLatestMessage();
+                });
+            axios.get('/contacts')
+                .then((response) => {
+                  this.chatLoaded = true;
+                  this.contacts = response.data;
+                  this.intializeConversationWith();
+                  this.getLatestMessage();
+                });
+        },
+  methods: {
+      ...mapActions({
+         getAllOwners : 'inbox/getAllOwners',
+         getAllAdmins : 'inbox/getAllAdmins',
+         getConversation : 'inbox/getConversation',
+         updateNotificationMessage : 'inbox/updateNotificationMessage',
+         countChange : 'inbox/countChange',
+         getLatestMessage: 'inbox/getLatestMessage'
+      }),
+      ...mapMutations({
+          resetMessage : 'inbox/resetConversationMessages',
+          resetComposeMessage : 'inbox/resetComposeMessage',
+      }),
+      intializeConversationWith(){
+        let notFoundUser = 0;
+        let startChat = '';
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        //check if param c exist
+        if(urlParams.has('c')){
+          startChat = urlParams.get('c');
+        }
+        if(startChat != null && startChat != ''){
+          if(Object.keys(this.contacts).length > 0){
+            let self = this;
+            this.contacts.forEach(function(cont){
+              if(cont.hash == startChat){
+                notFoundUser = 1;
+                self.startConversationWith(cont);
+                //self.shuffleContactArray(cont);
+                return;
+              }
+            });
+            setTimeout(function () {
+              if(notFoundUser == 0){
+                self.defaultConversionWith();
+              }
+            },1000);
+          }
+        }
+        else if(this.selectedChat != null && this.selectedChat != ''){
+          //console.log(Object.keys(this.contacts).length);
+          if(Object.keys(this.contacts).length > 0){
+            let openContact = {};
+            let self = this;
+            this.contacts.forEach(function(cont){
+              if(cont.id == self.selectedChat){
+                notFoundUser = 1;
+                self.startConversationWith(cont);
+                //self.shuffleContactArray(cont);
+                return;
+              }
+            });
+            setTimeout(function () {
+              if(notFoundUser == 0){
+                self.defaultConversionWith();
+              }
+            },1000);
+          }
+        }else{
+          /*If no contact selected then by default select first index*/
+          if(Object.keys(this.contacts).length > 0){
+            this.defaultConversionWith();
+          }
+
+        }
+      },
+      defaultConversionWith(){
+        if(Object.keys(this.contacts).length > 0){
+            this.startConversationWith(this.contacts[0]);
+          }
+      },
+      startConversationWith(contact) {
+        //console.log(contact);
+          this.updateUnreadCount(contact, true,null);
+          let initalParam = {'page':this.page,'id':contact.id}
+          this.getConversation(initalParam);
+          this.resetComposeMessage();
+          this.selectedContact = contact;
+          //this.updateNotificationMessage(1);
+          /*Check if mobile resolution*/
+          if(this.$isMobile()){
+            this.show = !this.show;
+          }
+
+      },
+	   saveNewMessage(message) {
+	     // console.log(message)
+        this.messages.unshift(message);
+        this.getLatestMessage();
+      },
+	  hanleIncoming(message) {
+        if (this.selectedContact && message.from == this.selectedContact.id) {
+            /*Check message group id exist*/
+            if(typeof message.group_id != "undefined" && message.group_id != null){
+              let obj = {'id':message.group_id,'type':'group'};
+              this.countChange(obj); 
+            }else{
+              this.countChange(message.from); 
+            }
+            //this.shuffleContactArray(message.from_contact);
+            //console.log('handle');
+            this.updateheader(); 
+            this.saveNewMessage(message);
+
+            return;
+        }else if(typeof this.selectedContact.groupdata != "undefined" && this.selectedContact.groupdata != null && typeof message.group_id != "undefined" && message.group_id != null && message.group_id == this.selectedContact.groupdata.id){
+            if(typeof message.group_id != "undefined" && message.group_id != null){
+              let obj = {'id':message.group_id,'type':'group'};
+              this.countChange(obj);
+            }else{
+              this.countChange(message.from); 
+            } 
+            this.updateheader(); 
+            this.saveNewMessage(message);
+            return;
+        }
+        this.updateNotificationMessage(1);
+        if(typeof message.group_id != "undefined" && message.group_id != null)
+          this.updateUnreadCount(message.from_contact, false,message.group_id);
+        else
+          this.updateUnreadCount(message.from_contact, false,null);
+    },
+    updateheader(){
+      this.updateNotificationMessage(1);
+    },
+    updateUnreadCount(contact, reset,group_id) {
+        this.contacts = this.contacts.map((single) => {
+            if(group_id != null){
+              if(typeof single.groupdata != "undefined" && single.groupdata != null){
+                if(single.groupdata.id !== group_id)
+                  return single;
+              }else{
+                if (single.id !== contact.id) {
+                  return single;
+                }
+              }
+            }else{
+              if (single.id !== contact.id) {
+                  return single;
+              }
+            }
+
+            if (reset){
+              single.unread = 0;
+              /*Modify Status*/
+              if(typeof single.groupdata != "undefined" && single.groupdata != null){
+                let obj = {'id':single.groupdata.id,'type':'group'};
+                this.countChange(obj); 
+              }
+            }
+            else{
+              single.unread += 1;
+            }
+            return single;
+        });
+       
+    },
+    shuffleContactArray(){
+      /*shuffle Contacts Array and bring whose msg came at beginning of array*/
+      for (let i=0; i < this.contacts.length; i++) {
+        if (this.contacts[i].id === this.latestMessage.from) {
+            let a = this.contacts.splice(i,1);   // removes the item
+            this.contacts.unshift(a[0]);         // adds it back to the beginning
+            break;
+        }
+      }
+      /*check if new creater join*/
+      if(typeof (this.latestMessage.top_user) !== "undefined" && this.latestMessage.top_user != null && this.latestMessage.top_user != "" && this.contacts.length > 0 && this.latestMessage.from != this.latestMessage.top_user){
+        //again shuffel contact
+        for (let i=0; i < this.contacts.length; i++) {
+          if (this.contacts[i].id === this.latestMessage.top_user) {
+              let a = this.contacts.splice(i,1);   // removes the item
+              this.contacts.unshift(a[0]);         // adds it back to the beginning
+              break;
+          }
+        }
+      }
+    }	  
+  },
+  watch:{
+    latestMessage:function(newValue,oldValue){
+      this.shuffleContactArray();
+    }
+  }
+};
+</script>

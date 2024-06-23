@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="DC_LinkProxy_Redirecting" version_id="1000000" version_string="1.0.0"><![CDATA[Redirecting...]]></phrase>
+  <phrase title="DC_LinkProxy_continune" version_id="1000000" version_string="1.0.0"><![CDATA[Continune]]></phrase>
+  <phrase title="DC_LinkProxy_message" version_id="1000000" version_string="1.0.0"><![CDATA[The referring site you are being redirected to is not controlled by us, so please remember not to enter your Username and Password unless you are on our board. Also be sure to download software from sites you trust. And remember to read the site's Privacy Policy.]]></phrase>
+  <phrase title="DC_LinkProxy_title" version_id="1000000" version_string="1.0.0"><![CDATA[Please be careful...]]></phrase>
+  <phrase title="DC_LinkProxy_url_not_valid" version_id="1000000" version_string="1.0.0"><![CDATA[Url is not valid.]]></phrase>
+  <phrase title="DC_LinkProxy_you_are_going_to" version_id="1000200" version_string="1.0.2"><![CDATA[You are going to]]></phrase>
+  <phrase title="DC_LinkProxy_you_will_be_redirected_in" version_id="1000000" version_string="1.0.0"><![CDATA[You will be redirected in]]></phrase>
+  <phrase title="admin_navigation.lind_proxy" version_id="1010300" version_string="1.1.3"><![CDATA[Link Proxy]]></phrase>
+  <phrase title="admin_navigation.lind_proxy_list" version_id="1010300" version_string="1.1.3"><![CDATA[List]]></phrase>
+  <phrase title="fs_Link_delete" version_id="1010300" version_string="1.1.3"><![CDATA[Delete]]></phrase>
+  <phrase title="fs_link_edit" version_id="1010300" version_string="1.1.3"><![CDATA[Edit]]></phrase>
+  <phrase title="fs_link_sure_delete" version_id="1010300" version_string="1.1.3"><![CDATA[{title} group redirection time settings]]></phrase>
+  <phrase title="link_delay_time" version_id="1010300" version_string="1.1.3"><![CDATA[Delay time (in secs)]]></phrase>
+  <phrase title="link_fill_all_fields" version_id="1010300" version_string="1.1.3"><![CDATA[Please fill all required fields]]></phrase>
+  <phrase title="link_html" version_id="1010300" version_string="1.1.3"><![CDATA[HTML]]></phrase>
+  <phrase title="link_proxy_add" version_id="1010300" version_string="1.1.3"><![CDATA[Add]]></phrase>
+  <phrase title="link_proxy_title" version_id="1010300" version_string="1.1.3"><![CDATA[Link Proxy]]></phrase>
+  <phrase title="link_redirect_html" version_id="1010300" version_string="1.1.3"><![CDATA[HTML]]></phrase>
+  <phrase title="link_redirect_in_secs" version_id="1010300" version_string="1.1.3"><![CDATA[(in seconds)]]></phrase>
+  <phrase title="link_redirect_required" version_id="1010400" version_string="1.1.4"><![CDATA[Required]]></phrase>
+  <phrase title="link_redirect_time" version_id="1010300" version_string="1.1.3"><![CDATA[Time]]></phrase>
+  <phrase title="link_user_group" version_id="1010300" version_string="1.1.3"><![CDATA[Usergroup]]></phrase>
+  <phrase title="no_link_redirect_html" version_id="1010300" version_string="1.1.3"><![CDATA[no HTML available]]></phrase>
+  <phrase title="option.DC_LinkProxy_AutoRedirection" version_id="1000000" version_string="1.0.0"><![CDATA[Enable automatic redirection]]></phrase>
+  <phrase title="option.DC_LinkProxy_AutoRedirection__time" version_id="1010300" version_string="1.1.3"><![CDATA[Default Auto redirection time]]></phrase>
+  <phrase title="option.DC_LinkProxy_DomainWhiteList" version_id="1000000" version_string="1.0.0"><![CDATA[Domain White List]]></phrase>
+  <phrase title="option.fs_link_group_apply_settings" version_id="1010400" version_string="1.1.4"><![CDATA[Group with priority]]></phrase>
+  <phrase title="option.fs_link_html_position" version_id="1010300" version_string="1.1.3"><![CDATA[HTML position]]></phrase>
+  <phrase title="option_explain.DC_LinkProxy_AutoRedirection" version_id="1000000" version_string="1.0.0"><![CDATA[You can disable automatic redirection if you want your visitor to click "Continue" on the redirection page to visit the page, instead of automatically being redirected.]]></phrase>
+  <phrase title="option_explain.DC_LinkProxy_AutoRedirection__time" version_id="1010300" version_string="1.1.3"><![CDATA[Enter default auto redirection time in seconds.]]></phrase>
+  <phrase title="option_explain.DC_LinkProxy_DomainWhiteList" version_id="1000000" version_string="1.0.0"><![CDATA[Enter the domain names/hostnames that you do not want to anonymize/redirect. <b>Only one domain per line.</b><br/>
+If you want to white list an entire domain including its sub-domains, <b>only add domain.com.</b><br/>
+If you want to white list a domain's sub-domains and not the top level one, <b>add .domain.com.</b>]]></phrase>
+  <phrase title="option_explain.fs_link_group_apply_settings" version_id="1010400" version_string="1.1.4"><![CDATA[If a user has multiple groups tell either the time of group with high-style priority is applied or with low priority.]]></phrase>
+  <phrase title="option_explain.fs_link_html_position" version_id="1010300" version_string="1.1.3"><![CDATA[]]></phrase>
+  <phrase title="option_group.DC_LinkProxy" version_id="1000000" version_string="1.0.0"><![CDATA[D.C Style - Link Proxy]]></phrase>
+  <phrase title="option_group_description.DC_LinkProxy" version_id="1000000" version_string="1.0.0"><![CDATA[]]></phrase>
+</phrases>

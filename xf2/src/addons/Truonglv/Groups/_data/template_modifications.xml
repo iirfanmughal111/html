@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="account_preferences" modification_key="tlg_account_preferences" description="Added option to show group badges" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[label="{{ phrase('show_peoples_signatures_with_their_messages') }}" />]]></find>
+    <replace><![CDATA[$0
+<xf:if is="$xf.options.tl_groups_enableBadge">
+	<xf:option name="tlg_show_badge" value="1"
+			   label="{{ phrase('tlg_show_peoples_group_badges_with_their_messages') }}"
+			   checked="{$xf.visitor.Option.tlg_show_badge}" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="account_privacy" modification_key="tlg_account_privacy" description="Add groups privacy" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[arg-label="{{ phrase('view_your_identities') }}" />]]></find>
+    <replace><![CDATA[$0
+<xf:macro name="privacy_option"
+		  arg-user="{$xf.visitor}"
+		  arg-name="tlg_allow_view_groups"
+		  arg-label="{{ phrase('tlg_view_your_groups') }}" />]]></replace>
+  </modification>
+  <modification type="admin" template="forum_delete" modification_key="tl_groups_modifyFormDelete" description="Modify form delete action" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/\'forums\//i]]></find>
+    <replace><![CDATA[($node.node_type_id == 'tl_groups_Forum' ? 'groups/forums/' : 'forums/') . ']]></replace>
+  </modification>
+  <modification type="admin" template="forum_edit" modification_key="tl_groups_modifyButtonLink" description="Modify top button link" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[{{ link('forums/delete', $node) }}]]></find>
+    <replace><![CDATA[{{ $node.node_type_id == 'tl_groups_Forum' ? link('group-forums/delete', $node) : link('forums/delete', $node) }}]]></replace>
+  </modification>
+  <modification type="admin" template="forum_edit" modification_key="tl_groups_modifyFormAction" description="Modify form action" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/\'forums\//i]]></find>
+    <replace><![CDATA[($node.node_type_id == 'tl_groups_Forum' ? 'groups/forums/' : 'forums/') . ']]></replace>
+  </modification>
+  <modification type="public" template="forum_view" modification_key="tlGroups_addForumViewActions" description="Add edit, delete actions" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#<xf:if is="\$canInlineMod">([\n|\t|\r]*)<xf:macro template="inline_mod_macros" name="button"[^>]+>([\n|\t|\r]*)</xf:if>#s]]></find>
+    <replace><![CDATA[$0
+<xf:macro template="tlg_forum_view"
+		  name="forum_mod_actions" arg-forum="{$forum}" arg-group="{$group}" />]]></replace>
+  </modification>
+  <modification type="admin" template="helper_criteria" modification_key="tlg_helper_criteria" description="Inject our user criteria" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:user:after_content]-->]]></find>
+    <replace><![CDATA[$0
+<xf:macro template="tlg_helper_criteria_macros" name="user_criteria"
+		  arg-criteria="{$criteria}" arg-data="{$data}"/>]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="tlg_member_view" description="Add groups tabs heading" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tabs:after_recent_content]-->]]></find>
+    <replace><![CDATA[$0
+<xf:if is="$user.canTLGViewGroups()">
+	<xf:macro template="tlg_group_macros" name="member_view_tabs_heading"
+			  arg-user="{$user}"/>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="member_view" modification_key="tlg_member_view1" description="Render tab groups content" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:tab_panes:after_recent_content]-->]]></find>
+    <replace><![CDATA[$0
+<xf:if is="$user.canTLGViewGroups()">
+	<xf:macro template="tlg_group_macros" name="member_view_tabs_content"
+			  arg-user="{$user}"/>
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="message_macros" modification_key="tlg_message_macros" description="Display group badge" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$extras.custom_fields">]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.tl_groups_enableBadge">
+	<xf:callback class="Truonglv\Groups\Callback"
+			 method="renderBadge">{$user.tlg_badge_group_id}</xf:callback>
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="admin" template="node_list" modification_key="tlg_node_list" description="Make node list tabs" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="filter_macros" name="quick_filter" arg-key="nodes" arg-class="block-outer-opposite" />]]></find>
+    <replace><![CDATA[$0
+<xf:if is="$tlgNodeListTabs">
+	<xf:macro name="tlg_group_node_macros::node_list_tabs" 
+			  arg-selected="{$tlgSelectedTab}" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="admin" template="node_list" modification_key="tlg_node_list2" description="Display group name if available" execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#<span class="dataList-hint" dir="auto">.+?</span>#si]]></find>
+    <replace><![CDATA[<xf:if is="{$tlgNodeTypeHints.{$node.node_id}}">
+	<span class="dataList-hint" dir="auto">{$tlgNodeTypeHints.{$node.node_id}}</span>
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="thread_move" modification_key="tlg_thread_move" description="Render simple node list if $tlgNodes available." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[#<xf:foreach loop="\$nodeTree\.getFlattened\(0\)" value="\$treeEntry">.+?<\/xf:foreach>#si]]></find>
+    <replace><![CDATA[<xf:if is="$tlgNodes">
+	<xf:foreach loop="$tlgNodes" value="$_node">
+		<xf:option value="{$_node.node_id}"
+				   disabled="{{ $_node.node_type_id == 'Forum' ? '' : 'disabled' }}">{$_node.title}</xf:option>
+	</xf:foreach>
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="xfmg_album_view" modification_key="SG_addMediaButton" description="Add media button in near undelete" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$album.canUndelete() AND $album.album_state == 'deleted'">]]></find>
+    <replace><![CDATA[<xf:if is="$album.canAddMedia() 
+		   && $socialGroups_showAddMediaButton is not empty">
+	<xf:button href="{{ link('media/albums/add', $album) }}" class="button--cta" icon="add">
+		{{ phrase('xfmg_add_media') }}
+	</xf:button>
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="xfmg_album_view" modification_key="tlg_xfmg_album_view1" description="Remove breadcrumbs with option" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:breadcrumb source="$album.getBreadcrumbs(false)" />]]></find>
+    <replace><![CDATA[<xf:if is="$tlgNoBreadcrumbs is empty">
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="xfmg_media_list_macros" modification_key="tlGroups_addDataRemaintotal" description="Add data remain total to media item." execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA["{{ $mediaItem.User.username ?: $mediaItem.username }}"]]></find>
+    <replace><![CDATA[<xf:set var="$remainTotal">{$xf.app.data('Truonglv\Groups:Album').getRemainTotal()}</xf:set>
+<xf:if is="$remainTotal is not empty">
+	$0 data-remain-total="{$remainTotal}"
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="xfmg_media_view" modification_key="tlg_xfmg_media_view1" description="Remove breadcrumb with option" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:breadcrumb source="$mediaItem.getBreadcrumbs(false)" />]]></find>
+    <replace><![CDATA[<xf:if is="$tlgNoBreadcrumbs is empty">
+$0
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="auction_thread_prefix_id" edit_format="textbox" data_type="integer">
+    <default_value>0</default_value>
+    <relation group_id="auction" display_order="1"/>
+  </option>
+  <option option_id="fs_auction_applicable_forum" edit_format="textbox" data_type="integer">
+    <default_value>1</default_value>
+    <relation group_id="auction" display_order="1"/>
+  </option>
+  <option option_id="fs_auction_bumping_allowed" edit_format="textbox" data_type="integer">
+    <default_value>2</default_value>
+    <relation group_id="auction" display_order="1"/>
+  </option>
+  <option option_id="fs_auction_dropDown_list_limit" edit_format="textbox" data_type="integer">
+    <default_value>5</default_value>
+    <relation group_id="auction" display_order="1"/>
+  </option>
+  <option option_id="fs_auction_per_page" edit_format="textbox" data_type="integer">
+    <default_value>9</default_value>
+    <relation group_id="auction" display_order="1"/>
+  </option>
+</options>

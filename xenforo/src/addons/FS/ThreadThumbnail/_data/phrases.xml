@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_add_thumbnail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread Thumbnail]]></phrase>
+  <phrase title="fs_thread_image_format_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please check Required Image Format......!]]></phrase>
+  <phrase title="fs_thread_image_process_error" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Image Cannot be processed]]></phrase>
+  <phrase title="fs_thread_thumbnail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thread Thumbnail]]></phrase>
+  <phrase title="fs_thread_thumbnail_explain" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Minimum image required dimension {width} * {height}  px]]></phrase>
+  <phrase title="fs_thread_thumbnail_img" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thumbnail Image]]></phrase>
+  <phrase title="fs_thread_thumbnail_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Required]]></phrase>
+  <phrase title="fs_thread_thumbnail_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thumbnail Title]]></phrase>
+  <phrase title="fs_thumbnail_image_demension_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Image dimension required in {width} * {height} ]]></phrase>
+  <phrase title="fs_thumbnail_image_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thumbnail Image Required]]></phrase>
+  <phrase title="fs_thumbnail_title_required" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Thumbnail Title required]]></phrase>
+  <phrase title="option.thumbnailImageDimensions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Minimum Thumbnail Image dimensions]]></phrase>
+  <phrase title="option_explain.thumbnailImageDimensions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Default 100 × 100 px]]></phrase>
+  <phrase title="option_group.fs_thread_thumbnail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Thread Thumbnail]]></phrase>
+  <phrase title="option_group_description.fs_thread_thumbnail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="permission.fs_thread_thumbnail_group_fs_thread_thumbnail" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Allow Thread Thumbnail]]></phrase>
+  <phrase title="permission_interface.fs_Thread_Thumbnail_perms" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Thread Thumbnail]]></phrase>
+</phrases>

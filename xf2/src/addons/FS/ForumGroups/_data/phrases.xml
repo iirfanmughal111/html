@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="fs_forum_gorups_delete_existing_image" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Delete existing image]]></phrase>
+  <phrase title="fs_forum_group_avatar" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Group Avatar]]></phrase>
+  <phrase title="fs_forum_group_cover" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Group Cover]]></phrase>
+  <phrase title="fs_forum_group_moderator_list" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Moderator List]]></phrase>
+  <phrase title="fs_forum_groups" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Forum Groups]]></phrase>
+  <phrase title="fs_forum_groups_add_chatroom" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Chatroom]]></phrase>
+  <phrase title="fs_forum_groups_add_sub_forum" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Group]]></phrase>
+  <phrase title="fs_forum_groups_moderator" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Moderator]]></phrase>
+  <phrase title="fs_forum_groups_room_chat" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Chat Room]]></phrase>
+  <phrase title="fs_forum_groups_side_community" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Sub Communties]]></phrase>
+  <phrase title="fs_forum_groups_upload_avatar" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload avatar]]></phrase>
+  <phrase title="fs_forum_groups_upload_cover" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Upload cover]]></phrase>
+  <phrase title="fs_group_please_upload_image_at_least_xy_pixels" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Please upload an image that have at least {width}x{height} pixels.]]></phrase>
+  <phrase title="nav.forumGroupsAddSubForum" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Sub Forum]]></phrase>
+  <phrase title="nav.fs_forumGroups_index" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Forum Groups]]></phrase>
+  <phrase title="option.fs_forum_gorups_per_row" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Groups display on per row]]></phrase>
+  <phrase title="option.fs_forum_groups_applicable_forum" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Parent Forum Id]]></phrase>
+  <phrase title="option_explain.fs_forum_gorups_per_row" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[how many groups display on per "Row" you can set from here..!]]></phrase>
+  <phrase title="option_explain.fs_forum_groups_applicable_forum" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Forum Id]]></phrase>
+  <phrase title="option_group.fs_forum_groups" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Forum Groups]]></phrase>
+  <phrase title="option_group_description.fs_forum_groups" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Forum Groups]]></phrase>
+  <phrase title="permission.fs_forum_group_permission_add" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Add Forum Group]]></phrase>
+  <phrase title="permission_interface.fs_forum_group_permission" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[FS Forum Group Permission]]></phrase>
+  <phrase title="style_prop.fs_avatarBorderRadius" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Group avatar border radius]]></phrase>
+  <phrase title="style_prop_desc.fs_avatarBorderRadius" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+  <phrase title="style_prop_group.fs_forum_gorups" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[FS] Forum Groups]]></phrase>
+  <phrase title="style_prop_group_desc.fs_forum_gorups" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+</phrases>

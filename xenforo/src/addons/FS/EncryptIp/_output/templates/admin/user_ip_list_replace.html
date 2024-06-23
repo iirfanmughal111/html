@@ -1,0 +1,20 @@
+<xf:foreach loop="$ips" value="$ip">
+	<xf:set var="$decIp" value="{{ $xf.app.em.getRepository('XF:Ip')->getDecrytedIp($ip.ip) }}" />
+	<xf:datarow rowclass="dataList-row--noHover">
+		<xf:cell href="{{ link_type('public', 'misc/ip-info', null, {'ip': $ip.ip}) }}" target="_blank">{$ip.ip}</xf:cell>
+		<xf:cell>{$ip.total|number}</xf:cell>
+		<xf:cell><xf:date time="{$ip.first_date}" /></xf:cell>
+		<xf:cell><xf:date time="{$ip.last_date}" /></xf:cell>
+		<xf:action href="{{ link('users/ip-users', null, {'ip': $ip.ip}) }}" overlay="true">{{ phrase('more_users') }}</xf:action>
+		<xf:popup label="&#8226;&#8226;&#8226;" class="dataList-cell--separated">
+			<div class="menu" data-menu="menu" aria-hidden="true" data-menu-builder="dataList">
+				<div class="menu-content">
+					<h3 class="menu-header">{{ phrase('more_options') }}</h3>
+					<a href="{{ link('banning/ips/add', null, {'ip': $ip.ip}) }}" class="menu-linkRow" data-xf-click="overlay">{{ phrase('ban') }}</a>
+					<a href="{{ link('banning/discouraged-ips/add', null, {'ip': $ip.ip}) }}" class="menu-linkRow" data-xf-click="overlay">{{ phrase('discourage') }}</a>
+					<div class="js-menuBuilderTarget u-showMediumBlock"></div>
+				</div>
+			</div>
+		</xf:popup>
+	</xf:datarow>
+</xf:foreach>

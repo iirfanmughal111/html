@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="thread" field_name="tl_groups_news_feed_handler_class">Truonglv\Groups\NewsFeed\Group\Thread</field>
+  <field content_type="tl_group" field_name="alert_handler_class">Truonglv\Groups\Alert\Group</field>
+  <field content_type="tl_group" field_name="approval_queue_handler_class">Truonglv\Groups\ApprovalQueue\Group</field>
+  <field content_type="tl_group" field_name="attachment_handler_class">Truonglv\Groups\Attachment\Group</field>
+  <field content_type="tl_group" field_name="entity">Truonglv\Groups:Group</field>
+  <field content_type="tl_group" field_name="inline_mod_handler_class">Truonglv\Groups\InlineMod\Group</field>
+  <field content_type="tl_group" field_name="phrase">tlg_content_type_group</field>
+  <field content_type="tl_group" field_name="phrase_plural">tlg_content_type_groups</field>
+  <field content_type="tl_group" field_name="report_handler_class">Truonglv\Groups\Report\Group</field>
+  <field content_type="tl_group" field_name="search_handler_class">Truonglv\Groups\Search\Data\Group</field>
+  <field content_type="tl_group" field_name="sitemap_handler_class">Truonglv\Groups\Sitemap\Group</field>
+  <field content_type="tl_group" field_name="tag_handler_class">Truonglv\Groups\Tag\Group</field>
+  <field content_type="tl_group_category" field_name="entity">Truonglv\Groups:Category</field>
+  <field content_type="tl_group_category" field_name="phrase">tlg_content_type_category</field>
+  <field content_type="tl_group_category" field_name="phrase_plural">tlg_content_type_categories</field>
+  <field content_type="tl_group_category" field_name="sitemap_handler_class">Truonglv\Groups\Sitemap\Category</field>
+  <field content_type="tl_group_comment" field_name="alert_handler_class">Truonglv\Groups\Alert\Comment</field>
+  <field content_type="tl_group_comment" field_name="attachment_handler_class">Truonglv\Groups\Attachment\Comment</field>
+  <field content_type="tl_group_comment" field_name="entity">Truonglv\Groups:Comment</field>
+  <field content_type="tl_group_comment" field_name="inline_mod_handler_class">Truonglv\Groups\InlineMod\Comment</field>
+  <field content_type="tl_group_comment" field_name="phrase">tlg_content_type_comment</field>
+  <field content_type="tl_group_comment" field_name="phrase_plural">tlg_content_type_comments</field>
+  <field content_type="tl_group_comment" field_name="reaction_handler_class">Truonglv\Groups\Reaction\Comment</field>
+  <field content_type="tl_group_comment" field_name="report_handler_class">Truonglv\Groups\Report\Comment</field>
+  <field content_type="tl_group_comment" field_name="search_handler_class">Truonglv\Groups\Search\Data\Comment</field>
+  <field content_type="tl_group_event" field_name="alert_handler_class">Truonglv\Groups\Alert\Event</field>
+  <field content_type="tl_group_event" field_name="entity">Truonglv\Groups:Event</field>
+  <field content_type="tl_group_event" field_name="phrase">tlg_content_type_event</field>
+  <field content_type="tl_group_event" field_name="phrase_plural">tlg_content_type_events</field>
+  <field content_type="tl_group_event" field_name="search_handler_class">Truonglv\Groups\Search\Data\Event</field>
+  <field content_type="tl_group_event" field_name="sitemap_handler_class">Truonglv\Groups\Sitemap\Event</field>
+  <field content_type="tl_group_event" field_name="tag_handler_class">Truonglv\Groups\Tag\Event</field>
+  <field content_type="tl_group_event" field_name="tl_groups_news_feed_handler_class">Truonglv\Groups\NewsFeed\Group\Event</field>
+  <field content_type="tl_group_member" field_name="alert_handler_class">Truonglv\Groups\Alert\Member</field>
+  <field content_type="tl_group_member" field_name="entity">Truonglv\Groups:Member</field>
+  <field content_type="tl_group_member" field_name="inline_mod_handler_class">Truonglv\Groups\InlineMod\Member</field>
+  <field content_type="tl_group_member" field_name="phrase">[tl] Social Groups: Member</field>
+  <field content_type="tl_group_member" field_name="phrase_plural">[tl] Social Groups: Members</field>
+  <field content_type="tl_group_post" field_name="phrase">tlg_content_type_post</field>
+  <field content_type="tl_group_post" field_name="phrase_plural">tlg_content_type_posts</field>
+  <field content_type="tl_group_post" field_name="sitemap_handler_class">Truonglv\Groups\Sitemap\Post</field>
+  <field content_type="tl_group_resource" field_name="attachment_handler_class">Truonglv\Groups\Attachment\ResourceItem</field>
+  <field content_type="tl_group_resource" field_name="entity">Truonglv\Groups:ResourceItem</field>
+  <field content_type="tl_group_resource" field_name="phrase">[tl] Social Groups: Resource</field>
+  <field content_type="tl_group_resource" field_name="search_handler_class">Truonglv\Groups\Search\Data\ResourceItem</field>
+  <field content_type="tl_group_resource" field_name="sitemap_handler_class">Truonglv\Groups\Sitemap\ResourceItem</field>
+  <field content_type="xfmg_album" field_name="tl_groups_news_feed_handler_class">Truonglv\Groups\NewsFeed\Group\XFMG\Album</field>
+</content_type_fields>

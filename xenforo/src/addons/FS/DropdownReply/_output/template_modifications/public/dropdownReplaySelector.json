@@ -1,0 +1,9 @@
+{
+    "template": "quick_reply_macros",
+    "description": "dropdownReplaySelector",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:editor name=\"message\".*?\\/>/si",
+    "replace": "<xf:if is=\"$thread\">\t\n<xf:if is=\"$thread.getPostCount() < 1\">\n\t\t<xf:selectrow\n        name=\"message\"\n        label=\"{{ phrase('dropdownReply') }}\"\n\n      >\n       \n        <xf:foreach loop=\"$thread.dropdwon_options\" value=\"$val\">\n\t\t\t        <xf:if is=\"$val\">\n\n          <xf:option\n            value=\"{$val}\"\n           \n            >{{snippet($val, 41, {'stripBbCode': true})}} </xf:option\n          >\n\t\t\t\t\t\t      </xf:if>\n\n        </xf:foreach>\n      </xf:selectrow>\n\t\n\t\t<xf:else />\n\t\t$0\n\t\t\n</xf:if>\n\t\n<xf:else />\n\t\t$0\n\t</xf:if>"
+}

@@ -1,0 +1,26 @@
+{
+    "fs_answer_count.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6",
+        "hash": "ec57dd7429d24a3ace1e3e347a0ac0c3"
+    },
+    "fs_question_count.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6",
+        "hash": "4ed2593a85a8e7c284dfbe554ef8e633"
+    },
+    "widget_def.questionAnswerStatistics.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6",
+        "hash": "82afc0b4e26f60d79d2608408906fb5f"
+    },
+    "widget_def_desc.questionAnswerStatistics.txt": {
+        "global_cache": false,
+        "version_id": 1000600,
+        "version_string": "1.0.6",
+        "hash": "0d851cd92199688a24820a38c2266fdb"
+    }
+}

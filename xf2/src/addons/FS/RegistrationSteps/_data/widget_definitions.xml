@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="FeaturedProvider" definition_class="FS\RegistrationSteps\Widget\FeaturedProvider"/>
+  <widget_definition definition_id="TopUsers" definition_class="FS\RegistrationSteps\Widget\TopUsers"/>
+  <widget_definition definition_id="UserStates" definition_class="FS\RegistrationSteps\Widget\UserStates"/>
+</widget_definitions>

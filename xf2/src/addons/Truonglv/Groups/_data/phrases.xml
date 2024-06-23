@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="admin_navigation.tlGroups_batchUpdate" version_id="3000300" version_string="3.0.3"><![CDATA[Batch update groups]]></phrase>
+  <phrase title="admin_navigation.tlGroups_options" version_id="2010300" version_string="2.1.3"><![CDATA[Group options]]></phrase>
+  <phrase title="admin_navigation.tl_groups" version_id="1000070" version_string="1.0.0"><![CDATA[[tl] Social Groups]]></phrase>
+  <phrase title="admin_navigation.tl_groups_categories" version_id="1000070" version_string="1.0.0"><![CDATA[Categories]]></phrase>
+  <phrase title="admin_navigation.tl_groups_customFields" version_id="2010300" version_string="2.1.3"><![CDATA[Custom fields]]></phrase>
+  <phrase title="admin_navigation.tl_groups_memberRoles" version_id="2010300" version_string="2.1.3"><![CDATA[Member roles]]></phrase>
+  <phrase title="admin_navigation.tl_groups_rebuildCaches" version_id="2010300" version_string="2.1.3"><![CDATA[Rebuild caches]]></phrase>
+  <phrase title="admin_navigation.tlg_groups" version_id="3030200" version_string="3.3.2"><![CDATA[Groups]]></phrase>
+  <phrase title="admin_permission.manageGroups" version_id="3030200" version_string="3.3.2"><![CDATA[[tl] Social Groups: Manage groups and data]]></phrase>
+  <phrase title="api_scope.tl_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Full access to management groups]]></phrase>
+  <phrase title="api_scope.tl_groups_delete" version_id="2000000" version_string="2.0.0"><![CDATA[Delete group and group data]]></phrase>
+  <phrase title="api_scope.tl_groups_read" version_id="2000000" version_string="2.0.0"><![CDATA[Read group data]]></phrase>
+  <phrase title="api_scope.tl_groups_write" version_id="2000000" version_string="2.0.0"><![CDATA[Post new group, new post, new comment, new event]]></phrase>
+  <phrase title="cron_entry.tl_groups_everyTwoHours" version_id="1000070" version_string="1.0.0"><![CDATA[[tl] Social Groups: Clean up data (every 2 hours)]]></phrase>
+  <phrase title="cron_entry.tlg_autoHourly" version_id="2020300" version_string="2.2.3"><![CDATA[[tl] Social Groups: Run hourly]]></phrase>
+  <phrase title="cron_entry.tlg_runMinutely" version_id="2010700" version_string="2.1.7"><![CDATA[[tl] Social Groups: Update group metadata (every minutes)]]></phrase>
+  <phrase title="custom_bb_code_desc.group" version_id="3010300" version_string="3.1.3"><![CDATA[Display specific group information.]]></phrase>
+  <phrase title="custom_bb_code_example.group" version_id="3010300" version_string="3.1.3"><![CDATA[[GROUP]123[/GROUP]]]></phrase>
+  <phrase title="custom_bb_code_output.group" version_id="3010300" version_string="3.1.3"><![CDATA[The information of group would appear here.]]></phrase>
+  <phrase title="custom_bb_code_title.group" version_id="2010700" version_string="2.1.7"><![CDATA[Embed groups]]></phrase>
+  <phrase title="nav.tl_groups" version_id="1000070" version_string="1.0.0"><![CDATA[Groups]]></phrase>
+  <phrase title="nav.tl_groups_joined" version_id="3000400" version_string="3.0.4"><![CDATA[Your groups]]></phrase>
+  <phrase title="nav.tl_groups_search" version_id="1000070" version_string="1.0.0"><![CDATA[Search groups]]></phrase>
+  <phrase title="nav.tl_groups_upcomingEvents" version_id="1000600" version_string="1.0.6"><![CDATA[Upcoming events]]></phrase>
+  <phrase title="nav.tlg_feeds" version_id="2020000" version_string="2.2.0"><![CDATA[Your feeds]]></phrase>
+  <phrase title="option.tl_groups_archiveNodeId" version_id="1000070" version_string="1.0.0"><![CDATA[Archive group forums to node]]></phrase>
+  <phrase title="option.tl_groups_autoWatchForums" version_id="3020500" version_string="3.2.5"><![CDATA[Automatically watch group forums?]]></phrase>
+  <phrase title="option.tl_groups_cleanUpInactiveXDays" version_id="3000100" version_string="3.0.1"><![CDATA[Clean up groups if inactive]]></phrase>
+  <phrase title="option.tl_groups_commentsPerPage" version_id="2000500" version_string="2.0.5"><![CDATA[Comments per page]]></phrase>
+  <phrase title="option.tl_groups_defaultEventView" version_id="3010900" version_string="3.1.9"><![CDATA[Default event view]]></phrase>
+  <phrase title="option.tl_groups_defaultLocationType" version_id="2020500" version_string="2.2.5"><![CDATA[Default location type]]></phrase>
+  <phrase title="option.tl_groups_defaultSort" version_id="2000800" version_string="2.0.8"><![CDATA[Default groups list sort]]></phrase>
+  <phrase title="option.tl_groups_defaultTab" version_id="1000701" version_string="1.0.7 1"><![CDATA[Default tab when viewing group]]></phrase>
+  <phrase title="option.tl_groups_deleteForumAction" version_id="1000170" version_string="1.0.1"><![CDATA[Delete forum action]]></phrase>
+  <phrase title="option.tl_groups_enableBadge" version_id="3020100" version_string="3.2.1"><![CDATA[Enable group badge?]]></phrase>
+  <phrase title="option.tl_groups_enableEvents" version_id="2030000" version_string="2.3.0"><![CDATA[Enable events?]]></phrase>
+  <phrase title="option.tl_groups_enableForums" version_id="2000000" version_string="2.0.0"><![CDATA[Enable forums inside group]]></phrase>
+  <phrase title="option.tl_groups_enableLanguage" version_id="2020300" version_string="2.2.3"><![CDATA[Enable group language]]></phrase>
+  <phrase title="option.tl_groups_enableMedia" version_id="2000000" version_string="2.0.0"><![CDATA[Integrate with XenForo Media Gallery]]></phrase>
+  <phrase title="option.tl_groups_enableResources" version_id="2030000" version_string="2.3.0"><![CDATA[Enable resources?]]></phrase>
+  <phrase title="option.tl_groups_eventReminder" version_id="2020300" version_string="2.2.3"><![CDATA[Send notifications to users when event start before]]></phrase>
+  <phrase title="option.tl_groups_eventTimeZone" version_id="3000900" version_string="3.0.9"><![CDATA[Event time zone]]></phrase>
+  <phrase title="option.tl_groups_eventTimeZoneEdit" version_id="3000900" version_string="3.0.9"><![CDATA[Allow user edit time zone?]]></phrase>
+  <phrase title="option.tl_groups_eventsPerPage" version_id="2000500" version_string="2.0.5"><![CDATA[Events per page]]></phrase>
+  <phrase title="option.tl_groups_googleMapKey" version_id="2000500" version_string="2.0.5"><![CDATA[Google map API key]]></phrase>
+  <phrase title="option.tl_groups_groupNodeCache" version_id="2010900" version_string="2.1.9"><![CDATA[Group node cache]]></phrase>
+  <phrase title="option.tl_groups_groupsPerPage" version_id="2000500" version_string="2.0.5"><![CDATA[Groups per page]]></phrase>
+  <phrase title="option.tl_groups_lazyLoadCover" version_id="3000400" version_string="3.0.4"><![CDATA[Lazy load group cover?]]></phrase>
+  <phrase title="option.tl_groups_maxMembersInCard" version_id="1000300" version_string="1.0.3"><![CDATA[Maximum members in group card]]></phrase>
+  <phrase title="option.tl_groups_maxNodes" version_id="1000070" version_string="1.0.0"><![CDATA[Maximum forums group can add]]></phrase>
+  <phrase title="option.tl_groups_maxPostStickies" version_id="2000400" version_string="2.0.4"><![CDATA[Maximum post stickies]]></phrase>
+  <phrase title="option.tl_groups_newsFeedPreviewMaxLength" version_id="1000600" version_string="1.0.6"><![CDATA[Maximum news feed content preview length]]></phrase>
+  <phrase title="option.tl_groups_nodeTitleFormat" version_id="1000500" version_string="1.0.5"><![CDATA[Group Forums Title Format]]></phrase>
+  <phrase title="option.tl_groups_resourceIconSize" version_id="3000700" version_string="3.0.7"><![CDATA[Resource icon size]]></phrase>
+  <phrase title="option.tl_groups_resourceRequiredFiles" version_id="3020400" version_string="3.2.4"><![CDATA[Required file in resources?]]></phrase>
+  <phrase title="option.tl_groups_resourcesPerPage" version_id="2020900" version_string="2.2.9"><![CDATA[Resources per page]]></phrase>
+  <phrase title="option.tl_groups_watchAlertActiveOnly" version_id="1000200" version_string="1.0.2"><![CDATA[Only send watched content alerts/emails to members active in last:]]></phrase>
+  <phrase title="option_explain.tl_groups_archiveNodeId" version_id="1000070" version_string="1.0.0"><![CDATA[Archive all group forums to node.]]></phrase>
+  <phrase title="option_explain.tl_groups_autoWatchForums" version_id="3020500" version_string="3.2.5"><![CDATA[If enabled, new members will automatically watch group forums. This option also effects when new forum was added into group, all existing members will watch that forum.]]></phrase>
+  <phrase title="option_explain.tl_groups_cleanUpInactiveXDays" version_id="3000100" version_string="3.0.1"><![CDATA[System will soft-delete any groups which does not have new data (inactive) in X days. Set to 0 to disable this feature.]]></phrase>
+  <phrase title="option_explain.tl_groups_commentsPerPage" version_id="1000070" version_string="1.0.0"><![CDATA[The number of comments show in page.]]></phrase>
+  <phrase title="option_explain.tl_groups_defaultEventView" version_id="3010900" version_string="3.1.9"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_defaultLocationType" version_id="2020500" version_string="2.2.5"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_defaultSort" version_id="2000800" version_string="2.0.8"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_defaultTab" version_id="1000701" version_string="1.0.7 1"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_deleteForumAction" version_id="1000170" version_string="1.0.1"><![CDATA[The action apply when delete an group forum.]]></phrase>
+  <phrase title="option_explain.tl_groups_enableBadge" version_id="3020100" version_string="3.2.1"><![CDATA[If enabled, group members can choose group to display as badge. Badge will show in some places. Eg: User info in the thread view, user tooltip,...]]></phrase>
+  <phrase title="option_explain.tl_groups_enableEvents" version_id="2030000" version_string="2.3.0"><![CDATA[By unchecked, events will be disabled completely.]]></phrase>
+  <phrase title="option_explain.tl_groups_enableForums" version_id="2000000" version_string="2.0.0"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_enableLanguage" version_id="2020300" version_string="2.2.3"><![CDATA[If enabled, users can choose the primary language in groups.]]></phrase>
+  <phrase title="option_explain.tl_groups_enableMedia" version_id="2000000" version_string="2.0.0"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_enableResources" version_id="2030000" version_string="2.3.0"><![CDATA[By unchecked, resources will be disabled completely.]]></phrase>
+  <phrase title="option_explain.tl_groups_eventReminder" version_id="2020300" version_string="2.2.3"><![CDATA[Set to 0 to disable this feature.]]></phrase>
+  <phrase title="option_explain.tl_groups_eventTimeZone" version_id="3000900" version_string="3.0.9"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_eventTimeZoneEdit" version_id="3000900" version_string="3.0.9"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_eventsPerPage" version_id="1000070" version_string="1.0.0"><![CDATA[The number of events show in page. Note: This option only effected to event layout list.]]></phrase>
+  <phrase title="option_explain.tl_groups_googleMapKey" version_id="1000170" version_string="1.0.1"><![CDATA[You may get one from: <a href="https://console.developers.google.com" target="_blank">https://console.developers.google.com</a>]]></phrase>
+  <phrase title="option_explain.tl_groups_groupNodeCache" version_id="2010900" version_string="2.1.9"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_groupsPerPage" version_id="1000070" version_string="1.0.0"><![CDATA[The number of groups show in page.]]></phrase>
+  <phrase title="option_explain.tl_groups_lazyLoadCover" version_id="3000400" version_string="3.0.4"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_maxMembersInCard" version_id="1000300" version_string="1.0.3"><![CDATA[The number of members show in group card. Set to 0 disable it.]]></phrase>
+  <phrase title="option_explain.tl_groups_maxNodes" version_id="1000070" version_string="1.0.0"><![CDATA[The number of forums which an group can owned.]]></phrase>
+  <phrase title="option_explain.tl_groups_maxPostStickies" version_id="2000400" version_string="2.0.4"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_newsFeedPreviewMaxLength" version_id="1000600" version_string="1.0.6"><![CDATA[The maximum content length show in news feed card. Set to 0 unlimited.]]></phrase>
+  <phrase title="option_explain.tl_groups_nodeTitleFormat" version_id="2000400" version_string="2.0.4"><![CDATA[You may use <b>{title}</b> for present forum title and <b>{name}</b> for present group name.]]></phrase>
+  <phrase title="option_explain.tl_groups_resourceIconSize" version_id="3000700" version_string="3.0.7"><![CDATA[]]></phrase>
+  <phrase title="option_explain.tl_groups_resourceRequiredFiles" version_id="3020400" version_string="3.2.4"><![CDATA[If enabled, users must be upload files into resource while creating, editing resource.]]></phrase>
+  <phrase title="option_explain.tl_groups_resourcesPerPage" version_id="2020900" version_string="2.2.9"><![CDATA[The number of resources display in page.]]></phrase>
+  <phrase title="option_explain.tl_groups_watchAlertActiveOnly" version_id="1000200" version_string="1.0.2"><![CDATA[If enabled, watched content alerts and emails will only be sent to members that have visited groups within the specified number of days. This can improve performance on large or very active installations.]]></phrase>
+  <phrase title="option_group.tl_groups" version_id="1000070" version_string="1.0.0"><![CDATA[[tl] Social Groups]]></phrase>
+  <phrase title="option_group_description.tl_groups" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="permission.tl_groups_addClosedGroups" version_id="3020400" version_string="3.2.4"><![CDATA[Add closed groups]]></phrase>
+  <phrase title="permission.tl_groups_addSecretGroups" version_id="1000070" version_string="1.0.0"><![CDATA[Add secret groups]]></phrase>
+  <phrase title="permission.tl_groups_approveUnapprove" version_id="1000070" version_string="1.0.0"><![CDATA[Approve/unapprove groups]]></phrase>
+  <phrase title="permission.tl_groups_bypassModerated" version_id="1000400" version_string="1.0.4"><![CDATA[Bypass moderation check]]></phrase>
+  <phrase title="permission.tl_groups_bypassViewPrivacy" version_id="1000400" version_string="1.0.4"><![CDATA[Bypass group view privacy]]></phrase>
+  <phrase title="permission.tl_groups_deleteCommentAny" version_id="2000000" version_string="2.0.0"><![CDATA[Delete any comments]]></phrase>
+  <phrase title="permission.tl_groups_deleteGroupAny" version_id="2000000" version_string="2.0.0"><![CDATA[Delete any groups]]></phrase>
+  <phrase title="permission.tl_groups_editCommentAny" version_id="2000000" version_string="2.0.0"><![CDATA[Edit any comments]]></phrase>
+  <phrase title="permission.tl_groups_editGroupAny" version_id="2000000" version_string="2.0.0"><![CDATA[Edit any groups]]></phrase>
+  <phrase title="permission.tl_groups_featureUnfeature" version_id="1000070" version_string="1.0.0"><![CDATA[Feature/unfeature groups]]></phrase>
+  <phrase title="permission.tl_groups_inlineMod" version_id="1000070" version_string="1.0.0"><![CDATA[Use inline moderation on groups]]></phrase>
+  <phrase title="permission.tl_groups_linkAlbums" version_id="3000400" version_string="3.0.4"><![CDATA[Add existing albums to group]]></phrase>
+  <phrase title="permission.tl_groups_manageMembers" version_id="3010000" version_string="3.1.0"><![CDATA[Manage group members]]></phrase>
+  <phrase title="permission.tl_groups_maxCreateGroups" version_id="2010600" version_string="2.1.6"><![CDATA[Maximum groups can create]]></phrase>
+  <phrase title="permission.tl_groups_maxInvitesPerDay" version_id="2010600" version_string="2.1.6"><![CDATA[Maximum invitations in 24 hours]]></phrase>
+  <phrase title="permission.tl_groups_maxJoinGroups" version_id="3010300" version_string="3.1.3"><![CDATA[Max groups can join]]></phrase>
+  <phrase title="permission.tl_groups_merge" version_id="2010301" version_string="2.1.3"><![CDATA[Merge groups]]></phrase>
+  <phrase title="permission.tl_groups_move" version_id="1000200" version_string="1.0.2"><![CDATA[Move groups]]></phrase>
+  <phrase title="permission.tl_groups_reassign" version_id="2000000" version_string="2.0.0"><![CDATA[Reassign groups]]></phrase>
+  <phrase title="permission.tl_groups_undelete" version_id="1000070" version_string="1.0.0"><![CDATA[Undelete groups]]></phrase>
+  <phrase title="permission.tl_groups_view" version_id="1000070" version_string="1.0.0"><![CDATA[View groups]]></phrase>
+  <phrase title="permission.tl_groups_viewDeleted" version_id="1000070" version_string="1.0.0"><![CDATA[View deleted groups]]></phrase>
+  <phrase title="permission.tl_groups_viewModerated" version_id="1000070" version_string="1.0.0"><![CDATA[View moderated groups]]></phrase>
+  <phrase title="permission_interface.tl_groups_general" version_id="1000070" version_string="1.0.0"><![CDATA[[tl] Social Groups: General Permissions]]></phrase>
+  <phrase title="permission_interface.tl_groups_moderator" version_id="1000070" version_string="1.0.0"><![CDATA[[tl] Social Groups: Moderator Permissions]]></phrase>
+  <phrase title="style_prop.tlg_avatarBorderRadius" version_id="2010600" version_string="2.1.6"><![CDATA[Group avatar border radius]]></phrase>
+  <phrase title="style_prop_desc.tlg_avatarBorderRadius" version_id="2010600" version_string="2.1.6"><![CDATA[]]></phrase>
+  <phrase title="style_prop_group.tl_Groups" version_id="2010600" version_string="2.1.6"><![CDATA[[tl] Social Groups]]></phrase>
+  <phrase title="style_prop_group_desc.tl_Groups" version_id="2000700" version_string="2.0.7"><![CDATA[]]></phrase>
+  <phrase title="tlg_about" version_id="2000000" version_string="2.0.0" global_cache="1"><![CDATA[About]]></phrase>
+  <phrase title="tlg_above_group_description" version_id="2000000" version_string="2.0.0"><![CDATA[Above group description]]></phrase>
+  <phrase title="tlg_add_album" version_id="2000000" version_string="2.0.0"><![CDATA[Add album]]></phrase>
+  <phrase title="tlg_add_album_type" version_id="3000400" version_string="3.0.4"><![CDATA[Add album type]]></phrase>
+  <phrase title="tlg_add_event" version_id="2000400" version_string="2.0.4"><![CDATA[Add new event]]></phrase>
+  <phrase title="tlg_add_forum" version_id="2000000" version_string="2.0.0"><![CDATA[Add forum]]></phrase>
+  <phrase title="tlg_add_group_in" version_id="2000000" version_string="2.0.0"><![CDATA[Add group in]]></phrase>
+  <phrase title="tlg_add_new_albums" version_id="3000400" version_string="3.0.4"><![CDATA[Add new albums]]></phrase>
+  <phrase title="tlg_add_new_category" version_id="2010700" version_string="2.1.7"><![CDATA[Add new category]]></phrase>
+  <phrase title="tlg_add_new_group" version_id="2010700" version_string="2.1.7"><![CDATA[Add new group]]></phrase>
+  <phrase title="tlg_add_new_member_role" version_id="2010401" version_string="2.1.4 RC1"><![CDATA[Add new member role]]></phrase>
+  <phrase title="tlg_add_resource" version_id="2020900" version_string="2.2.9"><![CDATA[Add resource]]></phrase>
+  <phrase title="tlg_add_resources" version_id="2030000" version_string="2.3.0"><![CDATA[Add resources]]></phrase>
+  <phrase title="tlg_address" version_id="2020500" version_string="2.2.5"><![CDATA[Location]]></phrase>
+  <phrase title="tlg_admin_of_groups" version_id="3000400" version_string="3.0.4"><![CDATA[Admin of groups]]></phrase>
+  <phrase title="tlg_album_x_has_been_linked_to_other_group_y" version_id="3010700" version_string="3.1.7"><![CDATA[Album {title} has been linked to other group {name}]]></phrase>
+  <phrase title="tlg_all_categories" version_id="2000000" version_string="2.0.0"><![CDATA[All categories]]></phrase>
+  <phrase title="tlg_all_groups_in_destination_category" version_id="3010700" version_string="3.1.7"><![CDATA[All groups in same destination category.]]></phrase>
+  <phrase title="tlg_all_requests_must_be_approved_by_a_moderator" version_id="2000000" version_string="2.0.0"><![CDATA[All requests to join must be approved by a moderator.]]></phrase>
+  <phrase title="tlg_all_requests_must_be_approved_by_a_moderator_explain" version_id="2000000" version_string="2.0.0"><![CDATA[If checked, all requests to join this group must be approved by a moderator.]]></phrase>
+  <phrase title="tlg_all_threads_belong_to_this_forum_will_be_deleted" version_id="2000000" version_string="2.0.0"><![CDATA[All threads belong to this forum will be deleted.]]></phrase>
+  <phrase title="tlg_allow_create_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Allow create groups]]></phrase>
+  <phrase title="tlg_allow_create_groups_explain" version_id="2000000" version_string="2.0.0"><![CDATA[All users belong to this user groups can create new groups in this category.]]></phrase>
+  <phrase title="tlg_allow_viewable_user_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Allow viewable user groups]]></phrase>
+  <phrase title="tlg_allow_viewable_user_groups_explain" version_id="2000000" version_string="2.0.0"><![CDATA[All users belong to this user groups can view category and it's content.]]></phrase>
+  <phrase title="tlg_alphabetically" version_id="2000000" version_string="2.0.0"><![CDATA[Alphabetically]]></phrase>
+  <phrase title="tlg_also_allow_guest_posting_into_news_feed" version_id="2000800" version_string="2.0.8"><![CDATA[Also allow guest posting into news feed]]></phrase>
+  <phrase title="tlg_always_moderation_new_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Always moderation new groups published this category.]]></phrase>
+  <phrase title="tlg_an_invitation_was_sent_to_the_user_x" version_id="2000000" version_string="2.0.0"><![CDATA[An invitation was sent to the user {name}.]]></phrase>
+  <phrase title="tlg_applicable_categories" version_id="2000000" version_string="2.0.0"><![CDATA[Applicable categories]]></phrase>
+  <phrase title="tlg_approve_group" version_id="2000000" version_string="2.0.0"><![CDATA[Approve group]]></phrase>
+  <phrase title="tlg_approve_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Approve groups]]></phrase>
+  <phrase title="tlg_approve_member" version_id="2000000" version_string="2.0.0"><![CDATA[Approve member]]></phrase>
+  <phrase title="tlg_approve_members" version_id="2000000" version_string="2.0.0"><![CDATA[Approve members]]></phrase>
+  <phrase title="tlg_approve_unapprove_posts" version_id="2020000" version_string="2.2.0"><![CDATA[Approve/unapprove posts]]></phrase>
+  <phrase title="tlg_attach_this_categories_children_to_its_parent" version_id="2000000" version_string="2.0.0"><![CDATA[Attach this categories children to it's parent]]></phrase>
+  <phrase title="tlg_ban_member" version_id="2000000" version_string="2.0.0"><![CDATA[Ban member]]></phrase>
+  <phrase title="tlg_ban_members" version_id="2000000" version_string="2.0.0"><![CDATA[Ban members]]></phrase>
+  <phrase title="tlg_batch_update_groups" version_id="3000300" version_string="3.0.3"><![CDATA[Batch update groups]]></phrase>
+  <phrase title="tlg_begin_date" version_id="2010700" version_string="2.1.7"><![CDATA[Begin date]]></phrase>
+  <phrase title="tlg_below_group_description" version_id="2000000" version_string="2.0.0"><![CDATA[Below group description]]></phrase>
+  <phrase title="tlg_cache_ttl" version_id="2000500" version_string="2.0.5"><![CDATA[Cache TTL]]></phrase>
+  <phrase title="tlg_can_use_inline_moderation" version_id="3000700" version_string="3.0.7"><![CDATA[Can use inline moderation]]></phrase>
+  <phrase title="tlg_cancel_event" version_id="3000900" version_string="3.0.9"><![CDATA[Cancel event]]></phrase>
+  <phrase title="tlg_cancel_requesting" version_id="2000000" version_string="2.0.0"><![CDATA[Cancel requesting]]></phrase>
+  <phrase title="tlg_categories" version_id="2000000" version_string="2.0.0"><![CDATA[Categories]]></phrase>
+  <phrase title="tlg_category" version_id="2000000" version_string="2.0.0"><![CDATA[Category]]></phrase>
+  <phrase title="tlg_category_limit" version_id="2000500" version_string="2.0.5"><![CDATA[Category limit]]></phrase>
+  <phrase title="tlg_change_group_privacy" version_id="3000300" version_string="3.0.3"><![CDATA[Change group privacy]]></phrase>
+  <phrase title="tlg_change_member_role_to" version_id="2000000" version_string="2.0.0"><![CDATA[Change member role to]]></phrase>
+  <phrase title="tlg_check_all" version_id="2000000" version_string="2.0.0"><![CDATA[Check All]]></phrase>
+  <phrase title="tlg_choose_date" version_id="2000000" version_string="2.0.0"><![CDATA[Choose Date]]></phrase>
+  <phrase title="tlg_comment" version_id="2020900" version_string="2.2.9"><![CDATA[Comment]]></phrase>
+  <phrase title="tlg_comment_in_events" version_id="2000000" version_string="2.0.0"><![CDATA[Comment in events]]></phrase>
+  <phrase title="tlg_comment_in_group_x" version_id="2000000" version_string="2.0.0"><![CDATA[Comment in the group {name}]]></phrase>
+  <phrase title="tlg_comments" version_id="2000000" version_string="2.0.0"><![CDATA[Comments]]></phrase>
+  <phrase title="tlg_confirm_deletion_of_x_groups" version_id="3000300" version_string="3.0.3"><![CDATA[Confirm deletion of {total} groups]]></phrase>
+  <phrase title="tlg_content_type_categories" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Categories]]></phrase>
+  <phrase title="tlg_content_type_category" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Category]]></phrase>
+  <phrase title="tlg_content_type_comment" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Comment]]></phrase>
+  <phrase title="tlg_content_type_comments" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Comments]]></phrase>
+  <phrase title="tlg_content_type_event" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Event]]></phrase>
+  <phrase title="tlg_content_type_events" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Events]]></phrase>
+  <phrase title="tlg_content_type_group" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Group]]></phrase>
+  <phrase title="tlg_content_type_groups" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Groups]]></phrase>
+  <phrase title="tlg_content_type_post" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Post]]></phrase>
+  <phrase title="tlg_content_type_posts" version_id="2000000" version_string="2.0.0"><![CDATA[[tl] Social Groups: Posts]]></phrase>
+  <phrase title="tlg_copy_group_bbcode" version_id="2000000" version_string="2.0.0"><![CDATA[Copy group BBCode]]></phrase>
+  <phrase title="tlg_create_albums" version_id="3000300" version_string="3.0.3"><![CDATA[Create albums]]></phrase>
+  <phrase title="tlg_creator" version_id="2000000" version_string="2.0.0"><![CDATA[Creator]]></phrase>
+  <phrase title="tlg_criteria_group_options" version_id="3000100" version_string="3.0.1"><![CDATA[[tl] Social Groups: Options]]></phrase>
+  <phrase title="tlg_custom_fields" version_id="2000000" version_string="2.0.0"><![CDATA[Custom Fields]]></phrase>
+  <phrase title="tlg_custom_template" version_id="2000500" version_string="2.0.5"><![CDATA[Custom template]]></phrase>
+  <phrase title="tlg_custom_template_explain" version_id="2000000" version_string="2.0.0"><![CDATA[The template used to render widget content.]]></phrase>
+  <phrase title="tlg_database_does_not_contains_addon_data" version_id="2000000" version_string="2.0.0"><![CDATA[Database does not contains add-on data.]]></phrase>
+  <phrase title="tlg_default_group_tab" version_id="3020500" version_string="3.2.5"><![CDATA[Default group tab]]></phrase>
+  <phrase title="tlg_default_group_tab_explain" version_id="3020500" version_string="3.2.5"><![CDATA[The tab content will be loaded when viewing group.]]></phrase>
+  <phrase title="tlg_default_privacy" version_id="3000700" version_string="3.0.7"><![CDATA[Default privacy]]></phrase>
+  <phrase title="tlg_delete_albums_any" version_id="3000300" version_string="3.0.3"><![CDATA[Delete albums any]]></phrase>
+  <phrase title="tlg_delete_any_comment" version_id="2000000" version_string="2.0.0"><![CDATA[Delete any comment]]></phrase>
+  <phrase title="tlg_delete_any_event" version_id="2000000" version_string="2.0.0"><![CDATA[Delete any event]]></phrase>
+  <phrase title="tlg_delete_comments" version_id="2000000" version_string="2.0.0"><![CDATA[Delete comments]]></phrase>
+  <phrase title="tlg_delete_confirmation" version_id="2000000" version_string="2.0.0"><![CDATA[Delete Confirmation]]></phrase>
+  <phrase title="tlg_delete_event" version_id="2000000" version_string="2.0.0"><![CDATA[Delete event]]></phrase>
+  <phrase title="tlg_delete_existing_image" version_id="2000000" version_string="2.0.0"><![CDATA[Delete existing image]]></phrase>
+  <phrase title="tlg_delete_forum" version_id="2000400" version_string="2.0.4"><![CDATA[Delete forum]]></phrase>
+  <phrase title="tlg_delete_group" version_id="2000000" version_string="2.0.0"><![CDATA[Delete group]]></phrase>
+  <phrase title="tlg_delete_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Delete groups]]></phrase>
+  <phrase title="tlg_delete_own_comment" version_id="2000000" version_string="2.0.0"><![CDATA[Delete own comment]]></phrase>
+  <phrase title="tlg_delete_own_event" version_id="2000000" version_string="2.0.0"><![CDATA[Delete own event]]></phrase>
+  <phrase title="tlg_delete_posts_any" version_id="2020000" version_string="2.2.0"><![CDATA[Delete posts any]]></phrase>
+  <phrase title="tlg_delete_resources_any" version_id="2030000" version_string="2.3.0"><![CDATA[Delete resources any]]></phrase>
+  <phrase title="tlg_delete_this_categories_children" version_id="2000000" version_string="2.0.0"><![CDATA[Delete this categories children]]></phrase>
+  <phrase title="tlg_delete_threads_any" version_id="2020000" version_string="2.2.0"><![CDATA[Delete threads any]]></phrase>
+  <phrase title="tlg_description_contains_invalid_characters" version_id="2000000" version_string="2.0.0"><![CDATA[Description contains invalid characters.]]></phrase>
+  <phrase title="tlg_destination_category" version_id="2000000" version_string="2.0.0"><![CDATA[Destination Category]]></phrase>
+  <phrase title="tlg_destination_group" version_id="2010301" version_string="2.1.3"><![CDATA[Destination group]]></phrase>
+  <phrase title="tlg_disabled_navigation_tabs" version_id="3020500" version_string="3.2.5"><![CDATA[Disabled navigation tabs]]></phrase>
+  <phrase title="tlg_disabled_navigation_tabs_explain" version_id="3020500" version_string="3.2.5"><![CDATA[Tabs will not show in group navigation, it does not disable tabs completely.]]></phrase>
+  <phrase title="tlg_discussion_count" version_id="2000500" version_string="2.0.5"><![CDATA[Discussion count]]></phrase>
+  <phrase title="tlg_discussions" version_id="2000000" version_string="2.0.0" global_cache="1"><![CDATA[Discussions]]></phrase>
+  <phrase title="tlg_do_not_have_permission_to_add_closed_group" version_id="3020400" version_string="3.2.4"><![CDATA[You did not have permission to add a closed group.]]></phrase>
+  <phrase title="tlg_do_not_have_permission_to_add_secret_group" version_id="2010200" version_string="2.1.2"><![CDATA[You did not have permission to add a secret group.]]></phrase>
+  <phrase title="tlg_do_not_send_notifications" version_id="2010301" version_string="2.1.3"><![CDATA[Do not send notifications]]></phrase>
+  <phrase title="tlg_download_logs" version_id="2020900" version_string="2.2.9"><![CDATA[Download logs]]></phrase>
+  <phrase title="tlg_drag_to_reposition_cover" version_id="2000500" version_string="2.0.5"><![CDATA[Drag to reposition cover]]></phrase>
+  <phrase title="tlg_edit_albums_any" version_id="3000300" version_string="3.0.3"><![CDATA[Edit albums any]]></phrase>
+  <phrase title="tlg_edit_any_comment" version_id="2000000" version_string="2.0.0"><![CDATA[Edit any comment]]></phrase>
+  <phrase title="tlg_edit_any_event" version_id="2000000" version_string="2.0.0"><![CDATA[Edit any event]]></phrase>
+  <phrase title="tlg_edit_category" version_id="3000700" version_string="3.0.7"><![CDATA[Edit category]]></phrase>
+  <phrase title="tlg_edit_comment" version_id="2000000" version_string="2.0.0"><![CDATA[Edit Comment]]></phrase>
+  <phrase title="tlg_edit_event" version_id="2000000" version_string="2.0.0"><![CDATA[Edit event]]></phrase>
+  <phrase title="tlg_edit_forum" version_id="2000000" version_string="2.0.0"><![CDATA[Edit forum]]></phrase>
+  <phrase title="tlg_edit_group" version_id="2000000" version_string="2.0.0"><![CDATA[Edit group]]></phrase>
+  <phrase title="tlg_edit_member_role" version_id="2010401" version_string="2.1.4 RC1"><![CDATA[Edit member role]]></phrase>
+  <phrase title="tlg_edit_own_comment" version_id="2000000" version_string="2.0.0"><![CDATA[Edit own comment]]></phrase>
+  <phrase title="tlg_edit_own_event" version_id="2000000" version_string="2.0.0"><![CDATA[Edit own event]]></phrase>
+  <phrase title="tlg_edit_post" version_id="2000000" version_string="2.0.0"><![CDATA[Edit post]]></phrase>
+  <phrase title="tlg_edit_posts_any" version_id="2020000" version_string="2.2.0"><![CDATA[Edit posts any]]></phrase>
+  <phrase title="tlg_edit_resource" version_id="2020900" version_string="2.2.9"><![CDATA[Edit resource]]></phrase>
+  <phrase title="tlg_edit_resources_any" version_id="2030000" version_string="2.3.0"><![CDATA[Edit resources any]]></phrase>
+  <phrase title="tlg_edit_threads_any" version_id="2020000" version_string="2.2.0"><![CDATA[Edit threads any]]></phrase>
+  <phrase title="tlg_end_date" version_id="2010700" version_string="2.1.7"><![CDATA[End date]]></phrase>
+  <phrase title="tlg_enter_album_title_to_find" version_id="3030200" version_string="3.3.2"><![CDATA[Enter album title to find]]></phrase>
+  <phrase title="tlg_enter_your_best_group_description_to_help_people_understand_your_group" version_id="2010700" version_string="2.1.7"><![CDATA[Enter your best group description to help other people understand your group.]]></phrase>
+  <phrase title="tlg_event" version_id="2000000" version_string="2.0.0"><![CDATA[Event]]></phrase>
+  <phrase title="tlg_event_begin" version_id="2000400" version_string="2.0.4"><![CDATA[Event begin]]></phrase>
+  <phrase title="tlg_event_button_day" version_id="3010900" version_string="3.1.9"><![CDATA[Day]]></phrase>
+  <phrase title="tlg_event_button_list" version_id="3010900" version_string="3.1.9"><![CDATA[List]]></phrase>
+  <phrase title="tlg_event_button_month" version_id="3010900" version_string="3.1.9"><![CDATA[Month]]></phrase>
+  <phrase title="tlg_event_button_today" version_id="3010900" version_string="3.1.9"><![CDATA[Today]]></phrase>
+  <phrase title="tlg_event_button_week" version_id="3010900" version_string="3.1.9"><![CDATA[Week]]></phrase>
+  <phrase title="tlg_event_calendar" version_id="3010900" version_string="3.1.9"><![CDATA[Calendar]]></phrase>
+  <phrase title="tlg_event_closed" version_id="2000400" version_string="2.0.4"><![CDATA[Closed]]></phrase>
+  <phrase title="tlg_event_closing_in" version_id="2010700" version_string="2.1.7"><![CDATA[Event closing in]]></phrase>
+  <phrase title="tlg_event_comments" version_id="2000400" version_string="2.0.4"><![CDATA[Comments]]></phrase>
+  <phrase title="tlg_event_count" version_id="2000500" version_string="2.0.5"><![CDATA[Event count]]></phrase>
+  <phrase title="tlg_event_count_between" version_id="3000300" version_string="3.0.3"><![CDATA[Event count between]]></phrase>
+  <phrase title="tlg_event_date" version_id="2000000" version_string="2.0.0"><![CDATA[Event Date]]></phrase>
+  <phrase title="tlg_event_end" version_id="2000400" version_string="2.0.4"><![CDATA[Event end]]></phrase>
+  <phrase title="tlg_event_guests" version_id="2000400" version_string="2.0.4"><![CDATA[Guests]]></phrase>
+  <phrase title="tlg_event_information" version_id="2000400" version_string="2.0.4"><![CDATA[Information]]></phrase>
+  <phrase title="tlg_event_intend_going" version_id="2010700" version_string="2.1.7" global_cache="1"><![CDATA[Participating]]></phrase>
+  <phrase title="tlg_event_intend_maybe" version_id="2000400" version_string="2.0.4" global_cache="1"><![CDATA[Maybe]]></phrase>
+  <phrase title="tlg_event_intend_not_going" version_id="2010700" version_string="2.1.7" global_cache="1"><![CDATA[Not participating]]></phrase>
+  <phrase title="tlg_event_intend_to" version_id="2010700" version_string="2.1.7"><![CDATA[Intend to be]]></phrase>
+  <phrase title="tlg_event_intention" version_id="2000400" version_string="2.0.4"><![CDATA[Intention]]></phrase>
+  <phrase title="tlg_event_is_cancelled" version_id="3000900" version_string="3.0.9"><![CDATA[Event is cancelled]]></phrase>
+  <phrase title="tlg_event_list_compact" version_id="3010900" version_string="3.1.9"><![CDATA[List compact]]></phrase>
+  <phrase title="tlg_event_maximum_attendees" version_id="3010300" version_string="3.1.3"><![CDATA[Maximum attendees]]></phrase>
+  <phrase title="tlg_event_maximum_attendees_explain" version_id="3010300" version_string="3.1.3"><![CDATA[Set to 0 to unlimitted.]]></phrase>
+  <phrase title="tlg_event_name" version_id="2010700" version_string="2.1.7"><![CDATA[Event name]]></phrase>
+  <phrase title="tlg_event_ongoing" version_id="2000400" version_string="2.0.4"><![CDATA[Ongoing]]></phrase>
+  <phrase title="tlg_event_opening_after" version_id="2010700" version_string="2.1.7"><![CDATA[Event opening in]]></phrase>
+  <phrase title="tlg_event_options" version_id="2000800" version_string="2.0.8"><![CDATA[Event options]]></phrase>
+  <phrase title="tlg_event_reached_maximum_attendees_its_allowed" version_id="3010300" version_string="3.1.3"><![CDATA[The event reached maximum attendees its allowed]]></phrase>
+  <phrase title="tlg_event_remaining_x_slots" version_id="3010300" version_string="3.1.3"><![CDATA[Remaining {count} slot(s)]]></phrase>
+  <phrase title="tlg_event_time_zone_using_system" version_id="3010000" version_string="3.1.0"><![CDATA[Using system time zone]]></phrase>
+  <phrase title="tlg_event_time_zone_using_visitor" version_id="3010000" version_string="3.1.0"><![CDATA[Using visitor time zone]]></phrase>
+  <phrase title="tlg_event_unwatch" version_id="2000400" version_string="2.0.4"><![CDATA[Unwatch]]></phrase>
+  <phrase title="tlg_event_upcoming" version_id="2000400" version_string="2.0.4"><![CDATA[Upcoming]]></phrase>
+  <phrase title="tlg_event_watch" version_id="2000400" version_string="2.0.4"><![CDATA[Watch]]></phrase>
+  <phrase title="tlg_event_x_attendees" version_id="3010300" version_string="3.1.3"><![CDATA[{count} attendee(s)]]></phrase>
+  <phrase title="tlg_event_x_in_the_group_y_has_been_started" version_id="2020300" version_string="2.2.3"><![CDATA[Event {event} in the group {group} has been started.]]></phrase>
+  <phrase title="tlg_event_x_in_the_group_y_will_start_in_z_hours" version_id="2020300" version_string="2.2.3"><![CDATA[Event {event} in the group {group} will start in {hour} hour(s).]]></phrase>
+  <phrase title="tlg_event_x_in_the_group_y_will_start_in_z_minutes" version_id="2020300" version_string="2.2.3"><![CDATA[Event {event} in the group {group} will start in {minute} minute(s).]]></phrase>
+  <phrase title="tlg_events" version_id="2000000" version_string="2.0.0" global_cache="1"><![CDATA[Events]]></phrase>
+  <phrase title="tlg_expires_after" version_id="2000000" version_string="2.0.0"><![CDATA[Expires after]]></phrase>
+  <phrase title="tlg_extra_information" version_id="2000000" version_string="2.0.0"><![CDATA[Extra information]]></phrase>
+  <phrase title="tlg_feature_group" version_id="2000000" version_string="2.0.0"><![CDATA[Feature group]]></phrase>
+  <phrase title="tlg_forum_discussion_options" version_id="2000800" version_string="2.0.8"><![CDATA[Forum discussion options]]></phrase>
+  <phrase title="tlg_forums" version_id="2000000" version_string="2.0.0"><![CDATA[Forums]]></phrase>
+  <phrase title="tlg_group" version_id="2000000" version_string="2.0.0"><![CDATA[Group]]></phrase>
+  <phrase title="tlg_group_album_x_must_be_public_view_privacy" version_id="3030200" version_string="3.3.2"><![CDATA[The album '{title}' must be public view privacy.]]></phrase>
+  <phrase title="tlg_group_name" version_id="3000300" version_string="3.0.3"><![CDATA[Group name]]></phrase>
+  <phrase title="tlg_group_nodes" version_id="3030200" version_string="3.3.2"><![CDATA[Group nodes]]></phrase>
+  <phrase title="tlg_group_url" version_id="2000000" version_string="2.0.0"><![CDATA[Group URL]]></phrase>
+  <phrase title="tlg_group_x" version_id="2000000" version_string="2.0.0"><![CDATA[Group {name}]]></phrase>
+  <phrase title="tlg_group_x_published_in_category_y" version_id="2000000" version_string="2.0.0"><![CDATA[Group <a href={groupLink}>{groupName}</a> published in the category <a href={categoryLink}>{categoryTitle}</a>]]></phrase>
+  <phrase title="tlg_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Groups]]></phrase>
+  <phrase title="tlg_groups_of_user_x" version_id="3000400" version_string="3.0.4"><![CDATA[Groups of user {name}]]></phrase>
+  <phrase title="tlg_groups_you_manage" version_id="2000000" version_string="2.0.0"><![CDATA[Groups You Manage]]></phrase>
+  <phrase title="tlg_hard_delete_forum_and_data_itself" version_id="2000000" version_string="2.0.0"><![CDATA[Hard delete forum and forum data itself.]]></phrase>
+  <phrase title="tlg_host" version_id="2000000" version_string="2.0.0"><![CDATA[Host]]></phrase>
+  <phrase title="tlg_hour" version_id="2000000" version_string="2.0.0"><![CDATA[Hour]]></phrase>
+  <phrase title="tlg_in_group" version_id="2000400" version_string="2.0.4"><![CDATA[In group]]></phrase>
+  <phrase title="tlg_inherit_from_options" version_id="3020500" version_string="3.2.5"><![CDATA[Inherit from options]]></phrase>
+  <phrase title="tlg_inline_moderation_delete_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Inline moderation delete groups]]></phrase>
+  <phrase title="tlg_inline_moderation_merge_groups" version_id="2010301" version_string="2.1.3"><![CDATA[Inline moderation merge groups]]></phrase>
+  <phrase title="tlg_inline_moderation_move_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Inline moderation move groups]]></phrase>
+  <phrase title="tlg_invite_member" version_id="2010700" version_string="2.1.7"><![CDATA[Invite member]]></phrase>
+  <phrase title="tlg_invite_other_people_to_join_this_group" version_id="2000000" version_string="2.0.0"><![CDATA[Invite other people to join this group.]]></phrase>
+  <phrase title="tlg_invite_people" version_id="2010401" version_string="2.1.4 RC1"><![CDATA[Invite people]]></phrase>
+  <phrase title="tlg_invited_date" version_id="3030100" version_string="3.3.1"><![CDATA[Invited date]]></phrase>
+  <phrase title="tlg_invited_groups" version_id="2020900" version_string="2.2.9"><![CDATA[Invited groups]]></phrase>
+  <phrase title="tlg_items_per_row" version_id="2000000" version_string="2.0.0"><![CDATA[Items Per Row]]></phrase>
+  <phrase title="tlg_join_date" version_id="2000200" version_string="2.0.2"><![CDATA[Join date]]></phrase>
+  <phrase title="tlg_join_group" version_id="2000300" version_string="2.0.3"><![CDATA[Join group]]></phrase>
+  <phrase title="tlg_joined_any_groups" version_id="3000100" version_string="3.0.1"><![CDATA[Joined any groups]]></phrase>
+  <phrase title="tlg_language_code_explain" version_id="2010700" version_string="2.1.7"><![CDATA[The primary language used in your group.]]></phrase>
+  <phrase title="tlg_last_activity" version_id="2000500" version_string="2.0.5"><![CDATA[Last activity]]></phrase>
+  <phrase title="tlg_last_viewed_group" version_id="2000200" version_string="2.0.2"><![CDATA[Last viewed group]]></phrase>
+  <phrase title="tlg_leave_and_reassign_for" version_id="2000000" version_string="2.0.0"><![CDATA[Leave and reassign group for]]></phrase>
+  <phrase title="tlg_leave_group" version_id="2000700" version_string="2.0.7"><![CDATA[Leave group]]></phrase>
+  <phrase title="tlg_lift_ban_member" version_id="3010000" version_string="3.1.0"><![CDATA[Lift ban]]></phrase>
+  <phrase title="tlg_link_existing_albums" version_id="3000400" version_string="3.0.4"><![CDATA[Link existing albums]]></phrase>
+  <phrase title="tlg_location_type" version_id="2020500" version_string="2.2.5"><![CDATA[Location type]]></phrase>
+  <phrase title="tlg_location_type_real" version_id="2020500" version_string="2.2.5"><![CDATA[Real location]]></phrase>
+  <phrase title="tlg_location_type_virtual" version_id="2020500" version_string="2.2.5"><![CDATA[Virtual location]]></phrase>
+  <phrase title="tlg_lock_unlock_threads" version_id="2020000" version_string="2.2.0"><![CDATA[Lock/unlock threads]]></phrase>
+  <phrase title="tlg_make_admin" version_id="2000000" version_string="2.0.0"><![CDATA[Make Admin]]></phrase>
+  <phrase title="tlg_make_moderator" version_id="2000000" version_string="2.0.0"><![CDATA[Make Moderator]]></phrase>
+  <phrase title="tlg_manage_any_groups" version_id="3000100" version_string="3.0.1"><![CDATA[Manage any groups]]></phrase>
+  <phrase title="tlg_manage_avatar" version_id="2000000" version_string="2.0.0"><![CDATA[Manage avatar]]></phrase>
+  <phrase title="tlg_manage_comments" version_id="2000400" version_string="2.0.4"><![CDATA[Manage comments]]></phrase>
+  <phrase title="tlg_manage_events" version_id="2000400" version_string="2.0.4"><![CDATA[Manage events]]></phrase>
+  <phrase title="tlg_manage_forums" version_id="2000400" version_string="2.0.4"><![CDATA[Manage forums]]></phrase>
+  <phrase title="tlg_manage_group" version_id="2000400" version_string="2.0.4"><![CDATA[Manage group]]></phrase>
+  <phrase title="tlg_manage_media" version_id="3000300" version_string="3.0.3"><![CDATA[Manage media]]></phrase>
+  <phrase title="tlg_manage_members" version_id="2000400" version_string="2.0.4"><![CDATA[Manage members]]></phrase>
+  <phrase title="tlg_manage_threads" version_id="2020000" version_string="2.2.0"><![CDATA[Manage threads]]></phrase>
+  <phrase title="tlg_manager_cover" version_id="2000000" version_string="2.0.0"><![CDATA[Manage cover]]></phrase>
+  <phrase title="tlg_matched_groups" version_id="3000300" version_string="3.0.3"><![CDATA[Matched groups]]></phrase>
+  <phrase title="tlg_maximum_members_show_in_card" version_id="2000000" version_string="2.0.0"><![CDATA[Maximum members show in card]]></phrase>
+  <phrase title="tlg_member_count" version_id="2000500" version_string="2.0.5"><![CDATA[Member count]]></phrase>
+  <phrase title="tlg_member_count_between" version_id="3000300" version_string="3.0.3"><![CDATA[Member count between]]></phrase>
+  <phrase title="tlg_member_of_specific_groups" version_id="3000100" version_string="3.0.1"><![CDATA[Member of specific groups]]></phrase>
+  <phrase title="tlg_member_of_specific_groups_explain" version_id="3000100" version_string="3.0.1"><![CDATA[Each group ID must be separate by comma (,). And only valid members are applied by this rule.]]></phrase>
+  <phrase title="tlg_member_role" version_id="2000200" version_string="2.0.2"><![CDATA[Member role]]></phrase>
+  <phrase title="tlg_member_role_has_been_taken" version_id="2000000" version_string="2.0.0"><![CDATA[Member role has been taken.]]></phrase>
+  <phrase title="tlg_member_role_id" version_id="2000000" version_string="2.0.0"><![CDATA[Member Role ID]]></phrase>
+  <phrase title="tlg_member_role_id_explain" version_id="2000000" version_string="2.0.0"><![CDATA[This is the unique identifier for this field. It cannot be changed once set. Only accept there characters: a-z A-Z 0-9]]></phrase>
+  <phrase title="tlg_member_roles" version_id="2000000" version_string="2.0.0"><![CDATA[Member Roles]]></phrase>
+  <phrase title="tlg_member_state_banned" version_id="2000000" version_string="2.0.0"><![CDATA[Banned]]></phrase>
+  <phrase title="tlg_member_state_invited" version_id="2000000" version_string="2.0.0"><![CDATA[Invited]]></phrase>
+  <phrase title="tlg_member_state_moderated" version_id="2000000" version_string="2.0.0"><![CDATA[Moderated]]></phrase>
+  <phrase title="tlg_member_state_valid" version_id="2020700" version_string="2.2.7"><![CDATA[Joined]]></phrase>
+  <phrase title="tlg_member_status" version_id="2000200" version_string="2.0.2"><![CDATA[Member status]]></phrase>
+  <phrase title="tlg_members" version_id="2000000" version_string="2.0.0" global_cache="1"><![CDATA[Members]]></phrase>
+  <phrase title="tlg_members_waiting_approval" version_id="2000000" version_string="2.0.0"><![CDATA[Members waiting approval]]></phrase>
+  <phrase title="tlg_merge_group" version_id="2010301" version_string="2.1.3"><![CDATA[Merge group]]></phrase>
+  <phrase title="tlg_merge_groups" version_id="2010301" version_string="2.1.3"><![CDATA[Merge groups]]></phrase>
+  <phrase title="tlg_merge_with_group" version_id="2010301" version_string="2.1.3"><![CDATA[Merge with group]]></phrase>
+  <phrase title="tlg_minimum_required_tags" version_id="2000000" version_string="2.0.0"><![CDATA[Minimum required tags]]></phrase>
+  <phrase title="tlg_minimum_required_tags_explain" version_id="2000000" version_string="2.0.0"><![CDATA[This will require users to provide at least this many tags when creating a group.]]></phrase>
+  <phrase title="tlg_move_group" version_id="2000000" version_string="2.0.0"><![CDATA[Move group]]></phrase>
+  <phrase title="tlg_move_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Move groups]]></phrase>
+  <phrase title="tlg_move_to_category" version_id="3000300" version_string="3.0.3"><![CDATA[Move to category]]></phrase>
+  <phrase title="tlg_name" version_id="2000000" version_string="2.0.0"><![CDATA[Name]]></phrase>
+  <phrase title="tlg_name_your_group" version_id="2010700" version_string="2.1.7"><![CDATA[Name your group]]></phrase>
+  <phrase title="tlg_new_event_in_group_email_html" version_id="3010000" version_string="3.1.0"><![CDATA[<p>{creator} posted a new event to a group you are watching at {board}.</p>]]></phrase>
+  <phrase title="tlg_new_event_in_group_email_html_footer" version_id="3010000" version_string="3.1.0"><![CDATA[<p class="minorText">Please do not reply to this message. You must visit the forum to reply.</p>
+
+<p class="minorText">This message was sent to you because you opted to watch the group {group} at {board} with email notification of new events.</p>
+
+<p class="minorText">If you no longer wish to receive these emails, you may <a href="{disable_this_link}">disable emails from this thread</a> or <a href="{disable_all_link}">disable all emails</a>.</p>]]></phrase>
+  <phrase title="tlg_new_event_x_was_created_in_the_group_y" version_id="3010000" version_string="3.1.0"><![CDATA[New event {title} was created in the group {group}]]></phrase>
+  <phrase title="tlg_new_post_in_group_email_html" version_id="3010000" version_string="3.1.0"><![CDATA[<p>{creator} posted a new post to a group you are watching at {board}.</p>]]></phrase>
+  <phrase title="tlg_new_post_in_group_email_html_footer" version_id="3010000" version_string="3.1.0"><![CDATA[<p class="minorText">Please do not reply to this message. You must visit the forum to reply.</p>
+
+<p class="minorText">This message was sent to you because you opted to watch the group {group} at {board} with email notification of new posts.</p>
+
+<p class="minorText">If you no longer wish to receive these emails, you may <a href="{disable_this_link}">disable emails from this thread</a> or <a href="{disable_all_link}">disable all emails</a>.</p>]]></phrase>
+  <phrase title="tlg_new_post_was_created_in_the_group_y" version_id="3010000" version_string="3.1.0"><![CDATA[New post was created in the group {title}]]></phrase>
+  <phrase title="tlg_news_feed" version_id="3000100" version_string="3.0.1" global_cache="1"><![CDATA[News feed]]></phrase>
+  <phrase title="tlg_no_groups_have_been_created_yet" version_id="2000000" version_string="2.0.0"><![CDATA[There are no groups have been created yet.]]></phrase>
+  <phrase title="tlg_no_limitation" version_id="2000000" version_string="2.0.0"><![CDATA[No limitation]]></phrase>
+  <phrase title="tlg_no_thanks" version_id="2010700" version_string="2.1.7"><![CDATA[No thanks]]></phrase>
+  <phrase title="tlg_notifications" version_id="2000000" version_string="2.0.0"><![CDATA[Notifications]]></phrase>
+  <phrase title="tlg_ongoing_events" version_id="3010600" version_string="3.1.6"><![CDATA[Ongoing events]]></phrase>
+  <phrase title="tlg_only_include_groups_in_selected_categories" version_id="2000000" version_string="2.0.0"><![CDATA[Only include groups in selected categories]]></phrase>
+  <phrase title="tlg_only_show_events_from_groups_visitor_joined" version_id="3010600" version_string="3.1.6"><![CDATA[Only show events from groups visitor joined]]></phrase>
+  <phrase title="tlg_own_tab" version_id="2000000" version_string="2.0.0"><![CDATA[Own tab]]></phrase>
+  <phrase title="tlg_owner" version_id="2000000" version_string="2.0.0"><![CDATA[Owner]]></phrase>
+  <phrase title="tlg_parent_category" version_id="3000700" version_string="3.0.7"><![CDATA[Parent category]]></phrase>
+  <phrase title="tlg_please_confirm_want_to_delete_category_and_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Please confirm that you want to delete the following category and all groups belong to this]]></phrase>
+  <phrase title="tlg_please_confirm_want_to_delete_member_role" version_id="2000000" version_string="2.0.0"><![CDATA[Please confirm that you want to delete the following member role]]></phrase>
+  <phrase title="tlg_please_enter_valid_begin_date" version_id="3020900" version_string="3.2.9"><![CDATA[Please enter a valid begin date]]></phrase>
+  <phrase title="tlg_please_enter_valid_date" version_id="2000000" version_string="2.0.0"><![CDATA[Please enter a valid date]]></phrase>
+  <phrase title="tlg_please_enter_valid_end_date" version_id="3020900" version_string="3.2.9"><![CDATA[Please enter a valid end date]]></phrase>
+  <phrase title="tlg_please_enter_valid_event_name" version_id="3020900" version_string="3.2.9"><![CDATA[Please enter a valid event name]]></phrase>
+  <phrase title="tlg_please_enter_valid_group_name" version_id="3020900" version_string="3.2.9"><![CDATA[Please enter a valid group name]]></phrase>
+  <phrase title="tlg_please_enter_valid_group_short_description" version_id="3020900" version_string="3.2.9"><![CDATA[Please enter a valid group short description]]></phrase>
+  <phrase title="tlg_please_enter_valid_member_role_id" version_id="2000000" version_string="2.0.0"><![CDATA[Please enter a valid member role ID.]]></phrase>
+  <phrase title="tlg_please_select_a_valid_member_role" version_id="2000000" version_string="2.0.0"><![CDATA[Please select a valid member role.]]></phrase>
+  <phrase title="tlg_please_select_valid_archive_node" version_id="2000000" version_string="2.0.0"><![CDATA[Please select a valia archive node.]]></phrase>
+  <phrase title="tlg_please_upload_image_at_least_xy_pixels" version_id="2000000" version_string="2.0.0"><![CDATA[Please upload an image that have at least {width}x{height} pixels.]]></phrase>
+  <phrase title="tlg_post_to_newsfeed" version_id="3000100" version_string="3.0.1"><![CDATA[Post to news feed]]></phrase>
+  <phrase title="tlg_posted_by_x" version_id="2000000" version_string="2.0.0"><![CDATA[Posted by {name}]]></phrase>
+  <phrase title="tlg_posts" version_id="2000000" version_string="2.0.0"><![CDATA[Posts]]></phrase>
+  <phrase title="tlg_privacy" version_id="2000000" version_string="2.0.0"><![CDATA[Privacy]]></phrase>
+  <phrase title="tlg_privacy_closed" version_id="2000000" version_string="2.0.0"><![CDATA[Closed Group]]></phrase>
+  <phrase title="tlg_privacy_closed_explain" version_id="2010700" version_string="2.1.7"><![CDATA[Anyone can find the group. Only members of the group have permission to view group content.]]></phrase>
+  <phrase title="tlg_privacy_public" version_id="2000000" version_string="2.0.0"><![CDATA[Public Group]]></phrase>
+  <phrase title="tlg_privacy_public_explain" version_id="2000000" version_string="2.0.0"><![CDATA[Anyone can find the group and view it's content.]]></phrase>
+  <phrase title="tlg_privacy_secret" version_id="2000000" version_string="2.0.0"><![CDATA[Secret Group]]></phrase>
+  <phrase title="tlg_privacy_secret_explain" version_id="2010700" version_string="2.1.7"><![CDATA[Only members of the group have permission to view the group and its content.]]></phrase>
+  <phrase title="tlg_promote_member" version_id="2000000" version_string="2.0.0"><![CDATA[Promote member]]></phrase>
+  <phrase title="tlg_promote_members" version_id="2000000" version_string="2.0.0"><![CDATA[Promote members]]></phrase>
+  <phrase title="tlg_promote_read_more_about_role_permissions" version_id="3000200" version_string="3.0.2"><![CDATA[<a href="{link}" data-xf-click="overlay">Read more</a> about role permissions.]]></phrase>
+  <phrase title="tlg_promote_user_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Promote to user groups]]></phrase>
+  <phrase title="tlg_promote_user_groups_explain" version_id="2000000" version_string="2.0.0"><![CDATA[The extra user groups members has when be promoted to this member role. When member be removed out of this member role, the user groups will be revoke.]]></phrase>
+  <phrase title="tlg_quick_overview" version_id="2000000" version_string="2.0.0"><![CDATA[Quick Overview]]></phrase>
+  <phrase title="tlg_read_more" version_id="3000100" version_string="3.0.1"><![CDATA[Read more]]></phrase>
+  <phrase title="tlg_reassign_group" version_id="2000000" version_string="2.0.0"><![CDATA[Reassign group]]></phrase>
+  <phrase title="tlg_reassign_to_user" version_id="2000000" version_string="2.0.0"><![CDATA[Reassign to user]]></phrase>
+  <phrase title="tlg_rebuild_comment_metadata" version_id="2000000" version_string="2.0.0"><![CDATA[Rebuild comment metadata]]></phrase>
+  <phrase title="tlg_rebuild_group_counters" version_id="2000000" version_string="2.0.0"><![CDATA[Rebuild group counters]]></phrase>
+  <phrase title="tlg_rebuild_position_and_counters" version_id="2000000" version_string="2.0.0"><![CDATA[Rebuild position and counters]]></phrase>
+  <phrase title="tlg_rebuild_post_metadata" version_id="2000000" version_string="2.0.0"><![CDATA[Rebuild post metadata]]></phrase>
+  <phrase title="tlg_rebuild_user_caches" version_id="2020000" version_string="2.2.0"><![CDATA[Rebuild user caches]]></phrase>
+  <phrase title="tlg_receive_group_notifications_via" version_id="2000000" version_string="2.0.0"><![CDATA[Receive group notifications via]]></phrase>
+  <phrase title="tlg_register_now" version_id="2000400" version_string="2.0.4"><![CDATA[Register now]]></phrase>
+  <phrase title="tlg_remote_image_url" version_id="3000700" version_string="3.0.7"><![CDATA[Remote image URL]]></phrase>
+  <phrase title="tlg_remove_as_admin" version_id="2000000" version_string="2.0.0"><![CDATA[Remove as Admin]]></phrase>
+  <phrase title="tlg_remove_as_moderator" version_id="2000000" version_string="2.0.0"><![CDATA[Remove as Moderator]]></phrase>
+  <phrase title="tlg_remove_banned_users" version_id="2000000" version_string="2.0.0"><![CDATA[Remove banned users]]></phrase>
+  <phrase title="tlg_remove_banned_users_explain" version_id="2000000" version_string="2.0.0"><![CDATA[If checked, users banned from XenForo system will be removed from the group.]]></phrase>
+  <phrase title="tlg_remove_deleted_users" version_id="2000000" version_string="2.0.0"><![CDATA[Remove deleted users]]></phrase>
+  <phrase title="tlg_remove_deleted_users_explain" version_id="2000000" version_string="2.0.0"><![CDATA[If checked, users deleted from XenForo system will be removed from the group.]]></phrase>
+  <phrase title="tlg_remove_member" version_id="2000000" version_string="2.0.0"><![CDATA[Remove member]]></phrase>
+  <phrase title="tlg_remove_members" version_id="2000000" version_string="2.0.0"><![CDATA[Remove members]]></phrase>
+  <phrase title="tlg_report_group" version_id="2000000" version_string="2.0.0"><![CDATA[Report group]]></phrase>
+  <phrase title="tlg_reposition_cover" version_id="2000000" version_string="2.0.0"><![CDATA[Reposition cover]]></phrase>
+  <phrase title="tlg_request_to_join" version_id="2000300" version_string="2.0.3"><![CDATA[Request to join]]></phrase>
+  <phrase title="tlg_requested_category_not_found" version_id="2000000" version_string="2.0.0"><![CDATA[Requested category could not found.]]></phrase>
+  <phrase title="tlg_requested_comment_not_found" version_id="2000000" version_string="2.0.0"><![CDATA[Requested comment could not found.]]></phrase>
+  <phrase title="tlg_requested_event_not_found" version_id="2000000" version_string="2.0.0"><![CDATA[Requested event could not found.]]></phrase>
+  <phrase title="tlg_requested_group_not_found" version_id="2000000" version_string="2.0.0"><![CDATA[Requested group could not be found.]]></phrase>
+  <phrase title="tlg_requested_resource_not_found" version_id="2020900" version_string="2.2.9"><![CDATA[Requested resource could not be found.]]></phrase>
+  <phrase title="tlg_resource" version_id="2020900" version_string="2.2.9"><![CDATA[Resource]]></phrase>
+  <phrase title="tlg_resource_change_icon" version_id="3000700" version_string="3.0.7"><![CDATA[Change resource icon]]></phrase>
+  <phrase title="tlg_resource_delete_current_icon" version_id="3000700" version_string="3.0.7"><![CDATA[Delete current icon]]></phrase>
+  <phrase title="tlg_resource_downloads" version_id="2020900" version_string="2.2.9"><![CDATA[Downloads]]></phrase>
+  <phrase title="tlg_resource_icon" version_id="3000700" version_string="3.0.7"><![CDATA[Resource icon]]></phrase>
+  <phrase title="tlg_resource_must_have_a_file" version_id="2020900" version_string="2.2.9"><![CDATA[Resource must have a file.]]></phrase>
+  <phrase title="tlg_resource_options" version_id="2030000" version_string="2.3.0"><![CDATA[Resource options]]></phrase>
+  <phrase title="tlg_resources" version_id="2020900" version_string="2.2.9"><![CDATA[Resources]]></phrase>
+  <phrase title="tlg_search_child_categories_as_well" version_id="2000000" version_string="2.0.0"><![CDATA[Search child categories as well]]></phrase>
+  <phrase title="tlg_search_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Search groups]]></phrase>
+  <phrase title="tlg_search_in_categories" version_id="2000000" version_string="2.0.0"><![CDATA[Search in categories]]></phrase>
+  <phrase title="tlg_see_all_members" version_id="2000000" version_string="2.0.0"><![CDATA[See all members]]></phrase>
+  <phrase title="tlg_send_invite" version_id="2010700" version_string="2.1.7"><![CDATA[Invite]]></phrase>
+  <phrase title="tlg_send_notifications_to_admin_and_moderator_only" version_id="2010301" version_string="2.1.3"><![CDATA[Send notifications to admin and moderator of source group only.]]></phrase>
+  <phrase title="tlg_send_notifications_to_all_members" version_id="2010301" version_string="2.1.3"><![CDATA[Send notifications to all members of source group.]]></phrase>
+  <phrase title="tlg_share_this_group" version_id="2000000" version_string="2.0.0"><![CDATA[Share this group]]></phrase>
+  <phrase title="tlg_short_description" version_id="2010700" version_string="2.1.7"><![CDATA[Short description]]></phrase>
+  <phrase title="tlg_show_member_staff_only" version_id="2000000" version_string="2.0.0"><![CDATA[Show member staff only]]></phrase>
+  <phrase title="tlg_show_only_featured_groups" version_id="2000500" version_string="2.0.5"><![CDATA[Show only featured groups]]></phrase>
+  <phrase title="tlg_show_only_groups_user_joined" version_id="2000500" version_string="2.0.5"><![CDATA[Show only groups which user (visitor) joined]]></phrase>
+  <phrase title="tlg_show_only_groups_user_joined_explain" version_id="2000500" version_string="2.0.5"><![CDATA[This option does not work with option `Use guest permissions` enabled.]]></phrase>
+  <phrase title="tlg_show_peoples_group_badges_with_their_messages" version_id="3020400" version_string="3.2.4"><![CDATA[Show people's group badges with their messages]]></phrase>
+  <phrase title="tlg_soft_delete_groups" version_id="3000300" version_string="3.0.3"><![CDATA[Soft delete groups]]></phrase>
+  <phrase title="tlg_some_people_has_invited_you_join_this_group" version_id="2010700" version_string="2.1.7"><![CDATA[Somebody has invited you join this group]]></phrase>
+  <phrase title="tlg_sort_categories" version_id="3010700" version_string="3.1.7"><![CDATA[Sort categories]]></phrase>
+  <phrase title="tlg_staff_only" version_id="3000200" version_string="3.0.2"><![CDATA[Staff only]]></phrase>
+  <phrase title="tlg_stick_post" version_id="2000400" version_string="2.0.4"><![CDATA[Stick]]></phrase>
+  <phrase title="tlg_stick_unstick_posts" version_id="2000400" version_string="2.0.4"><![CDATA[Stick/Unstick posts]]></phrase>
+  <phrase title="tlg_stick_unstick_threads" version_id="2020000" version_string="2.2.0"><![CDATA[Stick/unstick threads]]></phrase>
+  <phrase title="tlg_sticky_posts" version_id="2000400" version_string="2.0.4"><![CDATA[Sticky posts]]></phrase>
+  <phrase title="tlg_submission_date" version_id="2000500" version_string="2.0.5"><![CDATA[Submission date]]></phrase>
+  <phrase title="tlg_sure_you_want_to_cancel_the_following_event" version_id="3000900" version_string="3.0.9"><![CDATA[Are you sure that you want to cancel the following event]]></phrase>
+  <phrase title="tlg_sure_you_want_to_delete_forum" version_id="2000000" version_string="2.0.0"><![CDATA[Are you want to delete forum?]]></phrase>
+  <phrase title="tlg_sure_you_want_to_join_following_group" version_id="2000300" version_string="2.0.3"><![CDATA[Are you sure you want to join the following group?]]></phrase>
+  <phrase title="tlg_sure_you_want_to_leave_the_group" version_id="2000000" version_string="2.0.0"><![CDATA[Are you want to leave the group?]]></phrase>
+  <phrase title="tlg_sure_you_want_to_remove_following_member" version_id="2000000" version_string="2.0.0"><![CDATA[Do you want to remove this member from the group?]]></phrase>
+  <phrase title="tlg_system_nodes" version_id="3030200" version_string="3.3.2"><![CDATA[System nodes]]></phrase>
+  <phrase title="tlg_the_group_you_managed_x_has_been_deleted_cause_inactive_in_y_days" version_id="3000200" version_string="3.0.2"><![CDATA[The group {name} which you managed has been deleted because it was inactive for {days} days.]]></phrase>
+  <phrase title="tlg_there_are_no_events_to_display" version_id="2000000" version_string="2.0.0"><![CDATA[There are no events to display.]]></phrase>
+  <phrase title="tlg_there_are_no_groups_to_display" version_id="2020900" version_string="2.2.9"><![CDATA[There are no groups to display.]]></phrase>
+  <phrase title="tlg_there_are_no_posts_to_display" version_id="2000000" version_string="2.0.0"><![CDATA[There are no posts to display]]></phrase>
+  <phrase title="tlg_there_are_no_users_download_this_resource" version_id="2020900" version_string="2.2.9"><![CDATA[There are no users download this resource.]]></phrase>
+  <phrase title="tlg_there_more_comments_to_display" version_id="2000000" version_string="2.0.0"><![CDATA[There are no comments to display.]]></phrase>
+  <phrase title="tlg_there_no_groups_matching_your_filters" version_id="2000000" version_string="2.0.0"><![CDATA[There are no groups matching your filters.]]></phrase>
+  <phrase title="tlg_there_no_members_matching_your_filters" version_id="3000700" version_string="3.0.7"><![CDATA[There are no members matching your filters.]]></phrase>
+  <phrase title="tlg_this_category" version_id="2000000" version_string="2.0.0"><![CDATA[This category]]></phrase>
+  <phrase title="tlg_thread_created_by_x" version_id="2000000" version_string="2.0.0"><![CDATA[Thread created by {name}]]></phrase>
+  <phrase title="tlg_time_period" version_id="2000500" version_string="2.0.5"><![CDATA[Time period]]></phrase>
+  <phrase title="tlg_time_period_explain" version_id="2000000" version_string="2.0.0"><![CDATA[If a special date provided, the content automatically be removed after that date.]]></phrase>
+  <phrase title="tlg_toggle_display_group_badge" version_id="3020100" version_string="3.2.1"><![CDATA[Toggle display group badge]]></phrase>
+  <phrase title="tlg_too_many_sticky_posts_unstick_some_and_try_again" version_id="2000400" version_string="2.0.4"><![CDATA[Too many sticky posts. Please unstick some posts and try again.]]></phrase>
+  <phrase title="tlg_total_albums" version_id="2000000" version_string="2.0.0"><![CDATA[Total albums]]></phrase>
+  <phrase title="tlg_total_discussions" version_id="2000000" version_string="2.0.0"><![CDATA[Total discussions]]></phrase>
+  <phrase title="tlg_total_events" version_id="2000000" version_string="2.0.0"><![CDATA[Total events]]></phrase>
+  <phrase title="tlg_total_members" version_id="2000000" version_string="2.0.0"><![CDATA[Total members]]></phrase>
+  <phrase title="tlg_total_views" version_id="2000000" version_string="2.0.0"><![CDATA[Total views]]></phrase>
+  <phrase title="tlg_unapprove_group" version_id="2000000" version_string="2.0.0"><![CDATA[Unapprove group]]></phrase>
+  <phrase title="tlg_unapprove_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Unapprove groups]]></phrase>
+  <phrase title="tlg_unassociate_with_group_and_archive_forum_to" version_id="2000000" version_string="2.0.0"><![CDATA[Unassociate with group and archive forum to]]></phrase>
+  <phrase title="tlg_uncancel_event" version_id="3000900" version_string="3.0.9"><![CDATA[Un-cancel event]]></phrase>
+  <phrase title="tlg_undelete_group" version_id="2000000" version_string="2.0.0"><![CDATA[Undelete group]]></phrase>
+  <phrase title="tlg_undelete_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Undelete groups]]></phrase>
+  <phrase title="tlg_undelete_thread_posts" version_id="2020000" version_string="2.2.0"><![CDATA[Undelete thread posts]]></phrase>
+  <phrase title="tlg_unfeature_group" version_id="2000000" version_string="2.0.0"><![CDATA[Unfeature group]]></phrase>
+  <phrase title="tlg_unstick_post" version_id="2000400" version_string="2.0.4"><![CDATA[Unstick]]></phrase>
+  <phrase title="tlg_upcoming_events" version_id="3010600" version_string="3.1.6"><![CDATA[Upcoming events]]></phrase>
+  <phrase title="tlg_update_groups" version_id="3000300" version_string="3.0.3"><![CDATA[Update groups]]></phrase>
+  <phrase title="tlg_update_privacy" version_id="2000000" version_string="2.0.0"><![CDATA[Update privacy]]></phrase>
+  <phrase title="tlg_upload_attachments_to_comments" version_id="2010401" version_string="2.1.4 RC1"><![CDATA[Upload attachments to comments]]></phrase>
+  <phrase title="tlg_upload_avatar" version_id="2000000" version_string="2.0.0"><![CDATA[Upload avatar]]></phrase>
+  <phrase title="tlg_upload_cover" version_id="2000000" version_string="2.0.0"><![CDATA[Upload cover]]></phrase>
+  <phrase title="tlg_upload_from_your_device" version_id="3000700" version_string="3.0.7"><![CDATA[Upload from your device]]></phrase>
+  <phrase title="tlg_upload_new_cover" version_id="2000000" version_string="2.0.0"><![CDATA[Upload new cover]]></phrase>
+  <phrase title="tlg_upload_new_group_avatar" version_id="2000000" version_string="2.0.0"><![CDATA[Upload new group avatar]]></phrase>
+  <phrase title="tlg_uploaded_files" version_id="2020900" version_string="2.2.9"><![CDATA[Uploaded files]]></phrase>
+  <phrase title="tlg_use_guest_permissions" version_id="2000500" version_string="2.0.5"><![CDATA[Use guest permissions]]></phrase>
+  <phrase title="tlg_use_guest_permissions_explain" version_id="2000500" version_string="2.0.5"><![CDATA[If enabled, widget only contains groups which viewable by guest.]]></phrase>
+  <phrase title="tlg_user_already_in_the_group" version_id="2000000" version_string="2.0.0"><![CDATA[User already in this group.]]></phrase>
+  <phrase title="tlg_user_x_already_in_this_group" version_id="3010300" version_string="3.1.3"><![CDATA[User {name} already in this group]]></phrase>
+  <phrase title="tlg_user_x_has_been_banned_and_not_allowed_join_any" version_id="2000000" version_string="2.0.0"><![CDATA[User {user} has been banned and not allowed join any groups.]]></phrase>
+  <phrase title="tlg_user_x_invalid_and_not_join_any" version_id="3010000" version_string="3.1.0"><![CDATA[User {user} has a non-valid account status (likely an email address issue), so they cannot currently join any groups.]]></phrase>
+  <phrase title="tlg_user_x_reached_maximum_groups_which_allowed_to_join" version_id="3010300" version_string="3.1.3"><![CDATA[User {name} have reached maximum groups which allowed to join]]></phrase>
+  <phrase title="tlg_users_belong_to_user_groups" version_id="2000000" version_string="2.0.0"><![CDATA[All users belong to this user groups]]></phrase>
+  <phrase title="tlg_users_download_resource" version_id="2020900" version_string="2.2.9"><![CDATA[Users who download this resource]]></phrase>
+  <phrase title="tlg_view_count" version_id="2000500" version_string="2.0.5"><![CDATA[View count]]></phrase>
+  <phrase title="tlg_view_deleted_posts" version_id="2020000" version_string="2.2.0"><![CDATA[View deleted posts]]></phrase>
+  <phrase title="tlg_view_edit_post_history" version_id="3000100" version_string="3.0.1"><![CDATA[View edit post history]]></phrase>
+  <phrase title="tlg_view_group_x" version_id="2000000" version_string="2.0.0"><![CDATA[View group {id}]]></phrase>
+  <phrase title="tlg_view_moderated_posts" version_id="2020000" version_string="2.2.0"><![CDATA[View moderated posts]]></phrase>
+  <phrase title="tlg_view_previous_comments" version_id="2000000" version_string="2.0.0"><![CDATA[View previous comments]]></phrase>
+  <phrase title="tlg_view_previous_replies" version_id="2000000" version_string="2.0.0"><![CDATA[View previous replies]]></phrase>
+  <phrase title="tlg_view_this_event" version_id="3010000" version_string="3.1.0"><![CDATA[View this event]]></phrase>
+  <phrase title="tlg_view_this_post" version_id="3010000" version_string="3.1.0"><![CDATA[View this post]]></phrase>
+  <phrase title="tlg_view_your_groups" version_id="3010000" version_string="3.1.0"><![CDATA[View your groups]]></phrase>
+  <phrase title="tlg_viewing_group" version_id="2000000" version_string="2.0.0"><![CDATA[Viewing group]]></phrase>
+  <phrase title="tlg_viewing_group_category" version_id="2000000" version_string="2.0.0"><![CDATA[Viewing group category]]></phrase>
+  <phrase title="tlg_viewing_group_event" version_id="2000000" version_string="2.0.0"><![CDATA[Viewing group event]]></phrase>
+  <phrase title="tlg_widget_event_type" version_id="3010600" version_string="3.1.6"><![CDATA[Event type]]></phrase>
+  <phrase title="tlg_x_approved_your_request_to_join_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} approved your request to join the group {title}.]]></phrase>
+  <phrase title="tlg_x_assigned_you_to_be_admin_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} assigned you to be administration of the group {title}]]></phrase>
+  <phrase title="tlg_x_assigned_you_to_be_moderator_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} assigned you to be moderator of the group {title}]]></phrase>
+  <phrase title="tlg_x_assigned_you_to_be_owner_of_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} assigned you to be owner of the group {title}]]></phrase>
+  <phrase title="tlg_x_commented_in_event_y_in_the_group_z" version_id="2000200" version_string="2.0.2"><![CDATA[{name} commented in the event {event} in the group {title}.]]></phrase>
+  <phrase title="tlg_x_commented_in_your_event_y_in_the_group_z" version_id="2000200" version_string="2.0.2"><![CDATA[{name} commented in your event {event} in the group {title}.]]></phrase>
+  <phrase title="tlg_x_commented_on_post_following_in_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} commented on the post you are following in the group {title}]]></phrase>
+  <phrase title="tlg_x_commented_on_your_posts_in_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} commented on your posts in the group {title}]]></phrase>
+  <phrase title="tlg_x_created_an_event_y_in_the_group_z" version_id="2000100" version_string="2.0.1"><![CDATA[{name} created an event {event} in the group {title}]]></phrase>
+  <phrase title="tlg_x_has_been_approved_your_group_y" version_id="3000600" version_string="3.0.6"><![CDATA[Your group {title} has been approved.]]></phrase>
+  <phrase title="tlg_x_intended_to_going_your_event_y" version_id="2010700" version_string="2.1.7"><![CDATA[{name} intends to participate in your event {title}.]]></phrase>
+  <phrase title="tlg_x_intended_to_maybe_going_your_event_y" version_id="2010700" version_string="2.1.7"><![CDATA[{name} intends to maybe participate in your event {title}.]]></phrase>
+  <phrase title="tlg_x_invited_you_join_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} invited you join the group {title}.]]></phrase>
+  <phrase title="tlg_x_members" version_id="2000000" version_string="2.0.0"><![CDATA[{count} members]]></phrase>
+  <phrase title="tlg_x_mentioned_you_in_the_comment_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} mentioned you in a comment in the group {title}.]]></phrase>
+  <phrase title="tlg_x_merged_group_y_into_group_z" version_id="2010301" version_string="2.1.3"><![CDATA[{name} merged the group {source} into the group {title}.]]></phrase>
+  <phrase title="tlg_x_promoted_you_to_y_in_group_z" version_id="2000000" version_string="2.0.0"><![CDATA[{name} promoted you to {role} in the group {title}]]></phrase>
+  <phrase title="tlg_x_published_a_post_in_the_group_y_may_be_more" version_id="2000000" version_string="2.0.0"><![CDATA[{name} published a post in the group {title}. There may be more posts after this.]]></phrase>
+  <phrase title="tlg_x_reacted_to_your_comment_in_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} reacted to your comment in the group {title} with {reaction}.]]></phrase>
+  <phrase title="tlg_x_reacted_to_your_post_in_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} reacted to your post in the group {title} with {reaction}.]]></phrase>
+  <phrase title="tlg_x_reacted_to_ys_comment_in_the_group_z" version_id="2000000" version_string="2.0.0"><![CDATA[{name} reacted to <a {posterParams}>{poster}'s comment</a> in the group {title} with {reaction}.]]></phrase>
+  <phrase title="tlg_x_replied_on_comment_following_in_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} replied on comment you are following in the group {title}.]]></phrase>
+  <phrase title="tlg_x_sent_request_to_join_the_group_y" version_id="2000000" version_string="2.0.0"><![CDATA[{name} sent an request to join the group {title}.]]></phrase>
+  <phrase title="tlg_x_to_y" version_id="2000000" version_string="2.0.0"><![CDATA[{from} to {to}]]></phrase>
+  <phrase title="tlg_you_already_in_this_group" version_id="2000000" version_string="2.0.0"><![CDATA[You are already in this group]]></phrase>
+  <phrase title="tlg_you_are_not_going_to_this_event" version_id="2010700" version_string="2.1.7"><![CDATA[You are not participating in this event.]]></phrase>
+  <phrase title="tlg_you_cannot_delete_reserve_member_roles" version_id="2000000" version_string="2.0.0"><![CDATA[You cannot delete reserve member roles.]]></phrase>
+  <phrase title="tlg_you_cannot_invite_yourself_join_this_group" version_id="2000000" version_string="2.0.0"><![CDATA[You cannot invite yourself to join this group.]]></phrase>
+  <phrase title="tlg_you_did_not_joined_any_groups_yet" version_id="3010000" version_string="3.1.0"><![CDATA[You have not joined any groups yet.]]></phrase>
+  <phrase title="tlg_you_have_banned_to_access_this_group" version_id="2000000" version_string="2.0.0"><![CDATA[You have been banned to access this group.]]></phrase>
+  <phrase title="tlg_you_have_banned_to_access_this_group_banned_expire_after_x" version_id="2000000" version_string="2.0.0"><![CDATA[You have been banned to access this group. You can only access after {date}.]]></phrase>
+  <phrase title="tlg_you_intended_going_to_this_event" version_id="2010700" version_string="2.1.7"><![CDATA[You intend to participate in this event.]]></phrase>
+  <phrase title="tlg_you_intended_maybe_going_to_this_event" version_id="2010700" version_string="2.1.7"><![CDATA[You intend to maybe participate in this event.]]></phrase>
+  <phrase title="tlg_you_may_not_add_groups_to_this_category" version_id="2000000" version_string="2.0.0"><![CDATA[You may not add groups to this category]]></phrase>
+  <phrase title="tlg_you_need_become_a_member_of_the_group_x_to_view_the_content" version_id="3000400" version_string="3.0.4"><![CDATA[You may become a member of the group <a href={url}>{title}</a> to view the content.]]></phrase>
+  <phrase title="tlg_you_reached_maximum_groups_which_allowed_to_join" version_id="3010300" version_string="3.1.3"><![CDATA[You have reached maximum groups which allowed to join]]></phrase>
+  <phrase title="tlg_you_reached_maximum_invites_today_allowed_x" version_id="2010600" version_string="2.1.6"><![CDATA[You have reached maximum invites today. Allowed: {max}]]></phrase>
+  <phrase title="tlg_you_sure_you_want_to_ban_x_members" version_id="2000500" version_string="2.0.5"><![CDATA[Are you sure you want to ban {count} members?]]></phrase>
+  <phrase title="tlg_you_sure_you_want_to_delete_x_groups" version_id="2000000" version_string="2.0.0"><![CDATA[Are you want to delete {count} groups?]]></phrase>
+  <phrase title="tlg_you_sure_you_want_to_merge_x_groups" version_id="2010301" version_string="2.1.3"><![CDATA[Are you sure that you want to merge {total} groups?]]></phrase>
+  <phrase title="tlg_you_sure_you_want_to_promote_x_members" version_id="2000500" version_string="2.0.5"><![CDATA[Are you sure you want to promote {count} members?]]></phrase>
+  <phrase title="tlg_you_will_receive_a_notice_when_new_content_published" version_id="2000000" version_string="2.0.0"><![CDATA[By checked alert options, you will receive a notice when new contents (event, thread,...) published to this group.]]></phrase>
+  <phrase title="tlg_your_current_addon_version_in_xf1" version_id="2010400" version_string="2.1.4"><![CDATA[Your current add-on version in XenForo 1.x]]></phrase>
+  <phrase title="tlg_your_feeds" version_id="2020000" version_string="2.2.0"><![CDATA[Your feeds]]></phrase>
+  <phrase title="tlg_your_groups" version_id="3000400" version_string="3.0.4"><![CDATA[Your groups]]></phrase>
+  <phrase title="widget_def.tl_groups_event" version_id="3010600" version_string="3.1.6"><![CDATA[[tl] Social Groups: Events]]></phrase>
+  <phrase title="widget_def.tl_groups_group" version_id="1000200" version_string="1.0.2"><![CDATA[[tl] Social Groups: Groups]]></phrase>
+  <phrase title="widget_def_desc.tl_groups_event" version_id="3010600" version_string="3.1.6"><![CDATA[]]></phrase>
+  <phrase title="widget_def_desc.tl_groups_group" version_id="1000200" version_string="1.0.2"><![CDATA[]]></phrase>
+  <phrase title="widget_pos.tlg_category_view" version_id="2010700" version_string="2.1.7"><![CDATA[[tl] Social Groups: Category view sidebar (left)]]></phrase>
+  <phrase title="widget_pos.tlg_group_index" version_id="2010700" version_string="2.1.7"><![CDATA[[tl] Social Groups: Group index sidebar (left)]]></phrase>
+  <phrase title="widget_pos.tlg_group_view_sidenav" version_id="2010700" version_string="2.1.7"><![CDATA[[tl] Social Groups: Group view sidebar (left)]]></phrase>
+  <phrase title="widget_pos_desc.tlg_category_view" version_id="2010700" version_string="2.1.7"><![CDATA[]]></phrase>
+  <phrase title="widget_pos_desc.tlg_group_index" version_id="2010700" version_string="2.1.7"><![CDATA[]]></phrase>
+  <phrase title="widget_pos_desc.tlg_group_view_sidenav" version_id="2010700" version_string="2.1.7"><![CDATA[]]></phrase>
+</phrases>

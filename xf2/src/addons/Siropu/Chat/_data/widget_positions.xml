@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_positions>
+  <widget_position position_id="siropu_chat_above_content" active="1"/>
+  <widget_position position_id="siropu_chat_above_forum_list" active="1"/>
+  <widget_position position_id="siropu_chat_all_pages" active="1"/>
+  <widget_position position_id="siropu_chat_below_breadcrumb" active="1"/>
+  <widget_position position_id="siropu_chat_below_content" active="1"/>
+  <widget_position position_id="siropu_chat_below_forum_list" active="1"/>
+  <widget_position position_id="siropu_chat_page" active="1"/>
+  <widget_position position_id="siropu_chat_page_sidebar" active="1"/>
+  <widget_position position_id="siropu_chat_sidebar_bottom" active="1"/>
+  <widget_position position_id="siropu_chat_sidebar_top" active="1"/>
+</widget_positions>

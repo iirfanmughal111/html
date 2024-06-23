@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="add_tournament" version_id="1010000" version_string="1.1"><![CDATA[<xf:title>{{ phrase('Tournament') }}</xf:title>
+
+<xf:pageaction>
+	<xf:button href="{{ link('tourn/newentry') }}" icon="add">{{ phrase('Add Tournament') }}</xf:button>
+</xf:pageaction>
+
+<xf:form action="{{ link('entries/toggle', $record) }}" class="block">
+	
+	<div class="block-outer">
+		<xf:macro template="tournament_search_macro" name="login_filter" arg-key="" arg-class="block-outer-opposite" />
+	</div>
+	
+	<div class="block-container">
+		<xf:if is="$records is not empty">
+			<div class="block-body">
+				<xf:datalist data-xf-init="responsive-data-list">
+					<xf:datarow rowtype="header">
+						<xf:cell>{{ phrase('tournament_title') }}</xf:cell>
+						<xf:cell>{{ phrase('domain') }}</xf:cell>
+						<xf:cell>{{ phrase('start_date') }}</xf:cell>
+						<xf:cell>{{ phrase('start_time') }}</xf:cell>
+						<xf:cell>{{ phrase('end_date') }}</xf:cell>	
+						<xf:cell>{{ phrase('end_time') }}</xf:cell>
+					
+						<xf:cell class="dataList-cell--min">&nbsp;</xf:cell>
+						<xf:cell class="dataList-cell--min">&nbsp;</xf:cell>
+					</xf:datarow>
+					<xf:foreach loop="$records" value="$record">
+						<xf:datarow>
+							<xf:cell>{$record.tourn_title}</xf:cell>
+							<xf:cell>{$record.tourn_domain}</xf:cell>
+							<xf:cell>{{$record.getStartDate()}}</xf:cell>
+							<xf:cell>{{$record.getStartTime()}}</xf:cell>
+							<xf:cell>{{$record.getEndDate()}}</xf:cell>
+							<xf:cell>{{$record.getEndTime()}}</xf:cell>
+							
+							<xf:action href="{{ link('tourn/edit', $record) }}" >{{ phrase('edit') }}</xf:action>
+							<xf:delete href="{{ link('tourn/delete', $record) }}" />
+						</xf:datarow>
+					</xf:foreach>
+				</xf:datalist>
+			</div>
+			<div class="block-footer">
+				<span class="block-footer-counter">{{ display_totals($records, $total) }}</span>
+			</div>
+		<xf:else />
+			<div class="block-body block-row">{{ phrase('no_results_found') }}</div>
+		</xf:if>
+	</div>
+
+	<xf:pagenav page="{$page}" perpage="{$perPage}" total="{$total}"
+		link="tourn" params="{$filters}"
+		wrapperclass="block-outer block-outer--after" />
+</xf:form>]]></template>
+  <template type="admin" title="tournament_fields" version_id="1010000" version_string="1.1"><![CDATA[<xf:title>{{ phrase('Create') }}</xf:title>
+
+<xf:form action="{{ link('tourn/save', $record) }}" class="block" data-force-flash-message="true" enctype="multipart/form-data">
+	<div class="block-container">
+		<div class="block-body">
+			
+				<xf:textboxrow name="tourn_title" autofocus="autofocus" maxlength="{{ max_length($xf.visitor, 'title') }}"
+					value="{{$record.tourn_title}}"
+					label="{{ phrase('title') }}" required="required" hint="{{ phrase('required') }}" />
+					
+				<xf:formrow rowtype="input"
+							label="{{ phrase('start_date') }}">
+						<div class="inputGroup">
+			
+					<xf:dateinput name="tourn_startdate" class="date start" value="{{($record)?$record.getStartDate():''}}" required="true"
+						hint="{{ phrase('required') }}"/>
+							
+								<span class="inputGroup-splitter"></span>
+							
+					<xf:textbox name="tourn_starttime" class="input--date time start" required="true" type="time"
+						value="{{($record)?$record.getStartTime():''}}"
+						data-xf-init="time-picker" data-moment="{$timeFormat}" data-format="{{ $xf.language.time_format }}" />
+					
+						</div>
+				</xf:formrow>
+			
+				<xf:formrow rowtype="input"
+						label="{{ phrase('end_date') }}">
+					<div class="inputGroup">
+			
+					<xf:dateinput name="tourn_enddate" class="date end" value="{{($record)?$record.getEndDate():''}}" required="true"
+						hint="{{ phrase('required') }}"/>
+							
+							<span class="inputGroup-splitter"></span>
+					<xf:textbox name="tourn_endtime" class="input--date time start" required="true" type="time"
+						value="{{($record)?$record.getEndTime():''}}"
+						data-xf-init="time-picker" data-moment="{$timeFormat}" data-format="{{ $xf.language.time_format }}" />
+					
+					</div>
+				</xf:formrow>
+			
+				<xf:uploadrow name="icon" accept=".gif,.jpeg,.jpg,.jpe,.png"
+					label="{{ phrase('icon') }}" hint="{{ phrase('required') }}"
+					explain="{{ phrase('upload_icon_image') }}"></xf:uploadrow>
+			
+					<xf:if is="$record is not empty">
+						<xf:inforow rowtype="confirm">
+							<img src="{$record.getImgUrl(true,'icon')}" style="width:80px;height:60px" >
+						</xf:inforow>
+					</xf:if>
+			
+				<xf:uploadrow name="header" accept=".gif,.jpeg,.jpg,.jpe,.png"
+					label="{{ phrase('header') }}" hint="{{ phrase('required') }}"
+					explain="{{ phrase('upload_header_image') }}"/>
+			
+					<xf:if is="$record is not empty">
+						<xf:inforow rowtype="confirm">
+							<img src="{$record.getImgUrl(true,'header')}" style="width:80px;height:60px" >
+						</xf:inforow>
+					</xf:if>
+			
+				<xf:textboxrow name="tourn_main_price" maxlength="{{ max_length($xf.visitor, 'tourn_main_price') }}" value="{{$record.tourn_main_price}}"
+					label="{{ phrase('main_price') }}" required="required" explain="{{ phrase('kindly_add_main_price') }}" hint="{{ phrase('required') }}" />
+			
+				<hr class="formRowSep" />
+			
+				<xf:textarearow name="tourn_desc" rows="3" autosize="true"
+					label="{{ phrase('description') }}"
+					required="true"
+					hint="{{ phrase('required') }}"
+					explain="{{ phrase('kindly_describe_in_details') }}"
+					value="{{$record.tourn_desc}}"/>			
+		</div>
+		
+		<xf:formrow rowtype="input"
+					label="{{ phrase('prizes') }}">
+				 
+				 <div class="inputGroup-container" data-xf-init="list-sorter" data-drag-handle=".dragHandle">
+					 
+						<xf:foreach loop="$record.tourn_prizes" key="$key" value="$value">
+							
+							<div class="inputGroup">
+								
+								<xf:textbox name="tourn_parto[]" value="{$key}"
+									placeholder="{{ phrase('First One') }}"
+									size="24" maxlength="25"
+									dir="ltr" />
+								
+								<span class="inputGroup-splitter"></span>
+								
+								<xf:textbox name="tourn_partt[]" value="{$value}"
+									placeholder="{{ phrase('Last One') }}" size="24" />
+							</div>
+						</xf:foreach>
+					 
+					 <div class="inputGroup is-undraggable js-blockDragafter" data-xf-init="field-adder"
+							data-remove-class="is-undraggable js-blockDragafter">
+						 
+							<xf:textbox name="tourn_parto[]"
+								placeholder="{{ phrase('First One') }}"
+								size="24" maxlength="25" data-i="0"
+								dir="ltr"/>
+						 
+							<span class="inputGroup-splitter"></span>
+						 
+							<xf:textbox name="tourn_partt[]"
+								placeholder="{{ phrase('Last One') }}"
+								size="24" data-i="0"/>
+					</div>
+					 
+			 	</div>	
+				</xf:formrow>
+		
+		<xf:submitrow submit="" icon="save" />
+	</div>
+</xf:form>]]></template>
+  <template type="admin" title="tournament_search_macro" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:macro name="login_filter" arg-key="" arg-ajax="" arg-class="">
+	<xf:js src="xf/filter.js" min="1" />
+	<div class="{$class} quickFilter u-jsOnly" data-xf-init="filter" data-key="{$key}" data-ajax="{$ajax}">
+		<div class="inputGroup inputGroup--inline inputGroup--joined">
+			<input type="text" class="input js-filterInput" placeholder="{{ phrase('filter...')|for_attr }}" data-xf-key="{{ phrase('shortcut.filter')|for_attr }}" />
+			<span class="inputGroup-text">
+				<xf:checkbox standalone="true">
+					<xf:option class="js-filterPrefix" label="{{ phrase('prefix') }}" />
+				</xf:checkbox>
+			</span>
+			<i class="inputGroup-text js-filterClear is-disabled" aria-hidden="true"></i>
+		</div>
+	</div>
+</xf:macro>]]></template>
+  <template type="public" title="popup_users" version_id="1010000" version_string="1.1"><![CDATA[<xf:if is="$users is not empty">
+			<div class="block-body">
+				<xf:datalist data-xf-init="responsive-data-list">
+					<xf:datarow rowtype="header">
+						<xf:cell>{{ phrase('tou_User') }}</xf:cell>
+						<xf:cell>{{ phrase('tout_date') }}</xf:cell>
+					</xf:datarow>
+								
+	<xf:foreach loop="$users" value="$user">
+	<xf:datarow>
+			<xf:cell>{{$user.User.username}}</xf:cell>
+		<xf:cell>{{date($user.current_time, 'Y-m-d')}}</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+	
+				</xf:datalist>
+		</div>
+     
+	</xf:if>]]></template>
+  <template type="public" title="register_tournament" version_id="1010001" version_string="1.1"><![CDATA[<xf:title>{{ phrase('confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('uptourn/Tournamentregister',$tournament) }}" ajax="true" class="block">
+	
+
+	<div class="block-container">
+		<div class="block-body">
+			<xf:if is="$xf.visitor.user_id">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('register_tournament') }}
+				
+			</xf:inforow>
+		
+		<xf:submitrow>
+			<xf:html>
+				<xf:button  type="submit" class="button--primary" >{{ phrase('register') }}</xf:button>
+			</xf:html>
+		</xf:submitrow>
+			
+			<xf:else />
+			<xf:inforow rowtype="confirm">
+			{{phrase('guest_tournament',{'register_link':link('register')})}}
+			</xf:inforow>
+			
+			</xf:if>
+			</div>
+			
+			
+		
+		
+		
+	</div>
+	<xf:redirect />
+</xf:form>]]></template>
+  <template type="public" title="registeruserlist" version_id="1010001" version_string="1.1"><![CDATA[<xf:macro name="userlist"  arg-users="!" arg-tour="!">
+	
+	
+	<xf:if is="$users is not empty">
+			<div class="block-body">
+				<xf:datalist data-xf-init="responsive-data-list">
+					<xf:datarow rowtype="header">
+						<xf:cell>{{ phrase('tou_User') }}</xf:cell>
+						<xf:cell>{{ phrase('tout_date') }}</xf:cell>
+					</xf:datarow>
+								
+	<xf:foreach loop="$users" value="$user">
+	<xf:datarow>
+			<xf:cell>
+				<xf:username user="$user.User" rich="true"  itemprop="name" />
+				
+				</xf:cell>
+		<xf:cell>{{date($user.current_time, 'Y-m-d')}}</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+				</xf:datalist>
+		</div>
+
+	</xf:if>
+	
+</xf:macro>]]></template>
+  <template type="public" title="tournament_details" version_id="1010001" version_string="1.1"><![CDATA[<xf:title>{{$tournament->tourn_title}}</xf:title>
+
+<xf:form action="" ajax="true" class="block">
+	
+
+	<div class="block-container">
+		<div class="block-body">
+			<xf:if is="$xf.visitor.user_id">
+				<xf:inforow rowtype="confirm">
+			<xf:if is="$user">	
+			
+				{{$tournament->tourn_desc|raw}}
+				
+			
+				
+			<xf:else />
+				{{phrase('you_are_not_register')}}
+				</xf:if>
+		</xf:inforow>
+			
+			<xf:else />
+			<xf:inforow rowtype="confirm">
+			{{phrase('guest_tournament',{'register_link':link('register')})}}
+			</xf:inforow>
+		
+		
+				
+			</xf:if>
+			</div>
+			
+			
+		
+		
+		
+	</div>
+	<xf:redirect />
+</xf:form>]]></template>
+  <template type="public" title="upcoming_tournament" version_id="1010001" version_string="1.1"><![CDATA[<style> .p-body-header{display:none} </style>
+<xf:if is="$total">
+	<div class="p-tournaments">
+		<h2 class="tabs" data-xf-init="tabs" data-state="replace" role="tablist">
+			<a href="#" class="tabs-tab is-active" role="tab" aria-controls="tournament-{$firstTournament.tourn_id}">
+				<img src="{{ $firstTournament.getImgUrl(true,'icon')}}" alt="Fortnite" />
+			</a>
+			<xf:foreach loop="$tournaments" value="$tournament">
+				<a href="#" class="tabs-tab" id="tournament-{$tournament.tourn_id}" role="tab">
+					<img src="{{ $tournament.getImgUrl(true,'icon')}}" alt="League" />
+				</a>
+			</xf:foreach>
+		</h2>
+		<ul class="tabPanes widget--tab">
+			<xf:if is="$firstTournament">
+				<li class="is-active" role="tabpanel" id="tournament-1">
+					<div class="p-tournament__bar">
+						<div>
+							<dl class="pairs pairs--inline">
+								<dt>
+									<span class="desktop">{{ phrase('tourney_1_start') }}</span>
+								</dt>
+									<dd id="tournamentstartTimer-{$firstTournament.tourn_id}"></dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>
+									<span class="desktop">{{ phrase('tourney_1_end') }}</span>
+								</dt>
+								<dd id="tournamentendTimer-{$firstTournament.tourn_id}"></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="p-tournament__hero p-tournament__hero--one" style="background-image: url('{{$firstTournament.getImgUrl(true,'header')}}'">
+						<h2>
+							<span class="desktop">{{$firstTournament.tourn_title}}</span>
+						</h2>
+						<div id="tournamentTimer-{$firstTournament.tourn_id}" class="p-tournament__timer" style="display: none;"></div>
+						<xf:set var="$tournamentTimer">{{$firstTournament.getStartDate('Y-m-d H:i')}}</xf:set>
+						<div id="tournamentStart-{$firstTournament.tourn_id}">
+							<a href="{{ link('uptourn/details',$firstTournament) }}" class="button button--primary" data-xf-click="overlay" data-follow-rmacroedirects="on">
+								<span class="desktop">{{ phrase('tournament_start') }}</span>
+							</a>
+						</div>
+					</div>
+					<div class="p-tournament__content">
+						<div class="p-tournament__prizes">
+							<div class="p-tournament__content-header">
+								<i class="fas fa-star icon"></i>
+								<span class="desktop">{{ phrase('tourney_1_prizes') }}</span>
+							</div>
+							<div class="p-tournament__content-body">
+								<div class="text-center">
+									<div class="p-tournament__prize-total">
+										<i class="fas fa-coins"></i> {{ $firstTournament.tourn_main_price }} 
+									</div>
+									<ul>
+										<xf:foreach loop="$firstTournament.tourn_prizes" key="$key" value="$prize">
+											<li>
+												<dl class="pairs pairs--justified">
+													<dt>
+														<span class="desktop">{{$key}}</span>
+													</dt>
+													<dd>{{$prize}}</dd>
+												</dl>
+											</li>
+										</xf:foreach>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="p-tournament__info">
+							<div class="p-tournament__content-header">
+							
+								<xf:if is="!{$trounamentUsers.{$firstTournament.tourn_id}.is_register}">
+								<span class="desktop">{{ phrase('already_register') }}</span>
+								</xf:if>
+								
+								
+								<xf:if is="$firstTournament.tourn_startdate > $ctime  && {$trounamentUsers.{$firstTournament.tourn_id}.is_register}">
+										<a href="{{ link('uptourn/registertour',$firstTournament) }}" class="button button--primary" data-xf-click="overlay" data-follow-rmacroedirects="on">
+											<span class="desktop">{{ phrase('tourney_2_button') }}</span>
+										</a>
+									</xf:if>
+							</div>
+							<div class="p-tournament__content-body">
+								<div> 
+									
+									
+									<xf:macro template="registeruserlist" name="userlist" arg-tour="{$firstTournament}" arg-users="{$trounamentUsers.{$firstTournament.tourn_id}.users}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				         <xf:js>
+                    $(document).ready(function() {
+					var tzone = moment.tz.guess();		 
+                    var tournamentOneEnds = moment.tz("{$tournamentTimer}", tzone);
+							 
+				                   
+				
+					var tournamentOneEndsDate = moment.tz("{{$firstTournament.getEndDate('Y-m-d H:i')}}", tzone);
+					
+$("#tournamentstartTimer-{$firstTournament.tourn_id}").text(moment.tz(tournamentOneEnds._d, tzone).format("DD/MM/YYYY hh:mm A z"));
+$("#tournamentendTimer-{$firstTournament.tourn_id}").text(moment.tz(tournamentOneEndsDate._d, tzone).format("DD/MM/YYYY hh:mm A z"));			 
+							 
+							 
+							 
+                    $id={$firstTournament.tourn_id};				
+                    $("#tournamentTimer-{$firstTournament.tourn_id}").countdown(tournamentOneEnds._d, function(event) {
+                    var $this = $(this).html(event.strftime(''
+                    + '<div id="day_{$firstTournament.tourn_id}"><span class="number">%D</span><span class="type">days</span></div>'
+                    + '<div id="hour_{$firstTournament.tourn_id}"><span class="number">%H</span><span class="type">hrs</span></div>'
+                    + '<div id="min_{$firstTournament.tourn_id}"><span class="number">%M</span><span class="type">mins</span></div>'
+                    + '<div id="sec_{$firstTournament.tourn_id}"><span class="number">%S</span><span class="type">secs</span></div>'));
+                    });
+
+                    var minute = $("#min_{$firstTournament.tourn_id} .number").html();
+                    var second = $("#sec_{$firstTournament.tourn_id} .number").html();
+
+
+
+
+                    if((minute == '00') && (second == '00')) {
+                    $('#tournamentTimer-{$firstTournament.tourn_id}').hide();
+                    $('#tournamentStart-{$firstTournament.tourn_id}').show();
+                    } else {
+                    $('#tournamentTimer-{$firstTournament.tourn_id}').show();
+                    $('#tournamentStart-{$firstTournament.tourn_id}').hide();
+                    }			
+
+                    });
+                </xf:js>
+			</xf:if>
+			<xf:foreach loop="$tournaments" value="$tournament">
+				<li role="tabpanel" aria-labelledby="tournament-{$tournament.tourn_id}">
+					<div class="p-tournament__bar">
+						<div>
+							<dl class="pairs pairs--inline">
+								<dt>
+									<span>{{ phrase('tourney_1_start') }}</span>
+								</dt>
+								<dd id="tournamentstartTimer-{$tournament.tourn_id}"></dd>
+							</dl>
+							<dl class="pairs pairs--inline">
+								<dt>
+									<span>{{ phrase('tourney_1_end') }}</span>
+								</dt>
+								<dd id="tournamentendTimer-{$tournament.tourn_id}"></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="p-tournament__hero p-tournament__hero--two" style="background-image: url('{{$tournament.getImgUrl(true,'header')}}'">
+						<h2>
+							<span class="desktop">{{$tournament.tourn_title}}</span>
+						</h2>
+						<div id="tournamentTimer-{$tournament.tourn_id}" class="p-tournament__timer" style="display: none;"></div>
+						<div id="tournamentStart-{$tournament.tourn_id}">
+							<a href="{{ link('uptourn/details',$tournament) }}" class="button button--primary" data-xf-click="overlay" data-follow-rmacroedirects="on">
+								<span class="desktop">{{ phrase('tournament_start') }}</span>
+							</a>
+						</div>
+					</div>
+					<div class="p-tournament__content">
+						<div class="p-tournament__prizes">
+							<div class="p-tournament__content-header">
+								<i class="fas fa-star icon"></i>
+								<span class="desktop">{{ phrase('tourney_1_prizes') }}</span>
+							</div>
+							<div class="p-tournament__content-body">
+								<div class="text-center">
+									<div class="p-tournament__prize-total">
+										<i class="fas fa-coins"></i> {{ $tournament.tourn_main_price }} 
+									</div>
+									<ul>
+										<xf:foreach loop="$tournament.tourn_prizes" key="$key" value="$prize">
+											<li>
+												<dl class="pairs pairs--justified">
+													<dt>
+														<span class="desktop">{{$key}}</span>
+													</dt>
+													<dd>{{$prize}}</dd>
+												</dl>
+											</li>
+										</xf:foreach>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="p-tournament__info">
+                                                    <div class="p-tournament__content-header">
+								
+								<xf:if is="!{$trounamentUsers.{$tournament.tourn_id}.is_register}">
+								<span class="desktop">{{ phrase('already_register') }}</span>
+								</xf:if>							
+														
+														
+								<xf:if is=" $tournament.tourn_startdate > $ctime && {$trounamentUsers.{$tournament.tourn_id}.is_register}">
+										<a href="{{ link('uptourn/registertour',$tournament) }}" class="button button--primary" data-xf-click="overlay" data-follow-rmacroedirects="on">
+											<span class="desktop">{{ phrase('tourney_2_button') }}</span>
+										</a>
+									</xf:if>
+							</div>
+							<div class="p-tournament__content-body">
+								<div>
+									 
+									
+									<xf:macro template="registeruserlist" name="userlist" arg-tour="{$tournament}" arg-users="{$trounamentUsers.{$tournament.tourn_id}.users}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<xf:js>
+                    $(document).ready(function() {
+					
+					var tzone = moment.tz.guess();
+
+                    var tournamentOneEnds = moment.tz("{{$tournament.getStartDate('Y-m-d H:i')}}", tzone);
+				
+					var tournamentOneEndsDate = moment.tz("{{$tournament.getEndDate('Y-m-d H:i')}}", tzone);
+					
+$("#tournamentstartTimer-{$tournament.tourn_id}").text(moment.tz(tournamentOneEnds._d, tzone).format("DD/MM/YYYY hh:mm A z"));
+$("#tournamentendTimer-{$tournament.tourn_id}").text(moment.tz(tournamentOneEndsDate._d, tzone).format("DD/MM/YYYY hh:mm A z"));				
+					
+                    $("#tournamentTimer-{$tournament.tourn_id}").countdown(tournamentOneEnds._d, function(event) {
+                    var $this = $(this).html(event.strftime(''
+                    + '<div id="day_{$tournament.tourn_id}"><span class="number">%D</span><span class="type">days</span></div>'
+                    + '<div id="hour_{$tournament.tourn_id}"><span class="number">%H</span><span class="type">hrs</span></div>'
+                    + '<div id="min_{$tournament.tourn_id}"><span class="number">%M</span><span class="type">mins</span></div>'
+                    + '<div id="sec_{$tournament.tourn_id}"><span class="number">%S</span><span class="type">secs</span></div>'));
+                    });
+
+                    var minute{$tournament.tourn_id} = $("#min_{$tournament.tourn_id} .number").html();
+                    var second{$tournament.tourn_id} = $("#sec_{$tournament.tourn_id} .number").html();
+
+
+                    if((minute{$tournament.tourn_id} == '00') && (second{$tournament.tourn_id} == '00')) {
+                    $('#tournamentTimer-{$tournament.tourn_id}').hide();
+                    $('#tournamentStart-{$tournament.tourn_id}').show();
+                    } else {
+                    $('#tournamentTimer-{$tournament.tourn_id}').show();
+                    $('#tournamentStart-{$tournament.tourn_id}').hide();
+
+                    }			
+
+                    });
+                </xf:js>
+			</xf:foreach>
+		</ul>
+	</div>
+<xf:else/>
+<xf:form action="" ajax="true" class="block">
+	
+
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+			{{phrase('no_tournament_created')}}
+			
+			</xf:inforow>
+		</div>
+	</div>
+	</xf:form>
+	
+</xf:if>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<xf:sidenav>
+	<div class="p-body-main-sidebar">
+		<form action="" method="post" class="p-body-search" data-xf-init="quick-search">
+			<input type="text" class="input" name="keywords" id="dna" placeholder="Search…" aria-label="Search" data-menu-autofocus="true">
+				<button type="button">
+					<i class="fa--xf fas fa-search" aria-hidden="true"></i>
+				</button>
+				<input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+			</form>
+			<xf:include template="_widget_sidebar_games" />
+		</div>
+	</xf:sidenav>]]></template>
+</templates>

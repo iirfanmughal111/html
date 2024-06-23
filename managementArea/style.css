@@ -1,0 +1,62 @@
+/* ===================== */
+/* FrontEnd CSS Start */
+/* ===================== */
+
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+#admin-content{
+    padding: 20px 0;
+    min-height: 750px;
+}
+
+#admin-content .admin-pagination{
+    margin: 0;
+}
+#admin-content .admin-pagination li a{
+    display: block;
+}
+
+.pagination {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+.pagination li {
+    display:inline-block;
+    margin: 0 5px 0 0;
+}
+
+.pagination li a{
+    border: none;
+    background: #0a58ca;
+    color: #fff;
+    padding: 3px 12px 3px 12px;
+}
+
+.pagination li a:hover,
+.pagination > li > a:focus{
+    color:#fff;
+    background:#12024d;
+}
+
+.active a{
+
+    color: #ffffff !important;
+    background-color: #12024d !important;
+}
+
+/* ===================== */
+/* FrontEnd CSS END */
+/* ===================== */

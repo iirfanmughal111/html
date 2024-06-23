@@ -1,0 +1,21 @@
+<xf:title>{{phrase('fs_thread_thumbnail')}}</xf:title>
+<xf:form action="{{ link('threads/thumbnail', $thread) }}"  ajax="true" class="block" >
+	<div class="block-container">
+		<div class="block-body">
+		<xf:comment>
+					<xf:inforow>
+							<div class="blockMessage blockMessage--important"><strong>{{ phrase('note:') }}</strong> {{ phrase('change_view_upload_required_image') }}</div>
+					</xf:inforow>
+			</xf:comment>
+					<xf:if is="$thread.getThumbnailExit()">
+										<xf:inforow rowtype="confirm">
+											<img src="{$thread.getThumbnailPath()}" style="width:80px;height:60px" >
+										</xf:inforow>
+					</xf:if>
+			<xf:textboxrow label="{{ phrase('fs_thread_thumbnail_title') }}" hint="{{ phrase('fs_thread_thumbnail_required') }}" value="{$thread.thumbnail_title}" name="thumbnail_title"  ></xf:textboxrow>
+			<xf:uploadrow label="{{ phrase('fs_thread_thumbnail_img') }}" explain="{{ phrase('fs_thread_thumbnail_explain',{'width': $xf.options.thumbnailImageDimensions.width ,'height':$xf.options.thumbnailImageDimensions.height}) }}" name="upload"  accept=".gif,.jpeg,.jpg,.jpe,.png,.svg" />
+		</div>
+		
+		<xf:submitrow icon="save" rowtype="simple" />
+	</div>
+</xf:form>

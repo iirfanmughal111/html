@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="link_proxy_add_settings" version_id="1010400" version_string="1.1.4"><![CDATA[<xf:title>{{ phrase('link_proxy_title') }}</xf:title>
+
+
+<div class="block">
+
+    <xf:form
+      action="{{ link('link-proxy/save') }}"
+      ajax="true"
+      class="block-container"
+      novalidate="novalidate"
+    >
+      <div class="block-body">
+		  <xf:formrow  label="{{ phrase('link_user_group') }}" 	hint="{{ phrase('link_redirect_required') }}" required="true">
+			  <xf:select name="user_group_id" value="{{$list.user_group_id ? $list.user_group_id : ''}}">
+				  <xf:options source="$userGroup" />
+			  </xf:select>
+		  </xf:formrow>
+		  
+
+            <xf:numberboxrow
+            label="{{ phrase('link_redirect_time') }}"
+			explain="{{ phrase('link_redirect_in_secs') }}"
+			hint="{{ phrase('link_redirect_required') }}" 
+            name="redirect_time"
+            value="{{$list.redirect_time ? $list.redirect_time : ''}}"
+			min="0"			 
+            required="true"
+            />        
+		  
+		  <xf:codeeditorrow name="link_redirect_html" value="{{$list.link_redirect_html ? $list.link_redirect_html : ''}}"
+				mode="css" data-line-wrapping="true"
+				class="codeEditor--autoSize"
+				label="{{ phrase('link_redirect_html') }}" />
+
+		
+        <xf:textboxrow
+          type="hidden"
+          name="link_id"
+          value="{{$list.list_id ? $list.list_id : ''}}"
+        />
+      </div>
+
+      <xf:submitrow icon="save" sticky="true" />
+    </xf:form>
+  
+</div>]]></template>
+  <template type="admin" title="link_proxy_list" version_id="1010300" version_string="1.1.3"><![CDATA[<xf:title>{{ phrase('link_proxy_title') }}</xf:title>
+
+
+<xf:pageaction>
+		<xf:button href="{{ link('link-proxy/add') }}"  class="button button--icon button--icon--add" icon="add">{{ phrase('link_proxy_add') }}</xf:button>
+
+</xf:pageaction>
+
+
+
+<div class="block-container">
+	<div class="block-body">
+		<xf:form action="{{ link($prefix . '/toggle') }}" class="block" ajax="true">
+			<div class="block-container">
+				<xf:if is="$lists != null">
+					<div class="block-body">
+						<xf:datalist data-xf-init="responsive-data-list">
+							<xf:macro
+									  name="link_table_list"
+									  arg-lists="{$lists}"
+									  />
+						</xf:datalist>
+					</div>
+
+					<xf:else />
+					<div class="block-body block-row">
+						{{ phrase('no_items_have_been_created_yet') }}
+					</div>
+				</xf:if>
+			</div>
+		</xf:form>
+	</div>
+
+	<div class="block-footer">
+
+		<div class="block-body block-row">
+			<dl class="pairs pairs--justified">
+				<dt><span class="block-footer-counter">{{ display_totals($attendance, $total) }}</span></dt>
+				<dd>
+					<xf:pagenav
+								page="{$page}"
+								perpage="{$perPage}"
+								total="{$total}"
+								link="link-proxy"
+								data="{$lists}"
+								params="{$lists}"
+								wrapperclass="block-outer-main"
+								/>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+
+
+<xf:macro name="link_table_list" arg-lists="{$lists}">
+	<xf:datarow rowtype="header">
+		<xf:cell> {{ phrase('user_group') }} </xf:cell>
+		<xf:cell> {{ phrase('link_delay_time') }} </xf:cell>
+		<xf:cell> {{ phrase('link_html') }} </xf:cell>
+
+
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_link_edit') }}</xf:cell>
+		<xf:cell class="dataList-cell--min">{{ phrase('fs_Link_delete') }}</xf:cell>
+	</xf:datarow>
+	<xf:foreach loop="$lists" value="$list">
+		<xf:datarow>
+			<xf:cell> {{$list.UserGroup.title}} </xf:cell>
+			<xf:cell> {{$list.redirect_time }} </xf:cell>
+			<xf:cell>
+				{{$list.link_redirect_html != '' ? snippet($list.link_redirect_html, 30, {'stripBbCode': true}) : phrase('no_link_redirect_html') }}
+			</xf:cell>
+
+			<xf:action
+					   href="{{link('link-proxy/edit', $list) }}"
+					   >{{ phrase('edit') }}</xf:action>
+			<xf:delete
+					   href="{{ link('link-proxy/delete', $list) }}"
+					   overlay="true"
+					   />
+		</xf:datarow>
+	</xf:foreach>
+</xf:macro>]]></template>
+  <template type="public" title="DC_LinkProxy.js" version_id="1010400" version_string="1.1.4"><![CDATA[<xf:js>
+	$(document).ready(function() {
+		var n = $('#DC_LinkProxy_AutoRedirection__timer').html() - 1;
+		setInterval(function() {
+			if (n >= -1) { 
+				$('#DC_LinkProxy_AutoRedirection__timer').html(n--); 
+			}
+			if ( n == -1 ) {
+				$('#continue_btn').removeClass('d-none');
+			//	window.location.replace("{$url}");
+	
+			}
+		}, 1000);
+	
+	
+	});
+</xf:js>]]></template>
+  <template type="public" title="DC_LinkProxy.less" version_id="1010300" version_string="1.1.3"><![CDATA[.p-breadcrumbs {
+	display: none;
+}
+
+.DC_LinkProxy {
+	max-width: @xf-responsiveMedium;
+	padding: 20px;
+	margin: 0 auto;
+	border: 1px solid @xf-borderColor;
+	border-radius: @xf-borderRadiusLarge;
+	background: @xf-contentBg;
+	
+	.DC_LinkProxy__title {
+		text-align: center;
+		font-size: 2em;
+		color: @xf-textColorDimmed;
+	}
+	
+	.DC_LinkProxy__content {
+		font-size: 1.05em;
+		color: @xf-textColor;
+		
+		.m-clearFix();
+		
+		.message
+		{
+			margin-bottom: 10px;
+			
+			&.redirecting
+			{
+				font-weight: 500;
+				text-align: center;
+				color: @xf-textColorMuted;
+			}
+		}
+		
+		.DC_LinkProxy_Continune
+		{
+			float: right;
+		}
+	}
+}
+
+/** Time Countdown Animation */
+.circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 20px @xf-pageBg;
+	margin: 1.5em auto;
+}
+
+.l-half, .r-half {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 20px solid @xf-textColorFeature;
+    }
+        
+}
+
+.l-half:before {
+    border-right: none;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    -webkit-transform-origin: center right;
+    -webkit-animation-name: l-rotate;
+}
+    
+.r-half:before {
+    border-left: none;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    -webkit-transform-origin: center left;
+    -webkit-animation-name: r-rotate;
+}
+
+.count {
+    position: absolute;
+    width: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: @xf-textColorFeature;
+    z-index: 2;
+}
+.d-none{
+	display:none !important;
+}
+
+@-webkit-keyframes l-rotate {
+	0% { -webkit-transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(-180deg); }
+	100% { -webkit-transform: rotate(-180deg); }
+}
+
+@-webkit-keyframes r-rotate {
+	0% { -webkit-transform: rotate(0deg); }
+	50% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-180deg); }
+}
+
+@-webkit-keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0.5; }
+}]]></template>
+  <template type="public" title="DC_LinkProxy_Redirecting" version_id="1010400" version_string="1.1.4"><![CDATA[<xf:css src="DC_LinkProxy.less" />
+<xf:css>
+	.count {
+		-webkit-animation: fadeout .5s calc({$redirect_time} + 1) 1 linear;
+    	-webkit-animation-fill-mode: forwards;	
+	}
+	
+	.l-half:before, .r-half:before
+	{
+		-webkit-animation-duration: {$redirect_time}s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+	}
+</xf:css>
+<xf:title>{{ phrase('DC_LinkProxy_Redirecting') }}</xf:title>
+
+<xf:h1 hidden="true" />
+<xf:head option="metaNoindex"><meta name="robots" content="noindex" /></xf:head>
+
+<div class="DC_LinkProxy">
+	<div class="DC_LinkProxy__wrapper">
+		<xf:if is="{$xf.options.fs_link_html_position}">
+			<div class="custom_html">
+			{{$html|raw}}
+				
+			</div>
+		</xf:if>
+		<h3 class="DC_LinkProxy__title">{{ phrase('DC_LinkProxy_title') }}</h3>
+		<div class="DC_LinkProxy__content">
+			<div class="message">
+				{{ phrase('DC_LinkProxy_you_are_going_to') }}: <b>{$url}</b>
+				<br/><br/>
+				{{ phrase('DC_LinkProxy_message') }}
+			</div>
+			
+			<xf:if is="{$xf.options.DC_LinkProxy_AutoRedirection}">
+				<xf:include template="DC_LinkProxy.js" />
+				<div class="message redirecting">
+					{{ phrase('DC_LinkProxy_you_will_be_redirected_in') }}
+					
+					<div class="circle">
+						<div class="count"><span id="DC_LinkProxy_AutoRedirection__timer">{$redirect_time}</span></div>
+						<div class="l-half"></div>
+						<div class="r-half"></div>
+					</div>
+				
+				</div>
+			</xf:if>
+				
+			<xf:button href="{$url}" rel="nofollow" id="continue_btn" class="DC_LinkProxy_Continune d-none">{{ phrase('DC_LinkProxy_continune') }}</xf:button>
+			
+		</div>
+		<xf:if is="!{$xf.options.fs_link_html_position}">
+			<div class="custom_html">
+			{{$html|raw}}
+				
+			</div>
+		</xf:if>
+		
+		
+	</div>
+</div>]]></template>
+</templates>

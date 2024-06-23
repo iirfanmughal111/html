@@ -1,0 +1,9 @@
+{
+    "template": "account_visitor_menu",
+    "description": "add_ugrade_btn",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<li><a href=\"{{ link('account/ignored') }}\" class=\"menu-linkRow\">{{ phrase('ignoring') }}</a></li>",
+    "replace": "\n$0\n<li><a href=\"{{ link('upgrade') }}\" class=\"menu-linkRow\">{{ phrase('fs_bitcoin_btn_txt') }}</a></li>"
+}

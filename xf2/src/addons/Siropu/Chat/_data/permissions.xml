@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="siropuChat" permission_id="browseRooms" permission_type="flag" interface_group_id="siropuChatUser" display_order="105"/>
+  <permission permission_group_id="siropuChat" permission_id="bypassFloodCheck" permission_type="flag" interface_group_id="siropuChatUser" display_order="220"/>
+  <permission permission_group_id="siropuChat" permission_id="bypassRoomPassword" permission_type="flag" interface_group_id="siropuChatUser" display_order="130"/>
+  <permission permission_group_id="siropuChat" permission_id="changeDisplayMode" permission_type="flag" interface_group_id="siropuChatUser" display_order="215"/>
+  <permission permission_group_id="siropuChat" permission_id="changeSettings" permission_type="flag" interface_group_id="siropuChatUser" display_order="210"/>
+  <permission permission_group_id="siropuChat" permission_id="chatInPrivate" permission_type="flag" interface_group_id="siropuChatUser" display_order="160"/>
+  <permission permission_group_id="siropuChat" permission_id="createRooms" permission_type="flag" interface_group_id="siropuChatUser" display_order="120"/>
+  <permission permission_group_id="siropuChat" permission_id="createThreadRoom" permission_type="flag" depend_permission_id="createRooms" interface_group_id="siropuChatUser" display_order="300"/>
+  <permission permission_group_id="siropuChat" permission_id="deleteOwnMessages" permission_type="flag" interface_group_id="siropuChatUser" display_order="70"/>
+  <permission permission_group_id="siropuChat" permission_id="editOwnMessages" permission_type="flag" interface_group_id="siropuChatUser" display_order="60"/>
+  <permission permission_group_id="siropuChat" permission_id="editOwnMessagesTimeLimit" permission_type="integer" interface_group_id="siropuChatUser" display_order="80"/>
+  <permission permission_group_id="siropuChat" permission_id="joinRooms" permission_type="integer" interface_group_id="siropuChatUser" display_order="100"/>
+  <permission permission_group_id="siropuChat" permission_id="likeMessages" permission_type="flag" interface_group_id="siropuChatUser" display_order="110"/>
+  <permission permission_group_id="siropuChat" permission_id="passwordProtectRooms" permission_type="flag" interface_group_id="siropuChatUser" display_order="140"/>
+  <permission permission_group_id="siropuChat" permission_id="reportMessages" permission_type="flag" interface_group_id="siropuChatUser" display_order="50"/>
+  <permission permission_group_id="siropuChat" permission_id="roomAuthorSanction" permission_type="flag" interface_group_id="siropuChatUser" display_order="240"/>
+  <permission permission_group_id="siropuChat" permission_id="searchArchive" permission_type="flag" interface_group_id="siropuChatUser" display_order="30"/>
+  <permission permission_group_id="siropuChat" permission_id="setColor" permission_type="flag" interface_group_id="siropuChatUser" display_order="200"/>
+  <permission permission_group_id="siropuChat" permission_id="setRoomUsers" permission_type="flag" interface_group_id="siropuChatUser" display_order="260"/>
+  <permission permission_group_id="siropuChat" permission_id="setStatus" permission_type="flag" interface_group_id="siropuChatUser" display_order="190"/>
+  <permission permission_group_id="siropuChat" permission_id="silentJoinLeaveRooms" permission_type="flag" interface_group_id="siropuChatUser" display_order="310"/>
+  <permission permission_group_id="siropuChat" permission_id="uploadImages" permission_type="integer" interface_group_id="siropuChatUser" display_order="230"/>
+  <permission permission_group_id="siropuChat" permission_id="useChat" permission_type="flag" interface_group_id="siropuChatUser" display_order="10"/>
+  <permission permission_group_id="siropuChat" permission_id="viewAds" permission_type="flag" interface_group_id="siropuChatUser" display_order="180"/>
+  <permission permission_group_id="siropuChat" permission_id="viewArchive" permission_type="flag" interface_group_id="siropuChatUser" display_order="20"/>
+  <permission permission_group_id="siropuChat" permission_id="viewChat" permission_type="flag" interface_group_id="siropuChatUser" display_order="1"/>
+  <permission permission_group_id="siropuChat" permission_id="viewEditHistory" permission_type="flag" interface_group_id="siropuChatUser" display_order="90"/>
+  <permission permission_group_id="siropuChat" permission_id="viewPrivateRooms" permission_type="flag" interface_group_id="siropuChatUser" display_order="250"/>
+  <permission permission_group_id="siropuChat" permission_id="viewRoomArchiveUponJoin" permission_type="flag" interface_group_id="siropuChatUser" display_order="270"/>
+  <permission permission_group_id="siropuChat" permission_id="viewSanctioned" permission_type="flag" interface_group_id="siropuChatUser" display_order="40"/>
+  <permission permission_group_id="siropuChat" permission_id="viewTopChatters" permission_type="flag" interface_group_id="siropuChatUser" display_order="170"/>
+  <permission permission_group_id="siropuChat" permission_id="whisper" permission_type="flag" interface_group_id="siropuChatUser" display_order="150"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="editAds" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="30"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="editNotice" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="10"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="editRoomSettings" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="40"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="editRules" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="20"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="postAnnouncements" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="60"/>
+  <permission permission_group_id="siropuChatAdmin" permission_id="resetUserData" permission_type="flag" interface_group_id="siropuChatAdmin" display_order="50"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="changeAuthor" permission_type="flag" interface_group_id="siropuChatModerator" display_order="100"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="deleteAnyMessage" permission_type="flag" interface_group_id="siropuChatModerator" display_order="50"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="deleteAnyRoom" permission_type="flag" interface_group_id="siropuChatModerator" display_order="30"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="editAnyMessage" permission_type="flag" interface_group_id="siropuChatModerator" display_order="40"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="editAnyRoom" permission_type="flag" interface_group_id="siropuChatModerator" display_order="20"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="joinAnyRoom" permission_type="flag" interface_group_id="siropuChatModerator" display_order="10"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="prune" permission_type="flag" interface_group_id="siropuChatModerator" display_order="60"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="sanction" permission_type="flag" interface_group_id="siropuChatModerator" display_order="80"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="viewHiddenUsers" permission_type="flag" interface_group_id="siropuChatModerator" display_order="90"/>
+  <permission permission_group_id="siropuChatModerator" permission_id="viewWhispers" permission_type="flag" interface_group_id="siropuChatModerator" display_order="70"/>
+</permissions>

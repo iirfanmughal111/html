@@ -1,0 +1,8 @@
+<br> 
+Hello <strong>{user}</strong>,
+Please use the following OTP to submit withdrawal request, 
+<br><br>
+{otp}
+<br><br>
+Thank you...!
+<br><br>

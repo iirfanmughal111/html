@@ -1,0 +1,57 @@
+<xf:if is="$attendance">
+  <xf:title>{{ phrase('att_view') }}</xf:title>
+</xf:if>
+
+<div class="block">
+  <xf:if is="$attendance">
+  
+      <div class="block-body">
+        <xf:textboxrow
+          name="username"
+          value="{$xf.visitor.username}"
+          readonly="true"
+          label="{{ phrase('att_username') }}"
+        >
+        </xf:textboxrow>
+
+        <xf:formrow label="{{ phrase('inTime') }}" rowtype="input">
+          <div class="inputGroup">
+            <xf:dateinput
+              name="date"
+              class="date end"
+              readonly="true"
+              value="{{ date($attendance.date, 'Y-m-d') }}"
+              required="true"
+            />
+            <span class="inputGroup-splitter"></span>
+            <xf:textbox
+              type="time"
+              name="in-time"
+              class="input--date time end"
+              readonly="true"
+              value="{{ time($attendance.in_time, 'h:i') }}"
+              required="true"
+            />
+            <xf:textbox
+              type="time"
+              name="out-time"
+              readonly="true"
+              class="input--date time end"
+              value="{{ time($attendance.out_time, 'h:i') }}"
+              required="true"
+            />
+          </div>
+        </xf:formrow>
+
+        <xf:textarearow
+          name="comment"
+          readonly="true"
+          value="{{$attend.comment != '' ? $attend.comment : phrase('noComments') }}"
+          label="{{ phrase('attendance_comments') }}"
+        />
+        
+      </div>
+ 
+  
+  </xf:if>
+</div>

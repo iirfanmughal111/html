@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cron>
+  <entry entry_id="dbtechCreditsBirthday" cron_class="DBTech\Credits\Cron\Event" cron_method="birthday" active="0"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[0]}]]></entry>
+  <entry entry_id="dbtechCreditsDailyCredits" cron_class="DBTech\Credits\Cron\Event" cron_method="dailyCredits" active="1"><![CDATA[{"day_type":"dom","dom":[-1],"hours":[0],"minutes":[5]}]]></entry>
+</cron>

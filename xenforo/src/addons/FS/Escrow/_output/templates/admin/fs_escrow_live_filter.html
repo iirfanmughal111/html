@@ -1,0 +1,13 @@
+<xf:form action="{{ link('escrow/live') }}">
+			<xf:textboxrow name="tx_id" value="{$conditions.tx_id}" />
+	
+	  <div class="menu-footer">
+    <span class="menu-footer-controls">
+      <xf:button type="submit" class="button--primary"
+        >{{ phrase('filter') }}</xf:button
+      >
+    </span>
+  </div>
+
+  <xf:hiddenval name="search">1</xf:hiddenval>
+</xf:form>

@@ -1,0 +1,11 @@
+{
+    "route_type": "public",
+    "route_prefix": "note",
+    "sub_name": "",
+    "format": "",
+    "build_class": "",
+    "build_method": "",
+    "controller": "Pad:Note",
+    "context": "note",
+    "action_prefix": ""
+}

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="email" title="thpostcomments_watched_thread_comment" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[<mail:subject>
+	{{ phrase('thpostcomments_comment_in_watched_thread_x', {
+		'title': prefix('thread', $thread, 'escaped') . $thread.title
+	}) }}
+</mail:subject>
+
+{{ phrase('thpostcomments_watched_thread_post_comment_email_html', {
+	'receiver': $receiver.username,
+	'parentPoster': username_link_email($post.ParentPost.User, $post.ParentPost.username),
+	'replier': username_link_email($post.User, $post.username),
+	'board': '<a href="' . link('canonical:index') . '">' . $xf.options.boardTitle . '</a>'
+}) }}
+
+<h2><a href="{{ link('canonical:posts', $post) }}">{{ prefix('thread', $thread, 'escaped') }}{$thread.title}</a></h2>
+
+<xf:if is="$xf.options.emailWatchedThreadIncludeMessage">
+	<div class="message">{{ bb_code_type('emailHtml', $post.message, 'post', $post) }}</div>
+</xf:if>
+
+<xf:macro template="thread_forum_macros" name="go_thread_bar" arg-thread="{$thread}" arg-watchType="threads" />
+
+<xf:macro template="thread_forum_macros" name="watched_thread_footer" arg-thread="{$thread}" />]]></template>
+  <template type="public" title="alert_post_thpostcomments_insert" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[<xf:if is="$xf.visitor.user_id == $content.ParentPost.user_id">
+	{{ phrase('thpostcomments_x_commented_to_your_post_in_thread_z', {
+		'name': username_link($user, false, {'defaultname': $alert.username}),
+		'title': '<a href="' . link('posts', $content) . '" class="fauxBlockLink-blockLink">' . prefix('thread', $content.Thread) . $content.Thread.title . '</a>'
+	}) }}
+<xf:else />
+	{{ phrase('thpostcomments_x_commented_to_y_post_in_thread_z', {
+		'name': username_link($user, false, {'defaultname': $alert.username}),
+		'parentPoster': username_link_email($content.ParentPost.User, $content.ParentPost.username),
+		'title': '<a href="' . link('posts', $content) . '" class="fauxBlockLink-blockLink">' . prefix('thread', $content.Thread) . $content.Thread.title . '</a>'
+	}) }}
+</xf:if>]]></template>
+  <template type="public" title="push_post_thpostcomments_insert" version_id="2000192" version_string="2.0.1 Patch Level 2"><![CDATA[<xf:if is="$xf.visitor.user_id == $content.ParentPost.user_id">
+	{{ phrase('thpostcomments_x_commented_to_your_post_in_thread_z', {
+		'name': username_link($user, false, {'defaultname': $alert.username}),
+		'title': '<a href="' . link('posts', $content) . '" class="fauxBlockLink-blockLink">' . prefix('thread', $content.Thread) . $content.Thread.title . '</a>'
+	}) }}
+<xf:else />
+	{{ phrase('thpostcomments_x_commented_to_y_post_in_thread_z', {
+		'name': username_link($user, false, {'defaultname': $alert.username}),
+		'parentPoster': username_link_email($content.ParentPost.User, $content.ParentPost.username),
+		'title': '<a href="' . link('posts', $content) . '" class="fauxBlockLink-blockLink">' . prefix('thread', $content.Thread) . $content.Thread.title . '</a>'
+	}) }}
+</xf:if>
+
+<push:url>{{ link('canonical:posts', $content) }}</push:url>
+<push:tag>post_insert_thread_{$content.thread_id}</push:tag>]]></template>
+  <template type="public" title="thpostcomments_js" version_id="2000170" version_string="2.0.1"><![CDATA[<xf:js>
+	$(document).on('click', '.thpostcomments_commentLink', function(event) {
+		event.preventDefault();
+		$(this).closest('.message').toggleClass('thpostcomments_message--expanded');
+	});
+</xf:js>]]></template>
+  <template type="public" title="thpostcomments_new_comment" version_id="2000191" version_string="2.0.1 Patch Level 1"><![CDATA[<xf:macro template="post_macros"
+		  name="post"
+		  arg-post="{$post}"
+		  arg-thread="{$thread}" />
+<xf:macro template="post_macros"
+		  name="post"
+		  arg-post="{$newPost}"
+		  arg-thread="{$thread}" />]]></template>
+  <template type="public" title="thpostcomments_post.less" version_id="2000292" version_string="2.0.2 Patch Level 2"><![CDATA[@postBitWidth: (@xf-messageUserBlockWidth) + 2 * (@xf-messagePadding);
+@postBitWidthSmall: @_messageSimple-userColumnWidth + 2 * @xf-messagePaddingSmall;
+@postBitAdjusted: @postBitWidth - @postBitWidthSmall;
+@postbitSpacerDesktop: @xf-messagePadding + @avatar-xs;
+
+//Start fix for country flags addon
+/*.block--messages .message .thpostcomments_commentsContainer{
+	.userflag-m {
+		position: absolute;
+		top: calc(96px - 75px);
+		left: calc(96px - 110px);
+		width: 25px;
+		height: 15px;
+		z-index: 2;
+	}
+}*/
+//End fix for country flags addon
+
+.message--post {
+	.message-attribution--plain {display: none;}
+
+	&.thpostcomments_message--condensed {
+		.message-attribution--plain {display: block;}
+
+		.message-attribution--condensed {
+			display: flex;
+
+			.avatar {
+				display: none !important;
+			}
+		}
+
+		.message-attribution-user .avatar {
+			display: inline-block;
+			.m-avatarSize((@xf-fontSizeNormal) * (@xf-lineHeightDefault));
+		}
+
+		.message-attribution:not(.message-attribution--condensed) {display: none;}
+	}
+}
+
+.message--depth0 {
+	> .message-inner {
+		border-bottom: 1px solid @xf-borderColor;
+		margin-bottom: @xf-messagePadding;
+
+		.message-attribution--condensed {
+			display: none !important;
+		}
+	}
+}
+
+.block--messages .message {
+	&:not(.thpostcomments_message--expanded, .message--tv, .message--movie) .message {
+		display: none;
+	}
+
+	.thpostcomments_commentsContainer {
+		border-top: 1px solid @xf-borderColor;
+		
+		//Start fix for country flags addon	
+		.userflag-m {
+				display: none;
+		}
+		//End fix for country flags addon
+		
+		.message {
+			box-shadow: none;
+			margin-left: 20px;
+			border: none;
+			position: relative;
+			margin-top: 20px;
+
+			.message-userArrow {display: none;}
+
+			.thpostcomments_commentLink {
+				margin-bottom: @xf-messagePaddingSmall;
+				display: block;
+				float: left;
+			}
+
+			.message-lastEdit {
+				display: none;
+			}
+
+			.message-inner  {
+				display: flex;
+			}
+
+			.message-cell--main {
+				padding-top: 0;
+				background: none;
+				padding-left: @xf-messagePadding;
+			}
+
+			&.message--depth1 {
+				margin-left: 10px;
+			}
+
+			&:not(:last-child) .thpostcomments_exandLine {
+				border-left: 1px dashed @xf-borderColor;
+				width: 1px;
+				display: inline-block;
+				position: absolute;
+				top: 10px + @avatar-xxs;
+				bottom: 0;
+				left: @avatar-xxs / 2;
+			}
+
+			.message-signature {
+				display: none;
+			}
+
+			.message-attribution-user {
+				display: flex;
+				align-items: center;
+				margin-right: 4px;
+
+				.avatar {
+					display: inline-block;
+					margin-right: 8px;
+				}
+			}
+
+			.message-attribution .listInline {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			@media (max-width: @xf-responsiveEdgeSpacerRemoval) {
+				margin-right: @xf-paddingMedium;
+			}
+
+			.message-cell--user {
+				padding: 0;
+				background: none;
+				flex-basis: auto;
+				border: none;
+
+				.avatar {
+					.m-avatarSize(@avatar-xxs) !important;
+				}
+
+				.message-user > *:not(.message-avatar) {
+					display: none;
+				}
+			}
+
+			@media (min-width: @xf-responsiveMedium) {
+				margin-left: @postbitSpacerDesktop;
+
+				&.message--depth1 {
+					margin-left: (@postbitSpacerDesktop) / 2;
+				}
+
+				&:not(:last-child) .thpostcomments_exandLine {
+					left: @avatar-xs / 2;
+					top: 20px + @avatar-xs;
+				}
+
+				.message-cell--user .avatar {
+					.m-avatarSize(@avatar-xs) !important;
+				}
+			}
+		}
+	}
+}]]></template>
+  <template type="public" title="thpostcomments_post_comment" version_id="2000271" version_string="2.0.2.1"><![CDATA[<xf:title>{{ phrase('thpostcomments_comment_on_x_post', {'author': $post.username}) }}</xf:title>
+
+<xf:head option="metaNoindex"><meta name="robots" content="noindex" /></xf:head>
+
+<xf:js src="themehouse/post-comments/comment.js" addon="ThemeHouse/PostComments" />
+
+<xf:breadcrumb source="$thread.getBreadcrumbs()" />
+
+<xf:form action="{{ link('posts/add-comment', $post) }}"
+		 class="block message message--depth{$post.thpostcomments_depth} message-quickReply"
+		 draft="{{ link('threads/draft', $thread) }}"
+		 data-xf-init="attachment-manager"
+		 data-preview-url="{{ link('threads/reply-preview', $thread) }}">
+	<div class="block-container">
+		<div class="block-body">
+			<span class="u-anchorTarget js-commentContainer"></span>
+			<xf:set var="$edId" value="{{ unique_id() }}" />
+			<xf:editorrow name="message"
+						  id="{$edId}"
+						  value="{$defaultMessage}"
+						  attachments="{{ $attachmentData ? $attachmentData.attachments : [] }}"
+						  rowtype="fullWidth noLabel"
+						  autofocus="autofocus"
+						  placeholder="{{ $xf.options.thpostcomments_replaceReplyButton ? phrase('reply_placeholder') : phrase('thcomments_comment_placeholder') }}"
+						  data-min-height="100"
+						  label="{{ phrase('message') }}" />
+			<xf:js>
+				$('#{$edId}').froalaEditor('events.focus', true)
+			</xf:js>
+
+			<xf:formrow>
+				<xf:if is="$attachmentData">
+					<xf:macro template="helper_attach_upload" name="upload_block"
+							  arg-attachmentData="{$attachmentData}"
+							  arg-forceHash="{$thread.draft_reply.attachment_hash}" />
+				</xf:if>
+
+				<xf:button class="button--link u-jsOnly" data-xf-click="preview-click" icon="preview" />
+			</xf:formrow>
+
+			<xf:if is="!$xf.visitor.user_id">
+				<xf:textboxrow name="_xfUsername" data-xf-init="guest-username"
+							   maxlength="{{ max_length($xf.visitor, 'username') }}"
+							   label="{{ phrase('name') }}"/>
+
+				<xf:captcharow label="{{ phrase('verification') }}" />
+			</xf:if>
+		</div>
+
+		<xf:submitrow submit="{{ phrase('thpostcomments_post_comment') }}"
+					  icon="reply"
+					  rowtype="{{ $inlineComment ? 'simple' : '' }}">
+			<xf:html>
+				<xf:if is="$inlineComment">
+					<xf:button class="js-cancelButton">{{ phrase('button.cancel') }}</xf:button>
+				</xf:if>
+			</xf:html>
+		</xf:submitrow>
+	</div>
+</xf:form>]]></template>
+  <template type="public" title="thpostcomments_post_macros" version_id="2000170" version_string="2.0.1"><![CDATA[<xf:macro name="comment"
+		  arg-post="!"
+		  arg-thread="!">
+
+	<article class="message message--depth{$post.thpostcomments_depth} message--simple{{ $post.isIgnored() ? ' is-ignored' : '' }} js-inlineModContainer"
+			 data-author="{{ $post.User.username ?: $post.username }}"
+			 data-content="profile-post-{$post.post_id}"
+			 id="js-post-{$post.post_id}">
+
+		<xf:if is="{$post.thpostcomments_depth} > 0">
+			<div class="th_messageCollapseTrigger">
+					<i class="fa fa-chevron-down"></i>
+			</div>
+		</xf:if>
+		<span class="u-anchorTarget" id="post-{$post.post_id}"></span>
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				<xf:macro template="message_macros"
+						  name="user_info_simple"
+						  arg-user="{$post.User}"
+						  arg-fallbackName="{$post.username}" />
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+					<div class="message-content js-messageContent">
+						<header class="message-attribution message-attribution--plain">
+							<ul class="listInline listInline--bullet">
+								<li class="message-attribution-user">
+									<xf:avatar user="$post.User" size="xxs" />
+									<h4 class="attribution">
+										<xf:macro template="profile_post_macros"
+												  name="attribution"
+												  arg-profilePost="{$post}"
+												  arg-showTargetUser="{$showTargetUser}" />
+									</h4>
+								</li>
+								<li><a href="{{ link('posts', $post) }}"
+									   class="u-concealed"
+									   rel="nofollow">
+									<xf:date time="$post.post_date" />
+									</a>
+								</li>
+							</ul>
+						</header>
+
+						<article class="message-body">
+							{{ bb_code($post.message, 'post', $post) }}
+						</article>
+
+						<xf:if is="$post.attach_count">
+							<xf:macro template="message_macros" name="attachments"
+									  arg-attachments="{$post.Attachments}"
+									  arg-message="{$post}"
+									  arg-canView="{{ $thread.canViewAttachments() }}" />
+						</xf:if>
+					</div>
+
+
+					<footer class="message-footer">
+						<div class="message-actionBar actionBar">
+							<xf:if contentcheck="true">
+								<div class="actionBar-set actionBar-set--external">
+									<xf:contentcheck>
+										<xf:if is="$post.canLike()">
+											<a href="{{ link('posts/like', $post) }}"
+											   class="actionBar-action actionBar-action--like"
+											   data-xf-click="like"
+											   data-like-list="< .message | .js-likeList">
+												<xf:if is="$post.isLiked()">
+													{{ phrase('unlike') }}
+													<xf:else />
+													{{ phrase('like') }}
+												</xf:if>
+											</a>
+										</xf:if>
+										<xf:if is="$post.canComment()">
+											<a href="{{ link('posts/comment', $post) }}"
+											   class="actionBar-action actionBar-action--comment"
+											   title="{{ phrase('reply_quoting_this_message')|for_attr }}"
+											   data-editor-target="#js-post-{$post.post_id}"
+											   data-xf-click="comment">{{ phrase('reply') }}</a>
+										</xf:if>
+									</xf:contentcheck>
+								</div>
+							</xf:if>
+
+							<xf:if contentcheck="true">
+								<div class="actionBar-set actionBar-set--internal">
+									<xf:contentcheck>
+										<xf:if is="$post.canUseInlineModeration()">
+											<span class="actionBar-action actionBar-action--inlineMod">
+												<xf:checkbox standalone="true">
+													<xf:option value="{$post.post_id}" class="js-inlineModToggle"
+															   data-xf-init="tooltip"
+															   title="{{ phrase('select_for_moderation')|for_attr }}"
+															   label="{{ phrase('select_for_moderation') }}"
+															   hiddenlabel="true" />
+												</xf:checkbox>
+											</span>
+										</xf:if>
+
+										<xf:if is="$post.canReport()">
+											<a href="{{ link('posts/report', $post) }}"
+											   class="actionBar-action actionBar-action--report"
+											   data-xf-click="overlay">{{ phrase('report') }}</a>
+										</xf:if>
+
+										<xf:set var="$hasActionBarMenu" value="{{ false }}" />
+										<xf:if is="$post.canEdit()">
+											<xf:js src="xf/message.js" min="1" />
+											<a href="{{ link('posts/edit', $post) }}"
+											   class="actionBar-action actionBar-action--edit actionBar-action--menuItem"
+											   data-xf-click="quick-edit"
+											   data-editor-target="#js-post-{$post.post_id} .js-quickEditTarget"
+											   data-menu-closer="true">{{ phrase('edit') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+										<xf:if is="$post.edit_count && $post.canViewHistory()">
+											<a href="{{ link('posts/history', $post) }}"
+											   class="actionBar-action actionBar-action--history actionBar-action--menuItem"
+											   data-xf-click="toggle"
+											   data-target="#js-post-{$post.post_id} .js-historyTarget"
+											   data-menu-closer="true">{{ phrase('history') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+										<xf:if is="$post.canDelete('soft')">
+											<a href="{{ link('posts/delete', $post) }}"
+											   class="actionBar-action actionBar-action--delete actionBar-action--menuItem"
+											   data-xf-click="overlay">{{ phrase('delete') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+										<xf:if is="$post.canCleanSpam()">
+											<a href="{{ link('spam-cleaner', $post) }}"
+											   class="actionBar-action actionBar-action--spam actionBar-action--menuItem"
+											   data-xf-click="overlay">{{ phrase('spam') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+										<xf:if is="$xf.visitor.canViewIps() && $post.ip_id">
+											<a href="{{ link('posts/ip', $post) }}"
+											   class="actionBar-action actionBar-action--ip actionBar-action--menuItem"
+											   data-xf-click="overlay">{{ phrase('ip') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+										<xf:if is="$post.canWarn()">
+
+											<a href="{{ link('posts/warn', $post) }}"
+											   class="actionBar-action actionBar-action--warn actionBar-action--menuItem">{{ phrase('warn') }}</a>
+
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+											<xf:elseif is="$post.warning_id && $xf.visitor.canViewWarnings()" />
+											<a href="{{ link('warnings', {'warning_id': $post.warning_id}) }}"
+											   class="actionBar-action actionBar-action--warn actionBar-action--menuItem"
+											   data-xf-click="overlay">{{ phrase('view_warning') }}</a>
+											<xf:set var="$hasActionBarMenu" value="{{ true }}" />
+										</xf:if>
+
+										<xf:if is="$hasActionBarMenu">
+											<a class="actionBar-action actionBar-action--menuTrigger"
+											   data-xf-click="menu"
+											   title="{{ phrase('more_options')|for_attr }}"
+											   role="button"
+											   tabindex="0"
+											   aria-expanded="false"
+											   aria-haspopup="true">&#8226;&#8226;&#8226;</a>
+
+											<div class="menu" data-menu="menu" aria-hidden="true" data-menu-builder="actionBar">
+												<div class="menu-content">
+													<h4 class="menu-header">{{ phrase('more_options') }}</h4>
+													<div class="js-menuBuilderTarget"></div>
+												</div>
+											</div>
+										</xf:if>
+									</xf:contentcheck>
+								</div>
+							</xf:if>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</article>
+</xf:macro>]]></template>
+  <template type="public" title="thpostcomments_post_macros_nested" version_id="2000271" version_string="2.0.2.1"><![CDATA[<xf:if is="$nestedPost">			
+	<xf:if is="{$post.thpostcomments_depth} == 0">
+		<xf:if contentcheck="true">
+			<div class="thpostcomments_commentsContainer">
+				<xf:contentcheck>
+					<xf:if is="$nestedPost.children is not empty && is_array($nestedPost.children)">
+						<xf:foreach loop="$nestedPost.children" value="$subPost">
+							<xf:if is="$subPost.record.message_state == 'deleted'">
+								<xf:macro template="post_macros" name="post_deleted"
+									arg-nestedPost="{$subPost}"
+									arg-post="{$subPost.record}"
+									arg-depth="{{ $depth + 1 }}"
+									arg-thread="{$thread}" />
+							<xf:else />
+								<xf:macro template="post_macros" name="post"
+									arg-nestedPost="{$subPost}"
+									arg-post="{$subPost.record}"
+									arg-depth="{{ $depth + 1 }}"
+									arg-thread="{$thread}" />
+							</xf:if>
+						</xf:foreach>
+					</xf:if>
+				</xf:contentcheck>
+			</div>
+		</xf:if>
+	<xf:else />
+		<xf:if is="$nestedPost.children is not empty && is_array($nestedPost.children)">
+			<xf:foreach loop="$nestedPost.children" value="$subPost">
+				<xf:if is="$subPost.record.message_state == 'deleted'">
+					<xf:macro template="post_macros" name="post_deleted"
+						arg-nestedPost="{$subPost}"
+						arg-post="{$subPost.record}"
+						arg-depth="{{ $depth + 1 }}"
+						arg-thread="{$thread}" />
+				<xf:else />
+					<xf:macro template="post_macros" name="post"
+						arg-nestedPost="{$subPost}"
+						arg-post="{$subPost.record}"
+						arg-depth="{{ $depth + 1 }}"
+						arg-thread="{$thread}" />
+				</xf:if>
+			</xf:foreach>
+		</xf:if>
+	</xf:if>
+</xf:if>]]></template>
+</templates>

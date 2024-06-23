@@ -1,0 +1,9 @@
+{
+    "template": "quick_reply_macros",
+    "description": "receiveThread",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "arg-showGuestControls=\"{{ true }}\"",
+    "replace": "$0\narg-thread=\"\""
+}

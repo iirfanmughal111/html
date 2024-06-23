@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<admin_navigation>
+  <admin_navigation_entry navigation_id="tlGroups_batchUpdate" parent_navigation_id="tl_groups" display_order="999" link="tlg-groups/batch-update" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tlGroups_options" parent_navigation_id="tl_groups" display_order="300" link="options/groups/tl_groups/" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tl_groups" display_order="9999" icon="fa-users" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="1"/>
+  <admin_navigation_entry navigation_id="tl_groups_categories" parent_navigation_id="tl_groups" display_order="10" link="group-categories" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tl_groups_customFields" parent_navigation_id="tl_groups" display_order="888" link="group-fields" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tl_groups_memberRoles" parent_navigation_id="tl_groups" display_order="150" link="group-member-roles" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tl_groups_rebuildCaches" parent_navigation_id="tl_groups" display_order="300" link="tlg-groups/rebuild" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+  <admin_navigation_entry navigation_id="tlg_groups" parent_navigation_id="tl_groups" display_order="15" link="tlg-groups/list" admin_permission_id="manageGroups" debug_only="0" development_only="0" hide_no_children="0"/>
+</admin_navigation>

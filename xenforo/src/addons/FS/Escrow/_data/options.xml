@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="fs_escrow_admin_Id" edit_format="textbox" data_type="integer" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_admin_percentage" edit_format="textbox" data_type="integer" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_api" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>null</default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_applicable_forum" edit_format="textbox" data_type="integer" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_approval_que_option" edit_format="select" data_type="integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>1=Yes
+0=No</edit_format_params>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_bit_base_url" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_callback_link" edit_format="textbox" data_type="string" advanced="0">
+    <default_value></default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_conversion_api" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>null</default_value>
+    <relation group_id="fsEscrow" display_order="4"/>
+  </option>
+  <option option_id="fs_escrow_currency" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>BTC</default_value>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+  <option option_id="fs_escrow_pgp_option" edit_format="select" data_type="integer" advanced="0">
+    <default_value>0</default_value>
+    <edit_format_params>1=Yes
+0=No</edit_format_params>
+    <relation group_id="fsEscrow" display_order="1"/>
+  </option>
+</options>

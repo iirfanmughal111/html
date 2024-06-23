@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="headerImageDimensions" edit_format="template" data_type="array">
+    <default_value>{"height":460,"width":1920}</default_value>
+    <edit_format_params>option_template_headerimageDimensions</edit_format_params>
+    <sub_options>height
+width</sub_options>
+    <relation group_id="thread_article_view" display_order="1"/>
+  </option>
+</options>

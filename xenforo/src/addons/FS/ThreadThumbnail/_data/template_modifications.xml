@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="thread_view" modification_key="fs_thread_add_thumbnail_btn" description="fs_thread_add_thumbnail_btn" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$thread.canLockUnlock()">]]></find>
+    <replace><![CDATA[<xf:if is="$xf.visitor.canChangeThreadThumbnail()">
+	<a href="{{ link('threads/thumbnail', $thread) }}" data-xf-click="overlay" class="menu-linkRow">{{ phrase('fs_add_thumbnail') }}</a>
+</xf:if>
+$0]]></replace>
+  </modification>
+</template_modifications>

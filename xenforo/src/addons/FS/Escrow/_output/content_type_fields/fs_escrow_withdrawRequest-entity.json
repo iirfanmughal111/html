@@ -1,0 +1,5 @@
+{
+    "content_type": "fs_escrow_withdrawRequest",
+    "field_name": "entity",
+    "field_value": "FS\\Escrow:WithdrawRequest"
+}

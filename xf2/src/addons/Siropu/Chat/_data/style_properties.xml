@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+  <style_property property_name="siropuChatActiveUserCountBadgeColor" group_name="siropuChat" title="Active user count badge color" description="The color of the user count badge for chat navigation and tabs when there are active users in the chat." property_type="value" value_type="color" display_order="4">
+    <value>"rgb(154,205,50)"</value>
+  </style_property>
+  <style_property property_name="siropuChatActiveUserCountColor" group_name="siropuChat" title="Active user count color" description="The color of the user count for chat navigation and tabs when there are active users in the chat." property_type="value" value_type="color" display_order="7">
+    <value>"rgb(255, 255, 255)"</value>
+  </style_property>
+  <style_property property_name="siropuChatAnnouncement" group_name="siropuChat" title="Message row announcement" description="Styling of the message row for announcements." property_type="css" display_order="20" css_components="text,background,border,border_radius,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "border-width": "1px",
+    "border-color": "@xf-borderColorHighlight",
+    "border-radius": "5px",
+    "padding": "5px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatBarButton" group_name="siropuChat" title="Chat bar button" description="The bar button that displays the number of chat users." property_type="css" display_order="13" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "color": "@xf-linkHoverColor",
+    "font-weight": "@xf-fontWeightHeavy",
+    "text-decoration": "none",
+    "background-color": "@xf-contentHighlightBg",
+    "padding": "10px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatBarContainer" group_name="siropuChat" title="Chat bar container" description="The chat bar that shows up at the bottom of the screen when using &quot;All pages&quot; mode." property_type="css" display_order="12" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "border-width": "1px",
+    "extra": "box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.15);\nborder-bottom-left-radius: 0;\nborder-bottom-right-radius: 0;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatContainer" group_name="siropuChat" title="Chat container" description="The main chat container." property_type="css" display_order="0" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "extra": "box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.15);"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatContentHeight" group_name="siropuChat" title="Chat content height" description="The height of the chat content." property_type="value" value_type="unit" display_order="1">
+    <value>"300px"</value>
+  </style_property>
+  <style_property property_name="siropuChatContentHeightMobile" group_name="siropuChat" title="Chat mobile content height" description="The height of the chat content on mobile devices." property_type="value" value_type="unit" display_order="3">
+    <value>"250px"</value>
+  </style_property>
+  <style_property property_name="siropuChatConversationListItem" group_name="siropuChat" title="Conversation list item" description="Individual item in the conversation user list." property_type="css" display_order="8" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "color": "@xf-textColorDimmed",
+    "border-bottom-width": "1px",
+    "border-bottom-color": "@xf-borderColorLight",
+    "padding": "10px",
+    "extra": "margin: 0;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatConversationListItemActive" group_name="siropuChat" title="Conversation list item active" description="Individual item in the conversation user list, active state." property_type="css" display_order="10" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "background-color": "rgb(247, 247, 247)"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatConversationListItemHover" group_name="siropuChat" title="Conversation list item hover" description="Individual item in the conversation user list, hover state." property_type="css" display_order="9" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "background-color": "rgb(247, 247, 247)"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatDateTime" group_name="siropuChat" title="Message date" description="Styling of the message date." property_type="css" display_order="17" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "font-size": "10px",
+    "color": "@xf-textColorMuted",
+    "background-color": "rgb(238,238,238)",
+    "border-radius": "5px",
+    "padding": "5px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatDeleteIconColor" group_name="siropuChat" title="Delete icon color" description="The color of the delete icon." property_type="value" value_type="color" display_order="14">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatEditIconColor" group_name="siropuChat" title="Edit icon color" description="The color of the edit icon." property_type="value" value_type="color" display_order="13">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatEditorInput" group_name="siropuChat" title="Chat editor input" description="The chat editor input box." property_type="css" display_order="15" css_components="text,background,border">
+    <value>{
+    "background-color": "@xf-contentBg",
+    "border-width": "0"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatEditorToolbar" group_name="siropuChat" title="Chat editor toolbar" description="The chat editor toolbar." property_type="css" display_order="13" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "border-radius": "0",
+    "border-top-width": "1px",
+    "border-top-color": "@xf-borderColor"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatHelpIconColor" group_name="siropuChat" title="Help icon color" description="The color of the help icon." property_type="value" value_type="color" display_order="17">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatIconFontSize" group_name="siropuChat" title="Icon font size" description="The font size of all the icons used in the chat." property_type="value" value_type="unit" display_order="25">
+    <value>"14px"</value>
+  </style_property>
+  <style_property property_name="siropuChatLikeIconColor" group_name="siropuChat" title="Like icon color" description="The color of the like icon." property_type="value" value_type="color" display_order="8">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatLinkIconColor" group_name="siropuChat" title="Link icon color" description="The color of the link icon." property_type="value" value_type="color" display_order="10">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatMaximizedContentHeight" group_name="siropuChat" title="Chat maximized mode content height" description="The height of the chat content in maximized mode." property_type="value" value_type="unit" display_order="3">
+    <value>"500px"</value>
+  </style_property>
+  <style_property property_name="siropuChatMessageText" group_name="siropuChat" title="Message text" description="Styling of the message text." property_type="css" display_order="16" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "color": "@xf-textColor"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatNoUserCountBadgeColor" group_name="siropuChat" title="No user count badge color" description="The color of the user count badge for chat navigation and tabs when there are no active users in the chat." property_type="value" value_type="color" display_order="6">
+    <value>"rgb(205,92,92)"</value>
+  </style_property>
+  <style_property property_name="siropuChatNoUserCountColor" group_name="siropuChat" title="No user count color" description="The color of the user count for chat navigation and tabs when there are no active users in the chat." property_type="value" value_type="color" display_order="5">
+    <value>"rgb(255, 255, 255)"</value>
+  </style_property>
+  <style_property property_name="siropuChatOptionsIconColor" group_name="siropuChat" title="Options icon color" description="The color of the options icon." property_type="value" value_type="color" display_order="20">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatPageContentHeight" group_name="siropuChat" title="Chat page content height" description="The height of the chat content on the dedicated chat page." property_type="value" value_type="unit" display_order="2">
+    <value>"380px"</value>
+  </style_property>
+  <style_property property_name="siropuChatQuoteIconColor" group_name="siropuChat" title="Quote icon color" description="The color of the quote icon." property_type="value" value_type="color" display_order="11">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatReportIconColor" group_name="siropuChat" title="Report icon color" description="The color of the report icon." property_type="value" value_type="color" display_order="12">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatRoomListItem" group_name="siropuChat" title="Room list item" description="Individual room list item." property_type="css" display_order="11" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "extra": "margin-bottom: 10px;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatRulesIconColor" group_name="siropuChat" title="Rules icon color" description="The color of the rules icon." property_type="value" value_type="color" display_order="16">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatSanctionIconColor" group_name="siropuChat" title="Sanction icon color" description="The color of the sanction icon." property_type="value" value_type="color" display_order="15">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatSettingsIconColor" group_name="siropuChat" title="Settings icon color" description="The color of the settings icon." property_type="value" value_type="color" display_order="19">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatTabsContainer" group_name="siropuChat" title="Tabs container" description="The container of the tabs." property_type="css" display_order="2" css_components="background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "border-bottom-width": "1px",
+    "border-bottom-color": "@xf-borderColor",
+    "padding-right": "10px",
+    "padding-left": "10px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatTabsItem" group_name="siropuChat" title="Tabs item default" description="Individual tab item default state." property_type="css" display_order="3" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "font-size": "14px",
+    "color": "@xf-textColorDimmed",
+    "padding-top": "10px",
+    "padding-bottom": "10px",
+    "extra": "opacity: 0.6;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatTabsItemActive" group_name="siropuChat" title="Tabs item active" description="Individual tab item active state." property_type="css" display_order="5" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "color": "@xf-textColor",
+    "font-weight": "@xf-fontWeightHeavy",
+    "extra": "opacity: 1;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatTabsItemBadge" group_name="siropuChat" title="Tabs item user count badge" description="Individual tab item user count badge." property_type="css" display_order="6" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "border-radius": "100%",
+    "padding-top": "1px",
+    "padding-right": "5px",
+    "padding-bottom": "1px",
+    "padding-left": "5px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatTabsItemHover" group_name="siropuChat" title="Tabs item hover" description="Individual tab item hover state." property_type="css" display_order="4" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "color": "@xf-textColor",
+    "text-decoration": "none",
+    "extra": "opacity: 1;"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatUnlikeIconColor" group_name="siropuChat" title="Unlike icon color" description="The color of the unlike icon." property_type="value" value_type="color" display_order="9">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatUserMention" group_name="siropuChat" title="Message row user mention container" description="Styling of the message row container for user mentions." property_type="css" display_order="18" css_components="text,background,border,border_radius,padding,extra">
+    <value>{
+    "background-color": "rgb(255,228,181)",
+    "border-radius": "5px",
+    "padding": "5px"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatUserMentionDate" group_name="siropuChat" title="Message row user mention date" description="Styling of the message row date for user mentions." property_type="css" display_order="19" css_components="text,background,border,border_radius,padding,extra">
+    <value>{
+    "color": "@xf-textColorAccentContent",
+    "background-color": "rgb(255, 255, 255)"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatUserStatus" group_name="siropuChat" title="User status" description="Styling of the user status." property_type="css" display_order="7" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "font-size": "12px",
+    "color": "@xf-textColorMuted"
+}</value>
+  </style_property>
+  <style_property property_name="siropuChatUsersIconColor" group_name="siropuChat" title="Users icon color" description="The color of the users icon." property_type="value" value_type="color" display_order="18">
+    <value>""</value>
+  </style_property>
+  <style_property property_name="siropuChatWhosTypingContainer" group_name="siropuChat" title="Who's typing container" description="Style the container of &quot;who's typing&quot; list." property_type="css" display_order="21" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra">
+    <value>{
+    "font-size": "70%",
+    "color": "@xf-textColorMuted"
+}</value>
+  </style_property>
+</style_properties>

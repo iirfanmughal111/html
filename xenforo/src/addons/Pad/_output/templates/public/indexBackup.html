@@ -1,0 +1,43 @@
+<xf:title>{{ phrase('UserAttendance') }}</xf:title>
+<xf:if is="$xf.visitor.is_admin">
+<xf:pageaction>
+	<xf:button icon="add" href="{{ link('attendance/Add')}}" title="{{ phrase('addNewAttendance') }}" data-xf-init="_tooltip">{{ phrase('addNewAttendance') }}</xf:button>
+</xf:pageaction>
+</xf:if>
+<div class="block-container">
+    <div class="block-body">
+        <xf:datalist>
+            <xf:foreach loop="$users" value="$user">
+                <xf:datarow rowclass="{{ ($user.user_state != 'valid' || $user.is_banned) ? 'dataList-row--deleted' : '' }}">
+                    <xf:if is="$showingAll">
+                        <xf:toggle name="user_ids[]" value="{$user.user_id}" selected="true" />
+                    </xf:if>
+                    <xf:if is="$xf.visitor.is_admin">
+                        <xf:cell class="dataList-cell--min dataList-cell--image dataList-cell--imageSmall"
+                            href="{{ link('users/edit', $user) }}">
+                            <xf:avatar user="$user" size="s" href="" />
+                        </xf:cell>
+                  
+                        <xf:main href="{{ link('users/edit', $user) }}">
+                            <xf:label><xf:username user="$user" rich="true" notooltip="true" href="" /></xf:label>
+                            <xf:hint>{$user.email}</xf:hint>
+                        </xf:main>
+                    <xf:else />
+                    <xf:cell class="dataList-cell--min dataList-cell--image dataList-cell--imageSmall">
+                            <xf:avatar user="$user" size="s" href="" />
+                        </xf:cell>
+                        <xf:main >
+                            <xf:label>
+                                <xf:username user="$user" rich="true" notooltip="true" href="" />
+                            </xf:label>
+                            <xf:hint>{$user.email}</xf:hint>
+                        </xf:main>
+                 
+                </xf:if>
+                    
+                </xf:datarow>
+            </xf:foreach>
+          
+        </xf:datalist>
+    </div>
+</div>

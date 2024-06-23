@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="node" field_name="approval_queue_handler_class">FS\ForumGroups\ApprovalQueue\GroupApproval</field>
+  <field content_type="node" field_name="attachment_handler_class">FS\ForumGroups\Attachment\ForumGroups</field>
+</content_type_fields>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="forum_view" modification_key="fs_forum_gorups_forum_view" description="fs_forum_gorups_forum_view_change_view" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="forum_list" name="node_list"
+					arg-children="{$nodeTree}"
+					arg-extras="{$nodeExtras}"
+					arg-depth="2" />]]></find>
+    <replace><![CDATA[<xf:if is="$forum.node_id == $xf.options.fs_forum_groups_applicable_forum">
+<xf:css src="fs_forum_gorups_group_list.less" />
+<xf:css src="fs_forum_gorups_style.less" />
+<xf:css src="fs_forum_gorups_grid_card.less" />
+
+			<div class="block groupListBlock" data-xf-init="inline-mod"
+         data-type="tl_group"
+         data-href="{{ link('inline-mod') }}">
+		
+					<div class="groupList h-dFlex h-dFlex--wrap gridCardList--flex--{$xf.options.fs_forum_gorups_per_row}-col" data-xf-init="tl_groups_list">
+				<xf:foreach loop="$nodeTree" key="$id" value="$child">
+					<xf:macro
+					template="fs_forum_groups_forum_view_list"
+					name="fs_forum_groups_forum_view_list_macro"
+					arg-subForum="{$child.record}"
+				  />
+				</xf:foreach>
+					</div>
+				</div>
+<xf:else />
+	$0	
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="forum_view" modification_key="fs_forum_gorups_forum_view_single" description="fs_forum_gorups_forum_view_single" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$canInlineMod">
+	<xf:js src="xf/inline_mod.js" min="1" />
+</xf:if>]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="$forum.Node.parent_node_id == $xf.options.fs_forum_groups_applicable_forum">
+			<xf:if is="!$nodeTree">
+			  <xf:macro
+			  template="fs_forum_groups_forum_view_single"
+			  name="fs_forum_groups_forum_view_single_macro"
+			  arg-subForums="{$forum.Node}"
+			  />
+			</xf:if>
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>
